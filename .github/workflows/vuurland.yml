@@ -1,9 +1,9 @@
 name: Vuurland Spotify Sync
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,15 +16,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Python instellen
+      - name: Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Dependencies installeren
+      - name: Dependencies
         run: pip install -r requirements.txt
 
-      - name: Vuurland controleren
+      - name: Controle secrets
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: |
+          echo "Client ID lengte: ${#SPOTIFY_CLIENT_ID}"
+          echo "Refresh token lengte: ${#SPOTIFY_REFRESH_TOKEN}"
+
+      - name: Vuurland
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
@@ -38,3 +46,4 @@ jobs:
           git add vuurland_seen.json
           git diff --cached --quiet || git commit -m "Update Vuurland seen tracks"
           git push
+
