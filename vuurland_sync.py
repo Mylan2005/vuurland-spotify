@@ -319,6 +319,25 @@ def get_token():
 
                 return new_token
 
+    env_refresh_token = os.environ.get("SPOTIFY_REFRESH_TOKEN")
+    if env_refresh_token:
+        response = requests.post(
+            TOKEN_URL,
+            data={
+                "grant_type": "refresh_token",
+                "refresh_token": env_refresh_token,
+                "client_id": CLIENT_ID,
+            },
+            timeout=30
+        )
+        response.raise_for_status()
+        new_token = response.json()
+        if "refresh_token" not in new_token:
+            new_token["refresh_token"] = env_refresh_token
+        new_token["created_at"] = int(time.time())
+        save_token(new_token)
+        return new_token
+
     return spotify_login()
 
 
@@ -742,34 +761,10 @@ print("   VUURLAND → SPOTIFY")
 print("===================================")
 print()
 
-while True:
-
-    try:
-
-        sync()
-
-    except KeyboardInterrupt:
-
-        print()
-        print("Gestopt.")
-        break
-
-    except Exception as error:
-
-        print()
-        print(
-            "❌ Er ging iets mis:"
-        )
-
-        print(error)
-
+try:
+    sync()
+except Exception as error:
     print()
-    print(
-        "⏰ Volgende controle over "
-        "1 minuut..."
-    )
-    print()
-
-    time.sleep(
-        CHECK_EVERY_SECONDS
-    )
+    print("❌ Er ging iets mis:")
+    print(error)
+    raise
