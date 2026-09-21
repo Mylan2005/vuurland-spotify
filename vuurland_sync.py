@@ -706,7 +706,7 @@ def sync():
     not_found = []
     cache = load_cache()
 
-    for artist, title in tracks:
+    for artist, title in tracks[:3]:
         key = (
             artist.strip().lower(),
             title.strip().lower()
@@ -721,7 +721,11 @@ def sync():
             print(f"💾 Cache gebruikt: {artist} - {title}")
         else:
             print(f"🔎 Nieuw nummer zoeken: {artist} - {title}")
-            uri = find_spotify_track(artist, title)
+            try:
+                uri = find_spotify_track(artist, title)
+            except RuntimeError as error:
+                print(f"⏸️ Spotify pauzeert: {error}")
+                break
             cache[cache_key] = uri
             save_cache(cache)
 
