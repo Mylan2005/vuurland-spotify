@@ -330,7 +330,15 @@ def get_token():
             },
             timeout=30
         )
-        response.raise_for_status()
+        if response.status_code != 200:
+            try:
+                error_data = response.json()
+                print("Spotify token fout:", error_data.get("error"))
+                print("Spotify uitleg:", error_data.get("error_description"))
+            except Exception:
+                print("Spotify token fout: HTTP", response.status_code)
+            response.raise_for_status()
+
         new_token = response.json()
         if "refresh_token" not in new_token:
             new_token["refresh_token"] = env_refresh_token
