@@ -818,6 +818,53 @@ def sync():
     searches_used = 0
     MAX_SEARCHES_PER_RUN = 2
 
+    # ---------------------------------
+    # BESTAANDE SPOTIFY-PLAYLIST LEZEN
+    #
+    # Zo voegen we nooit opnieuw een nummer
+    # toe dat al in de doelplaylist staat.
+    # ---------------------------------
+    playlist_keys = set()
+    playlist_offset = 0
+
+    while True:
+        playlist_data = spotify_request(
+            "GET",
+            f"/playlists/{playlist_id}/items",
+            params={
+                "limit": 50,
+                "offset": playlist_offset,
+            },
+        )
+
+        playlist_batch = playlist_data.get("items", [])
+
+        for playlist_item in playlist_batch:
+            track = playlist_item.get("item")
+
+            if not track:
+                continue
+
+            playlist_title = track.get("name", "").strip().lower()
+
+            for playlist_artist in track.get("artists", []):
+                artist_name = playlist_artist.get("name", "").strip().lower()
+
+                if artist_name and playlist_title:
+                    playlist_keys.add(
+                        f"{artist_name}|||{playlist_title}"
+                    )
+
+        if not playlist_data.get("next"):
+            break
+
+        playlist_offset += len(playlist_batch)
+
+    print(
+        f"🛡️ {len(playlist_keys)} bestaande "
+        "Spotify-artiest/titel-combinaties gecontroleerd."
+    )
+
     for item in queue:
         artist = item["artist"]
         title = item["title"]
@@ -831,6 +878,16 @@ def sync():
             f"{artist.strip().lower()}|||"
             f"{title.strip().lower()}"
         )
+
+        # Staat dit nummer al in de Spotify-playlist?
+        # Dan hoeft het niet opnieuw gezocht of toegevoegd te worden.
+        if cache_key in playlist_keys:
+            print(
+                f"⏭️ Al in Spotify, uit queue gehaald: "
+                f"{artist} - {title}"
+            )
+            processed.append(cache_key)
+            continue
 
         if cache_key in cache:
             uri = cache[cache_key]
