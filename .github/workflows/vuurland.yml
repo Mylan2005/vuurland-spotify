@@ -45,6 +45,9 @@ jobs:
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           VUURLAND_DATA_DIR: ${{ github.workspace }}
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           END_TIME=$((SECONDS + 345 * 60))
 
           while [ "$SECONDS" -lt "$END_TIME" ]; do
