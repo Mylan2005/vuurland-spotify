@@ -59,7 +59,8 @@ jobs:
 
             if [ "$SYNC_EXIT" -ne 0 ]; then
               echo "⚠️ Sync-run gestopt met code $SYNC_EXIT."
-              echo "⏳ Deze runner stopt gecontroleerd."
+              echo "🛑 Geen nieuwe Spotify-request in deze runner."
+              break
             fi
 
             git add vuurland_seen.json vuurland_queue.json .vuurland_spotify_cache.json
