@@ -60,7 +60,18 @@ def save_seen(seen):
 
 
 _startup_cache = load_cache()
-SPOTIFY_SEARCH_BLOCKED_UNTIL = _startup_cache.get("__spotify_search_blocked_until", 0)
+
+# Een verlopen Spotify-rate-limit niet blijven bewaren.
+SPOTIFY_SEARCH_BLOCKED_UNTIL = _startup_cache.get(
+    "__spotify_search_blocked_until",
+    0
+)
+
+if SPOTIFY_SEARCH_BLOCKED_UNTIL <= time.time():
+    SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
+    if "__spotify_search_blocked_until" in _startup_cache:
+        del _startup_cache["__spotify_search_blocked_until"]
+        save_cache(_startup_cache)
 
 SCOPES = (
     "playlist-read-private playlist-modify-private "
