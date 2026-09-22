@@ -2,6 +2,10 @@ name: Vuurland Spotify Sync
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  schedule:
+    - cron: "17 */6 * * *"
 
 permissions:
   contents: write
@@ -47,10 +51,18 @@ jobs:
             date
             echo "========================================"
 
+            set +e
             python3 -u vuurland_sync.py
+            SYNC_EXIT=$?
+            set -e
 
             echo ""
             echo "💾 Sync-status opslaan..."
+
+            if [ "$SYNC_EXIT" -ne 0 ]; then
+              echo "⚠️ Sync-run gestopt met code $SYNC_EXIT."
+              echo "⏳ Deze runner stopt gecontroleerd."
+            fi
 
             git add vuurland_seen.json vuurland_queue.json .vuurland_spotify_cache.json
 

@@ -414,8 +414,21 @@ def spotify_request(
             print()
             print(
                 f"⏸️ Spotify rate-limit (429). "
-                f"Automatisch {wait} seconden wachten..."
+                f"Spotify adviseert {wait} seconden wachten."
             )
+
+            # Korte rate-limits kunnen we veilig zelf uitzitten.
+            # Bij een extreem lange blokkering stoppen we deze run.
+            # Zo blijft een GitHub-run niet urenlang nutteloos hangen.
+            MAX_RATE_LIMIT_WAIT = 600
+
+            if wait > MAX_RATE_LIMIT_WAIT:
+                raise RuntimeError(
+                    "Spotify rate-limit duurt te lang: "
+                    f"{wait} seconden. "
+                    "Deze run wordt gestopt zodat de workflow later "
+                    "opnieuw kan proberen."
+                )
 
             time.sleep(wait)
 
@@ -862,7 +875,7 @@ def sync():
     # Cache-hits kosten geen Search-request.
     # ---------------------------------
     searches_used = 0
-    MAX_SEARCHES_PER_RUN = 10
+    MAX_SEARCHES_PER_RUN = 4
 
     # ---------------------------------
     # BESTAANDE SPOTIFY-PLAYLIST LEZEN
