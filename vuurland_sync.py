@@ -536,6 +536,7 @@ def get_vuurland_tracks():
         if program_text in {
             "studio brussel vuurland",
             "oud - vrt studio brussel vuurland",
+            "did you know that there's a tunnel under ocean blvd",
         }:
             continue
 
