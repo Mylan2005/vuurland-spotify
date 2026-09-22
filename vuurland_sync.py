@@ -580,6 +580,16 @@ def get_vuurland_tracks():
         artist = match.group(1).strip()
         title = match.group(2).strip()
 
+        # Programmavermeldingen van OnlineRadioBox negeren.
+        # Dit zijn geen echte muzieknummers.
+        program_text = f"{artist} {title}".lower()
+
+        if (
+            "studio brussel vuurland" in program_text
+            or "vrt studio brussel vuurland" in program_text
+        ):
+            continue
+
         if len(artist) > 150:
             continue
 
