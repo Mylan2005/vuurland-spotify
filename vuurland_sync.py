@@ -504,43 +504,71 @@ def get_vuurland_tracks():
     )
 
     tracks = []
-
     seen = set()
+    pending_title = None
 
     import re
 
-    for element in soup.find_all(
-        ["tr", "li"]
-    ):
+    program_labels = {
+        "studio brussel vuurland",
+        "oud - vrt studio brussel vuurland",
+    }
 
-        text = " ".join(
-            element.stripped_strings
-        )
+    for element in soup.find_all(["tr", "li"]):
 
-        match = re.search(
-            r"\b\d{1,2}:\d{2}\b\s+"
-            r"(.+?)\s+-\s+(.+)$",
+        text = " ".join(element.stripped_strings)
+
+        time_match = re.search(
+            r"\b\d{1,2}:\d{2}\b\s*(.*)$",
             text
         )
 
-        if not match:
+        if not time_match:
             continue
 
-        artist = match.group(1).strip()
-        title = match.group(2).strip()
+        entry = time_match.group(1).strip()
 
-        # Vaste programmavermeldingen van OnlineRadioBox negeren.
-        # Dit zijn geen echte muzieknummers.
+        if not entry:
+            continue
+
+        entry_lower = entry.lower().strip()
+
+        # Programmavermeldingen zijn geen nummers.
+        if entry_lower in program_labels:
+            continue
+
+        # Normaal formaat:
+        # ARTIST - TITLE
+        match = re.match(
+            r"^(.+?)\s+-\s+(.+)$",
+            entry
+        )
+
+        if match:
+            artist = match.group(1).strip()
+            title = match.group(2).strip()
+            pending_title = None
+
+        else:
+            # OnlineRadioBox kan soms titel en artiest
+            # als afzonderlijke regels tonen.
+            #
+            # We bewaren een losse titel en wachten op
+            # de volgende losse regel die de artiest bevat.
+            if pending_title is None:
+                pending_title = entry
+                continue
+
+            artist = entry
+            title = pending_title
+            pending_title = None
+
         program_text = f"{artist} {title}".strip().lower()
 
-        if program_text in {
-            "studio brussel vuurland",
-            "oud - vrt studio brussel vuurland",
-            "did you know that there's a tunnel under ocean blvd",
-        }:
+        if program_text in program_labels:
             continue
 
-        if len(artist) > 150:
+        if len(artist) > 150 or len(title) > 300:
             continue
 
         key = (
