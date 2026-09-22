@@ -3,7 +3,13 @@ name: Vuurland Spotify Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    # Elke 6 uur een nieuwe lange runner starten.
+    # Niet op minuut 0 om drukte rond het begin van het uur te vermijden.
+    - cron: "17 */6 * * *"
+
+concurrency:
+  group: vuurland-sync
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -11,6 +17,7 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 355
 
     steps:
       - name: Checkout
@@ -32,17 +39,46 @@ jobs:
           echo "Client ID lengte: ${#SPOTIFY_CLIENT_ID}"
           echo "Refresh token lengte: ${#SPOTIFY_REFRESH_TOKEN}"
 
-      - name: Vuurland
+      - name: Vuurland continu synchroniseren
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           VUURLAND_DATA_DIR: ${{ github.workspace }}
-        run: python3 -u vuurland_sync.py
-
-      - name: Geheugen opslaan
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add vuurland_seen.json vuurland_queue.json .vuurland_spotify_cache.json
-          git diff --cached --quiet || git commit -m "Update Vuurland sync state"
-          git push
+          END_TIME=$((SECONDS + 345 * 60))
+
+          while [ "$SECONDS" -lt "$END_TIME" ]; do
+            echo ""
+            echo "========================================"
+            echo "📻 Vuurland sync gestart"
+            date
+            echo "========================================"
+
+            python3 -u vuurland_sync.py || true
+
+            echo ""
+            echo "💾 Sync-status opslaan..."
+
+            git add vuurland_seen.json vuurland_queue.json .vuurland_spotify_cache.json
+
+            if ! git diff --cached --quiet; then
+              git commit -m "Update Vuurland sync state"
+              git push
+            else
+              echo "ℹ️ Geen wijzigingen om op te slaan."
+            fi
+
+            REMAINING=$((END_TIME - SECONDS))
+
+            if [ "$REMAINING" -le 0 ]; then
+              break
+            fi
+
+            echo ""
+            echo "⏳ Volgende controle over 5 minuten..."
+            sleep 300
+          done
+
+          echo ""
+          echo "🏁 Deze lange sync-run is afgelopen."
+          echo "GitHub start later automatisch een nieuwe runner."
