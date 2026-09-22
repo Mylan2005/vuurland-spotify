@@ -3,6 +3,7 @@ import hashlib
 import http.server
 import json
 import os
+import re
 import secrets
 import threading
 import time
@@ -598,8 +599,13 @@ def find_spotify_track(
 ):
 
     if time.time() < SPOTIFY_SEARCH_BLOCKED_UNTIL:
-        remaining = int(SPOTIFY_SEARCH_BLOCKED_UNTIL - time.time())
-        raise RuntimeError(f"Spotify Search nog geblokkeerd ({remaining} seconden resterend)")
+        remaining = int(
+            SPOTIFY_SEARCH_BLOCKED_UNTIL - time.time()
+        )
+        raise RuntimeError(
+            f"Spotify Search nog geblokkeerd "
+            f"({remaining} seconden resterend)"
+        )
 
     query = (
         f'track:"{title}" '
@@ -616,18 +622,76 @@ def find_spotify_track(
         }
     )
 
-    items = data.get("tracks", {}).get("items", [])
+    items = data.get(
+        "tracks",
+        {}
+    ).get(
+        "items",
+        []
+    )
 
     wanted_title = title.strip().lower()
     wanted_artist = artist.strip().lower()
 
+    def normalize(value):
+        value = value.lower().strip()
+
+        for char in [".", ",", "(", ")", "[", "]"]:
+            value = value.replace(char, " ")
+
+        return " ".join(value.split())
+
+    normalized_wanted_title = normalize(wanted_title)
+    normalized_wanted_artist = normalize(wanted_artist)
+
+    # Splits samenwerkingen zoals:
+    # "BIG RED MACHINE feat TAYLOR SWIFT"
+    # "ARTIST & OTHER ARTIST"
+    artist_parts = re.split(
+        r"\s+(?:feat\.?|ft\.?|featuring)\s+|\s+&\s+",
+        normalized_wanted_artist
+    )
+
+    artist_parts = [
+        part.strip()
+        for part in artist_parts
+        if part.strip()
+    ]
+
     for item in items:
-        spotify_title = item.get("name", "").strip().lower()
+
+        spotify_title = normalize(
+            item.get("name", "")
+        )
+
+        if spotify_title != normalized_wanted_title:
+            continue
+
         spotify_artists = [
-            a.get("name", "").strip().lower()
+            normalize(a.get("name", ""))
             for a in item.get("artists", [])
+            if a.get("name")
         ]
-        if spotify_title == wanted_title and wanted_artist in spotify_artists:
+
+        # Eerst exacte artiestennaam proberen.
+        if normalized_wanted_artist in spotify_artists:
+            return item["uri"]
+
+        # Daarna samenwerkingen controleren.
+        # Iedere opgegeven artiest moet in de Spotify-artiesten
+        # terug te vinden zijn.
+        if (
+            len(artist_parts) > 1
+            and all(
+                any(
+                    part == spotify_artist
+                    or part in spotify_artist
+                    or spotify_artist in part
+                    for spotify_artist in spotify_artists
+                )
+                for part in artist_parts
+            )
+        ):
             return item["uri"]
 
     return None
