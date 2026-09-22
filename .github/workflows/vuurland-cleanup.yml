@@ -1,0 +1,182 @@
+name: Vuurland Queue Cleanup
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Queue opschonen
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          VUURLAND_DATA_DIR: ${{ github.workspace }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+
+          from vuurland_sync import get_playlist, spotify_request
+
+          print()
+          print("========================================")
+          print("     VUURLAND QUEUE CLEANUP")
+          print("========================================")
+          print()
+
+          with open("vuurland_queue.json") as f:
+              queue = json.load(f)
+
+          print(f"📋 Queue vóór cleanup: {len(queue)}")
+
+          playlist_id = get_playlist()
+
+          playlist_items = []
+          offset = 0
+
+          while True:
+              data = spotify_request(
+                  "GET",
+                  f"/playlists/{playlist_id}/items",
+                  params={
+                      "limit": 50,
+                      "offset": offset,
+                  },
+              )
+
+              batch = data.get("items", [])
+              playlist_items.extend(batch)
+
+              if not data.get("next"):
+                  break
+
+              offset += len(batch)
+
+          def normalize(value):
+              value = value.lower().strip()
+
+              for char in [".", ",", "(", ")", "[", "]"]:
+                  value = value.replace(char, " ")
+
+              return " ".join(value.split())
+
+          def artist_parts(value):
+              value = normalize(value)
+
+              parts = re.split(
+                  r"\s+(?:feat\.?|ft\.?|featuring)\s+|\s+&\s+",
+                  value,
+              )
+
+              return [
+                  part.strip()
+                  for part in parts
+                  if part.strip()
+              ]
+
+          playlist_tracks = []
+
+          for item in playlist_items:
+              track = item.get("item")
+
+              if not track:
+                  continue
+
+              title = normalize(track.get("name", ""))
+
+              artists = [
+                  normalize(a.get("name", ""))
+                  for a in track.get("artists", [])
+                  if a.get("name")
+              ]
+
+              if title and artists:
+                  playlist_tracks.append((title, artists))
+
+          remaining = []
+          removed = []
+
+          for item in queue:
+              queue_artist = item.get("artist", "").strip()
+              queue_title = item.get("title", "").strip()
+
+              wanted_title = normalize(queue_title)
+              wanted_parts = artist_parts(queue_artist)
+
+              already_there = False
+
+              for playlist_title, playlist_artists in playlist_tracks:
+                  if playlist_title != wanted_title:
+                      continue
+
+                  if len(wanted_parts) == 1:
+                      if wanted_parts[0] in playlist_artists:
+                          already_there = True
+                          break
+
+                  else:
+                      if all(
+                          part in playlist_artists
+                          for part in wanted_parts
+                      ):
+                          already_there = True
+                          break
+
+              if already_there:
+                  removed.append(item)
+              else:
+                  remaining.append(item)
+
+          with open("vuurland_queue.json", "w") as f:
+              json.dump(
+                  remaining,
+                  f,
+                  indent=2,
+                  ensure_ascii=False,
+              )
+
+          print()
+          print(f"🗑️ Uit queue gehaald: {len(removed)}")
+          print(f"📋 Queue na cleanup: {len(remaining)}")
+          print()
+
+          for item in removed:
+              print(
+                  f"⏭️ Al in Spotify: "
+                  f"{item.get('artist')} - {item.get('title')}"
+              )
+
+          print()
+          print("✅ Spotify-playlist is NIET gewijzigd.")
+          print("✅ Alleen vuurland_queue.json is aangepast.")
+          PY
+
+      - name: Queue opslaan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add vuurland_queue.json
+
+          if git diff --cached --quiet; then
+            echo "ℹ️ Geen wijzigingen."
+          else
+            git commit -m "Clean already synced Vuurland queue"
+            git push
+          fi
