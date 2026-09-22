@@ -932,16 +932,17 @@ def sync():
 # START
 # =========================
 
-print()
-print("===================================")
-print("   VUURLAND → SPOTIFY")
-print("===================================")
-print()
-
-try:
-    sync()
-except Exception as error:
+if __name__ == "__main__":
     print()
-    print("❌ Er ging iets mis:")
-    print(error)
-    raise
+    print("===================================")
+    print("   VUURLAND → SPOTIFY")
+    print("===================================")
+    print()
+
+    try:
+        sync()
+    except Exception as error:
+        print()
+        print("❌ Er ging iets mis:")
+        print(error)
+        raise
