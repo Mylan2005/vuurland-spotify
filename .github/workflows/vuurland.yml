@@ -46,4 +46,3 @@ jobs:
           git add vuurland_seen.json
           git diff --cached --quiet || git commit -m "Update Vuurland seen tracks"
           git push
-
