@@ -84,8 +84,14 @@ jobs:
 
           echo ""
           echo "🏁 Deze runner gaat stoppen."
-          echo "🔄 Nieuwe runner wordt gestart..."
 
-          gh workflow run vuurland.yml \
-            --repo "$GITHUB_REPOSITORY" \
-            --ref main
+          if [ "${SYNC_EXIT:-0}" -eq 0 ]; then
+            echo "🔄 Nieuwe runner wordt gestart..."
+
+            gh workflow run vuurland.yml \
+              --repo "$GITHUB_REPOSITORY" \
+              --ref main
+          else
+            echo "⏸️ Geen nieuwe runner gestart vanwege Spotify-rate-limit."
+            echo "🕒 De geplande workflow probeert later opnieuw."
+          fi
