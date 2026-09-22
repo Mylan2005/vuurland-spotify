@@ -376,6 +376,36 @@ def spotify_request(
     server_errors = 0
 
     while True:
+        # ---------------------------------
+        # BEWAARDE SPOTIFY RATE-LIMIT
+        # ---------------------------------
+        cache = load_cache()
+        blocked_until = cache.get(
+            "__spotify_api_blocked_until",
+            0
+        )
+
+        if blocked_until and time.time() < blocked_until:
+            remaining = int(blocked_until - time.time())
+
+            print()
+            print(
+                "⏸️ Spotify rate-limit is nog actief. "
+                f"Nog ongeveer {remaining} seconden."
+            )
+
+            raise RuntimeError(
+                "Spotify rate-limit is nog actief."
+            )
+
+        # Blokkering is afgelopen.
+        if blocked_until:
+            cache.pop(
+                "__spotify_api_blocked_until",
+                None
+            )
+            save_cache(cache)
+
         token = get_token()
 
         headers = kwargs.pop(
@@ -423,11 +453,20 @@ def spotify_request(
             MAX_RATE_LIMIT_WAIT = 600
 
             if wait > MAX_RATE_LIMIT_WAIT:
+                blocked_until = time.time() + wait
+
+                cache = load_cache()
+                cache["__spotify_api_blocked_until"] = blocked_until
+                save_cache(cache)
+
+                print(
+                    "⏸️ Spotify API tijdelijk geblokkeerd. "
+                    f"Blokkering opgeslagen voor {wait} seconden."
+                )
+
                 raise RuntimeError(
-                    "Spotify rate-limit duurt te lang: "
-                    f"{wait} seconden. "
-                    "Deze run wordt gestopt zodat de workflow later "
-                    "opnieuw kan proberen."
+                    "Spotify rate-limit actief. "
+                    "Blokkering is opgeslagen voor de volgende run."
                 )
 
             time.sleep(wait)
