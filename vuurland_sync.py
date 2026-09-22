@@ -21,6 +21,7 @@ CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
 REDIRECT_URI = "http://127.0.0.1:8888/callback"
 
 PLAYLIST_NAME = "Studio Brussel Vuurland"
+PLAYLIST_ID = "5WkgQBl9M7nHinVD1qd9Ol"
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 
@@ -431,61 +432,9 @@ def spotify_request(
 # =========================
 
 def get_playlist():
-    cache = load_cache()
+    # Gebruik altijd de bestaande Vuurland-playlist.
+    return PLAYLIST_ID
 
-    cached_id = cache.get("__playlist_id")
-    if cached_id:
-        return cached_id
-
-    print("🔎 Spotify-playlist zoeken...")
-
-    offset = 0
-
-    while True:
-        data = spotify_request(
-            "GET",
-            "/me/playlists",
-            params={
-                "limit": 50,
-                "offset": offset
-            }
-        )
-
-        for playlist in data.get("items", []):
-            if (
-                playlist
-                and playlist.get("name") == PLAYLIST_NAME
-            ):
-                playlist_id = playlist["id"]
-                cache["__playlist_id"] = playlist_id
-                save_cache(cache)
-                return playlist_id
-
-        if not data.get("next"):
-            break
-
-        offset += 50
-
-    print("📁 Playlist wordt aangemaakt...")
-
-    playlist = spotify_request(
-        "POST",
-        "/me/playlists",
-        json={
-            "name": PLAYLIST_NAME,
-            "public": False,
-            "collaborative": False,
-            "description":
-                "Automatisch gesynchroniseerd "
-                "met OnlineRadioBox Vuurland."
-        }
-    )
-
-    playlist_id = playlist["id"]
-    cache["__playlist_id"] = playlist_id
-    save_cache(cache)
-
-    return playlist_id
 
 def existing_tracks(playlist_id):
     tracks = set()
