@@ -420,11 +420,17 @@ def spotify_request(
 # =========================
 
 def get_playlist():
+    cache = load_cache()
+
+    cached_id = cache.get("__playlist_id")
+    if cached_id:
+        return cached_id
+
+    print("🔎 Spotify-playlist zoeken...")
 
     offset = 0
 
     while True:
-
         data = spotify_request(
             "GET",
             "/me/playlists",
@@ -434,32 +440,22 @@ def get_playlist():
             }
         )
 
-        for playlist in data.get(
-            "items",
-            []
-        ):
-
+        for playlist in data.get("items", []):
             if (
                 playlist
-                and playlist.get("name")
-                == PLAYLIST_NAME
+                and playlist.get("name") == PLAYLIST_NAME
             ):
-
-                return playlist["id"]
+                playlist_id = playlist["id"]
+                cache["__playlist_id"] = playlist_id
+                save_cache(cache)
+                return playlist_id
 
         if not data.get("next"):
             break
 
         offset += 50
 
-    print(
-        "📁 Playlist wordt aangemaakt..."
-    )
-
-    user = spotify_request(
-        "GET",
-        "/me"
-    )
+    print("📁 Playlist wordt aangemaakt...")
 
     playlist = spotify_request(
         "POST",
@@ -474,8 +470,11 @@ def get_playlist():
         }
     )
 
-    return playlist["id"]
+    playlist_id = playlist["id"]
+    cache["__playlist_id"] = playlist_id
+    save_cache(cache)
 
+    return playlist_id
 
 def existing_tracks(playlist_id):
     tracks = set()
@@ -672,96 +671,199 @@ def add_tracks(
 # =========================
 
 def sync():
-
     tracks = get_vuurland_tracks()
 
-    print(
-        f"   {len(tracks)} nummers gevonden."
+    print()
+    print(f"   {len(tracks)} nummers gevonden.")
+
+    # ---------------------------------
+    # PERSISTENTE WACHTRIJ
+    # ---------------------------------
+    queue_file = os.path.join(
+        DATA_DIR,
+        "vuurland_queue.json"
     )
 
-    if not tracks:
-        print(
-            "⚠️ Geen nummers gevonden."
-        )
-        return
+    try:
+        with open(queue_file, "r") as f:
+            queue = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        queue = []
+
+    if not isinstance(queue, list):
+        queue = []
 
     seen = load_seen()
-    tracks = [
-        (artist, title)
-        for artist, title in tracks
-        if f"{artist.strip().lower()}|||{title.strip().lower()}" not in seen
-    ]
 
-    print(f"🆕 {len(tracks)} echt nieuwe nummers sinds de vorige controle.")
+    # Nieuwe nummers uit Vuurland aan de wachtrij toevoegen.
+    queued_keys = {
+        f"{item['artist'].strip().lower()}|||"
+        f"{item['title'].strip().lower()}"
+        for item in queue
+        if isinstance(item, dict)
+        and "artist" in item
+        and "title" in item
+    }
+
+    added_to_queue = 0
+
+    for artist, title in tracks:
+        key = (
+            f"{artist.strip().lower()}|||"
+            f"{title.strip().lower()}"
+        )
+
+        if key in seen or key in queued_keys:
+            continue
+
+        queue.append({
+            "artist": artist,
+            "title": title
+        })
+        queued_keys.add(key)
+        added_to_queue += 1
+
+    print(
+        f"🆕 {added_to_queue} nieuwe nummers aan de wachtrij toegevoegd."
+    )
+
+    # ---------------------------------
+    # PLAYLIST
+    # ---------------------------------
+    if not queue:
+        with open(queue_file, "w") as f:
+            json.dump([], f, indent=2, ensure_ascii=False)
+        print("ℹ️ Geen nummers te verwerken.")
+        return
 
     playlist_id = get_playlist()
 
-    existing, existing_keys = existing_tracks(
-        playlist_id
-    )
+    cache = load_cache()
 
     processed = []
     new_tracks = []
+    remaining_queue = []
 
-    not_found = []
-    cache = load_cache()
+    # ---------------------------------
+    # VEILIGE SPOTIFY VERWERKING
+    #
+    # We doen per GitHub-run maximaal
+    # 2 nieuwe Spotify Search-requests.
+    #
+    # Cache-hits kosten geen Search-request.
+    # ---------------------------------
+    searches_used = 0
+    MAX_SEARCHES_PER_RUN = 2
 
-    for artist, title in tracks[:3]:
+    for item in queue:
+        artist = item["artist"]
+        title = item["title"]
+
         key = (
             artist.strip().lower(),
             title.strip().lower()
         )
-        if key in existing_keys:
-            processed.append(f"{artist.strip().lower()}|||{title.strip().lower()}")
-            continue
-        cache_key = f"{artist.strip().lower()}|||{title.strip().lower()}"
+
+        cache_key = (
+            f"{artist.strip().lower()}|||"
+            f"{title.strip().lower()}"
+        )
 
         if cache_key in cache:
             uri = cache[cache_key]
-            print(f"💾 Cache gebruikt: {artist} - {title}")
+            print(
+                f"💾 Cache gebruikt: {artist} - {title}"
+            )
+
         else:
-            print(f"🔎 Nieuw nummer zoeken: {artist} - {title}")
+            if searches_used >= MAX_SEARCHES_PER_RUN:
+                remaining_queue.append(item)
+                continue
+
+            print(
+                f"🔎 Spotify zoeken: {artist} - {title}"
+            )
+
             try:
-                uri = find_spotify_track(artist, title)
+                uri = find_spotify_track(
+                    artist,
+                    title
+                )
             except RuntimeError as error:
-                print(f"⏸️ Spotify pauzeert: {error}")
+                print(
+                    f"⏸️ Spotify pauzeert: {error}"
+                )
+                remaining_queue.append(item)
+
+                # Alles wat nog niet behandeld is
+                # bewaren.
+                current_index = queue.index(item)
+                remaining_queue.extend(
+                    queue[current_index + 1:]
+                )
                 break
-            cache[cache_key] = uri
-            save_cache(cache)
+
+            searches_used += 1
+
+            if uri is not None:
+                cache[cache_key] = uri
+                save_cache(cache)
 
         if uri is None:
-            not_found.append(f"{artist} - {title}")
+            # Niet gevonden: niet als "gezien" markeren.
+            # Zo kan een volgende run opnieuw proberen.
+            remaining_queue.append(item)
             continue
 
         processed.append(cache_key)
+        new_tracks.append(uri)
 
-        if uri not in existing:
+    # ---------------------------------
+    # SPOTIFY PLAYLIST BIJWERKEN
+    # ---------------------------------
+    if new_tracks:
+        add_tracks(
+            playlist_id,
+            new_tracks
+        )
 
-            new_tracks.append(uri)
-
-            existing.add(uri)
-
-    add_tracks(
-        playlist_id,
-        new_tracks
-    )
-
+    # ---------------------------------
+    # VERWERKTE TRACKS ALS GEZIEN OPSLAAN
+    # ---------------------------------
     seen.update(processed)
     save_seen(seen)
+
+    # ---------------------------------
+    # WACHTRIJ OPSLAAN
+    # ---------------------------------
+    with open(queue_file, "w") as f:
+        json.dump(
+            remaining_queue,
+            f,
+            indent=2,
+            ensure_ascii=False
+        )
 
     print()
     print(
         f"✅ {len(new_tracks)} nieuwe "
         f"nummers toegevoegd."
     )
+    print(
+        f"📋 {len(remaining_queue)} nummers "
+        f"blijven in de wachtrij."
+    )
 
-    if not_found:
+    print(
+        f"🔎 Spotify Search gebruikt: "
+        f"{searches_used}/{MAX_SEARCHES_PER_RUN}"
+    )
 
+    if remaining_queue:
         print(
-            f"ℹ️ {len(not_found)} "
-            "nummers niet gevonden op Spotify."
+            "⏭️ De rest wordt automatisch "
+            "bij volgende controles verwerkt."
         )
-
 
 # =========================
 # START
