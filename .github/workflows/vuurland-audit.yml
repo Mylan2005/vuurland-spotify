@@ -1,0 +1,205 @@
+name: Vuurland Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Audit
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          VUURLAND_DATA_DIR: ${{ github.workspace }}
+        run: |
+          python3 - <<'PY'
+          import json
+          from collections import Counter
+          from vuurland_sync import get_playlist, spotify_request
+
+          print()
+          print("========================================")
+          print("       VUURLAND VEILIG AUDIT")
+          print("========================================")
+          print()
+
+          playlist_id = get_playlist()
+
+          items = []
+          offset = 0
+
+          while True:
+              data = spotify_request(
+                  "GET",
+                  f"/playlists/{playlist_id}/items",
+                  params={
+                      "limit": 50,
+                      "offset": offset,
+                  },
+              )
+
+              batch = data.get("items", [])
+              items.extend(batch)
+
+              if not data.get("next"):
+                  break
+
+              offset += len(batch)
+
+          print(f"📋 Playlist bevat {len(items)} items.")
+          print()
+
+          # ---------------------------------
+          # DUBBELE SPOTIFY-TRACKS
+          # ---------------------------------
+          uri_counts = Counter()
+
+          for item in items:
+              track = item.get("item")
+              if track and track.get("uri"):
+                  uri_counts[track["uri"]] += 1
+
+          duplicates = {
+              uri: count
+              for uri, count in uri_counts.items()
+              if count > 1
+          }
+
+          print("========================================")
+          print("DUBBELE TRACKS")
+          print("========================================")
+
+          if not duplicates:
+              print("✅ Geen dubbele Spotify-tracks gevonden.")
+          else:
+              print(f"⚠️ {len(duplicates)} verschillende tracks komen dubbel voor.")
+              print()
+
+              for uri, count in duplicates.items():
+                  matches = [
+                      item.get("item")
+                      for item in items
+                      if item.get("item", {}).get("uri") == uri
+                  ]
+
+                  track = matches[0]
+                  artists = ", ".join(
+                      a.get("name", "")
+                      for a in track.get("artists", [])
+                  )
+
+                  print(
+                      f"{count}x  {artists} - {track.get('name', '')}"
+                  )
+                  print(f"     {uri}")
+
+          # ---------------------------------
+          # QUEUE
+          # ---------------------------------
+          try:
+              with open("vuurland_queue.json") as f:
+                  queue = json.load(f)
+          except Exception:
+              queue = []
+
+          print()
+          print("========================================")
+          print("WACHTRIJ")
+          print("========================================")
+          print(f"📋 {len(queue)} nummers in queue.")
+
+          # Playlist als artist/title-set
+          playlist_keys = set()
+
+          for item in items:
+              track = item.get("item")
+              if not track:
+                  continue
+
+              title = track.get("name", "").strip().lower()
+
+              for artist in track.get("artists", []):
+                  name = artist.get("name", "").strip().lower()
+
+                  if name and title:
+                      playlist_keys.add(
+                          f"{name}|||{title}"
+                      )
+
+          already_in_playlist = []
+
+          for item in queue:
+              artist = str(item.get("artist", "")).strip()
+              title = str(item.get("title", "")).strip()
+
+              key = f"{artist.lower()}|||{title.lower()}"
+
+              if key in playlist_keys:
+                  already_in_playlist.append(
+                      (artist, title)
+                  )
+
+          print(
+              f"⚠️ {len(already_in_playlist)} queue-items "
+              "staan al in de Spotify-playlist."
+          )
+
+          for artist, title in already_in_playlist:
+              print(f"   AL IN PLAYLIST: {artist} - {title}")
+
+          # ---------------------------------
+          # PROGRAMMALABELS
+          # ---------------------------------
+          program_labels = {
+              "studio brussel vuurland",
+              "oud - vrt studio brussel vuurland",
+          }
+
+          program_items = []
+
+          for item in queue:
+              text = (
+                  f"{item.get('artist', '')} "
+                  f"{item.get('title', '')}"
+              ).strip().lower()
+
+              if text in program_labels:
+                  program_items.append(item)
+
+          print()
+          print("========================================")
+          print("PROGRAMMAREGELS IN QUEUE")
+          print("========================================")
+
+          if not program_items:
+              print("✅ Geen programmaregels gevonden.")
+          else:
+              for item in program_items:
+                  print(
+                      f"⚠️ {item.get('artist')} - "
+                      f"{item.get('title')}"
+                  )
+
+          print()
+          print("========================================")
+          print("AUDIT KLAAR")
+          print("========================================")
+          print("ℹ️ Er is niets verwijderd.")
+          print("ℹ️ Er is niets toegevoegd.")
+          PY
