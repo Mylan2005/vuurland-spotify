@@ -2,17 +2,14 @@ name: Vuurland Spotify Sync
 
 on:
   workflow_dispatch:
-  schedule:
-    # Elke 6 uur een nieuwe lange runner starten.
-    # Niet op minuut 0 om drukte rond het begin van het uur te vermijden.
-    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+  actions: write
 
 concurrency:
   group: vuurland-sync
   cancel-in-progress: false
-
-permissions:
-  contents: write
 
 jobs:
   sync:
@@ -31,19 +28,12 @@ jobs:
       - name: Dependencies
         run: pip install -r requirements.txt
 
-      - name: Controle secrets
-        env:
-          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
-          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
-        run: |
-          echo "Client ID lengte: ${#SPOTIFY_CLIENT_ID}"
-          echo "Refresh token lengte: ${#SPOTIFY_REFRESH_TOKEN}"
-
-      - name: Vuurland continu synchroniseren
+      - name: Vuurland 24/7 synchroniseren
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           VUURLAND_DATA_DIR: ${{ github.workspace }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -53,11 +43,11 @@ jobs:
           while [ "$SECONDS" -lt "$END_TIME" ]; do
             echo ""
             echo "========================================"
-            echo "📻 Vuurland sync gestart"
+            echo "📻 Vuurland sync"
             date
             echo "========================================"
 
-            python3 -u vuurland_sync.py || true
+            python3 -u vuurland_sync.py
 
             echo ""
             echo "💾 Sync-status opslaan..."
@@ -68,20 +58,23 @@ jobs:
               git commit -m "Update Vuurland sync state"
               git push
             else
-              echo "ℹ️ Geen wijzigingen om op te slaan."
+              echo "ℹ️ Geen wijzigingen."
             fi
 
             REMAINING=$((END_TIME - SECONDS))
 
-            if [ "$REMAINING" -le 0 ]; then
+            if [ "$REMAINING" -le 180 ]; then
               break
             fi
 
-            echo ""
-            echo "⏳ Volgende controle over 5 minuten..."
-            sleep 300
+            echo "⏳ Korte pauze voor volgende controle..."
+            sleep 30
           done
 
           echo ""
-          echo "🏁 Deze lange sync-run is afgelopen."
-          echo "GitHub start later automatisch een nieuwe runner."
+          echo "🏁 Deze runner gaat stoppen."
+          echo "🔄 Nieuwe runner wordt gestart..."
+
+          gh workflow run vuurland.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main

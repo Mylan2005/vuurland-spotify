@@ -372,40 +372,16 @@ def spotify_request(
     **kwargs
 ):
 
-    token = get_token()
+    max_server_errors = 5
+    server_errors = 0
 
-    headers = kwargs.pop(
-        "headers",
-        {}
-    )
-
-    headers["Authorization"] = (
-        "Bearer "
-        + token["access_token"]
-    )
-
-    response = requests.request(
-        method,
-        API_URL + endpoint,
-        headers=headers,
-        timeout=30,
-        **kwargs
-    )
-
-    if response.status_code == 429:
-        wait = int(response.headers.get("Retry-After", "60"))
-        if endpoint == "/search":
-            globals()["SPOTIFY_SEARCH_BLOCKED_UNTIL"] = time.time() + wait
-            cache = load_cache()
-            cache["__spotify_search_blocked_until"] = SPOTIFY_SEARCH_BLOCKED_UNTIL
-            save_cache(cache)
-        raise RuntimeError(f"Spotify rate limit actief (wachtadvies: {wait} seconden)")
-
-    if response.status_code == 401:
-
-        save_token({})
-
+    while True:
         token = get_token()
+
+        headers = kwargs.pop(
+            "headers",
+            {}
+        )
 
         headers["Authorization"] = (
             "Bearer "
@@ -420,12 +396,82 @@ def spotify_request(
             **kwargs
         )
 
-    response.raise_for_status()
+        # ---------------------------------
+        # SPOTIFY RATE LIMIT
+        #
+        # Bij 429 stoppen we NIET.
+        # Spotify bepaalt hoe lang we wachten.
+        # Daarna proberen we dezelfde request opnieuw.
+        # ---------------------------------
+        if response.status_code == 429:
+            retry_after = response.headers.get("Retry-After")
 
-    if response.content:
-        return response.json()
+            try:
+                wait = max(1, int(retry_after))
+            except (TypeError, ValueError):
+                wait = 60
 
-    return {}
+            print()
+            print(
+                f"⏸️ Spotify rate-limit (429). "
+                f"Automatisch {wait} seconden wachten..."
+            )
+
+            time.sleep(wait)
+
+            print("▶️ Spotify-request wordt opnieuw geprobeerd.")
+            continue
+
+        # ---------------------------------
+        # TIJDELIJKE SERVERFOUTEN
+        # ---------------------------------
+        if response.status_code in (500, 502, 503, 504):
+            server_errors += 1
+
+            if server_errors > max_server_errors:
+                response.raise_for_status()
+
+            wait = min(
+                60,
+                2 ** (server_errors - 1)
+            )
+
+            print(
+                f"⚠️ Spotify HTTP {response.status_code}. "
+                f"Opnieuw proberen over {wait} seconden..."
+            )
+
+            time.sleep(wait)
+            continue
+
+        # ---------------------------------
+        # TOKEN VERLOPEN
+        # ---------------------------------
+        if response.status_code == 401:
+
+            save_token({})
+
+            token = get_token()
+
+            headers["Authorization"] = (
+                "Bearer "
+                + token["access_token"]
+            )
+
+            response = requests.request(
+                method,
+                API_URL + endpoint,
+                headers=headers,
+                timeout=30,
+                **kwargs
+            )
+
+        response.raise_for_status()
+
+        if response.content:
+            return response.json()
+
+        return {}
 
 
 # =========================
@@ -816,7 +862,7 @@ def sync():
     # Cache-hits kosten geen Search-request.
     # ---------------------------------
     searches_used = 0
-    MAX_SEARCHES_PER_RUN = 2
+    MAX_SEARCHES_PER_RUN = 10
 
     # ---------------------------------
     # BESTAANDE SPOTIFY-PLAYLIST LEZEN
