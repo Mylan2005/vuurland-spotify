@@ -732,7 +732,22 @@ def find_spotify_track(
     wanted_artist = artist.strip().lower()
 
     def normalize(value):
+        import unicodedata
+
         value = value.lower().strip()
+
+        # Accenten verwijderen:
+        # "Rós" wordt "ros", "Beyoncé" wordt "beyonce", enz.
+        value = unicodedata.normalize(
+            "NFKD",
+            value
+        )
+
+        value = "".join(
+            char
+            for char in value
+            if not unicodedata.combining(char)
+        )
 
         for char in [".", ",", "(", ")", "[", "]"]:
             value = value.replace(char, " ")
@@ -741,6 +756,20 @@ def find_spotify_track(
 
     normalized_wanted_title = normalize(wanted_title)
     normalized_wanted_artist = normalize(wanted_artist)
+
+    # Extra artiest-normalisatie voor kleine schrijfverschillen.
+    # Bijvoorbeeld:
+    # "Lianne La Havas" == "Lianne Lahavas"
+    #
+    # Alleen voor artiestnamen gebruiken we deze compacte vorm.
+    def compact_artist(value):
+        return "".join(
+            normalize(value).split()
+        )
+
+    compact_wanted_artist = compact_artist(
+        wanted_artist
+    )
 
     # Splits samenwerkingen zoals:
     # "BIG RED MACHINE feat TAYLOR SWIFT"
@@ -773,6 +802,16 @@ def find_spotify_track(
 
         # Eerst exacte artiestennaam proberen.
         if normalized_wanted_artist in spotify_artists:
+            return item["uri"]
+
+        # Daarna spaties negeren voor kleine schrijfverschillen,
+        # bijvoorbeeld "Lianne La Havas" versus "Lianne Lahavas".
+        compact_spotify_artists = {
+            compact_artist(a)
+            for a in spotify_artists
+        }
+
+        if compact_wanted_artist in compact_spotify_artists:
             return item["uri"]
 
         # Daarna samenwerkingen controleren.
@@ -953,20 +992,76 @@ def radio_matches_playlist(
     Controleer lokaal of een Vuurland-track
     al in de Spotify-playlist voorkomt.
     """
-    title_key = title.strip().lower()
+
+    import unicodedata
+
+    def normalize_match(value):
+        value = value.strip().lower()
+
+        # Accenten negeren:
+        # Rós -> ros
+        # Beyoncé -> beyonce
+        value = unicodedata.normalize(
+            "NFKD",
+            value
+        )
+
+        value = "".join(
+            char
+            for char in value
+            if not unicodedata.combining(char)
+        )
+
+        for char in [".", ",", "(", ")", "[", "]"]:
+            value = value.replace(char, " ")
+
+        return " ".join(value.split())
+
+    def compact_artist(value):
+        return "".join(
+            normalize_match(value).split()
+        )
+
+    title_key = normalize_match(title)
 
     radio_artists = normalize_radio_artists(
         artist_text
     )
 
+    radio_artists = [
+        normalize_match(artist)
+        for artist in radio_artists
+        if normalize_match(artist)
+    ]
+
     if not radio_artists or not title_key:
         return False
 
-    # Elke afzonderlijke Spotify-artiest kan
-    # voldoende zijn voor een match.
+    # Elke afzonderlijke artiest controleren.
     for artist in radio_artists:
+
         if f"{artist}|||{title_key}" in playlist_keys:
             return True
+
+        # Ook schrijfwijzen met/zonder spaties.
+        compact_key = compact_artist(artist)
+
+        for playlist_key in playlist_keys:
+
+            if "|||" not in playlist_key:
+                continue
+
+            playlist_artist, playlist_title = (
+                playlist_key.split("|||", 1)
+            )
+
+            if playlist_title != title_key:
+                continue
+
+            if compact_artist(
+                playlist_artist
+            ) == compact_key:
+                return True
 
     # Gecombineerde artiesten vergelijken.
     combined = "|||".join(radio_artists)
