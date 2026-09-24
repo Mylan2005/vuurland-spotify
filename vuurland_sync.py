@@ -877,6 +877,111 @@ def reset_live_sync_after_rate_limit(
 # SYNC
 # =========================
 
+def make_playlist_keys(track):
+    """
+    Maak meerdere lokale sleutels voor één Spotify-track.
+
+    Hierdoor herkennen we bijvoorbeeld:
+    KINGFISHR feat. MATT CORBY - The blade
+
+    ook wanneer Spotify de artiesten afzonderlijk teruggeeft.
+    """
+    import re
+
+    title = track.get("name", "").strip().lower()
+
+    if not title:
+        return set()
+
+    artists = []
+
+    for artist in track.get("artists", []):
+        name = artist.get("name", "").strip().lower()
+
+        if name:
+            artists.append(name)
+
+    keys = set()
+
+    # Normale Spotify-vorm: iedere artiest afzonderlijk.
+    for artist in artists:
+        keys.add(f"{artist}|||{title}")
+
+    # Gecombineerde vorm: alle Spotify-artiesten samen.
+    if artists:
+        combined = "|||".join(artists)
+        keys.add(f"{combined}|||{title}")
+
+    # Extra gecombineerde vorm met " & ".
+    if artists:
+        combined_amp = " & ".join(artists)
+        keys.add(f"{combined_amp}|||{title}")
+
+    return keys
+
+
+def normalize_radio_artists(artist_text):
+    """
+    Zet Vuurland-artiesten zoals:
+
+    KINGFISHR feat. MATT CORBY
+
+    om naar losse artiestnamen.
+    """
+    import re
+
+    text = artist_text.strip().lower()
+
+    parts = re.split(
+        r"\s+(?:feat\.?|ft\.?)\s+|\s*&\s*|\s+and\s+|\s*,\s*",
+        text
+    )
+
+    return [
+        part.strip()
+        for part in parts
+        if part.strip()
+    ]
+
+
+def radio_matches_playlist(
+    artist_text,
+    title,
+    playlist_keys
+):
+    """
+    Controleer lokaal of een Vuurland-track
+    al in de Spotify-playlist voorkomt.
+    """
+    title_key = title.strip().lower()
+
+    radio_artists = normalize_radio_artists(
+        artist_text
+    )
+
+    if not radio_artists or not title_key:
+        return False
+
+    # Elke afzonderlijke Spotify-artiest kan
+    # voldoende zijn voor een match.
+    for artist in radio_artists:
+        if f"{artist}|||{title_key}" in playlist_keys:
+            return True
+
+    # Gecombineerde artiesten vergelijken.
+    combined = "|||".join(radio_artists)
+
+    if f"{combined}|||{title_key}" in playlist_keys:
+        return True
+
+    combined_amp = " & ".join(radio_artists)
+
+    if f"{combined_amp}|||{title_key}" in playlist_keys:
+        return True
+
+    return False
+
+
 def sync():
 
     # =================================
@@ -1162,6 +1267,11 @@ def sync():
                             f"{playlist_title}"
                         )
 
+                # Bewaar ook de gecombineerde artiesten-vorm.
+                playlist_keys.update(
+                    make_playlist_keys(track)
+                )
+
             if not playlist_data.get("next"):
                 break
 
@@ -1235,7 +1345,14 @@ def sync():
     # AL IN PLAYLIST?
     # ---------------------------------
 
-    if cache_key in playlist_keys:
+    if (
+        cache_key in playlist_keys
+        or radio_matches_playlist(
+            artist,
+            title,
+            playlist_keys
+        )
+    ):
 
         print(
             f"⏭️ Al in Spotify: "
