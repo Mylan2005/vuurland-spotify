@@ -78,8 +78,12 @@ jobs:
               break
             fi
 
-            echo "⏳ Korte pauze voor volgende controle..."
-            sleep 120
+            echo "⏳ Wachten op volgende controle..."
+
+            for i in 1 2 3 4; do
+              sleep 30
+              echo "⏳ Nog bezig... $((i * 30))/120 seconden"
+            done
           done
 
           echo ""
