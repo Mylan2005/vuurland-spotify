@@ -1250,16 +1250,26 @@ def sync():
                 f"⏸️ Spotify pauzeert: {error}"
             )
 
-            # Live queue bewust bewaren.
+            # Spotify is tijdelijk geblokkeerd.
+            # Geen oude nummers inhalen na de blokkade:
+            # we starten daarna opnieuw vanaf de actuele radio.
             with open(live_queue_file, "w") as f:
                 json.dump(
-                    live_queue,
+                    [],
                     f,
                     indent=2,
                     ensure_ascii=False
                 )
 
             save_cache(cache)
+
+            print(
+                "🗑️ Live queue geleegd vanwege Spotify-rate-limit."
+            )
+            print(
+                "📻 Na de blokkade wordt opnieuw vanaf "
+                "de actuele radio gevolgd."
+            )
 
             # GitHub Actions moet deze runner stoppen.
             raise
