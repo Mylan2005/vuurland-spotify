@@ -828,6 +828,52 @@ def add_tracks(
 
 
 # =========================
+# SPOTIFY RATE-LIMIT RESET
+# =========================
+
+def reset_live_sync_after_rate_limit(
+    live_queue_file,
+    cache
+):
+    """
+    Spotify is geblokkeerd.
+
+    We halen de tijdelijke live queue weg en
+    resetten het radio-startpunt. De volgende
+    succesvolle run begint daardoor opnieuw
+    bij de actuele radio.
+    """
+
+    with open(live_queue_file, "w") as f:
+        json.dump(
+            [],
+            f,
+            indent=2,
+            ensure_ascii=False
+        )
+
+    cache.pop(
+        "__last_radio_key",
+        None
+    )
+
+    save_cache(cache)
+
+    print(
+        "🗑️ Live queue geleegd vanwege Spotify-rate-limit."
+    )
+
+    print(
+        "🔄 Radio-startpunt gereset."
+    )
+
+    print(
+        "📻 Na de blokkade wordt opnieuw vanaf "
+        "de actuele radio gevolgd."
+    )
+
+
+# =========================
 # SYNC
 # =========================
 
@@ -1009,7 +1055,16 @@ def sync():
     # PLAYLIST
     # ---------------------------------
 
-    playlist_id = get_playlist()
+    try:
+        playlist_id = get_playlist()
+
+    except RuntimeError as error:
+        if "Spotify rate-limit actief" in str(error):
+            reset_live_sync_after_rate_limit(
+                live_queue_file,
+                cache
+            )
+        raise
 
     # ---------------------------------
     # SPOTIFY SEARCH LIMIET
@@ -1031,7 +1086,7 @@ def sync():
         0
     )
 
-    PLAYLIST_CACHE_SECONDS = 21600  # 6 uur
+    PLAYLIST_CACHE_SECONDS = 86400  # 24 uur
 
     if (
         not playlist_keys
@@ -1048,14 +1103,23 @@ def sync():
 
         while True:
 
-            playlist_data = spotify_request(
-                "GET",
-                f"/playlists/{playlist_id}/items",
-                params={
-                    "limit": 50,
-                    "offset": playlist_offset,
-                },
-            )
+            try:
+                playlist_data = spotify_request(
+                    "GET",
+                    f"/playlists/{playlist_id}/items",
+                    params={
+                        "limit": 50,
+                        "offset": playlist_offset,
+                    },
+                )
+
+            except RuntimeError as error:
+                if "Spotify rate-limit actief" in str(error):
+                    reset_live_sync_after_rate_limit(
+                        live_queue_file,
+                        cache
+                    )
+                raise
 
             playlist_batch = playlist_data.get(
                 "items",
@@ -1250,25 +1314,9 @@ def sync():
                 f"⏸️ Spotify pauzeert: {error}"
             )
 
-            # Spotify is tijdelijk geblokkeerd.
-            # Geen oude nummers inhalen na de blokkade:
-            # we starten daarna opnieuw vanaf de actuele radio.
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    [],
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
-
-            save_cache(cache)
-
-            print(
-                "🗑️ Live queue geleegd vanwege Spotify-rate-limit."
-            )
-            print(
-                "📻 Na de blokkade wordt opnieuw vanaf "
-                "de actuele radio gevolgd."
+            reset_live_sync_after_rate_limit(
+                live_queue_file,
+                cache
             )
 
             # GitHub Actions moet deze runner stoppen.
