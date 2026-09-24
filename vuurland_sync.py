@@ -705,39 +705,17 @@ def find_spotify_track(
             f"({remaining} seconden resterend)"
         )
 
-    query = (
-        f'track:"{title}" '
-        f'artist:"{artist}"'
-    )
+    import re
+    import unicodedata
+    from difflib import SequenceMatcher
 
-    data = spotify_request(
-        "GET",
-        "/search",
-        params={
-            "q": query,
-            "type": "track",
-            "limit": 5
-        }
-    )
-
-    items = data.get(
-        "tracks",
-        {}
-    ).get(
-        "items",
-        []
-    )
-
-    wanted_title = title.strip().lower()
-    wanted_artist = artist.strip().lower()
+    # -------------------------------------------------
+    # FLEXIBELE NORMALISATIE
+    # -------------------------------------------------
 
     def normalize(value):
-        import unicodedata
+        value = str(value).lower().strip()
 
-        value = value.lower().strip()
-
-        # Accenten verwijderen:
-        # "Rós" wordt "ros", "Beyoncé" wordt "beyonce", enz.
         value = unicodedata.normalize(
             "NFKD",
             value
@@ -749,41 +727,103 @@ def find_spotify_track(
             if not unicodedata.combining(char)
         )
 
-        for char in [".", ",", "(", ")", "[", "]"]:
+        for char in [
+            ".", ",", "(", ")", "[", "]",
+            "{", "}", "-", "_", "'"
+        ]:
             value = value.replace(char, " ")
 
         return " ".join(value.split())
 
-    normalized_wanted_title = normalize(wanted_title)
-    normalized_wanted_artist = normalize(wanted_artist)
-
-    # Extra artiest-normalisatie voor kleine schrijfverschillen.
-    # Bijvoorbeeld:
-    # "Lianne La Havas" == "Lianne Lahavas"
-    #
-    # Alleen voor artiestnamen gebruiken we deze compacte vorm.
-    def compact_artist(value):
+    def compact(value):
         return "".join(
             normalize(value).split()
         )
 
-    compact_wanted_artist = compact_artist(
+    def artist_parts(value):
+        value = normalize(value)
+
+        parts = re.split(
+            r"\s+(?:feat|ft|featuring)\s+|"
+            r"\s*&\s*|"
+            r"\s+and\s+|"
+            r"\s*,\s*",
+            value
+        )
+
+        return [
+            part.strip()
+            for part in parts
+            if part.strip()
+        ]
+
+    # -------------------------------------------------
+    # TITELVARIANTEN
+    #
+    # Live / Remastered / Edit enz. mogen verschillen,
+    # maar het basisnummer moet wel hetzelfde blijven.
+    # -------------------------------------------------
+
+    def title_base(value):
+        value = normalize(value)
+
+        value = re.sub(
+            r"\s+(?:live|remastered|remaster|"
+            r"radio edit|edit|acoustic|version|"
+            r"single version|album version|"
+            r"mono|stereo)(?:\s+.*)?$",
+            "",
+            value
+        )
+
+        return value.strip()
+
+    wanted_artist = normalize(artist)
+    wanted_title = normalize(title)
+
+    wanted_artist_parts = artist_parts(
         wanted_artist
     )
 
-    # Splits samenwerkingen zoals:
-    # "BIG RED MACHINE feat TAYLOR SWIFT"
-    # "ARTIST & OTHER ARTIST"
-    artist_parts = re.split(
-        r"\s+(?:feat\.?|ft\.?|featuring)\s+|\s+&\s+",
-        normalized_wanted_artist
+    wanted_title_base = title_base(
+        wanted_title
     )
 
-    artist_parts = [
-        part.strip()
-        for part in artist_parts
-        if part.strip()
-    ]
+    # -------------------------------------------------
+    # ÉÉN BREDE SPOTIFY SEARCH
+    # -------------------------------------------------
+
+    query = (
+        f"{artist} {title}"
+    )
+
+    data = spotify_request(
+        "GET",
+        "/search",
+        params={
+            "q": query,
+            "type": "track",
+            "limit": 10
+        }
+    )
+
+    items = data.get(
+        "tracks",
+        {}
+    ).get(
+        "items",
+        []
+    )
+
+    if not items:
+        return None
+
+    # -------------------------------------------------
+    # RESULTATEN LOKAAL SCOREN
+    # -------------------------------------------------
+
+    best_uri = None
+    best_score = 0
 
     for item in items:
 
@@ -791,8 +831,9 @@ def find_spotify_track(
             item.get("name", "")
         )
 
-        if spotify_title != normalized_wanted_title:
-            continue
+        spotify_title_base = title_base(
+            spotify_title
+        )
 
         spotify_artists = [
             normalize(a.get("name", ""))
@@ -800,38 +841,94 @@ def find_spotify_track(
             if a.get("name")
         ]
 
-        # Eerst exacte artiestennaam proberen.
-        if normalized_wanted_artist in spotify_artists:
-            return item["uri"]
+        if not spotify_title or not spotify_artists:
+            continue
 
-        # Daarna spaties negeren voor kleine schrijfverschillen,
-        # bijvoorbeeld "Lianne La Havas" versus "Lianne Lahavas".
-        compact_spotify_artists = {
-            compact_artist(a)
-            for a in spotify_artists
-        }
+        # ---------------------------------------------
+        # ARTIEST MOET ECHT OVEREENKOMEN
+        # ---------------------------------------------
 
-        if compact_wanted_artist in compact_spotify_artists:
-            return item["uri"]
+        artist_scores = []
 
-        # Daarna samenwerkingen controleren.
-        # Iedere opgegeven artiest moet in de Spotify-artiesten
-        # terug te vinden zijn.
-        if (
-            len(artist_parts) > 1
-            and all(
-                any(
-                    part == spotify_artist
-                    or part in spotify_artist
-                    or spotify_artist in part
-                    for spotify_artist in spotify_artists
+        for wanted in wanted_artist_parts:
+
+            wanted_compact = compact(wanted)
+
+            for actual in spotify_artists:
+
+                actual_compact = compact(actual)
+
+                if wanted == actual:
+                    artist_scores.append(1.0)
+                    continue
+
+                if wanted_compact == actual_compact:
+                    artist_scores.append(0.98)
+                    continue
+
+                artist_scores.append(
+                    SequenceMatcher(
+                        None,
+                        wanted_compact,
+                        actual_compact
+                    ).ratio()
                 )
-                for part in artist_parts
-            )
-        ):
-            return item["uri"]
 
-    return None
+        if not artist_scores:
+            continue
+
+        artist_score = max(artist_scores)
+
+        # Een andere artiest mag nooit door alleen
+        # een vergelijkbare titel worden gekozen.
+        if artist_score < 0.82:
+            continue
+
+        # ---------------------------------------------
+        # TITEL MOET OOK ECHT OVEREENKOMEN
+        # ---------------------------------------------
+
+        if spotify_title_base == wanted_title_base:
+            title_score = 1.0
+
+        elif (
+            compact(spotify_title_base)
+            == compact(wanted_title_base)
+        ):
+            title_score = 0.98
+
+        else:
+            title_score = SequenceMatcher(
+                None,
+                compact(wanted_title_base),
+                compact(spotify_title_base)
+            ).ratio()
+
+        # Titel moet voldoende sterk overeenkomen.
+        if title_score < 0.72:
+            continue
+
+        # ---------------------------------------------
+        # EXTRA BONUS VOOR EXACTE VERSIES
+        # ---------------------------------------------
+
+        score = (
+            artist_score * 0.45
+            + title_score * 0.55
+        )
+
+        if spotify_title == wanted_title:
+            score += 0.20
+
+        elif spotify_title_base == wanted_title_base:
+            score += 0.10
+
+        # Alleen echte goede matches toelaten.
+        if score > best_score:
+            best_score = score
+            best_uri = item.get("uri")
+
+    return best_uri
 
 
 # =========================
@@ -1272,6 +1369,7 @@ def sync():
 
     searches_used = 0
     MAX_SEARCHES_PER_RUN = 1
+    NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
 
     # ---------------------------------
     # SPOTIFY PLAYLIST CACHE
@@ -1476,6 +1574,53 @@ def sync():
         return
 
     # ---------------------------------
+    # EERDER NIET GEVONDEN
+    #
+    # Voorkomt dat hetzelfde nummer bij
+    # iedere controle opnieuw Search gebruikt.
+    # ---------------------------------
+
+    not_found_key = (
+        "__not_found__"
+        + cache_key
+    )
+
+    not_found_time = cache.get(
+        not_found_key
+    )
+
+    if (
+        not_found_time is not None
+        and time.time() - not_found_time
+        < NOT_FOUND_COOLDOWN_SECONDS
+    ):
+
+        print(
+            f"⏭️ Eerder niet gevonden, "
+            f"tijdelijk overgeslagen: "
+            f"{artist} - {title}"
+        )
+
+        live_queue.pop(0)
+
+        with open(live_queue_file, "w") as f:
+            json.dump(
+                live_queue,
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
+
+        save_cache(cache)
+
+        print(
+            f"📋 {len(live_queue)} nummers "
+            "blijven in live queue."
+        )
+
+        return
+
+    # ---------------------------------
     # CACHE SEARCH RESULT
     # ---------------------------------
 
@@ -1552,8 +1697,13 @@ def sync():
             f"{artist} - {title}"
         )
 
-        # Niet verwijderen.
-        # Bij een volgende ronde opnieuw proberen.
+        # 24 uur geen nieuwe Search voor dit nummer.
+        cache[not_found_key] = int(time.time())
+
+        # Uit de live queue verwijderen zodat de sync
+        # niet iedere ronde op hetzelfde nummer blijft hangen.
+        live_queue.pop(0)
+
         with open(live_queue_file, "w") as f:
             json.dump(
                 live_queue,
@@ -1567,6 +1717,11 @@ def sync():
         print(
             f"📋 {len(live_queue)} nummers "
             "blijven in live queue."
+        )
+
+        print(
+            "🕒 Dit nummer wordt 24 uur niet "
+            "opnieuw gezocht."
         )
 
         print(
