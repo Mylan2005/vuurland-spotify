@@ -904,6 +904,7 @@ def sync():
     processed = []
     new_tracks = []
     remaining_queue = []
+    not_found_queue = []
 
     # ---------------------------------
     # VEILIGE SPOTIFY VERWERKING
@@ -914,7 +915,7 @@ def sync():
     # Cache-hits kosten geen Search-request.
     # ---------------------------------
     searches_used = 0
-    MAX_SEARCHES_PER_RUN = 4
+    MAX_SEARCHES_PER_RUN = 1
 
     # ---------------------------------
     # BESTAANDE SPOTIFY-PLAYLIST LEZEN
@@ -966,6 +967,18 @@ def sync():
     for item in queue:
         artist = item["artist"]
         title = item["title"]
+
+        # Dit is de bron-/kopregel van OnlineRadioBox,
+        # geen echt nummer. Nooit naar Spotify Search sturen.
+        if (
+            artist.strip().lower() == "oud"
+            and title.strip().lower() == "vrt studio brussel vuurland"
+        ):
+            print(
+                f"⏭️ Bronregel overgeslagen: "
+                f"{artist} - {title}"
+            )
+            continue
 
         key = (
             artist.strip().lower(),
@@ -1029,12 +1042,19 @@ def sync():
 
         if uri is None:
             # Niet gevonden: niet als "gezien" markeren.
-            # Zo kan een volgende run opnieuw proberen.
-            remaining_queue.append(item)
+            # Bewaar het nummer achteraan in de queue,
+            # zodat dezelfde mislukte zoekopdracht niet
+            # elke run opnieuw vooraan komt.
+            not_found_queue.append(item)
             continue
 
         processed.append(cache_key)
         new_tracks.append(uri)
+
+    # ---------------------------------
+    # NIET GEVONDEN NUMMERS ACHTERAAN
+    # ---------------------------------
+    remaining_queue.extend(not_found_queue)
 
     # ---------------------------------
     # SPOTIFY PLAYLIST BIJWERKEN
