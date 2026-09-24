@@ -695,6 +695,18 @@ def find_spotify_track(
     artist,
     title
 ):
+    """
+    Zoek een Spotify-track veilig op artiest + titel.
+
+    Regels:
+    - De artiest moet betrouwbaar overeenkomen.
+    - De titel moet exact of sterk genoeg overeenkomen.
+    - Extra officiële Spotify-toevoegingen zoals Live,
+      Remastered en Spotify Singles zijn toegestaan.
+    - Een ander nummer van dezelfde artiest wordt nooit
+      zomaar gekozen.
+    - Het beste geldige resultaat wordt gekozen.
+    """
 
     if time.time() < SPOTIFY_SEARCH_BLOCKED_UNTIL:
         remaining = int(
@@ -709,92 +721,9 @@ def find_spotify_track(
     import unicodedata
     from difflib import SequenceMatcher
 
-    # -------------------------------------------------
-    # FLEXIBELE NORMALISATIE
-    # -------------------------------------------------
-
-    def normalize(value):
-        value = str(value).lower().strip()
-
-        value = unicodedata.normalize(
-            "NFKD",
-            value
-        )
-
-        value = "".join(
-            char
-            for char in value
-            if not unicodedata.combining(char)
-        )
-
-        for char in [
-            ".", ",", "(", ")", "[", "]",
-            "{", "}", "-", "_", "'"
-        ]:
-            value = value.replace(char, " ")
-
-        return " ".join(value.split())
-
-    def compact(value):
-        return "".join(
-            normalize(value).split()
-        )
-
-    def artist_parts(value):
-        value = normalize(value)
-
-        parts = re.split(
-            r"\s+(?:feat|ft|featuring)\s+|"
-            r"\s*&\s*|"
-            r"\s+and\s+|"
-            r"\s*,\s*",
-            value
-        )
-
-        return [
-            part.strip()
-            for part in parts
-            if part.strip()
-        ]
-
-    # -------------------------------------------------
-    # TITELVARIANTEN
-    #
-    # Live / Remastered / Edit enz. mogen verschillen,
-    # maar het basisnummer moet wel hetzelfde blijven.
-    # -------------------------------------------------
-
-    def title_base(value):
-        value = normalize(value)
-
-        value = re.sub(
-            r"\s+(?:live|remastered|remaster|"
-            r"radio edit|edit|acoustic|version|"
-            r"single version|album version|"
-            r"mono|stereo)(?:\s+.*)?$",
-            "",
-            value
-        )
-
-        return value.strip()
-
-    wanted_artist = normalize(artist)
-    wanted_title = normalize(title)
-
-    wanted_artist_parts = artist_parts(
-        wanted_artist
-    )
-
-    wanted_title_base = title_base(
-        wanted_title
-    )
-
-    # -------------------------------------------------
-    # ÉÉN BREDE SPOTIFY SEARCH
-    # -------------------------------------------------
-
     query = (
-        f"{artist} {title}"
+        f'track:"{title}" '
+        f'artist:"{artist}"'
     )
 
     data = spotify_request(
@@ -815,125 +744,260 @@ def find_spotify_track(
         []
     )
 
-    if not items:
+    def normalize(value):
+        value = str(value or "").lower().strip()
+
+        value = unicodedata.normalize(
+            "NFKD",
+            value
+        )
+
+        value = "".join(
+            char
+            for char in value
+            if not unicodedata.combining(char)
+        )
+
+        value = value.replace("’", "'")
+        value = value.replace("–", "-")
+        value = value.replace("—", "-")
+
+        for char in [
+            ".", ",", "(", ")", "[", "]",
+            "{", "}", "_"
+        ]:
+            value = value.replace(char, " ")
+
+        return " ".join(value.split())
+
+    def compact(value):
+        return "".join(
+            normalize(value).split()
+        )
+
+    def artist_parts(value):
+        value = normalize(value)
+
+        parts = re.split(
+            r"\s+(?:feat\.?|ft\.?|featuring)\s+"
+            r"|\s*&\s*"
+            r"|\s+and\s+"
+            r"|\s*,\s*",
+            value
+        )
+
+        return [
+            part.strip()
+            for part in parts
+            if part.strip()
+        ]
+
+    def title_base(value):
+        """
+        Haal bekende versie-aanduidingen van het einde
+        van een Spotify-titel af.
+
+        Voorbeeld:
+        'Day n Nite - Spotify Singles'
+        -> 'day n nite'
+        """
+        value = normalize(value)
+
+        # Meerdere bekende Spotify-versie-aanduidingen.
+        suffix_pattern = re.compile(
+            r"""
+            (?:
+                \s*-\s*
+                |
+                \s*
+                \(
+                \s*
+            )
+            (?:
+                live
+                |remaster(?:ed)?
+                |remix
+                |radio\s+edit
+                |edit
+                |acoustic
+                |alternate(?:\s+version)?
+                |version
+                |spotify\s+singles
+                |single\s+version
+                |album\s+version
+                |original\s+version
+                |deluxe\s+version
+                |bonus\s+track
+            )
+            (?:
+                \s*\)
+            )?
+            \s*$
+            """,
+            re.IGNORECASE | re.VERBOSE
+        )
+
+        previous = None
+
+        while value != previous:
+            previous = value
+            value = suffix_pattern.sub("", value).strip()
+
+        return value
+
+    wanted_title = normalize(title)
+    wanted_title_base = title_base(title)
+
+    wanted_artists = artist_parts(artist)
+
+    if not wanted_title or not wanted_artists:
         return None
 
-    # -------------------------------------------------
-    # RESULTATEN LOKAAL SCOREN
-    # -------------------------------------------------
+    wanted_artist_compact = {
+        compact(part)
+        for part in wanted_artists
+    }
 
+    best_score = 0.0
     best_uri = None
-    best_score = 0
 
     for item in items:
-
-        spotify_title = normalize(
-            item.get("name", "")
-        )
-
-        spotify_title_base = title_base(
-            spotify_title
-        )
-
         spotify_artists = [
             normalize(a.get("name", ""))
             for a in item.get("artists", [])
             if a.get("name")
         ]
 
-        if not spotify_title or not spotify_artists:
+        if not spotify_artists:
             continue
 
-        # ---------------------------------------------
-        # ARTIEST MOET ECHT OVEREENKOMEN
-        # ---------------------------------------------
+        spotify_artist_compact = {
+            compact(a)
+            for a in spotify_artists
+        }
 
-        artist_scores = []
+        # =============================================
+        # ARTIEST MOET KLIPPEN
+        # =============================================
 
-        for wanted in wanted_artist_parts:
+        artist_match = False
 
-            wanted_compact = compact(wanted)
+        # Exact/compacte match voor één artiest.
+        if (
+            len(wanted_artist_compact) == 1
+            and next(iter(wanted_artist_compact))
+            in spotify_artist_compact
+        ):
+            artist_match = True
 
-            for actual in spotify_artists:
-
-                actual_compact = compact(actual)
-
-                if wanted == actual:
-                    artist_scores.append(1.0)
-                    continue
-
-                if wanted_compact == actual_compact:
-                    artist_scores.append(0.98)
-                    continue
-
-                artist_scores.append(
-                    SequenceMatcher(
-                        None,
-                        wanted_compact,
-                        actual_compact
-                    ).ratio()
+        # Samenwerking:
+        # iedere radio-artiest moet terug te vinden zijn
+        # tussen de Spotify-artiesten.
+        if len(wanted_artist_compact) > 1:
+            if all(
+                any(
+                    wanted == spotify
+                    or wanted in spotify
+                    or spotify in wanted
+                    for spotify in spotify_artist_compact
                 )
+                for wanted in wanted_artist_compact
+            ):
+                artist_match = True
 
-        if not artist_scores:
+        if not artist_match:
             continue
 
-        artist_score = max(artist_scores)
+        # =============================================
+        # TITEL CONTROLEREN
+        # =============================================
 
-        # Een andere artiest mag nooit door alleen
-        # een vergelijkbare titel worden gekozen.
-        if artist_score < 0.82:
+        spotify_title = normalize(
+            item.get("name", "")
+        )
+
+        if not spotify_title:
             continue
 
-        # ---------------------------------------------
-        # TITEL MOET OOK ECHT OVEREENKOMEN
-        # ---------------------------------------------
+        spotify_title_base = title_base(
+            spotify_title
+        )
 
-        if spotify_title_base == wanted_title_base:
+        wanted_compact = compact(
+            wanted_title
+        )
+
+        spotify_compact = compact(
+            spotify_title
+        )
+
+        wanted_base_compact = compact(
+            wanted_title_base
+        )
+
+        spotify_base_compact = compact(
+            spotify_title_base
+        )
+
+        # Exacte titel.
+        if spotify_compact == wanted_compact:
             title_score = 1.0
 
+        # Exacte basistitel na versie-aanduiding.
+        elif spotify_base_compact == wanted_base_compact:
+            title_score = 0.99
+
+        # Radio-titel staat volledig vooraan/in Spotify-titel.
+        # Bijvoorbeeld:
+        # Day 'n' nite
+        # Day 'n' nite - Spotify Singles
         elif (
-            compact(spotify_title_base)
-            == compact(wanted_title_base)
+            wanted_base_compact
+            and wanted_base_compact in spotify_base_compact
         ):
-            title_score = 0.98
+            title_score = 0.95
+
+        elif (
+            wanted_compact
+            and wanted_compact in spotify_compact
+        ):
+            title_score = 0.93
 
         else:
             title_score = SequenceMatcher(
                 None,
-                compact(wanted_title_base),
-                compact(spotify_title_base)
+                wanted_base_compact,
+                spotify_base_compact
             ).ratio()
 
-        # Titel moet voldoende sterk overeenkomen.
-        if title_score < 0.72:
+        # Een fuzzy match alleen accepteren als hij behoorlijk sterk is.
+        # Zo worden bijvoorbeeld Samskeyti en Hoppípolla niet gematcht.
+        if title_score < 0.78:
             continue
 
-        # ---------------------------------------------
+        # =============================================
         # EXTRA BONUS VOOR EXACTE VERSIES
-        # ---------------------------------------------
+        # =============================================
 
-        score = (
-            artist_score * 0.45
-            + title_score * 0.55
-        )
+        score = title_score
 
-        if spotify_title == wanted_title:
+        if spotify_compact == wanted_compact:
             score += 0.20
 
-        elif spotify_title_base == wanted_title_base:
+        elif spotify_base_compact == wanted_base_compact:
+            score += 0.15
+
+        elif (
+            wanted_base_compact
+            and wanted_base_compact in spotify_base_compact
+        ):
             score += 0.10
 
-        # Alleen echte goede matches toelaten.
         if score > best_score:
             best_score = score
             best_uri = item.get("uri")
 
     return best_uri
-
-
-# =========================
-# TOEVOEGEN
-# =========================
 
 def add_tracks(
     playlist_id,
