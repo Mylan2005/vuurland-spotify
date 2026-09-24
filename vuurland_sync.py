@@ -26,7 +26,7 @@ PLAYLIST_ID = "5WkgQBl9M7nHinVD1qd9Ol"
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 
-CHECK_EVERY_SECONDS = 60  # 1 minuut
+CHECK_EVERY_SECONDS = 300  # 5 minuten
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
 
 DATA_DIR = os.environ.get("VUURLAND_DATA_DIR", os.path.expanduser("~"))
@@ -903,6 +903,7 @@ def sync():
 
     processed = []
     new_tracks = []
+    new_track_keys = []
     remaining_queue = []
     not_found_queue = []
 
@@ -923,46 +924,80 @@ def sync():
     # Zo voegen we nooit opnieuw een nummer
     # toe dat al in de doelplaylist staat.
     # ---------------------------------
-    playlist_keys = set()
-    playlist_offset = 0
+    # ---------------------------------
+    # SPOTIFY PLAYLIST CACHE
+    #
+    # De volledige playlist wordt niet meer
+    # bij iedere ronde opnieuw opgehaald.
+    # ---------------------------------
+    playlist_keys = set(cache.get("__playlist_keys", []))
+    playlist_cache_time = cache.get("__playlist_cache_time", 0)
 
-    while True:
-        playlist_data = spotify_request(
-            "GET",
-            f"/playlists/{playlist_id}/items",
-            params={
-                "limit": 50,
-                "offset": playlist_offset,
-            },
-        )
+    PLAYLIST_CACHE_SECONDS = 21600  # 6 uur
 
-        playlist_batch = playlist_data.get("items", [])
+    if (
+        not playlist_keys
+        or time.time() - playlist_cache_time >= PLAYLIST_CACHE_SECONDS
+    ):
+        print("📋 Spotify-playlist cache vernieuwen...")
 
-        for playlist_item in playlist_batch:
-            track = playlist_item.get("item")
+        playlist_keys = set()
+        playlist_offset = 0
 
-            if not track:
-                continue
+        while True:
+            playlist_data = spotify_request(
+                "GET",
+                f"/playlists/{playlist_id}/items",
+                params={
+                    "limit": 50,
+                    "offset": playlist_offset,
+                },
+            )
 
-            playlist_title = track.get("name", "").strip().lower()
+            playlist_batch = playlist_data.get("items", [])
 
-            for playlist_artist in track.get("artists", []):
-                artist_name = playlist_artist.get("name", "").strip().lower()
+            for playlist_item in playlist_batch:
+                track = playlist_item.get("item")
 
-                if artist_name and playlist_title:
-                    playlist_keys.add(
-                        f"{artist_name}|||{playlist_title}"
+                if not track:
+                    continue
+
+                playlist_title = track.get("name", "").strip().lower()
+
+                for playlist_artist in track.get("artists", []):
+                    artist_name = (
+                        playlist_artist.get("name", "")
+                        .strip()
+                        .lower()
                     )
 
-        if not playlist_data.get("next"):
-            break
+                    if artist_name and playlist_title:
+                        playlist_keys.add(
+                            f"{artist_name}|||{playlist_title}"
+                        )
 
-        playlist_offset += len(playlist_batch)
+                if playlist_batch:
+                    pass
 
-    print(
-        f"🛡️ {len(playlist_keys)} bestaande "
-        "Spotify-artiest/titel-combinaties gecontroleerd."
-    )
+            if not playlist_data.get("next"):
+                break
+
+            playlist_offset += len(playlist_batch)
+
+        cache["__playlist_keys"] = sorted(playlist_keys)
+        cache["__playlist_cache_time"] = int(time.time())
+        save_cache(cache)
+
+        print(
+            f"🛡️ {len(playlist_keys)} bestaande "
+            "Spotify-artiest/titel-combinaties gecontroleerd."
+        )
+
+    else:
+        print(
+            f"💾 Playlist-cache gebruikt: "
+            f"{len(playlist_keys)} bestaande nummers."
+        )
 
     for item in queue:
         artist = item["artist"]
@@ -1050,6 +1085,7 @@ def sync():
 
         processed.append(cache_key)
         new_tracks.append(uri)
+        new_track_keys.append(cache_key)
 
     # ---------------------------------
     # NIET GEVONDEN NUMMERS ACHTERAAN
@@ -1064,6 +1100,13 @@ def sync():
             playlist_id,
             new_tracks
         )
+
+        # De lokaal gecachte playlist meteen bijwerken.
+        # Zo hoeft de volledige Spotify-playlist niet
+        # opnieuw opgehaald te worden.
+        playlist_keys.update(new_track_keys)
+        cache["__playlist_keys"] = sorted(playlist_keys)
+        save_cache(cache)
 
     # ---------------------------------
     # VERWERKTE TRACKS ALS GEZIEN OPSLAAN
