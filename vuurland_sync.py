@@ -761,6 +761,7 @@ def find_spotify_track(
         value = value.replace("’", "'")
         value = value.replace("–", "-")
         value = value.replace("—", "-")
+        value = value.replace("+", " ")
 
         for char in [
             ".", ",", "(", ")", "[", "]",
@@ -857,9 +858,6 @@ def find_spotify_track(
         compact(part)
         for part in wanted_artists
     }
-
-    best_score = 0.0
-    best_uri = None
 
     for item in items:
         spotify_artists = [
@@ -976,28 +974,19 @@ def find_spotify_track(
             continue
 
         # =============================================
-        # EXTRA BONUS VOOR EXACTE VERSIES
+        # EERSTE GELDIGE SPOTIFY-MATCH
         # =============================================
+        #
+        # Spotify bepaalt de volgorde van de resultaten.
+        # Zodra artiest + titel betrouwbaar overeenkomen,
+        # nemen we het eerste resultaat.
+        #
+        # We kiezen dus niet meer achteraf een andere
+        # kandidaat op basis van een zelfgemaakte score.
 
-        score = title_score
+        return item.get("uri")
 
-        if spotify_compact == wanted_compact:
-            score += 0.20
-
-        elif spotify_base_compact == wanted_base_compact:
-            score += 0.15
-
-        elif (
-            wanted_base_compact
-            and wanted_base_compact in spotify_base_compact
-        ):
-            score += 0.10
-
-        if score > best_score:
-            best_score = score
-            best_uri = item.get("uri")
-
-    return best_uri
+    return None
 
 def add_tracks(
     playlist_id,
