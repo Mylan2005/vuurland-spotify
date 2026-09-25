@@ -1025,40 +1025,36 @@ def reset_live_sync_after_rate_limit(
     cache
 ):
     """
-    Spotify is geblokkeerd.
+    Spotify is tijdelijk geblokkeerd.
 
-    We halen de tijdelijke live queue weg en
-    resetten het radio-startpunt. De volgende
-    succesvolle run begint daardoor opnieuw
-    bij de actuele radio.
+    BELANGRIJK:
+    - De live queue wordt NOOIT gewist.
+    - Het radio-startpunt wordt NIET gereset.
+    - De volgende run gaat verder waar deze run
+      gebleven was.
+
+    Een Spotify-rate-limit is dus alleen een
+    tijdelijke pauze en veroorzaakt geen verlies
+    van nummers uit de live queue.
     """
-
-    with open(live_queue_file, "w") as f:
-        json.dump(
-            [],
-            f,
-            indent=2,
-            ensure_ascii=False
-        )
-
-    cache.pop(
-        "__last_radio_key",
-        None
-    )
 
     save_cache(cache)
 
     print(
-        "🗑️ Live queue geleegd vanwege Spotify-rate-limit."
+        "⏸️ Spotify-rate-limit: live queue blijft behouden."
     )
 
     print(
-        "🔄 Radio-startpunt gereset."
+        "🛡️ Geen nummers uit de live queue verwijderd."
     )
 
     print(
-        "📻 Na de blokkade wordt opnieuw vanaf "
-        "de actuele radio gevolgd."
+        "📻 Radio-startpunt blijft behouden."
+    )
+
+    print(
+        "▶️ Na de blokkade wordt de bestaande queue "
+        "verder verwerkt."
     )
 
 
