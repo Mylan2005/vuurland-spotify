@@ -1067,6 +1067,43 @@ def reset_live_sync_after_rate_limit(
 # SYNC
 # =========================
 
+def normalize_match(value):
+    """
+    Centrale, veilige normalisatie voor artiest/titel-identiteit.
+
+    Doet alleen schrijfwijze-normalisatie:
+    - lowercase
+    - accenten verwijderen
+    - leestekens als spaties behandelen
+    - meerdere spaties samenvoegen
+
+    GEEN fuzzy matching.
+    Verschillende nummers blijven dus verschillende nummers.
+    """
+    import unicodedata
+
+    value = str(value or "").strip().lower()
+
+    value = unicodedata.normalize(
+        "NFKD",
+        value
+    )
+
+    value = "".join(
+        char
+        for char in value
+        if not unicodedata.combining(char)
+    )
+
+    for char in [
+        ".", ",", "(", ")", "[", "]",
+        "{", "}", "_", "+", "–", "—"
+    ]:
+        value = value.replace(char, " ")
+
+    return " ".join(value.split())
+
+
 def make_playlist_keys(track):
     """
     Maak meerdere lokale sleutels voor één Spotify-track.
@@ -1086,7 +1123,9 @@ def make_playlist_keys(track):
     artists = []
 
     for artist in track.get("artists", []):
-        name = artist.get("name", "").strip().lower()
+        name = normalize_match(
+            artist.get("name", "")
+        )
 
         if name:
             artists.append(name)
@@ -1120,7 +1159,7 @@ def normalize_radio_artists(artist_text):
     """
     import re
 
-    text = artist_text.strip().lower()
+    text = normalize_match(artist_text)
 
     parts = re.split(
         r"\s+(?:feat\.?|ft\.?)\s+|\s*&\s*|\s+and\s+|\s*,\s*",
@@ -1143,30 +1182,6 @@ def radio_matches_playlist(
     Controleer lokaal of een Vuurland-track
     al in de Spotify-playlist voorkomt.
     """
-
-    import unicodedata
-
-    def normalize_match(value):
-        value = value.strip().lower()
-
-        # Accenten negeren:
-        # Rós -> ros
-        # Beyoncé -> beyonce
-        value = unicodedata.normalize(
-            "NFKD",
-            value
-        )
-
-        value = "".join(
-            char
-            for char in value
-            if not unicodedata.combining(char)
-        )
-
-        for char in [".", ",", "(", ")", "[", "]"]:
-            value = value.replace(char, " ")
-
-        return " ".join(value.split())
 
     def compact_artist(value):
         return "".join(
@@ -1269,8 +1284,8 @@ def sync():
     cache = load_cache()
 
     queued_keys = {
-        f"{item.get('artist', '').strip().lower()}|||"
-        f"{item.get('title', '').strip().lower()}"
+        f"{normalize_match(item.get('artist', ''))}|||"
+        f"{normalize_match(item.get('title', ''))}"
         for item in live_queue
         if isinstance(item, dict)
     }
@@ -1309,8 +1324,8 @@ def sync():
             continue
 
         key = (
-            f"{artist_clean.lower()}|||"
-            f"{title_clean.lower()}"
+            f"{normalize_match(artist_clean)}|||"
+            f"{normalize_match(title_clean)}"
         )
 
         # Eerste keer:
@@ -1341,8 +1356,8 @@ def sync():
         newest_artist, newest_title = tracks[0]
 
         newest_key = (
-            f"{newest_artist.strip().lower()}|||"
-            f"{newest_title.strip().lower()}"
+            f"{normalize_match(newest_artist)}|||"
+            f"{normalize_match(newest_title)}"
         )
 
         cache["__last_radio_key"] = newest_key
@@ -1584,8 +1599,8 @@ def sync():
         return
 
     cache_key = (
-        f"{artist.strip().lower()}|||"
-        f"{title.strip().lower()}"
+        f"{normalize_match(artist)}|||"
+        f"{normalize_match(title)}"
     )
 
     # ---------------------------------
