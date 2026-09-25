@@ -1649,13 +1649,10 @@ def sync():
         < NOT_FOUND_COOLDOWN_SECONDS
     ):
 
-        print(
-            f"⏭️ Eerder niet gevonden, "
-            f"tijdelijk overgeslagen: "
-            f"{artist} - {title}"
-        )
-
-        live_queue.pop(0)
+        # Het nummer blijft behouden, maar gaat achteraan
+        # de queue zodat andere nummers eerst verwerkt worden.
+        failed_item = live_queue.pop(0)
+        live_queue.append(failed_item)
 
         with open(live_queue_file, "w") as f:
             json.dump(
@@ -1666,6 +1663,11 @@ def sync():
             )
 
         save_cache(cache)
+
+        print(
+            f"🔄 Tijdelijk overgeslagen en achteraan "
+            f"de queue geplaatst: {artist} - {title}"
+        )
 
         print(
             f"📋 {len(live_queue)} nummers "
@@ -1738,6 +1740,10 @@ def sync():
         if uri is not None:
 
             cache[cache_key] = uri
+
+            # Een eerdere mislukte zoekpoging is niet meer relevant.
+            cache.pop(not_found_key, None)
+
             save_cache(cache)
 
     # ---------------------------------
