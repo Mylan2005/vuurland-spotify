@@ -968,9 +968,14 @@ def find_spotify_track(
                 spotify_base_compact
             ).ratio()
 
-        # Een fuzzy match alleen accepteren als hij behoorlijk sterk is.
-        # Zo worden bijvoorbeeld Samskeyti en Hoppípolla niet gematcht.
-        if title_score < 0.78:
+        # Een vrije fuzzy match moet zeer sterk zijn.
+        #
+        # Exacte titels, bekende versies en titels die volledig
+        # in de Spotify-titel voorkomen worden hierboven al
+        # afgehandeld. De fuzzy fallback is daarom bewust streng:
+        # zo wordt een ander nummer van dezelfde artiest niet
+        # door een toevallige gelijkenis gekozen.
+        if title_score < 0.88:
             continue
 
         # =============================================
