@@ -1618,6 +1618,28 @@ def sync():
     NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
 
     # ---------------------------------
+    # HARDE SPOTIFY-URI DUPLICATECHECK
+    # ---------------------------------
+    #
+    # De bestaande playlist-cache gebruikt vooral
+    # artiest/titel-combinaties en kan maximaal 24 uur oud zijn.
+    #
+    # Daarom halen we de actuele Spotify-URI's ook op.
+    # Een Spotify-track die al in de playlist staat,
+    # mag NOOIT opnieuw worden toegevoegd.
+    #
+    # Deze set wordt tijdens deze run ook meteen bijgewerkt
+    # nadat een nummer succesvol is toegevoegd.
+    playlist_uris, _ = existing_tracks(
+        playlist_id
+    )
+
+    print(
+        f"🛡️ {len(playlist_uris)} bestaande "
+        "Spotify-URI's gecontroleerd."
+    )
+
+    # ---------------------------------
     # SPOTIFY PLAYLIST CACHE
     # ---------------------------------
 
@@ -1984,6 +2006,36 @@ def sync():
         return
 
     # ---------------------------------
+    # HARDE URI DUPLICATECHECK
+    # ---------------------------------
+    #
+    # Ook als de oudere playlist-cache dit nummer
+    # niet herkende, mag een bestaande Spotify-URI
+    # nooit opnieuw worden toegevoegd.
+    if uri in playlist_uris:
+
+        print(
+            f"⏭️ Spotify-track staat al in de playlist: "
+            f"{artist} - {title}"
+        )
+
+        live_queue.pop(0)
+        seen.add(cache_key)
+
+        save_seen(seen)
+        save_cache(cache)
+
+        with open(live_queue_file, "w") as f:
+            json.dump(
+                live_queue,
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
+
+        return
+
+    # ---------------------------------
     # TOEVOEGEN AAN SPOTIFY
     # ---------------------------------
 
@@ -1991,6 +2043,11 @@ def sync():
         playlist_id,
         [uri]
     )
+
+    # Meteen lokaal als bestaande Spotify-URI markeren.
+    # Zo kan dezelfde URI later in deze run niet opnieuw
+    # worden toegevoegd.
+    playlist_uris.add(uri)
 
     print(
         f"✅ Toegevoegd: "
