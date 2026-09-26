@@ -721,10 +721,55 @@ def find_spotify_track(
     import unicodedata
     from difflib import SequenceMatcher
 
-    query = (
-        f'track:"{title}" '
-        f'artist:"{artist}"'
+    # =============================================
+    # SPOTIFY SEARCH-TERM VOORBEREIDEN
+    # =============================================
+    #
+    # RadioBox kan features in de artiest of titel zetten.
+    #
+    # Bijvoorbeeld:
+    # BADBADNOTGOOD feat Sam Herring
+    # Time Moves Slow (Feat Sam Herring)
+    #
+    # Zoek daarom met:
+    # - de echte tracktitel zonder titel-feat
+    # - iedere RadioBox-artiest afzonderlijk
+    #
+    # De resultaten worden daarna nog steeds streng
+    # gecontroleerd door de matchinglogica hieronder.
+
+    search_title = re.sub(
+        r"\s*\(?(?:feat\.?|ft\.?|featuring)\s+[^\(\)\[\]]+\)?\s*$",
+        "",
+        title,
+        flags=re.IGNORECASE
+    ).strip()
+
+    search_artists = re.split(
+        r"\s+(?:feat\.?|ft\.?|featuring)\s+"
+        r"|\s*&\s*"
+        r"|\s+and\s+"
+        r"|\s*,\s*",
+        artist,
+        flags=re.IGNORECASE
     )
+
+    search_artists = [
+        part.strip()
+        for part in search_artists
+        if part.strip()
+    ]
+
+    query_parts = [
+        f'track:"{search_title}"'
+    ]
+
+    for search_artist in search_artists:
+        query_parts.append(
+            f'artist:"{search_artist}"'
+        )
+
+    query = " ".join(query_parts)
 
     data = spotify_request(
         "GET",
@@ -793,47 +838,27 @@ def find_spotify_track(
             if part.strip()
         ]
 
-    def title_base(value):
+    def requested_version(value):
         """
-        Haal bekende versie-aanduidingen van het einde
-        van een Spotify-titel af.
+        Bepaal welke bekende versie-aanduiding aan het einde
+        van een titel staat.
 
-        Voorbeeld:
-        'Day n Nite - Spotify Singles'
-        -> 'day n nite'
+        Voorbeelden:
+        - "(live)" -> "live"
+        - "- Live at the BBC" -> "live"
+        - "(acoustic)" -> "acoustic"
+        - "- Acoustic Version" -> "acoustic"
+        - "(remix)" -> "remix"
+        - "- Radio Edit" -> "radio edit"
+
+        Onbekende varianten zoals "Short Reprise" geven None.
         """
-        value = normalize(value)
+        raw_value = str(value or "").strip()
 
-        # Officiële film-/soundtracktoevoeging.
-        #
-        # Bijvoorbeeld:
-        # What Was I Made For? From The Motion Picture "Barbie"
-        # -> What Was I Made For?
-        #
-        # Alles vanaf "From The Motion Picture" wordt verwijderd.
-        # Dit is bewust specifiek en voorkomt dat willekeurige
-        # extra woorden als een geldige titelvariant worden gezien.
-        motion_picture_pattern = re.compile(
-            r"(?:\s+|\[\s*|\(\s*)from\s+the\s+motion\s+picture\b.*(?:\]|\))?\s*$",
-            re.IGNORECASE
-        )
-
-        value = motion_picture_pattern.sub(
-            "",
-            value
-        ).strip()
-
-        # Meerdere bekende Spotify-versie-aanduidingen.
-        suffix_pattern = re.compile(
+        version_pattern = re.compile(
             r"""
-            (?:
-                \s*-\s*
-                |
-                \s*
-                \(
-                \s*
-            )
-            (?:
+            (?:\s*[-(]\s*)
+            (
                 live
                 |remaster(?:ed)?
                 |remix
@@ -849,9 +874,64 @@ def find_spotify_track(
                 |deluxe\s+version
                 |bonus\s+track
             )
-            (?:
-                \s*\)
-            )?
+            (?:\s+[^)]*)?
+            \s*\)?\s*$
+            """,
+            re.IGNORECASE | re.VERBOSE
+        )
+
+        match = version_pattern.search(raw_value)
+
+        if not match:
+            return None
+
+        return match.group(1).lower().strip()
+
+
+    def title_base(value):
+        """
+        Verwijder bekende versie-aanduidingen van het einde
+        van een Spotify-titel.
+
+        Onbekende varianten blijven onderdeel van de titel.
+        """
+        value = normalize(value)
+
+        # Officiële film-/soundtracktoevoeging.
+        motion_picture_pattern = re.compile(
+            r"(?:\s+|\[\s*|\(\s*)from\s+the\s+motion\s+picture\b.*(?:\]|\))?\s*$",
+            re.IGNORECASE
+        )
+
+        value = motion_picture_pattern.sub(
+            "",
+            value
+        ).strip()
+
+        # Gebruik dezelfde bekende versies als requested_version().
+        #
+        # Omdat normalize() haakjes verwijdert, werken we hier
+        # bewust op het genormaliseerde einde van de titel.
+        known_suffix_pattern = re.compile(
+            r"""
+            \s*[-]?\s*
+            (
+                live
+                |remaster(?:ed)?
+                |remix
+                |radio\s+edit
+                |edit
+                |acoustic
+                |alternate(?:\s+version)?
+                |version
+                |spotify\s+singles
+                |single\s+version
+                |album\s+version
+                |original\s+version
+                |deluxe\s+version
+                |bonus\s+track
+            )
+            (?:\s+.*)?
             \s*$
             """,
             re.IGNORECASE | re.VERBOSE
@@ -861,12 +941,18 @@ def find_spotify_track(
 
         while value != previous:
             previous = value
-            value = suffix_pattern.sub("", value).strip()
+
+            match = known_suffix_pattern.search(value)
+
+            if match:
+                value = value[:match.start()].strip()
+            else:
+                break
 
         return value
-
     wanted_title = normalize(title)
     wanted_title_base = title_base(title)
+    wanted_version = requested_version(title)
 
     wanted_artists = artist_parts(artist)
 
@@ -942,8 +1028,30 @@ def find_spotify_track(
             spotify_title
         )
 
+        spotify_version = requested_version(
+            item.get("name", "")
+        )
+
+        # Featuring-vermeldingen in de RadioBox-titel horen
+        # bij de artiestinformatie, niet bij de tracktitel.
+        #
+        # Bijvoorbeeld:
+        # "Time Moves Slow (Feat Sam Herring)"
+        # moet ook kunnen matchen met Spotify:
+        # "Time Moves Slow"
+        wanted_title_for_match = re.sub(
+            r"\s*\(?(?:feat\.?|ft\.?|featuring)\s+[^\(\)\[\]]+\)?\s*$",
+            "",
+            wanted_title,
+            flags=re.IGNORECASE
+        ).strip()
+
+        wanted_title_base_for_match = title_base(
+            wanted_title_for_match
+        )
+
         wanted_compact = compact(
-            wanted_title
+            wanted_title_for_match
         )
 
         spotify_compact = compact(
@@ -951,7 +1059,7 @@ def find_spotify_track(
         )
 
         wanted_base_compact = compact(
-            wanted_title_base
+            wanted_title_base_for_match
         )
 
         spotify_base_compact = compact(
@@ -1012,6 +1120,34 @@ def find_spotify_track(
 
         elif spotify_base_compact == wanted_base_compact:
             candidate_score += 0.99
+
+        # =============================================
+        # VERSIEVOORKEUR
+        # =============================================
+        #
+        # Als RadioBox expliciet een versie vraagt,
+        # krijgt dezelfde Spotify-versie voorrang.
+        #
+        # Voorbeeld:
+        # RadioBox: Do I Wanna Know? (live)
+        # Spotify:  Do I Wanna Know? - Live at the BBC
+        #
+        # requested_version() herkent "live" aan beide
+        # kanten. De exacte versie krijgt daardoor extra
+        # gewicht.
+        #
+        # Als RadioBox géén versie vraagt, krijgt een
+        # kandidaat zonder expliciete versievoorkeur
+        # voorrang boven een duidelijke alternatieve versie.
+        if wanted_version:
+            if spotify_version == wanted_version:
+                candidate_score += 0.50
+
+            elif spotify_version is None:
+                candidate_score += 0.10
+
+        elif spotify_version is None:
+            candidate_score += 0.20
 
         candidates.append(
             (
