@@ -1618,33 +1618,15 @@ def sync():
     NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
 
     # ---------------------------------
-    # HARDE SPOTIFY-URI DUPLICATECHECK
-    # ---------------------------------
-    #
-    # De bestaande playlist-cache gebruikt vooral
-    # artiest/titel-combinaties en kan maximaal 24 uur oud zijn.
-    #
-    # Daarom halen we de actuele Spotify-URI's ook op.
-    # Een Spotify-track die al in de playlist staat,
-    # mag NOOIT opnieuw worden toegevoegd.
-    #
-    # Deze set wordt tijdens deze run ook meteen bijgewerkt
-    # nadat een nummer succesvol is toegevoegd.
-    playlist_uris, _ = existing_tracks(
-        playlist_id
-    )
-
-    print(
-        f"🛡️ {len(playlist_uris)} bestaande "
-        "Spotify-URI's gecontroleerd."
-    )
-
-    # ---------------------------------
     # SPOTIFY PLAYLIST CACHE
     # ---------------------------------
 
     playlist_keys = set(
         cache.get("__playlist_keys", [])
+    )
+
+    playlist_uris = set(
+        cache.get("__playlist_uris", [])
     )
 
     playlist_cache_time = cache.get(
@@ -1665,6 +1647,7 @@ def sync():
         )
 
         playlist_keys = set()
+        playlist_uris = set()
         playlist_offset = 0
 
         while True:
@@ -1699,10 +1682,13 @@ def sync():
                 if not track:
                     continue
 
-                playlist_title = (
+                uri = track.get("uri")
+
+                if uri:
+                    playlist_uris.add(uri)
+
+                playlist_title = normalize_match(
                     track.get("name", "")
-                    .strip()
-                    .lower()
                 )
 
                 for playlist_artist in track.get(
@@ -1710,13 +1696,11 @@ def sync():
                     []
                 ):
 
-                    artist_name = (
+                    artist_name = normalize_match(
                         playlist_artist.get(
                             "name",
                             ""
                         )
-                        .strip()
-                        .lower()
                     )
 
                     if (
@@ -1743,6 +1727,10 @@ def sync():
         cache[
             "__playlist_keys"
         ] = sorted(playlist_keys)
+
+        cache[
+            "__playlist_uris"
+        ] = sorted(playlist_uris)
 
         cache[
             "__playlist_cache_time"
@@ -2060,6 +2048,10 @@ def sync():
     cache[
         "__playlist_keys"
     ] = sorted(playlist_keys)
+
+    cache[
+        "__playlist_uris"
+    ] = sorted(playlist_uris)
 
     save_cache(cache)
 
