@@ -804,6 +804,25 @@ def find_spotify_track(
         """
         value = normalize(value)
 
+        # Officiële film-/soundtracktoevoeging.
+        #
+        # Bijvoorbeeld:
+        # What Was I Made For? From The Motion Picture "Barbie"
+        # -> What Was I Made For?
+        #
+        # Alles vanaf "From The Motion Picture" wordt verwijderd.
+        # Dit is bewust specifiek en voorkomt dat willekeurige
+        # extra woorden als een geldige titelvariant worden gezien.
+        motion_picture_pattern = re.compile(
+            r"(?:\s+|\[\s*|\(\s*)from\s+the\s+motion\s+picture\b.*(?:\]|\))?\s*$",
+            re.IGNORECASE
+        )
+
+        value = motion_picture_pattern.sub(
+            "",
+            value
+        ).strip()
+
         # Meerdere bekende Spotify-versie-aanduidingen.
         suffix_pattern = re.compile(
             r"""
@@ -858,6 +877,8 @@ def find_spotify_track(
         compact(part)
         for part in wanted_artists
     }
+
+    candidates = []
 
     for item in items:
         spotify_artists = [
@@ -955,12 +976,6 @@ def find_spotify_track(
         ):
             title_score = 0.95
 
-        elif (
-            wanted_compact
-            and wanted_compact in spotify_compact
-        ):
-            title_score = 0.93
-
         else:
             title_score = SequenceMatcher(
                 None,
@@ -979,17 +994,43 @@ def find_spotify_track(
             continue
 
         # =============================================
-        # EERSTE GELDIGE SPOTIFY-MATCH
+        # GELDIGE SPOTIFY-MATCH OPSLAAN
         # =============================================
         #
-        # Spotify bepaalt de volgorde van de resultaten.
-        # Zodra artiest + titel betrouwbaar overeenkomen,
-        # nemen we het eerste resultaat.
+        # Niet meteen het eerste geldige resultaat nemen.
+        # Spotify kan een minder goede kandidaat vooraan
+        # zetten terwijl een later resultaat beter overeenkomt.
         #
-        # We kiezen dus niet meer achteraf een andere
-        # kandidaat op basis van een zelfgemaakte score.
+        # De kandidaten worden daarom hieronder beoordeeld
+        # op titelkwaliteit. Bij gelijke kwaliteit blijft
+        # Spotify's oorspronkelijke volgorde leidend.
 
-        return item.get("uri")
+        candidate_score = title_score
+
+        if spotify_compact == wanted_compact:
+            candidate_score += 1.00
+
+        elif spotify_base_compact == wanted_base_compact:
+            candidate_score += 0.99
+
+        candidates.append(
+            (
+                candidate_score,
+                -len(candidates),
+                item.get("uri")
+            )
+        )
+
+    if candidates:
+        candidates.sort(
+            key=lambda candidate: (
+                candidate[0],
+                candidate[1]
+            ),
+            reverse=True
+        )
+
+        return candidates[0][2]
 
     return None
 
