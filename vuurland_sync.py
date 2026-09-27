@@ -618,7 +618,6 @@ def get_vuurland_tracks():
 
     tracks = []
     seen = set()
-    pending_title = None
 
     import re
 
@@ -627,62 +626,88 @@ def get_vuurland_tracks():
         "oud - vrt studio brussel vuurland",
     }
 
+    rows = []
+
+    # ---------------------------------------------------------
+    # RADIOBOX-REGELS INLEZEN
+    # ---------------------------------------------------------
+
     for element in soup.find_all(["tr", "li"]):
 
-        text = " ".join(element.stripped_strings)
+        text = " ".join(
+            element.stripped_strings
+        )
 
         time_match = re.search(
-            r"\b\d{1,2}:\d{2}\b\s*(.*)$",
+            r"\b(\d{1,2}:\d{2})\b\s*(.*)$",
             text
         )
 
         if not time_match:
             continue
 
-        entry = time_match.group(1).strip()
+        time = time_match.group(1)
+        entry = time_match.group(2).strip()
 
         if not entry:
             continue
 
         entry_lower = entry.lower().strip()
 
-        # Programmavermeldingen zijn geen nummers.
         if entry_lower in program_labels:
             continue
 
-        # Normaal formaat:
-        # ARTIST - TITLE
-        match = re.match(
-            r"^(.+?)\s+-\s+(.+)$",
-            entry
+        track_id = None
+
+        link = element.find(
+            "a",
+            href=re.compile(r"/track/\d+/")
         )
 
-        if match:
-            artist = match.group(1).strip()
-            title = match.group(2).strip()
-            pending_title = None
+        if link:
+            match_id = re.search(
+                r"/track/(\d+)/",
+                link.get("href", "")
+            )
 
-        else:
-            # OnlineRadioBox kan soms titel en artiest
-            # als afzonderlijke regels tonen.
-            #
-            # We bewaren een losse titel en wachten op
-            # de volgende losse regel die de artiest bevat.
-            if pending_title is None:
-                pending_title = entry
-                continue
+            if match_id:
+                track_id = match_id.group(1)
 
-            artist = entry
-            title = pending_title
-            pending_title = None
+        rows.append(
+            {
+                "time": time,
+                "entry": entry,
+                "entry_lower": entry_lower,
+                "track_id": track_id,
+            }
+        )
 
-        program_text = f"{artist} {title}".strip().lower()
+    # ---------------------------------------------------------
+    # HULPFUNCTIE
+    # ---------------------------------------------------------
 
-        if program_text in program_labels:
-            continue
+    def add_track(artist, title):
+
+        artist = artist.strip()
+        title = title.strip()
+
+        if not artist or not title:
+            return
+
+        if artist.lower() == title.lower():
+            return
 
         if len(artist) > 150 or len(title) > 300:
-            continue
+            return
+
+        program_text = (
+            f"{artist} {title}"
+            .strip()
+            .lower()
+        )
+
+        if program_text in program_labels:
+            return
 
         key = (
             artist.lower(),
@@ -690,13 +715,105 @@ def get_vuurland_tracks():
         )
 
         if key in seen:
-            continue
+            return
 
         seen.add(key)
 
         tracks.append(
             (artist, title)
         )
+
+    # ---------------------------------------------------------
+    # TRACKS VERWERKEN
+    # ---------------------------------------------------------
+
+    i = 0
+
+    while i < len(rows):
+
+        row = rows[i]
+        entry = row["entry"]
+
+        # =============================================
+        # 1. NORMAAL FORMAAT
+        # =============================================
+
+        match = re.match(
+            r"^(.+?)\s+-\s+(.+)$",
+            entry
+        )
+
+        if match:
+            add_track(
+                match.group(1),
+                match.group(2)
+            )
+
+            i += 1
+            continue
+
+        # =============================================
+        # 2. RADIOBOX SPLIT-FORMAAT
+        # =============================================
+        #
+        # RadioBox kan bijvoorbeeld tonen:
+        #
+        # 16:34  TAYLOR SWIFT feat PHOEBE BRIDGERS
+        # 16:34  Nothing new (Taylor's version)
+        #
+        # Beide regels hebben hetzelfde tijdstip.
+        #
+        # Alleen wanneer het tijdstip gelijk is, proberen
+        # we de twee regels te combineren.
+        #
+        # We doen dit NIET wanneer beide regels dezelfde
+        # tekst hebben.
+        # =============================================
+
+        if i + 1 < len(rows):
+
+            next_row = rows[i + 1]
+
+            if (
+                row["time"] == next_row["time"]
+                and row["entry_lower"] not in program_labels
+                and next_row["entry_lower"] not in program_labels
+                and row["entry_lower"] != next_row["entry_lower"]
+            ):
+
+                # Een volledige ARTIST - TITLE-regel mag
+                # nooit als split-record worden gebruikt.
+                #
+                # De eerste regel wordt als artiest behandeld
+                # en de tweede als titel.
+                #
+                # De bestaande Spotify-matcher blijft daarna
+                # verantwoordelijk voor de uiteindelijke
+                # veilige match.
+
+                first_is_track = (
+                    row["track_id"] is not None
+                )
+
+                second_is_track = (
+                    next_row["track_id"] is not None
+                )
+
+                if first_is_track and second_is_track:
+
+                    add_track(
+                        row["entry"],
+                        next_row["entry"]
+                    )
+
+                    i += 2
+                    continue
+
+        # =============================================
+        # 3. ONBETROUWBAAR LOS RECORD
+        # =============================================
+
+        i += 1
 
     return tracks
 
