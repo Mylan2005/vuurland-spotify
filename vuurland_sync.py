@@ -22,7 +22,7 @@ CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
 REDIRECT_URI = "http://127.0.0.1:8888/callback"
 
 PLAYLIST_NAME = "Studio Brussel Vuurland"
-PLAYLIST_ID = "5WkgQBl9M7nHinVD1qd9Ol"
+PLAYLIST_ID = "555lFTvdRswe9ukybmOM8T"
 
 # Bekende artiest-naamswijzigingen.
 #
