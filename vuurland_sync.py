@@ -760,16 +760,31 @@ def find_spotify_track(
         if part.strip()
     ]
 
-    query_parts = [
-        f'track:"{search_title}"'
-    ]
+    # Alleen de primaire artiest als Spotify Search-filter.
+    #
+    # Featuring-artiesten en kleine schrijfverschillen mogen
+    # de zoekopdracht niet al blokkeren.
+    #
+    # De echte controle gebeurt hieronder.
+    primary_search_artist = (
+        search_artists[0]
+        if search_artists
+        else artist.strip()
+    )
 
-    for search_artist in search_artists:
-        query_parts.append(
-            f'artist:"{search_artist}"'
-        )
-
-    query = " ".join(query_parts)
+    # Zoek op de primaire artiest, maar maak de titel
+    # GEEN harde track-filter.
+    #
+    # Hierdoor kunnen kleine typefouten zoals:
+    # "allright" -> "alright"
+    # alsnog relevante Spotify-kandidaten opleveren.
+    #
+    # De kandidaat wordt daarna verplicht door de
+    # strenge matchinglogica hieronder gecontroleerd.
+    query = (
+        f'artist:"{primary_search_artist}" '
+        f'"{search_title}"'
+    )
 
     data = spotify_request(
         "GET",
@@ -865,6 +880,10 @@ def find_spotify_track(
                 |radio\s+edit
                 |edit
                 |acoustic
+                |demo
+                |instrumental
+                |reprise
+                |short\s+reprise
                 |alternate(?:\s+version)?
                 |version
                 |spotify\s+singles
@@ -922,6 +941,10 @@ def find_spotify_track(
                 |radio\s+edit
                 |edit
                 |acoustic
+                |demo
+                |instrumental
+                |reprise
+                |short\s+reprise
                 |alternate(?:\s+version)?
                 |version
                 |spotify\s+singles
@@ -982,36 +1005,64 @@ def find_spotify_track(
         }
 
         # =============================================
-        # ARTIEST MOET KLIPPEN
+        # ARTIEST MOET STERK KLIPPEN
         # =============================================
+        #
+        # De EERSTE artiest is de primaire artiest.
+        # Kleine typefouten zijn toegestaan, maar alleen
+        # bij een hoge overeenkomst.
+        #
+        # Featured artiesten mogen op Spotify anders zijn
+        # opgebouwd of zelfs ontbreken in de hoofdmetadata.
+        # De titel + primaire artiest blijven de veiligheidsgrens.
 
-        artist_match = False
+        primary_wanted_artist = compact(
+            wanted_artists[0]
+        )
 
-        # Exact/compacte match voor één artiest.
+        primary_artist_score = max(
+            SequenceMatcher(
+                None,
+                primary_wanted_artist,
+                spotify_artist
+            ).ratio()
+            for spotify_artist in spotify_artist_compact
+        )
+
+        primary_artist_exact = any(
+            primary_wanted_artist == spotify_artist
+            or primary_wanted_artist in spotify_artist
+            or spotify_artist in primary_wanted_artist
+            for spotify_artist in spotify_artist_compact
+        )
+
         if (
-            len(wanted_artist_compact) == 1
-            and next(iter(wanted_artist_compact))
-            in spotify_artist_compact
+            not primary_artist_exact
+            and primary_artist_score < 0.90
         ):
-            artist_match = True
-
-        # Samenwerking:
-        # iedere radio-artiest moet terug te vinden zijn
-        # tussen de Spotify-artiesten.
-        if len(wanted_artist_compact) > 1:
-            if all(
-                any(
-                    wanted == spotify
-                    or wanted in spotify
-                    or spotify in wanted
-                    for spotify in spotify_artist_compact
-                )
-                for wanted in wanted_artist_compact
-            ):
-                artist_match = True
-
-        if not artist_match:
             continue
+
+        # Featured artiesten geven extra vertrouwen,
+        # maar zijn geen harde blokkade.
+        matched_feature_count = 0
+
+        for wanted_feature in list(wanted_artist_compact)[1:]:
+
+            feature_score = max(
+                SequenceMatcher(
+                    None,
+                    wanted_feature,
+                    spotify_artist
+                ).ratio()
+                for spotify_artist in spotify_artist_compact
+            )
+
+            if feature_score >= 0.90 or any(
+                wanted_feature in spotify_artist
+                or spotify_artist in wanted_feature
+                for spotify_artist in spotify_artist_compact
+            ):
+                matched_feature_count += 1
 
         # =============================================
         # TITEL CONTROLEREN
@@ -1074,16 +1125,6 @@ def find_spotify_track(
         elif spotify_base_compact == wanted_base_compact:
             title_score = 0.99
 
-        # Radio-titel staat volledig vooraan/in Spotify-titel.
-        # Bijvoorbeeld:
-        # Day 'n' nite
-        # Day 'n' nite - Spotify Singles
-        elif (
-            wanted_base_compact
-            and wanted_base_compact in spotify_base_compact
-        ):
-            title_score = 0.95
-
         else:
             title_score = SequenceMatcher(
                 None,
@@ -1113,7 +1154,11 @@ def find_spotify_track(
         # op titelkwaliteit. Bij gelijke kwaliteit blijft
         # Spotify's oorspronkelijke volgorde leidend.
 
-        candidate_score = title_score
+        candidate_score = (
+            title_score
+            + (primary_artist_score * 0.50)
+            + (matched_feature_count * 0.05)
+        )
 
         if spotify_compact == wanted_compact:
             candidate_score += 1.00
@@ -1459,6 +1504,39 @@ def sync():
 
     seen = load_seen()
     cache = load_cache()
+
+    # =================================
+    # MATCHING CACHE MIGRATIE
+    # =================================
+    #
+    # Een eerdere matcher kon bij:
+    # Sufjan Stevens - Love Yourself
+    # de verkeerde versie (Short Reprise) cachen.
+    #
+    # Alleen deze bekende foutieve search-cache wordt
+    # eenmalig verwijderd. De grote playlist-cache blijft
+    # volledig behouden.
+
+    MATCHING_RULES_VERSION = 2
+
+    if cache.get(
+        "__matching_rules_version"
+    ) != MATCHING_RULES_VERSION:
+
+        cache.pop(
+            "sufjan stevens|||love yourself",
+            None
+        )
+
+        cache[
+            "__matching_rules_version"
+        ] = MATCHING_RULES_VERSION
+
+        save_cache(cache)
+
+        print(
+            "🧹 Oude Sufjan matching-cache verwijderd."
+        )
 
     queued_keys = {
         f"{normalize_match(item.get('artist', ''))}|||"
