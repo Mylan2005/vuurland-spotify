@@ -24,6 +24,20 @@ REDIRECT_URI = "http://127.0.0.1:8888/callback"
 PLAYLIST_NAME = "Studio Brussel Vuurland"
 PLAYLIST_ID = "5WkgQBl9M7nHinVD1qd9Ol"
 
+# Bekende artiest-naamswijzigingen.
+#
+# BELANGRIJK:
+# Dit is GEEN vrije fuzzy artiestenmatch.
+# Een alias wordt alleen gebruikt wanneer we expliciet weten
+# dat het om dezelfde artiest gaat.
+#
+# De normale titelcontrole blijft volledig actief.
+ARTIST_ALIASES = {
+    "the indien": [
+        "rianne",
+    ],
+}
+
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 
 CHECK_EVERY_SECONDS = 120  # 2 minuten
@@ -772,6 +786,33 @@ def find_spotify_track(
         else artist.strip()
     )
 
+    # ---------------------------------------------------------
+    # BEKENDE ARTIEST-NAAMSWIJZIGINGEN
+    # ---------------------------------------------------------
+
+    def alias_key(value):
+        value = str(value or "").lower().strip()
+        value = re.sub(r"[^a-z0-9]+", " ", value)
+        return " ".join(value.split())
+
+    normalized_primary = alias_key(primary_search_artist)
+
+    search_artist_aliases = ARTIST_ALIASES.get(
+        normalized_primary,
+        []
+    )
+
+    spotify_search_artist = (
+        search_artist_aliases[0]
+        if search_artist_aliases
+        else primary_search_artist
+    )
+
+    # Zoek op de actuele Spotify-artiestnaam wanneer een
+    # expliciete alias bekend is.
+    #
+    # De kandidaat wordt daarna nog steeds streng gecontroleerd.
+
     # Zoek op de primaire artiest, maar maak de titel
     # GEEN harde track-filter.
     #
@@ -782,7 +823,7 @@ def find_spotify_track(
     # De kandidaat wordt daarna verplicht door de
     # strenge matchinglogica hieronder gecontroleerd.
     query = (
-        f'artist:"{primary_search_artist}" '
+        f'artist:"{spotify_search_artist}" '
         f'"{search_title}"'
     )
 
@@ -792,6 +833,8 @@ def find_spotify_track(
         params={
             "q": query,
             "type": "track",
+            # Spotify Search ondersteunt maximaal 10 resultaten.
+            # De kandidaatselectie hieronder blijft streng.
             "limit": 10
         }
     )
@@ -1014,14 +1057,53 @@ def find_spotify_track(
     candidates = []
 
     for item in items:
-        spotify_artists = [
-            normalize(a.get("name", ""))
+        spotify_artist_objects = [
+            a
             for a in item.get("artists", [])
             if a.get("name")
         ]
 
+        spotify_artists = [
+            normalize(a.get("name", ""))
+            for a in spotify_artist_objects
+        ]
+
         if not spotify_artists:
             continue
+
+        # -------------------------------------------------
+        # ID-VEILIGE ARTIEST-ALIAS
+        # -------------------------------------------------
+        #
+        # Een expliciete naamswijziging mag alleen matchen
+        # wanneer Spotify ook exact de bekende artist-ID
+        # teruggeeft.
+        #
+        # THE INDIEN -> Rianne
+        # Spotify artist ID: 1M6DAgCuvRE1Ct0Tsq74Lb
+        #
+        # Dit voorkomt dat een andere artiest met dezelfde
+        # naam per ongeluk als alias wordt geaccepteerd.
+
+        allowed_spotify_artist_ids = set()
+
+        if normalized_primary == "the indien":
+            allowed_spotify_artist_ids.add(
+                "1M6DAgCuvRE1Ct0Tsq74Lb"
+            )
+
+        if allowed_spotify_artist_ids:
+            candidate_artist_ids = {
+                a.get("id")
+                for a in spotify_artist_objects
+                if a.get("id")
+            }
+
+            if not (
+                candidate_artist_ids
+                & allowed_spotify_artist_ids
+            ):
+                continue
 
         spotify_artist_compact = {
             compact(a)
@@ -1059,6 +1141,21 @@ def find_spotify_track(
             or spotify_artist in primary_wanted_artist
             for spotify_artist in spotify_artist_compact
         )
+
+        # Een expliciet bekende naamswijziging mag de oude
+        # artiestnaam koppelen aan de actuele Spotify-naam.
+        alias_artist_match = any(
+            alias_key(spotify_artist)
+            in {
+                alias_key(alias)
+                for alias in search_artist_aliases
+            }
+            for spotify_artist in spotify_artists
+        )
+
+        if alias_artist_match:
+            primary_artist_score = 1.0
+            primary_artist_exact = True
 
         if (
             not primary_artist_exact
@@ -1540,7 +1637,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 2
+    MATCHING_RULES_VERSION = 3
 
     if cache.get(
         "__matching_rules_version"
@@ -1937,8 +2034,13 @@ def sync():
     # iedere controle opnieuw Search gebruikt.
     # ---------------------------------
 
+    # Een "niet gevonden"-resultaat is afhankelijk van de
+    # huidige Spotify-matchingregels.
+    #
+    # Als de matcher later verbeterd wordt, mag een oude
+    # mislukte zoekpoging de nieuwe matcher niet blokkeren.
     not_found_key = (
-        "__not_found__"
+        f"__not_found_v{MATCHING_RULES_VERSION}__"
         + cache_key
     )
 
@@ -2056,15 +2158,24 @@ def sync():
     if uri is None:
 
         print(
-            f"⚠️ Niet gevonden op Spotify: "
+            f"⚠️ Geen betrouwbare Spotify-match gevonden: "
             f"{artist} - {title}"
+        )
+
+        print(
+            "ℹ️ Dit betekent niet dat het nummer niet op Spotify "
+            "bestaat; alleen dat de huidige zoekactie geen "
+            "veilige match opleverde."
         )
 
         # 24 uur geen nieuwe Search voor dit nummer.
         cache[not_found_key] = int(time.time())
 
-        # Uit de live queue verwijderen zodat de sync
-        # niet iedere ronde op hetzelfde nummer blijft hangen.
+        # Uit de huidige queue-positie verwijderen.
+        #
+        # Het nummer wordt NIET vergeten: de __not_found__
+        # cooldown-cache zorgt ervoor dat het later opnieuw
+        # geprobeerd kan worden.
         live_queue.pop(0)
 
         with open(live_queue_file, "w") as f:
