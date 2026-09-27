@@ -823,6 +823,26 @@ def find_spotify_track(
         value = value.replace("—", "-")
         value = value.replace("+", " ")
 
+        # Spotify gebruikt soms gestileerde tekens in titels
+        # die door de radiofeed als vraagtekens binnenkomen.
+        #
+        # Voorbeeld:
+        #   RadioBox : 22 (over s??n)
+        #   Spotify  : 22 (OVER S∞N)
+        #
+        # Alleen een dubbele ?? tussen letters wordt behandeld
+        # als de gestileerde "oo"-klank. Losse vraagtekens
+        # blijven onaangeroerd.
+        value = re.sub(
+            r"(?<=[a-z])\?\?(?=[a-z])",
+            "oo",
+            value
+        )
+
+        # Het Spotify-symbool ∞ wordt in "S∞N" gebruikt
+        # als gestileerde "oo".
+        value = value.replace("∞", "oo")
+
         for char in [
             ".", ",", "(", ")", "[", "]",
             "{", "}", "_"
@@ -866,7 +886,7 @@ def find_spotify_track(
         - "(remix)" -> "remix"
         - "- Radio Edit" -> "radio edit"
 
-        Onbekende varianten zoals "Short Reprise" geven None.
+        Bekende varianten zoals "Short Reprise" worden herkend.
         """
         raw_value = str(value or "").strip()
 
@@ -982,10 +1002,14 @@ def find_spotify_track(
     if not wanted_title or not wanted_artists:
         return None
 
-    wanted_artist_compact = {
+    # Bewaar de artiesten in dezelfde volgorde als de radio-input.
+    # De eerste artiest is de primaire artiest.
+    # De overige artiesten zijn eventuele featuring-artiesten.
+    wanted_artist_compact = [
         compact(part)
         for part in wanted_artists
-    }
+        if compact(part)
+    ]
 
     candidates = []
 
@@ -1046,7 +1070,7 @@ def find_spotify_track(
         # maar zijn geen harde blokkade.
         matched_feature_count = 0
 
-        for wanted_feature in list(wanted_artist_compact)[1:]:
+        for wanted_feature in wanted_artist_compact[1:]:
 
             feature_score = max(
                 SequenceMatcher(
@@ -1134,8 +1158,7 @@ def find_spotify_track(
 
         # Een vrije fuzzy match moet zeer sterk zijn.
         #
-        # Exacte titels, bekende versies en titels die volledig
-        # in de Spotify-titel voorkomen worden hierboven al
+        # Exacte titels en bekende versies worden hierboven al
         # afgehandeld. De fuzzy fallback is daarom bewust streng:
         # zo wordt een ander nummer van dezelfde artiest niet
         # door een toevallige gelijkenis gekozen.
