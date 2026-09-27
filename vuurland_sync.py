@@ -1212,7 +1212,7 @@ def find_spotify_track(
         # moet ook kunnen matchen met Spotify:
         # "Time Moves Slow"
         wanted_title_for_match = re.sub(
-            r"\s*\(?(?:feat\.?|ft\.?|featuring)\s+[^\(\)\[\]]+\)?\s*$",
+            r"(?:\s+\(?(?:feat\.?|ft\.?|featuring)\s+[^\(\)\[\]]+\)?\s*$)",
             "",
             wanted_title,
             flags=re.IGNORECASE
@@ -1259,9 +1259,6 @@ def find_spotify_track(
         # afgehandeld. De fuzzy fallback is daarom bewust streng:
         # zo wordt een ander nummer van dezelfde artiest niet
         # door een toevallige gelijkenis gekozen.
-        if title_score < 0.88:
-            continue
-
         # =============================================
         # GELDIGE SPOTIFY-MATCH OPSLAAN
         # =============================================
