@@ -1059,6 +1059,34 @@ def find_spotify_track(
             normalize(value).split()
         )
 
+    def title_compact(value):
+        """
+        Compacte titelvergelijking.
+
+        Naast gewone spaties worden ook gespatieerde lettertitels
+        gelijkgetrokken:
+        "Speyside" <-> "S P E Y S I D E"
+
+        Alleen voor titels; artiestennamen blijven onaangeraakt.
+        """
+        normalized = normalize(value)
+
+        # Eerst de normale compacte vorm.
+        compacted = "".join(normalized.split())
+
+        # Als Spotify een titel letter voor letter heeft gespatieerd,
+        # bijvoorbeeld "s p e y s i d e", vergelijk hem ook als
+        # één woord. Alleen wanneer ALLE losse delen één letter zijn.
+        parts = normalized.split()
+
+        if len(parts) >= 3 and all(
+            len(part) == 1 and part.isalnum()
+            for part in parts
+        ):
+            return "".join(parts)
+
+        return compacted
+
     def artist_parts(value):
         value = normalize(value)
 
@@ -1391,19 +1419,19 @@ def find_spotify_track(
             wanted_title_for_match
         )
 
-        wanted_compact = compact(
+        wanted_compact = title_compact(
             wanted_title_for_match
         )
 
-        spotify_compact = compact(
+        spotify_compact = title_compact(
             spotify_title
         )
 
-        wanted_base_compact = compact(
+        wanted_base_compact = title_compact(
             wanted_title_base_for_match
         )
 
-        spotify_base_compact = compact(
+        spotify_base_compact = title_compact(
             spotify_title_base
         )
 
