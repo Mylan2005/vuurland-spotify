@@ -1280,8 +1280,8 @@ def find_spotify_track(
         ):
             continue
 
-        # Featured artiesten geven extra vertrouwen,
-        # maar zijn geen harde blokkade.
+        # Featured artiesten moeten aanwezig zijn wanneer
+        # RadioBox ze expliciet vermeldt.
         matched_feature_count = 0
 
         for wanted_feature in wanted_artist_compact[1:]:
@@ -1301,6 +1301,15 @@ def find_spotify_track(
                 for spotify_artist in spotify_artist_compact
             ):
                 matched_feature_count += 1
+
+        # Een expliciete RadioBox-featuring mag niet verdwijnen
+        # in een Spotify-kandidaat zonder die featured artiest.
+        if (
+            wanted_artist_compact[1:]
+            and matched_feature_count
+            < len(wanted_artist_compact) - 1
+        ):
+            continue
 
         # =============================================
         # TITEL CONTROLEREN
@@ -1645,6 +1654,13 @@ def radio_matches_playlist(
         )
 
     title_key = normalize_match(title)
+
+    # Kleine RadioBox/Spotify-schrijfvariant:
+    # "Waltz nø2" = "Waltz No. 2"
+    #
+    # Alleen voor de playlist-dedupcontrole.
+    # De algemene Spotify-matcher blijft onaangeraakt.
+    title_key = title_key.replace("nø", "no ")
 
     radio_artists = normalize_radio_artists(
         artist_text
