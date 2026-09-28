@@ -964,6 +964,49 @@ def find_spotify_track(
         []
     )
 
+    # Kleine Spotify Search-fallback:
+    # sommige officiële Spotify-titels worden anders gespeld,
+    # bijvoorbeeld:
+    #
+    # RadioBox: "Speyside"
+    # Spotify:  "S P E Y S I D E"
+    #
+    # Alleen wanneer de eerste zoekopdracht helemaal niets
+    # oplevert, proberen we een gespatieerde lettervariant.
+    #
+    # De bestaande strenge kandidaatmatching blijft daarna
+    # volledig verantwoordelijk voor de uiteindelijke match.
+    if not items:
+        spaced_title = " ".join(
+            char
+            for char in search_title
+            if char.isalnum()
+        )
+
+        if spaced_title and spaced_title != search_title:
+            fallback_query = (
+                f'artist:"{spotify_search_artist}" '
+                f'"{spaced_title}"'
+            )
+
+            data = spotify_request(
+                "GET",
+                "/search",
+                params={
+                    "q": fallback_query,
+                    "type": "track",
+                    "limit": 10
+                }
+            )
+
+            items = data.get(
+                "tracks",
+                {}
+            ).get(
+                "items",
+                []
+            )
+
     def normalize(value):
         value = str(value or "").lower().strip()
 
