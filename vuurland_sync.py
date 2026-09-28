@@ -1123,7 +1123,7 @@ def find_spotify_track(
 
         version_pattern = re.compile(
             r"""
-            (?:\s*[-(]\s*|\s+)
+            (?:\s*[-(]\s*)
             (
                 live
                 |remaster(?:ed)?
