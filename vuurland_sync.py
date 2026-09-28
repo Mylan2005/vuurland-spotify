@@ -1495,15 +1495,29 @@ def find_spotify_track(
         # kanten. De exacte versie krijgt daardoor extra
         # gewicht.
         #
-        # Als RadioBox géén versie vraagt, krijgt een
-        # kandidaat zonder expliciete versievoorkeur
-        # voorrang boven een duidelijke alternatieve versie.
+        # Als RadioBox expliciet een bekende versie vraagt,
+        # mag Spotify geen ANDERE bekende versie leveren.
+        #
+        # Voorbeeld:
+        # RadioBox: "Song (live)"
+        # Spotify:  "Song - Live at the BBC"  -> toegestaan
+        #
+        # RadioBox: "Song (live)"
+        # Spotify:  "Song - Acoustic"         -> blokkeren
+        # Spotify:  "Song - Remix"            -> blokkeren
+        #
+        # Een Spotify-kandidaat zonder bekende versie blijft
+        # toegestaan: sommige Spotify-titels vermelden hun
+        # versie niet expliciet.
         if wanted_version:
             if spotify_version == wanted_version:
                 candidate_score += 0.50
 
             elif spotify_version is None:
                 candidate_score += 0.10
+
+            else:
+                continue
 
         elif spotify_version is None:
             candidate_score += 0.20
