@@ -1325,8 +1325,6 @@ def find_spotify_track(
 
         primary_artist_exact = any(
             primary_wanted_artist == spotify_artist
-            or primary_wanted_artist in spotify_artist
-            or spotify_artist in primary_wanted_artist
             for spotify_artist in spotify_artist_compact
         )
 
