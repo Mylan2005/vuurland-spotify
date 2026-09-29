@@ -876,6 +876,41 @@ def find_spotify_track(
         flags=re.IGNORECASE
     ).strip()
 
+    # RadioBox beschrijft de titel ":)" soms als
+    # ":) (smiley face)". Voor Spotify Search moet
+    # alleen de echte titel gebruikt worden.
+    search_title = re.sub(
+        r"\s*\(\s*smiley\s+face\s*\)\s*$",
+        "",
+        search_title,
+        flags=re.IGNORECASE
+    ).strip()
+
+    # RadioBox kan live-locaties Nederlandstalig formuleren:
+    # "Lippy kids (live op Rock Werchter 2011)"
+    #
+    # Voor Spotify Search gebruiken we hier de basistitel.
+    # De strenge versie- en titelcontrole verderop blijft actief.
+    search_title = re.sub(
+        r"\s*\(\s*live\s+(?:op|at)\b[^)]*\)\s*$",
+        "",
+        search_title,
+        flags=re.IGNORECASE
+    ).strip()
+
+    # Bekende Beck-titelvariant:
+    # RadioBox: "Everybody's got to learn sometime"
+    # Spotify:  "Everybody's Gotta Learn Sometime"
+    #
+    # Alleen voor deze exacte bekende titel gebruiken we
+    # de Spotify-spelling in de zoekopdracht.
+    if (
+        artist.strip().lower() == "beck"
+        and search_title.strip().lower()
+        == "everybody's got to learn sometime"
+    ):
+        search_title = "Everybody's Gotta Learn Sometime"
+
     search_artists = re.split(
         r"\s+(?:feat\.?|ft\.?|featuring)\s+"
         r"|\s*&\s*"
@@ -1067,16 +1102,53 @@ def find_spotify_track(
         gelijkgetrokken:
         "Speyside" <-> "S P E Y S I D E"
 
+        Nummeraanduidingen in titels worden gecontroleerd gelijkgetrokken:
+        "nø2", "no. 2", "no 2" en "#2" -> "no2"
+
         Alleen voor titels; artiestennamen blijven onaangeraakt.
         """
         normalized = normalize(value)
 
-        # Eerst de normale compacte vorm.
+        # Gestileerde ø gelijkstellen aan gewone "o"
+        # voor titelvergelijking, bv. "Waltz nø2".
+        normalized = normalized.replace("ø", "o")
+
+        # Gecontroleerde titelvariant:
+        # Beck gebruikt op Spotify "Everybody's Gotta Learn Sometime"
+        # terwijl RadioBox "Everybody's got to learn sometime" kan tonen.
+        if normalized in {
+            "everybody's gotta learn sometime",
+            "everybody's got to learn sometime",
+        }:
+            normalized = "everybody's got to learn sometime"
+
+        # Trek gecontroleerde nummernotaties gelijk:
+        # "no 2", "no2", "#2" -> "no2"
+        normalized = re.sub(
+            r"\bno\s*(\d+)\b",
+            r"no\1",
+            normalized
+        )
+
+        normalized = re.sub(
+            r"#\s*(\d+)\b",
+            r"no\1",
+            normalized
+        )
+
+        # Gecontroleerde titelvariant:
+        # "Waltz nø2"
+        # "Waltz No. 2"
+        # "Waltz, NO. 2 (XO)"
+        # "Waltz #2 (XO)"
+        if re.fullmatch(
+            r"waltz\s+no2(?:\s+xo)?",
+            normalized
+        ):
+            normalized = "waltz no2"
+
         compacted = "".join(normalized.split())
 
-        # Als Spotify een titel letter voor letter heeft gespatieerd,
-        # bijvoorbeeld "s p e y s i d e", vergelijk hem ook als
-        # één woord. Alleen wanneer ALLE losse delen één letter zijn.
         parts = normalized.split()
 
         if len(parts) >= 3 and all(
@@ -1229,6 +1301,17 @@ def find_spotify_track(
     wanted_version = requested_version(title)
 
     wanted_artists = artist_parts(artist)
+
+    # RadioBox vermeldt bij "Never Back Down":
+    # "Novastar & Piet Goddaer".
+    # Spotify catalogiseert de track onder Novastar.
+    # Alleen voor deze expliciet bekende combinatie mag
+    # Piet Goddaer als extra RadioBox-credit genegeerd worden.
+    if (
+        wanted_artists == ["novastar", "piet goddaer"]
+        and wanted_title == "never back down"
+    ):
+        wanted_artists = ["novastar"]
 
     if not wanted_title or not wanted_artists:
         return None
@@ -1399,6 +1482,52 @@ def find_spotify_track(
             item.get("name", "")
         )
 
+        # Specifieke live-opname met locatie + jaar.
+        # Als RadioBox dit expliciet vermeldt, moet Spotify
+        # dezelfde locatie én hetzelfde jaar bevatten.
+        requested_live_location = re.search(
+            r"\blive\s+(?:op|at)\s+(.+?)\s+(\d{4})\s*\)?\s*$",
+            str(title or ""),
+            flags=re.IGNORECASE
+        )
+
+        if requested_live_location:
+            requested_venue = normalize(
+                requested_live_location.group(1)
+            )
+            requested_year = requested_live_location.group(2)
+
+            spotify_live_text = normalize(
+                item.get("name", "")
+            )
+
+            venue_words = [
+                word
+                for word in re.sub(
+                    r"[^a-z0-9]+",
+                    " ",
+                    requested_venue
+                ).split()
+                if word
+            ]
+
+            spotify_live_words = set(
+                re.sub(
+                    r"[^a-z0-9]+",
+                    " ",
+                    spotify_live_text
+                ).split()
+            )
+
+            if (
+                requested_year not in spotify_live_text
+                or not all(
+                    word in spotify_live_words
+                    for word in venue_words
+                )
+            ):
+                continue
+
         # Featuring-vermeldingen in de RadioBox-titel horen
         # bij de artiestinformatie, niet bij de tracktitel.
         #
@@ -1410,6 +1539,14 @@ def find_spotify_track(
             r"(?:\s+\(?(?:feat\.?|ft\.?|featuring)\s+[^\(\)\[\]]+\)?\s*$)",
             "",
             wanted_title,
+            flags=re.IGNORECASE
+        ).strip()
+
+        # RadioBox: ":) (smiley face)" -> echte titel ":)"
+        wanted_title_for_match = re.sub(
+            r"\s+smiley\s+face\s*$",
+            "",
+            wanted_title_for_match,
             flags=re.IGNORECASE
         ).strip()
 
@@ -1448,12 +1585,25 @@ def find_spotify_track(
                 spotify_base_compact
             ).ratio()
 
-        # Een vrije fuzzy match moet zeer sterk zijn.
+        # Harde veiligheidsgrens voor vrije fuzzy matches.
         #
-        # Exacte titels en bekende versies worden hierboven al
-        # afgehandeld. De fuzzy fallback is daarom bewust streng:
-        # zo wordt een ander nummer van dezelfde artiest niet
-        # door een toevallige gelijkenis gekozen.
+        # Exacte titels en exacte basistitels zijn hierboven al
+        # afgehandeld. Een kandidaat met een zwakke titelovereenkomst
+        # mag NOOIT worden gekozen alleen omdat de artiest klopt.
+        #
+        # Dit voorkomt bijvoorbeeld:
+        # RadioBox: "Can't Stand Losing You"
+        # Spotify:  een ander nummer van dezelfde artiest.
+        #
+        # 0.90 laat kleine schrijfverschillen toe, maar blokkeert
+        # duidelijk andere titels.
+        if (
+            spotify_compact != wanted_compact
+            and spotify_base_compact != wanted_base_compact
+            and title_score < 0.90
+        ):
+            continue
+
         # =============================================
         # GELDIGE SPOTIFY-MATCH OPSLAAN
         # =============================================
@@ -1850,7 +2000,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 3
+    MATCHING_RULES_VERSION = 7
 
     if cache.get(
         "__matching_rules_version"
