@@ -6,6 +6,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: vuurland-sync
+  cancel-in-progress: false
+
 jobs:
   cleanup:
     runs-on: ubuntu-latest
@@ -13,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Python
         uses: actions/setup-python@v5
@@ -169,6 +175,8 @@ jobs:
 
       - name: Queue opslaan
         run: |
+          set -e
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -176,7 +184,34 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "ℹ️ Geen wijzigingen."
-          else
-            git commit -m "Clean already synced Vuurland queue"
-            git push
+            exit 0
           fi
+
+          git commit -m "Clean already synced Vuurland queue"
+
+          for attempt in 1 2 3 4 5; do
+            echo "🔄 Push-poging $attempt/5..."
+
+            git fetch origin main
+
+            if ! git rebase origin/main; then
+              echo "❌ Rebase-conflict tijdens cleanup-push."
+              git rebase --abort || true
+              exit 1
+            fi
+
+            if git push origin HEAD:main; then
+              echo "✅ Cleanup-state opgeslagen op GitHub."
+              exit 0
+            fi
+
+            echo "⚠️ Push mislukt."
+
+            if [ "$attempt" -lt 5 ]; then
+              echo "⏳ 15 seconden wachten en opnieuw proberen..."
+              sleep 15
+            fi
+          done
+
+          echo "❌ Push is na 5 pogingen nog steeds mislukt."
+          exit 1

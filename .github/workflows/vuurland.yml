@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Python
         uses: actions/setup-python@v5
@@ -37,10 +39,54 @@ jobs:
           VUURLAND_DATA_DIR: ${{ github.workspace }}
           GH_TOKEN: ${{ github.token }}
         run: |
+          set -e
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           END_TIME=$((SECONDS + 345 * 60))
+          SYNC_EXIT=0
+
+          push_state() {
+            git add \
+              vuurland_seen.json \
+              vuurland_live_queue.json \
+              .vuurland_spotify_cache.json
+
+            if git diff --cached --quiet; then
+              echo "ℹ️ Geen state-wijzigingen."
+              return 0
+            fi
+
+            git commit -m "Update Vuurland sync state"
+
+            for attempt in 1 2 3 4 5; do
+              echo "🔄 Push-poging $attempt/5..."
+
+              git fetch origin main
+
+              if ! git rebase origin/main; then
+                echo "❌ Rebase-conflict tijdens opslaan sync-state."
+                git rebase --abort || true
+                return 1
+              fi
+
+              if git push origin HEAD:main; then
+                echo "✅ Sync-state opgeslagen op GitHub."
+                return 0
+              fi
+
+              echo "⚠️ Push mislukt. GitHub kan veranderd zijn of tijdelijk onbereikbaar zijn."
+
+              if [ "$attempt" -lt 5 ]; then
+                echo "⏳ 15 seconden wachten en opnieuw proberen..."
+                sleep 15
+              fi
+            done
+
+            echo "❌ Push is na 5 pogingen nog steeds mislukt."
+            return 1
+          }
 
           while [ "$SECONDS" -lt "$END_TIME" ]; do
             echo ""
@@ -63,13 +109,9 @@ jobs:
               break
             fi
 
-            git add vuurland_seen.json vuurland_live_queue.json .vuurland_spotify_cache.json
-
-            if ! git diff --cached --quiet; then
-              git commit -m "Update Vuurland sync state"
-              git push
-            else
-              echo "ℹ️ Geen wijzigingen."
+            if ! push_state; then
+              echo "🛑 State kon niet veilig naar GitHub worden gepusht."
+              exit 1
             fi
 
             REMAINING=$((END_TIME - SECONDS))
