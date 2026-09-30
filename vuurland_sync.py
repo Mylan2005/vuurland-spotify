@@ -876,6 +876,11 @@ def find_spotify_track(
             "mount kimbie feat king krule",
             "empty and silent",
         ): "spotify:track:64mpPHhJIs1Fzlk1n7b9Kn",
+
+        (
+            "ry x feat hermanos gutierrez",
+            "you",
+        ): "spotify:track:3r14cTnRNBAXpYfRorUFa7",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2046,7 +2051,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 8
+    MATCHING_RULES_VERSION = 9
 
     if cache.get(
         "__matching_rules_version"
@@ -2420,6 +2425,10 @@ def sync():
         (
             "mount kimbie feat king krule",
             "empty and silent",
+        ),
+        (
+            "ry x feat hermanos gutierrez",
+            "you",
         ),
     }
 
