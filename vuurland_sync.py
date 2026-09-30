@@ -839,6 +839,52 @@ def find_spotify_track(
     - Het beste geldige resultaat wordt gekozen.
     """
 
+    # =============================================
+    # EXACT BEKENDE RADIOBOX -> SPOTIFY MAPPINGS
+    # =============================================
+    #
+    # Alleen bewezen uitzonderingen komen hier terecht.
+    # Hierdoor hoeven we de algemene matcher NIET losser
+    # te maken en kan nooit een willekeurig nummer van
+    # dezelfde artiest gekozen worden.
+    #
+    # Deze controle gebeurt vóór Spotify Search zodat
+    # bekende mappings ook werken tijdens een Search-block.
+
+    known_artist = " ".join(
+        artist.strip().casefold()
+        .replace("feat.", "feat")
+        .split()
+    )
+
+    known_title = " ".join(
+        title.strip().casefold().split()
+    )
+
+    known_uri_overrides = {
+        (
+            "death cab for cutie",
+            "love song",
+        ): "spotify:track:49edirvFZwWjxAMZJRg1hN",
+
+        (
+            "delvis",
+            "money",
+        ): "spotify:track:60ARQ6JZcL6QxiCRcaEMq6",
+
+        (
+            "mount kimbie feat king krule",
+            "empty and silent",
+        ): "spotify:track:64mpPHhJIs1Fzlk1n7b9Kn",
+    }
+
+    known_uri = known_uri_overrides.get(
+        (known_artist, known_title)
+    )
+
+    if known_uri:
+        return known_uri
+
     if time.time() < SPOTIFY_SEARCH_BLOCKED_UNTIL:
         remaining = int(
             SPOTIFY_SEARCH_BLOCKED_UNTIL - time.time()
@@ -2000,7 +2046,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 7
+    MATCHING_RULES_VERSION = 8
 
     if cache.get(
         "__matching_rules_version"
@@ -2355,12 +2401,37 @@ def sync():
     # AL IN PLAYLIST?
     # ---------------------------------
 
+    # Voor bekende RadioBox/catalogus-afwijkingen vertrouwen
+    # we niet op alleen artiest+titel uit de playlist-cache.
+    # Eerst moet find_spotify_track() de exact gewenste URI
+    # bepalen; daarna doet de harde URI-duplicatecheck zijn werk.
+    force_exact_uri_check = (
+        normalize_match(artist),
+        normalize_match(title)
+    ) in {
+        (
+            "death cab for cutie",
+            "love song",
+        ),
+        (
+            "delvis",
+            "money",
+        ),
+        (
+            "mount kimbie feat king krule",
+            "empty and silent",
+        ),
+    }
+
     if (
-        cache_key in playlist_keys
-        or radio_matches_playlist(
-            artist,
-            title,
-            playlist_keys
+        not force_exact_uri_check
+        and (
+            cache_key in playlist_keys
+            or radio_matches_playlist(
+                artist,
+                title,
+                playlist_keys
+            )
         )
     ):
 
