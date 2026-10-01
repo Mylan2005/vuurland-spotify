@@ -927,6 +927,14 @@ def find_spotify_track(
             "ben kweller feat mj lenderman",
             "oh dorian",
         ): "spotify:track:6DTw1VZjHrH0o9G8IyckwM",
+
+        # RadioBox: ":) (smiley face)"
+        # Spotify:  ":)"
+        # Bewezen dezelfde track; gebruik exact deze URI.
+        (
+            "the japanese house",
+            ":) (smiley face)",
+        ): "spotify:track:36YY9Yeq3XastTeC1e0VmN",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2114,7 +2122,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 10
+    MATCHING_RULES_VERSION = 11
 
     if cache.get(
         "__matching_rules_version"
@@ -2520,6 +2528,10 @@ def sync():
         (
             "ben kweller feat mj lenderman",
             "oh dorian",
+        ),
+        (
+            "the japanese house",
+            ":) (smiley face)",
         ),
     }
 
