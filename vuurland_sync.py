@@ -50,6 +50,11 @@ SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 CHECK_EVERY_SECONDS = 120  # 2 minuten
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
 
+# Metadata van de laatst gekozen Spotify Search-kandidaat.
+# find_spotify_track() blijft gewoon een URI-string teruggeven,
+# zodat bestaande code en regressietests niet veranderen.
+LAST_SPOTIFY_MATCH_ISRC = None
+
 DATA_DIR = os.environ.get("VUURLAND_DATA_DIR", os.path.expanduser("~"))
 TOKEN_FILE = os.path.join(DATA_DIR, ".vuurland_spotify_token.json")
 CACHE_FILE = os.path.join(DATA_DIR, ".vuurland_spotify_cache.json")
@@ -833,6 +838,9 @@ def find_spotify_track(
     artist,
     title
 ):
+    global LAST_SPOTIFY_MATCH_ISRC
+    LAST_SPOTIFY_MATCH_ISRC = None
+
     """
     Zoek een Spotify-track veilig op artiest + titel.
 
@@ -1775,11 +1783,19 @@ def find_spotify_track(
         elif spotify_version is None:
             candidate_score += 0.20
 
+        candidate_isrc = str(
+            (item.get("external_ids") or {}).get(
+                "isrc",
+                ""
+            )
+        ).strip().upper() or None
+
         candidates.append(
             (
                 candidate_score,
                 -len(candidates),
-                item.get("uri")
+                item.get("uri"),
+                candidate_isrc,
             )
         )
 
@@ -1792,6 +1808,7 @@ def find_spotify_track(
             reverse=True
         )
 
+        LAST_SPOTIFY_MATCH_ISRC = candidates[0][3]
         return candidates[0][2]
 
     return None
@@ -1820,6 +1837,79 @@ def add_tracks(
             f"{playlist_id}/items",
             json={
                 "uris": batch
+            }
+        )
+
+
+def get_track_isrc_from_uri(uri):
+    """
+    Haal de ISRC van exact één Spotify-track op.
+
+    Wordt alleen gebruikt als de ISRC niet al uit:
+    - Spotify Search
+    - playlist-cache
+    bekend is.
+
+    Dus GEEN bulk-fetch en GEEN extra playlistscan.
+    """
+
+    prefix = "spotify:track:"
+
+    if not uri or not uri.startswith(prefix):
+        return None
+
+    track_id = uri[len(prefix):].strip()
+
+    if not track_id:
+        return None
+
+    data = spotify_request(
+        "GET",
+        f"/tracks/{track_id}"
+    )
+
+    isrc = str(
+        (data.get("external_ids") or {}).get(
+            "isrc",
+            ""
+        )
+    ).strip().upper()
+
+    return isrc or None
+
+
+def remove_tracks(
+    playlist_id,
+    uris
+):
+    """
+    Verwijder alleen exact opgegeven Spotify-URI's.
+
+    Wordt voor automatische dedup uitsluitend aangeroepen
+    wanneer verschillende URI's exact dezelfde ISRC hebben.
+    """
+
+    uris = [
+        uri
+        for uri in dict.fromkeys(uris)
+        if uri
+    ]
+
+    if not uris:
+        return
+
+    for i in range(0, len(uris), 100):
+        batch = uris[i:i + 100]
+
+        spotify_request(
+            "DELETE",
+            f"/playlists/"
+            f"{playlist_id}/items",
+            json={
+                "items": [
+                    {"uri": uri}
+                    for uri in batch
+                ]
             }
         )
 
@@ -2312,6 +2402,18 @@ def sync():
         cache.get("__playlist_uris", [])
     )
 
+    playlist_isrcs = set(
+        cache.get("__playlist_isrcs", [])
+    )
+
+    spotify_uri_isrc = dict(
+        cache.get("__spotify_uri_isrc", {})
+    )
+
+    playlist_isrc_cache_ready = bool(
+        cache.get("__playlist_isrc_cache_ready", False)
+    )
+
     playlist_cache_time = cache.get(
         "__playlist_cache_time",
         0
@@ -2321,6 +2423,7 @@ def sync():
 
     if (
         not playlist_keys
+        or not playlist_isrc_cache_ready
         or time.time() - playlist_cache_time
         >= PLAYLIST_CACHE_SECONDS
     ):
@@ -2331,6 +2434,13 @@ def sync():
 
         playlist_keys = set()
         playlist_uris = set()
+        playlist_isrcs = set()
+
+        # Voor veilige bestaande-duplicatecleanup:
+        # per ISRC onthouden welke verschillende URI's voorkomen.
+        playlist_isrc_entries = {}
+        playlist_position = 0
+
         playlist_offset = 0
 
         while True:
@@ -2370,6 +2480,33 @@ def sync():
                 if uri:
                     playlist_uris.add(uri)
 
+                isrc = str(
+                    (track.get("external_ids") or {}).get(
+                        "isrc",
+                        ""
+                    )
+                ).strip().upper()
+
+                if uri and isrc:
+                    playlist_isrcs.add(isrc)
+                    spotify_uri_isrc[uri] = isrc
+
+                    playlist_isrc_entries.setdefault(
+                        isrc,
+                        []
+                    ).append(
+                        {
+                            "uri": uri,
+                            "added_at": (
+                                playlist_item.get("added_at")
+                                or ""
+                            ),
+                            "position": playlist_position,
+                        }
+                    )
+
+                playlist_position += 1
+
                 playlist_title = normalize_match(
                     track.get("name", "")
                 )
@@ -2407,6 +2544,91 @@ def sync():
                 playlist_batch
             )
 
+        # ---------------------------------
+        # VEILIGE ISRC DEDUP
+        # ---------------------------------
+        #
+        # Alleen wanneer Spotify voor verschillende URI's
+        # EXACT dezelfde ISRC teruggeeft.
+        #
+        # Zelfde URI meerdere keren wordt hier bewust niet
+        # automatisch aangepakt, omdat verwijderen op URI
+        # alle voorkomens van die URI kan raken.
+        #
+        # Bij meerdere verschillende URI's met dezelfde ISRC
+        # houden we de meest recent toegevoegde entry.
+
+        duplicate_uris_to_remove = []
+
+        for isrc, entries in playlist_isrc_entries.items():
+
+            latest_per_uri = {}
+
+            for entry in entries:
+                uri = entry["uri"]
+
+                previous = latest_per_uri.get(uri)
+
+                current_key = (
+                    entry.get("added_at", ""),
+                    entry.get("position", -1),
+                )
+
+                previous_key = (
+                    previous.get("added_at", ""),
+                    previous.get("position", -1),
+                ) if previous else None
+
+                if (
+                    previous is None
+                    or current_key > previous_key
+                ):
+                    latest_per_uri[uri] = entry
+
+            # Eén URI voor deze ISRC = niets te doen.
+            if len(latest_per_uri) <= 1:
+                continue
+
+            ordered = sorted(
+                latest_per_uri.values(),
+                key=lambda entry: (
+                    entry.get("added_at", ""),
+                    entry.get("position", -1),
+                )
+            )
+
+            keep = ordered[-1]
+            remove = ordered[:-1]
+
+            print(
+                f"🧹 ISRC-duplicaat: {isrc} "
+                f"→ behouden {keep['uri']}"
+            )
+
+            for entry in remove:
+                print(
+                    f"   verwijderen: {entry['uri']}"
+                )
+                duplicate_uris_to_remove.append(
+                    entry["uri"]
+                )
+
+        if duplicate_uris_to_remove:
+            remove_tracks(
+                playlist_id,
+                duplicate_uris_to_remove
+            )
+
+            playlist_uris.difference_update(
+                duplicate_uris_to_remove
+            )
+
+            print(
+                f"✅ {len(set(duplicate_uris_to_remove))} "
+                "dubbele Spotify-URI('s) verwijderd "
+                "op basis van exacte ISRC."
+            )
+
         cache[
             "__playlist_keys"
         ] = sorted(playlist_keys)
@@ -2414,6 +2636,18 @@ def sync():
         cache[
             "__playlist_uris"
         ] = sorted(playlist_uris)
+
+        cache[
+            "__playlist_isrcs"
+        ] = sorted(playlist_isrcs)
+
+        cache[
+            "__spotify_uri_isrc"
+        ] = spotify_uri_isrc
+
+        cache[
+            "__playlist_isrc_cache_ready"
+        ] = True
 
         cache[
             "__playlist_cache_time"
@@ -2752,6 +2986,65 @@ def sync():
         return
 
     # ---------------------------------
+    # HARDE ISRC DUPLICATECHECK
+    # ---------------------------------
+    #
+    # Een Spotify-opname kan op meerdere releases onder een
+    # andere URI voorkomen. De ISRC identificeert de opname.
+    #
+    # Geen fuzzy titelvergelijking en geen extra Spotify-GET.
+
+    candidate_isrc = (
+        LAST_SPOTIFY_MATCH_ISRC
+        or spotify_uri_isrc.get(uri)
+    )
+
+    # Search-resultaten hebben hun ISRC al.
+    # Bekende/cached URI's soms niet.
+    #
+    # Alleen in dat laatste geval doen we exact één kleine
+    # GET voor deze kandidaat. Geen volledige playlistscan.
+    if not candidate_isrc:
+        candidate_isrc = get_track_isrc_from_uri(uri)
+
+    if candidate_isrc:
+        candidate_isrc = str(
+            candidate_isrc
+        ).strip().upper()
+
+        spotify_uri_isrc[uri] = candidate_isrc
+
+        cache[
+            "__spotify_uri_isrc"
+        ] = spotify_uri_isrc
+
+    if (
+        candidate_isrc
+        and candidate_isrc in playlist_isrcs
+    ):
+        print(
+            f"⏭️ Zelfde Spotify-opname staat al in "
+            f"de playlist (ISRC {candidate_isrc}): "
+            f"{artist} - {title}"
+        )
+
+        live_queue.pop(0)
+        seen.add(cache_key)
+
+        save_seen(seen)
+        save_cache(cache)
+
+        with open(live_queue_file, "w") as f:
+            json.dump(
+                live_queue,
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
+
+        return
+
+    # ---------------------------------
     # HARDE URI DUPLICATECHECK
     # ---------------------------------
     #
@@ -2795,6 +3088,10 @@ def sync():
     # worden toegevoegd.
     playlist_uris.add(uri)
 
+    if candidate_isrc:
+        playlist_isrcs.add(candidate_isrc)
+        spotify_uri_isrc[uri] = candidate_isrc
+
     print(
         f"✅ Toegevoegd: "
         f"{artist} - {title}"
@@ -2810,6 +3107,18 @@ def sync():
     cache[
         "__playlist_uris"
     ] = sorted(playlist_uris)
+
+    cache[
+        "__playlist_isrcs"
+    ] = sorted(playlist_isrcs)
+
+    cache[
+        "__spotify_uri_isrc"
+    ] = spotify_uri_isrc
+
+    cache[
+        "__playlist_isrc_cache_ready"
+    ] = True
 
     save_cache(cache)
 
