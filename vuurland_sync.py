@@ -36,6 +36,13 @@ ARTIST_ALIASES = {
     "the indien": [
         "rianne",
     ],
+
+    # RadioBox schrijft deze artiest als DELVIS.
+    # Spotify gebruikt de officiële schrijfwijze Delv!s.
+    # Dit geldt voor alle nummers van deze artiest.
+    "delvis": [
+        "delv!s",
+    ],
 }
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
@@ -1972,8 +1979,25 @@ def radio_matches_playlist(
     """
 
     def compact_artist(value):
+        normalized = normalize_match(value)
+
+        # Bekende artiestalias:
+        # RadioBox: DELVIS
+        # Spotify:  Delv!s
+        #
+        # normalize_match() kan leestekens/spaties anders
+        # representeren, daarom vangen we alleen deze expliciet
+        # bekende schrijfwijzen op. Dit is GEEN algemene
+        # punctuation-insensitive artiestenmatch.
+        if normalized in {
+            "delvis",
+            "delv!s",
+            "delv s",
+        }:
+            return "delvis"
+
         return "".join(
-            normalize_match(value).split()
+            normalized.split()
         )
 
     title_key = normalize_match(title)
