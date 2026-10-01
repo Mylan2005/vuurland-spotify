@@ -881,6 +881,45 @@ def find_spotify_track(
             "ry x feat hermanos gutierrez",
             "you",
         ): "spotify:track:3r14cTnRNBAXpYfRorUFa7",
+
+        (
+            "gabriel rios feat devendra banhart",
+            "la torre",
+        ): "spotify:track:4k8dMINfckUXvcjDfNm4vP",
+
+        (
+            "zita swoon",
+            "thinking about you all the time",
+        ): "spotify:track:7zmXOkHrbbTtPb8OLamdnC",
+
+        # RadioBox gebruikt DELVIS, Spotify catalogiseert als Delv!s.
+        (
+            "delvis",
+            "walk alone track",
+        ): "spotify:track:1TbzpNoZ6rrUTytsAfraik",
+
+        (
+            "leon bridges feat lydia kitto",
+            "all day, all night",
+        ): "spotify:track:3bzPIGOvMnnePP7GzZrwF2",
+
+        # RadioBox toont de verklarende titel tussen haakjes,
+        # Spotify gebruikt alleen "PDLIF".
+        (
+            "bon iver",
+            "pdlif (please don't live in fear)",
+        ): "spotify:track:0kT1QOkgYYaW0lnMpXY76h",
+
+        # RadioBox-typfout: "THE BAD SEES" i.p.v. "THE BAD SEEDS".
+        (
+            "nick cave & the bad sees",
+            "skeleton tree",
+        ): "spotify:track:3iC4tcs4MfcTBXMV2ptj1M",
+
+        (
+            "ben kweller feat mj lenderman",
+            "oh dorian",
+        ): "spotify:track:6DTw1VZjHrH0o9G8IyckwM",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2051,7 +2090,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 9
+    MATCHING_RULES_VERSION = 10
 
     if cache.get(
         "__matching_rules_version"
@@ -2429,6 +2468,34 @@ def sync():
         (
             "ry x feat hermanos gutierrez",
             "you",
+        ),
+        (
+            "gabriel rios feat devendra banhart",
+            "la torre",
+        ),
+        (
+            "zita swoon",
+            "thinking about you all the time",
+        ),
+        (
+            "delvis",
+            "walk alone track",
+        ),
+        (
+            "leon bridges feat lydia kitto",
+            "all day, all night",
+        ),
+        (
+            "bon iver",
+            "pdlif (please don't live in fear)",
+        ),
+        (
+            "nick cave & the bad sees",
+            "skeleton tree",
+        ),
+        (
+            "ben kweller feat mj lenderman",
+            "oh dorian",
         ),
     }
 
