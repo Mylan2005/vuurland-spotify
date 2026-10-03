@@ -943,6 +943,18 @@ def find_spotify_track(
             "the japanese house",
             ":) (smiley face)",
         ): "spotify:track:36YY9Yeq3XastTeC1e0VmN",
+
+        # Spotify heeft meerdere catalogus-URI's voor
+        # The Flaming Lips - Do You Realize??.
+        #
+        # De bestaande Vuurland-versie die we willen behouden:
+        # spotify:track:2DFRFqWNahKtFD112H2iEZ
+        #
+        # RadioBox gebruikt de Britse spelling "realise".
+        (
+            "the flaming lips",
+            "do you realise",
+        ): "spotify:track:2DFRFqWNahKtFD112H2iEZ",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2212,7 +2224,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 12
+    MATCHING_RULES_VERSION = 13
 
     if cache.get(
         "__matching_rules_version"
@@ -2222,6 +2234,7 @@ def sync():
             "sufjan stevens|||love yourself",
             "pinback|||loro",
             "ise|||ik reis door de nacht (live)",
+            "the flaming lips|||do you realise",
         }
 
         removed_bad_cache_keys = []
@@ -2776,6 +2789,10 @@ def sync():
         (
             "the japanese house",
             ":) (smiley face)",
+        ),
+        (
+            "the flaming lips",
+            "do you realise",
         ),
     }
 
