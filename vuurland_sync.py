@@ -46,6 +46,7 @@ ARTIST_ALIASES = {
 }
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
+MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlist/?lang=nl"
 
 CHECK_EVERY_SECONDS = 120  # 2 minuten
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -606,26 +607,28 @@ def existing_tracks(playlist_id):
 # ONLINE RADIO BOX
 # =========================
 
-def get_vuurland_tracks():
-
+def get_radiobox_tracks(
+    source_url,
+    source_name,
+    program_labels=None,
+):
     print(
-        "📻 Vuurland wordt gecontroleerd..."
+        f"📻 {source_name} wordt gecontroleerd..."
     )
 
     response = requests.get(
-        SOURCE_URL,
+        source_url,
         headers={
-            "User-Agent":
-                "Mozilla/5.0"
+            "User-Agent": "Mozilla/5.0"
         },
-        timeout=30
+        timeout=30,
     )
 
     response.raise_for_status()
 
     soup = BeautifulSoup(
         response.text,
-        "html.parser"
+        "html.parser",
     )
 
     tracks = []
@@ -633,32 +636,30 @@ def get_vuurland_tracks():
 
     import re
 
+    if program_labels is None:
+        program_labels = set()
+
     program_labels = {
-        "studio brussel vuurland",
-        "oud - vrt studio brussel vuurland",
+        str(label).lower().strip()
+        for label in program_labels
     }
 
     rows = []
 
-    # ---------------------------------------------------------
-    # RADIOBOX-REGELS INLEZEN
-    # ---------------------------------------------------------
-
     for element in soup.find_all(["tr", "li"]):
-
-        text = " ".join(
+        row_text = " ".join(
             element.stripped_strings
         )
 
         time_match = re.search(
             r"\b(\d{1,2}:\d{2})\b\s*(.*)$",
-            text
+            row_text,
         )
 
         if not time_match:
             continue
 
-        time = time_match.group(1)
+        time_value = time_match.group(1)
         entry = time_match.group(2).strip()
 
         if not entry:
@@ -669,17 +670,24 @@ def get_vuurland_tracks():
         if entry_lower in program_labels:
             continue
 
+        # Radio Paradise niet-muziekregels nooit verwerken.
+        if (
+            "commercial-free" in entry_lower
+            and "listener-supported" in entry_lower
+        ):
+            continue
+
         track_id = None
 
         link = element.find(
             "a",
-            href=re.compile(r"/track/\d+/")
+            href=re.compile(r"/track/\d+/"),
         )
 
         if link:
             match_id = re.search(
                 r"/track/(\d+)/",
-                link.get("href", "")
+                link.get("href", ""),
             )
 
             if match_id:
@@ -687,19 +695,14 @@ def get_vuurland_tracks():
 
         rows.append(
             {
-                "time": time,
+                "time": time_value,
                 "entry": entry,
                 "entry_lower": entry_lower,
                 "track_id": track_id,
             }
         )
 
-    # ---------------------------------------------------------
-    # HULPFUNCTIE
-    # ---------------------------------------------------------
-
     def add_track(artist, title):
-
         artist = artist.strip()
         title = title.strip()
 
@@ -723,7 +726,7 @@ def get_vuurland_tracks():
 
         key = (
             artist.lower(),
-            title.lower()
+            title.lower(),
         )
 
         if key in seen:
@@ -735,74 +738,43 @@ def get_vuurland_tracks():
             (artist, title)
         )
 
-    # ---------------------------------------------------------
-    # TRACKS VERWERKEN
-    # ---------------------------------------------------------
-
     i = 0
 
     while i < len(rows):
-
         row = rows[i]
         entry = row["entry"]
 
-        # =============================================
-        # 1. NORMAAL FORMAAT
-        # =============================================
-
+        # Normaal formaat:
+        # ARTIST - TITLE
         match = re.match(
             r"^(.+?)\s+-\s+(.+)$",
-            entry
+            entry,
         )
 
         if match:
             add_track(
                 match.group(1),
-                match.group(2)
+                match.group(2),
             )
 
             i += 1
             continue
 
-        # =============================================
-        # 2. RADIOBOX SPLIT-FORMAAT
-        # =============================================
-        #
-        # RadioBox kan bijvoorbeeld tonen:
-        #
-        # 16:34  TAYLOR SWIFT feat PHOEBE BRIDGERS
-        # 16:34  Nothing new (Taylor's version)
-        #
-        # Beide regels hebben hetzelfde tijdstip.
-        #
-        # Alleen wanneer het tijdstip gelijk is, proberen
-        # we de twee regels te combineren.
-        #
-        # We doen dit NIET wanneer beide regels dezelfde
-        # tekst hebben.
-        # =============================================
-
+        # RadioBox split-formaat:
+        # artiest en titel op twee regels
+        # met hetzelfde tijdstip.
         if i + 1 < len(rows):
-
             next_row = rows[i + 1]
 
             if (
                 row["time"] == next_row["time"]
-                and row["entry_lower"] not in program_labels
-                and next_row["entry_lower"] not in program_labels
-                and row["entry_lower"] != next_row["entry_lower"]
+                and row["entry_lower"]
+                not in program_labels
+                and next_row["entry_lower"]
+                not in program_labels
+                and row["entry_lower"]
+                != next_row["entry_lower"]
             ):
-
-                # Een volledige ARTIST - TITLE-regel mag
-                # nooit als split-record worden gebruikt.
-                #
-                # De eerste regel wordt als artiest behandeld
-                # en de tweede als titel.
-                #
-                # De bestaande Spotify-matcher blijft daarna
-                # verantwoordelijk voor de uiteindelijke
-                # veilige match.
-
                 first_is_track = (
                     row["track_id"] is not None
                 )
@@ -812,22 +784,35 @@ def get_vuurland_tracks():
                 )
 
                 if first_is_track and second_is_track:
-
                     add_track(
                         row["entry"],
-                        next_row["entry"]
+                        next_row["entry"],
                     )
 
                     i += 2
                     continue
 
-        # =============================================
-        # 3. ONBETROUWBAAR LOS RECORD
-        # =============================================
-
         i += 1
 
     return tracks
+
+
+def get_vuurland_tracks():
+    return get_radiobox_tracks(
+        SOURCE_URL,
+        "Studio Brussel Vuurland",
+        {
+            "studio brussel vuurland",
+            "oud - vrt studio brussel vuurland",
+        },
+    )
+
+
+def get_mellow_mix_tracks():
+    return get_radiobox_tracks(
+        MELLOW_MIX_SOURCE_URL,
+        "Radio Paradise Mellow Mix",
+    )
 
 
 # =========================
@@ -2203,15 +2188,34 @@ def radio_matches_playlist(
 
 
 def sync():
+    global LAST_SPOTIFY_MATCH_ISRC
 
     # =================================
     # VUURLAND LIVE SYNC
     # =================================
 
-    tracks = get_vuurland_tracks()
+    radio_sources = [
+        {
+            "id": "vuurland",
+            "name": "Studio Brussel Vuurland",
+            "tracks": get_vuurland_tracks(),
+            "cache_key": "__last_radio_key_vuurland",
+        },
+        {
+            "id": "mellow_mix",
+            "name": "Radio Paradise Mellow Mix",
+            "tracks": get_mellow_mix_tracks(),
+            "cache_key": "__last_radio_key_mellow_mix",
+        },
+    ]
 
     print()
-    print(f"   {len(tracks)} nummers gevonden.")
+
+    for source in radio_sources:
+        print(
+            f"   {source['name']}: "
+            f"{len(source['tracks'])} nummers gevonden."
+        )
 
     # ---------------------------------
     # LIVE QUEUE
@@ -2304,67 +2308,93 @@ def sync():
     # sinds de vorige controle nieuw zijn.
     # ---------------------------------
 
-    last_radio_key = cache.get("__last_radio_key")
-
     new_radio_tracks = []
 
-    for artist, title in tracks:
+    for source in radio_sources:
+        tracks = source["tracks"]
+        cache_key_name = source["cache_key"]
 
-        artist_clean = artist.strip()
-        title_clean = title.strip()
-
-        if not artist_clean or not title_clean:
-            continue
-
-        # Bron-/programmaregel nooit verwerken.
+        # Oude Vuurland-cursor behouden.
         if (
-            artist_clean.lower() == "oud"
-            and title_clean.lower() == "vrt studio brussel vuurland"
+            source["id"] == "vuurland"
+            and cache_key_name not in cache
+            and "__last_radio_key" in cache
         ):
-            print(
-                f"⏭️ Bronregel overgeslagen: "
-                f"{artist_clean} - {title_clean}"
-            )
-            continue
+            cache[cache_key_name] = cache[
+                "__last_radio_key"
+            ]
 
-        key = (
-            f"{normalize_match(artist_clean)}|||"
-            f"{normalize_match(title_clean)}"
+        last_radio_key = cache.get(
+            cache_key_name
         )
 
-        # Eerste keer:
-        # alleen het meest recente nummer nemen.
-        if last_radio_key is None:
-            new_radio_tracks.append(
+        source_new_tracks = []
+
+        for artist, title in tracks:
+            artist_clean = artist.strip()
+            title_clean = title.strip()
+
+            if (
+                not artist_clean
+                or not title_clean
+            ):
+                continue
+
+            key = (
+                f"{normalize_match(artist_clean)}|||"
+                f"{normalize_match(title_clean)}"
+            )
+
+            # Nieuwe bron:
+            # alleen het nieuwste nummer als startpunt.
+            #
+            # Dus Mellow Mix begint vanaf NU en trekt
+            # niet ineens de volledige historie binnen.
+            if last_radio_key is None:
+                source_new_tracks.append(
+                    {
+                        "artist": artist_clean,
+                        "title": title_clean,
+                        "source": source["id"],
+                    }
+                )
+                break
+
+            # We zijn terug bij het laatste nummer
+            # dat tijdens de vorige run bovenaan stond.
+            if key == last_radio_key:
+                break
+
+            source_new_tracks.append(
                 {
                     "artist": artist_clean,
-                    "title": title_clean
+                    "title": title_clean,
+                    "source": source["id"],
                 }
             )
-            break
 
-        # Zodra we het vorige nieuwste nummer bereiken,
-        # zijn de nummers erboven nieuw sinds de vorige ronde.
-        if key == last_radio_key:
-            break
+        # De eerste parser-track is de nieuwste.
+        if tracks:
+            newest_artist, newest_title = tracks[0]
 
-        new_radio_tracks.append(
-            {
-                "artist": artist_clean,
-                "title": title_clean
-            }
+            newest_key = (
+                f"{normalize_match(newest_artist)}|||"
+                f"{normalize_match(newest_title)}"
+            )
+
+            cache[
+                cache_key_name
+            ] = newest_key
+
+        print(
+            f"🛰️ {source['name']}: "
+            f"{len(source_new_tracks)} "
+            "nieuwe track(s) sinds vorige controle."
         )
 
-    # De bovenste track is de meest recente.
-    if tracks:
-        newest_artist, newest_title = tracks[0]
-
-        newest_key = (
-            f"{normalize_match(newest_artist)}|||"
-            f"{normalize_match(newest_title)}"
+        new_radio_tracks.extend(
+            source_new_tracks
         )
-
-        cache["__last_radio_key"] = newest_key
 
     # ---------------------------------
     # NIEUWE RADIO-NUMMERS AAN LIVE QUEUE
@@ -2726,240 +2756,62 @@ def sync():
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
 
-    item = live_queue[0]
-
-    artist = item["artist"]
-    title = item["title"]
-
-    # Bronregel extra beveiliging.
-    if (
-        artist.strip().lower() == "oud"
-        and title.strip().lower()
-        == "vrt studio brussel vuurland"
-    ):
-
-        print(
-            f"⏭️ Bronregel verwijderd: "
-            f"{artist} - {title}"
-        )
-
-        live_queue.pop(0)
-
-        with open(live_queue_file, "w") as f:
-            json.dump(
-                live_queue,
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
-
-        save_cache(cache)
-        return
-
-    cache_key = (
-        f"{normalize_match(artist)}|||"
-        f"{normalize_match(title)}"
-    )
-
-    # ---------------------------------
-    # AL IN PLAYLIST?
-    # ---------------------------------
-
-    # Voor bekende RadioBox/catalogus-afwijkingen vertrouwen
-    # we niet op alleen artiest+titel uit de playlist-cache.
-    # Eerst moet find_spotify_track() de exact gewenste URI
-    # bepalen; daarna doet de harde URI-duplicatecheck zijn werk.
-    force_exact_uri_check = (
-        normalize_match(artist),
-        normalize_match(title)
-    ) in {
-        (
-            "death cab for cutie",
-            "love song",
-        ),
-        (
-            "delvis",
-            "money",
-        ),
-        (
-            "mount kimbie feat king krule",
-            "empty and silent",
-        ),
-        (
-            "ry x feat hermanos gutierrez",
-            "you",
-        ),
-        (
-            "gabriel rios feat devendra banhart",
-            "la torre",
-        ),
-        (
-            "zita swoon",
-            "thinking about you all the time",
-        ),
-        (
-            "delvis",
-            "walk alone track",
-        ),
-        (
-            "leon bridges feat lydia kitto",
-            "all day, all night",
-        ),
-        (
-            "bon iver",
-            "pdlif (please don't live in fear)",
-        ),
-        (
-            "nick cave & the bad sees",
-            "skeleton tree",
-        ),
-        (
-            "ben kweller feat mj lenderman",
-            "oh dorian",
-        ),
-        (
-            "the japanese house",
-            ":) (smiley face)",
-        ),
-        (
-            "the flaming lips",
-            "do you realise",
-        ),
-        (
-            "taylor swift feat bon iver",
-            "exile",
-        ),
-        (
-            "francis and the lights feat bon iver & kanye west",
-            "friends",
-        ),
-        (
-            "lana del rey",
-            "young & beautiful",
-        ),
-        (
-            "jose gonzalez",
-            "crosses (bibio remix)",
-        ),
-        (
-            "taylor swift feat the national",
-            "coney island",
-        ),
-    }
-
-    if (
-        not force_exact_uri_check
-        and (
-            cache_key in playlist_keys
-            or radio_matches_playlist(
-                artist,
-                title,
-                playlist_keys
-            )
-        )
-    ):
-
-        print(
-            f"⏭️ Al in Spotify: "
-            f"{artist} - {title}"
-        )
-
-        live_queue.pop(0)
-        seen.add(cache_key)
-
-        with open(live_queue_file, "w") as f:
-            json.dump(
-                live_queue,
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
-
-        save_seen(seen)
-        save_cache(cache)
-
-        print(
-            f"📋 {len(live_queue)} nummers "
-            "blijven in live queue."
-        )
-
-        return
-
-    # ---------------------------------
-    # EERDER NIET GEVONDEN
+    # Per sync-run maximaal één queue-item per radiobron.
     #
-    # Voorkomt dat hetzelfde nummer bij
-    # iedere controle opnieuw Search gebruikt.
-    # ---------------------------------
+    # Beide bronnen krijgen zo een kans in dezelfde ronde,
+    # terwijl MAX_SEARCHES_PER_RUN = 1 globaal behouden blijft.
+    processed_sources = set()
 
-    # Een "niet gevonden"-resultaat is afhankelijk van de
-    # huidige Spotify-matchingregels.
-    #
-    # Als de matcher later verbeterd wordt, mag een oude
-    # mislukte zoekpoging de nieuwe matcher niet blokkeren.
-    not_found_key = (
-        f"__not_found_v{MATCHING_RULES_VERSION}__"
-        + cache_key
-    )
+    for _source_slot in range(2):
 
-    not_found_time = cache.get(
-        not_found_key
-    )
+        if not live_queue:
+            break
 
-    if (
-        not_found_time is not None
-        and time.time() - not_found_time
-        < NOT_FOUND_COOLDOWN_SECONDS
-    ):
+        selected_index = None
+        selected_source = None
 
-        # Het nummer blijft behouden, maar gaat achteraan
-        # de queue zodat andere nummers eerst verwerkt worden.
-        failed_item = live_queue.pop(0)
-        live_queue.append(failed_item)
+        for index, candidate in enumerate(live_queue):
+            source_id = str(
+                candidate.get("source") or "vuurland"
+            ).strip()
 
-        with open(live_queue_file, "w") as f:
-            json.dump(
-                live_queue,
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
+            if source_id not in processed_sources:
+                selected_index = index
+                selected_source = source_id
+                break
 
-        save_cache(cache)
+        if selected_index is None:
+            break
 
-        print(
-            f"🔄 Tijdelijk overgeslagen en achteraan "
-            f"de queue geplaatst: {artist} - {title}"
-        )
+        # De bestaande verwerking gebruikt bewust queue-index 0.
+        # Zet daarom het gekozen item tijdelijk vooraan.
+        if selected_index != 0:
+            selected_item = live_queue.pop(selected_index)
+            live_queue.insert(0, selected_item)
 
-        print(
-            f"📋 {len(live_queue)} nummers "
-            "blijven in live queue."
-        )
+        processed_sources.add(selected_source)
 
-        return
+        # Nooit ISRC-metadata van het vorige queue-item hergebruiken.
+        LAST_SPOTIFY_MATCH_ISRC = None
 
-    # ---------------------------------
-    # CACHE SEARCH RESULT
-    # ---------------------------------
+        item = live_queue[0]
 
-    if cache_key in cache:
+        artist = item["artist"]
+        title = item["title"]
 
-        uri = cache[cache_key]
-
-        print(
-            f"💾 Spotify-cache gebruikt: "
-            f"{artist} - {title}"
-        )
-
-    else:
-
-        if searches_used >= MAX_SEARCHES_PER_RUN:
+        # Bronregel extra beveiliging.
+        if (
+            artist.strip().lower() == "oud"
+            and title.strip().lower()
+            == "vrt studio brussel vuurland"
+        ):
 
             print(
-                "⏸️ Spotify Search-limiet "
-                "voor deze ronde bereikt."
+                f"⏭️ Bronregel verwijderd: "
+                f"{artist} - {title}"
             )
+
+            live_queue.pop(0)
 
             with open(live_queue_file, "w") as f:
                 json.dump(
@@ -2970,71 +2822,457 @@ def sync():
                 )
 
             save_cache(cache)
-            return
+            continue
 
-        print(
-            f"🔎 Spotify zoeken: "
-            f"{artist} - {title}"
+        cache_key = (
+            f"{normalize_match(artist)}|||"
+            f"{normalize_match(title)}"
         )
 
-        try:
+        # ---------------------------------
+        # AL IN PLAYLIST?
+        # ---------------------------------
 
-            uri = find_spotify_track(
-                artist,
-                title
+        # Voor bekende RadioBox/catalogus-afwijkingen vertrouwen
+        # we niet op alleen artiest+titel uit de playlist-cache.
+        # Eerst moet find_spotify_track() de exact gewenste URI
+        # bepalen; daarna doet de harde URI-duplicatecheck zijn werk.
+        force_exact_uri_check = (
+            normalize_match(artist),
+            normalize_match(title)
+        ) in {
+            (
+                "death cab for cutie",
+                "love song",
+            ),
+            (
+                "delvis",
+                "money",
+            ),
+            (
+                "mount kimbie feat king krule",
+                "empty and silent",
+            ),
+            (
+                "ry x feat hermanos gutierrez",
+                "you",
+            ),
+            (
+                "gabriel rios feat devendra banhart",
+                "la torre",
+            ),
+            (
+                "zita swoon",
+                "thinking about you all the time",
+            ),
+            (
+                "delvis",
+                "walk alone track",
+            ),
+            (
+                "leon bridges feat lydia kitto",
+                "all day, all night",
+            ),
+            (
+                "bon iver",
+                "pdlif (please don't live in fear)",
+            ),
+            (
+                "nick cave & the bad sees",
+                "skeleton tree",
+            ),
+            (
+                "ben kweller feat mj lenderman",
+                "oh dorian",
+            ),
+            (
+                "the japanese house",
+                ":) (smiley face)",
+            ),
+            (
+                "the flaming lips",
+                "do you realise",
+            ),
+            (
+                "taylor swift feat bon iver",
+                "exile",
+            ),
+            (
+                "francis and the lights feat bon iver & kanye west",
+                "friends",
+            ),
+            (
+                "lana del rey",
+                "young & beautiful",
+            ),
+            (
+                "jose gonzalez",
+                "crosses (bibio remix)",
+            ),
+            (
+                "taylor swift feat the national",
+                "coney island",
+            ),
+        }
+
+        if (
+            not force_exact_uri_check
+            and (
+                cache_key in playlist_keys
+                or radio_matches_playlist(
+                    artist,
+                    title,
+                    playlist_keys
+                )
             )
-
-        except RuntimeError as error:
+        ):
 
             print(
-                f"⏸️ Spotify pauzeert: {error}"
+                f"⏭️ Al in Spotify: "
+                f"{artist} - {title}"
             )
 
-            reset_live_sync_after_rate_limit(
-                live_queue_file,
-                cache
+            live_queue.pop(0)
+            seen.add(cache_key)
+
+            with open(live_queue_file, "w") as f:
+                json.dump(
+                    live_queue,
+                    f,
+                    indent=2,
+                    ensure_ascii=False
+                )
+
+            save_seen(seen)
+            save_cache(cache)
+
+            print(
+                f"📋 {len(live_queue)} nummers "
+                "blijven in live queue."
             )
 
-            # GitHub Actions moet deze runner stoppen.
-            raise
+            continue
 
-        searches_used += 1
+        # ---------------------------------
+        # EERDER NIET GEVONDEN
+        #
+        # Voorkomt dat hetzelfde nummer bij
+        # iedere controle opnieuw Search gebruikt.
+        # ---------------------------------
 
-        if uri is not None:
+        # Een "niet gevonden"-resultaat is afhankelijk van de
+        # huidige Spotify-matchingregels.
+        #
+        # Als de matcher later verbeterd wordt, mag een oude
+        # mislukte zoekpoging de nieuwe matcher niet blokkeren.
+        not_found_key = (
+            f"__not_found_v{MATCHING_RULES_VERSION}__"
+            + cache_key
+        )
 
-            cache[cache_key] = uri
+        not_found_time = cache.get(
+            not_found_key
+        )
 
-            # Een eerdere mislukte zoekpoging is niet meer relevant.
-            cache.pop(not_found_key, None)
+        if (
+            not_found_time is not None
+            and time.time() - not_found_time
+            < NOT_FOUND_COOLDOWN_SECONDS
+        ):
+
+            # Het nummer blijft behouden, maar gaat achteraan
+            # de queue zodat andere nummers eerst verwerkt worden.
+            failed_item = live_queue.pop(0)
+            live_queue.append(failed_item)
+
+            with open(live_queue_file, "w") as f:
+                json.dump(
+                    live_queue,
+                    f,
+                    indent=2,
+                    ensure_ascii=False
+                )
 
             save_cache(cache)
 
-    # ---------------------------------
-    # NIET GEVONDEN
-    # ---------------------------------
+            print(
+                f"🔄 Tijdelijk overgeslagen en achteraan "
+                f"de queue geplaatst: {artist} - {title}"
+            )
 
-    if uri is None:
+            print(
+                f"📋 {len(live_queue)} nummers "
+                "blijven in live queue."
+            )
+
+            continue
+
+        # ---------------------------------
+        # CACHE SEARCH RESULT
+        # ---------------------------------
+
+        if cache_key in cache:
+
+            uri = cache[cache_key]
+
+            print(
+                f"💾 Spotify-cache gebruikt: "
+                f"{artist} - {title}"
+            )
+
+        else:
+
+            if searches_used >= MAX_SEARCHES_PER_RUN:
+
+                print(
+                    "⏸️ Spotify Search-limiet "
+                    "voor deze ronde bereikt."
+                )
+
+                with open(live_queue_file, "w") as f:
+                    json.dump(
+                        live_queue,
+                        f,
+                        indent=2,
+                        ensure_ascii=False
+                    )
+
+                save_cache(cache)
+                continue
+
+            print(
+                f"🔎 Spotify zoeken: "
+                f"{artist} - {title}"
+            )
+
+            try:
+
+                uri = find_spotify_track(
+                    artist,
+                    title
+                )
+
+            except RuntimeError as error:
+
+                print(
+                    f"⏸️ Spotify pauzeert: {error}"
+                )
+
+                reset_live_sync_after_rate_limit(
+                    live_queue_file,
+                    cache
+                )
+
+                # GitHub Actions moet deze runner stoppen.
+                raise
+
+            searches_used += 1
+
+            if uri is not None:
+
+                cache[cache_key] = uri
+
+                # Een eerdere mislukte zoekpoging is niet meer relevant.
+                cache.pop(not_found_key, None)
+
+                save_cache(cache)
+
+        # ---------------------------------
+        # NIET GEVONDEN
+        # ---------------------------------
+
+        if uri is None:
+
+            print(
+                f"⚠️ Geen betrouwbare Spotify-match gevonden: "
+                f"{artist} - {title}"
+            )
+
+            print(
+                "ℹ️ Dit betekent niet dat het nummer niet op Spotify "
+                "bestaat; alleen dat de huidige zoekactie geen "
+                "veilige match opleverde."
+            )
+
+            # 24 uur geen nieuwe Search voor dit nummer.
+            cache[not_found_key] = int(time.time())
+
+            # Uit de huidige queue-positie verwijderen.
+            #
+            # Het nummer wordt NIET vergeten: de __not_found__
+            # cooldown-cache zorgt ervoor dat het later opnieuw
+            # geprobeerd kan worden.
+            live_queue.pop(0)
+
+            with open(live_queue_file, "w") as f:
+                json.dump(
+                    live_queue,
+                    f,
+                    indent=2,
+                    ensure_ascii=False
+                )
+
+            save_cache(cache)
+
+            print(
+                f"📋 {len(live_queue)} nummers "
+                "blijven in live queue."
+            )
+
+            print(
+                "🕒 Dit nummer wordt 24 uur niet "
+                "opnieuw gezocht."
+            )
+
+            print(
+                f"🔎 Spotify Search gebruikt: "
+                f"{searches_used}/{MAX_SEARCHES_PER_RUN}"
+            )
+
+            continue
+
+        # ---------------------------------
+        # HARDE ISRC DUPLICATECHECK
+        # ---------------------------------
+        #
+        # Een Spotify-opname kan op meerdere releases onder een
+        # andere URI voorkomen. De ISRC identificeert de opname.
+        #
+        # Geen fuzzy titelvergelijking en geen extra Spotify-GET.
+
+        candidate_isrc = (
+            LAST_SPOTIFY_MATCH_ISRC
+            or spotify_uri_isrc.get(uri)
+        )
+
+        # Search-resultaten hebben hun ISRC al.
+        # Bekende/cached URI's soms niet.
+        #
+        # Alleen in dat laatste geval doen we exact één kleine
+        # GET voor deze kandidaat. Geen volledige playlistscan.
+        if not candidate_isrc:
+            candidate_isrc = get_track_isrc_from_uri(uri)
+
+        if candidate_isrc:
+            candidate_isrc = str(
+                candidate_isrc
+            ).strip().upper()
+
+            spotify_uri_isrc[uri] = candidate_isrc
+
+            cache[
+                "__spotify_uri_isrc"
+            ] = spotify_uri_isrc
+
+        if (
+            candidate_isrc
+            and candidate_isrc in playlist_isrcs
+        ):
+            print(
+                f"⏭️ Zelfde Spotify-opname staat al in "
+                f"de playlist (ISRC {candidate_isrc}): "
+                f"{artist} - {title}"
+            )
+
+            live_queue.pop(0)
+            seen.add(cache_key)
+
+            save_seen(seen)
+            save_cache(cache)
+
+            with open(live_queue_file, "w") as f:
+                json.dump(
+                    live_queue,
+                    f,
+                    indent=2,
+                    ensure_ascii=False
+                )
+
+            continue
+
+        # ---------------------------------
+        # HARDE URI DUPLICATECHECK
+        # ---------------------------------
+        #
+        # Ook als de oudere playlist-cache dit nummer
+        # niet herkende, mag een bestaande Spotify-URI
+        # nooit opnieuw worden toegevoegd.
+        if uri in playlist_uris:
+
+            print(
+                f"⏭️ Spotify-track staat al in de playlist: "
+                f"{artist} - {title}"
+            )
+
+            live_queue.pop(0)
+            seen.add(cache_key)
+
+            save_seen(seen)
+            save_cache(cache)
+
+            with open(live_queue_file, "w") as f:
+                json.dump(
+                    live_queue,
+                    f,
+                    indent=2,
+                    ensure_ascii=False
+                )
+
+            continue
+
+        # ---------------------------------
+        # TOEVOEGEN AAN SPOTIFY
+        # ---------------------------------
+
+        add_tracks(
+            playlist_id,
+            [uri]
+        )
+
+        # Meteen lokaal als bestaande Spotify-URI markeren.
+        # Zo kan dezelfde URI later in deze run niet opnieuw
+        # worden toegevoegd.
+        playlist_uris.add(uri)
+
+        if candidate_isrc:
+            playlist_isrcs.add(candidate_isrc)
+            spotify_uri_isrc[uri] = candidate_isrc
 
         print(
-            f"⚠️ Geen betrouwbare Spotify-match gevonden: "
+            f"✅ Toegevoegd: "
             f"{artist} - {title}"
         )
 
-        print(
-            "ℹ️ Dit betekent niet dat het nummer niet op Spotify "
-            "bestaat; alleen dat de huidige zoekactie geen "
-            "veilige match opleverde."
-        )
+        # Meteen lokaal als bestaand markeren.
+        playlist_keys.add(cache_key)
 
-        # 24 uur geen nieuwe Search voor dit nummer.
-        cache[not_found_key] = int(time.time())
+        cache[
+            "__playlist_keys"
+        ] = sorted(playlist_keys)
 
-        # Uit de huidige queue-positie verwijderen.
-        #
-        # Het nummer wordt NIET vergeten: de __not_found__
-        # cooldown-cache zorgt ervoor dat het later opnieuw
-        # geprobeerd kan worden.
+        cache[
+            "__playlist_uris"
+        ] = sorted(playlist_uris)
+
+        cache[
+            "__playlist_isrcs"
+        ] = sorted(playlist_isrcs)
+
+        cache[
+            "__spotify_uri_isrc"
+        ] = spotify_uri_isrc
+
+        cache[
+            "__playlist_isrc_cache_ready"
+        ] = True
+
+        save_cache(cache)
+
+        # Uit live queue verwijderen.
         live_queue.pop(0)
+
+        seen.add(cache_key)
+        save_seen(seen)
 
         with open(live_queue_file, "w") as f:
             json.dump(
@@ -3046,186 +3284,16 @@ def sync():
 
         save_cache(cache)
 
+        print()
         print(
             f"📋 {len(live_queue)} nummers "
-            "blijven in live queue."
-        )
-
-        print(
-            "🕒 Dit nummer wordt 24 uur niet "
-            "opnieuw gezocht."
+            "in live queue."
         )
 
         print(
             f"🔎 Spotify Search gebruikt: "
             f"{searches_used}/{MAX_SEARCHES_PER_RUN}"
         )
-
-        return
-
-    # ---------------------------------
-    # HARDE ISRC DUPLICATECHECK
-    # ---------------------------------
-    #
-    # Een Spotify-opname kan op meerdere releases onder een
-    # andere URI voorkomen. De ISRC identificeert de opname.
-    #
-    # Geen fuzzy titelvergelijking en geen extra Spotify-GET.
-
-    candidate_isrc = (
-        LAST_SPOTIFY_MATCH_ISRC
-        or spotify_uri_isrc.get(uri)
-    )
-
-    # Search-resultaten hebben hun ISRC al.
-    # Bekende/cached URI's soms niet.
-    #
-    # Alleen in dat laatste geval doen we exact één kleine
-    # GET voor deze kandidaat. Geen volledige playlistscan.
-    if not candidate_isrc:
-        candidate_isrc = get_track_isrc_from_uri(uri)
-
-    if candidate_isrc:
-        candidate_isrc = str(
-            candidate_isrc
-        ).strip().upper()
-
-        spotify_uri_isrc[uri] = candidate_isrc
-
-        cache[
-            "__spotify_uri_isrc"
-        ] = spotify_uri_isrc
-
-    if (
-        candidate_isrc
-        and candidate_isrc in playlist_isrcs
-    ):
-        print(
-            f"⏭️ Zelfde Spotify-opname staat al in "
-            f"de playlist (ISRC {candidate_isrc}): "
-            f"{artist} - {title}"
-        )
-
-        live_queue.pop(0)
-        seen.add(cache_key)
-
-        save_seen(seen)
-        save_cache(cache)
-
-        with open(live_queue_file, "w") as f:
-            json.dump(
-                live_queue,
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
-
-        return
-
-    # ---------------------------------
-    # HARDE URI DUPLICATECHECK
-    # ---------------------------------
-    #
-    # Ook als de oudere playlist-cache dit nummer
-    # niet herkende, mag een bestaande Spotify-URI
-    # nooit opnieuw worden toegevoegd.
-    if uri in playlist_uris:
-
-        print(
-            f"⏭️ Spotify-track staat al in de playlist: "
-            f"{artist} - {title}"
-        )
-
-        live_queue.pop(0)
-        seen.add(cache_key)
-
-        save_seen(seen)
-        save_cache(cache)
-
-        with open(live_queue_file, "w") as f:
-            json.dump(
-                live_queue,
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
-
-        return
-
-    # ---------------------------------
-    # TOEVOEGEN AAN SPOTIFY
-    # ---------------------------------
-
-    add_tracks(
-        playlist_id,
-        [uri]
-    )
-
-    # Meteen lokaal als bestaande Spotify-URI markeren.
-    # Zo kan dezelfde URI later in deze run niet opnieuw
-    # worden toegevoegd.
-    playlist_uris.add(uri)
-
-    if candidate_isrc:
-        playlist_isrcs.add(candidate_isrc)
-        spotify_uri_isrc[uri] = candidate_isrc
-
-    print(
-        f"✅ Toegevoegd: "
-        f"{artist} - {title}"
-    )
-
-    # Meteen lokaal als bestaand markeren.
-    playlist_keys.add(cache_key)
-
-    cache[
-        "__playlist_keys"
-    ] = sorted(playlist_keys)
-
-    cache[
-        "__playlist_uris"
-    ] = sorted(playlist_uris)
-
-    cache[
-        "__playlist_isrcs"
-    ] = sorted(playlist_isrcs)
-
-    cache[
-        "__spotify_uri_isrc"
-    ] = spotify_uri_isrc
-
-    cache[
-        "__playlist_isrc_cache_ready"
-    ] = True
-
-    save_cache(cache)
-
-    # Uit live queue verwijderen.
-    live_queue.pop(0)
-
-    seen.add(cache_key)
-    save_seen(seen)
-
-    with open(live_queue_file, "w") as f:
-        json.dump(
-            live_queue,
-            f,
-            indent=2,
-            ensure_ascii=False
-        )
-
-    save_cache(cache)
-
-    print()
-    print(
-        f"📋 {len(live_queue)} nummers "
-        "in live queue."
-    )
-
-    print(
-        f"🔎 Spotify Search gebruikt: "
-        f"{searches_used}/{MAX_SEARCHES_PER_RUN}"
-    )
 
 
 # =========================
