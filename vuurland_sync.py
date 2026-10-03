@@ -43,6 +43,10 @@ ARTIST_ALIASES = {
     "delvis": [
         "delv!s",
     ],
+    "cat stevens": [
+        "Yusuf / Cat Stevens",
+    ],
+
 }
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
@@ -975,6 +979,10 @@ def find_spotify_track(
             "angélique kidjo",
             "salala (w/ peter gabriel)",
         ): "spotify:track:1AwNQDoTIfpJ2GxwRvyPUN",
+        (
+            "david bowie",
+            "changes",
+        ): "spotify:track:0LrwgdLsFaWh9VXIjBRe8t",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2921,6 +2929,10 @@ def sync():
             (
                 "angélique kidjo",
                 "salala (w/ peter gabriel)",
+            ),
+            (
+                "david bowie",
+                "changes",
             ),
         }
 
