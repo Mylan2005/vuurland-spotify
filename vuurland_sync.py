@@ -955,6 +955,14 @@ def find_spotify_track(
             "the flaming lips",
             "do you realise",
         ): "spotify:track:2DFRFqWNahKtFD112H2iEZ",
+
+        # Vuurland bedoelt de gewone albumversie van Exile.
+        # Zet die exact vast zodat een andere Spotify-catalogusversie
+        # niet opnieuw uit de positieve cache kan worden gebruikt.
+        (
+            "taylor swift feat bon iver",
+            "exile",
+        ): "spotify:track:4pvb0WLRcMtbPGmtejJJ6y",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2224,7 +2232,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 13
+    MATCHING_RULES_VERSION = 14
 
     if cache.get(
         "__matching_rules_version"
@@ -2235,6 +2243,7 @@ def sync():
             "pinback|||loro",
             "ise|||ik reis door de nacht (live)",
             "the flaming lips|||do you realise",
+            "taylor swift feat bon iver|||exile",
         }
 
         removed_bad_cache_keys = []
@@ -2793,6 +2802,10 @@ def sync():
         (
             "the flaming lips",
             "do you realise",
+        ),
+        (
+            "taylor swift feat bon iver",
+            "exile",
         ),
     }
 
