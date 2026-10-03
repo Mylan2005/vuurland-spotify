@@ -2841,6 +2841,32 @@ def sync():
             save_cache(cache)
             continue
 
+        # Expliciet overslaan:
+        # RadioBox levert deze klassieke titel afgekapt/ambigu aan.
+        # Niet zoeken, om geen willekeurige uitvoering toe te voegen.
+        if (
+            normalize_match(artist) == "edvard grieg"
+            and normalize_match(title).startswith(
+                "morning mood allegretto pas"
+            )
+        ):
+            print(
+                f"⏭️ Bewust overgeslagen: {artist} - {title}"
+            )
+
+            live_queue.pop(0)
+
+            with open(live_queue_file, "w") as f:
+                json.dump(
+                    live_queue,
+                    f,
+                    indent=2,
+                    ensure_ascii=False
+                )
+
+            save_cache(cache)
+            continue
+
         cache_key = (
             f"{normalize_match(artist)}|||"
             f"{normalize_match(title)}"
