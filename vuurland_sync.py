@@ -47,6 +47,10 @@ ARTIST_ALIASES = {
         "Yusuf / Cat Stevens",
     ],
 
+    "bob marley": [
+        "Bob Marley & The Wailers",
+    ],
+
 }
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
