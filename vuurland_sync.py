@@ -970,6 +970,11 @@ def find_spotify_track(
             "taylor swift feat the national",
             "coney island",
         ): "spotify:track:3k7ne7VmH43ZPWxPdvPUgR",
+
+        (
+            "angélique kidjo",
+            "salala (w/ peter gabriel)",
+        ): "spotify:track:1AwNQDoTIfpJ2GxwRvyPUN",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2912,6 +2917,10 @@ def sync():
             (
                 "taylor swift feat the national",
                 "coney island",
+            ),
+            (
+                "angélique kidjo",
+                "salala (w/ peter gabriel)",
             ),
         }
 
