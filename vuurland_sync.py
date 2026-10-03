@@ -963,6 +963,23 @@ def find_spotify_track(
             "taylor swift feat bon iver",
             "exile",
         ): "spotify:track:4pvb0WLRcMtbPGmtejJJ6y",
+
+        (
+            "francis and the lights feat bon iver & kanye west",
+            "friends",
+        ): "spotify:track:0ZpBPavoID3eDbaXKSWpAD",
+
+        (
+            "lana del rey",
+            "young & beautiful",
+        ): "spotify:track:2nMeu6UenVvwUktBCpLMK9",
+
+        # RadioBox: "Crosses (Bibio remix)"
+        # Spotify:  "Crosses - Bibio Rework"
+        (
+            "jose gonzalez",
+            "crosses (bibio remix)",
+        ): "spotify:track:2heQS09dKKuGiJqyKApAWz",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2232,7 +2249,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 14
+    MATCHING_RULES_VERSION = 15
 
     if cache.get(
         "__matching_rules_version"
@@ -2806,6 +2823,18 @@ def sync():
         (
             "taylor swift feat bon iver",
             "exile",
+        ),
+        (
+            "francis and the lights feat bon iver & kanye west",
+            "friends",
+        ),
+        (
+            "lana del rey",
+            "young & beautiful",
+        ),
+        (
+            "jose gonzalez",
+            "crosses (bibio remix)",
         ),
     }
 
