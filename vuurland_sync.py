@@ -980,6 +980,11 @@ def find_spotify_track(
             "jose gonzalez",
             "crosses (bibio remix)",
         ): "spotify:track:2heQS09dKKuGiJqyKApAWz",
+
+        (
+            "taylor swift feat the national",
+            "coney island",
+        ): "spotify:track:3k7ne7VmH43ZPWxPdvPUgR",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2249,7 +2254,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 15
+    MATCHING_RULES_VERSION = 16
 
     if cache.get(
         "__matching_rules_version"
@@ -2835,6 +2840,10 @@ def sync():
         (
             "jose gonzalez",
             "crosses (bibio remix)",
+        ),
+        (
+            "taylor swift feat the national",
+            "coney island",
         ),
     }
 
