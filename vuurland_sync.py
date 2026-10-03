@@ -2212,16 +2212,24 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 11
+    MATCHING_RULES_VERSION = 12
 
     if cache.get(
         "__matching_rules_version"
     ) != MATCHING_RULES_VERSION:
 
-        cache.pop(
+        bad_positive_cache_keys = {
             "sufjan stevens|||love yourself",
-            None
-        )
+            "pinback|||loro",
+            "ise|||ik reis door de nacht (live)",
+        }
+
+        removed_bad_cache_keys = []
+
+        for bad_key in bad_positive_cache_keys:
+            if bad_key in cache:
+                cache.pop(bad_key, None)
+                removed_bad_cache_keys.append(bad_key)
 
         cache[
             "__matching_rules_version"
@@ -2229,9 +2237,11 @@ def sync():
 
         save_cache(cache)
 
-        print(
-            "🧹 Oude Sufjan matching-cache verwijderd."
-        )
+        if removed_bad_cache_keys:
+            print(
+                "🧹 Oude foutieve matching-cache verwijderd: "
+                + ", ".join(sorted(removed_bad_cache_keys))
+            )
 
     queued_keys = {
         f"{normalize_match(item.get('artist', ''))}|||"
