@@ -51,6 +51,22 @@ ARTIST_ALIASES = {
         "Bob Marley & The Wailers",
     ],
 
+    "the rascals": [
+        "The Young Rascals",
+    ],
+
+    "charlie hunter quartet": [
+        "Charlie Hunter",
+    ],
+
+    "the pretenders": [
+        "Pretenders",
+    ],
+
+    "novastar piet goddaer": [
+        "Novastar",
+    ],
+
 }
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
@@ -987,6 +1003,40 @@ def find_spotify_track(
             "david bowie",
             "changes",
         ): "spotify:track:0LrwgdLsFaWh9VXIjBRe8t",
+
+        # RadioBox-spelfout:
+        # "Kalipono Slack Key"
+        #
+        # Spotify:
+        # "Kaliponi Slack Key"
+        (
+            "keola & kapono beamer",
+            "kalipono slack key",
+        ): "spotify:track:7F6WQ31PmRgZ6JeDxnfXaP",
+
+        # RadioBox:
+        # The Pretenders - Back On The Chain Gang
+        #
+        # Spotify:
+        # Pretenders - Back on the Chain Gang - 2007 Remaster
+        (
+            "the pretenders",
+            "back on the chain gang",
+        ): "spotify:track:4cMHCRLPNoEbpnl2rz6GS9",
+        (
+            "pretenders",
+            "back on the chain gang",
+        ): "spotify:track:4cMHCRLPNoEbpnl2rz6GS9",
+
+        # RadioBox:
+        # Charlie Hunter Quartet - More Than This (w/ Norah Jones)
+        #
+        # De algemene matcher vond eerder een verkeerde Spotify-URI.
+        # Deze exacte opname is door ons handmatig bevestigd.
+        (
+            "charlie hunter quartet",
+            "more than this (w/ norah jones)",
+        ): "spotify:track:5d8L73s2DVUlIi4KENcxeO",
     }
 
     known_uri = known_uri_overrides.get(
@@ -1026,8 +1076,29 @@ def find_spotify_track(
     # De resultaten worden daarna nog steeds streng
     # gecontroleerd door de matchinglogica hieronder.
 
+    # RadioBox kan een featured artiest achter de titel zetten:
+    #
+    #   Sail Away (w/ Carl Broemel)
+    #   Suddenly (w/ Beatie Wolfe)
+    #   More Than This (w/ Norah Jones)
+    #   Sing Me to Sleep (w/ Neko Case)
+    #
+    # Dat stuk hoort bij de artiestenmetadata, niet bij de titel.
+    title_feature_match = re.search(
+        r"\s*\(?(?:feat\.?|ft\.?|featuring|w/)\s+"
+        r"([^\(\)\[\]]+?)\)?\s*$",
+        str(title or ""),
+        flags=re.IGNORECASE
+    )
+
+    title_feature_artist = (
+        title_feature_match.group(1).strip()
+        if title_feature_match
+        else None
+    )
+
     search_title = re.sub(
-        r"\s*\(?(?:feat\.?|ft\.?|featuring)\s+[^\(\)\[\]]+\)?\s*$",
+        r"\s*\(?(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$",
         "",
         title,
         flags=re.IGNORECASE
@@ -1069,10 +1140,7 @@ def find_spotify_track(
         search_title = "Everybody's Gotta Learn Sometime"
 
     search_artists = re.split(
-        r"\s+(?:feat\.?|ft\.?|featuring)\s+"
-        r"|\s*&\s*"
-        r"|\s+and\s+"
-        r"|\s*,\s*",
+        r"\s+(?:feat\.?|ft\.?|featuring|w/)\s+",
         artist,
         flags=re.IGNORECASE
     )
@@ -1131,9 +1199,18 @@ def find_spotify_track(
     #
     # De kandidaat wordt daarna verplicht door de
     # strenge matchinglogica hieronder gecontroleerd.
+    # Houd de artiest gericht, maar maak de titel geen exacte
+    # phrase-query. Zo kan Spotify ook kandidaten teruggeven bij
+    # kleine RadioBox-spelfouten zoals:
+    #
+    #   Kalipono Slack Key
+    #   Kaliponi Slack Key
+    #
+    # De uiteindelijke kandidaat moet hieronder nog steeds door
+    # alle strenge artiest-, titel- en versiecontroles.
     query = (
         f'artist:"{spotify_search_artist}" '
-        f'"{search_title}"'
+        f'{search_title}'
     )
 
     data = spotify_request(
@@ -1178,7 +1255,7 @@ def find_spotify_track(
         if spaced_title and spaced_title != search_title:
             fallback_query = (
                 f'artist:"{spotify_search_artist}" '
-                f'"{spaced_title}"'
+                f'{spaced_title}'
             )
 
             data = spotify_request(
@@ -1293,6 +1370,21 @@ def find_spotify_track(
             normalized
         )
 
+        # Spotify kan een structureel deelnummer voor de titel zetten:
+        #
+        #   Part One - Homecoming
+        #   Part 1 - Homecoming
+        #
+        # RadioBox kan alleen "Homecoming" tonen.
+        #
+        # Alleen een duidelijk "Part <nummer> -" prefix verwijderen.
+        normalized = re.sub(
+            r"^part\s+(?:one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s*[-:]\s*",
+            "",
+            normalized,
+            flags=re.IGNORECASE
+        ).strip()
+
         # Gecontroleerde titelvariant:
         # "Waltz nø2"
         # "Waltz No. 2"
@@ -1319,11 +1411,17 @@ def find_spotify_track(
     def artist_parts(value):
         value = normalize(value)
 
+        # &, "and" en komma's kunnen deel uitmaken van
+        # één officiële artiestennaam:
+        #
+        # Nick Cave & The Bad Seeds
+        # Angus & Julia Stone
+        # Crosby, Stills & Nash
+        # Emerson, Lake & Palmer
+        #
+        # Alleen expliciete feature-markers splitsen.
         parts = re.split(
-            r"\s+(?:feat\.?|ft\.?|featuring)\s+"
-            r"|\s*&\s*"
-            r"|\s+and\s+"
-            r"|\s*,\s*",
+            r"\s+(?:feat\.?|ft\.?|featuring|w/)\s+",
             value
         )
 
@@ -1459,14 +1557,33 @@ def find_spotify_track(
 
     wanted_artists = artist_parts(artist)
 
+    # Een feature die achter de RadioBox-titel staat,
+    # hoort bij de Spotify-artiesten en moet aanwezig zijn.
+    if title_feature_artist:
+        normalized_title_feature = normalize(
+            title_feature_artist
+        )
+
+        if (
+            normalized_title_feature
+            and normalized_title_feature
+            not in wanted_artists
+        ):
+            wanted_artists.append(
+                normalized_title_feature
+            )
+
     # RadioBox vermeldt bij "Never Back Down":
     # "Novastar & Piet Goddaer".
     # Spotify catalogiseert de track onder Novastar.
     # Alleen voor deze expliciet bekende combinatie mag
     # Piet Goddaer als extra RadioBox-credit genegeerd worden.
     if (
-        wanted_artists == ["novastar", "piet goddaer"]
-        and wanted_title == "never back down"
+        wanted_title == "never back down"
+        and wanted_artists in (
+            ["novastar & piet goddaer"],
+            ["novastar", "piet goddaer"],
+        )
     ):
         wanted_artists = ["novastar"]
 
@@ -1538,6 +1655,26 @@ def find_spotify_track(
             for a in spotify_artists
         }
 
+        # De volledige RadioBox-credit kan één officiële
+        # artiestnaam zijn, maar Spotify kan echte collabs
+        # ook als meerdere artist objects teruggeven.
+        #
+        # Daarom vergelijken we veilig met beide vormen.
+        spotify_artist_match_compact = set(
+            spotify_artist_compact
+        )
+
+        if len(spotify_artists) > 1:
+            spotify_artist_match_compact.add(
+                compact(" & ".join(spotify_artists))
+            )
+            spotify_artist_match_compact.add(
+                compact(", ".join(spotify_artists))
+            )
+            spotify_artist_match_compact.add(
+                compact(" and ".join(spotify_artists))
+            )
+
         # =============================================
         # ARTIEST MOET STERK KLIPPEN
         # =============================================
@@ -1560,13 +1697,58 @@ def find_spotify_track(
                 primary_wanted_artist,
                 spotify_artist
             ).ratio()
-            for spotify_artist in spotify_artist_compact
+            for spotify_artist
+            in spotify_artist_match_compact
         )
 
         primary_artist_exact = any(
             primary_wanted_artist == spotify_artist
-            for spotify_artist in spotify_artist_compact
+            for spotify_artist
+            in spotify_artist_match_compact
         )
+
+        # "The" aan het begin van een artiestennaam is vaak
+        # alleen een catalogusverschil:
+        #
+        #   The Pretenders <-> Pretenders
+        #
+        # Alleen het volledige eerste woord "the" negeren.
+        # De rest van de artiestennaam moet nog steeds streng kloppen.
+        def without_leading_the(value):
+            normalized_value = normalize(value)
+
+            if normalized_value.startswith("the "):
+                normalized_value = normalized_value[4:]
+
+            return compact(normalized_value)
+
+        wanted_without_the = without_leading_the(
+            wanted_artists[0]
+        )
+
+        spotify_without_the = {
+            without_leading_the(spotify_artist)
+            for spotify_artist in spotify_artists
+            if spotify_artist
+        }
+
+        if spotify_without_the:
+            the_artist_score = max(
+                SequenceMatcher(
+                    None,
+                    wanted_without_the,
+                    spotify_artist
+                ).ratio()
+                for spotify_artist in spotify_without_the
+            )
+
+            primary_artist_score = max(
+                primary_artist_score,
+                the_artist_score
+            )
+
+            if wanted_without_the in spotify_without_the:
+                primary_artist_exact = True
 
         # Een expliciet bekende naamswijziging mag de oude
         # artiestnaam koppelen aan de actuele Spotify-naam.
@@ -1693,7 +1875,7 @@ def find_spotify_track(
         # moet ook kunnen matchen met Spotify:
         # "Time Moves Slow"
         wanted_title_for_match = re.sub(
-            r"(?:\s+\(?(?:feat\.?|ft\.?|featuring)\s+[^\(\)\[\]]+\)?\s*$)",
+            r"(?:\s+\(?(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$)",
             "",
             wanted_title,
             flags=re.IGNORECASE
@@ -2098,8 +2280,11 @@ def normalize_radio_artists(artist_text):
 
     text = normalize_match(artist_text)
 
+    # &, "and" en komma's kunnen deel uitmaken van één
+    # officiële artiestennaam. Alleen echte feature-markers
+    # worden hier opgesplitst.
     parts = re.split(
-        r"\s+(?:feat\.?|ft\.?)\s+|\s*&\s*|\s+and\s+|\s*,\s*",
+        r"\s+(?:feat\.?|ft\.?|featuring|w/)\s+",
         text
     )
 
@@ -2119,6 +2304,8 @@ def radio_matches_playlist(
     Controleer lokaal of een Vuurland-track
     al in de Spotify-playlist voorkomt.
     """
+
+    import re
 
     def compact_artist(value):
         normalized = normalize_match(value)
@@ -2142,7 +2329,30 @@ def radio_matches_playlist(
             normalized.split()
         )
 
-    title_key = normalize_match(title)
+    title_feature_match = re.search(
+        r"\s*\(?(?:feat\.?|ft\.?|featuring|w/)\s+"
+        r"([^\(\)\[\]]+?)\)?\s*$",
+        str(title or ""),
+        flags=re.IGNORECASE
+    )
+
+    playlist_feature_artist = (
+        title_feature_match.group(1).strip()
+        if title_feature_match
+        else None
+    )
+
+    playlist_match_title = re.sub(
+        r"\s*\(?(?:feat\.?|ft\.?|featuring|w/)\s+"
+        r"[^\(\)\[\]]+?\)?\s*$",
+        "",
+        str(title or ""),
+        flags=re.IGNORECASE
+    ).strip()
+
+    title_key = normalize_match(
+        playlist_match_title
+    )
 
     # Kleine RadioBox/Spotify-schrijfvariant:
     # "Waltz nø2" = "Waltz No. 2"
@@ -2160,6 +2370,20 @@ def radio_matches_playlist(
         for artist in radio_artists
         if normalize_match(artist)
     ]
+
+    if playlist_feature_artist:
+        normalized_playlist_feature = normalize_match(
+            playlist_feature_artist
+        )
+
+        if (
+            normalized_playlist_feature
+            and normalized_playlist_feature
+            not in radio_artists
+        ):
+            radio_artists.append(
+                normalized_playlist_feature
+            )
 
     if not radio_artists or not title_key:
         return False
@@ -2841,6 +3065,58 @@ def sync():
             save_cache(cache)
             continue
 
+        # Door Mylan gecontroleerd: deze tracks zijn niet
+        # beschikbaar op Spotify.
+        #
+        # Geen Search gebruiken en geen vervangende opname raden.
+        permanent_skip_tracks = {
+            (
+                "1 giant leap",
+                "the way you dream",
+            ),
+            (
+                "vision thing",
+                "barcode",
+            ),
+            (
+                "elliot easton",
+                "walk on walden",
+            ),
+            (
+                "tracy chapman",
+                "three little birds live",
+            ),
+            (
+                "alison krauss & union station",
+                "lie awake",
+            ),
+        }
+
+        normalized_skip_key = (
+            normalize_match(artist),
+            normalize_match(title),
+        )
+
+        if normalized_skip_key in permanent_skip_tracks:
+            print(
+                f"⏭️ Bewust overgeslagen "
+                f"(niet op Spotify): "
+                f"{artist} - {title}"
+            )
+
+            live_queue.pop(0)
+
+            with open(live_queue_file, "w") as f:
+                json.dump(
+                    live_queue,
+                    f,
+                    indent=2,
+                    ensure_ascii=False
+                )
+
+            save_cache(cache)
+            continue
+
         # Expliciet overslaan:
         # RadioBox levert deze klassieke titel afgekapt/ambigu aan.
         # Niet zoeken, om geen willekeurige uitvoering toe te voegen.
@@ -2963,6 +3239,22 @@ def sync():
             (
                 "david bowie",
                 "changes",
+            ),
+            (
+                "charlie hunter quartet",
+                "more than this (w/ norah jones)",
+            ),
+            (
+                "keola & kapono beamer",
+                "kalipono slack key",
+            ),
+            (
+                "the pretenders",
+                "back on the chain gang",
+            ),
+            (
+                "pretenders",
+                "back on the chain gang",
             ),
         }
 
