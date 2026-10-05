@@ -1059,6 +1059,24 @@ def find_spotify_track(
     import unicodedata
     from difflib import SequenceMatcher
 
+    # RadioBox kan uitzonderlijk artiest en titel omdraaien.
+    # Een veilige generieke indicatie is: het "artiest"-veld draagt een
+    # duidelijke versie-aanduiding, terwijl het "titel"-veld een expliciete
+    # featuring-credit bevat (zoals Nothing New / Taylor Swift feat...).
+    if (
+        re.search(
+            r"\b(?:taylor'?s\s+version|from\s+the\s+vault|remaster(?:ed)?|radio\s+edit|live)\b",
+            str(artist or ""),
+            flags=re.IGNORECASE
+        )
+        and re.search(
+            r"\b(?:feat\.?|ft\.?|featuring)\b",
+            str(title or ""),
+            flags=re.IGNORECASE
+        )
+    ):
+        artist, title = title, artist
+
     # =============================================
     # SPOTIFY SEARCH-TERM VOORBEREIDEN
     # =============================================
@@ -1208,9 +1226,13 @@ def find_spotify_track(
     #
     # De uiteindelijke kandidaat moet hieronder nog steeds door
     # alle strenge artiest-, titel- en versiecontroles.
-    query = (
-        f'artist:"{spotify_search_artist}" '
-        f'{search_title}'
+    # Eén brede Spotify Search per track.  De zoekopdracht zelf mag
+    # tolerant zijn; de lokale kandidaatcontrole hieronder blijft streng.
+    # Geen harde artist:-filter: die blokkeerde geldige catalogusvarianten
+    # zoals J.S. Ondara -> Ondara en album/project-credits.
+    query = " ".join(
+        part for part in (search_title, spotify_search_artist)
+        if str(part or "").strip()
     )
 
     data = spotify_request(
@@ -1219,9 +1241,7 @@ def find_spotify_track(
         params={
             "q": query,
             "type": "track",
-            # Spotify Search ondersteunt maximaal 10 resultaten.
-            # De kandidaatselectie hieronder blijft streng.
-            "limit": 10
+            "limit": 50
         }
     )
 
@@ -1232,49 +1252,6 @@ def find_spotify_track(
         "items",
         []
     )
-
-    # Kleine Spotify Search-fallback:
-    # sommige officiële Spotify-titels worden anders gespeld,
-    # bijvoorbeeld:
-    #
-    # RadioBox: "Speyside"
-    # Spotify:  "S P E Y S I D E"
-    #
-    # Alleen wanneer de eerste zoekopdracht helemaal niets
-    # oplevert, proberen we een gespatieerde lettervariant.
-    #
-    # De bestaande strenge kandidaatmatching blijft daarna
-    # volledig verantwoordelijk voor de uiteindelijke match.
-    if not items:
-        spaced_title = " ".join(
-            char
-            for char in search_title
-            if char.isalnum()
-        )
-
-        if spaced_title and spaced_title != search_title:
-            fallback_query = (
-                f'artist:"{spotify_search_artist}" '
-                f'{spaced_title}'
-            )
-
-            data = spotify_request(
-                "GET",
-                "/search",
-                params={
-                    "q": fallback_query,
-                    "type": "track",
-                    "limit": 10
-                }
-            )
-
-            items = data.get(
-                "tracks",
-                {}
-            ).get(
-                "items",
-                []
-            )
 
     def normalize(value):
         value = str(value or "").lower().strip()
@@ -1294,6 +1271,10 @@ def find_spotify_track(
         value = value.replace("–", "-")
         value = value.replace("—", "-")
         value = value.replace("+", " ")
+
+        # Catalogi wisselen vaak tussen "&" en "and".  Behandel die
+        # schrijfwijzen als gelijk zonder artiestennamen op te splitsen.
+        value = re.sub(r"\s*&\s*", " and ", value)
 
         # Spotify gebruikt soms gestileerde tekens in titels
         # die door de radiofeed als vraagtekens binnenkomen.
@@ -1487,12 +1468,31 @@ def find_spotify_track(
 
     def title_base(value):
         """
-        Verwijder bekende versie-aanduidingen van het einde
-        van een Spotify-titel.
+        Verwijder bekende versie-/credit-aanduidingen van een titel.
 
-        Onbekende varianten blijven onderdeel van de titel.
+        RadioBox en Spotify plaatsen featuring-credits, catalogusversies
+        en "From The Vault" niet altijd in hetzelfde veld.
         """
-        value = normalize(value)
+        raw_value = str(value or "").strip()
+
+        # Featuring-credit in de officiële Spotify-titel hoort niet bij
+        # de muzikale kerntitel; de artiestenmetadata wordt apart getest.
+        raw_value = re.sub(
+            r"\s*\((?:feat\.?|ft\.?|featuring)\s+[^)]*\)",
+            "",
+            raw_value,
+            flags=re.IGNORECASE
+        )
+
+        # Cataloguslabels die dezelfde opname/titel beschrijven.
+        raw_value = re.sub(
+            r"\s*\((?:[^)]*?\s+version|from\s+the\s+vault)\)",
+            "",
+            raw_value,
+            flags=re.IGNORECASE
+        )
+
+        value = normalize(raw_value)
 
         # Officiële film-/soundtracktoevoeging.
         motion_picture_pattern = re.compile(
@@ -1551,6 +1551,31 @@ def find_spotify_track(
                 break
 
         return value
+
+    def title_extension_bases(value):
+        """
+        Mogelijke veilige kerntitels van een officiële Spotify-titel.
+
+        RadioBox laat geregeld verklarende Spotify-suffixen weg, bv.:
+        "Can't Catch Me Now" -> "... - From The Hunger Games..."
+        "Redemption Song" -> "... - Bob Marley: One Love ..."
+        "America" -> "America (What's This Idea)"
+
+        We verwijderen hier alleen een duidelijk afgescheiden suffix.
+        De artiestcontrole en ambiguïteitsranking blijven actief.
+        """
+        raw = str(value or "").strip()
+        bases = {title_base(raw)}
+
+        # Duidelijk afgescheiden officiële toelichting.
+        for pattern in (r"\s+-\s+", r"\s+\(", r"\s+\["):
+            parts = re.split(pattern, raw, maxsplit=1)
+            if len(parts) == 2 and parts[0].strip():
+                bases.add(normalize(parts[0]))
+                bases.add(title_base(parts[0]))
+
+        return {base for base in bases if base}
+
     wanted_title = normalize(title)
     wanted_title_base = title_base(title)
     wanted_version = requested_version(title)
@@ -1765,8 +1790,44 @@ def find_spotify_track(
             primary_artist_score = 1.0
             primary_artist_exact = True
 
+        # RadioBox gebruikt soms een vroegere groepsnaam/projectcredit,
+        # terwijl Spotify alleen de huidige/verkorte artiest toont.
+        # Voorbeelden uit de echte logs:
+        #   J.S. Ondara -> Ondara
+        #   Liz Cooper & The Stampede -> Liz Cooper
+        #   Stevie Ray Vaughan and Double Trouble -> Stevie Ray Vaughan
+        # Dit is GEEN vrije fuzzy match: één volledige naam moet duidelijk
+        # in de andere vervat zitten en minstens 6 tekens lang zijn.
+        primary_artist_contained = any(
+            min(len(primary_wanted_artist), len(spotify_artist)) >= 6
+            and (
+                primary_wanted_artist in spotify_artist
+                or spotify_artist in primary_wanted_artist
+            )
+            for spotify_artist in spotify_artist_match_compact
+        )
+
+        if primary_artist_contained:
+            primary_artist_score = max(primary_artist_score, 0.94)
+
+        # Soms zet RadioBox de album-/projectnaam in het artiestveld.
+        # Alleen een exacte albumnaam mag zo de artiestcontrole redden;
+        # de titel moet verderop nog steeds sterk/exact overeenkomen.
+        album_name = normalize(
+            (item.get("album") or {}).get("name", "")
+        )
+        album_as_artist_match = bool(
+            album_name
+            and compact(album_name) == primary_wanted_artist
+        )
+
+        if album_as_artist_match:
+            primary_artist_score = max(primary_artist_score, 0.97)
+
         if (
             not primary_artist_exact
+            and not primary_artist_contained
+            and not album_as_artist_match
             and primary_artist_score < 0.90
         ):
             continue
@@ -1793,14 +1854,15 @@ def find_spotify_track(
             ):
                 matched_feature_count += 1
 
-        # Een expliciete RadioBox-featuring mag niet verdwijnen
-        # in een Spotify-kandidaat zonder die featured artiest.
-        if (
-            wanted_artist_compact[1:]
-            and matched_feature_count
-            < len(wanted_artist_compact) - 1
-        ):
-            continue
+        # Een RadioBox-feature is sterke bevestiging, maar Spotify kan
+        # dezelfde opname soms alleen onder de hoofdartiest catalogiseren.
+        # Daarom is een ontbrekende feature geen harde afwijzing meer.
+        # De kandidaat krijgt hieronder wel minder score dan een versie
+        # waarop de genoemde gastartiest daadwerkelijk aanwezig is.
+        missing_feature_count = max(
+            0,
+            (len(wanted_artist_compact) - 1) - matched_feature_count
+        )
 
         # =============================================
         # TITEL CONTROLEREN
@@ -1814,7 +1876,7 @@ def find_spotify_track(
             continue
 
         spotify_title_base = title_base(
-            spotify_title
+            item.get("name", "")
         )
 
         spotify_version = requested_version(
@@ -1877,7 +1939,7 @@ def find_spotify_track(
         wanted_title_for_match = re.sub(
             r"(?:\s+\(?(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$)",
             "",
-            wanted_title,
+            search_title,
             flags=re.IGNORECASE
         ).strip()
 
@@ -1909,13 +1971,27 @@ def find_spotify_track(
             spotify_title_base
         )
 
+        spotify_extension_compacts = {
+            title_compact(base)
+            for base in title_extension_bases(item.get("name", ""))
+            if base
+        }
+
+        extension_title_match = (
+            wanted_base_compact in spotify_extension_compacts
+        )
+
         # Exacte titel.
         if spotify_compact == wanted_compact:
             title_score = 1.0
 
-        # Exacte basistitel na versie-aanduiding.
+        # Exacte basistitel na bekende versie-aanduiding.
         elif spotify_base_compact == wanted_base_compact:
             title_score = 0.99
+
+        # RadioBox kan een officiële verklarende suffix weglaten.
+        elif extension_title_match:
+            title_score = 0.985
 
         else:
             title_score = SequenceMatcher(
@@ -1923,6 +1999,24 @@ def find_spotify_track(
                 wanted_base_compact,
                 spotify_base_compact
             ).ratio()
+
+            # Gecontroleerde rescue voor duidelijke RadioBox-metadatafouten:
+            # minstens drie opeenvolgende beginwoorden moeten gelijk zijn.
+            # Alleen bruikbaar samen met een zeer sterke artiestmatch.
+            wanted_words = wanted_title_base_for_match.split()
+            spotify_words = spotify_title_base.split()
+            shared_prefix_words = 0
+            for left, right in zip(wanted_words, spotify_words):
+                if left != right:
+                    break
+                shared_prefix_words += 1
+
+            if (
+                shared_prefix_words >= 3
+                and primary_artist_score >= 0.97
+                and min(len(wanted_words), len(spotify_words)) >= 4
+            ):
+                title_score = max(title_score, 0.905)
 
         # Harde veiligheidsgrens voor vrije fuzzy matches.
         #
@@ -1939,6 +2033,7 @@ def find_spotify_track(
         if (
             spotify_compact != wanted_compact
             and spotify_base_compact != wanted_base_compact
+            and not extension_title_match
             and title_score < 0.90
         ):
             continue
@@ -1966,6 +2061,17 @@ def find_spotify_track(
 
         elif spotify_base_compact == wanted_base_compact:
             candidate_score += 0.99
+
+        elif extension_title_match:
+            candidate_score += 0.97
+
+        if album_as_artist_match:
+            candidate_score += 0.20
+
+        if primary_artist_contained and not primary_artist_exact:
+            candidate_score += 0.08
+
+        candidate_score -= missing_feature_count * 0.08
 
         # =============================================
         # VERSIEVOORKEUR
@@ -2033,6 +2139,17 @@ def find_spotify_track(
             ),
             reverse=True
         )
+
+        # Als twee verschillende opnames praktisch gelijk scoren en de
+        # beste kandidaat niet minstens een exacte/zeer sterke match is,
+        # liever overslaan dan gokken.
+        if (
+            len(candidates) > 1
+            and candidates[0][2] != candidates[1][2]
+            and abs(candidates[0][0] - candidates[1][0]) < 0.015
+            and candidates[0][0] < 2.40
+        ):
+            return None
 
         LAST_SPOTIFY_MATCH_ISRC = candidates[0][3]
         return candidates[0][2]
