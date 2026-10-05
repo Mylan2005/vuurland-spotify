@@ -1241,7 +1241,7 @@ def find_spotify_track(
         params={
             "q": query,
             "type": "track",
-            "limit": 50
+            "limit": 10
         }
     )
 
