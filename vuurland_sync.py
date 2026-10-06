@@ -1361,21 +1361,22 @@ def find_spotify_track(
     )
 
     # ---------------------------------------------------------
-    # ZELDZAME SPACED-LETTER SEARCH RESCUE
+    # ALGEMENE STRUCTURELE SEARCH-RESCUE
     # ---------------------------------------------------------
-    # Spotify catalogiseert sommige titels bewust als losse letters:
+    # De eerste Spotify Search blijft breed en goedkoop. Alleen wanneer de
+    # top-10 geen kandidaat bevat die zowel qua artiest als qua titelvorm
+    # plausibel is, doen we maximaal EEN extra gerichte Search.
     #
-    #   RadioBox : Speyside
-    #   Spotify  : S P E Y S I D E
+    # Die rescue is bedoeld voor catalogus-vormverschillen, niet voor fuzzy
+    # gokken. Voorbeelden:
+    #   Speyside <-> S P E Y S I D E
+    #   Yemanja  <-> Iemanja
+    #   veelgebruikte titel + juiste artiest (Holding on to You)
     #
-    # De lokale matcher kon zulke titels al veilig als identiek zien,
-    # maar de gewone Spotify Search hoeft die kandidaat niet in de top-10
-    # te zetten. Daarom doen we ALLEEN voor een lange enkelwoordtitel een
-    # tweede search wanneer de eerste resultaten nergens exact dezelfde
-    # letters opleveren. Dit is geen fuzzy rescue: letters moeten exact
-    # gelijk zijn en alle normale artiest-/titel-/versiegates blijven actief.
-    def search_letter_identity(value):
-        raw = str(value or "").casefold()
+    # De uiteindelijke kandidaatselectie hieronder blijft onaangeraakt en
+    # controleert nog steeds streng artiest, kerntitel, versie en ambiguiteit.
+    def search_identity(value):
+        raw = str(value or "").casefold().replace("’", "'")
         raw = unicodedata.normalize("NFKD", raw)
         raw = "".join(
             char for char in raw
@@ -1383,63 +1384,183 @@ def find_spotify_track(
         )
         return "".join(char for char in raw if char.isalnum())
 
-    plain_search_title = str(search_query_title or "").strip()
-    plain_title_tokens = re.findall(r"[\w]+", plain_search_title, flags=re.UNICODE)
-    plain_title_identity = search_letter_identity(plain_search_title)
-
-    spaced_letter_rescue_allowed = (
-        len(plain_title_tokens) == 1
-        and 6 <= len(plain_title_identity) <= 24
-        and plain_title_identity.isalnum()
-    )
-
-    first_search_has_same_letters = any(
-        search_letter_identity(item.get("name", "")) == plain_title_identity
-        for item in items
-        if item.get("name")
-    )
-
-    if spaced_letter_rescue_allowed and not first_search_has_same_letters:
-        spaced_title = " ".join(list(plain_title_identity.upper()))
-        rescue_query = " ".join(
-            part for part in (artist_hint, spaced_title)
-            if str(part or "").strip()
+    def search_words(value):
+        raw = str(value or "").casefold().replace("’", "'")
+        raw = unicodedata.normalize("NFKD", raw)
+        raw = "".join(
+            char for char in raw
+            if not unicodedata.combining(char)
         )
+        raw = re.sub(r"[^a-z0-9']+", " ", raw)
+        return [part for part in raw.split() if part]
 
-        rescue_data = spotify_request(
-            "GET",
-            "/search",
-            params={
-                "q": rescue_query,
-                "type": "track",
-                "limit": 10
-            }
-        )
+    def search_title_structural_equivalent(left, right):
+        left_id = search_identity(left)
+        right_id = search_identity(right)
+        if left_id and left_id == right_id:
+            return True
 
-        rescue_items = rescue_data.get(
-            "tracks",
-            {}
-        ).get(
-            "items",
-            []
-        )
+        left_words = search_words(left)
+        right_words = search_words(right)
+        if left_words == right_words and left_words:
+            return True
 
-        # Voeg alleen nieuwe Spotify-track-ID's toe. De kandidaatselectie
-        # hieronder blijft volledig identiek en beslist nog steeds streng.
-        seen_item_ids = {
-            item.get("id")
-            for item in items
-            if item.get("id")
+        # Eén optioneel "the" mag ontbreken.
+        if abs(len(left_words) - len(right_words)) == 1:
+            longer, shorter = (
+                (left_words, right_words)
+                if len(left_words) > len(right_words)
+                else (right_words, left_words)
+            )
+            for i, token in enumerate(longer):
+                if token == "the" and longer[:i] + longer[i + 1:] == shorter:
+                    return True
+
+        # Eén veilig voorzetsel vooraan, bv. My Secret Life / In My Secret Life.
+        if abs(len(left_words) - len(right_words)) == 1:
+            longer, shorter = (
+                (left_words, right_words)
+                if len(left_words) > len(right_words)
+                else (right_words, left_words)
+            )
+            if (
+                len(shorter) >= 3
+                and longer[0] in {"in", "on", "at", "from", "to"}
+                and longer[1:] == shorter
+            ):
+                return True
+
+        # Zeer smalle Y/I/J-transliteratie aan het begin van één lang woord.
+        if (
+            len(left_words) == 1
+            and len(right_words) == 1
+            and len(left_id) >= 6
+            and len(left_id) == len(right_id)
+            and left_id[1:] == right_id[1:]
+            and left_id[:1] != right_id[:1]
+            and {left_id[:1], right_id[:1]} <= {"y", "i", "j"}
+        ):
+            return True
+
+        return False
+
+    def search_artist_plausible(item):
+        candidate_names = [
+            str(obj.get("name", ""))
+            for obj in item.get("artists", [])
+            if obj.get("name")
+        ]
+        if not candidate_names:
+            return False
+
+        wanted_names = {
+            str(primary_search_artist or ""),
+            str(spotify_search_artist or ""),
         }
-        for rescue_item in rescue_items:
-            rescue_id = rescue_item.get("id")
-            if rescue_id and rescue_id in seen_item_ids:
-                continue
-            items.append(rescue_item)
-            if rescue_id:
-                seen_item_ids.add(rescue_id)
+        wanted_names.update(str(alias) for alias in search_artist_aliases)
 
-        print(f"🧪 Spotify spaced-letter rescue-query: {rescue_query}")
+        wanted_ids = {search_identity(name) for name in wanted_names if name}
+        candidate_ids = {search_identity(name) for name in candidate_names if name}
+
+        # Ook de gecombineerde officiële Spotify-artist objects meenemen.
+        if len(candidate_names) > 1:
+            candidate_ids.add(search_identity(" and ".join(candidate_names)))
+
+        for wanted_id in wanted_ids:
+            if not wanted_id:
+                continue
+            for candidate_id in candidate_ids:
+                if not candidate_id:
+                    continue
+                if wanted_id == candidate_id:
+                    return True
+                # Alleen om te beslissen OF een rescue nodig is; dit accepteert
+                # zelf nooit een track. Kleine catalogusspelling mag dus een
+                # onnodige tweede Search voorkomen.
+                if SequenceMatcher(None, wanted_id, candidate_id).ratio() >= 0.94:
+                    return True
+        return False
+
+    first_search_has_plausible_match = any(
+        search_artist_plausible(item)
+        and search_title_structural_equivalent(
+            search_title,
+            item.get("name", "")
+        )
+        for item in items
+    )
+
+    if not first_search_has_plausible_match:
+        title_words_for_rescue = search_words(search_query_title)
+        title_id_for_rescue = search_identity(search_query_title)
+        rescue_title = search_query_title
+        rescue_reason = "focused artist+track"
+
+        # Lange enkelwoordtitels krijgen een structurele catalogusvariant.
+        if (
+            len(title_words_for_rescue) == 1
+            and 6 <= len(title_id_for_rescue) <= 24
+        ):
+            first = title_id_for_rescue[:1]
+            transliteration_map = {"y": "i", "j": "i", "i": "y"}
+            if first in transliteration_map:
+                rescue_title = (
+                    transliteration_map[first]
+                    + title_id_for_rescue[1:]
+                )
+                rescue_reason = "initial transliteration"
+            else:
+                rescue_title = " ".join(title_id_for_rescue.upper())
+                rescue_reason = "spaced-letter title"
+
+        # Spotify ondersteunt artist: en track: als officiële Search-filters.
+        # We gebruiken die alleen als tweede kans; de eerste brede Search
+        # blijft nodig voor aliases, projectcredits en afwijkende metadata.
+        rescue_artist = str(spotify_search_artist or primary_search_artist or "").strip()
+        rescue_query = " ".join(
+            part for part in (
+                f"track:{rescue_title}" if rescue_title else "",
+                f"artist:{rescue_artist}" if rescue_artist else "",
+            )
+            if part
+        )
+
+        if rescue_query and rescue_query != query:
+            rescue_data = spotify_request(
+                "GET",
+                "/search",
+                params={
+                    "q": rescue_query,
+                    "type": "track",
+                    "limit": 10
+                }
+            )
+
+            rescue_items = rescue_data.get(
+                "tracks",
+                {}
+            ).get(
+                "items",
+                []
+            )
+
+            seen_item_ids = {
+                item.get("id")
+                for item in items
+                if item.get("id")
+            }
+            for rescue_item in rescue_items:
+                rescue_id = rescue_item.get("id")
+                if rescue_id and rescue_id in seen_item_ids:
+                    continue
+                items.append(rescue_item)
+                if rescue_id:
+                    seen_item_ids.add(rescue_id)
+
+            print(
+                "🧪 Spotify structurele rescue-query "
+                f"({rescue_reason}): {rescue_query}"
+            )
 
     def normalize(value):
         value = str(value or "").lower().strip()
@@ -3167,7 +3288,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 23
+    MATCHING_RULES_VERSION = 24
 
     if cache.get(
         "__matching_rules_version"
