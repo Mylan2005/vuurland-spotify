@@ -1604,6 +1604,37 @@ def find_spotify_track(
                 return True
         return False
 
+    def leading_preposition_equivalent(left, right):
+        """
+        Zeer beperkte rescue voor één ontbrekend kort voorzetsel vooraan.
+
+        Voorbeeld: "My Secret Life" <-> "In My Secret Life".
+        Alleen geldig als:
+        - één titel exact één extra eerste woord heeft;
+        - dat woord een kort voorzetsel is;
+        - de resterende woorden exact gelijk zijn;
+        - de kortere titel minstens 3 woorden bevat.
+
+        De caller vereist daarnaast een exacte primaire artiestmatch.
+        """
+        left_tokens = title_tokens_without_optional_the(left)
+        right_tokens = title_tokens_without_optional_the(right)
+
+        if len(left_tokens) == len(right_tokens):
+            return False
+
+        longer, shorter = (
+            (left_tokens, right_tokens)
+            if len(left_tokens) > len(right_tokens)
+            else (right_tokens, left_tokens)
+        )
+
+        if len(shorter) < 3 or len(longer) != len(shorter) + 1:
+            return False
+
+        safe_prefixes = {"in", "on", "at", "from", "to"}
+        return longer[0] in safe_prefixes and longer[1:] == shorter
+
     def initial_transliteration_equivalent(left, right):
         """
         Zeer smalle transliteratie-rescue voor lange éénwoordtitels.
@@ -2328,6 +2359,13 @@ def find_spotify_track(
                 wanted_title_base_for_match,
                 spotify_title_base
             )
+            or (
+                primary_artist_exact
+                and leading_preposition_equivalent(
+                    wanted_title_base_for_match,
+                    spotify_title_base
+                )
+            )
         )
 
         spotify_extension_compacts = {
@@ -3048,7 +3086,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 21
+    MATCHING_RULES_VERSION = 22
 
     if cache.get(
         "__matching_rules_version"
