@@ -1103,7 +1103,7 @@ def find_spotify_track(
     #
     # Dat stuk hoort bij de artiestenmetadata, niet bij de titel.
     title_feature_match = re.search(
-        r"\s*\(?(?:feat\.?|ft\.?|featuring|w/)\s+"
+        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+"
         r"([^\(\)\[\]]+?)\)?\s*$",
         str(title or ""),
         flags=re.IGNORECASE
@@ -1116,7 +1116,7 @@ def find_spotify_track(
     )
 
     search_title = re.sub(
-        r"\s*\(?(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$",
+        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$",
         "",
         title,
         flags=re.IGNORECASE
@@ -1139,6 +1139,20 @@ def find_spotify_track(
     # De strenge versie- en titelcontrole verderop blijft actief.
     search_title = re.sub(
         r"\s*\(\s*live\s+(?:op|at)\b[^)]*\)\s*$",
+        "",
+        search_title,
+        flags=re.IGNORECASE
+    ).strip()
+
+    # RadioBox zet soms credits of verklarende context tussen haakjes
+    # achter de titel. Dat is geen onderdeel van de muzikale titel.
+    # Voorbeelden:
+    #   The Whole Night Sky (Bob Weir=Harmony Vocals/Bonnie Raitt=Slide Guitar)
+    #   Falling (Twin Peaks Theme)
+    # Alleen duidelijke credit-/contextpatronen verwijderen; gewone
+    # betekenisvolle haakjestitels blijven onaangeraakt.
+    search_title = re.sub(
+        r"\s*\((?=[^)]*(?:=|\b(?:vocals?|guitar|bass|drums?|piano|keys?|harmony|theme|theme song|soundtrack)\b))[^)]*\)\s*$",
         "",
         search_title,
         flags=re.IGNORECASE
@@ -1230,8 +1244,25 @@ def find_spotify_track(
     # tolerant zijn; de lokale kandidaatcontrole hieronder blijft streng.
     # Geen harde artist:-filter: die blokkeerde geldige catalogusvarianten
     # zoals J.S. Ondara -> Ondara en album/project-credits.
+    # Spotify geeft sinds 2026 maximaal 10 resultaten terug. Daarom
+    # moet de ene zoekquery niet te veel op een mogelijk afwijkende
+    # artieststring leunen. Bij langere/specifieke titels gebruiken we
+    # alleen het laatste artiestwoord als zachte ranking-hint. Zo blijven
+    # bv. Raymond Kane/Ray Kane en catalogusnaamsvarianten vindbaar, terwijl
+    # de volledige artiestnaam hieronder lokaal streng wordt gecontroleerd.
+    search_title_words = re.findall(r"[\w'’]+", search_title, flags=re.UNICODE)
+    artist_hint = spotify_search_artist
+
+    artist_hint_parts = [
+        part for part in re.split(r"\s+", str(spotify_search_artist or "").strip())
+        if part
+    ]
+
+    if len(search_title_words) >= 3 and len(artist_hint_parts) >= 2:
+        artist_hint = artist_hint_parts[-1]
+
     query = " ".join(
-        part for part in (search_title, spotify_search_artist)
+        part for part in (search_title, artist_hint)
         if str(part or "").strip()
     )
 
@@ -1474,6 +1505,14 @@ def find_spotify_track(
         en "From The Vault" niet altijd in hetzelfde veld.
         """
         raw_value = str(value or "").strip()
+
+        # Duidelijke RadioBox credit-/contexthaakjes horen niet bij de titel.
+        raw_value = re.sub(
+            r"\s*\((?=[^)]*(?:=|\b(?:vocals?|guitar|bass|drums?|piano|keys?|harmony|theme|theme song|soundtrack)\b))[^)]*\)\s*$",
+            "",
+            raw_value,
+            flags=re.IGNORECASE
+        ).strip()
 
         # Featuring-credit in de officiële Spotify-titel hoort niet bij
         # de muzikale kerntitel; de artiestenmetadata wordt apart getest.
@@ -1790,6 +1829,36 @@ def find_spotify_track(
             primary_artist_score = 1.0
             primary_artist_exact = True
 
+        # Persoonsnaam-variant met dezelfde familienaam en een duidelijke
+        # verkorte/uitgeschreven voornaam. Voorbeeld: Raymond Kane <-> Ray Kane.
+        # Dit is bewust beperkt tot tweedelige persoonsnamen; de titelcontrole
+        # verderop blijft volledig actief.
+        wanted_name_parts = normalize(wanted_artists[0]).split()
+        person_name_variant = False
+
+        if len(wanted_name_parts) == 2:
+            for spotify_artist in spotify_artists:
+                spotify_name_parts = normalize(spotify_artist).split()
+                if len(spotify_name_parts) != 2:
+                    continue
+
+                wanted_first, wanted_last = wanted_name_parts
+                spotify_first, spotify_last = spotify_name_parts
+
+                if (
+                    wanted_last == spotify_last
+                    and min(len(wanted_first), len(spotify_first)) >= 3
+                    and (
+                        wanted_first.startswith(spotify_first)
+                        or spotify_first.startswith(wanted_first)
+                    )
+                ):
+                    person_name_variant = True
+                    break
+
+        if person_name_variant:
+            primary_artist_score = max(primary_artist_score, 0.96)
+
         # RadioBox gebruikt soms een vroegere groepsnaam/projectcredit,
         # terwijl Spotify alleen de huidige/verkorte artiest toont.
         # Voorbeelden uit de echte logs:
@@ -1826,6 +1895,7 @@ def find_spotify_track(
 
         if (
             not primary_artist_exact
+            and not person_name_variant
             and not primary_artist_contained
             and not album_as_artist_match
             and primary_artist_score < 0.90
@@ -1937,7 +2007,7 @@ def find_spotify_track(
         # moet ook kunnen matchen met Spotify:
         # "Time Moves Slow"
         wanted_title_for_match = re.sub(
-            r"(?:\s+\(?(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$)",
+            r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$",
             "",
             search_title,
             flags=re.IGNORECASE
