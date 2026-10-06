@@ -1475,18 +1475,67 @@ def find_spotify_track(
                 if wanted_id == candidate_id:
                     return True
                 # Alleen om te beslissen OF een rescue nodig is; dit accepteert
-                # zelf nooit een track. Kleine catalogusspelling mag dus een
-                # onnodige tweede Search voorkomen.
-                if SequenceMatcher(None, wanted_id, candidate_id).ratio() >= 0.94:
+                # zelf nooit een track. Houd deze drempel bewust zeer hoog:
+                # een middelmatige artiestgelijkenis mag de gerichte rescue
+                # niet blokkeren.
+                if SequenceMatcher(None, wanted_id, candidate_id).ratio() >= 0.985:
                     return True
         return False
 
-    first_search_has_plausible_match = any(
-        search_artist_plausible(item)
-        and search_title_structural_equivalent(
-            search_title,
-            item.get("name", "")
+    def search_version_hint(value):
+        """Kleine, zelfstandige versieclassificatie voor de rescue-beslissing."""
+        raw = str(value or "").casefold().replace("–", "-").replace("—", "-")
+        # Alleen duidelijke suffix/context-versies; woorden midden in een echte
+        # songtitel mogen de rescue nooit blokkeren.
+        suffix_match = re.search(r"(?:\(|\s+-\s+)([^()]*)\)?\s*$", raw)
+        suffix = suffix_match.group(1) if suffix_match else ""
+        if not suffix:
+            return None
+        checks = (
+            ("remaster", r"\bremaster(?:ed)?\b"),
+            ("live", r"\blive\b"),
+            ("acoustic", r"\bacoustic\b"),
+            ("remix", r"\bremix\b"),
+            ("mix", r"\bmix\b"),
+            ("demo", r"\bdemo\b"),
+            ("instrumental", r"\binstrumental\b"),
+            ("edit", r"\b(?:radio\s+)?edit\b"),
+            ("alternate", r"\b(?:alternate|alternative)\b"),
+            ("unplugged", r"\bunplugged\b"),
+            ("stripped", r"\bstripped\b"),
+            ("session", r"\bsession\b"),
         )
+        for family, pattern in checks:
+            if re.search(pattern, suffix):
+                return family
+        return None
+
+    wanted_search_version = search_version_hint(title)
+    hard_search_alternatives = {
+        "live", "acoustic", "remix", "mix", "demo", "instrumental",
+        "alternate", "unplugged", "stripped", "session",
+    }
+
+    def first_search_candidate_blocks_rescue(item):
+        if not search_artist_plausible(item):
+            return False
+        if not search_title_structural_equivalent(search_title, item.get("name", "")):
+            return False
+
+        candidate_version = search_version_hint(item.get("name", ""))
+        if wanted_search_version:
+            # Expliciet gevraagde versie: alleen dezelfde familie is een echte
+            # reden om de rescue over te slaan.
+            return candidate_version == wanted_search_version
+
+        # Gewone RadioBox-titel: live/remix/etc. mag nooit verhinderen dat we
+        # nog naar een gewone/remaster-opname zoeken.
+        if candidate_version in hard_search_alternatives:
+            return False
+        return True
+
+    first_search_has_plausible_match = any(
+        first_search_candidate_blocks_rescue(item)
         for item in items
     )
 
@@ -1986,6 +2035,34 @@ def find_spotify_track(
         return match.group(1).lower().strip()
 
 
+    def spotify_candidate_version(item):
+        """Versiefamilie uit tracktitel, met zeer veilige album-context fallback."""
+        track_family = requested_version(item.get("name", ""))
+        if track_family:
+            return track_family
+
+        album_raw = str((item.get("album") or {}).get("name", "") or "").strip().casefold()
+        if not album_raw:
+            return None
+
+        # Albumcontext alleen gebruiken bij ondubbelzinnige cataloguslabels.
+        # Een album als "Live Through This" is dus GEEN live-signaal.
+        album_checks = (
+            ("live", r"^(?:live\s*$|live\s+(?:at|from|in|on)\b|.*\blive\s+(?:at|from|in|on)\b)"),
+            ("acoustic", r"\bacoustic\s+(?:sessions?|versions?)\b"),
+            ("remix", r"\b(?:the\s+)?remixes\b|\bremix\s+(?:album|collection)\b"),
+            ("demo", r"\b(?:demos?|demo\s+sessions?)\b"),
+            ("instrumental", r"\binstrumental\s+(?:versions?|album)\b"),
+            ("karaoke", r"\bkaraoke\s+(?:versions?|album)\b"),
+            ("unplugged", r"\bunplugged\b"),
+            ("stripped", r"\bstripped\s+(?:sessions?|versions?)\b"),
+        )
+        for family, pattern in album_checks:
+            if re.search(pattern, album_raw, flags=re.IGNORECASE):
+                return family
+        return None
+
+
     def title_base(value):
         """
         Verwijder bekende versie-/credit-aanduidingen van een titel.
@@ -2453,9 +2530,7 @@ def find_spotify_track(
             item.get("name", "")
         )
 
-        spotify_version = requested_version(
-            item.get("name", "")
-        )
+        spotify_version = spotify_candidate_version(item)
 
         # Specifieke live-opname met locatie + jaar.
         # Als RadioBox dit expliciet vermeldt, moet Spotify
@@ -2580,23 +2655,30 @@ def find_spotify_track(
             wanted_base_compact in spotify_extension_compacts
         )
 
-        # Exacte titel.
+        # Confidence-klassen zijn belangrijker dan een klein scoreverschil.
+        # Een fuzzy kandidaat mag zo nooit een structureel exactere match
+        # voorbijsteken door toevallige artiest-/featurebonussen.
         if spotify_compact == wanted_compact:
             title_score = 1.0
+            title_confidence = 5
 
         # Veilige vormvarianten (separator/datum/quote/optioneel "the").
         elif structural_title_match:
             title_score = 0.997
+            title_confidence = 4
 
         # Exacte basistitel na bekende versie-aanduiding.
         elif spotify_base_compact == wanted_base_compact:
             title_score = 0.99
+            title_confidence = 3
 
         # RadioBox kan een officiële verklarende suffix weglaten.
         elif extension_title_match:
             title_score = 0.985
+            title_confidence = 2
 
         else:
+            title_confidence = 1
             title_score = SequenceMatcher(
                 None,
                 wanted_base_compact,
@@ -2620,6 +2702,19 @@ def find_spotify_track(
                 and min(len(wanted_words), len(spotify_words)) >= 4
             ):
                 title_score = max(title_score, 0.905)
+
+        # Korte/generieke titels zijn het gevaarlijkst: "Home", "Stay",
+        # "Run", "You" enz. mogen niet op een middelmatige fuzzy match landen.
+        # Exacte/structurele matches vallen hier niet onder.
+        wanted_word_count = len([w for w in normalize(wanted_title_base_for_match).split() if w])
+        wanted_identity_len = len(wanted_base_identity)
+        if title_confidence == 1:
+            if wanted_word_count <= 2 or wanted_identity_len <= 8:
+                if title_score < 0.97 or primary_artist_score < 0.97:
+                    continue
+            elif wanted_word_count == 3:
+                if title_score < 0.945 or primary_artist_score < 0.94:
+                    continue
 
         # Harde veiligheidsgrens voor vrije fuzzy matches.
         #
@@ -2657,7 +2752,7 @@ def find_spotify_track(
         candidate_score = (
             title_score
             + (primary_artist_score * 0.50)
-            + (matched_feature_count * 0.05)
+            + (matched_feature_count * 0.12)
         )
 
         if spotify_compact == wanted_compact:
@@ -2678,7 +2773,7 @@ def find_spotify_track(
         if primary_artist_contained and not primary_artist_exact:
             candidate_score += 0.08
 
-        candidate_score -= missing_feature_count * 0.08
+        candidate_score -= missing_feature_count * 0.12
 
         # =============================================
         # VERSIEVOORKEUR
@@ -2777,42 +2872,64 @@ def find_spotify_track(
             )
         ).strip().upper() or None
 
+        match_reason = {
+            5: "exact title",
+            4: "structural title",
+            3: "exact core title",
+            2: "safe catalog suffix",
+            1: "high-confidence fuzzy",
+        }[title_confidence]
+
         candidates.append(
             (
                 -version_tier,
+                title_confidence,
                 candidate_score,
                 -len(candidates),
                 item.get("uri"),
                 candidate_isrc,
                 item.get("name", ""),
                 ", ".join(a.get("name", "") for a in spotify_artist_objects),
+                match_reason,
+                spotify_version or "ordinary",
             )
         )
 
     if candidates:
         candidates.sort(
             key=lambda candidate: (
-                candidate[0],
-                candidate[1],
-                candidate[2],
+                candidate[0],  # version tier
+                candidate[1],  # title confidence class
+                candidate[2],  # detailed score
+                candidate[3],  # Spotify order tie-break
             ),
             reverse=True
         )
 
-        # Als twee verschillende opnames praktisch gelijk scoren en de
-        # beste kandidaat niet minstens een exacte/zeer sterke match is,
-        # liever overslaan dan gokken.
-        if (
-            len(candidates) > 1
-            and candidates[0][3] != candidates[1][3]
-            and candidates[0][0] == candidates[1][0]
-            and abs(candidates[0][1] - candidates[1][1]) < 0.015
-            and candidates[0][1] < 2.40
-        ):
-            return None
+        # Als twee verschillende opnames praktisch gelijk scoren binnen
+        # dezelfde confidence- en versieklasse: liever overslaan dan gokken.
+        # Dezelfde ISRC is echter dezelfde opname op een andere release en
+        # mag dus nooit kunstmatige ambiguïteit veroorzaken.
+        if len(candidates) > 1:
+            best, second = candidates[0], candidates[1]
+            same_recording = bool(best[5] and second[5] and best[5] == second[5])
+            if (
+                not same_recording
+                and best[4] != second[4]
+                and best[0] == second[0]
+                and best[1] == second[1]
+                and abs(best[2] - second[2]) < 0.015
+                and best[2] < 2.40
+            ):
+                return None
 
-        LAST_SPOTIFY_MATCH_ISRC = candidates[0][4]
-        return candidates[0][3]
+        LAST_SPOTIFY_MATCH_ISRC = candidates[0][5]
+        print(
+            "🎯 Spotify match gekozen: "
+            f"{candidates[0][7]} — {candidates[0][6]} "
+            f"| {candidates[0][8]} | versie: {candidates[0][9]}"
+        )
+        return candidates[0][4]
 
     print(f"🧪 Spotify-query zonder veilige match: {query}")
 
@@ -3288,7 +3405,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 24
+    MATCHING_RULES_VERSION = 25
 
     if cache.get(
         "__matching_rules_version"
