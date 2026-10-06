@@ -2315,7 +2315,13 @@ def find_spotify_track(
                 # Dit is bewust veel strenger dan de normale titelmatch:
                 # dezelfde hoofdartiest en praktisch dezelfde KERNTITEL zijn
                 # vereist. De tier zorgt dat deze kandidaat pas als laatste wint.
-                if title_score < 0.995 or primary_artist_score < 0.98:
+                same_core_title = (
+                    spotify_compact == wanted_compact
+                    or spotify_base_compact == wanted_base_compact
+                    or structural_title_match
+                    or extension_title_match
+                )
+                if not same_core_title or primary_artist_score < 0.98:
                     continue
                 candidate_score -= 0.55
                 version_tier = 2
