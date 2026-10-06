@@ -1325,8 +1325,20 @@ def find_spotify_track(
     artist_hint = safe_artist_hint or spotify_search_artist
 
     # Eén Spotify Search per track blijft de harde limiet.
+    #
+    # Bij een duidelijke artiestnaam met precies twee betekenisvolle tokens
+    # zetten we de artiest vóór de titel. Dat helpt vooral bij veelgebruikte
+    # titels (bv. "Holding on to You") en kleine titelspelfouten
+    # (bv. "Yemanja" -> "Iemanja"), zonder een harde artist:-filter te
+    # gebruiken. Project-/groepnamen met meer tokens blijven titel-eerst,
+    # zodat album/project-as-artist rescues niet onnodig worden benadeeld.
+    if len(safe_artist_hint_parts) == 2:
+        query_parts = (artist_hint, search_query_title)
+    else:
+        query_parts = (search_query_title, artist_hint)
+
     query = " ".join(
-        part for part in (search_query_title, artist_hint)
+        part for part in query_parts
         if str(part or "").strip()
     )
 
@@ -1591,6 +1603,36 @@ def find_spotify_track(
             if token == "the" and longer[:i] + longer[i + 1:] == shorter:
                 return True
         return False
+
+    def initial_transliteration_equivalent(left, right):
+        """
+        Zeer smalle transliteratie-rescue voor lange éénwoordtitels.
+
+        Sommige catalogi wisselen een beginnende Y/I/J terwijl de rest van
+        de naam exact gelijk blijft, bv. Yemanja <-> Iemanja. We staan dit
+        alleen toe als:
+        - beide titels uit precies één woord bestaan;
+        - het woord minstens 6 letters lang is;
+        - alleen de eerste letter verschilt;
+        - beide beginletters uit de transliteratieset Y/I/J komen.
+
+        De normale artiestcontrole blijft volledig actief.
+        """
+        left_value = title_identity(left)
+        right_value = title_identity(right)
+
+        if not left_value or not right_value:
+            return False
+        if " " in normalize(left).strip() or " " in normalize(right).strip():
+            return False
+        if len(left_value) < 6 or len(left_value) != len(right_value):
+            return False
+        if left_value[1:] != right_value[1:]:
+            return False
+        if left_value[0] == right_value[0]:
+            return False
+
+        return {left_value[0], right_value[0]} <= {"y", "i", "j"}
 
     def version_family(value):
         """Classificeer alleen een duidelijk afgescheiden versie-suffix."""
@@ -2279,6 +2321,10 @@ def find_spotify_track(
             wanted_identity == spotify_identity
             or wanted_base_identity == spotify_base_identity
             or optional_the_equivalent(
+                wanted_title_base_for_match,
+                spotify_title_base
+            )
+            or initial_transliteration_equivalent(
                 wanted_title_base_for_match,
                 spotify_title_base
             )
@@ -3002,7 +3048,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 20
+    MATCHING_RULES_VERSION = 21
 
     if cache.get(
         "__matching_rules_version"
