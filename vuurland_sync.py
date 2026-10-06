@@ -1360,6 +1360,87 @@ def find_spotify_track(
         []
     )
 
+    # ---------------------------------------------------------
+    # ZELDZAME SPACED-LETTER SEARCH RESCUE
+    # ---------------------------------------------------------
+    # Spotify catalogiseert sommige titels bewust als losse letters:
+    #
+    #   RadioBox : Speyside
+    #   Spotify  : S P E Y S I D E
+    #
+    # De lokale matcher kon zulke titels al veilig als identiek zien,
+    # maar de gewone Spotify Search hoeft die kandidaat niet in de top-10
+    # te zetten. Daarom doen we ALLEEN voor een lange enkelwoordtitel een
+    # tweede search wanneer de eerste resultaten nergens exact dezelfde
+    # letters opleveren. Dit is geen fuzzy rescue: letters moeten exact
+    # gelijk zijn en alle normale artiest-/titel-/versiegates blijven actief.
+    def search_letter_identity(value):
+        raw = str(value or "").casefold()
+        raw = unicodedata.normalize("NFKD", raw)
+        raw = "".join(
+            char for char in raw
+            if not unicodedata.combining(char)
+        )
+        return "".join(char for char in raw if char.isalnum())
+
+    plain_search_title = str(search_query_title or "").strip()
+    plain_title_tokens = re.findall(r"[\w]+", plain_search_title, flags=re.UNICODE)
+    plain_title_identity = search_letter_identity(plain_search_title)
+
+    spaced_letter_rescue_allowed = (
+        len(plain_title_tokens) == 1
+        and 6 <= len(plain_title_identity) <= 24
+        and plain_title_identity.isalnum()
+    )
+
+    first_search_has_same_letters = any(
+        search_letter_identity(item.get("name", "")) == plain_title_identity
+        for item in items
+        if item.get("name")
+    )
+
+    if spaced_letter_rescue_allowed and not first_search_has_same_letters:
+        spaced_title = " ".join(list(plain_title_identity.upper()))
+        rescue_query = " ".join(
+            part for part in (artist_hint, spaced_title)
+            if str(part or "").strip()
+        )
+
+        rescue_data = spotify_request(
+            "GET",
+            "/search",
+            params={
+                "q": rescue_query,
+                "type": "track",
+                "limit": 10
+            }
+        )
+
+        rescue_items = rescue_data.get(
+            "tracks",
+            {}
+        ).get(
+            "items",
+            []
+        )
+
+        # Voeg alleen nieuwe Spotify-track-ID's toe. De kandidaatselectie
+        # hieronder blijft volledig identiek en beslist nog steeds streng.
+        seen_item_ids = {
+            item.get("id")
+            for item in items
+            if item.get("id")
+        }
+        for rescue_item in rescue_items:
+            rescue_id = rescue_item.get("id")
+            if rescue_id and rescue_id in seen_item_ids:
+                continue
+            items.append(rescue_item)
+            if rescue_id:
+                seen_item_ids.add(rescue_id)
+
+        print(f"🧪 Spotify spaced-letter rescue-query: {rescue_query}")
+
     def normalize(value):
         value = str(value or "").lower().strip()
 
@@ -3086,7 +3167,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 22
+    MATCHING_RULES_VERSION = 23
 
     if cache.get(
         "__matching_rules_version"
