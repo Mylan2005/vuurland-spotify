@@ -1103,7 +1103,7 @@ def find_spotify_track(
     #
     # Dat stuk hoort bij de artiestenmetadata, niet bij de titel.
     title_feature_match = re.search(
-        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+"
+        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/|with)\s+"
         r"([^\(\)\[\]]+?)\)?\s*$",
         str(title or ""),
         flags=re.IGNORECASE
@@ -1116,7 +1116,7 @@ def find_spotify_track(
     )
 
     search_title = re.sub(
-        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$",
+        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/|with)\s+[^\(\)\[\]]+\)?\s*$",
         "",
         title,
         flags=re.IGNORECASE
@@ -1251,27 +1251,84 @@ def find_spotify_track(
     # bv. Raymond Kane/Ray Kane en catalogusnaamsvarianten vindbaar, terwijl
     # de volledige artiestnaam hieronder lokaal streng wordt gecontroleerd.
     search_title_words = re.findall(r"[\w'’]+", search_title, flags=re.UNICODE)
+
+    def spotify_search_title_variant(value):
+        """
+        Maak de ENIGE Spotify-query tolerant voor vormverschillen.
+        De uiteindelijke kandidaatcontrole blijft streng op artiest,
+        kerntitel en versie, dus bredere recall maakt de beslislaag
+        niet losser.
+        """
+        text = str(value or "").replace("’", "'")
+
+        contractions = {
+            "dont": "don't", "cant": "can't", "wont": "won't",
+            "isnt": "isn't", "arent": "aren't", "wasnt": "wasn't",
+            "werent": "weren't", "havent": "haven't", "hasnt": "hasn't",
+            "hadnt": "hadn't", "couldnt": "couldn't", "wouldnt": "wouldn't",
+            "shouldnt": "shouldn't", "didnt": "didn't", "doesnt": "doesn't",
+            "im": "i'm", "ive": "i've", "ill": "i'll",
+            "youre": "you're", "youve": "you've", "youll": "you'll",
+            "theyre": "they're", "theyve": "they've", "theyll": "they'll",
+            "mustnt": "mustn't", "mightnt": "mightn't", "neednt": "needn't",
+            "couldve": "could've", "wouldve": "would've",
+            "shouldve": "should've", "lets": "let's",
+        }
+
+        parts = re.split(r"(\s+)", text)
+        rebuilt = []
+        for part in parts:
+            key = re.sub(r"[^a-z]", "", part.casefold())
+            replacement = contractions.get(key)
+            if replacement and part.strip():
+                if part[:1].isupper():
+                    replacement = replacement[:1].upper() + replacement[1:]
+                rebuilt.append(replacement)
+            else:
+                rebuilt.append(part)
+        text = "".join(rebuilt)
+
+        # Catalogusnummering en datumseparators als zoekvorm.
+        text = re.sub(r"\bno\.?\s*(\d+)\b", r" \1 ", text, flags=re.IGNORECASE)
+        text = re.sub(r"#\s*(\d+)\b", r" \1 ", text)
+        text = re.sub(r"(?<=\d)[./-](?=\d)", " ", text)
+
+        # Duidelijke titel-separatoren mogen de Spotify-ranking niet breken.
+        text = re.sub(r"\s+[-–—/]\s+", " ", text)
+        text = re.sub(r"\s*/\s*", " ", text)
+
+        # Alleen randquotes verwijderen; apostrofs in woorden behouden.
+        text = text.strip(' "`“”')
+        return " ".join(text.split())
+
+    search_query_title = spotify_search_title_variant(search_title)
+
     artist_hint_parts = [
         part for part in re.split(r"\s+", str(spotify_search_artist or "").strip())
         if part
     ]
 
-    # Eén Search per track blijft de limiet. Maak die ene query daarom
-    # zo kansrijk mogelijk:
-    # - lange/specifieke titels zoeken we op titel alleen; de volledige
-    #   artiest wordt lokaal streng gevalideerd. Dit voorkomt dat een
-    #   artist-hint zoals "Music" (Roxy Music) de top-10 vervuilt.
-    # - korte/generieke titels krijgen wel een artiest-hint.
-    if len(search_title_words) >= 4:
-        query = search_title
-    else:
-        artist_hint = spotify_search_artist
-        if len(search_title_words) >= 2 and len(artist_hint_parts) >= 2:
-            artist_hint = artist_hint_parts[-1]
-        query = " ".join(
-            part for part in (search_title, artist_hint)
-            if str(part or "").strip()
-        )
+    # Gebruik alleen betekenisvolle artiesttokens als zachte ranking-hint.
+    # De volledige artiest wordt lokaal nog steeds streng gevalideerd.
+    generic_artist_words = {
+        "the", "and", "with", "feat", "featuring", "ft",
+        "band", "music", "orchestra", "ensemble", "project",
+    }
+    safe_artist_hint_parts = []
+    for part in artist_hint_parts:
+        hint_token = re.sub(r"[^\w]+", "", part.casefold(), flags=re.UNICODE)
+        if len(hint_token) < 2 or hint_token in generic_artist_words:
+            continue
+        safe_artist_hint_parts.append(part)
+
+    safe_artist_hint = " ".join(safe_artist_hint_parts[:2])
+    artist_hint = safe_artist_hint or spotify_search_artist
+
+    # Eén Spotify Search per track blijft de harde limiet.
+    query = " ".join(
+        part for part in (search_query_title, artist_hint)
+        if str(part or "").strip()
+    )
 
     data = spotify_request(
         "GET",
@@ -1366,14 +1423,51 @@ def find_spotify_track(
         # voor titelvergelijking, bv. "Waltz nø2".
         normalized = normalized.replace("ø", "o")
 
-        # Gecontroleerde titelvariant:
-        # Beck gebruikt op Spotify "Everybody's Gotta Learn Sometime"
-        # terwijl RadioBox "Everybody's got to learn sometime" kan tonen.
-        if normalized in {
-            "everybody's gotta learn sometime",
-            "everybody's got to learn sometime",
-        }:
-            normalized = "everybody's got to learn sometime"
+        # Veilige, algemene spreektaalvarianten die catalogi vaak
+        # verschillend uitschrijven.
+        phrase_equivalents = (
+            (r"\bgotta\b", "got to"),
+            (r"\bwanna\b", "want to"),
+            (r"\bgonna\b", "going to"),
+            (r"\bkinda\b", "kind of"),
+            (r"\boutta\b", "out of"),
+        )
+        for pattern, replacement in phrase_equivalents:
+            normalized = re.sub(pattern, replacement, normalized)
+
+        # Apostrofverschillen zijn voor titelidentiteit niet betekenisdragend.
+        # Dont <-> Don't en Cello Song <-> 'Cello Song.
+        normalized = normalized.replace("'", "")
+
+        # Catalogus-/deelnummering veilig gelijkzetten, maar alleen achter
+        # een duidelijke marker: Part II <-> Part 2, Vol. Two <-> Volume 2.
+        number_words = {
+            "one": "1", "two": "2", "three": "3", "four": "4",
+            "five": "5", "six": "6", "seven": "7", "eight": "8",
+            "nine": "9", "ten": "10",
+            "i": "1", "ii": "2", "iii": "3", "iv": "4", "v": "5",
+            "vi": "6", "vii": "7", "viii": "8", "ix": "9", "x": "10",
+        }
+
+        def canonical_catalog_number(match):
+            marker = match.group(1).lower()
+            raw_number = match.group(2).lower()
+            number = number_words.get(raw_number, raw_number)
+            if marker in {"pt", "part"}:
+                marker = "part"
+            elif marker in {"vol", "volume"}:
+                marker = "volume"
+            else:
+                marker = "no"
+            return f"{marker} {number}"
+
+        normalized = re.sub(
+            r"\b(pt|part|vol|volume|no|number)\.?\s*"
+            r"(\d+|one|two|three|four|five|six|seven|eight|nine|ten|"
+            r"i|ii|iii|iv|v|vi|vii|viii|ix|x)\b",
+            canonical_catalog_number,
+            normalized,
+        )
 
         # Trek gecontroleerde nummernotaties gelijk:
         # "no 2", "no2", "#2" -> "no2"
@@ -1415,7 +1509,7 @@ def find_spotify_track(
         ):
             normalized = "waltz no2"
 
-        compacted = "".join(normalized.split())
+        compacted = re.sub(r"[^\w]+", "", normalized, flags=re.UNICODE)
 
         parts = normalized.split()
 
@@ -1476,6 +1570,7 @@ def find_spotify_track(
 
     def title_tokens_without_optional_the(value):
         value = normalize(value).lstrip("'\"` ")
+        value = value.replace("'", "")
         value = re.sub(r"(?<=\d)[./-](?=\d)", "", value)
         value = re.sub(r"\s+/\s+|\s+-\s+", " ", value)
         value = re.sub(r"\s*/\s*", " ", value)
@@ -1521,6 +1616,20 @@ def find_spotify_track(
             if re.search(r"\breprise\b", suffix): return "reprise"
             if re.search(r"\balternate|alternative\b", suffix): return "alternate"
             if re.search(r"\bspotify\s+singles?\b", suffix): return "spotify singles"
+            if re.search(r"\bunplugged\b", suffix): return "unplugged"
+            if re.search(r"\bstripped\b", suffix): return "stripped"
+            if re.search(r"\bsession\b", suffix): return "session"
+            if re.search(r"\b(?:alternate\s+)?take\s*\d*\b", suffix): return "take"
+            if re.search(r"\bmono\b", suffix): return "mono"
+            if re.search(r"\bstereo\b", suffix): return "stereo"
+            if re.search(r"\bextended\b", suffix): return "extended"
+            if re.search(r"\bpiano\s+version\b", suffix): return "piano version"
+            if re.search(r"\borchestral\s+version\b", suffix): return "orchestral version"
+            if re.search(r"\b(?:re[- ]?record(?:ed|ing)?|taylor'?s\s+version)\b", suffix): return "re-recorded"
+            if re.search(r"\bsped\s*up\b", suffix): return "sped up"
+            if re.search(r"\bslowed(?:\s*\+?\s*reverb)?\b", suffix): return "slowed"
+            if re.search(r"\bnightcore\b", suffix): return "nightcore"
+            if re.search(r"\bkaraoke\b", suffix): return "karaoke"
             if re.search(r"\bradio\s+edit\b", suffix): return "edit"
             if re.search(r"\bedit\b", suffix): return "edit"
             if re.search(r"\bsingle\s+version\b", suffix): return "single version"
@@ -1567,6 +1676,21 @@ def find_spotify_track(
                 |alternate(?:\s+version)?
                 |version
                 |spotify\s+singles
+                |unplugged
+                |stripped
+                |session
+                |(?:alternate\s+)?take\s*\d*
+                |mono
+                |stereo
+                |extended
+                |piano\s+version
+                |orchestral\s+version
+                |re[- ]?record(?:ed|ing)?
+                |taylor'?s\s+version
+                |sped\s*up
+                |slowed(?:\s*\+?\s*reverb)?
+                |nightcore
+                |karaoke
                 |single\s+version
                 |album\s+version
                 |original\s+version
@@ -1655,6 +1779,21 @@ def find_spotify_track(
                 |alternate(?:\s+version)?
                 |version
                 |spotify\s+singles
+                |unplugged
+                |stripped
+                |session
+                |(?:alternate\s+)?take\s*\d*
+                |mono
+                |stereo
+                |extended
+                |piano\s+version
+                |orchestral\s+version
+                |re[- ]?record(?:ed|ing)?
+                |taylor'?s\s+version
+                |sped\s*up
+                |slowed(?:\s*\+?\s*reverb)?
+                |nightcore
+                |karaoke
                 |single\s+version
                 |album\s+version
                 |original\s+version
@@ -2097,7 +2236,7 @@ def find_spotify_track(
         # moet ook kunnen matchen met Spotify:
         # "Time Moves Slow"
         wanted_title_for_match = re.sub(
-            r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+[^\(\)\[\]]+\)?\s*$",
+            r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/|with)\s+[^\(\)\[\]]+\)?\s*$",
             "",
             search_title,
             flags=re.IGNORECASE
@@ -2295,6 +2434,9 @@ def find_spotify_track(
         hard_alternative_versions = {
             "live", "mix", "remix", "acoustic", "demo",
             "instrumental", "reprise", "alternate", "spotify singles",
+            "unplugged", "stripped", "session", "take", "mono", "stereo",
+            "extended", "piano version", "orchestral version",
+            "re-recorded", "sped up", "slowed", "nightcore", "karaoke",
         }
         soft_fallback_versions = {
             "edit", "single version", "album version",
@@ -2385,6 +2527,8 @@ def find_spotify_track(
 
         LAST_SPOTIFY_MATCH_ISRC = candidates[0][4]
         return candidates[0][3]
+
+    print(f"🧪 Spotify-query zonder veilige match: {query}")
 
     if items:
         preview = []
@@ -2858,7 +3002,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 17
+    MATCHING_RULES_VERSION = 20
 
     if cache.get(
         "__matching_rules_version"
