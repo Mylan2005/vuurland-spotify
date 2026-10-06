@@ -1251,20 +1251,27 @@ def find_spotify_track(
     # bv. Raymond Kane/Ray Kane en catalogusnaamsvarianten vindbaar, terwijl
     # de volledige artiestnaam hieronder lokaal streng wordt gecontroleerd.
     search_title_words = re.findall(r"[\w'’]+", search_title, flags=re.UNICODE)
-    artist_hint = spotify_search_artist
-
     artist_hint_parts = [
         part for part in re.split(r"\s+", str(spotify_search_artist or "").strip())
         if part
     ]
 
-    if len(search_title_words) >= 3 and len(artist_hint_parts) >= 2:
-        artist_hint = artist_hint_parts[-1]
-
-    query = " ".join(
-        part for part in (search_title, artist_hint)
-        if str(part or "").strip()
-    )
+    # Eén Search per track blijft de limiet. Maak die ene query daarom
+    # zo kansrijk mogelijk:
+    # - lange/specifieke titels zoeken we op titel alleen; de volledige
+    #   artiest wordt lokaal streng gevalideerd. Dit voorkomt dat een
+    #   artist-hint zoals "Music" (Roxy Music) de top-10 vervuilt.
+    # - korte/generieke titels krijgen wel een artiest-hint.
+    if len(search_title_words) >= 4:
+        query = search_title
+    else:
+        artist_hint = spotify_search_artist
+        if len(search_title_words) >= 2 and len(artist_hint_parts) >= 2:
+            artist_hint = artist_hint_parts[-1]
+        query = " ".join(
+            part for part in (search_title, artist_hint)
+            if str(part or "").strip()
+        )
 
     data = spotify_request(
         "GET",
@@ -1443,6 +1450,85 @@ def find_spotify_track(
             if part.strip()
         ]
 
+    def title_identity(value):
+        """
+        Zeer conservatieve titelidentiteit voor catalogusverschillen.
+
+        Alleen vormverschillen worden gelijkgetrokken, nooit betekenis:
+        - 12-17-12 / 12/17/12 / 12.17.12
+        - Head ... - Road ... / Head .../Road ...
+        - 'Cello Song / Cello Song
+        - No. 2 / #2 (via title_compact)
+        """
+        value = normalize(value)
+        value = value.lstrip("'\"` ")
+
+        # Datumachtige cijfergroepen: separator is niet betekenisvol.
+        value = re.sub(r"(?<=\d)[./-](?=\d)", "", value)
+
+        # Duidelijke titel-separatoren. Alleen een koppelteken met
+        # omliggende spaties wordt behandeld als separator; interne
+        # woordkoppelteken blijven intact.
+        value = re.sub(r"\s+/\s+|\s+-\s+", " ", value)
+        value = re.sub(r"\s*/\s*", " ", value)
+
+        return title_compact(value)
+
+    def title_tokens_without_optional_the(value):
+        value = normalize(value).lstrip("'\"` ")
+        value = re.sub(r"(?<=\d)[./-](?=\d)", "", value)
+        value = re.sub(r"\s+/\s+|\s+-\s+", " ", value)
+        value = re.sub(r"\s*/\s*", " ", value)
+        return [token for token in value.split() if token]
+
+    def optional_the_equivalent(left, right):
+        left_tokens = title_tokens_without_optional_the(left)
+        right_tokens = title_tokens_without_optional_the(right)
+        if left_tokens == right_tokens:
+            return True
+
+        # Hoogstens één los "the" mag aan één kant ontbreken.
+        if abs(len(left_tokens) - len(right_tokens)) != 1:
+            return False
+
+        longer, shorter = (left_tokens, right_tokens) if len(left_tokens) > len(right_tokens) else (right_tokens, left_tokens)
+        for i, token in enumerate(longer):
+            if token == "the" and longer[:i] + longer[i + 1:] == shorter:
+                return True
+        return False
+
+    def version_family(value):
+        """Classificeer alleen een duidelijk afgescheiden versie-suffix."""
+        raw = str(value or "").strip().lower()
+        raw = raw.replace("–", "-").replace("—", "-")
+
+        suffixes = []
+        paren = re.search(r"\(([^()]*)\)\s*$", raw)
+        if paren:
+            suffixes.append(paren.group(1))
+        dash = re.search(r"\s+-\s+(.+?)\s*$", raw)
+        if dash:
+            suffixes.append(dash.group(1))
+
+        for suffix in suffixes:
+            if re.search(r"\bremaster(?:ed)?\b", suffix): return "remaster"
+            if re.search(r"\blive\b", suffix): return "live"
+            if re.search(r"\bacoustic\b", suffix): return "acoustic"
+            if re.search(r"\bremix\b", suffix): return "remix"
+            if re.search(r"\bmix\b", suffix): return "mix"
+            if re.search(r"\bdemo\b", suffix): return "demo"
+            if re.search(r"\binstrumental\b", suffix): return "instrumental"
+            if re.search(r"\breprise\b", suffix): return "reprise"
+            if re.search(r"\balternate|alternative\b", suffix): return "alternate"
+            if re.search(r"\bspotify\s+singles?\b", suffix): return "spotify singles"
+            if re.search(r"\bradio\s+edit\b", suffix): return "edit"
+            if re.search(r"\bedit\b", suffix): return "edit"
+            if re.search(r"\bsingle\s+version\b", suffix): return "single version"
+            if re.search(r"\balbum\s+version\b", suffix): return "album version"
+            if re.search(r"\boriginal\s+version\b", suffix): return "original version"
+            if re.search(r"\bversion\b", suffix): return "version"
+        return None
+
     def requested_version(value):
         """
         Bepaal welke bekende versie-aanduiding aan het einde
@@ -1459,6 +1545,10 @@ def find_spotify_track(
         Bekende varianten zoals "Short Reprise" worden herkend.
         """
         raw_value = str(value or "").strip()
+
+        family = version_family(raw_value)
+        if family:
+            return family
 
         version_pattern = re.compile(
             r"""
@@ -2041,6 +2131,20 @@ def find_spotify_track(
             spotify_title_base
         )
 
+        wanted_identity = title_identity(wanted_title_for_match)
+        spotify_identity = title_identity(item.get("name", ""))
+        wanted_base_identity = title_identity(wanted_title_base_for_match)
+        spotify_base_identity = title_identity(spotify_title_base)
+
+        structural_title_match = (
+            wanted_identity == spotify_identity
+            or wanted_base_identity == spotify_base_identity
+            or optional_the_equivalent(
+                wanted_title_base_for_match,
+                spotify_title_base
+            )
+        )
+
         spotify_extension_compacts = {
             title_compact(base)
             for base in title_extension_bases(item.get("name", ""))
@@ -2054,6 +2158,10 @@ def find_spotify_track(
         # Exacte titel.
         if spotify_compact == wanted_compact:
             title_score = 1.0
+
+        # Veilige vormvarianten (separator/datum/quote/optioneel "the").
+        elif structural_title_match:
+            title_score = 0.997
 
         # Exacte basistitel na bekende versie-aanduiding.
         elif spotify_base_compact == wanted_base_compact:
@@ -2103,8 +2211,9 @@ def find_spotify_track(
         if (
             spotify_compact != wanted_compact
             and spotify_base_compact != wanted_base_compact
+            and not structural_title_match
             and not extension_title_match
-            and title_score < 0.90
+            and title_score < 0.93
         ):
             continue
 
@@ -2128,6 +2237,9 @@ def find_spotify_track(
 
         if spotify_compact == wanted_compact:
             candidate_score += 1.00
+
+        elif structural_title_match:
+            candidate_score += 0.995
 
         elif spotify_base_compact == wanted_base_compact:
             candidate_score += 0.99
@@ -2172,18 +2284,46 @@ def find_spotify_track(
         # Een Spotify-kandidaat zonder bekende versie blijft
         # toegestaan: sommige Spotify-titels vermelden hun
         # versie niet expliciet.
+        # Versie-hiërarchie:
+        # 1) RadioBox vraagt expliciet een versie -> Spotify moet dezelfde
+        #    versie-familie leveren. Geen live/remix gokken.
+        # 2) RadioBox vraagt de gewone track -> gewone/remaster krijgt
+        #    absolute voorkeur. Een neutrale edit/single-version mag alleen
+        #    als fallback. Live/mix/remix/acoustic/demo/instrumental/etc.
+        #    worden dan hard geweigerd.
+        hard_alternative_versions = {
+            "live", "mix", "remix", "acoustic", "demo",
+            "instrumental", "reprise", "alternate", "spotify singles",
+        }
+        soft_fallback_versions = {
+            "edit", "single version", "album version",
+            "original version", "version",
+        }
+
         if wanted_version:
-            if spotify_version == wanted_version:
-                candidate_score += 0.50
-
+            if spotify_version != wanted_version:
+                continue
+            candidate_score += 0.60
+            version_tier = 0
+        else:
+            if spotify_version in hard_alternative_versions:
+                continue
+            if spotify_version == "remaster":
+                candidate_score += 0.24
+                version_tier = 0
             elif spotify_version is None:
-                candidate_score += 0.10
-
+                candidate_score += 0.30
+                version_tier = 0
+            elif spotify_version in soft_fallback_versions:
+                # Alleen een zeer sterke titel/artiest mag überhaupt als
+                # fallback meedoen. De tier zorgt dat iedere gewone/remaster
+                # kandidaat altijd wint, ongeacht kleine scoreverschillen.
+                if title_score < 0.985 or primary_artist_score < 0.95:
+                    continue
+                candidate_score -= 0.20
+                version_tier = 1
             else:
                 continue
-
-        elif spotify_version is None:
-            candidate_score += 0.20
 
         candidate_isrc = str(
             (item.get("external_ids") or {}).get(
@@ -2194,10 +2334,13 @@ def find_spotify_track(
 
         candidates.append(
             (
+                -version_tier,
                 candidate_score,
                 -len(candidates),
                 item.get("uri"),
                 candidate_isrc,
+                item.get("name", ""),
+                ", ".join(a.get("name", "") for a in spotify_artist_objects),
             )
         )
 
@@ -2205,7 +2348,8 @@ def find_spotify_track(
         candidates.sort(
             key=lambda candidate: (
                 candidate[0],
-                candidate[1]
+                candidate[1],
+                candidate[2],
             ),
             reverse=True
         )
@@ -2215,14 +2359,25 @@ def find_spotify_track(
         # liever overslaan dan gokken.
         if (
             len(candidates) > 1
-            and candidates[0][2] != candidates[1][2]
-            and abs(candidates[0][0] - candidates[1][0]) < 0.015
-            and candidates[0][0] < 2.40
+            and candidates[0][3] != candidates[1][3]
+            and candidates[0][0] == candidates[1][0]
+            and abs(candidates[0][1] - candidates[1][1]) < 0.015
+            and candidates[0][1] < 2.40
         ):
             return None
 
-        LAST_SPOTIFY_MATCH_ISRC = candidates[0][3]
-        return candidates[0][2]
+        LAST_SPOTIFY_MATCH_ISRC = candidates[0][4]
+        return candidates[0][3]
+
+    if items:
+        preview = []
+        for item in items[:5]:
+            preview_artist = ", ".join(
+                a.get("name", "") for a in item.get("artists", []) if a.get("name")
+            )
+            preview.append(f"{preview_artist} — {item.get('name', '')}")
+        if preview:
+            print("🧪 Spotify top-kandidaten afgewezen: " + " | ".join(preview))
 
     return None
 
@@ -2686,7 +2841,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 16
+    MATCHING_RULES_VERSION = 17
 
     if cache.get(
         "__matching_rules_version"
@@ -3335,6 +3490,13 @@ def sync():
             f"{normalize_match(title)}"
         )
 
+        # Positieve Search-resultaten zijn matcher-versiegebonden.
+        # Zo kan een oude foutieve live/mix-URI nooit opnieuw gebruikt
+        # worden nadat de matcherregels verbeterd zijn.
+        match_cache_key = (
+            f"__match_v{MATCHING_RULES_VERSION}__" + cache_key
+        )
+
         # ---------------------------------
         # AL IN PLAYLIST?
         # ---------------------------------
@@ -3541,9 +3703,9 @@ def sync():
         # CACHE SEARCH RESULT
         # ---------------------------------
 
-        if cache_key in cache:
+        if match_cache_key in cache:
 
-            uri = cache[cache_key]
+            uri = cache[match_cache_key]
 
             print(
                 f"💾 Spotify-cache gebruikt: "
@@ -3600,7 +3762,7 @@ def sync():
 
             if uri is not None:
 
-                cache[cache_key] = uri
+                cache[match_cache_key] = uri
 
                 # Een eerdere mislukte zoekpoging is niet meer relevant.
                 cache.pop(not_found_key, None)
