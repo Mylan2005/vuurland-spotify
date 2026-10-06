@@ -2288,9 +2288,10 @@ def find_spotify_track(
         # 1) RadioBox vraagt expliciet een versie -> Spotify moet dezelfde
         #    versie-familie leveren. Geen live/remix gokken.
         # 2) RadioBox vraagt de gewone track -> gewone/remaster krijgt
-        #    absolute voorkeur. Een neutrale edit/single-version mag alleen
-        #    als fallback. Live/mix/remix/acoustic/demo/instrumental/etc.
-        #    worden dan hard geweigerd.
+        #    absolute voorkeur. Een neutrale edit/single-version is fallback.
+        #    Live/mix/remix/acoustic/demo/instrumental/etc. mogen alleen als
+        #    NOODfallback wanneer er geen gewone/remaster/veilige edit-kandidaat
+        #    in de Spotify-resultaten zit én artiest + kerntitel vrijwel exact zijn.
         hard_alternative_versions = {
             "live", "mix", "remix", "acoustic", "demo",
             "instrumental", "reprise", "alternate", "spotify singles",
@@ -2307,8 +2308,18 @@ def find_spotify_track(
             version_tier = 0
         else:
             if spotify_version in hard_alternative_versions:
-                continue
-            if spotify_version == "remaster":
+                # RadioBox vroeg geen speciale versie. Laat een live/mix/etc.
+                # dus NOOIT een gewone/remaster/edit verslaan. Maar als Spotify
+                # binnen de enige Search-resultaten uitsluitend zo'n alternatieve
+                # opname aanbiedt, mag die als zeer strenge noodfallback mee.
+                # Dit is bewust veel strenger dan de normale titelmatch:
+                # dezelfde hoofdartiest en praktisch dezelfde KERNTITEL zijn
+                # vereist. De tier zorgt dat deze kandidaat pas als laatste wint.
+                if title_score < 0.995 or primary_artist_score < 0.98:
+                    continue
+                candidate_score -= 0.55
+                version_tier = 2
+            elif spotify_version == "remaster":
                 candidate_score += 0.24
                 version_tier = 0
             elif spotify_version is None:
