@@ -901,6 +901,13 @@ def find_spotify_track(
             "empty and silent",
         ): "spotify:track:64mpPHhJIs1Fzlk1n7b9Kn",
 
+        # RadioBox geeft alleen artiest + basistitel. Voor deze opname is
+        # door handmatige controle bevestigd welke Spotify-opname bedoeld is.
+        (
+            "sophia",
+            "oh my love",
+        ): "spotify:track:6Cume4afdQJnWFFpVPRds1",
+
         (
             "ry x feat hermanos gutierrez",
             "you",
@@ -1102,25 +1109,39 @@ def find_spotify_track(
     #   Sing Me to Sleep (w/ Neko Case)
     #
     # Dat stuk hoort bij de artiestenmetadata, niet bij de titel.
-    title_feature_match = re.search(
-        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/|with)\s+"
-        r"([^\(\)\[\]]+?)\)?\s*$",
-        str(title or ""),
-        flags=re.IGNORECASE
-    )
+    def split_title_feature(value):
+        """
+        Splits only explicit feature metadata from a title.
 
-    title_feature_artist = (
-        title_feature_match.group(1).strip()
-        if title_feature_match
-        else None
-    )
+        Plain-language title words such as "Handle with Care" must remain
+        part of the song title. Therefore bare `with X` is never treated as
+        a feature marker; `with` is only accepted inside parentheses.
+        """
+        raw = str(value or "").strip()
 
-    search_title = re.sub(
-        r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/|with)\s+[^\(\)\[\]]+\)?\s*$",
-        "",
-        title,
-        flags=re.IGNORECASE
-    ).strip()
+        explicit = re.search(
+            r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+"
+            r"([^\(\)\[\]]+?)\)?\s*$",
+            raw,
+            flags=re.IGNORECASE,
+        )
+        if explicit:
+            return raw[:explicit.start()].strip(), explicit.group(1).strip()
+
+        parenthesized_with = re.search(
+            r"\s*\(\s*with\s+([^()\[\]]+?)\s*\)\s*$",
+            raw,
+            flags=re.IGNORECASE,
+        )
+        if parenthesized_with:
+            return (
+                raw[:parenthesized_with.start()].strip(),
+                parenthesized_with.group(1).strip(),
+            )
+
+        return raw, None
+
+    search_title, title_feature_artist = split_title_feature(title)
 
     # RadioBox beschrijft de titel ":)" soms als
     # ":) (smiley face)". Voor Spotify Search moet
@@ -1493,27 +1514,30 @@ def find_spotify_track(
         return False
 
     def search_version_hint(value):
-        """Kleine, zelfstandige versieclassificatie voor de rescue-beslissing."""
+        """Versieclassificatie voor rescue-gating; bekijk alle suffixsegmenten."""
         raw = str(value or "").casefold().replace("–", "-").replace("—", "-")
-        # Alleen duidelijke suffix/context-versies; woorden midden in een echte
-        # songtitel mogen de rescue nooit blokkeren.
-        suffix_match = re.search(r"(?:\(|\s+-\s+)([^()]*)\)?\s*$", raw)
-        suffix = suffix_match.group(1) if suffix_match else ""
+        segments = re.findall(r"\(([^()]*)\)", raw)
+        dash_parts = re.split(r"\s+-\s+", raw)
+        if len(dash_parts) > 1:
+            segments.extend(dash_parts[1:])
+        suffix = " | ".join(part.strip() for part in segments if part.strip())
         if not suffix:
             return None
         checks = (
-            ("remaster", r"\bremaster(?:ed)?\b"),
             ("live", r"\blive\b"),
             ("acoustic", r"\bacoustic\b"),
             ("remix", r"\bremix\b"),
             ("mix", r"\bmix\b"),
             ("demo", r"\bdemo\b"),
             ("instrumental", r"\binstrumental\b"),
+            ("arrangement", r"\b(?:arr\.?|arranged)\s+(?:for|by)\b"),
             ("edit", r"\b(?:radio\s+)?edit\b"),
             ("alternate", r"\b(?:alternate|alternative)\b"),
             ("unplugged", r"\bunplugged\b"),
             ("stripped", r"\bstripped\b"),
             ("session", r"\bsession\b"),
+            ("remaster", r"\bremaster(?:ed)?\b"),
+            ("named version", r"\b\w[\w -]*\s+version\b"),
         )
         for family, pattern in checks:
             if re.search(pattern, suffix):
@@ -1523,7 +1547,8 @@ def find_spotify_track(
     wanted_search_version = search_version_hint(title)
     hard_search_alternatives = {
         "live", "acoustic", "remix", "mix", "demo", "instrumental",
-        "alternate", "unplugged", "stripped", "session",
+        "alternate", "unplugged", "stripped", "session", "arrangement",
+        "named version",
     }
 
     def first_search_candidate_blocks_rescue(item):
@@ -1956,49 +1981,61 @@ def find_spotify_track(
         return {left_value[0], right_value[0]} <= {"y", "i", "j"}
 
     def version_family(value):
-        """Classificeer alleen een duidelijk afgescheiden versie-suffix."""
+        """Classificeer duidelijke versie-segmenten met semantische prioriteit."""
         raw = str(value or "").strip().lower()
         raw = raw.replace("–", "-").replace("—", "-")
 
-        suffixes = []
-        paren = re.search(r"\(([^()]*)\)\s*$", raw)
-        if paren:
-            suffixes.append(paren.group(1))
-        dash = re.search(r"\s+-\s+(.+?)\s*$", raw)
-        if dash:
-            suffixes.append(dash.group(1))
+        # Een Spotify-titel kan meerdere versie-segmenten combineren, bv.
+        # "Treetop Flyer (Live) - Remastered". Bekijk daarom ALLE duidelijke
+        # haakjes- en dashsegmenten, niet alleen het allerlaatste suffix.
+        suffixes = re.findall(r"\(([^()]*)\)", raw)
+        dash_parts = re.split(r"\s+-\s+", raw)
+        if len(dash_parts) > 1:
+            suffixes.extend(dash_parts[1:])
 
-        for suffix in suffixes:
-            if re.search(r"\bremaster(?:ed)?\b", suffix): return "remaster"
-            if re.search(r"\blive\b", suffix): return "live"
-            if re.search(r"\bacoustic\b", suffix): return "acoustic"
-            if re.search(r"\bremix\b", suffix): return "remix"
-            if re.search(r"\bmix\b", suffix): return "mix"
-            if re.search(r"\bdemo\b", suffix): return "demo"
-            if re.search(r"\binstrumental\b", suffix): return "instrumental"
-            if re.search(r"\breprise\b", suffix): return "reprise"
-            if re.search(r"\balternate|alternative\b", suffix): return "alternate"
-            if re.search(r"\bspotify\s+singles?\b", suffix): return "spotify singles"
-            if re.search(r"\bunplugged\b", suffix): return "unplugged"
-            if re.search(r"\bstripped\b", suffix): return "stripped"
-            if re.search(r"\bsession\b", suffix): return "session"
-            if re.search(r"\b(?:alternate\s+)?take\s*\d*\b", suffix): return "take"
-            if re.search(r"\bmono\b", suffix): return "mono"
-            if re.search(r"\bstereo\b", suffix): return "stereo"
-            if re.search(r"\bextended\b", suffix): return "extended"
-            if re.search(r"\bpiano\s+version\b", suffix): return "piano version"
-            if re.search(r"\borchestral\s+version\b", suffix): return "orchestral version"
-            if re.search(r"\b(?:re[- ]?record(?:ed|ing)?|taylor'?s\s+version)\b", suffix): return "re-recorded"
-            if re.search(r"\bsped\s*up\b", suffix): return "sped up"
-            if re.search(r"\bslowed(?:\s*\+?\s*reverb)?\b", suffix): return "slowed"
-            if re.search(r"\bnightcore\b", suffix): return "nightcore"
-            if re.search(r"\bkaraoke\b", suffix): return "karaoke"
-            if re.search(r"\bradio\s+edit\b", suffix): return "edit"
-            if re.search(r"\bedit\b", suffix): return "edit"
-            if re.search(r"\bsingle\s+version\b", suffix): return "single version"
-            if re.search(r"\balbum\s+version\b", suffix): return "album version"
-            if re.search(r"\boriginal\s+version\b", suffix): return "original version"
-            if re.search(r"\bversion\b", suffix): return "version"
+        context = " | ".join(part.strip() for part in suffixes if part.strip())
+        if not context:
+            return None
+
+        # Meest betekenisvolle opnamefamilie eerst. Een live-remaster blijft
+        # dus live; remaster beschrijft alleen de mastering, niet de uitvoering.
+        if re.search(r"\blive\b", context): return "live"
+        if re.search(r"\bacoustic\b", context): return "acoustic"
+        if re.search(r"\bremix\b", context): return "remix"
+        if re.search(r"\bmix\b", context): return "mix"
+        if re.search(r"\bdemo\b", context): return "demo"
+        if re.search(r"\binstrumental\b", context): return "instrumental"
+        if re.search(r"\breprise\b", context): return "reprise"
+        if re.search(r"\balternate|alternative\b", context): return "alternate"
+        if re.search(r"\bspotify\s+singles?\b", context): return "spotify singles"
+        if re.search(r"\bunplugged\b", context): return "unplugged"
+        if re.search(r"\bstripped\b", context): return "stripped"
+        if re.search(r"\bsession\b", context): return "session"
+        if re.search(r"\b(?:alternate\s+)?take\s*\d*\b", context): return "take"
+        if re.search(r"\bmono\b", context): return "mono"
+        if re.search(r"\bstereo\b", context): return "stereo"
+        if re.search(r"\bextended\b", context): return "extended"
+        if re.search(r"\bpiano\s+version\b", context): return "piano version"
+        if re.search(r"\borchestral\s+version\b", context): return "orchestral version"
+        if re.search(r"\b(?:arr\.?|arranged)\s+(?:for|by)\b", context): return "arrangement"
+        if re.search(r"\b(?:re[- ]?record(?:ed|ing)?|taylor'?s\s+version)\b", context): return "re-recorded"
+        if re.search(r"\bsped\s*up\b", context): return "sped up"
+        if re.search(r"\bslowed(?:\s*\+?\s*reverb)?\b", context): return "slowed"
+        if re.search(r"\bnightcore\b", context): return "nightcore"
+        if re.search(r"\bkaraoke\b", context): return "karaoke"
+        if re.search(r"\bradio\s+edit\b", context): return "edit"
+        if re.search(r"\bedit\b", context): return "edit"
+        if re.search(r"\bsingle\s+version\b", context): return "single version"
+        if re.search(r"\balbum\s+version\b", context): return "album version"
+        if re.search(r"\boriginal\s+version\b", context): return "original version"
+        if re.search(r"\bremaster(?:ed)?\b", context): return "remaster"
+        if re.search(r"\bversion\b", context):
+            # Alleen exact "Version" is neutraal. Benoemde varianten zoals
+            # "Mfp Version" / "Then Again Version" blijven apart en lager.
+            version_parts = [part for part in suffixes if re.search(r"\bversion\b", part)]
+            if any(re.fullmatch(r"\s*version\s*", part) for part in version_parts):
+                return "version"
+            return "named version"
         return None
 
     def requested_version(value):
@@ -2046,6 +2083,8 @@ def find_spotify_track(
                 |mono
                 |stereo
                 |extended
+                |(?:arr\.?|arranged)\s+(?:for|by)\s+[^)]*
+                |(?:arr\.?|arranged)\s+(?:for|by)\s+.*
                 |piano\s+version
                 |orchestral\s+version
                 |re[- ]?record(?:ed|ing)?
@@ -2559,9 +2598,20 @@ def find_spotify_track(
         # Daarom is een ontbrekende feature geen harde afwijzing meer.
         # De kandidaat krijgt hieronder wel minder score dan een versie
         # waarop de genoemde gastartiest daadwerkelijk aanwezig is.
+        explicit_feature_count = max(0, len(wanted_artist_compact) - 1)
         missing_feature_count = max(
             0,
-            (len(wanted_artist_compact) - 1) - matched_feature_count
+            explicit_feature_count - matched_feature_count
+        )
+
+        # If RadioBox explicitly names guest artists, a Spotify candidate that
+        # contains all of them must outrank an otherwise identical main-artist
+        # version. Missing guest credits remain allowed as a fallback because
+        # Spotify sometimes omits them from track-level artist objects.
+        feature_tier = (
+            1
+            if explicit_feature_count and matched_feature_count == explicit_feature_count
+            else 0
         )
 
         # =============================================
@@ -2634,12 +2684,7 @@ def find_spotify_track(
         # "Time Moves Slow (Feat Sam Herring)"
         # moet ook kunnen matchen met Spotify:
         # "Time Moves Slow"
-        wanted_title_for_match = re.sub(
-            r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/|with)\s+[^\(\)\[\]]+\)?\s*$",
-            "",
-            search_title,
-            flags=re.IGNORECASE
-        ).strip()
+        wanted_title_for_match, _ = split_title_feature(search_title)
 
         # RadioBox: ":) (smiley face)" -> echte titel ":)"
         wanted_title_for_match = re.sub(
@@ -2873,8 +2918,7 @@ def find_spotify_track(
             "re-recorded", "sped up", "slowed", "nightcore", "karaoke",
         }
         soft_fallback_versions = {
-            "edit", "single version", "album version",
-            "original version", "version",
+            "edit", "single version", "album version", "version",
         }
 
         if wanted_version:
@@ -2883,38 +2927,50 @@ def find_spotify_track(
             candidate_score += 0.60
             version_tier = 0
         else:
-            if spotify_version in hard_alternative_versions:
-                # RadioBox vroeg geen speciale versie. Laat een live/mix/etc.
-                # dus NOOIT een gewone/remaster/edit verslaan. Maar als Spotify
-                # binnen de enige Search-resultaten uitsluitend zo'n alternatieve
-                # opname aanbiedt, mag die als zeer strenge noodfallback mee.
-                # Dit is bewust veel strenger dan de normale titelmatch:
-                # dezelfde hoofdartiest en praktisch dezelfde KERNTITEL zijn
-                # vereist. De tier zorgt dat deze kandidaat pas als laatste wint.
-                same_core_title = (
-                    spotify_compact == wanted_compact
-                    or spotify_base_compact == wanted_base_compact
-                    or structural_title_match
-                    or extension_title_match
-                )
-                if not same_core_title or primary_artist_score < 0.98:
-                    continue
-                candidate_score -= 0.55
-                version_tier = 2
+            same_core_title = (
+                spotify_compact == wanted_compact
+                or spotify_base_compact == wanted_base_compact
+                or structural_title_match
+                or extension_title_match
+            )
+
+            if spotify_version == "arrangement":
+                # Een arrangement is muzikaal een andere uitvoering. Zonder
+                # expliciete RadioBox-aanduiding liever overslaan dan gokken.
+                continue
             elif spotify_version == "remaster":
                 candidate_score += 0.24
                 version_tier = 0
             elif spotify_version is None:
                 candidate_score += 0.30
                 version_tier = 0
+            elif spotify_version == "original version":
+                # "Original Version" is de expliciete catalogusvorm van de
+                # gewone opname en moet boven afgeleide named versions staan.
+                if not same_core_title or primary_artist_score < 0.95:
+                    continue
+                candidate_score += 0.18
+                version_tier = 0
             elif spotify_version in soft_fallback_versions:
-                # Alleen een zeer sterke titel/artiest mag überhaupt als
-                # fallback meedoen. De tier zorgt dat iedere gewone/remaster
-                # kandidaat altijd wint, ongeacht kleine scoreverschillen.
                 if title_score < 0.985 or primary_artist_score < 0.95:
                     continue
                 candidate_score -= 0.20
                 version_tier = 1
+            elif spotify_version in hard_alternative_versions:
+                # Live/mix/acoustic/etc. alleen als strenge fallback wanneer
+                # geen gewone/remaster/original/veilige edit beschikbaar is.
+                if not same_core_title or primary_artist_score < 0.98:
+                    continue
+                candidate_score -= 0.55
+                version_tier = 2
+            elif spotify_version == "named version":
+                # Onbekende benoemde catalogusversies (bv. "Mfp Version" of
+                # "Then Again Version") zijn minder betrouwbaar dan een
+                # herkenbare live/mix/etc. en komen pas daarna.
+                if not same_core_title or primary_artist_score < 0.985:
+                    continue
+                candidate_score -= 0.75
+                version_tier = 3
             else:
                 continue
 
@@ -2936,6 +2992,7 @@ def find_spotify_track(
         candidates.append(
             (
                 -version_tier,
+                feature_tier,
                 title_confidence,
                 candidate_score,
                 -len(candidates),
@@ -2952,9 +3009,10 @@ def find_spotify_track(
         candidates.sort(
             key=lambda candidate: (
                 candidate[0],  # version tier
-                candidate[1],  # title confidence class
-                candidate[2],  # detailed score
-                candidate[3],  # Spotify order tie-break
+                candidate[1],  # explicit feature completeness
+                candidate[2],  # title confidence class
+                candidate[3],  # detailed score
+                candidate[4],  # Spotify order tie-break
             ),
             reverse=True
         )
@@ -2965,36 +3023,37 @@ def find_spotify_track(
         # mag dus nooit kunstmatige ambiguïteit veroorzaken.
         if len(candidates) > 1:
             best, second = candidates[0], candidates[1]
-            same_recording = bool(best[5] and second[5] and best[5] == second[5])
+            same_recording = bool(best[6] and second[6] and best[6] == second[6])
 
             # Meerdere officiële varianten van exact dezelfde kerntitel binnen
             # dezelfde fallback-familie (bv. Bright-Side Mix / Dark-Side Mix)
             # zijn geen song-ambiguïteit. Als er geen ordinary/remaster/edit
             # beschikbaar is, mag Spotify's eigen ranking de variant kiezen.
             same_core_variant_family = (
-                best[9] == second[9]
-                and best[9] in hard_alternative_versions
-                and title_identity(title_base(best[6])) == title_identity(title_base(second[6]))
+                best[10] == second[10]
+                and best[10] in hard_alternative_versions
+                and title_identity(title_base(best[7])) == title_identity(title_base(second[7]))
             )
 
             if (
                 not same_recording
                 and not same_core_variant_family
-                and best[4] != second[4]
+                and best[5] != second[5]
                 and best[0] == second[0]
                 and best[1] == second[1]
-                and abs(best[2] - second[2]) < 0.015
-                and best[2] < 2.40
+                and best[2] == second[2]
+                and abs(best[3] - second[3]) < 0.015
+                and best[3] < 2.40
             ):
                 return None
 
-        LAST_SPOTIFY_MATCH_ISRC = candidates[0][5]
+        LAST_SPOTIFY_MATCH_ISRC = candidates[0][6]
         print(
             "🎯 Spotify match gekozen: "
-            f"{candidates[0][7]} — {candidates[0][6]} "
-            f"| {candidates[0][8]} | versie: {candidates[0][9]}"
+            f"{candidates[0][8]} — {candidates[0][7]} "
+            f"| {candidates[0][9]} | versie: {candidates[0][10]}"
         )
-        return candidates[0][4]
+        return candidates[0][5]
 
     print(f"🧪 Spotify-query zonder veilige match: {query}")
 
@@ -3470,7 +3529,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 26
+    MATCHING_RULES_VERSION = 27
 
     if cache.get(
         "__matching_rules_version"
