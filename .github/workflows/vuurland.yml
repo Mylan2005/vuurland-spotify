@@ -60,8 +60,8 @@ jobs:
 
             git commit -m "Update Vuurland sync state"
 
-            for attempt in 1 2 3 4 5; do
-              echo "🔄 Push-poging $attempt/5..."
+            for attempt in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
+              echo "🔄 Push-poging $attempt/15..."
 
               git fetch origin main
 
@@ -76,15 +76,24 @@ jobs:
                 return 0
               fi
 
-              echo "⚠️ Push mislukt. GitHub kan veranderd zijn of tijdelijk onbereikbaar zijn."
+              echo "⚠️ GitHub state-push mislukt. De lokale state-commit blijft behouden en wordt opnieuw geprobeerd."
 
-              if [ "$attempt" -lt 5 ]; then
-                echo "⏳ 15 seconden wachten en opnieuw proberen..."
-                sleep 15
+              if [ "$attempt" -lt 15 ]; then
+                case "$attempt" in
+                  1) WAIT_SECONDS=15 ;;
+                  2) WAIT_SECONDS=30 ;;
+                  3) WAIT_SECONDS=60 ;;
+                  4|5) WAIT_SECONDS=120 ;;
+                  *) WAIT_SECONDS=180 ;;
+                esac
+
+                echo "⏳ $WAIT_SECONDS seconden wachten en opnieuw proberen..."
+                sleep "$WAIT_SECONDS"
               fi
             done
 
-            echo "❌ Push is na 5 pogingen nog steeds mislukt."
+            echo "❌ GitHub state-push is na 15 pogingen nog steeds mislukt."
+            echo "🛑 Sync wordt gestopt zodat niet verder wordt gewerkt op state die nog niet duurzaam op GitHub staat."
             return 1
           }
 
