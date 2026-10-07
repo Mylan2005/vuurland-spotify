@@ -128,7 +128,7 @@ if SPOTIFY_SEARCH_BLOCKED_UNTIL <= time.time():
 
 SCOPES = (
     "playlist-read-private playlist-modify-private "
-    "playlist-modify-public"
+    "playlist-modify-public user-library-modify"
 )
 
 AUTH_URL = "https://accounts.spotify.com/authorize"
@@ -584,6 +584,187 @@ def spotify_request(
 def get_playlist():
     # Gebruik altijd de bestaande Vuurland-playlist.
     return PLAYLIST_ID
+
+# === VUURLAND AUTO VOLUMES v1 ===
+VOLUME_LIMIT = 10000
+VOLUME_NAME_PREFIX = "🔥 Vol "
+VOLUME_EXACT_COUNT_GUARD = 10
+PENDING_LIBRARY_LIKE_RETRY_SECONDS = 3600
+
+
+def _get_playlist_total(playlist_id):
+    data = spotify_request(
+        "GET",
+        f"/playlists/{playlist_id}/items",
+        params={"limit": 1, "offset": 0},
+    )
+    try:
+        return int(data.get("total", 0))
+    except (TypeError, ValueError):
+        return 0
+
+
+def _find_named_playlist(playlist_name):
+    offset = 0
+    while True:
+        data = spotify_request(
+            "GET", "/me/playlists", params={"limit": 50, "offset": offset}
+        )
+        items = data.get("items", []) or []
+        for item in items:
+            if str(item.get("name") or "") == playlist_name:
+                playlist_id = str(item.get("id") or "").strip()
+                if playlist_id:
+                    return playlist_id
+        if not data.get("next"):
+            return None
+        offset += len(items) or 50
+
+
+def _create_volume_playlist(volume_number):
+    playlist_name = f"{VOLUME_NAME_PREFIX}{volume_number}"
+    data = spotify_request(
+        "POST",
+        "/me/playlists",
+        json={
+            "name": playlist_name,
+            "public": False,
+            "description": "Automatisch vervolg van de Vuurland Spotify-sync.",
+        },
+    )
+    playlist_id = str(data.get("id") or "").strip()
+    if not playlist_id:
+        raise RuntimeError(f"Spotify gaf geen playlist-ID terug voor {playlist_name}.")
+    print(f"🆕 Nieuwe Spotify-playlist aangemaakt: {playlist_name}")
+    return playlist_id
+
+
+def get_active_volume_playlist(cache):
+    volume_playlists = dict(cache.get("__vuurland_volume_playlists", {}))
+    volume_playlists.setdefault("1", PLAYLIST_ID)
+
+    try:
+        volume_number = int(cache.get("__vuurland_active_volume", 1))
+    except (TypeError, ValueError):
+        volume_number = 1
+    volume_number = max(1, volume_number)
+
+    playlist_id = volume_playlists.get(str(volume_number)) or PLAYLIST_ID
+    cached_playlist_id = cache.get("__vuurland_active_playlist_id")
+    cached_count = cache.get("__vuurland_active_playlist_count")
+
+    if (
+        cached_playlist_id != playlist_id
+        or not isinstance(cached_count, int)
+        or cached_count < 0
+    ):
+        cached_count = _get_playlist_total(playlist_id)
+
+    while cached_count >= VOLUME_LIMIT:
+        next_volume = volume_number + 1
+        next_key = str(next_volume)
+        next_name = f"{VOLUME_NAME_PREFIX}{next_volume}"
+
+        next_playlist_id = volume_playlists.get(next_key)
+        if not next_playlist_id:
+            next_playlist_id = _find_named_playlist(next_name)
+
+        if next_playlist_id:
+            next_count = _get_playlist_total(next_playlist_id)
+        else:
+            next_playlist_id = _create_volume_playlist(next_volume)
+            next_count = 0
+
+        volume_playlists[next_key] = next_playlist_id
+        volume_number = next_volume
+        playlist_id = next_playlist_id
+        cached_count = next_count
+
+    cache["__vuurland_volume_playlists"] = volume_playlists
+    cache["__vuurland_active_volume"] = volume_number
+    cache["__vuurland_active_playlist_id"] = playlist_id
+    cache["__vuurland_active_playlist_count"] = cached_count
+    save_cache(cache)
+    return playlist_id, volume_number, cached_count
+
+
+def save_track_to_library(uri):
+    if not uri:
+        return
+    spotify_request("PUT", "/me/library", params={"uris": uri})
+
+
+def _attempt_library_like(cache, uri):
+    pending = dict(cache.get("__pending_library_likes", {}))
+    pending[uri] = {"last_attempt": 0}
+    cache["__pending_library_likes"] = pending
+    save_cache(cache)
+
+    try:
+        save_track_to_library(uri)
+    except Exception as error:
+        pending = dict(cache.get("__pending_library_likes", {}))
+        pending[uri] = {
+            "last_attempt": int(time.time()),
+            "error": str(error)[:300],
+        }
+        cache["__pending_library_likes"] = pending
+        save_cache(cache)
+        print("⚠️ Track staat in het volume, maar kon nog niet worden geliket; veilig pending.")
+        print(f"   {error}")
+        return False
+
+    pending = dict(cache.get("__pending_library_likes", {}))
+    pending.pop(uri, None)
+    cache["__pending_library_likes"] = pending
+    save_cache(cache)
+    print("❤️ Opgeslagen in Liked Songs.")
+    return True
+
+
+# === VUURLAND PENDING LIKES RETRY v1 ===
+def _retry_one_pending_library_like(cache):
+    pending = dict(cache.get("__pending_library_likes", {}))
+    if not pending:
+        return False
+
+    now = int(time.time())
+
+    for uri, info in pending.items():
+        info = dict(info or {})
+        last_attempt = int(info.get("last_attempt", 0) or 0)
+
+        if (
+            last_attempt
+            and now - last_attempt
+            < PENDING_LIBRARY_LIKE_RETRY_SECONDS
+        ):
+            continue
+
+        try:
+            save_track_to_library(uri)
+        except Exception as error:
+            info["last_attempt"] = now
+            info["error"] = str(error)[:300]
+            pending[uri] = info
+            cache["__pending_library_likes"] = pending
+            save_cache(cache)
+            print(
+                "⚠️ Pending Liked Songs retry mislukt; "
+                "volgende poging pas na cooldown."
+            )
+            return False
+
+        pending.pop(uri, None)
+        cache["__pending_library_likes"] = pending
+        save_cache(cache)
+        print(
+            "❤️ Eerder pending nummer alsnog opgeslagen "
+            "in Liked Songs."
+        )
+        return True
+
+    return False
 
 
 def existing_tracks(playlist_id):
@@ -3727,7 +3908,14 @@ def sync():
     # ---------------------------------
 
     try:
-        playlist_id = get_playlist()
+        (
+            playlist_id,
+            active_volume_number,
+            active_playlist_count,
+        ) = get_active_volume_playlist(cache)
+
+        if active_volume_number >= 2:
+            _retry_one_pending_library_like(cache)
 
     except RuntimeError as error:
         if "Spotify rate-limit actief" in str(error):
@@ -3787,9 +3975,16 @@ def sync():
             "📋 Spotify-playlist cache vernieuwen..."
         )
 
-        playlist_keys = set()
-        playlist_uris = set()
-        playlist_isrcs = set()
+        if active_volume_number <= 1:
+            playlist_keys = set()
+            playlist_uris = set()
+            playlist_isrcs = set()
+        else:
+            # Gesloten volumes blijven in de globale dedupe-cache.
+            # Alleen het actieve volume wordt opnieuw gescand.
+            playlist_keys = set(cache.get("__playlist_keys", []))
+            playlist_uris = set(cache.get("__playlist_uris", []))
+            playlist_isrcs = set(cache.get("__playlist_isrcs", []))
 
         # Voor veilige bestaande-duplicatecleanup:
         # per ISRC onthouden welke verschillende URI's voorkomen.
@@ -3983,6 +4178,12 @@ def sync():
                 "dubbele Spotify-URI('s) verwijderd "
                 "op basis van exacte ISRC."
             )
+
+        active_playlist_count = playlist_position
+
+        cache[
+            "__vuurland_active_playlist_count"
+        ] = active_playlist_count
 
         cache[
             "__playlist_keys"
@@ -4604,10 +4805,35 @@ def sync():
         # TOEVOEGEN AAN SPOTIFY
         # ---------------------------------
 
+        # Alleen in de laatste 10 plaatsen doen we een exacte Spotify-count.
+        # Daardoor zijn er maximaal 10 extra GET-calls per volledig volume.
+        if active_playlist_count >= VOLUME_LIMIT - VOLUME_EXACT_COUNT_GUARD:
+            active_playlist_count = _get_playlist_total(playlist_id)
+            cache["__vuurland_active_playlist_count"] = active_playlist_count
+            save_cache(cache)
+
+            if active_playlist_count >= VOLUME_LIMIT:
+                (
+                    playlist_id,
+                    active_volume_number,
+                    active_playlist_count,
+                ) = get_active_volume_playlist(cache)
+
         add_tracks(
             playlist_id,
             [uri]
         )
+
+        active_playlist_count += 1
+        cache["__vuurland_active_volume"] = active_volume_number
+        cache["__vuurland_active_playlist_id"] = playlist_id
+        cache["__vuurland_active_playlist_count"] = active_playlist_count
+        save_cache(cache)
+
+        # Vol. 1 blijft exact hetzelfde. Vanaf Vol. 2 ook Liked Songs.
+        # Hiervoor wordt dezelfde URI gebruikt: GEEN extra Spotify Search.
+        if active_volume_number >= 2:
+            _attempt_library_like(cache, uri)
 
         # Meteen lokaal als bestaande Spotify-URI markeren.
         # Zo kan dezelfde URI later in deze run niet opnieuw
