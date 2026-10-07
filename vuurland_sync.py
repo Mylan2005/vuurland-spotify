@@ -1416,6 +1416,16 @@ def find_spotify_track(
                 if token == "the" and longer[:i] + longer[i + 1:] == shorter:
                     return True
 
+        # Veilige AKA-catalogustitel: één kant mag exact één van de
+        # twee volledige titeldelen zijn. Geen losse substring-match.
+        for full_words, short_words in ((left_words, right_words), (right_words, left_words)):
+            if "aka" in full_words and short_words:
+                aka_index = full_words.index("aka")
+                before = full_words[:aka_index]
+                after = full_words[aka_index + 1:]
+                if short_words == before or short_words == after:
+                    return True
+
         # Eén veilig voorzetsel vooraan, bv. My Secret Life / In My Secret Life.
         if abs(len(left_words) - len(right_words)) == 1:
             longer, shorter = (
@@ -1566,10 +1576,17 @@ def find_spotify_track(
         # We gebruiken die alleen als tweede kans; de eerste brede Search
         # blijft nodig voor aliases, projectcredits en afwijkende metadata.
         rescue_artist = str(spotify_search_artist or primary_search_artist or "").strip()
+
+        # Meerwoordige field-values quoten zodat Spotify de volledige titel
+        # en artiest als één zoekwaarde behandelt.
+        def spotify_search_quote(value):
+            value = str(value or "").replace('"', ' ').strip()
+            return f'"{value}"' if value else ""
+
         rescue_query = " ".join(
             part for part in (
-                f"track:{rescue_title}" if rescue_title else "",
-                f"artist:{rescue_artist}" if rescue_artist else "",
+                f"track:{spotify_search_quote(rescue_title)}" if rescue_title else "",
+                f"artist:{spotify_search_quote(rescue_artist)}" if rescue_artist else "",
             )
             if part
         )
@@ -1855,6 +1872,28 @@ def find_spotify_track(
                 return True
         return False
 
+    def aka_title_equivalent(left, right):
+        """Veilige catalogusvariant: "A aka B" <-> exact A of exact B."""
+        left_norm = normalize(left).strip()
+        right_norm = normalize(right).strip()
+
+        def split_aka(value):
+            parts = re.split(r"\s+aka\s+", value, maxsplit=1, flags=re.IGNORECASE)
+            if len(parts) != 2:
+                return None
+            first, second = (part.strip() for part in parts)
+            return (first, second) if first and second else None
+
+        for full, short in ((left_norm, right_norm), (right_norm, left_norm)):
+            aka_parts = split_aka(full)
+            if not aka_parts:
+                continue
+            short_id = title_identity(short)
+            if short_id and short_id in {title_identity(aka_parts[0]), title_identity(aka_parts[1])}:
+                return True
+        return False
+
+
     def leading_preposition_equivalent(left, right):
         """
         Zeer beperkte rescue voor één ontbrekend kort voorzetsel vooraan.
@@ -2096,6 +2135,16 @@ def find_spotify_track(
             raw_value,
             flags=re.IGNORECASE
         )
+
+        # Algemene versie-suffix: als een duidelijk afgescheiden laatste
+        # segment door version_family() als versie wordt herkend, haal alleen
+        # dat segment van de kerntitel af. Dit dekt bv. "Bright-Side Mix",
+        # "Mandolin / Guitar Mix" en "Live at ..." zonder vrije fuzzy.
+        if version_family(raw_value):
+            if re.search(r"\s+-\s+[^()]+$", raw_value):
+                raw_value = re.sub(r"\s+-\s+[^()]+$", "", raw_value).strip()
+            elif re.search(r"\s*\([^()]+\)\s*$", raw_value):
+                raw_value = re.sub(r"\s*\([^()]+\)\s*$", "", raw_value).strip()
 
         value = normalize(raw_value)
 
@@ -2636,6 +2685,10 @@ def find_spotify_track(
                 wanted_title_base_for_match,
                 spotify_title_base
             )
+            or aka_title_equivalent(
+                wanted_title_base_for_match,
+                spotify_title_base
+            )
             or (
                 primary_artist_exact
                 and leading_preposition_equivalent(
@@ -2913,8 +2966,20 @@ def find_spotify_track(
         if len(candidates) > 1:
             best, second = candidates[0], candidates[1]
             same_recording = bool(best[5] and second[5] and best[5] == second[5])
+
+            # Meerdere officiële varianten van exact dezelfde kerntitel binnen
+            # dezelfde fallback-familie (bv. Bright-Side Mix / Dark-Side Mix)
+            # zijn geen song-ambiguïteit. Als er geen ordinary/remaster/edit
+            # beschikbaar is, mag Spotify's eigen ranking de variant kiezen.
+            same_core_variant_family = (
+                best[9] == second[9]
+                and best[9] in hard_alternative_versions
+                and title_identity(title_base(best[6])) == title_identity(title_base(second[6]))
+            )
+
             if (
                 not same_recording
+                and not same_core_variant_family
                 and best[4] != second[4]
                 and best[0] == second[0]
                 and best[1] == second[1]
@@ -3405,7 +3470,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 25
+    MATCHING_RULES_VERSION = 26
 
     if cache.get(
         "__matching_rules_version"
