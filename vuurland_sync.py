@@ -3914,7 +3914,7 @@ def sync():
             active_playlist_count,
         ) = get_active_volume_playlist(cache)
 
-        if active_volume_number >= 2:
+        if active_volume_number >= 1:
             _retry_one_pending_library_like(cache)
 
     except RuntimeError as error:
@@ -4830,9 +4830,9 @@ def sync():
         cache["__vuurland_active_playlist_count"] = active_playlist_count
         save_cache(cache)
 
-        # Vol. 1 blijft exact hetzelfde. Vanaf Vol. 2 ook Liked Songs.
+        # Vanaf Vol. 1 wordt elke nieuwe toevoeging ook geliket.
         # Hiervoor wordt dezelfde URI gebruikt: GEEN extra Spotify Search.
-        if active_volume_number >= 2:
+        if active_volume_number >= 1:
             _attempt_library_like(cache, uri)
 
         # Meteen lokaal als bestaande Spotify-URI markeren.
