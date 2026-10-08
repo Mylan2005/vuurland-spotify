@@ -2221,7 +2221,7 @@ def find_spotify_track(
         if re.search(r"\bextended\b", context): return "extended"
         if re.search(r"\bpiano\s+version\b", context): return "piano version"
         if re.search(r"\borchestral\s+version\b", context): return "orchestral version"
-        if re.search(r"\b(?:arr\.?|arranged)\s+(?:for|by)\b", context): return "arrangement"
+        if re.search(r"\b(?:arr\.?|arranged|arrangement)\s+(?:for|by)\b", context): return "arrangement"
         if re.search(r"\b(?:re[- ]?record(?:ed|ing)?|taylor'?s\s+version)\b", context): return "re-recorded"
         if re.search(r"\bsped\s*up\b", context): return "sped up"
         if re.search(r"\bslowed(?:\s*\+?\s*reverb)?\b", context): return "slowed"
@@ -2682,6 +2682,20 @@ def find_spotify_track(
                 primary_artist_score = 1.0
                 primary_artist_exact = True
 
+        # v30: RadioBox kan een samenwerking als "A & B" schrijven,
+        # terwijl Spotify alleen A als primaire artiest heeft. Dit is
+        # uitsluitend een solo-fallback bij exacte A-credit; geen fuzzy prefix.
+        # Officiële bandnamen blijven beschermd tegen splitsen.
+        possible_collab = re.split(r"\s+(?:&|and)\s+", wanted_artists[0])
+        solo_collab_fallback = False
+        if (len(possible_collab) == 2
+                and len(wanted_artists) == 1
+                and not primary_artist_exact
+                and compact(possible_collab[0]) == spotify_primary_compact
+                and len(spotify_artists) == 1
+                and not re.match(r"^(?:the\s+)?(?:bad seeds|wailers|the stampede|double trouble|the heart breakers)$", possible_collab[1])):
+            solo_collab_fallback = True
+
         # "The" aan het begin van een artiestennaam is vaak
         # alleen een catalogusverschil:
         #
@@ -2805,6 +2819,7 @@ def find_spotify_track(
             and not person_name_variant
             and not primary_artist_contained
             and not album_as_artist_match
+            and not solo_collab_fallback
             and primary_artist_score < 0.90
         ):
             continue
@@ -2830,22 +2845,33 @@ def find_spotify_track(
             ):
                 matched_feature_count += 1
 
-        # Expliciete RadioBox-features/collabs zijn onderdeel van de identiteit.
-        # Als een genoemde gast ontbreekt, liever overslaan dan de soloversie pakken.
+        # v30: een soloversie is een fallback, nooit de eerste keuze.
+        # Een ONJUISTE gastcredit is geen soloversie en blijft verboden.
         explicit_feature_count = max(0, len(wanted_artist_compact) - 1)
-        missing_feature_count = max(
-            0,
-            explicit_feature_count - matched_feature_count
-        )
-
+        missing_feature_count = max(0, explicit_feature_count - matched_feature_count)
         if missing_feature_count:
-            continue
+            if (not primary_artist_exact
+                    or len(spotify_artists) != 1):
+                continue
+        feature_tier = 1 if explicit_feature_count and not missing_feature_count else 0
+        # Spotify kan A & B ook als één gezamenlijke artiestnaam bewaren.
+        # Deze exacte credit moet dan boven de A-solo-fallback staan.
+        if (len(wanted_artists) == 1 and not missing_feature_count
+                and len(re.split(r"\s+(?:&|and)\s+", wanted_artists[0])) == 2
+                and primary_wanted_artist == spotify_primary_compact):
+            feature_tier = 1
+        # De volledige A & B-credit, verdeeld over twee Spotify-artists,
+        # krijgt ook altijd voorrang op de soloversie.
+        if len(spotify_artists) > 1 and primary_artist_exact and not missing_feature_count:
+            if normalize(" & ".join(spotify_artists)) == normalize(wanted_artists[0]):
+                feature_tier = 1
 
-        feature_tier = (
-            1
-            if explicit_feature_count
-            else 0
-        )
+        # Bij een gecombineerde RadioBox-credit moet de solo-fallback
+        # expliciet lager scoren dan dezelfde track met alle credits.
+        if solo_collab_fallback:
+            feature_tier = 0
+            primary_artist_score = 1.0
+            primary_artist_exact = True
 
         # =============================================
         # TITEL CONTROLEREN
@@ -3161,28 +3187,9 @@ def find_spotify_track(
         # kanten. De exacte versie krijgt daardoor extra
         # gewicht.
         #
-        # Als RadioBox expliciet een bekende versie vraagt,
-        # mag Spotify geen ANDERE bekende versie leveren.
-        #
-        # Voorbeeld:
-        # RadioBox: "Song (live)"
-        # Spotify:  "Song - Live at the BBC"  -> toegestaan
-        #
-        # RadioBox: "Song (live)"
-        # Spotify:  "Song - Acoustic"         -> blokkeren
-        # Spotify:  "Song - Remix"            -> blokkeren
-        #
-        # Een Spotify-kandidaat zonder bekende versie blijft
-        # toegestaan: sommige Spotify-titels vermelden hun
-        # versie niet expliciet.
-        # Versie-hiërarchie:
-        # 1) RadioBox vraagt expliciet een versie -> Spotify moet dezelfde
-        #    versie-familie leveren. Geen live/remix gokken.
-        # 2) RadioBox vraagt de gewone track -> gewone/remaster krijgt
-        #    absolute voorkeur. Een neutrale edit/single-version is fallback.
-        #    Live/mix/remix/acoustic/demo/instrumental/etc. mogen alleen als
-        #    NOODfallback wanneer er geen gewone/remaster/veilige edit-kandidaat
-        #    in de Spotify-resultaten zit én artiest + kerntitel vrijwel exact zijn.
+        # v30: gevraagde versie eerst; overige betrouwbare uitvoeringen
+        # alleen volgens de vastgelegde fallback-prioriteit.
+        # Specifieke benoemde versies en concertlocaties blijven beschermd.
         hard_alternative_versions = {
             "live", "mix", "remix", "acoustic", "demo",
             "instrumental", "reprise", "alternate", "spotify singles",
@@ -3202,80 +3209,61 @@ def find_spotify_track(
             or extension_title_match
         )
 
-        if wanted_version and wanted_named_variant:
-            # Named collaborations/cuts are not interchangeable with a solo
-            # recording, even under the alternative-version fallback rule.
-            if spotify_named_variant != wanted_named_variant:
-                continue
-            candidate_score += 0.60
+        # v30: gevraagde versie eerst. Vervolgens ordinary, remaster,
+        # live en als laatste mix/remix. Alle fallbacks eisen een
+        # betrouwbare kerntitel en exacte primaire artiestidentiteit.
+        if wanted_named_variant and spotify_named_variant != wanted_named_variant:
+            continue
+        if wanted_version and spotify_version == wanted_version:
             version_tier = 0
-        elif wanted_version and spotify_version == wanted_version:
             candidate_score += 0.60
-            version_tier = 0
-        elif wanted_version:
-            # Asked-for take unavailable among the same Search results:
-            # prefer studio, original, remaster; only then a mix or remix.
-            # This is a FALLBACK only, never a different song or artist.
-            if not same_core_title or primary_artist_score < 0.98:
-                continue
-            if spotify_version is None or spotify_version in {"original version", "remaster"}:
-                version_tier = 1
-            elif spotify_version in soft_fallback_versions:
-                version_tier = 2
-            elif spotify_version in {"mix", "remix"}:
-                version_tier = 3
-            else:
-                # Do not silently replace an explicitly requested recording
-                # with an unrelated alternate, instrumental, or named cut.
-                continue
-            candidate_score -= 0.15 * version_tier
+        elif spotify_version is None:
+            version_tier = 0 if not wanted_version else 1
+            candidate_score += 0.30
+        elif spotify_version == "original version":
+            version_tier = 0 if not wanted_version else 1
+            candidate_score += 0.18
+        elif spotify_version == "remaster":
+            version_tier = 1 if not wanted_version else 2
+            candidate_score += 0.24
+        elif spotify_version in soft_fallback_versions:
+            version_tier = 4 if not wanted_version else 5
+            candidate_score -= 0.20
+        elif spotify_version == "live":
+            version_tier = 2 if not wanted_version else 3
+            candidate_score -= 0.35
+        elif spotify_version in {"mix", "remix"}:
+            version_tier = 3 if not wanted_version else 4
+            candidate_score -= 0.50
+        elif spotify_version in hard_alternative_versions:
+            # Behoud de v29-noodfallback voor bekende alternatieve versies,
+            # maar pas na ordinary/remaster/live/mix/remix.
+            version_tier = 6
+            candidate_score -= 0.75
         else:
-            same_core_title = (
-                spotify_compact == wanted_compact
-                or spotify_base_compact == wanted_base_compact
-                or structural_title_match
-                or extension_title_match
-            )
+            # Onbekende benoemde versies en arrangementen blijven afgewezen.
+            continue
 
-            if spotify_version == "arrangement":
-                # Een arrangement is muzikaal een andere uitvoering. Zonder
-                # expliciete RadioBox-aanduiding liever overslaan dan gokken.
+        # Preserve v29's strong fallback checks: a loose title or artist
+        # resemblance must never become valid only because of a version suffix.
+        if version_tier and (not same_core_title or primary_artist_score < 0.98):
+            continue
+        if spotify_version == "arrangement" and not wanted_version:
+            continue
+        if spotify_version in soft_fallback_versions and not wanted_version:
+            if title_score < 0.985 or primary_artist_score < 0.95:
                 continue
-            elif spotify_version == "remaster":
-                candidate_score += 0.24
-                version_tier = 0
-            elif spotify_version is None:
-                candidate_score += 0.30
-                version_tier = 0
-            elif spotify_version == "original version":
-                # "Original Version" is de expliciete catalogusvorm van de
-                # gewone opname en moet boven afgeleide named versions staan.
-                if not same_core_title or primary_artist_score < 0.95:
-                    continue
-                candidate_score += 0.18
-                version_tier = 0
-            elif spotify_version in soft_fallback_versions:
-                if title_score < 0.985 or primary_artist_score < 0.95:
-                    continue
-                candidate_score -= 0.20
-                version_tier = 1
-            elif spotify_version in hard_alternative_versions:
-                # Live/mix/acoustic/etc. alleen als strenge fallback wanneer
-                # geen gewone/remaster/original/veilige edit beschikbaar is.
-                if not same_core_title or primary_artist_score < 0.98:
-                    continue
-                candidate_score -= 0.55
-                version_tier = 2
-            elif spotify_version == "named version":
-                # Onbekende benoemde catalogusversies (bv. "Mfp Version" of
-                # "Then Again Version") zijn minder betrouwbaar dan een
-                # herkenbare live/mix/etc. en komen pas daarna.
-                if not same_core_title or primary_artist_score < 0.985:
-                    continue
-                candidate_score -= 0.75
-                version_tier = 3
-            else:
+        if spotify_version == "original version" and not wanted_version:
+            if not same_core_title or primary_artist_score < 0.95:
                 continue
+        if spotify_version == "named version" and not wanted_named_variant:
+            # Unrequested, unfamiliar named recordings are not safe substitutes.
+            continue
+        # Een solo-collab fallback mag nooit een slecht passende titel redden.
+        if (solo_collab_fallback or missing_feature_count) and (
+            not same_core_title or spotify_base_compact != wanted_base_compact
+        ):
+            continue
 
         candidate_isrc = str(
             (item.get("external_ids") or {}).get(
@@ -3294,8 +3282,8 @@ def find_spotify_track(
 
         candidates.append(
             (
-                -version_tier,
                 feature_tier,
+                -version_tier,
                 title_confidence,
                 candidate_score,
                 -len(candidates),
@@ -3311,8 +3299,8 @@ def find_spotify_track(
     if candidates:
         candidates.sort(
             key=lambda candidate: (
-                candidate[0],  # version tier
-                candidate[1],  # explicit feature completeness
+                candidate[0],  # explicit feature completeness
+                candidate[1],  # version tier
                 candidate[2],  # title confidence class
                 candidate[3],  # detailed score
                 candidate[4],  # Spotify order tie-break
@@ -3833,7 +3821,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 29
+    MATCHING_RULES_VERSION = 31
     if cache.get(
         "__matching_rules_version"
     ) != MATCHING_RULES_VERSION:
