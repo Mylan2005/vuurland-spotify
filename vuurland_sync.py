@@ -1225,6 +1225,29 @@ def find_spotify_track(
             "charlie hunter quartet",
             "more than this (w/ norah jones)",
         ): "spotify:track:5d8L73s2DVUlIi4KENcxeO",
+
+        # === VUURLAND MATCHER v28 STRICT CREDIT FIX ===
+        # Door gebruiker gecontroleerde RadioBox -> Spotify-opnames.
+        (
+            "the beatles",
+            "dear prudence",
+        ): "spotify:track:5NQYyej46WQkgCbnzGD21W",
+
+        (
+            "johann sebastian bach",
+            "prelude #1 in c",
+        ): "spotify:track:0laoMHZRUJypy5DzuUBIuT",
+
+        (
+            "antonio vivaldi",
+            "summer - allegro non molto",
+        ): "spotify:track:7LzhdKvW75fFqTWBLEgHtb",
+        ("antonio vivaldi", "summer – allegro non molto"): "spotify:track:7LzhdKvW75fFqTWBLEgHtb",
+
+        (
+            "suzanne vega",
+            "tom's diner (2010)",
+        ): "spotify:track:4ytYDfE4i1C1IeD8W79gab",
     }
 
     known_uri = known_uri_overrides.get(
@@ -1755,7 +1778,7 @@ def find_spotify_track(
         for item in items
     )
 
-    if not first_search_has_plausible_match:
+    if False and not first_search_has_plausible_match:  # One Spotify Search per call, hard limit
         title_words_for_rescue = search_words(search_query_title)
         title_id_for_rescue = search_identity(search_query_title)
         rescue_title = search_query_title
@@ -2206,6 +2229,7 @@ def find_spotify_track(
         if re.search(r"\bkaraoke\b", context): return "karaoke"
         if re.search(r"\bradio\s+edit\b", context): return "edit"
         if re.search(r"\bedit\b", context): return "edit"
+        if re.search(r"\bbonus\s+track\b", context): return "bonus track"
         if re.search(r"\bsingle\s+version\b", context): return "single version"
         if re.search(r"\balbum\s+version\b", context): return "album version"
         if re.search(r"\boriginal\s+version\b", context): return "original version"
@@ -2330,6 +2354,31 @@ def find_spotify_track(
         en "From The Vault" niet altijd in hetzelfde veld.
         """
         raw_value = str(value or "").strip()
+
+        # Verklarende prefix:
+        # "(Looking For) The Heart Of Saturday Night"
+        # -> "The Heart Of Saturday Night".
+        leading_context = re.match(
+            r"^\(([^()]{1,40})\)\s+(.+)$",
+            raw_value
+        )
+        if leading_context:
+            context = leading_context.group(1)
+            if not re.search(
+                r"\b(?:live|remix|mix|acoustic|demo|edit|version|remaster)\b",
+                context,
+                flags=re.IGNORECASE
+            ):
+                raw_value = leading_context.group(2).strip()
+
+        # Benoemde Spotify "Cut" is een catalogussuffix; de naam van de
+        # variant wordt hierboven apart streng gecontroleerd.
+        raw_value = re.sub(
+            r"\s+-\s+[^-()]+?\s+cut\s*$",
+            "",
+            raw_value,
+            flags=re.IGNORECASE
+        ).strip()
 
         # Duidelijke RadioBox credit-/contexthaakjes horen niet bij de titel.
         raw_value = re.sub(
@@ -2605,21 +2654,33 @@ def find_spotify_track(
             wanted_artists[0]
         )
 
-        primary_artist_score = max(
-            SequenceMatcher(
-                None,
-                primary_wanted_artist,
-                spotify_artist
-            ).ratio()
-            for spotify_artist
-            in spotify_artist_match_compact
+        # De primaire RadioBox-artiest mag alleen door Spotify-artiest #1
+        # worden bevestigd. Een gastartiest op plaats 2+ mag de match niet redden.
+        spotify_primary_artist = spotify_artists[0]
+        spotify_primary_compact = compact(
+            spotify_primary_artist
         )
 
-        primary_artist_exact = any(
-            primary_wanted_artist == spotify_artist
-            for spotify_artist
-            in spotify_artist_match_compact
+        primary_artist_score = SequenceMatcher(
+            None,
+            primary_wanted_artist,
+            spotify_primary_compact
+        ).ratio()
+
+        primary_artist_exact = (
+            primary_wanted_artist
+            == spotify_primary_compact
         )
+
+        # RadioBox may encode a collaboration as one `A & B` credit,
+        # while Spotify exposes A and B as separate artists. Accept only
+        # the EXACT ordered full credit, never a substring or missing guest.
+        if len(spotify_artists) > 1:
+            spotify_joint_credit = normalize(" & ".join(spotify_artists))
+            wanted_joint_credit = normalize(wanted_artists[0])
+            if spotify_joint_credit == wanted_joint_credit:
+                primary_artist_score = 1.0
+                primary_artist_exact = True
 
         # "The" aan het begin van een artiestennaam is vaak
         # alleen een catalogusverschil:
@@ -2640,39 +2701,33 @@ def find_spotify_track(
             wanted_artists[0]
         )
 
-        spotify_without_the = {
-            without_leading_the(spotify_artist)
-            for spotify_artist in spotify_artists
-            if spotify_artist
-        }
+        spotify_without_the = without_leading_the(
+            spotify_primary_artist
+        )
 
         if spotify_without_the:
-            the_artist_score = max(
-                SequenceMatcher(
-                    None,
-                    wanted_without_the,
-                    spotify_artist
-                ).ratio()
-                for spotify_artist in spotify_without_the
-            )
+            the_artist_score = SequenceMatcher(
+                None,
+                wanted_without_the,
+                spotify_without_the
+            ).ratio()
 
             primary_artist_score = max(
                 primary_artist_score,
                 the_artist_score
             )
 
-            if wanted_without_the in spotify_without_the:
+            if wanted_without_the == spotify_without_the:
                 primary_artist_exact = True
 
         # Een expliciet bekende naamswijziging mag de oude
         # artiestnaam koppelen aan de actuele Spotify-naam.
-        alias_artist_match = any(
-            alias_key(spotify_artist)
+        alias_artist_match = (
+            alias_key(spotify_primary_artist)
             in {
                 alias_key(alias)
                 for alias in search_artist_aliases
             }
-            for spotify_artist in spotify_artists
         )
 
         if alias_artist_match:
@@ -2687,11 +2742,11 @@ def find_spotify_track(
         person_name_variant = False
 
         if len(wanted_name_parts) == 2:
-            for spotify_artist in spotify_artists:
-                spotify_name_parts = normalize(spotify_artist).split()
-                if len(spotify_name_parts) != 2:
-                    continue
+            spotify_name_parts = normalize(
+                spotify_primary_artist
+            ).split()
 
+            if len(spotify_name_parts) == 2:
                 wanted_first, wanted_last = wanted_name_parts
                 spotify_first, spotify_last = spotify_name_parts
 
@@ -2704,7 +2759,6 @@ def find_spotify_track(
                     )
                 ):
                     person_name_variant = True
-                    break
 
         if person_name_variant:
             primary_artist_score = max(primary_artist_score, 0.96)
@@ -2717,13 +2771,16 @@ def find_spotify_track(
         #   Stevie Ray Vaughan and Double Trouble -> Stevie Ray Vaughan
         # Dit is GEEN vrije fuzzy match: één volledige naam moet duidelijk
         # in de andere vervat zitten en minstens 6 tekens lang zijn.
-        primary_artist_contained = any(
-            min(len(primary_wanted_artist), len(spotify_artist)) >= 6
-            and (
-                primary_wanted_artist in spotify_artist
-                or spotify_artist in primary_wanted_artist
-            )
-            for spotify_artist in spotify_artist_match_compact
+        # Do not grant ownership from arbitrary substrings, even if Spotify's
+        # artist is shorter. Only previously confirmed catalog aliases survive.
+        confirmed_project_aliases = {
+            ("j s ondara", "ondara"),
+            ("liz cooper the stampede", "liz cooper"),
+            ("stevie ray vaughan and double trouble", "stevie ray vaughan"),
+        }
+        primary_artist_contained = (
+            (alias_key(wanted_artists[0]), alias_key(spotify_artists[0]))
+            in confirmed_project_aliases
         )
 
         if primary_artist_contained:
@@ -2767,31 +2824,26 @@ def find_spotify_track(
                 for spotify_artist in spotify_artist_compact
             )
 
-            if feature_score >= 0.90 or any(
-                wanted_feature in spotify_artist
-                or spotify_artist in wanted_feature
+            if feature_score >= 0.98 or any(
+                wanted_feature == spotify_artist
                 for spotify_artist in spotify_artist_compact
             ):
                 matched_feature_count += 1
 
-        # Een RadioBox-feature is sterke bevestiging, maar Spotify kan
-        # dezelfde opname soms alleen onder de hoofdartiest catalogiseren.
-        # Daarom is een ontbrekende feature geen harde afwijzing meer.
-        # De kandidaat krijgt hieronder wel minder score dan een versie
-        # waarop de genoemde gastartiest daadwerkelijk aanwezig is.
+        # Expliciete RadioBox-features/collabs zijn onderdeel van de identiteit.
+        # Als een genoemde gast ontbreekt, liever overslaan dan de soloversie pakken.
         explicit_feature_count = max(0, len(wanted_artist_compact) - 1)
         missing_feature_count = max(
             0,
             explicit_feature_count - matched_feature_count
         )
 
-        # If RadioBox explicitly names guest artists, a Spotify candidate that
-        # contains all of them must outrank an otherwise identical main-artist
-        # version. Missing guest credits remain allowed as a fallback because
-        # Spotify sometimes omits them from track-level artist objects.
+        if missing_feature_count:
+            continue
+
         feature_tier = (
             1
-            if explicit_feature_count and matched_feature_count == explicit_feature_count
+            if explicit_feature_count
             else 0
         )
 
@@ -2811,6 +2863,46 @@ def find_spotify_track(
         )
 
         spotify_version = spotify_candidate_version(item)
+
+        # "Soccer Mommy Version" <-> "Soccer Mommy Cut":
+        # alleen equivalent als de benoemde variantnaam exact gelijk is.
+        def named_variant_label(value):
+            raw_variant = str(value or "").strip()
+            raw_variant = raw_variant.replace("–", "-").replace("—", "-")
+
+            match = re.search(
+                r"\(([^()]+?)\s+version\)\s*$",
+                raw_variant,
+                flags=re.IGNORECASE
+            )
+            if not match:
+                match = re.search(
+                    r"\s+-\s+(.+?)\s+cut\s*$",
+                    raw_variant,
+                    flags=re.IGNORECASE
+                )
+
+            if not match:
+                return None
+
+            label = normalize(match.group(1))
+            if label in {
+                "album", "single", "original", "deluxe",
+                "radio", "acoustic", "live",
+            }:
+                return None
+            return label or None
+
+        wanted_named_variant = named_variant_label(title)
+        spotify_named_variant = named_variant_label(
+            item.get("name", "")
+        )
+
+        if (
+            wanted_named_variant
+            and spotify_named_variant != wanted_named_variant
+        ):
+            continue
 
         # Specifieke live-opname met locatie + jaar.
         # Als RadioBox dit expliciet vermeldt, moet Spotify
@@ -3100,13 +3192,43 @@ def find_spotify_track(
         }
         soft_fallback_versions = {
             "edit", "single version", "album version", "version",
+            "bonus track",
         }
 
-        if wanted_version:
-            if spotify_version != wanted_version:
+        same_core_title = (
+            spotify_compact == wanted_compact
+            or spotify_base_compact == wanted_base_compact
+            or structural_title_match
+            or extension_title_match
+        )
+
+        if wanted_version and wanted_named_variant:
+            # Named collaborations/cuts are not interchangeable with a solo
+            # recording, even under the alternative-version fallback rule.
+            if spotify_named_variant != wanted_named_variant:
                 continue
             candidate_score += 0.60
             version_tier = 0
+        elif wanted_version and spotify_version == wanted_version:
+            candidate_score += 0.60
+            version_tier = 0
+        elif wanted_version:
+            # Asked-for take unavailable among the same Search results:
+            # prefer studio, original, remaster; only then a mix or remix.
+            # This is a FALLBACK only, never a different song or artist.
+            if not same_core_title or primary_artist_score < 0.98:
+                continue
+            if spotify_version is None or spotify_version in {"original version", "remaster"}:
+                version_tier = 1
+            elif spotify_version in soft_fallback_versions:
+                version_tier = 2
+            elif spotify_version in {"mix", "remix"}:
+                version_tier = 3
+            else:
+                # Do not silently replace an explicitly requested recording
+                # with an unrelated alternate, instrumental, or named cut.
+                continue
+            candidate_score -= 0.15 * version_tier
         else:
             same_core_title = (
                 spotify_compact == wanted_compact
@@ -3462,9 +3584,10 @@ def make_playlist_keys(track):
 
     keys = set()
 
-    # Normale Spotify-vorm: iedere artiest afzonderlijk.
-    for artist in artists:
-        keys.add(f"{artist}|||{title}")
+    # Alleen de primaire Spotify-artiest krijgt een individuele key.
+    # Gastartiesten blijven beschikbaar in de gecombineerde keys.
+    if artists:
+        keys.add(f"{artists[0]}|||{title}")
 
     # Gecombineerde vorm: alle Spotify-artiesten samen.
     if artists:
@@ -3710,8 +3833,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 27
-
+    MATCHING_RULES_VERSION = 29
     if cache.get(
         "__matching_rules_version"
     ) != MATCHING_RULES_VERSION:
@@ -3722,6 +3844,13 @@ def sync():
             "ise|||ik reis door de nacht (live)",
             "the flaming lips|||do you realise",
             "taylor swift feat bon iver|||exile",
+            "the beatles|||dear prudence",
+            "led zeppelin|||the rain song",
+            "santana|||flor d'luna (moonflower)",
+            "robert plant|||song to the siren",
+            "sasami & angie mcmahon|||honeycrash",
+            "sam fender & holly humberstone|||seventeen going under",
+            "doc watson & david grisman|||summertime",
         }
 
         removed_bad_cache_keys = []
@@ -4320,6 +4449,10 @@ def sync():
             (
                 "alison krauss & union station",
                 "lie awake",
+            ),
+            (
+                "golden smog",
+                "love & mercy live on vin scelsa's idiot's delight 4/14/96",
             ),
         }
 
