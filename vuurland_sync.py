@@ -67,6 +67,11 @@ ARTIST_ALIASES = {
         "Novastar",
     ],
 
+    # Bewezen solo/band catalogusnaam: exacte naam, geen vrije substring.
+    "sam roberts": [
+        "Sam Roberts Band",
+    ],
+
 }
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
@@ -1248,6 +1253,14 @@ def find_spotify_track(
             "suzanne vega",
             "tom's diner (2010)",
         ): "spotify:track:4ytYDfE4i1C1IeD8W79gab",
+
+        # v32: door de gebruiker bevestigde opnames; exacte RadioBox-keys.
+        # Niet veralgemenen tot willekeurige gastartiesten of titelprefixen.
+        ("sam roberts", "hard road"): "spotify:track:3am6WjJ2mEcOsSSTHplTJ3",
+        ("liz cooper & the stampede", "the night"): "spotify:track:5I6gBia5fPMCqy3ry4WJ4l",
+        ("lyle lovett", "friend of the devil"): "spotify:track:5ZLzl6T8JwqMTMdoE0nCbU",
+        ("robert plant", "killing the blues"): "spotify:track:4MiX7j4kYbWZlGOimqFvtE",
+        ("kids with buns", "nothing"): "spotify:track:7ncRC6F2HAUuPGquz86dvX",
     }
 
     known_uri = known_uri_overrides.get(
@@ -2520,6 +2533,11 @@ def find_spotify_track(
 
     wanted_artists = artist_parts(artist)
 
+    # Bewezen historische bandcredit is één artiestenidentiteit, niet
+    # een verplichte extra gastartiest. Elders blijft de collab-regel streng.
+    if re.sub(r"[^a-z0-9]+", " ", str(artist).casefold()).strip() == "liz cooper the stampede":
+        wanted_artists = ["liz cooper"]
+
     # Een feature die achter de RadioBox-titel staat,
     # hoort bij de Spotify-artiesten en moet aanwezig zijn.
     if title_feature_artist:
@@ -2798,7 +2816,10 @@ def find_spotify_track(
         )
 
         if primary_artist_contained:
-            primary_artist_score = max(primary_artist_score, 0.94)
+            # Exact bewezen projectalias krijgt dezelfde identiteit als de
+            # gewone artiest, zonder algemene substring-tolerantie.
+            primary_artist_score = 1.0
+            primary_artist_exact = True
 
         # Soms zet RadioBox de album-/projectnaam in het artiestveld.
         # Alleen een exacte albumnaam mag zo de artiestcontrole redden;
@@ -3821,7 +3842,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 31
+    MATCHING_RULES_VERSION = 32
     if cache.get(
         "__matching_rules_version"
     ) != MATCHING_RULES_VERSION:
@@ -3839,6 +3860,11 @@ def sync():
             "sasami & angie mcmahon|||honeycrash",
             "sam fender & holly humberstone|||seventeen going under",
             "doc watson & david grisman|||summertime",
+            "sam roberts|||hard road",
+            "liz cooper & the stampede|||the night",
+            "lyle lovett|||friend of the devil",
+            "robert plant|||killing the blues",
+            "kids with buns|||nothing",
         }
 
         removed_bad_cache_keys = []
@@ -4442,6 +4468,11 @@ def sync():
                 "golden smog",
                 "love & mercy live on vin scelsa's idiot's delight 4/14/96",
             ),
+            # Door gebruiker als niet beschikbaar op Spotify bevestigd.
+            ("michael penn", "no myth (acoustic)"),
+            ("ray lamontagne", "achin all the time"),
+            ("jerry douglas", "the hymn of ordinary motion"),
+            ("suzanne vega", "cassidy"),
         }
 
         normalized_skip_key = (
