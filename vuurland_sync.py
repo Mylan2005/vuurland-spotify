@@ -1439,6 +1439,9 @@ def find_spotify_track(
 
     def alias_key(value):
         value = str(value or "").lower().strip()
+        # Spotify kan een officiële bandcredit als "&" of "and" tonen.
+        # Beide kanten van de gecontroleerde alias worden identiek behandeld.
+        value = re.sub(r"\s*&\s*", " and ", value)
         value = re.sub(r"[^a-z0-9]+", " ", value)
         return " ".join(value.split())
 
@@ -3039,8 +3042,34 @@ def find_spotify_track(
         wanted_base_identity = title_identity(wanted_title_base_for_match)
         spotify_base_identity = title_identity(spotify_title_base)
 
+        # Sommige RadioBox-titels zijn door de bron zichtbaar ingekort,
+        # bv. "Brushes (Never Going Back...)". Alleen wanneer de bron
+        # letterlijk op een ellipsis eindigt en een lang, identiek
+        # titelbegin aanwezig is, erkennen we de volledige Spotify-titel.
+        # Geen fuzzy prefixmatch voor complete, niet-afgekorte titels.
+        def explicit_ellipsis_match(radio_title, catalog_title):
+            radio = str(radio_title or "").strip().casefold()
+            catalog = str(catalog_title or "").strip().casefold()
+            if not re.search(r"(?:\.{3}|…)[)\]\s]*$", radio):
+                return False
+            prefix = re.sub(r"(?:\.{3}|…)[)\]\s]*$", "", radio).rstrip()
+            # Interpunctie verschillen normaliseren zonder woorden te verliezen.
+            def words(text):
+                return re.findall(r"[a-z0-9]+", unicodedata.normalize("NFKD", text))
+            prefix_words = words(prefix)
+            catalog_words = words(catalog)
+            if len(prefix_words) < 4 or len("".join(prefix_words)) < 18:
+                return False
+            return catalog_words[:len(prefix_words)] == prefix_words
+
+        truncated_title_match = (
+            primary_artist_exact
+            and explicit_ellipsis_match(wanted_title_for_match, item.get("name", ""))
+        )
+
         structural_title_match = (
-            wanted_identity == spotify_identity
+            truncated_title_match
+            or wanted_identity == spotify_identity
             or wanted_base_identity == spotify_base_identity
             or optional_the_equivalent(
                 wanted_title_base_for_match,
@@ -3842,7 +3871,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 32
+    MATCHING_RULES_VERSION = 33
     if cache.get(
         "__matching_rules_version"
     ) != MATCHING_RULES_VERSION:
