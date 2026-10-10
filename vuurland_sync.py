@@ -1,4 +1,5 @@
 import base64
+import duyster_bron
 import hashlib
 import http.server
 import json
@@ -4071,6 +4072,18 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe radio-nummers.")
 
+    # Derde bron: Duyster (historisch + nieuwe wekelijkse afleveringen).
+    # De selectie wordt in DEZELFDE persistente queue geplaatst, zodat de
+    # bestaande Spotify-matcher, cache, ISRC-dedupe en 1-Search-limiet gelden.
+    # Bij archiefproblemen blijven de twee live bronnen normaal werken.
+    try:
+        duyster_bron.prepare(cache, live_queue, seen, normalize_match)
+        with open(live_queue_file, "w") as f:
+            json.dump(live_queue, f, indent=2, ensure_ascii=False)
+        save_cache(cache)
+    except Exception as error:
+        print(f"🟡 Duyster tijdelijk overgeslagen: {error}")
+
     # ---------------------------------
     # ALS ER GEEN NUMMER TE VERWERKEN IS
     # ---------------------------------
@@ -4421,7 +4434,7 @@ def sync():
     # terwijl MAX_SEARCHES_PER_RUN = 1 globaal behouden blijft.
     processed_sources = set()
 
-    for _source_slot in range(2):
+    for _source_slot in range(3):
 
         if not live_queue:
             break
@@ -4429,14 +4442,17 @@ def sync():
         selected_index = None
         selected_source = None
 
-        for index, candidate in enumerate(live_queue):
-            source_id = str(
-                candidate.get("source") or "vuurland"
-            ).strip()
-
-            if source_id not in processed_sources:
-                selected_index = index
-                selected_source = source_id
+        # Live zenders altijd vóór de historische Duyster-backlog.
+        for priority in ("radio", "duyster"):
+            for index, candidate in enumerate(live_queue):
+                source_id = str(candidate.get("source") or "vuurland").strip()
+                if (source_id == "duyster") != (priority == "duyster"):
+                    continue
+                if source_id not in processed_sources:
+                    selected_index = index
+                    selected_source = source_id
+                    break
+            if selected_index is not None:
                 break
 
         if selected_index is None:
