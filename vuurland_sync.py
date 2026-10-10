@@ -1031,7 +1031,8 @@ def get_mellow_mix_tracks():
 
 def find_spotify_track(
     artist,
-    title
+    title,
+    search_variant=0
 ):
     global LAST_SPOTIFY_MATCH_ISRC
     LAST_SPOTIFY_MATCH_ISRC = None
@@ -1582,6 +1583,20 @@ def find_spotify_track(
         part for part in query_parts
         if str(part or "").strip()
     )
+
+    # v34: alternatieve query PAS bij de volgende sync-ronde.
+    # Ook deze zoekpoging vraagt maximaal tien Spotify-resultaten.
+    # Geen extra Spotify API-call in find_spotify_track().
+    if search_variant == 1:
+        # Exacte titel als gerichte track-filter; de artiest controleren
+        # we achteraf in de bestaande strenge matcher.
+        quoted_title = search_query_title.replace('"', ' ').strip()
+        query = f'track:"{quoted_title}"'
+    elif search_variant == 2:
+        # Artist-filter met volledige artiestennaam, zonder harde titel-filter.
+        # Zoekresultaten blijven lokaal streng op titel en credits getoetst.
+        quoted_artist = str(spotify_search_artist).replace('"', ' ').strip()
+        query = f'artist:"{quoted_artist}" {search_query_title}' 
 
     data = spotify_request(
         "GET",
@@ -3871,7 +3886,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 33
+    MATCHING_RULES_VERSION = 34
     if cache.get(
         "__matching_rules_version"
     ) != MATCHING_RULES_VERSION:
@@ -4440,6 +4455,16 @@ def sync():
 
         item = live_queue[0]
 
+        # v34: herstartbestendige wachttijd tussen zoekstrategieën.
+        # De queue blijft persistent in vuurland_live_queue.json.
+        retry_at = int(item.get("_v34_retry_at", 0) or 0)
+        if retry_at and time.time() < retry_at:
+            live_queue.append(live_queue.pop(0))
+            with open(live_queue_file, "w") as f:
+                json.dump(live_queue, f, indent=2, ensure_ascii=False)
+            print("⏳ Alternatieve Spotify-zoekpoging wacht tot later.")
+            continue
+
         artist = item["artist"]
         title = item["title"]
 
@@ -4811,7 +4836,8 @@ def sync():
 
                 uri = find_spotify_track(
                     artist,
-                    title
+                    title,
+                    search_variant=int(item.get("_v34_search_variant", 0) or 0),
                 )
 
             except RuntimeError as error:
@@ -4856,7 +4882,23 @@ def sync():
                 "veilige match opleverde."
             )
 
-            # 24 uur geen nieuwe Search voor dit nummer.
+            # v34: na een mislukte zoekopdracht twee andere strategieën
+            # proberen op afzonderlijke sync-rondes, nooit in dezelfde ronde.
+            attempt = int(item.get("_v34_search_variant", 0) or 0)
+            if attempt < 2:
+                item["_v34_search_variant"] = attempt + 1
+                item["_v34_retry_at"] = int(time.time()) + 600
+                live_queue.append(live_queue.pop(0))
+                with open(live_queue_file, "w") as f:
+                    json.dump(live_queue, f, indent=2, ensure_ascii=False)
+                save_cache(cache)
+                print(f"🔁 Geen match; zoekstrategie {attempt + 1}/2 "
+                      "wordt in een latere ronde geprobeerd.")
+                print(f"🔎 Spotify Search gebruikt: "
+                      f"{searches_used}/{MAX_SEARCHES_PER_RUN}")
+                continue
+
+            # Pas na alle veilige zoekstrategieën: 24-uurs cooldown.
             cache[not_found_key] = int(time.time())
 
             # Uit de huidige queue-positie verwijderen.
