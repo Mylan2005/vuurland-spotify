@@ -4442,18 +4442,31 @@ def sync():
         selected_index = None
         selected_source = None
 
-        # Live zenders altijd vóór de historische Duyster-backlog.
+        # Live zenders eerst, maar laat een item in retry-wachttijd nooit
+        # de andere klaarstaande radio- of Duyster-nummers blokkeren.
+        # De Spotify Search-limiet wordt hieronder ongewijzigd afgedwongen.
+        now = time.time()
+        waiting_for_retry = False
         for priority in ("radio", "duyster"):
             for index, candidate in enumerate(live_queue):
                 source_id = str(candidate.get("source") or "vuurland").strip()
                 if (source_id == "duyster") != (priority == "duyster"):
                     continue
-                if source_id not in processed_sources:
-                    selected_index = index
-                    selected_source = source_id
-                    break
+                if source_id in processed_sources:
+                    continue
+                retry_at = int(candidate.get("_v34_retry_at", 0) or 0)
+                if retry_at and now < retry_at:
+                    waiting_for_retry = True
+                    continue
+                selected_index = index
+                selected_source = source_id
+                break
             if selected_index is not None:
                 break
+
+        if selected_index is None and waiting_for_retry:
+            print("⏳ Alternatieve Spotify-zoekpogingen wachten; "
+                  "geen ander nummer klaar voor verwerking.")
 
         if selected_index is None:
             break
