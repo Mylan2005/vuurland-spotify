@@ -21,6 +21,14 @@ REQUEST_TIMEOUT = 15
 RETRY_SECONDS = 86400
 MAX_ACTIVE_DUYSTER = 3  # Een wachtende retry mag de shuffle niet blokkeren.
 
+# Bevestigde foutieve archiefregel. Niet zoeken of opnieuw selecteren.
+EXCLUDED_ARCHIVE_SONGS = {
+    (". . - . . - ... . - ..", ".. / ..-. --- .-. --. --- - / - --- / - .- -.- . / -- -.-- / -- . -.. ..."),
+}
+
+def _excluded(artist, title):
+    return (str(artist).strip(), str(title).strip()) in EXCLUDED_ARCHIVE_SONGS
+
 
 class SongLinks(HTMLParser):
     def __init__(self):
@@ -57,11 +65,14 @@ def _songs(cache):
         raise FileNotFoundError(f'Duyster-bron ontbreekt: {ARCHIVE_CSV}')
     with ARCHIVE_CSV.open(newline='', encoding='utf-8-sig') as f:
         for row in csv.DictReader(f):
-            if row.get('artist') and row.get('title'):
+            if (row.get('artist') and row.get('title')
+                    and not _excluded(row['artist'], row['title'])):
                 catalog[_key(row['artist'], row['title'])] = {
                     'artist': row['artist'], 'title': row['title']
                 }
-    catalog.update(cache.get('__duyster_new_songs', {}))
+    for key, song in cache.get('__duyster_new_songs', {}).items():
+        if not _excluded(song.get('artist', ''), song.get('title', '')):
+            catalog[key] = song
     return catalog
 
 
@@ -92,6 +103,8 @@ def check_new_episode(cache):
     new = dict(cache.get('__duyster_new_songs', {}))
     fresh = 0
     for artist, title in songs:
+        if _excluded(artist, title):
+            continue
         key = _key(artist, title)
         if key not in new:
             # De historische CSV wordt bij selectie eveneens afgetoetst.

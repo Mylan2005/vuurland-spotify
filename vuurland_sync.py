@@ -1099,6 +1099,11 @@ def find_spotify_track(
     )
 
     known_uri_overrides = {
+        # v39: exacte, door gebruiker aangewezen Spotify-tracks.
+        # Albumopname/uitvoerder blijven via deze expliciete sleutel afgebakend.
+        ("alison krauss & gillian welch", "i'll fly away"): "spotify:track:4rJtUMlnhJzlzlnxyoc3tb",
+        ("béla fleck", "shanti"): "spotify:track:54auLP9WyrASUYMMBJQVdn",
+        ("clannad", "harry's game"): "spotify:track:7CTSDg60OC15XUJusBLPuo",
         # v38: door gebruiker met exacte Spotify-link bevestigde versies.
         ("john lennon", "imagine"): "spotify:track:7pKfPomDEeI4TPT6EOYjn9",
         ("gary numan", "down in the park (piano version)"): "spotify:track:34JQZdbVOrShEVhkYCUuNK",
