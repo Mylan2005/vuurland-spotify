@@ -2751,6 +2751,59 @@ def find_spotify_track(
             == spotify_primary_compact
         )
 
+        # v45: ALGEMENE regels voor Spotify-project- en samenwerkingscredits.
+        # Geen artiest-/titel-specifieke uitzonderingen.
+        #
+        # 1. Een project mag zijn naam na de solist hebben, als de
+        #    solonaam de volledige BEGINcomponent van de projectnaam is,
+        #    gevolgd door een echte groepsverbinding (and/&/with).
+        #    Bv. "Susanna" + "Susanna and the Magical Orchestra".
+        # 2. Bij een EXPLICIET gevraagde gastartiest mag Spotify precies
+        #    EEN aanvullende hoofdcredit vooraan zetten, mits de gevraagde
+        #    hoofdartiest op plaats twee staat, alle gevraagde gasten verder
+        #    exact vermeld staan, en de Spotify-titel de gast expliciet noemt.
+        #    Bv. producer, primaire uitvoerder en expliciete zang-gast.
+        #
+        # Bij beide vormen blijven de bestaande volledige titel-, versie-,
+        # ambiguïteits- en ISRC-controles verderop verplicht.
+        def _credit_tokens(value):
+            return alias_key(value).split()
+
+        project_artist_credit = False
+        if len(wanted_artists) == 1 and len(spotify_artists) == 2:
+            solo_tokens = _credit_tokens(spotify_artists[0])
+            band_tokens = _credit_tokens(spotify_artists[1])
+            wanted_tokens = _credit_tokens(wanted_artists[0])
+            if (len(solo_tokens) >= 1
+                    and len(band_tokens) >= len(solo_tokens) + 2
+                    and band_tokens[:len(solo_tokens)] == solo_tokens
+                    and band_tokens[len(solo_tokens)] in {"and", "with"}
+                    and band_tokens == wanted_tokens):
+                project_artist_credit = True
+
+        explicit_guest_credit = False
+        if (title_feature_artist
+                and len(wanted_artists) >= 2
+                and len(spotify_artists) == len(wanted_artists) + 1
+                and alias_key(spotify_artists[1]) == alias_key(wanted_artists[0])
+                and all(alias_key(a) == alias_key(b)
+                        for a, b in zip(spotify_artists[2:], wanted_artists[1:]))):
+            spotify_raw_title = str(item.get("name") or "")
+            # Een expliciete "feat. X" in de officiële tracktitel is de
+            # onafhankelijke aanwijzing voor de genoemde gast, los van
+            # Spotify's artist-array. Een loutere generieke titel volstaat niet.
+            spotify_title_guest = re.search(
+                r"\b(?:feat\.?|ft\.?|featuring|with)\s+([^()\[\],]+)",
+                spotify_raw_title, flags=re.IGNORECASE)
+            if (spotify_title_guest
+                    and alias_key(spotify_title_guest.group(1))
+                        == alias_key(title_feature_artist)):
+                explicit_guest_credit = True
+
+        if project_artist_credit or explicit_guest_credit:
+            primary_artist_score = 1.0
+            primary_artist_exact = True
+
         # RadioBox may encode a collaboration as one `A & B` credit,
         # while Spotify exposes A and B as separate artists. Accept only
         # the EXACT ordered full credit, never a substring or missing guest.
