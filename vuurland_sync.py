@@ -4011,6 +4011,91 @@ def radio_matches_playlist(
     return False
 
 
+
+
+# v47: RadioBox-ingestie en herprobeerbare missers zonder extra Spotify Search.
+def _v47_key(artist, title):
+    return f"{normalize_match(artist)}|||{normalize_match(title)}"
+
+
+def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_version=34):
+    """Ingest every visible unique RadioBox track, without spending Spotify Search.
+
+    Persistently register each observed title, so repeats do not use extra work.
+    Never mark an unsuccessful search as completed: failed items live in a
+    separate retry register until they can be retried.
+    """
+    discovered = cache.setdefault("__v47_radio_discovered", {})
+    failed = cache.setdefault("__v47_failed_tracks", {})
+    known_queue = {_v47_key(x.get("artist", ""), x.get("title", ""))
+                   for x in live_queue if isinstance(x, dict)}
+    newly_queued = 0
+    for source in radio_sources:
+        sid = source["id"]
+        source_seen = set(discovered.get(sid, []))
+        to_prepend = []
+        scanned = 0
+        for artist, title in source["tracks"]:
+            artist, title = artist.strip(), title.strip()
+            if not artist or not title:
+                continue
+            key = _v47_key(artist, title)
+            if key in source_seen:
+                continue
+            scanned += 1
+            source_seen.add(key)
+            if key in seen or key in known_queue:
+                continue
+            cached_failed = cache.get(f"__not_found_v{matching_version}__" + key)
+            if cached_failed is not None:
+                # Ook historische missers uit v46 blijven terugkomen.
+                failed.setdefault(key, {"artist": artist, "title": title, "source": sid,
+                                        "failed_at": cached_failed})
+                continue
+            to_prepend.append({"artist": artist, "title": title, "source": sid})
+            known_queue.add(key)
+        # New live songs go ahead of old backlog while preserving radio order.
+        live_queue[0:0] = list(reversed(to_prepend))
+        newly_queued += len(to_prepend)
+        discovered[sid] = sorted(source_seen)
+        print(f"📚 {source['name']}: {scanned} nog niet eerder gescande titels; "
+              f"{len(to_prepend)} toegevoegd aan wachtrij (hele zichtbare historiek).")
+    return newly_queued
+
+
+def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_per_run=4):
+    """Restore failed songs after their cooldown, no perpetual silent loss."""
+    now = time.time() if now is None else now
+    failed = cache.setdefault("__v47_failed_tracks", {})
+    known = {_v47_key(x.get("artist", ""), x.get("title", ""))
+             for x in live_queue if isinstance(x, dict)}
+    count = 0
+    for key, entry in list(failed.items()):
+        if key in seen:
+            del failed[key]
+            continue
+        if key in known:
+            del failed[key]
+            continue
+        try:
+            last_failed = float(entry.get("failed_at", 0))
+        except (TypeError, ValueError):
+            last_failed = now
+        if now < last_failed + cooldown or count >= max_per_run:
+            continue
+        live_queue.append({"artist": entry["artist"], "title": entry["title"],
+                           "source": entry.get("source", "duyster")})
+        known.add(key)
+        del failed[key]
+        count += 1
+    return count
+
+
+def v47_remember_failed(cache, artist, title, source, now=None):
+    now = time.time() if now is None else now
+    cache.setdefault("__v47_failed_tracks", {})[_v47_key(artist, title)] = {
+        "artist": artist, "title": title, "source": source, "failed_at": int(now)}
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -4132,139 +4217,28 @@ def sync():
         if isinstance(item, dict)
     }
 
-    # ---------------------------------
-    # RADIO-HISTORIEK BIJHOUDEN
-    #
-    # Bij de eerste run nemen we alleen
-    # het meest recente nummer.
-    #
-    # Daarna nemen we alle nummers die
-    # sinds de vorige controle nieuw zijn.
-    # ---------------------------------
-
-    new_radio_tracks = []
-
+    # v47: registreer ALLE zichtbare RadioBox-titels; niet alleen de
+    # nummers vóór de vorige cursor. Dit gebruikt geen Spotify Search.
     for source in radio_sources:
-        tracks = source["tracks"]
-        cache_key_name = source["cache_key"]
+        if source["tracks"]:
+            artist, title = source["tracks"][0]
+            cache[source["cache_key"]] = _v47_key(artist, title)
 
-        # Oude Vuurland-cursor behouden.
-        if (
-            source["id"] == "vuurland"
-            and cache_key_name not in cache
-            and "__last_radio_key" in cache
-        ):
-            cache[cache_key_name] = cache[
-                "__last_radio_key"
-            ]
-
-        last_radio_key = cache.get(
-            cache_key_name
-        )
-
-        source_new_tracks = []
-
-        for artist, title in tracks:
-            artist_clean = artist.strip()
-            title_clean = title.strip()
-
-            if (
-                not artist_clean
-                or not title_clean
-            ):
-                continue
-
-            key = (
-                f"{normalize_match(artist_clean)}|||"
-                f"{normalize_match(title_clean)}"
-            )
-
-            # Nieuwe bron:
-            # alleen het nieuwste nummer als startpunt.
-            #
-            # Dus Mellow Mix begint vanaf NU en trekt
-            # niet ineens de volledige historie binnen.
-            if last_radio_key is None:
-                source_new_tracks.append(
-                    {
-                        "artist": artist_clean,
-                        "title": title_clean,
-                        "source": source["id"],
-                    }
-                )
-                break
-
-            # We zijn terug bij het laatste nummer
-            # dat tijdens de vorige run bovenaan stond.
-            if key == last_radio_key:
-                break
-
-            source_new_tracks.append(
-                {
-                    "artist": artist_clean,
-                    "title": title_clean,
-                    "source": source["id"],
-                }
-            )
-
-        # De eerste parser-track is de nieuwste.
-        if tracks:
-            newest_artist, newest_title = tracks[0]
-
-            newest_key = (
-                f"{normalize_match(newest_artist)}|||"
-                f"{normalize_match(newest_title)}"
-            )
-
-            cache[
-                cache_key_name
-            ] = newest_key
-
-        print(
-            f"🛰️ {source['name']}: "
-            f"{len(source_new_tracks)} "
-            "nieuwe track(s) sinds vorige controle."
-        )
-
-        new_radio_tracks.extend(
-            source_new_tracks
-        )
-
-    # ---------------------------------
-    # NIEUWE RADIO-NUMMERS AAN LIVE QUEUE
-    # ---------------------------------
-
-    added_to_live_queue = 0
-
-    for item in reversed(new_radio_tracks):
-
-        artist = item["artist"]
-        title = item["title"]
-
-        key = (
-            f"{normalize_match(artist)}|||"
-            f"{normalize_match(title)}"
-        )
-
-        if key in queued_keys:
-            continue
-
-        # Als het al succesvol verwerkt is,
-        # hoeft het niet opnieuw in de queue.
-        if key in seen:
-            continue
-
-        live_queue.append(item)
-        queued_keys.add(key)
-        added_to_live_queue += 1
-
+    added_to_live_queue = v47_collect_radio_history(
+        radio_sources, cache, seen, live_queue, MATCHING_RULES_VERSION)
     if added_to_live_queue:
-        print(
-            f"🆕 {added_to_live_queue} nieuwe "
-            "radio-nummers in live queue."
-        )
+        print(f"🆕 {added_to_live_queue} beschikbare RadioBox-titels in wachtrij.")
     else:
-        print("ℹ️ Geen nieuwe radio-nummers.")
+        print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
+
+    restored = v47_restore_retries(cache, seen, live_queue)
+    if restored:
+        print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
+
+    # Bewaar de ontdekkings- en retry-state samen met de queue.
+    with open(live_queue_file, "w") as f:
+        json.dump(live_queue, f, indent=2, ensure_ascii=False)
+    save_cache(cache)
 
     # Derde bron: Duyster (historisch + nieuwe wekelijkse afleveringen).
     # De selectie wordt in DEZELFDE persistente queue geplaatst, zodat de
@@ -5187,6 +5161,8 @@ def sync():
 
             # Pas na alle veilige zoekstrategieën: 24-uurs cooldown.
             cache[not_found_key] = int(time.time())
+            v47_remember_failed(cache, artist, title, item.get("source", "duyster"))
+            print("🗂️ Bewaard in herprobeerlijst; over 24 uur opnieuw zoeken.")
 
             # Uit de huidige queue-positie verwijderen.
             #
