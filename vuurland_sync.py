@@ -4551,22 +4551,45 @@ def sync():
     if radio_turn not in ("vuurland", "mellow_mix"):
         radio_turn = "vuurland"
 
-    # v40: diagnose queue priority without changing scheduling or API use.
+    # v41: één gedeelde cooldown-check voor planning én logging.
+    # Een 24-uurs "niet gevonden"-item is NIET zoekklaar, ook wanneer
+    # _v34_retry_at ontbreekt. We bewaren queue en cache volledig.
+    def _v41_cooldown_until(candidate):
+        retry_at = int(candidate.get("_v34_retry_at", 0) or 0)
+        key = (f"{normalize_match(candidate.get('artist', ''))}|||"
+               f"{normalize_match(candidate.get('title', ''))}")
+        not_found = cache.get(f"__not_found_v{MATCHING_RULES_VERSION}__" + key)
+        if not_found is None:
+            return retry_at
+        try:
+            not_found_until = int(float(not_found)) + NOT_FOUND_COOLDOWN_SECONDS
+        except (ValueError, TypeError, OverflowError):
+            not_found_until = 0
+        return max(retry_at, not_found_until)
+
     _radio_ready = 0
-    _radio_cooldown = 0
+    _radio_short_cooldown = 0
+    _radio_not_found_cooldown = 0
     _queue_now = time.time()
     for _candidate in live_queue:
         if not isinstance(_candidate, dict):
             continue
-        if str(_candidate.get("source") or "vuurland") not in ("vuurland", "mellow_mix"):
+        if str(_candidate.get("source") or "vuurland").strip() not in ("vuurland", "mellow_mix"):
             continue
-        _retry = int(_candidate.get("_v34_retry_at", 0) or 0)
-        if _retry and _queue_now < _retry:
-            _radio_cooldown += 1
+        if _v41_cooldown_until(_candidate) > _queue_now:
+            key = (f"{normalize_match(_candidate.get('artist', ''))}|||"
+                   f"{normalize_match(_candidate.get('title', ''))}")
+            if cache.get(f"__not_found_v{MATCHING_RULES_VERSION}__" + key) is not None:
+                _radio_not_found_cooldown += 1
+            else:
+                _radio_short_cooldown += 1
         else:
             _radio_ready += 1
     print(f"📻 Radio-wachtrij: {_radio_ready} zoekklaar, "
-          f"{_radio_cooldown} op cooldown; Duyster alleen bij vrije zoekbeurt.")
+          f"{_radio_short_cooldown} wacht op andere zoekstrategie, "
+          f"{_radio_not_found_cooldown} in 24-uurs cooldown.")
+    if _radio_ready == 0:
+        print("🎲 Geen zoekklaar radionummer: Duyster mag een vrije zoekbeurt gebruiken.")
 
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue:
@@ -4591,8 +4614,7 @@ def sync():
                 source_id = str(candidate.get("source") or "vuurland").strip()
                 if source_id != preferred_source:
                     continue
-                retry_at = int(candidate.get("_v34_retry_at", 0) or 0)
-                if retry_at and now < retry_at:
+                if now < _v41_cooldown_until(candidate):
                     waiting_for_retry = True
                     continue
                 if searches_used >= MAX_SEARCHES_PER_RUN:
