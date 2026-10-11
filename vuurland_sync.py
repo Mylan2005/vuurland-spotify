@@ -1030,6 +1030,28 @@ def get_mellow_mix_tracks():
 # NUMMER ZOEKEN
 # =========================
 
+def _numbered_title_equivalent(value):
+    """Veilige catalogusnummering: Untitled I / Untitled #1 / Untitled 1.
+
+    Alleen de generieke genummerde compositietitels; geen vrije
+    Romeins-naar-Arabisch-conversie van gewone songtitels.
+    """
+    raw = str(value or "").strip()
+    match = re.fullmatch(
+        r"(?i)(untitled|part|movement|track)\s+(?:#\s*|no\.?\s*)?([ivx]+|\d{1,2})",
+        raw,
+    )
+    if not match:
+        return raw
+    word, ordinal = match.groups()
+    values = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5,
+              "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10}
+    numeric = int(ordinal) if ordinal.isdigit() else values.get(ordinal.upper())
+    if numeric is None or not 1 <= numeric <= 10:
+        return raw
+    return f"{word} {numeric}"
+
+
 def find_spotify_track(
     artist,
     title,
@@ -1502,7 +1524,7 @@ def find_spotify_track(
         kerntitel en versie, dus bredere recall maakt de beslislaag
         niet losser.
         """
-        text = str(value or "").replace("’", "'")
+        text = _numbered_title_equivalent(value).replace("’", "'")
 
         contractions = {
             "dont": "don't", "cant": "can't", "wont": "won't",
@@ -2447,7 +2469,7 @@ def find_spotify_track(
             elif re.search(r"\s*\([^()]+\)\s*$", raw_value):
                 raw_value = re.sub(r"\s*\([^()]+\)\s*$", "", raw_value).strip()
 
-        value = normalize(raw_value)
+        value = normalize(_numbered_title_equivalent(raw_value))
 
         # Officiële film-/soundtracktoevoeging.
         motion_picture_pattern = re.compile(

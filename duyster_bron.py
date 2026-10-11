@@ -19,6 +19,7 @@ ARCHIVE_CSV = Path(__file__).with_name('duyster_archief_uniek.csv')
 START_PID = 832
 REQUEST_TIMEOUT = 15
 RETRY_SECONDS = 86400
+MAX_ACTIVE_DUYSTER = 3  # Een wachtende retry mag de shuffle niet blokkeren.
 
 
 class SongLinks(HTMLParser):
@@ -143,9 +144,17 @@ def enqueue_one(cache, live_queue, seen, normalize_match):
 def prepare(cache, live_queue, seen, normalize_match):
     # Nieuwe uitzending komt meteen in de catalogus, ook tijdens de backlog.
     check_new_episode(cache)
-    # Niet meer dan één open Duyster-item tegelijk: kleine buffer, geen
-    # verdringing van de live radio-items of explosie van Spotify-aanvragen.
-    if any(isinstance(x, dict) and x.get('source') == 'duyster'
-           for x in live_queue):
+    # Een Duyster-track die 10 minuten wacht op een volgende zoekvariant
+    # mag nieuwe archiefselecties niet stilleggen. Houd de buffer klein:
+    # maximaal drie openstaande Duyster-tracks, geen extra Spotify-calls.
+    now = time.time()
+    active_duyster = [item for item in live_queue
+                      if isinstance(item, dict) and item.get('source') == 'duyster']
+    if len(active_duyster) >= MAX_ACTIVE_DUYSTER:
+        return
+    # Is er al een Duyster-track NU verwerkbaar, maak geen extra queue-item.
+    # De globale scheduler geeft radio prioriteit en laat Duyster daarna toe.
+    if any(int(item.get('_v34_retry_at', 0) or 0) <= now
+           for item in active_duyster):
         return
     enqueue_one(cache, live_queue, seen, normalize_match)
