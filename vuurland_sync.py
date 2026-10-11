@@ -4243,7 +4243,7 @@ def sync():
     # ---------------------------------
 
     searches_used = 0
-    MAX_SEARCHES_PER_RUN = 1
+    MAX_SEARCHES_PER_RUN = 2  # v43: twee gedeelde Spotify Searches per 120 seconden
     NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
 
     # ---------------------------------
