@@ -4541,15 +4541,17 @@ def sync():
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
 
-    # v37: één Spotify Search per ronde, maar meerdere cache-hits en
-    # reeds aanwezige opnames mogen kosteloos uit de wachtrij verdwijnen.
-    # De twee radiozenders wisselen beurtelings van eerste keus. Duyster
-    # mag uitsluitend zoeken als geen radiotrack zoekklaar is.
+    # v42: drie gelijkwaardige bronnen. Persistente round-robin voorkomt
+    # dat een constante radiostroom Duyster kan uithongeren of omgekeerd.
+    # Bestaande playlist/cache-hits blijven ook na de Search mogelijk.
     processed_item_ids = set()
     max_queue_items_per_round = 35
-    radio_turn = str(cache.get("__v37_radio_turn", "vuurland"))
-    if radio_turn not in ("vuurland", "mellow_mix"):
-        radio_turn = "vuurland"
+    source_order = ("vuurland", "mellow_mix", "duyster")
+    source_turn = str(cache.get("__v42_source_turn", "vuurland"))
+    if source_turn not in source_order:
+        source_turn = "vuurland"
+    additions_this_round = 0
+    max_additions_per_round = 2
 
     # v41: één gedeelde cooldown-check voor planning én logging.
     # Een 24-uurs "niet gevonden"-item is NIET zoekklaar, ook wanneer
@@ -4588,11 +4590,19 @@ def sync():
     print(f"📻 Radio-wachtrij: {_radio_ready} zoekklaar, "
           f"{_radio_short_cooldown} wacht op andere zoekstrategie, "
           f"{_radio_not_found_cooldown} in 24-uurs cooldown.")
-    if _radio_ready == 0:
-        print("🎲 Geen zoekklaar radionummer: Duyster mag een vrije zoekbeurt gebruiken.")
+    _source_counts = {source: 0 for source in source_order}
+    for _candidate in live_queue:
+        if not isinstance(_candidate, dict):
+            continue
+        _source = str(_candidate.get("source") or "vuurland").strip()
+        if _source in _source_counts and _v41_cooldown_until(_candidate) <= _queue_now:
+            _source_counts[_source] += 1
+    print("🔁 Gelijke bronverdeling: "
+          + ", ".join(f"{name}={_source_counts[name]} zoekklaar" for name in source_order)
+          + f"; volgende beurt: {source_turn}.")
 
     for _queue_slot in range(max_queue_items_per_round):
-        if not live_queue:
+        if not live_queue or additions_this_round >= max_additions_per_round:
             break
 
         selected_index = None
@@ -4600,12 +4610,10 @@ def sync():
         waiting_for_retry = False
         now = time.time()
 
-        # Beoordeel de huidige wachtrij, niet slechts één item per bron.
-        # Wanneer het zoekbudget op is: alleen hits met een bekende Spotify-
-        # opname/cache behandelen; geen nieuwe Search proberen.
-        for preferred_source in (radio_turn,
-                                 "mellow_mix" if radio_turn == "vuurland" else "vuurland",
-                                 "duyster"):
+        # Alle bronnen krijgen evenveel kansen op een nieuwe Spotify Search.
+        # Wanneer het zoekbudget op is: alleen zekere playlist/cache-hits.
+        turn_index = source_order.index(source_turn)
+        for preferred_source in source_order[turn_index:] + source_order[:turn_index]:
             for index, candidate in enumerate(live_queue):
                 if not isinstance(candidate, dict):
                     continue
@@ -4642,10 +4650,11 @@ def sync():
             live_queue.insert(0, selected_item)
 
         processed_item_ids.add(id(live_queue[0]))
-        if selected_source in ("vuurland", "mellow_mix"):
-            radio_turn = ("mellow_mix" if selected_source == "vuurland"
-                          else "vuurland")
-            cache["__v37_radio_turn"] = radio_turn
+        # Bewaar de beurt vóór de uitvoering. Ook een mislukte Search
+        # laat de volgende bron aan bod komen; na herstart blijft dit gelden.
+        source_turn = source_order[(source_order.index(selected_source) + 1)
+                                   % len(source_order)]
+        cache["__v42_source_turn"] = source_turn
 
         # Nooit ISRC-metadata van het vorige queue-item hergebruiken.
         LAST_SPOTIFY_MATCH_ISRC = None
@@ -5264,6 +5273,7 @@ def sync():
             playlist_isrcs.add(candidate_isrc)
             spotify_uri_isrc[uri] = candidate_isrc
 
+        additions_this_round += 1
         print(
             f"✅ Toegevoegd: "
             f"{artist} - {title}"
