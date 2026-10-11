@@ -72,6 +72,9 @@ ARTIST_ALIASES = {
     "sam roberts": [
         "Sam Roberts Band",
     ],
+    # v38: gecontroleerde solo/bandcatalogus van Elvis Costello.
+    "elvis costello": ["Elvis Costello & The Attractions"],
+    "elvis costello and the attractions": ["Elvis Costello"],
 
 }
 
@@ -1096,6 +1099,10 @@ def find_spotify_track(
     )
 
     known_uri_overrides = {
+        # v38: door gebruiker met exacte Spotify-link bevestigde versies.
+        ("john lennon", "imagine"): "spotify:track:7pKfPomDEeI4TPT6EOYjn9",
+        ("gary numan", "down in the park (piano version)"): "spotify:track:34JQZdbVOrShEVhkYCUuNK",
+        ("jimin oh-havenith", "prelude in c major (js bach)"): "spotify:track:50jjQJKueYPhNnJmAzMN6O",
         (
             "death cab for cutie",
             "love song",
@@ -1566,6 +1573,14 @@ def find_spotify_track(
         text = text.strip(' "`“”')
         return " ".join(text.split())
 
+    # v38: benoemde versies horen bij zoekpoging nul in de zoekterm te
+    # blijven; anders vinden we b.v. een pianoversie vaak niet.
+    explicit_version_request = re.search(
+        r"\(\s*(piano|acoustic|orchestral|live|remix|instrumental)\s+version\s*\)\s*$",
+        str(title or ""), flags=re.IGNORECASE
+    )
+    if explicit_version_request and search_variant == 0:
+        search_title = str(title).strip()
     search_query_title = spotify_search_title_variant(search_title)
 
     artist_hint_parts = [
@@ -2862,6 +2877,33 @@ def find_spotify_track(
             primary_artist_score = 1.0
             primary_artist_exact = True
 
+        # v38: Strength in Numbers wordt bij Spotify als losse bandleden
+        # gecrediteerd. Alleen de bekende vijf leden, zonder vreemde artiesten.
+        if alias_key(wanted_artists[0]) == "strength in numbers":
+            band_members = {
+                "bela fleck", "jerry douglas", "sam bush",
+                "mark o connor", "edgar meyer",
+            }
+            artist_credits = {alias_key(a) for a in spotify_artists}
+            if (len(artist_credits) >= 2
+                    and artist_credits <= band_members
+                    and "bela fleck" in artist_credits
+                    and "jerry douglas" in artist_credits):
+                primary_artist_score = 1.0
+                primary_artist_exact = True
+
+        # v38: bij dit klassieke werk vermeldt Spotify de componist als
+        # eerste artiest, gevolgd door de door RadioBox genoemde uitvoerder.
+        # Geen generieke vrijstelling voor alle Bach-opnames.
+        if (alias_key(wanted_artists[0]) == "jimin oh havenith"
+                and "prelude in c major" in str(title).casefold()
+                and "bach" in str(title).casefold()
+                and spotify_artist_compact
+                and alias_key(spotify_artists[0]) == "johann sebastian bach"
+                and any(alias_key(a) == "jimin oh havenith" for a in spotify_artists[1:])):
+            primary_artist_score = 1.0
+            primary_artist_exact = True
+
         # Soms zet RadioBox de album-/projectnaam in het artiestveld.
         # Alleen een exacte albumnaam mag zo de artiestcontrole redden;
         # de titel moet verderop nog steeds sterk/exact overeenkomen.
@@ -2938,6 +2980,13 @@ def find_spotify_track(
         # =============================================
         # TITEL CONTROLEREN
         # =============================================
+
+        # v38: een Lennon-solo-opname met extra koor-/orkestcredits is
+        # niet de gewenste gewone Lennon-opname.
+        if (alias_key(wanted_artists[0]) == "john lennon"
+                and len(wanted_artists) == 1
+                and len(spotify_artists) > 1):
+            continue
 
         spotify_title = normalize(
             item.get("name", "")
