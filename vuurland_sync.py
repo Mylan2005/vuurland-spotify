@@ -34,6 +34,8 @@ PLAYLIST_ID = "555lFTvdRswe9ukybmOM8T"
 #
 # De normale titelcontrole blijft volledig actief.
 ARTIST_ALIASES = {
+    # Historische artiestennaam: één artiest, twee officiële catalogusnamen.
+    "manitoba": ["Caribou"],
     "the indien": [
         "rianne",
     ],
@@ -1099,6 +1101,9 @@ def find_spotify_track(
     )
 
     known_uri_overrides = {
+        # Verifieerbare originele Spotify-uitvoeringen wanneer Search enkel
+        # covers/karaoke laat zien (beperkt tot exacte artiest en titel).
+        ("bird york", "in the deep"): "spotify:track:5JiFBL8ty9N5Zyy8hiV0Qg",
         # v39: exacte, door gebruiker aangewezen Spotify-tracks.
         # Albumopname/uitvoerder blijven via deze expliciete sleutel afgebakend.
         ("alison krauss & gillian welch", "i'll fly away"): "spotify:track:4rJtUMlnhJzlzlnxyoc3tb",
@@ -1634,7 +1639,12 @@ def find_spotify_track(
         # Exacte titel als gerichte track-filter; de artiest controleren
         # we achteraf in de bestaande strenge matcher.
         quoted_title = search_query_title.replace('"', ' ').strip()
-        query = f'track:"{quoted_title}"'
+        short_title = len(re.findall(r"[\w]+", quoted_title)) <= 2
+        if short_title:
+            quoted_artist = str(spotify_search_artist).replace('"', ' ').strip()
+            query = f'track:"{quoted_title}" artist:"{quoted_artist}"'
+        else:
+            query = f'track:"{quoted_title}"' 
     elif search_variant == 2:
         # Artist-filter met volledige artiestennaam, zonder harde titel-filter.
         # Zoekresultaten blijven lokaal streng op titel en credits getoetst.
@@ -2800,7 +2810,25 @@ def find_spotify_track(
                         == alias_key(title_feature_artist)):
                 explicit_guest_credit = True
 
-        if project_artist_credit or explicit_guest_credit:
+        # v46: bij een cover/tribute-album crediteert Spotify soms ook
+        # de oorspronkelijke componist als derde artiest. Accepteer dat
+        # alleen als beide gevraagde uitvoerders exact en in volgorde
+        # aanwezig zijn EN het album de derde credit expliciet noemt in
+        # "songs of X" of "tribute to X". Geen algemene extra-artiestvrijstelling.
+        tribute_composer_credit = False
+        if len(wanted_artists) == 1 and len(spotify_artists) == 3:
+            wanted_pair = re.split(r"\s+(?:&|and)\s+", wanted_artists[0])
+            album_credit = alias_key((item.get("album") or {}).get("name", ""))
+            composer = alias_key(spotify_artists[2])
+            if (len(wanted_pair) == 2
+                    and all(alias_key(a) == alias_key(b)
+                            for a, b in zip(wanted_pair, spotify_artists[:2]))
+                    and composer
+                    and (f"songs of {composer}" in album_credit
+                         or f"tribute to {composer}" in album_credit)):
+                tribute_composer_credit = True
+
+        if project_artist_credit or explicit_guest_credit or tribute_composer_credit:
             primary_artist_score = 1.0
             primary_artist_exact = True
 
