@@ -3871,9 +3871,8 @@ def sync():
     # ---------------------------------
     # LIVE QUEUE
     #
-    # Dit is geen oude backlog.
-    # Alleen nummers die recent op de radio
-    # gezien zijn komen hierin.
+    # Persistente wachtrij, inclusief eerder opgebouwde radio-achterstand.
+    # Geen bestaande nummers wissen bij een code-update.
     # ---------------------------------
 
     live_queue_file = os.path.join(
@@ -4070,8 +4069,8 @@ def sync():
         title = item["title"]
 
         key = (
-            f"{artist.strip().lower()}|||"
-            f"{title.strip().lower()}"
+            f"{normalize_match(artist)}|||"
+            f"{normalize_match(title)}"
         )
 
         if key in queued_keys:
@@ -4450,56 +4449,72 @@ def sync():
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
 
-    # Per sync-run maximaal één queue-item per radiobron.
-    #
-    # Beide bronnen krijgen zo een kans in dezelfde ronde,
-    # terwijl MAX_SEARCHES_PER_RUN = 1 globaal behouden blijft.
-    processed_sources = set()
+    # v37: één Spotify Search per ronde, maar meerdere cache-hits en
+    # reeds aanwezige opnames mogen kosteloos uit de wachtrij verdwijnen.
+    # De twee radiozenders wisselen beurtelings van eerste keus. Duyster
+    # mag uitsluitend zoeken als geen radiotrack zoekklaar is.
+    processed_item_ids = set()
+    max_queue_items_per_round = 35
+    radio_turn = str(cache.get("__v37_radio_turn", "vuurland"))
+    if radio_turn not in ("vuurland", "mellow_mix"):
+        radio_turn = "vuurland"
 
-    for _source_slot in range(3):
-
+    for _queue_slot in range(max_queue_items_per_round):
         if not live_queue:
             break
 
         selected_index = None
         selected_source = None
-
-        # Live zenders eerst, maar laat een item in retry-wachttijd nooit
-        # de andere klaarstaande radio- of Duyster-nummers blokkeren.
-        # De Spotify Search-limiet wordt hieronder ongewijzigd afgedwongen.
-        now = time.time()
         waiting_for_retry = False
-        for priority in ("radio", "duyster"):
+        now = time.time()
+
+        # Beoordeel de huidige wachtrij, niet slechts één item per bron.
+        # Wanneer het zoekbudget op is: alleen hits met een bekende Spotify-
+        # opname/cache behandelen; geen nieuwe Search proberen.
+        for preferred_source in (radio_turn,
+                                 "mellow_mix" if radio_turn == "vuurland" else "vuurland",
+                                 "duyster"):
             for index, candidate in enumerate(live_queue):
-                source_id = str(candidate.get("source") or "vuurland").strip()
-                if (source_id == "duyster") != (priority == "duyster"):
+                if not isinstance(candidate, dict):
                     continue
-                if source_id in processed_sources:
+                if id(candidate) in processed_item_ids:
+                    continue
+                source_id = str(candidate.get("source") or "vuurland").strip()
+                if source_id != preferred_source:
                     continue
                 retry_at = int(candidate.get("_v34_retry_at", 0) or 0)
                 if retry_at and now < retry_at:
                     waiting_for_retry = True
                     continue
+                if searches_used >= MAX_SEARCHES_PER_RUN:
+                    key = (f"{normalize_match(candidate.get('artist', ''))}|||"
+                           f"{normalize_match(candidate.get('title', ''))}")
+                    known_in_playlist = key in playlist_keys
+                    known_match = (f"__match_v{MATCHING_RULES_VERSION}__" + key) in cache
+                    if not (known_in_playlist or known_match or key in seen):
+                        continue
                 selected_index = index
                 selected_source = source_id
                 break
             if selected_index is not None:
                 break
 
-        if selected_index is None and waiting_for_retry:
-            print("⏳ Alternatieve Spotify-zoekpogingen wachten; "
-                  "geen ander nummer klaar voor verwerking.")
-
         if selected_index is None:
+            if waiting_for_retry:
+                print("⏳ Alternatieve Spotify-zoekpogingen wachten; "
+                      "geen ander nummer klaar voor verwerking.")
             break
 
-        # De bestaande verwerking gebruikt bewust queue-index 0.
-        # Zet daarom het gekozen item tijdelijk vooraan.
+        # De bestaande verwerking verwacht zijn gekozen item op positie nul.
         if selected_index != 0:
             selected_item = live_queue.pop(selected_index)
             live_queue.insert(0, selected_item)
 
-        processed_sources.add(selected_source)
+        processed_item_ids.add(id(live_queue[0]))
+        if selected_source in ("vuurland", "mellow_mix"):
+            radio_turn = ("mellow_mix" if selected_source == "vuurland"
+                          else "vuurland")
+            cache["__v37_radio_turn"] = radio_turn
 
         # Nooit ISRC-metadata van het vorige queue-item hergebruiken.
         LAST_SPOTIFY_MATCH_ISRC = None

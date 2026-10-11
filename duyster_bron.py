@@ -128,7 +128,7 @@ def enqueue_one(cache, live_queue, seen, normalize_match):
             continue
         eligible.append(song)
     if not eligible:
-        print(f'📚 Duyster: geen kandidaat beschikbaar; {done}/{len(catalog)} afgewerkt.')
+        print(f'📚 Duyster: geen kandidaat beschikbaar; {done}/{len(catalog)} in seen; {len(issued)} ooit geselecteerd.')
         return False
     song = random.SystemRandom().choice(eligible)
     key = _seen_key(normalize_match, song['artist'], song['title'])
@@ -137,7 +137,7 @@ def enqueue_one(cache, live_queue, seen, normalize_match):
     issued[key] = now
     cache['__duyster_issued'] = issued
     print(f'🎲 Duyster shuffle: {song["artist"]} — {song["title"]} '
-          f'({done}/{len(catalog)} al afgewerkt).')
+          f'({done}/{len(catalog)} in seen; {len(issued)} ooit geselecteerd).')
     return True
 
 
