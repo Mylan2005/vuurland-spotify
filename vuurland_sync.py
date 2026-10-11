@@ -2761,6 +2761,21 @@ def find_spotify_track(
                 primary_artist_score = 1.0
                 primary_artist_exact = True
 
+        # v40: Spotify may reverse two *complete* collaborator credits.
+        # Require precisely the same two artist identities and no guests;
+        # do not split band names unless Spotify actually supplies two artists.
+        reversed_duo_match = False
+        if len(spotify_artists) == 2 and len(wanted_artists) == 1:
+            wanted_duo = re.split(r"\s+(?:&|and)\s+", wanted_artists[0])
+            if (len(wanted_duo) == 2
+                    and all(compact(name) for name in wanted_duo)
+                    and {compact(name) for name in wanted_duo}
+                        == {compact(name) for name in spotify_artists}
+                    and compact(wanted_duo[0]) != compact(wanted_duo[1])):
+                reversed_duo_match = True
+                primary_artist_exact = True
+                primary_artist_score = 1.0
+
         # v30: RadioBox kan een samenwerking als "A & B" schrijven,
         # terwijl Spotify alleen A als primaire artiest heeft. Dit is
         # uitsluitend een solo-fallback bij exacte A-credit; geen fuzzy prefix.
@@ -3194,6 +3209,29 @@ def find_spotify_track(
             wanted_base_compact in spotify_extension_compacts
         )
 
+        # v40: a catalog may prefix a FULL song title with "Theme from".
+        # Only permit complete equality of the remaining title (at least
+        # two words); never a partial title or an arbitrary soundtrack title.
+        def full_theme_from_equivalent(left, right):
+            def theme_words(value):
+                words = normalize(value).split()
+                return [re.sub(r"[^a-z0-9]", "", word) for word in words]
+
+            lhs, rhs = theme_words(left), theme_words(right)
+            for longer, shorter in ((lhs, rhs), (rhs, lhs)):
+                if (len(shorter) >= 2
+                        and longer[:2] == ["theme", "from"]
+                        and longer[2:] == shorter):
+                    return True
+            return False
+
+        theme_title_match = (
+            primary_artist_exact
+            and full_theme_from_equivalent(
+                wanted_title_base_for_match, spotify_title_base
+            )
+        )
+
         # Confidence-klassen zijn belangrijker dan een klein scoreverschil.
         # Een fuzzy kandidaat mag zo nooit een structureel exactere match
         # voorbijsteken door toevallige artiest-/featurebonussen.
@@ -3202,7 +3240,7 @@ def find_spotify_track(
             title_confidence = 5
 
         # Veilige vormvarianten (separator/datum/quote/optioneel "the").
-        elif structural_title_match:
+        elif structural_title_match or theme_title_match:
             title_score = 0.997
             title_confidence = 4
 
@@ -4512,6 +4550,23 @@ def sync():
     radio_turn = str(cache.get("__v37_radio_turn", "vuurland"))
     if radio_turn not in ("vuurland", "mellow_mix"):
         radio_turn = "vuurland"
+
+    # v40: diagnose queue priority without changing scheduling or API use.
+    _radio_ready = 0
+    _radio_cooldown = 0
+    _queue_now = time.time()
+    for _candidate in live_queue:
+        if not isinstance(_candidate, dict):
+            continue
+        if str(_candidate.get("source") or "vuurland") not in ("vuurland", "mellow_mix"):
+            continue
+        _retry = int(_candidate.get("_v34_retry_at", 0) or 0)
+        if _retry and _queue_now < _retry:
+            _radio_cooldown += 1
+        else:
+            _radio_ready += 1
+    print(f"📻 Radio-wachtrij: {_radio_ready} zoekklaar, "
+          f"{_radio_cooldown} op cooldown; Duyster alleen bij vrije zoekbeurt.")
 
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue:
