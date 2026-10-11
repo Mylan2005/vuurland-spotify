@@ -7,6 +7,7 @@ Spotify-cache opgeslagen, die al door de workflow wordt gesynchroniseerd.
 import csv
 import os
 import random
+import re
 import time
 from html.parser import HTMLParser
 from pathlib import Path
@@ -27,7 +28,13 @@ EXCLUDED_ARCHIVE_SONGS = {
 }
 
 def _excluded(artist, title):
-    return (str(artist).strip(), str(title).strip()) in EXCLUDED_ARCHIVE_SONGS
+    if (str(artist).strip(), str(title).strip()) in EXCLUDED_ARCHIVE_SONGS:
+        return True
+    # v48: interviews zijn geen muzieknummers en mogen geen shuffleplaats innemen.
+    return bool(re.match(
+        r"(?i)^\s*interview(?:\s*(?:\(|\[|:|[-–—]|with\b|met\b|w/\b|\d{1,3}\b)|\s*$)",
+        str(title or "").strip(),
+    ))
 
 
 class SongLinks(HTMLParser):

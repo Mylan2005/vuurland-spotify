@@ -4013,6 +4013,17 @@ def radio_matches_playlist(
 
 
 
+# v48: Alleen duidelijke interview-fragmenten blokkeren. Geen gewone
+# muziektitels met het woord "interview" midden in de titel uitsluiten.
+def is_interview_fragment(title):
+    title = str(title or "").strip()
+    title = re.sub(r"^[\s\[\(]*", "", title)
+    return bool(re.match(
+        r"(?i)^interview(?:\s*(?:\(|\[|:|[-–—]|with\b|met\b|w/\b|\d{1,3}\b)|\s*$)",
+        title,
+    ))
+
+
 # v47: RadioBox-ingestie en herprobeerbare missers zonder extra Spotify Search.
 def _v47_key(artist, title):
     return f"{normalize_match(artist)}|||{normalize_match(title)}"
@@ -4040,6 +4051,9 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
             if not artist or not title:
                 continue
             key = _v47_key(artist, title)
+            if is_interview_fragment(title):
+                source_seen.add(key)
+                continue
             if key in source_seen:
                 continue
             scanned += 1
@@ -4071,6 +4085,9 @@ def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_p
              for x in live_queue if isinstance(x, dict)}
     count = 0
     for key, entry in list(failed.items()):
+        if is_interview_fragment(entry.get("title", "")):
+            del failed[key]
+            continue
         if key in seen:
             del failed[key]
             continue
@@ -4092,6 +4109,8 @@ def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_p
 
 
 def v47_remember_failed(cache, artist, title, source, now=None):
+    if is_interview_fragment(title):
+        return
     now = time.time() if now is None else now
     cache.setdefault("__v47_failed_tracks", {})[_v47_key(artist, title)] = {
         "artist": artist, "title": title, "source": source, "failed_at": int(now)}
@@ -4146,6 +4165,17 @@ def sync():
 
     if not isinstance(live_queue, list):
         live_queue = []
+
+    # v48: interviews uit reeds bestaande wachtrij filteren vóór de scheduler.
+    interviews_in_queue = sum(
+        isinstance(x, dict) and is_interview_fragment(x.get("title", ""))
+        for x in live_queue
+    )
+    if interviews_in_queue:
+        live_queue = [x for x in live_queue if not (
+            isinstance(x, dict) and is_interview_fragment(x.get("title", ""))
+        )]
+        print(f"⏭️ {interviews_in_queue} interviewfragment(en) uit wachtrij gehaald zonder Spotify Search.")
 
     # ---------------------------------
     # CACHE / GEZIEN
@@ -4251,6 +4281,19 @@ def sync():
         save_cache(cache)
     except Exception as error:
         print(f"🟡 Duyster tijdelijk overgeslagen: {error}")
+
+    # v48: eventueel nog geselecteerde Duyster-interviews verwijderen.
+    duyster_interviews = sum(
+        isinstance(x, dict) and is_interview_fragment(x.get("title", ""))
+        for x in live_queue
+    )
+    if duyster_interviews:
+        live_queue = [x for x in live_queue if not (
+            isinstance(x, dict) and is_interview_fragment(x.get("title", ""))
+        )]
+        with open(live_queue_file, "w") as f:
+            json.dump(live_queue, f, indent=2, ensure_ascii=False)
+        print(f"⏭️ {duyster_interviews} interviewfragment(en) uit Duyster/radio geweerd.")
 
     # ---------------------------------
     # ALS ER GEEN NUMMER TE VERWERKEN IS
