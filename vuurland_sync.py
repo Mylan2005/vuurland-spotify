@@ -1104,6 +1104,10 @@ def find_spotify_track(
         # Verifieerbare originele Spotify-uitvoeringen wanneer Search enkel
         # covers/karaoke laat zien (beperkt tot exacte artiest en titel).
         ("bird york", "in the deep"): "spotify:track:5JiFBL8ty9N5Zyy8hiV0Qg",
+        # v49: exacte Spotify-links die de gebruiker bij gemiste matches gaf.
+        # Alleen deze precieze artiest/titel-combinaties, geen fuzzy alias.
+        ("father john misty", "to r."): "spotify:track:3aSBBiVguFashsLChx8JZN",
+        ("iso68", "est plus"): "spotify:track:3IhIPnC66fiNtnNby3VGTm",
         # v39: exacte, door gebruiker aangewezen Spotify-tracks.
         # Albumopname/uitvoerder blijven via deze expliciete sleutel afgebakend.
         ("alison krauss & gillian welch", "i'll fly away"): "spotify:track:4rJtUMlnhJzlzlnxyoc3tb",
@@ -1631,6 +1635,16 @@ def find_spotify_track(
         part for part in query_parts
         if str(part or "").strip()
     )
+
+    # v49: ultrakorte titels zijn moeilijk te ranken met een ingekorte
+    # artiestennaam (bv. "To R. Father John"). Gebruik meteen de volledige
+    # artiest + exact afgebakende titel. Bij latere varianten blijft het
+    # bestaande alternatieve zoekpad beschikbaar.
+    if search_variant == 0 and len(search_title_words) <= 2 and len(search_query_title.strip()) <= 12:
+        quoted_artist = str(spotify_search_artist).replace('"', ' ').strip()
+        quoted_title = search_query_title.replace('"', ' ').strip()
+        if quoted_artist and quoted_title:
+            query = f'artist:"{quoted_artist}" track:"{quoted_title}"'
 
     # v34: alternatieve query PAS bij de volgende sync-ronde.
     # Ook deze zoekpoging vraagt maximaal tien Spotify-resultaten.
@@ -4239,6 +4253,29 @@ def sync():
                 "🧹 Oude foutieve matching-cache verwijderd: "
                 + ", ".join(sorted(removed_bad_cache_keys))
             )
+
+    # v49: twee door de gebruiker exact gelinkte Spotify-tracks hoeven
+    # niet langer een oude 24-uurs 'niet gevonden'-cooldown af te wachten.
+    # Houd bestaande geschiedenis, seen, queue en andere cache-items intact.
+    if not cache.get("__v49_confirmed_links_released"):
+        for exact_artist, exact_title in (
+            ("father john misty", "to r."),
+            ("iso68", "est plus"),
+        ):
+            exact_key = _v47_key(exact_artist, exact_title)
+            cache.pop(f"__not_found_v{MATCHING_RULES_VERSION}__" + exact_key, None)
+            cache.pop(f"__match_v{MATCHING_RULES_VERSION}__" + exact_key, None)
+            failed_item = cache.get("__v47_failed_tracks", {}).get(exact_key)
+            if isinstance(failed_item, dict):
+                failed_item["failed_at"] = 0
+            for queued_item in live_queue:
+                if isinstance(queued_item, dict) and _v47_key(
+                    queued_item.get("artist", ""), queued_item.get("title", "")
+                ) == exact_key:
+                    queued_item.pop("_v34_retry_at", None)
+                    queued_item["_v34_search_variant"] = 0
+        cache["__v49_confirmed_links_released"] = True
+        print("🎯 v49: bevestigde Spotify-links voor To R. en Est Plus vrijgegeven.")
 
     queued_keys = {
         f"{normalize_match(item.get('artist', ''))}|||"
