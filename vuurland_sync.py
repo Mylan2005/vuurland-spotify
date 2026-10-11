@@ -4091,6 +4091,41 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
     return newly_queued
 
 
+# v50: Duyster-missers verdwijnen na de volledige set zoekstrategieën
+# uit de shuffle. Bewaar ze afzonderlijk zodat we ze bij een latere
+# algemene matcherverbetering gecontroleerd opnieuw kunnen beoordelen.
+def v50_archive_duyster_miss(cache, artist, title, now=None):
+    now = time.time() if now is None else now
+    key = _v47_key(artist, title)
+    cache.setdefault("__v50_duyster_unmatched", {}).setdefault(key, {
+        "artist": artist, "title": title, "failed_at": int(now),
+        "matching_version": 34,
+    })
+    cache.setdefault("__v47_failed_tracks", {}).pop(key, None)
+    return key
+
+
+def v50_clean_duyster_retries(cache, live_queue):
+    """Migrate old exhausted Duyster retries and remove their queued copies."""
+    blocked = cache.setdefault("__v50_duyster_unmatched", {})
+    failed = cache.setdefault("__v47_failed_tracks", {})
+    newly_blocked = 0
+    for key, entry in list(failed.items()):
+        if not isinstance(entry, dict) or entry.get("source") != "duyster":
+            continue
+        if key not in blocked:
+            v50_archive_duyster_miss(cache, entry.get("artist", ""),
+                                    entry.get("title", ""), entry.get("failed_at"))
+            newly_blocked += 1
+        failed.pop(key, None)
+    before = len(live_queue)
+    live_queue[:] = [item for item in live_queue if not (
+        isinstance(item, dict) and item.get("source") == "duyster" and
+        _v47_key(item.get("artist", ""), item.get("title", "")) in blocked
+    )]
+    return newly_blocked, before - len(live_queue)
+
+
 def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_per_run=4):
     """Restore failed songs after their cooldown, no perpetual silent loss."""
     now = time.time() if now is None else now
@@ -4099,6 +4134,11 @@ def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_p
              for x in live_queue if isinstance(x, dict)}
     count = 0
     for key, entry in list(failed.items()):
+        if isinstance(entry, dict) and entry.get("source") == "duyster":
+            v50_archive_duyster_miss(cache, entry.get("artist", ""),
+                                    entry.get("title", ""), entry.get("failed_at"))
+            failed.pop(key, None)
+            continue
         if is_interview_fragment(entry.get("title", "")):
             del failed[key]
             continue
@@ -4124,6 +4164,9 @@ def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_p
 
 def v47_remember_failed(cache, artist, title, source, now=None):
     if is_interview_fragment(title):
+        return
+    if source == "duyster":
+        v50_archive_duyster_miss(cache, artist, title, now)
         return
     now = time.time() if now is None else now
     cache.setdefault("__v47_failed_tracks", {})[_v47_key(artist, title)] = {
@@ -4298,6 +4341,10 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
+    blocked_now, removed_from_queue = v50_clean_duyster_retries(cache, live_queue)
+    if blocked_now or removed_from_queue:
+        print(f"🧹 v50: {blocked_now} oude Duyster-missers uitgesloten; "
+              f"{removed_from_queue} herhaalde wachtrij-items verwijderd.")
     restored = v47_restore_retries(cache, seen, live_queue)
     if restored:
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
@@ -5241,8 +5288,13 @@ def sync():
 
             # Pas na alle veilige zoekstrategieën: 24-uurs cooldown.
             cache[not_found_key] = int(time.time())
-            v47_remember_failed(cache, artist, title, item.get("source", "duyster"))
-            print("🗂️ Bewaard in herprobeerlijst; over 24 uur opnieuw zoeken.")
+            failed_source = item.get("source", "duyster")
+            v47_remember_failed(cache, artist, title, failed_source)
+            if failed_source == "duyster":
+                print("🗃️ Duyster: na 3 zoekstrategieën niet gevonden; uit de "
+                      "automatische shuffle verwijderd (registratie bewaard).")
+            else:
+                print("🗂️ Bewaard in herprobeerlijst; over 24 uur opnieuw zoeken.")
 
             # Uit de huidige queue-positie verwijderen.
             #

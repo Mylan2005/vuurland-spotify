@@ -130,12 +130,19 @@ def enqueue_one(cache, live_queue, seen, normalize_match):
         _seen_key(normalize_match, x.get('artist', ''), x.get('title', ''))
         for x in live_queue if isinstance(x, dict)
     }
+    # v50: afgehandelde niet-vindbare archiefnummers niet opnieuw loten.
+    # Ook oude v49-herprobeerrecords tellen als definitief afgehandeld.
+    blocked = set(cache.get('__v50_duyster_unmatched', {}))
+    blocked.update(key for key, entry in cache.get('__v47_failed_tracks', {}).items()
+                   if isinstance(entry, dict) and entry.get('source') == 'duyster')
     issued = dict(cache.get('__duyster_issued', {}))
     now = int(time.time())
     eligible = []
     done = 0
     for song in catalog.values():
         key = _seen_key(normalize_match, song['artist'], song['title'])
+        if key in blocked:
+            continue
         if key in seen:
             done += 1
             continue
