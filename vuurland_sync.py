@@ -4332,6 +4332,28 @@ def v51_revisit_archived(cache, seen, live_queue, matching_version=35, batch=1):
     return issued
 
 
+RADIO_FAILED_SEARCH_LIMIT = 5
+
+
+def v51_radio_failure_key(artist, title):
+    return _v47_key(artist, title)
+
+
+def v51_radio_failed_count(cache, artist, title):
+    return int(cache.get('__v51_radio_failed_searches', {}).get(
+        v51_radio_failure_key(artist, title), 0) or 0)
+
+
+def v51_radio_park(cache, artist, title, source, attempts):
+    key = v51_radio_failure_key(artist, title)
+    cache.setdefault('__v51_radio_unmatched', {})[key] = {
+        'artist': artist, 'title': title, 'source': source,
+        'failed_at': int(time.time()), 'matching_version': 35,
+        'failed_searches': attempts,
+    }
+    cache.setdefault('__v47_failed_tracks', {}).pop(key, None)
+
+
 def v51_release_old_radio_failures(cache, limit=1):
     """Gefaseerde herstelronde voor radio-missers van vóór matcher v51.
 
@@ -4349,6 +4371,14 @@ def v51_release_old_radio_failures(cache, limit=1):
     while pending and released < limit:
         key = pending.pop(0)
         if key not in failed:
+            continue
+        if key in cache.get('__v51_radio_unmatched', {}):
+            continue
+        # Een oude misser met vijf geregistreerde mislukte searches niet vrijgeven.
+        if int(cache.get('__v51_radio_failed_searches', {}).get(key, 0) or 0) >= RADIO_FAILED_SEARCH_LIMIT:
+            entry = failed.get(key, {})
+            v51_radio_park(cache, entry.get('artist', ''), entry.get('title', ''),
+                           entry.get('source', 'vuurland'), RADIO_FAILED_SEARCH_LIMIT)
             continue
         failed[key]['failed_at'] = 0
         cache.pop('__not_found_v35__'+key,None)
@@ -4404,6 +4434,10 @@ def v47_remember_failed(cache, artist, title, source, now=None):
         return
     now = time.time() if now is None else now
     key = _v47_key(artist, title)
+    if v51_radio_failed_count(cache, artist, title) >= RADIO_FAILED_SEARCH_LIMIT:
+        v51_radio_park(cache, artist, title, source,
+                       v51_radio_failed_count(cache, artist, title))
+        return
     # Niet elke dag dezelfde radio-misser opnieuw: twee VOLLEDIGE reeksen
     # van drie zoekstrategieën, daarna in controleerbaar archief parkeren.
     cycles = cache.setdefault('__v51_radio_failed_cycles', {})
@@ -5436,6 +5470,21 @@ def sync():
 
             continue
 
+        # Radiomissers na vijf echte, mislukte zoekacties niet meer zoeken.
+        # Geen blokkering van bestaande positieve Spotify-matches.
+        radio_source = item.get('source', 'duyster')
+        if (radio_source in ('vuurland', 'mellow_mix')
+                and match_cache_key not in cache
+                and v51_radio_failed_count(cache, artist, title) >= RADIO_FAILED_SEARCH_LIMIT):
+            v51_radio_park(cache, artist, title, radio_source,
+                           v51_radio_failed_count(cache, artist, title))
+            live_queue.pop(0)
+            with open(live_queue_file, 'w') as f:
+                json.dump(live_queue, f, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            print(f'🗃️ Radio: na vijf mislukte Spotify-zoekacties geparkeerd: {artist} - {title}')
+            continue
+
         # ---------------------------------
         # CACHE SEARCH RESULT
         # ---------------------------------
@@ -5503,6 +5552,7 @@ def sync():
                 cache[match_cache_key] = uri
                 cache.get('__v51_radio_failed_cycles', {}).pop(_v47_key(artist,title),None)
                 cache.get('__v51_radio_unmatched', {}).pop(_v47_key(artist,title),None)
+                cache.get('__v51_radio_failed_searches', {}).pop(_v47_key(artist,title),None)
 
                 # Een eerdere mislukte zoekpoging is niet meer relevant.
                 cache.pop(not_found_key, None)
@@ -5514,6 +5564,22 @@ def sync():
         # ---------------------------------
 
         if uri is None:
+
+            failed_source = item.get('source', 'duyster')
+            if failed_source in ('vuurland', 'mellow_mix'):
+                key = v51_radio_failure_key(artist, title)
+                counts = cache.setdefault('__v51_radio_failed_searches', {})
+                count = int(counts.get(key, 0) or 0) + 1
+                counts[key] = count
+                if count >= RADIO_FAILED_SEARCH_LIMIT:
+                    v51_radio_park(cache, artist, title, failed_source, count)
+                    live_queue.pop(0)
+                    with open(live_queue_file, 'w') as f:
+                        json.dump(live_queue, f, indent=2, ensure_ascii=False)
+                    save_cache(cache)
+                    print(f'🗃️ Radio: {artist} - {title} na {count} mislukte zoekacties geparkeerd.')
+                    print(f'🔎 Spotify Search gebruikt: {searches_used}/{MAX_SEARCHES_PER_RUN}')
+                    continue
 
             print(
                 f"⚠️ Geen betrouwbare Spotify-match gevonden: "
