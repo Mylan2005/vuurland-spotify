@@ -1658,7 +1658,14 @@ def find_spotify_track(
     # v34: alternatieve query PAS bij de volgende sync-ronde.
     # Ook deze zoekpoging vraagt maximaal tien Spotify-resultaten.
     # Geen extra Spotify API-call in find_spotify_track().
-    if search_variant == 1:
+    if search_variant == 1 and title_feature_artist:
+        # v51.8: RadioBox kan de hoofdartiest en gast verwisselen.
+        # Eén ALTERNATIEVE bestaande zoekpoging op de expliciet genoemde
+        # gast, niet een extra Spotify-request. De uiteindelijke match
+        # blijft beperkt tot een EXACTE gastcredit en exacte kerntitel.
+        guest_query = " ".join(str(title_feature_artist).replace('"', ' ').split())
+        query = " ".join(part for part in (guest_query, search_query_title) if part)
+    elif search_variant == 1:
         # Exacte titel als gerichte track-filter; de artiest controleren
         # we achteraf in de bestaande strenge matcher.
         quoted_title = search_query_title.replace('"', ' ').strip()
@@ -2819,6 +2826,19 @@ def find_spotify_track(
             == spotify_primary_compact
         )
 
+        # v51.8: expliciete gast in de RadioBox-titel kan in Spotify
+        # de enige hoofdartiest zijn. Alleen EXACTE gastidentiteit,
+        # precies één Spotify-artist en geen andere artiest.
+        guest_only_catalog_match = bool(
+            title_feature_artist
+            and len(spotify_artists) == 1
+            and compact(re.sub(r'["“”]', '', title_feature_artist))
+                == compact(re.sub(r'["“”]', '', spotify_primary_artist))
+        )
+        if guest_only_catalog_match:
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+
         # v51: correcte cataloguscredit kan extra sessiemuzikanten bevatten,
         # een bandnaam uitschrijven, of de artiest pas na een componist noemen.
         # Alleen identieke VOLLEDIGE namen tellen; definitieve titeltoets volgt.
@@ -3155,6 +3175,11 @@ def find_spotify_track(
         # Een ONJUISTE gastcredit is geen soloversie en blijft verboden.
         explicit_feature_count = max(0, len(wanted_artist_compact) - 1)
         missing_feature_count = max(0, explicit_feature_count - matched_feature_count)
+        if guest_only_catalog_match:
+            # De gast is de enige Spotify-hoofdartiest; de vermelde
+            # RadioBox-hoofdartiest ontbreekt. Dit is een zwakkere
+            # match dan wanneer de volledige samenwerking aanwezig is.
+            missing_feature_count = 0
         if missing_feature_count:
             if (not primary_artist_exact
                     or len(spotify_artists) != 1):
@@ -3505,6 +3530,15 @@ def find_spotify_track(
                 and min(len(wanted_words), len(spotify_words)) >= 4
             ):
                 title_score = max(title_score, 0.905)
+
+        # v51.8: guest-only catalogusmatch uitsluitend bij dezelfde
+        # COMPLETE kerntitel. Geen fuzzy overeenkomst en geen
+        # gedeeltelijke/verkorte titel; dit voorkomt verkeerde covers.
+        if guest_only_catalog_match and not (
+            spotify_compact == wanted_compact
+            or spotify_base_compact == wanted_base_compact
+        ):
+            continue
 
         # v51: een artiest op een andere creditpositie is uitsluitend veilig
         # als de VOLLEDIGE hoofd- of kerntitel gelijk is; nooit fuzzy titels.
