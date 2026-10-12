@@ -23,7 +23,7 @@ RETRY_SECONDS = 86400
 MAX_ACTIVE_DUYSTER = 3  # Een wachtende retry mag de shuffle niet blokkeren.
 # v52.4: auditlijst eerst reviewen; standaard geen Spotify-only toevoegingen.
 SPOTIFY_ONLY_CSV = Path(__file__).with_name('duyster_spotify_only_v52_4.csv')
-SPOTIFY_ONLY_ENABLED = False
+SPOTIFY_ONLY_ENABLED = True
 
 
 # Bevestigde foutieve archiefregel. Niet zoeken of opnieuw selecteren.
