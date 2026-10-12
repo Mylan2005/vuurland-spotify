@@ -1664,8 +1664,18 @@ def find_spotify_track(
         quoted_title = search_query_title.replace('"', ' ').strip()
         short_title = len(re.findall(r"[\w]+", quoted_title)) <= 2
         if short_title:
-            quoted_artist = str(spotify_search_artist).replace('"', ' ').strip()
-            query = f'track:"{quoted_title}" artist:"{quoted_artist}"'
+            # v51.7: poging 0 gebruikte bij ultrakorte titels al
+            # artist:"..." track:"...". Dezelfde velden omdraaien
+            # verandert de Spotify-filter niet en verspilt een poging.
+            # Daarom is poging 1 nu een ongefilterde catalogusquery:
+            # Spotify mag alternatieve credits en titelspelling ranken;
+            # onze strenge lokale matcher valideert elke kandidaat.
+            loose_artist = str(spotify_search_artist).replace('"', ' ').strip()
+            loose_artist = loose_artist.translate(str.maketrans({
+                'ø': 'o', 'Ø': 'O', 'æ': 'ae', 'Æ': 'Ae',
+                'œ': 'oe', 'Œ': 'Oe', 'ß': 'ss',
+            }))
+            query = ' '.join(part for part in (loose_artist, quoted_title) if part)
         else:
             query = f'track:"{quoted_title}"' 
     elif search_variant == 2:
