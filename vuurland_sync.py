@@ -1,4 +1,5 @@
 import base64
+import csv
 import duyster_bron
 import hashlib
 import http.server
@@ -4601,6 +4602,53 @@ def v47_remember_failed(cache, artist, title, source, now=None):
     cache.setdefault("__v47_failed_tracks", {})[key] = {
         "artist": artist, "title": title, "source": source, "failed_at": int(now)}
 
+def load_duyster_confirmed_links(csv_path):
+    """Read-only. Only exact archive identities from the audited strict proposal CSV.
+
+    Ambiguous identities are excluded rather than arbitrarily picking a recording.
+    The file must be deployed explicitly next to vuurland_sync.py.
+    """
+    import pathlib
+    path = pathlib.Path(csv_path)
+    if not path.is_file():
+        print('ℹ️ Duyster-koppeltabel ontbreekt: normale matcher blijft actief.')
+        return {}
+    links, ambiguous = {}, set()
+    try:
+        with path.open('r', newline='', encoding='utf-8-sig') as handle:
+            for row in csv.DictReader(handle):
+                if row.get('controle_status') != 'strikt_koppelvoorstel':
+                    continue
+                if str(row.get('is_playable_api', '')).lower() != 'true':
+                    continue
+                tid = str(row.get('spotify_track_id') or '').strip()
+                isrc = str(row.get('isrc') or '').strip().upper()
+                if not re.fullmatch(r'[a-zA-Z0-9]{22}', tid):
+                    continue
+                if not re.fullmatch(r'[a-zA-Z0-9]{12}', isrc):
+                    continue
+                if str(row.get('spotify_url') or '').strip() != 'https://open.spotify.com/track/' + tid:
+                    continue
+                artist, title = str(row.get('artist') or ''), str(row.get('title') or '')
+                if (normalize_match(artist) != normalize_match(row.get('spotify_artiest')) or
+                        normalize_match(title) != normalize_match(row.get('spotify_titel'))):
+                    continue
+                key = f'{normalize_match(artist)}|||{normalize_match(title)}'
+                proposed = ('spotify:track:' + tid, isrc)
+                if key in links and links[key] != proposed:
+                    ambiguous.add(key)
+                else:
+                    links[key] = proposed
+    except (OSError, UnicodeError, csv.Error) as error:
+        print(f'⚠️ Duyster-koppeltabel onleesbaar ({error}); normale matcher blijft actief.')
+        return {}
+    for key in ambiguous:
+        links.pop(key, None)
+    print(f'🔗 Duyster: {len(links)} gecontroleerde archiefkoppelingen geladen; '
+          f'{len(ambiguous)} conflicten geweerd. Geen Spotify Search.')
+    return links
+
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -5151,6 +5199,11 @@ def sync():
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
 
+    duyster_confirmed_links = load_duyster_confirmed_links(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                     'duyster_strikte_koppelvoorstellen.csv')
+    )
+
     # v42: drie gelijkwaardige bronnen. Persistente round-robin voorkomt
     # dat een constante radiostroom Duyster kan uithongeren of omgekeerd.
     # Bestaande playlist/cache-hits blijven ook na de Search mogelijk.
@@ -5232,7 +5285,11 @@ def sync():
                 source_id = str(candidate.get("source") or "vuurland").strip()
                 if source_id != preferred_source:
                     continue
-                if now < _v41_cooldown_until(candidate):
+                candidate_key = (f"{normalize_match(candidate.get('artist', ''))}|||"
+                                 f"{normalize_match(candidate.get('title', ''))}")
+                linked_duyster = (source_id == 'duyster' and
+                                  candidate_key in duyster_confirmed_links)
+                if not linked_duyster and now < _v41_cooldown_until(candidate):
                     waiting_for_retry = True
                     continue
                 if searches_used >= MAX_SEARCHES_PER_RUN:
@@ -5240,7 +5297,7 @@ def sync():
                            f"{normalize_match(candidate.get('title', ''))}")
                     known_in_playlist = key in playlist_keys
                     known_match = (f"__match_v{MATCHING_RULES_VERSION}__" + key) in cache
-                    if not (known_in_playlist or known_match or key in seen):
+                    if not (known_in_playlist or known_match or key in seen or linked_duyster):
                         continue
                 selected_index = index
                 selected_source = source_id
@@ -5274,7 +5331,10 @@ def sync():
         # v34: herstartbestendige wachttijd tussen zoekstrategieën.
         # De queue blijft persistent in vuurland_live_queue.json.
         retry_at = int(item.get("_v34_retry_at", 0) or 0)
-        if retry_at and time.time() < retry_at:
+        if (retry_at and time.time() < retry_at
+                and not (item.get('source') == 'duyster' and
+                         f"{normalize_match(item.get('artist', ''))}|||{normalize_match(item.get('title', ''))}"
+                         in duyster_confirmed_links)):
             live_queue.append(live_queue.pop(0))
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             print("⏳ Alternatieve Spotify-zoekpoging wacht tot later.")
@@ -5548,12 +5608,17 @@ def sync():
             + cache_key
         )
 
+        linked_duyster_match = (
+            duyster_confirmed_links.get(cache_key)
+            if item.get('source') == 'duyster' else None
+        )
         not_found_time = cache.get(
             not_found_key
         )
 
         if (
-            not_found_time is not None
+            linked_duyster_match is None
+            and not_found_time is not None
             and time.time() - not_found_time
             < NOT_FOUND_COOLDOWN_SECONDS
         ):
@@ -5597,7 +5662,13 @@ def sync():
         # CACHE SEARCH RESULT
         # ---------------------------------
 
-        if match_cache_key in cache:
+        if linked_duyster_match:
+            uri, known_isrc = linked_duyster_match
+            # Local metadata is never a previous Search result.
+            spotify_uri_isrc[uri] = known_isrc
+            print(f'🔗 Duyster-archiefkoppeling (geen Search): {artist} - {title}')
+
+        elif match_cache_key in cache:
 
             uri = cache[match_cache_key]
 
