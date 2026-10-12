@@ -1717,6 +1717,35 @@ def find_spotify_track(
         if quoted_artist and quoted_title:
             query = f'artist:"{quoted_artist}" track:"{quoted_title}"'
 
+    # v52.1: Zoekstrategie 1/2 gebruikt de KERNTITEL als de bron een
+    # uitvoeringslabel toevoegt. Versievoorkeur blijft uitsluitend in de
+    # kandidaatselectie; zoekresultaten mogen niet door '(live)' verdwijnen.
+    # Bij langere titels filteren we enkele functiewoorden uit de tweede
+    # zoekopdracht, zodat een kleine bronfout ('Was' vs 'Has') niet opnieuw
+    # exact dezelfde Spotify-ranking veroorzaakt.
+    def v521_broad_catalog_title(value):
+        text = str(value or '').strip()
+        text = re.sub(
+            r'\s*\(\s*(?:(?:live|remastered?|remaster|acoustic|studio|demo|instrumental|radio edit|single edit|club mix|extended mix|remix)(?:\s+(?:version|recording|mix|edit))?|(?:\d{4}\s+)?remaster)\s*\)\s*$',
+            '', text, flags=re.IGNORECASE,
+        ).strip()
+        # Ook het veel voorkomende ' - Live' en ' - 2019 Remaster'.
+        text = re.sub(
+            r'\s+[-–—]\s+(?:(?:live|acoustic|demo|instrumental)(?:\s+version)?|(?:\d{4}\s+)?remaster(?:ed)?|(?:club|radio|extended)\s+mix)\s*$',
+            '', text, flags=re.IGNORECASE,
+        ).strip()
+        return text or str(value or '').strip()
+
+    def v521_distinct_search_terms(value):
+        words = re.findall(r"[\w'’]+", value, flags=re.UNICODE)
+        if len(words) >= 5:
+            stop = {'the', 'a', 'an', 'of', 'and', 'or', 'was', 'has',
+                    'is', 'are', 'were', 'been', 'to', 'in', 'on', 'at'}
+            pruned = [word for word in words if word.casefold() not in stop]
+            if len(pruned) >= 2:
+                return ' '.join(pruned[:6])
+        return value
+
     # v34: alternatieve query PAS bij de volgende sync-ronde.
     # Ook deze zoekpoging vraagt maximaal tien Spotify-resultaten.
     # Geen extra Spotify API-call in find_spotify_track().
@@ -1746,12 +1775,20 @@ def find_spotify_track(
             }))
             query = ' '.join(part for part in (loose_artist, quoted_title) if part)
         else:
-            query = f'track:"{quoted_title}"' 
+            # Zoek met de artiest als ZACHTE hint en een brede kerntitel.
+            # Een harde track:-filter op bronmetadata, bv. '(live)', sloot
+            # echte Spotify-kandidaten onnodig uit.
+            core_title = v521_broad_catalog_title(search_query_title)
+            broad_title = v521_distinct_search_terms(core_title)
+            loose_artist = str(spotify_search_artist).replace('"', ' ').strip()
+            query = ' '.join(part for part in (loose_artist, broad_title) if part)
     elif search_variant == 2:
-        # Artist-filter met volledige artiestennaam, zonder harde titel-filter.
-        # Zoekresultaten blijven lokaal streng op titel en credits getoetst.
+        # Gerichte artiestfilter, maar zonder verplichte versie-achtervoegsels
+        # of mogelijk foutieve kleine functiewoorden in de bronmetadata.
         quoted_artist = str(spotify_search_artist).replace('"', ' ').strip()
-        query = f'artist:"{quoted_artist}" {search_query_title}' 
+        core_title = v521_broad_catalog_title(search_query_title)
+        broad_title = v521_distinct_search_terms(core_title)
+        query = f'artist:"{quoted_artist}" {broad_title}'
 
     data = spotify_request(
         "GET",
