@@ -3785,12 +3785,24 @@ def find_spotify_track(
             "remaster": ["remaster", "ordinary", "live", "mix"],
             "mix": ["mix", "ordinary", "remaster", "live"],
         }
+        # Catalogus-/sessieopnames zijn een laatste redmiddel, GEEN gewone
+        # studioversies. Bijvoorbeeld "Flume - Spotify Singles" bij FINNEAS.
+        # Alleen toelaten als de hoofdartiest en volledige kerntitel exact
+        # overeenkomen; de vier bestaande opnamevoorkeuren blijven voorop.
+        session_fallbacks = {"spotify singles", "session"}
         if wanted_family in preferred_order:
             order = preferred_order[wanted_family]
-            if candidate_family not in order:
+            if candidate_family in session_fallbacks:
+                if not primary_artist_exact or not same_core_title or (
+                    spotify_base_compact != wanted_base_compact
+                ):
+                    continue
+                version_tier = len(order)
+            elif candidate_family in order:
+                version_tier = order.index(candidate_family)
+            else:
                 continue
             # Gewenste familie gaat vóór credit-tier bij al veilig bevonden matches.
-            version_tier = order.index(candidate_family)
         else:
             # Specifieke uitvoeringen die de gebruiker niet als een van de vier
             # fallbackfamilies heeft beschreven strikt blijven matchen.
