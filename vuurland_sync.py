@@ -6,6 +6,7 @@ import json
 import os
 import re
 import secrets
+import tempfile
 import threading
 import time
 import urllib.parse
@@ -98,29 +99,64 @@ SEEN_FILE = os.path.join(DATA_DIR, ".vuurland_seen.json")
 
 
 
+def atomic_save_json(path, data, *, indent=2, ensure_ascii=False):
+    """Never expose a partially written JSON state file."""
+    directory = os.path.dirname(os.path.abspath(path))
+    os.makedirs(directory, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", dir=directory,
+            prefix=".vuurland-", suffix=".tmp", delete=False
+        ) as handle:
+            temporary = handle.name
+            json.dump(data, handle, indent=indent, ensure_ascii=ensure_ascii)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary, path)
+        temporary = None
+    finally:
+        if temporary is not None and os.path.exists(temporary):
+            os.unlink(temporary)
+
+
 def load_cache():
     try:
-        with open(CACHE_FILE, "r") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
+        with open(CACHE_FILE, "r", encoding="utf-8") as f:
+            value = json.load(f)
+    except FileNotFoundError:
         return {}
+    if not isinstance(value, dict):
+        raise ValueError("Spotify-cache is geen JSON-object; state niet overschrijven")
+    return value
 
 
 def save_cache(cache):
-    with open(CACHE_FILE, "w") as f:
-        json.dump(cache, f, indent=2)
+    # spotify_request() writes the 429 cooldown independently of the caller's
+    # in-memory cache. Never overwrite a newer, still-active disk cooldown.
+    persisted = load_cache()
+    now = time.time()
+    for key in ("__spotify_api_blocked_until", "__spotify_search_blocked_until"):
+        disk_until = float(persisted.get(key, 0) or 0)
+        caller_until = float(cache.get(key, 0) or 0)
+        if disk_until > now and disk_until > caller_until:
+            cache[key] = disk_until
+    atomic_save_json(CACHE_FILE, cache, indent=2, ensure_ascii=False)
+
 
 def load_seen():
     try:
-        with open(SEEN_FILE, "r") as f:
-            return set(json.load(f))
-    except (FileNotFoundError, json.JSONDecodeError):
+        with open(SEEN_FILE, "r", encoding="utf-8") as f:
+            value = json.load(f)
+    except FileNotFoundError:
         return set()
+    if not isinstance(value, list):
+        raise ValueError("Seen-state is geen JSON-lijst; niet overschrijven")
+    return set(value)
 
 
 def save_seen(seen):
-    with open(SEEN_FILE, "w") as f:
-        json.dump(sorted(seen), f, indent=2)
+    atomic_save_json(SEEN_FILE, sorted(seen), indent=2, ensure_ascii=False)
 
 
 _startup_cache = load_cache()
@@ -4539,11 +4575,11 @@ def sync():
     try:
         with open(live_queue_file, "r") as f:
             live_queue = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
+    except FileNotFoundError:
         live_queue = []
 
     if not isinstance(live_queue, list):
-        live_queue = []
+        raise ValueError("Live queue is geen JSON-lijst; niet overschrijven")
 
     # v48: interviews uit reeds bestaande wachtrij filteren vóór de scheduler.
     interviews_in_queue = sum(
@@ -4678,8 +4714,7 @@ def sync():
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
 
     # Bewaar de ontdekkings- en retry-state samen met de queue.
-    with open(live_queue_file, "w") as f:
-        json.dump(live_queue, f, indent=2, ensure_ascii=False)
+    atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
 
     # Derde bron: Duyster (historisch + nieuwe wekelijkse afleveringen).
@@ -4688,8 +4723,7 @@ def sync():
     # Bij archiefproblemen blijven de twee live bronnen normaal werken.
     try:
         duyster_bron.prepare(cache, live_queue, seen, normalize_match)
-        with open(live_queue_file, "w") as f:
-            json.dump(live_queue, f, indent=2, ensure_ascii=False)
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
     except Exception as error:
         print(f"🟡 Duyster tijdelijk overgeslagen: {error}")
@@ -4703,8 +4737,7 @@ def sync():
         live_queue = [x for x in live_queue if not (
             isinstance(x, dict) and is_interview_fragment(x.get("title", ""))
         )]
-        with open(live_queue_file, "w") as f:
-            json.dump(live_queue, f, indent=2, ensure_ascii=False)
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         print(f"⏭️ {duyster_interviews} interviewfragment(en) uit Duyster/radio geweerd.")
 
     # ---------------------------------
@@ -4713,13 +4746,7 @@ def sync():
 
     if not live_queue:
 
-        with open(live_queue_file, "w") as f:
-            json.dump(
-                [],
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
+        atomic_save_json(live_queue_file, [], indent=2, ensure_ascii=False)
 
         save_cache(cache)
 
@@ -5176,8 +5203,7 @@ def sync():
         retry_at = int(item.get("_v34_retry_at", 0) or 0)
         if retry_at and time.time() < retry_at:
             live_queue.append(live_queue.pop(0))
-            with open(live_queue_file, "w") as f:
-                json.dump(live_queue, f, indent=2, ensure_ascii=False)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             print("⏳ Alternatieve Spotify-zoekpoging wacht tot later.")
             continue
 
@@ -5198,13 +5224,7 @@ def sync():
 
             live_queue.pop(0)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             save_cache(cache)
             continue
@@ -5259,13 +5279,7 @@ def sync():
 
             live_queue.pop(0)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             save_cache(cache)
             continue
@@ -5285,13 +5299,7 @@ def sync():
 
             live_queue.pop(0)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             save_cache(cache)
             continue
@@ -5438,13 +5446,7 @@ def sync():
             live_queue.pop(0)
             seen.add(cache_key)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             save_seen(seen)
             save_cache(cache)
@@ -5488,13 +5490,7 @@ def sync():
             failed_item = live_queue.pop(0)
             live_queue.append(failed_item)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             save_cache(cache)
 
@@ -5519,8 +5515,7 @@ def sync():
             v51_radio_park(cache, artist, title, radio_source,
                            v51_radio_failed_count(cache, artist, title))
             live_queue.pop(0)
-            with open(live_queue_file, 'w') as f:
-                json.dump(live_queue, f, indent=2, ensure_ascii=False)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
             print(f'🗃️ Radio: na vijf mislukte Spotify-zoekacties geparkeerd: {artist} - {title}')
             continue
@@ -5547,13 +5542,7 @@ def sync():
                     "voor deze ronde bereikt."
                 )
 
-                with open(live_queue_file, "w") as f:
-                    json.dump(
-                        live_queue,
-                        f,
-                        indent=2,
-                        ensure_ascii=False
-                    )
+                atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
                 save_cache(cache)
                 continue
@@ -5614,8 +5603,7 @@ def sync():
                 if count >= RADIO_FAILED_SEARCH_LIMIT:
                     v51_radio_park(cache, artist, title, failed_source, count)
                     live_queue.pop(0)
-                    with open(live_queue_file, 'w') as f:
-                        json.dump(live_queue, f, indent=2, ensure_ascii=False)
+                    atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
                     save_cache(cache)
                     print(f'🗃️ Radio: {artist} - {title} na {count} mislukte zoekacties geparkeerd.')
                     print(f'🔎 Spotify Search gebruikt: {searches_used}/{MAX_SEARCHES_PER_RUN}')
@@ -5639,8 +5627,7 @@ def sync():
                 item["_v34_search_variant"] = attempt + 1
                 item["_v34_retry_at"] = int(time.time()) + 600
                 live_queue.append(live_queue.pop(0))
-                with open(live_queue_file, "w") as f:
-                    json.dump(live_queue, f, indent=2, ensure_ascii=False)
+                atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
                 save_cache(cache)
                 print(f"🔁 Geen match; zoekstrategie {attempt + 1}/2 "
                       "wordt in een latere ronde geprobeerd.")
@@ -5669,13 +5656,7 @@ def sync():
             # geprobeerd kan worden.
             live_queue.pop(0)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             save_cache(cache)
 
@@ -5745,13 +5726,7 @@ def sync():
             save_seen(seen)
             save_cache(cache)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             continue
 
@@ -5775,13 +5750,7 @@ def sync():
             save_seen(seen)
             save_cache(cache)
 
-            with open(live_queue_file, "w") as f:
-                json.dump(
-                    live_queue,
-                    f,
-                    indent=2,
-                    ensure_ascii=False
-                )
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
             continue
 
@@ -5865,13 +5834,7 @@ def sync():
         seen.add(cache_key)
         save_seen(seen)
 
-        with open(live_queue_file, "w") as f:
-            json.dump(
-                live_queue,
-                f,
-                indent=2,
-                ensure_ascii=False
-            )
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
         save_cache(cache)
 
