@@ -489,52 +489,37 @@ def spotify_request(
         )
 
         # ---------------------------------
-        # SPOTIFY RATE LIMIT
+        # SPOTIFY RATE LIMIT / DEVELOPMENT QUOTA (v51.6)
         #
-        # Bij 429 stoppen we NIET.
-        # Spotify bepaalt hoe lang we wachten.
-        # Daarna proberen we dezelfde request opnieuw.
+        # Niet onmiddellijk opnieuw proberen: bewaar de cooldown duurzaam,
+        # ook als Retry-After slechts enkele seconden is. De runner slaat
+        # daarna de state op en stopt met Spotify-aanvragen.
         # ---------------------------------
         if response.status_code == 429:
             retry_after = response.headers.get("Retry-After")
-
             try:
                 wait = max(1, int(retry_after))
             except (TypeError, ValueError):
                 wait = 60
 
-            print()
+            # Development-quota is niet dezelfde 30-seconden-rate-limit.
+            # Bij QUOTA_EXCEEDED niet elke twee minuten opnieuw proberen.
+            if "QUOTA_EXCEEDED" in str(getattr(response, "text", "") or "").upper():
+                wait = max(wait, 3600)
+                print("⏸️ Spotify Development Mode-quota bereikt.")
+
+            cache = load_cache()
+            previous = float(cache.get("__spotify_api_blocked_until", 0) or 0)
+            blocked_until = max(previous, time.time() + wait + 1)
+            cache["__spotify_api_blocked_until"] = blocked_until
+            save_cache(cache)
             print(
-                f"⏸️ Spotify rate-limit (429). "
-                f"Spotify adviseert {wait} seconden wachten."
+                f"⏸️ Spotify HTTP 429: cooldown {wait} seconden duurzaam "
+                "opgeslagen; geen onmiddellijke retry."
             )
-
-            # Korte rate-limits kunnen we veilig zelf uitzitten.
-            # Bij een extreem lange blokkering stoppen we deze run.
-            # Zo blijft een GitHub-run niet urenlang nutteloos hangen.
-            MAX_RATE_LIMIT_WAIT = 600
-
-            if wait > MAX_RATE_LIMIT_WAIT:
-                blocked_until = time.time() + wait
-
-                cache = load_cache()
-                cache["__spotify_api_blocked_until"] = blocked_until
-                save_cache(cache)
-
-                print(
-                    "⏸️ Spotify API tijdelijk geblokkeerd. "
-                    f"Blokkering opgeslagen voor {wait} seconden."
-                )
-
-                raise RuntimeError(
-                    "Spotify rate-limit actief. "
-                    "Blokkering is opgeslagen voor de volgende run."
-                )
-
-            time.sleep(wait)
-
-            print("▶️ Spotify-request wordt opnieuw geprobeerd.")
-            continue
+            raise RuntimeError(
+                "Spotify 429: cooldown bewaard; deze sync-run stopt veilig."
+            )
 
         # ---------------------------------
         # TIJDELIJKE SERVERFOUTEN
@@ -3660,7 +3645,7 @@ def find_spotify_track(
             order = preferred_order[wanted_family]
             if candidate_family not in order:
                 continue
-            # Versie staat vóór tekstscore, maar achter volledige credits.
+            # Gewenste familie gaat vóór credit-tier bij al veilig bevonden matches.
             version_tier = order.index(candidate_family)
         else:
             # Specifieke uitvoeringen die de gebruiker niet als een van de vier
@@ -3718,8 +3703,8 @@ def find_spotify_track(
 
         candidates.append(
             (
-                feature_tier,
                 -version_tier,
+                feature_tier,
                 title_confidence,
                 candidate_score,
                 -len(candidates),
@@ -3735,8 +3720,8 @@ def find_spotify_track(
     if candidates:
         candidates.sort(
             key=lambda candidate: (
-                candidate[0],  # explicit feature completeness
-                candidate[1],  # version tier
+                candidate[0],  # requested version order (only safe matches reach this stage)
+                candidate[1],  # complete artist/featured credits within version
                 candidate[2],  # title confidence class
                 candidate[3],  # detailed score
                 candidate[4],  # Spotify order tie-break
