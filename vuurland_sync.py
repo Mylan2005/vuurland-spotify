@@ -4321,6 +4321,14 @@ def radio_matches_playlist(
 def is_interview_fragment(title):
     title = str(title or "").strip()
     title = re.sub(r"^[\s\[\(]*", "", title)
+    # v52.2: duidelijke archief-placeholders filteren vóór de Spotify Search.
+    if re.fullmatch(
+        r"(?i)\s*(?:unknown[ -]+(?:song|track|title)|(?:song|track|title)[ -]+unknown|"
+        r"onbekend[ -]+nummer|nummer[ -]+onbekend|onbekende[ -]+titel|"
+        r"(?:no|geen)[ -]+(?:song[ -]+)?title)\s*",
+        title,
+    ):
+        return True
     if re.fullmatch(r"(?i)\s*(?:sessie|session|interview\s*[+&]\s*sessie)\s*", title):
         return True
     return bool(re.match(

@@ -30,6 +30,15 @@ EXCLUDED_ARCHIVE_SONGS = {
 def _excluded(artist, title):
     if (str(artist).strip(), str(title).strip()) in EXCLUDED_ARCHIVE_SONGS:
         return True
+    # v52.2: exacte ontbrekende-titel-placeholders zijn geen zoekbare tracks.
+    # Geen brede "untitled"-filter: Untitled is soms een echte songtitel.
+    if re.fullmatch(
+        r"(?i)\s*(?:unknown[ -]+(?:song|track|title)|(?:song|track|title)[ -]+unknown|"
+        r"onbekend[ -]+nummer|nummer[ -]+onbekend|onbekende[ -]+titel|"
+        r"(?:no|geen)[ -]+(?:song[ -]+)?title)\s*",
+        str(title or ""),
+    ):
+        return True
     # v51: archiefsessie is geen los muzieknummertitel.
     if re.fullmatch(r"(?i)\s*(?:sessie|session|interview\s*[+&]\s*sessie)\s*", str(title or '')):
         return True
