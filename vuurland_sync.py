@@ -1995,6 +1995,13 @@ def find_spotify_track(
     def normalize(value):
         value = str(value or "").lower().strip()
 
+        # NFKD zet ø, ł en ß niet om naar hun gebruikelijke ASCII-vorm.
+        # Vóór accentverwijdering veilig translitereren voor metadata-matches.
+        value = value.translate(str.maketrans({
+            "ø": "o", "ł": "l", "đ": "d", "ð": "d",
+            "þ": "th", "æ": "ae", "œ": "oe", "ß": "ss",
+        }))
+
         value = unicodedata.normalize(
             "NFKD",
             value
@@ -3622,52 +3629,56 @@ def find_spotify_track(
             or extension_title_match
         )
 
-        # v30: gevraagde versie eerst. Vervolgens ordinary, remaster,
-        # live en als laatste mix/remix. Alle fallbacks eisen een
-        # betrouwbare kerntitel en exacte primaire artiestidentiteit.
-        # v51.2: ontbrekende versieaanduiding betekent de gewone uitvoering.
-        # Live/remix/akoestisch zijn andere opnames en mogen niet stilzwijgend
-        # de gevraagde gewone track vervangen. Expliciet gevraagde versies
-        # moeten dezelfde versie hebben.
-        if not wanted_version and spotify_version in hard_alternative_versions:
-            continue
-        # v51: expliciet gevraagde arrangementen niet verwisselen voor
-        # gewone albumversies; een verkeerde uitvoering is erger dan geen match.
-        if wanted_version in {"acoustic", "piano version", "orchestral version",
-                              "instrumental", "demo", "remix", "unplugged",
-                              "stripped", "karaoke"} and spotify_version != wanted_version:
-            continue
+        # v51.5: gevraagde familie eerst; vervolgens door de gebruiker
+        # vastgelegde fallbackvolgorde. Eén Spotify Search blijft één call.
+        # "acoustic"/"demo"/"instrumental" krijgen uitsluitend een
+        # exacte match: die zijn niet gelijk aan gewone/live-opnames.
         if wanted_named_variant and spotify_named_variant != wanted_named_variant:
             continue
-        if wanted_version and spotify_version == wanted_version:
-            version_tier = 0
-            candidate_score += 0.60
-        elif spotify_version is None:
-            version_tier = 0 if not wanted_version else 1
-            candidate_score += 0.30
-        elif spotify_version == "original version":
-            version_tier = 0 if not wanted_version else 1
-            candidate_score += 0.18
-        elif spotify_version == "remaster":
-            version_tier = 1 if not wanted_version else 2
-            candidate_score += 0.24
-        elif spotify_version in soft_fallback_versions:
-            version_tier = 4 if not wanted_version else 5
-            candidate_score -= 0.20
-        elif spotify_version == "live":
-            version_tier = 2 if not wanted_version else 3
-            candidate_score -= 0.35
-        elif spotify_version in {"mix", "remix"}:
-            version_tier = 3 if not wanted_version else 4
-            candidate_score -= 0.50
-        elif spotify_version in hard_alternative_versions:
-            # Behoud de v29-noodfallback voor bekende alternatieve versies,
-            # maar pas na ordinary/remaster/live/mix/remix.
-            version_tier = 6
-            candidate_score -= 0.75
+
+        def preferred_family(family):
+            if family in (None, "ordinary", "original version", "album version",
+                          "single version", "version", "bonus track"):
+                return "ordinary"
+            if family == "remaster":
+                return "remaster"
+            if family == "live":
+                return "live"
+            if family in ("mix", "remix"):
+                return "mix"
+            return family
+
+        wanted_family = preferred_family(wanted_version)
+        candidate_family = preferred_family(spotify_version)
+        preferred_order = {
+            "ordinary": ["ordinary", "remaster", "live", "mix"],
+            "live": ["live", "ordinary", "remaster", "mix"],
+            "remaster": ["remaster", "ordinary", "live", "mix"],
+            "mix": ["mix", "ordinary", "remaster", "live"],
+        }
+        if wanted_family in preferred_order:
+            order = preferred_order[wanted_family]
+            if candidate_family not in order:
+                continue
+            # Versie staat vóór tekstscore, maar achter volledige credits.
+            version_tier = order.index(candidate_family)
         else:
-            # Onbekende benoemde versies en arrangementen blijven afgewezen.
-            continue
+            # Specifieke uitvoeringen die de gebruiker niet als een van de vier
+            # fallbackfamilies heeft beschreven strikt blijven matchen.
+            if spotify_version != wanted_version:
+                continue
+            version_tier = 0
+
+        if candidate_family == wanted_family:
+            candidate_score += 0.60
+        elif candidate_family == "ordinary":
+            candidate_score += 0.30
+        elif candidate_family == "remaster":
+            candidate_score += 0.24
+        elif candidate_family == "live":
+            candidate_score -= 0.35
+        elif candidate_family == "mix":
+            candidate_score -= 0.50
 
         # Preserve v29's strong fallback checks: a loose title or artist
         # resemblance must never become valid only because of a version suffix.
