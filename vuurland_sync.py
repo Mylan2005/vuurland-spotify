@@ -2925,6 +2925,16 @@ def find_spotify_track(
             primary_wanted_artist
             == spotify_primary_compact
         )
+        # v52.5: intern koppelteken versus spatie in DEZELFDE volledige
+        # hoofdartiest is een schrijfvariant, geen andere artiest.
+        # Bijvoorbeeld "Warrington Runcorn" en "Warrington-Runcorn".
+        # Geen prefix-, gedeeltelijke of fuzzy match.
+        if not primary_artist_exact:
+            def _v525_artist_words(value):
+                return re.sub(r"[-‐‑‒–—]", " ", value).split()
+            if _v525_artist_words(primary_wanted_artist) == _v525_artist_words(spotify_primary_compact):
+                primary_artist_exact = True
+                primary_artist_score = 1.0
 
         # v51.8: expliciete gast in de RadioBox-titel kan in Spotify
         # de enige hoofdartiest zijn. Alleen EXACTE gastidentiteit,
@@ -3339,6 +3349,16 @@ def find_spotify_track(
                 raw_variant,
                 flags=re.IGNORECASE
             )
+            if not match:
+                # Benoemde versie na een dash is dezelfde variant als
+                # dezelfde naam in haakjes: '(1973 Version)' = '- 1973 version'.
+                # De bestaande varianttoets vergelijkt de volledige naam;
+                # verschillende jaren/benamingen blijven uitgesloten.
+                match = re.search(
+                    r"\s+-\s+([^()]+?)\s+version\s*$",
+                    raw_variant,
+                    flags=re.IGNORECASE
+                )
             if not match:
                 match = re.search(
                     r"\s+-\s+(.+?)\s+cut\s*$",
