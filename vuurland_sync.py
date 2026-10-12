@@ -4278,23 +4278,37 @@ def v50_clean_duyster_retries(cache, live_queue):
     return newly_blocked, before - len(live_queue)
 
 
-def v51_revisit_archived(cache, seen, live_queue, matching_version=35, batch=1):
-    """Eenmalige gedoseerde herbeoordeling van v50-missers na matcherupdate.
+# Geef nieuwe Duyster-archiefnummers voorrang op oude, mislukte matches.
+# Het historisch archief zelf blijft volledig onaangeraakt.
+DUYSTER_OLD_MISS_RECHECK_INTERVAL = 6 * 3600
 
-    Elke gearchiveerde Duyster-titel krijgt bij deze versie opnieuw precies
-    één reeks van maximaal drie strategieën; geen oneindige heractivatie.
+
+def v51_revisit_archived(cache, seen, live_queue, matching_version=35, batch=1):
+    """Herbekijk oude Duyster-missers zonder de gewone shuffle te verdringen.
+
+    Per oude misser maximaal één herstelreeks in deze matcher-versie.
+    Hoogstens één nieuwe oude-misser-hercontrole per zes uur. De laatst
+    ingeplande tijd wordt in de bestaande persistente cache bewaard.
     """
+    now = int(time.time())
+    last = cache.get("__duyster_old_miss_last_recheck_at", 0)
+    try:
+        last = int(last)
+    except (ValueError, TypeError):
+        last = 0
+    if last > now or (last and now - last < DUYSTER_OLD_MISS_RECHECK_INTERVAL):
+        return 0
+
     archive = cache.setdefault("__v50_duyster_unmatched", {})
     inspected = cache.setdefault("__v51_archived_inspected", [])
     inspected_keys = set(inspected)
     active = {_v47_key(x.get('artist',''), x.get('title',''))
               for x in live_queue if isinstance(x,dict)}
-    # Geen tientallen oude archiefmissers tegelijk: hoogstens twee actieve
-    # hercontroles, zodat de live radio en nieuwe Duyster-shuffle voorrang houden.
+    # Hoogstens één oude hercontrole tegelijk, naast de gewone Duyster-shuffle.
     already_rechecking = sum(bool(isinstance(x,dict) and x.get('_v51_archive_recheck')) for x in live_queue)
-    if already_rechecking >= 2:
+    if already_rechecking >= 1:
         return 0
-    batch = min(batch, 2 - already_rechecking)
+    batch = min(batch, 1)
     issued = 0
     for key, entry in list(archive.items()):
         if issued >= batch:
@@ -4314,6 +4328,7 @@ def v51_revisit_archived(cache, seen, live_queue, matching_version=35, batch=1):
         live_queue.append({'artist':artist,'title':title,'source':'duyster',
                            '_v51_archive_recheck': True, '_v34_search_variant': 0})
         issued += 1
+        cache["__duyster_old_miss_last_recheck_at"] = now
     return issued
 
 
