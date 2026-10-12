@@ -5216,6 +5216,29 @@ def sync():
                      'duyster_strikte_koppelvoorstellen.csv')
     )
 
+    # v52.4: exclusively approved Spotify-only rows use existing Duyster add path.
+    # Default OFF until offline inventory is manually reviewed. Never perform Search.
+    if duyster_bron.SPOTIFY_ONLY_ENABLED:
+        for _entry in duyster_bron.load_spotify_only_candidates().values():
+            _key = (f"{normalize_match(_entry['artist'])}|||"
+                    f"{normalize_match(_entry['title'])}")
+            _value = ('spotify:track:' + _entry['spotify_track_id'], _entry['isrc'])
+            if _key not in duyster_confirmed_links:
+                duyster_confirmed_links[_key] = _value
+            elif duyster_confirmed_links[_key] != _value:
+                print(f'⚠️ Duyster Spotify-only conflict geweerd: {_key}')
+                # Remove any queued Spotify-only item with ambiguous identity.
+                live_queue[:] = [x for x in live_queue if not (
+                    isinstance(x, dict) and x.get('_v524_spotify_only') and
+                    f"{normalize_match(x.get('artist', ''))}|||{normalize_match(x.get('title', ''))}" == _key)]
+
+    # Fail closed if a previous run queued a Spotify-only row that is no longer approved.
+    live_queue[:] = [x for x in live_queue if not (
+        isinstance(x, dict) and x.get('_v524_spotify_only') and
+        (not duyster_bron.SPOTIFY_ONLY_ENABLED or
+         f"{normalize_match(x.get('artist', ''))}|||{normalize_match(x.get('title', ''))}"
+         not in duyster_confirmed_links))]
+
     # v42: drie gelijkwaardige bronnen. Persistente round-robin voorkomt
     # dat een constante radiostroom Duyster kan uithongeren of omgekeerd.
     # Bestaande playlist/cache-hits blijven ook na de Search mogelijk.

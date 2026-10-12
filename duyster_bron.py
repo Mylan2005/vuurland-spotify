@@ -21,6 +21,10 @@ START_PID = 832
 REQUEST_TIMEOUT = 15
 RETRY_SECONDS = 86400
 MAX_ACTIVE_DUYSTER = 3  # Een wachtende retry mag de shuffle niet blokkeren.
+# v52.4: auditlijst eerst reviewen; standaard geen Spotify-only toevoegingen.
+SPOTIFY_ONLY_CSV = Path(__file__).with_name('duyster_spotify_only_v52_4.csv')
+SPOTIFY_ONLY_ENABLED = False
+
 
 # Bevestigde foutieve archiefregel. Niet zoeken of opnieuw selecteren.
 EXCLUDED_ARCHIVE_SONGS = {
@@ -180,6 +184,67 @@ def enqueue_one(cache, live_queue, seen, normalize_match):
     return True
 
 
+
+def load_spotify_only_candidates(path=SPOTIFY_ONLY_CSV):
+    """Strict read-only audit data. Unconfirmed entries are never queued."""
+    if not path.is_file():
+        return {}
+    candidates = {}
+    blocked = set()
+    with path.open(newline='', encoding='utf-8-sig') as handle:
+        for row in csv.DictReader(handle):
+            if row.get('review_status') != 'approved':
+                continue
+            artist = (row.get('artiest') or '').strip()
+            title = (row.get('titel') or '').strip()
+            track_id = (row.get('spotify_track_id') or '').strip()
+            isrc = (row.get('isrc') or '').strip().upper()
+            if not (artist and title and re.fullmatch(r'[A-Za-z0-9]{22}', track_id)
+                    and re.fullmatch(r'[A-Za-z0-9]{12}', isrc)
+                    and row.get('spotify_url') == 'https://open.spotify.com/track/' + track_id):
+                continue
+            if row.get('is_playable_api', '').casefold() != 'true':
+                continue
+            key = _key(artist, title)
+            entry = {'artist': artist, 'title': title,
+                     'spotify_track_id': track_id, 'isrc': isrc}
+            if key in candidates and candidates[key] != entry:
+                blocked.add(key)
+            candidates[key] = entry
+    for key in blocked:
+        candidates.pop(key, None)
+    return candidates
+
+
+def enqueue_spotify_only(cache, live_queue, seen, normalize_match, candidates):
+    """One Spotify-only Duyster item, never a fourth radio source."""
+    active = {_seen_key(normalize_match, x.get('artist', ''), x.get('title', ''))
+              for x in live_queue if isinstance(x, dict)}
+    # The issued map is a *cooldown*, not a permanent completion marker.
+    # A song is complete only after the normal sync records it in `seen`.
+    issued = cache.setdefault('__v524_spotify_only_issued', {})
+    now = int(time.time())
+    eligible = []
+    for entry in candidates.values():
+        key = _seen_key(normalize_match, entry['artist'], entry['title'])
+        if key in active or key in seen:
+            continue
+        last_issued = int(issued.get(key, 0) or 0)
+        if last_issued and now - last_issued < RETRY_SECONDS:
+            continue
+        eligible.append(entry)
+    if not eligible:
+        return False
+    # Deterministic ordering; a vanished/failed queue item is retried after
+    # cooldown instead of being silently lost forever.
+    choice = eligible[0]
+    key = _seen_key(normalize_match, choice['artist'], choice['title'])
+    live_queue.append({'artist': choice['artist'], 'title': choice['title'],
+                       'source': 'duyster', '_v524_spotify_only': True})
+    issued[key] = now
+    print(f'🔗 Duyster Spotify-only kandidaat: {choice["artist"]} — {choice["title"]}')
+    return True
+
 def prepare(cache, live_queue, seen, normalize_match):
     # Nieuwe uitzending komt meteen in de catalogus, ook tijdens de backlog.
     check_new_episode(cache)
@@ -196,4 +261,19 @@ def prepare(cache, live_queue, seen, normalize_match):
     if any(int(item.get('_v34_retry_at', 0) or 0) <= now
            for item in active_duyster):
         return
-    enqueue_one(cache, live_queue, seen, normalize_match)
+    # v52.4: opt-in, and only vetted rows. Alternate Duyster internal slots.
+    # RadioBox source_order and global 2/round limit remain in sync.py.
+    if SPOTIFY_ONLY_ENABLED:
+        candidates = load_spotify_only_candidates()
+        if candidates and cache.get('__v524_duyster_next_kind', 'archive') == 'spotify_only':
+            if enqueue_spotify_only(cache, live_queue, seen, normalize_match, candidates):
+                cache['__v524_duyster_next_kind'] = 'archive'
+                return
+    if enqueue_one(cache, live_queue, seen, normalize_match):
+        if SPOTIFY_ONLY_ENABLED:
+            cache['__v524_duyster_next_kind'] = 'spotify_only'
+        return
+    # Archive exhausted: eligible vetted Spotify-only records may still progress.
+    if SPOTIFY_ONLY_ENABLED:
+        enqueue_spotify_only(cache, live_queue, seen, normalize_match,
+                             load_spotify_only_candidates())
