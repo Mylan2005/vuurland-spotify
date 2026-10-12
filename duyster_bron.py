@@ -30,6 +30,9 @@ EXCLUDED_ARCHIVE_SONGS = {
 def _excluded(artist, title):
     if (str(artist).strip(), str(title).strip()) in EXCLUDED_ARCHIVE_SONGS:
         return True
+    # v51: archiefsessie is geen los muzieknummertitel.
+    if re.fullmatch(r"(?i)\s*(?:sessie|session|interview\s*[+&]\s*sessie)\s*", str(title or '')):
+        return True
     # v48: interviews zijn geen muzieknummers en mogen geen shuffleplaats innemen.
     return bool(re.match(
         r"(?i)^\s*interview(?:\s*(?:\(|\[|:|[-–—]|with\b|met\b|w/\b|\d{1,3}\b)|\s*$)",

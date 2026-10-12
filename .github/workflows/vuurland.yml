@@ -114,6 +114,11 @@ jobs:
 
             if [ "$SYNC_EXIT" -ne 0 ]; then
               echo "⚠️ Sync-run gestopt met code $SYNC_EXIT."
+              echo "💾 Ook bij een fout de lokaal geschreven Spotify-cooldown en queue opslaan..."
+              if ! push_state; then
+                echo "❌ State kon niet veilig naar GitHub worden gepusht."
+                exit 1
+              fi
               echo "🛑 Geen nieuwe Spotify-request in deze runner."
               break
             fi

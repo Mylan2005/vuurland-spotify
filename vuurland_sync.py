@@ -1596,6 +1596,30 @@ def find_spotify_track(
     if explicit_version_request and search_variant == 0:
         search_title = str(title).strip()
     search_query_title = spotify_search_title_variant(search_title)
+    # v51: maak de EERSTE zoekopdracht ook bruikbaar als Spotify het werk
+    # anders catalogiseert. De latere varianten behouden het oorspronkelijke
+    # zoekpad; geen extra requests of versoepelde kandidaatselectie.
+    if search_variant == 0:
+        classical_query = re.match(
+            r"(?i)^prelude\s+to\s+cello\s+suite\s*(?:#|no\.?\s*)?([1-6])\b",
+            str(search_title).strip(),
+        )
+        if classical_query:
+            search_query_title = f"Cello Suite No. {classical_query.group(1)} Prelude"
+        else:
+            # Descriptieve titelverduidelijking is niet hetzelfde als een
+            # uitvoeringsversie: '(Acoustic)' of '(Live)' blijft bewaard.
+            descriptive = re.fullmatch(r"(.{7,}?)\s*\(([^()]{4,75})\)",
+                                        str(search_title).strip())
+            if descriptive and not re.search(
+                r"(?i)\b(?:live|acoustic|remix|mix|demo|edit|version|instrumental|session|take)\b",
+                descriptive.group(2),
+            ):
+                search_query_title = spotify_search_title_variant(descriptive.group(1))
+            search_query_title = re.sub(
+                r"(?i)\b(?:a|one)\s+million\s+dollars?\b",
+                "$1,000,000", search_query_title,
+            )
 
     artist_hint_parts = [
         part for part in re.split(r"\s+", str(spotify_search_artist or "").strip())
@@ -1798,6 +1822,19 @@ def find_spotify_track(
         # Ook de gecombineerde officiële Spotify-artist objects meenemen.
         if len(candidate_names) > 1:
             candidate_ids.add(search_identity(" and ".join(candidate_names)))
+
+        # Metadata van sommige Spotify-artiesten schrijft een solist uit
+        # als '[solist] and/with [band]'. Dit geeft uitsluitend toestemming
+        # om de kandidaat inhoudelijk te beoordelen; de titel-/versiecontrole
+        # hieronder blijft beslissend.
+        if any(
+            candidate.startswith(wanted + connector)
+            and len(candidate) > len(wanted + connector) + 2
+            for wanted in wanted_ids if len(wanted.split()) >= 2
+            for candidate in candidate_ids
+            for connector in (' and ', ' with ')
+        ):
+            return True
 
         for wanted_id in wanted_ids:
             if not wanted_id:
@@ -2041,6 +2078,11 @@ def find_spotify_track(
         )
         for pattern, replacement in phrase_equivalents:
             normalized = re.sub(pattern, replacement, normalized)
+
+        # v51: uitspraak/valutaspelling. De volledige hoeveelheidswaarde moet
+        # identiek zijn; dit is geen vrije fuzzy titelovereenkomst.
+        normalized = re.sub(r"\b(?:a|one)\s+million\s+dollars?\b", "1000000", normalized)
+        normalized = re.sub(r"\$\s*1\s+000\s+000\b", "1000000", normalized)
 
         # Apostrofverschillen zijn voor titelidentiteit niet betekenisdragend.
         # Dont <-> Don't en Cello Song <-> 'Cello Song.
@@ -2775,6 +2817,49 @@ def find_spotify_track(
             == spotify_primary_compact
         )
 
+        # v51: correcte cataloguscredit kan extra sessiemuzikanten bevatten,
+        # een bandnaam uitschrijven, of de artiest pas na een componist noemen.
+        # Alleen identieke VOLLEDIGE namen tellen; definitieve titeltoets volgt.
+        v51_credit_rescue = False
+        v51_artist_parts = [alias_key(a) for a in spotify_artists]
+        v51_requested = alias_key(wanted_artists[0])
+        v51_splits = [alias_key(x) for x in re.split(
+            r"\s+(?:&|and|with)\s+", wanted_artists[0]) if x.strip()]
+        if len(spotify_artists) > 1:
+            # Eén exact gecrediteerde artiest, naast componist of ensemble.
+            if v51_requested in v51_artist_parts and len(spotify_artists) == 2:
+                v51_credit_rescue = True
+            # Echte samenwerkingen: beide volledige namen, volgorde onbelangrijk.
+            elif len(v51_splits) == 2 and len(spotify_artists) == 2 and all(x in v51_artist_parts for x in v51_splits):
+                v51_credit_rescue = True
+            # Een project met 'A & B' waarvan Spotify A als hoofdartiest en
+            # B als oorspronkelijke groepscredit weglaat: nog niet automatisch,
+            # behalve wanneer overige artiesten als begeleiders vermeld staan.
+            elif (len(v51_splits) == 2 and len(v51_splits[0]) >= 9
+                  and v51_splits[0] == v51_artist_parts[0]
+                  and v51_splits[1] not in v51_artist_parts
+                  and len(spotify_artists) >= 3):
+                v51_credit_rescue = True
+        # v51.1: Spotify zet een solist soms onder een uitgebreide officiële
+        # bandcredit, bv. "Ben Harper And The Innocent Criminals". Accepteer
+        # uitsluitend de HELE naam plus een expliciete bandverbinding; een
+        # gewone tekstprefix is nooit voldoende. Exacte titelcontrole volgt.
+        v51_named_band_credit = False
+        if len(wanted_artists) == 1 and len(spotify_artists) == 1:
+            requested_tokens = alias_key(wanted_artists[0]).split()
+            catalog_tokens = alias_key(spotify_artists[0]).split()
+            if (len(requested_tokens) >= 2
+                    and len(catalog_tokens) >= len(requested_tokens) + 2
+                    and catalog_tokens[:len(requested_tokens)] == requested_tokens
+                    and catalog_tokens[len(requested_tokens)] in {'and', 'with', '&'}
+                    and len(catalog_tokens[len(requested_tokens)+1:]) >= 1):
+                v51_named_band_credit = True
+                primary_artist_score = 1.0
+                primary_artist_exact = True
+        if v51_credit_rescue:
+            primary_artist_score = 1.0
+            primary_artist_exact = True
+
         # v45: ALGEMENE regels voor Spotify-project- en samenwerkingscredits.
         # Geen artiest-/titel-specifieke uitzonderingen.
         #
@@ -3304,6 +3389,50 @@ def find_spotify_track(
             wanted_base_compact in spotify_extension_compacts
         )
 
+        # v51: symmetrische verklarende bron-toevoeging. Alleen als de
+        # Spotify-titel precies gelijk is aan het volledige hoofdtiteldeel.
+        # NOOIT gewone artist/title-prefixmatching of versieaanduidingen.
+        def v51_descriptive_parenthesis(long_title, short_title):
+            raw = str(long_title or '').strip()
+            m = re.fullmatch(r'(.{7,}?)\s*\(([^()]{{4,75}})\)'.replace('{{','{').replace('}}','}'), raw)
+            if not m or requested_version(raw):
+                return False
+            core, description = m.groups()
+            if re.search(r'(?i)\b(?:live|acoustic|remix|mix|demo|edit|version|instrumental|session|take)\b', description):
+                return False
+            return title_compact(core) == title_compact(short_title)
+
+        v51_descriptive_title_match = (
+            primary_artist_exact and
+            (v51_descriptive_parenthesis(wanted_title_for_match, spotify_title)
+             or v51_descriptive_parenthesis(spotify_title, wanted_title_for_match))
+        )
+        if v51_descriptive_title_match:
+            structural_title_match = True
+
+        # v51: klassieke catalogi draaien werknaam en deel om en noemen
+        # eventueel toonsoort/componist in de titel. Alleen dezelfde
+        # instrumentale suite, hetzelfde nummer en exact dezelfde beweging.
+        def v51_classical_equivalent(left, right):
+            def identity(text):
+                text = normalize(text)
+                words = re.findall(r"[a-z0-9]+", text)
+                if not ('cello' in words and 'suite' in words and 'prelude' in words):
+                    return None
+                n = re.search(r"(?:suite\s+(?:no\s*)?|suite\s*#\s*|suite\s*)([1-6])\b", text)
+                if not n:
+                    return None
+                return ('cello suite', n.group(1), 'prelude')
+            a, b = identity(left), identity(right)
+            return a is not None and a == b
+
+        v51_classical_title_match = (
+            primary_artist_exact and
+            v51_classical_equivalent(wanted_title_for_match, spotify_title)
+        )
+        if v51_classical_title_match:
+            structural_title_match = True
+
         # v40: a catalog may prefix a FULL song title with "Theme from".
         # Only permit complete equality of the remaining title (at least
         # two words); never a partial title or an arbitrary soundtrack title.
@@ -3374,6 +3503,15 @@ def find_spotify_track(
                 and min(len(wanted_words), len(spotify_words)) >= 4
             ):
                 title_score = max(title_score, 0.905)
+
+        # v51: een artiest op een andere creditpositie is uitsluitend veilig
+        # als de VOLLEDIGE hoofd- of kerntitel gelijk is; nooit fuzzy titels.
+        if (v51_credit_rescue or v51_named_band_credit) and not (
+            spotify_compact == wanted_compact
+            or spotify_base_compact == wanted_base_compact
+            or structural_title_match
+        ):
+            continue
 
         # Korte/generieke titels zijn het gevaarlijkst: "Home", "Stay",
         # "Run", "You" enz. mogen niet op een middelmatige fuzzy match landen.
@@ -3487,6 +3625,18 @@ def find_spotify_track(
         # v30: gevraagde versie eerst. Vervolgens ordinary, remaster,
         # live en als laatste mix/remix. Alle fallbacks eisen een
         # betrouwbare kerntitel en exacte primaire artiestidentiteit.
+        # v51.2: ontbrekende versieaanduiding betekent de gewone uitvoering.
+        # Live/remix/akoestisch zijn andere opnames en mogen niet stilzwijgend
+        # de gevraagde gewone track vervangen. Expliciet gevraagde versies
+        # moeten dezelfde versie hebben.
+        if not wanted_version and spotify_version in hard_alternative_versions:
+            continue
+        # v51: expliciet gevraagde arrangementen niet verwisselen voor
+        # gewone albumversies; een verkeerde uitvoering is erger dan geen match.
+        if wanted_version in {"acoustic", "piano version", "orchestral version",
+                              "instrumental", "demo", "remix", "unplugged",
+                              "stripped", "karaoke"} and spotify_version != wanted_version:
+            continue
         if wanted_named_variant and spotify_named_variant != wanted_named_variant:
             continue
         if wanted_version and spotify_version == wanted_version:
@@ -4032,6 +4182,8 @@ def radio_matches_playlist(
 def is_interview_fragment(title):
     title = str(title or "").strip()
     title = re.sub(r"^[\s\[\(]*", "", title)
+    if re.fullmatch(r"(?i)\s*(?:sessie|session|interview\s*[+&]\s*sessie)\s*", title):
+        return True
     return bool(re.match(
         r"(?i)^interview(?:\s*(?:\(|\[|:|[-–—]|with\b|met\b|w/\b|\d{1,3}\b)|\s*$)",
         title,
@@ -4126,6 +4278,70 @@ def v50_clean_duyster_retries(cache, live_queue):
     return newly_blocked, before - len(live_queue)
 
 
+def v51_revisit_archived(cache, seen, live_queue, matching_version=35, batch=1):
+    """Eenmalige gedoseerde herbeoordeling van v50-missers na matcherupdate.
+
+    Elke gearchiveerde Duyster-titel krijgt bij deze versie opnieuw precies
+    één reeks van maximaal drie strategieën; geen oneindige heractivatie.
+    """
+    archive = cache.setdefault("__v50_duyster_unmatched", {})
+    inspected = cache.setdefault("__v51_archived_inspected", [])
+    inspected_keys = set(inspected)
+    active = {_v47_key(x.get('artist',''), x.get('title',''))
+              for x in live_queue if isinstance(x,dict)}
+    # Geen tientallen oude archiefmissers tegelijk: hoogstens twee actieve
+    # hercontroles, zodat de live radio en nieuwe Duyster-shuffle voorrang houden.
+    already_rechecking = sum(bool(isinstance(x,dict) and x.get('_v51_archive_recheck')) for x in live_queue)
+    if already_rechecking >= 2:
+        return 0
+    batch = min(batch, 2 - already_rechecking)
+    issued = 0
+    for key, entry in list(archive.items()):
+        if issued >= batch:
+            break
+        if key in inspected_keys or key in active or key in seen:
+            continue
+        if not isinstance(entry,dict) or is_interview_fragment(entry.get('title','')):
+            inspected.append(key)
+            continue
+        artist, title = entry.get('artist',''), entry.get('title','')
+        if not artist or not title:
+            inspected.append(key)
+            continue
+        inspected.append(key)  # vóór zoeken persistente markering
+        archive.pop(key,None)  # Duyster mag opnieuw één keer zoeken
+        cache.pop(f'__not_found_v{matching_version}__'+key,None)
+        live_queue.append({'artist':artist,'title':title,'source':'duyster',
+                           '_v51_archive_recheck': True, '_v34_search_variant': 0})
+        issued += 1
+    return issued
+
+
+def v51_release_old_radio_failures(cache, limit=1):
+    """Gefaseerde herstelronde voor radio-missers van vóór matcher v51.
+
+    Verlaagt alleen hun wachttijd; de bestaande v47-retryfunctie bewaakt
+    queue-duplicaten en bronverdeling. Geen nieuwe Spotify Search op zich.
+    """
+    failed = cache.setdefault('__v47_failed_tracks', {})
+    if '__v51_radio_release_pending' not in cache:
+        cache['__v51_radio_release_pending'] = [
+            key for key, entry in failed.items()
+            if isinstance(entry,dict) and entry.get('source') in ('vuurland','mellow_mix')
+        ]
+    pending = cache['__v51_radio_release_pending']
+    released = 0
+    while pending and released < limit:
+        key = pending.pop(0)
+        if key not in failed:
+            continue
+        failed[key]['failed_at'] = 0
+        cache.pop('__not_found_v35__'+key,None)
+        cache.pop('__not_found_v34__'+key,None)
+        released += 1
+    return released
+
+
 def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_per_run=4):
     """Restore failed songs after their cooldown, no perpetual silent loss."""
     now = time.time() if now is None else now
@@ -4140,6 +4356,9 @@ def v47_restore_retries(cache, seen, live_queue, now=None, cooldown=86400, max_p
             failed.pop(key, None)
             continue
         if is_interview_fragment(entry.get("title", "")):
+            del failed[key]
+            continue
+        if key in cache.get('__v51_radio_unmatched', {}):
             del failed[key]
             continue
         if key in seen:
@@ -4169,7 +4388,21 @@ def v47_remember_failed(cache, artist, title, source, now=None):
         v50_archive_duyster_miss(cache, artist, title, now)
         return
     now = time.time() if now is None else now
-    cache.setdefault("__v47_failed_tracks", {})[_v47_key(artist, title)] = {
+    key = _v47_key(artist, title)
+    # Niet elke dag dezelfde radio-misser opnieuw: twee VOLLEDIGE reeksen
+    # van drie zoekstrategieën, daarna in controleerbaar archief parkeren.
+    cycles = cache.setdefault('__v51_radio_failed_cycles', {})
+    cycle_count = int(cycles.get(key,0)) + 1
+    cycles[key] = cycle_count
+    if cycle_count >= 2:
+        cache.setdefault('__v51_radio_unmatched', {})[key] = {
+            'artist': artist, 'title': title, 'source': source,
+            'failed_at': int(now), 'matching_version': 35,
+            'full_search_cycles': cycle_count,
+        }
+        cache.setdefault('__v47_failed_tracks', {}).pop(key,None)
+        return
+    cache.setdefault("__v47_failed_tracks", {})[key] = {
         "artist": artist, "title": title, "source": source, "failed_at": int(now)}
 
 def sync():
@@ -4253,7 +4486,7 @@ def sync():
     # eenmalig verwijderd. De grote playlist-cache blijft
     # volledig behouden.
 
-    MATCHING_RULES_VERSION = 34
+    MATCHING_RULES_VERSION = 35
     if cache.get(
         "__matching_rules_version"
     ) != MATCHING_RULES_VERSION:
@@ -4345,6 +4578,12 @@ def sync():
     if blocked_now or removed_from_queue:
         print(f"🧹 v50: {blocked_now} oude Duyster-missers uitgesloten; "
               f"{removed_from_queue} herhaalde wachtrij-items verwijderd.")
+    rechecks = v51_revisit_archived(cache, seen, live_queue, MATCHING_RULES_VERSION)
+    if rechecks:
+        print(f"♻️ v51: {rechecks} vroegere Duyster-misser opnieuw ingepland met nieuwe matcher.")
+    released_radio = v51_release_old_radio_failures(cache)
+    if released_radio:
+        print(f'♻️ v51: {released_radio} radio-misser opnieuw beoordeeld na matcherupdate.')
     restored = v47_restore_retries(cache, seen, live_queue)
     if restored:
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
@@ -5247,6 +5486,8 @@ def sync():
             if uri is not None:
 
                 cache[match_cache_key] = uri
+                cache.get('__v51_radio_failed_cycles', {}).pop(_v47_key(artist,title),None)
+                cache.get('__v51_radio_unmatched', {}).pop(_v47_key(artist,title),None)
 
                 # Een eerdere mislukte zoekpoging is niet meer relevant.
                 cache.pop(not_found_key, None)
@@ -5294,7 +5535,11 @@ def sync():
                 print("🗃️ Duyster: na 3 zoekstrategieën niet gevonden; uit de "
                       "automatische shuffle verwijderd (registratie bewaard).")
             else:
-                print("🗂️ Bewaard in herprobeerlijst; over 24 uur opnieuw zoeken.")
+                if _v47_key(artist,title) in cache.get('__v51_radio_unmatched', {}):
+                    print('🗃️ Radio: twee volledige zoekreeksen zonder match; '
+                          'geparkeerd tot de volgende matcherverbetering.')
+                else:
+                    print('🗂️ Radio: na 24 uur één laatste volledige zoekreeks.')
 
             # Uit de huidige queue-positie verwijderen.
             #
@@ -5318,10 +5563,10 @@ def sync():
                 "blijven in live queue."
             )
 
-            print(
-                "🕒 Dit nummer wordt 24 uur niet "
-                "opnieuw gezocht."
-            )
+            if _v47_key(artist,title) in cache.get('__v51_radio_unmatched', {}) or failed_source == 'duyster':
+                print('🕒 Geparkeerd: niet opnieuw zoeken zonder matcherupdate.')
+            else:
+                print('🕒 Pas na 24 uur opnieuw zoeken.')
 
             print(
                 f"🔎 Spotify Search gebruikt: "
