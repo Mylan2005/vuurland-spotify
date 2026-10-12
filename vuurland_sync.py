@@ -86,6 +86,9 @@ MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlis
 
 CHECK_EVERY_SECONDS = 120  # 2 minuten
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
+# Actual HTTP attempts (including token retries), reset each sync round.
+SPOTIFY_SEARCH_HTTP_USED = 0
+SPOTIFY_SEARCH_HTTP_LIMIT = 2
 
 # Metadata van de laatst gekozen Spotify Search-kandidaat.
 # find_spotify_track() blijft gewoon een URI-string teruggeven,
@@ -470,6 +473,8 @@ def spotify_request(
     **kwargs
 ):
 
+    global SPOTIFY_SEARCH_HTTP_USED
+    is_search = endpoint.split("?", 1)[0].rstrip("/") == "/search"
     max_server_errors = 5
     server_errors = 0
 
@@ -516,6 +521,14 @@ def spotify_request(
             + token["access_token"]
         )
 
+        # Count real HTTP calls, not just matcher decisions. Never exceed two
+        # Spotify Search HTTP attempts within one sync round, including retries.
+        if is_search:
+            if SPOTIFY_SEARCH_HTTP_USED >= SPOTIFY_SEARCH_HTTP_LIMIT:
+                raise RuntimeError("Spotify Search HTTP-budget (2/2) bereikt; queue blijft bewaard.")
+            SPOTIFY_SEARCH_HTTP_USED += 1
+            print(f"🌐 Spotify Search HTTP: {SPOTIFY_SEARCH_HTTP_USED}/{SPOTIFY_SEARCH_HTTP_LIMIT}")
+
         response = requests.request(
             method,
             API_URL + endpoint,
@@ -561,6 +574,13 @@ def spotify_request(
         # TIJDELIJKE SERVERFOUTEN
         # ---------------------------------
         if response.status_code in (500, 502, 503, 504):
+            if is_search:
+                # A server error is NOT a missing song. Abort safely instead
+                # of burning more HTTP calls or incrementing not-found counts.
+                raise RuntimeError(
+                    f"Spotify Search HTTP {response.status_code}: tijdelijke serverfout; "
+                    "nummer blijft in de wachtrij, geen mislukte match."
+                )
             server_errors += 1
 
             if server_errors > max_server_errors:
@@ -592,6 +612,12 @@ def spotify_request(
                 "Bearer "
                 + token["access_token"]
             )
+
+            if is_search:
+                if SPOTIFY_SEARCH_HTTP_USED >= SPOTIFY_SEARCH_HTTP_LIMIT:
+                    raise RuntimeError("Spotify Search HTTP-budget (2/2) bereikt na tokenvernieuwing.")
+                SPOTIFY_SEARCH_HTTP_USED += 1
+                print(f"🌐 Spotify Search HTTP: {SPOTIFY_SEARCH_HTTP_USED}/{SPOTIFY_SEARCH_HTTP_LIMIT} (tokenretry)")
 
             response = requests.request(
                 method,
@@ -4779,6 +4805,8 @@ def sync():
     # SPOTIFY SEARCH LIMIET
     # ---------------------------------
 
+    global SPOTIFY_SEARCH_HTTP_USED
+    SPOTIFY_SEARCH_HTTP_USED = 0
     searches_used = 0
     MAX_SEARCHES_PER_RUN = 2  # v43: twee gedeelde Spotify Searches per 120 seconden
     NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
