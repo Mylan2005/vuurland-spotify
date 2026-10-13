@@ -1,6 +1,7 @@
 import base64
 import csv
 import duyster_bron
+import v54_duyster_radiobox
 import hashlib
 import http.server
 import json
@@ -179,7 +180,7 @@ if SPOTIFY_SEARCH_BLOCKED_UNTIL <= time.time():
 
 SCOPES = (
     "playlist-read-private playlist-modify-private "
-    "playlist-modify-public user-library-modify"
+    "playlist-modify-public user-library-modify user-library-read"
 )
 
 AUTH_URL = "https://accounts.spotify.com/authorize"
@@ -4885,7 +4886,7 @@ def sync():
     if blocked_now or removed_from_queue:
         print(f"🧹 v50: {blocked_now} oude Duyster-missers uitgesloten; "
               f"{removed_from_queue} herhaalde wachtrij-items verwijderd.")
-    rechecks = v51_revisit_archived(cache, seen, live_queue, MATCHING_RULES_VERSION)
+    rechecks = 0  # v54: geen ongefilterde Duyster-revivals
     if rechecks:
         print(f"♻️ v51: {rechecks} vroegere Duyster-misser opnieuw ingepland met nieuwe matcher.")
     released_radio = v51_release_old_radio_failures(cache)
@@ -4894,6 +4895,13 @@ def sync():
     restored = v47_restore_retries(cache, seen, live_queue)
     if restored:
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
+
+    # v54: alleen Duyster-retries van artiesten die RadioBox heeft geïntroduceerd.
+    _radio_artists_v54 = v54_duyster_radiobox.radio_artists(cache)
+    live_queue = [x for x in live_queue if not (
+        isinstance(x, dict) and x.get('source') == 'duyster'
+        and v54_duyster_radiobox.norm(x.get('artist', '')) not in _radio_artists_v54
+    )]
 
     # Bewaar de ontdekkings- en retry-state samen met de queue.
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
@@ -4904,7 +4912,7 @@ def sync():
     # bestaande Spotify-matcher, cache, ISRC-dedupe en 1-Search-limiet gelden.
     # Bij archiefproblemen blijven de twee live bronnen normaal werken.
     try:
-        duyster_bron.prepare(cache, live_queue, seen, normalize_match)
+        v54_duyster_radiobox.prepare(cache, live_queue, seen, normalize_match)
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
     except Exception as error:
@@ -6015,7 +6023,7 @@ def sync():
 
         # Vanaf Vol. 1 wordt elke nieuwe toevoeging ook geliket.
         # Hiervoor wordt dezelfde URI gebruikt: GEEN extra Spotify Search.
-        if active_volume_number >= 1:
+        if active_volume_number >= 1 and item.get("source") in ("vuurland", "mellow_mix"):
             _attempt_library_like(cache, uri)
 
         # Meteen lokaal als bestaande Spotify-URI markeren.
