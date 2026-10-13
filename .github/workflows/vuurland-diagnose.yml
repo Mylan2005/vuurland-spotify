@@ -1,0 +1,25 @@
+name: Vuurland Diagnose
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Runner gestart
+        run: echo "✅ Ubuntu 24.04 runner werkt"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Controle
+        run: |
+          python --version
+          echo "✅ Vuurland-omgeving werkt"
