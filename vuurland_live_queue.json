@@ -1,5 +1,10 @@
 [
   {
+    "artist": "Kenny Burrell",
+    "title": "Chitlins Con Carne",
+    "source": "mellow_mix"
+  },
+  {
     "artist": "The Smashing Pumpkins",
     "title": "Crush",
     "source": "mellow_mix"
@@ -82,11 +87,6 @@
   {
     "artist": "The Barr Brothers",
     "title": "Beggar In The Morning",
-    "source": "mellow_mix"
-  },
-  {
-    "artist": "The Sundays",
-    "title": "Here's Where The Story Ends",
     "source": "mellow_mix"
   },
   {
@@ -200,11 +200,6 @@
     "source": "mellow_mix"
   },
   {
-    "artist": "Leif Vollebekk",
-    "title": "Southern Star",
-    "source": "mellow_mix"
-  },
-  {
     "artist": "Joan Osborne",
     "title": "Make You Feel My Love",
     "source": "mellow_mix"
@@ -280,11 +275,6 @@
     "source": "mellow_mix"
   },
   {
-    "artist": "Bon Iver",
-    "title": "S P E Y S I D E",
-    "source": "mellow_mix"
-  },
-  {
     "artist": "Simon & Garfunkel",
     "title": "Mrs. Robinson",
     "source": "mellow_mix"
@@ -305,28 +295,8 @@
     "source": "mellow_mix"
   },
   {
-    "artist": "DOMINIC FIKE",
-    "title": "King of everything",
-    "source": "vuurland"
-  },
-  {
-    "artist": "JAGUAR JAGUAR",
-    "title": "So long",
-    "source": "vuurland"
-  },
-  {
     "artist": "U.S. GIRLS",
     "title": "Bless this mess",
-    "source": "vuurland"
-  },
-  {
-    "artist": "BIG RED MACHINE",
-    "title": "I won't run from it",
-    "source": "vuurland"
-  },
-  {
-    "artist": "KIDS WITH BUNS",
-    "title": "How bad could it be",
     "source": "vuurland"
   },
   {
@@ -4392,11 +4362,6 @@
   {
     "artist": "adrian legg",
     "title": "kinvarra's child",
-    "source": "mellow_mix"
-  },
-  {
-    "artist": "agnes obel",
-    "title": "beast",
     "source": "mellow_mix"
   },
   {
@@ -8529,8 +8494,15 @@
     "_v34_retry_at": 1791927404
   },
   {
-    "artist": "Will Samson",
-    "title": "Already Am",
+    "artist": "Yo La Tengo",
+    "title": "Fourth Time Around",
     "source": "duyster"
+  },
+  {
+    "artist": "DOMINIC FIKE",
+    "title": "King of everything",
+    "source": "vuurland",
+    "_v34_search_variant": 1,
+    "_v34_retry_at": 1791928591
   }
 ]
