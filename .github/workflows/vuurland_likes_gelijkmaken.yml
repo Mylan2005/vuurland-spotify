@@ -1,0 +1,25 @@
+name: Vuurland Likes Gelijkmaken
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Kies eerst CONTROLEER; pas daarna VERWIJDER_12_EXTRA_LIKES'
+        required: true
+        type: choice
+        options:
+          - CONTROLEER
+          - VERWIJDER_12_EXTRA_LIKES
+permissions:
+  contents: read
+jobs:
+  check_or_fix:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vergelijk huidig Spotify, verwijder uitsluitend de 12 bekende extra likes als expliciet gekozen
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          FIX_MODE: ${{ inputs.mode }}
+        run: python3 -u vuurland_likes_gelijkmaken.py
