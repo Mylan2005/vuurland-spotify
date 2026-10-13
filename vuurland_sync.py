@@ -2437,6 +2437,7 @@ def find_spotify_track(
         """Classificeer duidelijke versie-segmenten met semantische prioriteit."""
         raw = str(value or "").strip().lower()
         raw = raw.replace("–", "-").replace("—", "-")
+        raw = raw.replace("’", "'")  # typografische apostrof in versienaam
 
         # Een Spotify-titel kan meerdere versie-segmenten combineren, bv.
         # "Treetop Flyer (Live) - Remastered". Bekijk daarom ALLE duidelijke
@@ -2675,6 +2676,14 @@ def find_spotify_track(
         value = motion_picture_pattern.sub(
             "",
             value
+        ).strip()
+
+        # v52.10: titelcontext van een HBO-serie, geen nieuwe uitvoering.
+        # Alleen een VOLLEDIG afgescheiden catalogussuffix, niet willekeurige
+        # titelwoorden; artiest- en versievergelijking blijven verplicht.
+        value = re.sub(
+            r'\s+-\s+from\s+[\"“”]?[^\"“”]+[\"“”]?\s+an\s+hbo\s+original\s+series\s*$',
+            '', value, flags=re.IGNORECASE
         ).strip()
 
         # Gebruik dezelfde bekende versies als requested_version().
@@ -3344,8 +3353,11 @@ def find_spotify_track(
             raw_variant = str(value or "").strip()
             raw_variant = raw_variant.replace("–", "-").replace("—", "-")
 
+            # v52.10: drie veilige metadata-varianten; de naam/jaargang
+            # van een benoemde versie blijft identiek vereist, ook wanneer
+            # Spotify er de onschuldige catalogustag From The Vault na zet.
             match = re.search(
-                r"\(([^()]+?)\s+version\)\s*$",
+                r"\(([^()]+?)\s+version\)(?:\s*\(from\s+the\s+vault\))?\s*$",
                 raw_variant,
                 flags=re.IGNORECASE
             )
@@ -3650,6 +3662,25 @@ def find_spotify_track(
                 and min(len(wanted_words), len(spotify_words)) >= 4
             ):
                 title_score = max(title_score, 0.905)
+
+        # v52.10: een enkele letterfout in een INTERNE titelterm mag
+        # dezelfde opname zijn als hoofdartiest en volledige versie EXACT
+        # kloppen. Eerste en laatste woord zijn identiek; minimaal 3 woorden,
+        # minimaal 12 tekens; geen vrije fuzzy titel- of artiestmatch.
+        if title_confidence == 1 and primary_artist_exact \
+                and wanted_version == spotify_version:
+            _ww = wanted_title_base_for_match.split()
+            _sw = spotify_title_base.split()
+            if (len(_ww) == len(_sw) and len(_ww) >= 3
+                    and len(wanted_base_compact) >= 12
+                    and _ww[0] == _sw[0] and _ww[-1] == _sw[-1]):
+                _different = [(a, b) for a, b in zip(_ww, _sw) if a != b]
+                if (len(_different) == 1
+                        and len(_different[0][0]) == len(_different[0][1])
+                        and sum(a != b for a, b in zip(*_different[0])) == 1):
+                    structural_title_match = True
+                    title_score = 0.997
+                    title_confidence = 4
 
         # v51.8: guest-only catalogusmatch uitsluitend bij dezelfde
         # COMPLETE kerntitel. Geen fuzzy overeenkomst en geen
