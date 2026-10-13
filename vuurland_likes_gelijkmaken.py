@@ -54,7 +54,7 @@ def main():
     token = request('https://accounts.spotify.com/api/token', method='POST', form=True,
                     data={'grant_type':'refresh_token','refresh_token':rt,'client_id':cid})['access_token']
     print('🔎 Lees volledige Vuurland-playlist en Liked Songs opnieuw (alleen-lezen)...', flush=True)
-    playlist = get_pages(f'https://api.spotify.com/v1/playlists/{PLAYLIST}/tracks?limit=100', token, True)
+    playlist = get_pages(f'https://api.spotify.com/v1/playlists/{PLAYLIST}/items?limit=100', token, True)
     liked = get_pages('https://api.spotify.com/v1/me/tracks?limit=50', token)
     ps, ls = set(playlist), set(liked)
     only_likes, only_playlist = ls - ps, ps - ls
@@ -71,7 +71,7 @@ def main():
         print('✅ Controle klaar. DRY RUN: niets verwijderd.')
         return 0
     # Recheck playlist at deletion time to reduce race with active sync.
-    refreshed_ps = set(get_pages(f'https://api.spotify.com/v1/playlists/{PLAYLIST}/tracks?limit=100', token, True))
+    refreshed_ps = set(get_pages(f'https://api.spotify.com/v1/playlists/{PLAYLIST}/items?limit=100', token, True))
     if refreshed_ps != ps:
         print('🛑 Playlist veranderde tijdens controle. NIETS verwijderd.')
         return 0
