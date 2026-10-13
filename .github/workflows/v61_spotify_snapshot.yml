@@ -1,0 +1,27 @@
+name: v61 Spotify snapshot - alleen lezen
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  spotify-snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - name: Scan echte Vuurland en Liked Songs (zonder cache wijzigen)
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: python v61_github_snapshot.py
+      - name: Bewaar volledige snapshot (enkel bij succes)
+        uses: actions/upload-artifact@v4
+        with:
+          name: v61_snapshot
+          path: v61_snapshot/
+          if-no-files-found: error
+          retention-days: 3
