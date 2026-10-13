@@ -14,30 +14,29 @@ def norm(value):
     return re.sub(r'[^a-z0-9]+', ' ', value).strip()
 
 
-def radio_artists(cache):
-    result = set()
-    discovered = cache.get('__v47_radio_discovered', {})
-    for source in ('vuurland', 'mellow_mix'):
-        for entry in discovered.get(source, []):
-            if '|||' in entry:
-                artist = entry.split('|||', 1)[0]
-                # Do not infer a guest artist from a track's artist field.
-                if norm(artist):
-                    result.add(norm(artist))
-    return result
+def playlist_artists(cache):
+    """Artiesten van tracks die volgens de recente playlist-snapshot echt in 🔥 staan.
+
+    Alleen de volledige playlist wordt gebruikt, NIET de bewaarde RadioBox-historiek,
+    oude Spotify-zoekresultaten of Duyster-archief. Nieuwe radioartiesten komen
+    automatisch mee zodra de normale playlistscan ze vastlegt.
+    """
+    keys = cache.get('__playlist_keys', [])
+    if not isinstance(keys, list):
+        return set()
+    artists = set()
+    for key in keys:
+        if not isinstance(key, str) or '|||' not in key:
+            continue
+        artist = key.split('|||', 1)[0]
+        if norm(artist):
+            artists.add(norm(artist))
+    return artists
 
 
 def prepare(cache, live_queue, seen, normalize_match):
-    # Ensure previous Duyster retry attempts cannot spontaneously reintroduce unrelated artists.
-    # Tijdens volledige v55-heropbouw eerst alle historische RadioBox-tracks verwerken.
-    if cache.get('__v55_radio_rebuild_pending'):
-        radio_pending = sum(1 for x in live_queue if isinstance(x, dict) and x.get('source') in ('vuurland', 'mellow_mix'))
-        if radio_pending:
-            print(f'📻 v55: RadioBox-heropbouw eerst ({radio_pending} in wachtrij); Duyster wacht')
-            return
-        cache['__v55_radio_rebuild_pending'] = False
-        print('✅ v55: RadioBox-wachtrij afgewerkt; Duyster-aanvullingen kunnen starten')
-    eligible_artists = radio_artists(cache)
+    # v60: Duyster mag pas op basis van de echte playlist-cache kiezen.
+    eligible_artists = playlist_artists(cache)
     before = len(live_queue)
     live_queue[:] = [x for x in live_queue if not (
         isinstance(x, dict) and x.get('source') == 'duyster'
@@ -50,6 +49,9 @@ def prepare(cache, live_queue, seen, normalize_match):
         return
     duyster_bron.check_new_episode(cache)
     catalog = duyster_bron._songs(cache)
+    # v62: handmatige Duyster-playlist als extra offline archiefbron.
+    import v62_duyster_playlist_catalog
+    catalog.update(v62_duyster_playlist_catalog.catalog(cache))
     pending = {(normalize_match(x.get('artist', '')), normalize_match(x.get('title', '')))
                for x in live_queue if isinstance(x, dict)}
     issued = cache.setdefault('__v54_duyster_radio_issued', {})
@@ -68,7 +70,7 @@ def prepare(cache, live_queue, seen, normalize_match):
             continue
         choices.append(song)
     if not choices:
-        print(f'🌙 v54: geen ontbrekende verwerkbare archiefkandidaten bij {len(eligible_artists)} RadioBox-artiesten')
+        print(f'🌙 v54: geen ontbrekende verwerkbare archiefkandidaten bij {len(eligible_artists)} playlist-artiesten')
         return
     active_duyster = sum(1 for x in live_queue if isinstance(x, dict) and x.get('source') == 'duyster')
     if active_duyster >= 3:
@@ -77,4 +79,4 @@ def prepare(cache, live_queue, seen, normalize_match):
     key = normalize_match(song['artist']) + '|||' + normalize_match(song['title'])
     live_queue.append({'artist': song['artist'], 'title': song['title'], 'source': 'duyster'})
     issued[key] = now
-    print(f'🌙 v54 RadioBox-artiest aanvullen: {song["artist"]} — {song["title"]} ({len(choices)} kandidaten)')
+    print(f'🌙 v60 playlist-artiest aanvullen: {song["artist"]} — {song["title"]} ({len(choices)} kandidaten)')

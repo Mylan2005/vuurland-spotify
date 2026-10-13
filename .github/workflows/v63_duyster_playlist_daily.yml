@@ -1,0 +1,55 @@
+name: v63 Duyster playlist dagelijkse verversing
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 4 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: v63-duyster-playlist-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install requests
+        run: python -m pip install 'requests>=2.31,<3'
+      - name: Refresh full Spotify Duyster playlist (fail closed on 429)
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: python v62_import_duyster_playlist.py
+      - name: Validate complete catalog
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('v62_duyster_playlist_catalog.json')
+          data=json.loads(p.read_text(encoding='utf-8'))
+          assert data['playlist_id']=='1rsnoOydiRqByY17iQRxUV'
+          assert data['complete'] is True
+          assert isinstance(data['total'],int) and data['total']==len(data['tracks'])
+          print('✅ Catalogus compleet:',data['total'])
+          PY
+      - name: Commit catalog only (avoid syncing stale state)
+        run: |
+          set -e
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- v62_duyster_playlist_catalog.json
+          if git diff --cached --quiet; then
+            echo 'Catalogus ongewijzigd.'
+            exit 0
+          fi
+          git commit -m 'Refresh Duyster playlist catalog (v63)'
+          # Another workflow may have advanced main. Rebase; never force push.
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main

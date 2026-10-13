@@ -4897,7 +4897,7 @@ def sync():
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
 
     # v54: alleen Duyster-retries van artiesten die RadioBox heeft geïntroduceerd.
-    _radio_artists_v54 = v54_duyster_radiobox.radio_artists(cache)
+    _radio_artists_v54 = v54_duyster_radiobox.playlist_artists(cache)
     live_queue = [x for x in live_queue if not (
         isinstance(x, dict) and x.get('source') == 'duyster'
         and v54_duyster_radiobox.norm(x.get('artist', '')) not in _radio_artists_v54
@@ -6023,7 +6023,7 @@ def sync():
 
         # Vanaf Vol. 1 wordt elke nieuwe toevoeging ook geliket.
         # Hiervoor wordt dezelfde URI gebruikt: GEEN extra Spotify Search.
-        if active_volume_number >= 1 and item.get("source") in ("vuurland", "mellow_mix"):
+        if active_volume_number >= 1:
             _attempt_library_like(cache, uri)
 
         # Meteen lokaal als bestaande Spotify-URI markeren.
