@@ -37,7 +37,7 @@ def get_pages(url, token, playlist=False):
     while url:
         r = request(url, token)
         for item in r.get('items', []):
-            track = item.get('track') if playlist else item
+            track = item.get('item') or item.get('track') or (item if item.get('type') == 'track' else None)
             if track and track.get('type') == 'track' and track.get('id'):
                 ids.append(track['id'])
             elif track and track.get('id') and 'type' not in track:
