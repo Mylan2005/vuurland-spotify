@@ -105,8 +105,8 @@ jobs:
             echo "========================================"
 
             set +e
-            python3 -u vuurland_sync.py
-            SYNC_EXIT=$?
+            python3 -u vuurland_sync.py 2>&1 | tee -a vuurland_matcher_sync.log
+            SYNC_EXIT=${PIPESTATUS[0]}
             set -e
 
             echo ""
@@ -155,3 +155,15 @@ jobs:
             echo "⏸️ Geen nieuwe runner gestart vanwege Spotify-rate-limit."
             echo "🕒 De geplande workflow probeert later opnieuw."
           fi
+
+      - name: Maak matcher-rapport (offline)
+        if: always()
+        run: python3 v64_matcher_report.py vuurland_matcher_sync.log
+      - name: Downloadbaar matcher-rapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland_matcher_rapport
+          path: v64_matcher_rapport/
+          if-no-files-found: warn
+          retention-days: 30
