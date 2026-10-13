@@ -5308,6 +5308,7 @@ def sync():
     if source_turn not in source_order:
         source_turn = "vuurland"
     additions_this_round = 0
+    duyster_additions_this_round = 0
     max_additions_per_round = 2
 
     # v41: één gedeelde cooldown-check voor planning én logging.
@@ -5378,6 +5379,8 @@ def sync():
                     continue
                 source_id = str(candidate.get("source") or "vuurland").strip()
                 if source_id != preferred_source:
+                    continue
+                if source_id == 'duyster' and duyster_additions_this_round >= 1:
                     continue
                 candidate_key = (f"{normalize_match(candidate.get('artist', ''))}|||"
                                  f"{normalize_match(candidate.get('title', ''))}")
@@ -6036,6 +6039,8 @@ def sync():
             spotify_uri_isrc[uri] = candidate_isrc
 
         additions_this_round += 1
+        if item.get('source') == 'duyster':
+            duyster_additions_this_round += 1
         print(
             f"✅ Toegevoegd: "
             f"{artist} - {title}"
