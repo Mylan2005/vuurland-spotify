@@ -4972,7 +4972,7 @@ def sync():
     global SPOTIFY_SEARCH_HTTP_USED
     SPOTIFY_SEARCH_HTTP_USED = 0
     searches_used = 0
-    MAX_SEARCHES_PER_RUN = 2  # v43: twee gedeelde Spotify Searches per 120 seconden
+    MAX_SEARCHES_PER_RUN = 1  # v66: één gedeelde Spotify Search per 120 seconden
     NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
 
     # ---------------------------------
@@ -5301,6 +5301,7 @@ def sync():
     # v42: drie gelijkwaardige bronnen. Persistente round-robin voorkomt
     # dat een constante radiostroom Duyster kan uithongeren of omgekeerd.
     # Bestaande playlist/cache-hits blijven ook na de Search mogelijk.
+    # v66: één succesvolle toevoeging per ronde, roterend over de bronnen.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = ("vuurland", "mellow_mix", "duyster")
@@ -5309,7 +5310,7 @@ def sync():
         source_turn = "vuurland"
     additions_this_round = 0
     duyster_additions_this_round = 0
-    max_additions_per_round = 2
+    max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
 
     # v41: één gedeelde cooldown-check voor planning én logging.
     # Een 24-uurs "niet gevonden"-item is NIET zoekklaar, ook wanneer
@@ -5359,6 +5360,17 @@ def sync():
           + ", ".join(f"{name}={_source_counts[name]} zoekklaar" for name in source_order)
           + f"; volgende beurt: {source_turn}.")
 
+    # v66: de RadioBox-lijsten komen nieuwste-eerst binnen. Prioriteer
+    # opnieuw gespeelde nummers OOK wanneer ze al in de historische queue
+    # stonden. Alleen de meest recente zichtbare tracks krijgen voorrang;
+    # anders zou de volledige RadioBox-historiek de backlog uithongeren.
+    recent_radio_rank = {}
+    for radio_source in radio_sources:
+        recent_radio_rank[radio_source["id"]] = {
+            _v47_key(artist, title): pos
+            for pos, (artist, title) in enumerate(radio_source["tracks"][:12])
+        }
+
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
             break
@@ -5372,7 +5384,17 @@ def sync():
         # Wanneer het zoekbudget op is: alleen zekere playlist/cache-hits.
         turn_index = source_order.index(source_turn)
         for preferred_source in source_order[turn_index:] + source_order[:turn_index]:
-            for index, candidate in enumerate(live_queue):
+            # Recentste 12 zichtbare radioplays eerst binnen deze bron,
+            # daarna de bestaande wachtrij in ongewijzigde volgorde.
+            candidates = list(enumerate(live_queue))
+            if preferred_source in recent_radio_rank:
+                ranks = recent_radio_rank[preferred_source]
+                candidates.sort(key=lambda pair: (
+                    0 if _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")) in ranks else 1,
+                    ranks.get(_v47_key(pair[1].get("artist", ""), pair[1].get("title", "")), 999999),
+                    pair[0],
+                ) if isinstance(pair[1], dict) else (2, 999999, pair[0]))
+            for index, candidate in candidates:
                 if not isinstance(candidate, dict):
                     continue
                 if id(candidate) in processed_item_ids:
