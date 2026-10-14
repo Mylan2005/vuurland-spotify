@@ -5321,6 +5321,17 @@ def sync():
     source_turn = str(cache.get("__v42_source_turn", "vuurland"))
     if source_turn not in source_order:
         source_turn = "vuurland"
+    # v68: per ronde exact één vaste startbron. De volgende ronde schuift
+    # altijd één bron op, onafhankelijk van skips en fallback-toevoegingen.
+    # Dezelfde startbron blijft tijdens DEZE ronde gelden, ook wanneer
+    # meerdere wachtrij-items worden overgeslagen.
+    round_start_source = source_turn
+    next_round_source = source_order[(source_order.index(round_start_source) + 1)
+                                     % len(source_order)]
+    cache["__v42_source_turn"] = next_round_source
+    save_cache(cache)
+    print(f"🔁 v68 beurtrol: deze ronde {round_start_source}; "
+          f"volgende ronde {next_round_source} (onafhankelijk van fallback).")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
@@ -5371,7 +5382,8 @@ def sync():
             _source_counts[_source] += 1
     print("🔁 Gelijke bronverdeling: "
           + ", ".join(f"{name}={_source_counts[name]} zoekklaar" for name in source_order)
-          + f"; volgende beurt: {source_turn}.")
+          + f"; startbron deze ronde: {round_start_source}; "
+          + f"volgende ronde: {next_round_source}.")
 
     # v66: de RadioBox-lijsten komen nieuwste-eerst binnen. Prioriteer
     # opnieuw gespeelde nummers OOK wanneer ze al in de historische queue
@@ -5395,7 +5407,7 @@ def sync():
 
         # Alle bronnen krijgen evenveel kansen op een nieuwe Spotify Search.
         # Wanneer het zoekbudget op is: alleen zekere playlist/cache-hits.
-        turn_index = source_order.index(source_turn)
+        turn_index = source_order.index(round_start_source)
         for preferred_source in source_order[turn_index:] + source_order[:turn_index]:
             # Recentste 12 zichtbare radioplays eerst binnen deze bron,
             # daarna de bestaande wachtrij in ongewijzigde volgorde.
@@ -5449,11 +5461,8 @@ def sync():
             live_queue.insert(0, selected_item)
 
         processed_item_ids.add(id(live_queue[0]))
-        # Bewaar de beurt vóór de uitvoering. Ook een mislukte Search
-        # laat de volgende bron aan bod komen; na herstart blijft dit gelden.
-        source_turn = source_order[(source_order.index(selected_source) + 1)
-                                   % len(source_order)]
-        cache["__v42_source_turn"] = source_turn
+        # v68: de startbeurt is vóór deze ronde al opgeslagen. De bron van
+        # dit specifieke wachtrij-item mag die volgende beurt niet wijzigen.
 
         # Nooit ISRC-metadata van het vorige queue-item hergebruiken.
         LAST_SPOTIFY_MATCH_ISRC = None
