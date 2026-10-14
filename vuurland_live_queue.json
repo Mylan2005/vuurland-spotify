@@ -1,5 +1,10 @@
 [
   {
+    "artist": "Sophie Hunger",
+    "title": "Le Vent Nous Portera",
+    "source": "mellow_mix"
+  },
+  {
     "artist": "Jeff Buckley",
     "title": "Hallelujah",
     "source": "mellow_mix"
@@ -4256,11 +4261,6 @@
   },
   {
     "artist": "bill callahan",
-    "title": "keep some steady friends around",
-    "source": "mellow_mix"
-  },
-  {
-    "artist": "bill callahan",
     "title": "strange trouble feat bonnie \"prince\" billy",
     "source": "mellow_mix"
   },
@@ -8104,20 +8104,15 @@
     "_v34_retry_at": 1791935757
   },
   {
-    "artist": "Bonnie 'Prince' Billy",
-    "title": "It's Time To Be Clear",
-    "source": "duyster",
-    "_v34_search_variant": 1,
-    "_v34_retry_at": 1791939016
-  },
-  {
-    "artist": "City and Colour",
-    "title": "Day Old Hate",
-    "source": "duyster"
-  },
-  {
     "artist": "Owen Pallett",
     "title": "Lewis Takes Action",
     "source": "duyster"
+  },
+  {
+    "artist": "Bonnie 'Prince' Billy",
+    "title": "It's Time To Be Clear",
+    "source": "duyster",
+    "_v34_search_variant": 2,
+    "_v34_retry_at": 1791939644
   }
 ]
