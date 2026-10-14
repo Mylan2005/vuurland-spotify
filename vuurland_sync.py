@@ -90,7 +90,7 @@ CHECK_EVERY_SECONDS = 120  # 2 minuten
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
 # Actual HTTP attempts (including token retries), reset each sync round.
 SPOTIFY_SEARCH_HTTP_USED = 0
-SPOTIFY_SEARCH_HTTP_LIMIT = 2
+SPOTIFY_SEARCH_HTTP_LIMIT = 1
 
 # Metadata van de laatst gekozen Spotify Search-kandidaat.
 # find_spotify_track() blijft gewoon een URI-string teruggeven,
@@ -4882,6 +4882,19 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
+    # v67: blijf RadioBox volgen tijdens de Spotify-cooldown. De ingestie
+    # hierboven gebruikt geen Spotify API; verdere matcher-/playliststappen
+    # zouden dat wel kunnen doen. Daarom hier bewust vroeg terugkeren.
+    blocked_until = float(cache.get("__spotify_api_blocked_until", 0) or 0)
+    if blocked_until > time.time():
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_cache(cache)
+        print(f"⏸️ v67 RADIO-ONLY: Spotify geblokkeerd tot "
+              f"{time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime(blocked_until))}.")
+        print(f"📻 Nieuwe RadioBox-titels veilig bewaard; "
+              f"{len(live_queue)} nummers in wachtrij; 0 Spotify-verzoeken.")
+        return
+
     blocked_now, removed_from_queue = v50_clean_duyster_retries(cache, live_queue)
     if blocked_now or removed_from_queue:
         print(f"🧹 v50: {blocked_now} oude Duyster-missers uitgesloten; "
@@ -6132,4 +6145,14 @@ if __name__ == "__main__":
         print()
         print("❌ Er ging iets mis:")
         print(error)
+        # Alleen expliciete Spotify-429/cooldown als herstelbare code 75.
+        # Andere fouten blijven echte fouten, zodat de runner niet blind doorgaat.
+        if isinstance(error, RuntimeError) and (
+            "Spotify 429:" in str(error)
+            or "Spotify rate-limit is nog actief" in str(error)
+        ):
+            until = float(load_cache().get("__spotify_api_blocked_until", 0) or 0)
+            if until > time.time():
+                print("⏸️ v67: volgende 2-minutenronde wordt RADIO-ONLY.")
+                raise SystemExit(75)
         raise
