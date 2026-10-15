@@ -1,7 +1,5 @@
 import base64
 import csv
-import duyster_bron
-import v54_duyster_radiobox
 import hashlib
 import http.server
 import json
@@ -26,7 +24,7 @@ CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
 REDIRECT_URI = "http://127.0.0.1:8888/callback"
 
 PLAYLIST_NAME = "Studio Brussel Vuurland"
-PLAYLIST_ID = "555lFTvdRswe9ukybmOM8T"
+PLAYLIST_ID = os.environ.get("VUURLAND_PLAYLIST_ID", "555lFTvdRswe9ukybmOM8T")
 
 # Bekende artiest-naamswijzigingen.
 #
@@ -4415,6 +4413,20 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
     separate retry register until they can be retried.
     """
     discovered = cache.setdefault("__v47_radio_discovered", {})
+    # v69: bij nieuwe start: markeer bestaande zichtbare RadioBox-historiek
+    # als reeds gezien. Enkel het nú gespeelde nummer per bron is nieuw.
+    # Daarna scannen we uitsluitend de meest recente 12 items per ronde.
+    if cache.get("__v69_radio_only_fresh_start") and not cache.get("__v69_bootstrap_complete"):
+        # Bij tijdelijke RadioBox-storing geen lege beginmeting vastleggen.
+        if any(not src.get("tracks") for src in radio_sources):
+            print("⏳ v69: eerste RadioBox-meting onvolledig; wacht op beide zenders.")
+            return 0
+        for src in radio_sources:
+            tracks = src.get("tracks", [])
+            existing = {_v47_key(a, t) for a, t in tracks[1:] if a and t}
+            discovered[src["id"]] = sorted(existing)
+        cache["__v69_bootstrap_complete"] = True
+        print("🆕 v69: historische RadioBox-titels genegeerd; start bij de nieuwste radio-uitzendingen.")
     failed = cache.setdefault("__v47_failed_tracks", {})
     known_queue = {_v47_key(x.get("artist", ""), x.get("title", ""))
                    for x in live_queue if isinstance(x, dict)}
@@ -4424,7 +4436,9 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
         source_seen = set(discovered.get(sid, []))
         to_prepend = []
         scanned = 0
-        for artist, title in source["tracks"]:
+        visible_tracks = (source["tracks"][:12] if cache.get("__v69_radio_only_fresh_start")
+                          else source["tracks"])
+        for artist, title in visible_tracks:
             artist, title = artist.strip(), title.strip()
             if not artist or not title:
                 continue
@@ -4895,7 +4909,7 @@ def sync():
               f"{len(live_queue)} nummers in wachtrij; 0 Spotify-verzoeken.")
         return
 
-    blocked_now, removed_from_queue = v50_clean_duyster_retries(cache, live_queue)
+    blocked_now, removed_from_queue = (0, 0)
     if blocked_now or removed_from_queue:
         print(f"🧹 v50: {blocked_now} oude Duyster-missers uitgesloten; "
               f"{removed_from_queue} herhaalde wachtrij-items verwijderd.")
@@ -4909,39 +4923,11 @@ def sync():
     if restored:
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
 
-    # v54: alleen Duyster-retries van artiesten die RadioBox heeft geïntroduceerd.
-    _radio_artists_v54 = v54_duyster_radiobox.playlist_artists(cache)
-    live_queue = [x for x in live_queue if not (
-        isinstance(x, dict) and x.get('source') == 'duyster'
-        and v54_duyster_radiobox.norm(x.get('artist', '')) not in _radio_artists_v54
-    )]
-
-    # Bewaar de ontdekkings- en retry-state samen met de queue.
+    # v69: alleen RadioBox. Verwijder eventueel resterende Duyster-queue-items.
+    live_queue = [x for x in live_queue if isinstance(x, dict) and
+                  x.get("source") in ("vuurland", "mellow_mix")]
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
-
-    # Derde bron: Duyster (historisch + nieuwe wekelijkse afleveringen).
-    # De selectie wordt in DEZELFDE persistente queue geplaatst, zodat de
-    # bestaande Spotify-matcher, cache, ISRC-dedupe en 1-Search-limiet gelden.
-    # Bij archiefproblemen blijven de twee live bronnen normaal werken.
-    try:
-        v54_duyster_radiobox.prepare(cache, live_queue, seen, normalize_match)
-        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-        save_cache(cache)
-    except Exception as error:
-        print(f"🟡 Duyster tijdelijk overgeslagen: {error}")
-
-    # v48: eventueel nog geselecteerde Duyster-interviews verwijderen.
-    duyster_interviews = sum(
-        isinstance(x, dict) and is_interview_fragment(x.get("title", ""))
-        for x in live_queue
-    )
-    if duyster_interviews:
-        live_queue = [x for x in live_queue if not (
-            isinstance(x, dict) and is_interview_fragment(x.get("title", ""))
-        )]
-        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-        print(f"⏭️ {duyster_interviews} interviewfragment(en) uit Duyster/radio geweerd.")
 
     # ---------------------------------
     # ALS ER GEEN NUMMER TE VERWERKEN IS
@@ -5017,13 +5003,14 @@ def sync():
         0
     )
 
-    PLAYLIST_CACHE_SECONDS = 86400  # 24 uur
+    # v69: detecteer ook handmatig uit Chill Mix toegevoegde nummers.
+    # Eén keer per 24 uur, om Spotify API-verzoeken te beperken. Een lege nieuwe lijst is ook een geldige
+    # cache en mag niet voortdurend opnieuw worden gescand.
+    PLAYLIST_CACHE_SECONDS = 86400
 
     if (
-        not playlist_keys
-        or not playlist_isrc_cache_ready
-        or time.time() - playlist_cache_time
-        >= PLAYLIST_CACHE_SECONDS
+        not playlist_isrc_cache_ready
+        or time.time() - playlist_cache_time >= PLAYLIST_CACHE_SECONDS
     ):
 
         print(
@@ -5283,33 +5270,7 @@ def sync():
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
 
-    duyster_confirmed_links = load_duyster_confirmed_links(
-        os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                     'duyster_strikte_koppelvoorstellen.csv')
-    )
-
-    # v52.4: exclusively approved Spotify-only rows use existing Duyster add path.
-    # Default OFF until offline inventory is manually reviewed. Never perform Search.
-    if duyster_bron.SPOTIFY_ONLY_ENABLED:
-        for _entry in duyster_bron.load_spotify_only_candidates().values():
-            _key = (f"{normalize_match(_entry['artist'])}|||"
-                    f"{normalize_match(_entry['title'])}")
-            _value = ('spotify:track:' + _entry['spotify_track_id'], _entry['isrc'])
-            if _key not in duyster_confirmed_links:
-                duyster_confirmed_links[_key] = _value
-            elif duyster_confirmed_links[_key] != _value:
-                print(f'⚠️ Duyster Spotify-only conflict geweerd: {_key}')
-                # Remove any queued Spotify-only item with ambiguous identity.
-                live_queue[:] = [x for x in live_queue if not (
-                    isinstance(x, dict) and x.get('_v524_spotify_only') and
-                    f"{normalize_match(x.get('artist', ''))}|||{normalize_match(x.get('title', ''))}" == _key)]
-
-    # Fail closed if a previous run queued a Spotify-only row that is no longer approved.
-    live_queue[:] = [x for x in live_queue if not (
-        isinstance(x, dict) and x.get('_v524_spotify_only') and
-        (not duyster_bron.SPOTIFY_ONLY_ENABLED or
-         f"{normalize_match(x.get('artist', ''))}|||{normalize_match(x.get('title', ''))}"
-         not in duyster_confirmed_links))]
+    duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
 
     # v42: drie gelijkwaardige bronnen. Persistente round-robin voorkomt
     # dat een constante radiostroom Duyster kan uithongeren of omgekeerd.
@@ -5317,7 +5278,7 @@ def sync():
     # v66: één succesvolle toevoeging per ronde, roterend over de bronnen.
     processed_item_ids = set()
     max_queue_items_per_round = 35
-    source_order = ("vuurland", "mellow_mix", "duyster")
+    source_order = ("vuurland", "mellow_mix")
     source_turn = str(cache.get("__v42_source_turn", "vuurland"))
     if source_turn not in source_order:
         source_turn = "vuurland"
