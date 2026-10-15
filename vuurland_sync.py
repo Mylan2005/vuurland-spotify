@@ -139,7 +139,7 @@ def save_cache(cache):
     # in-memory cache. Never overwrite a newer, still-active disk cooldown.
     persisted = load_cache()
     now = time.time()
-    for key in ("__spotify_api_blocked_until", "__spotify_search_blocked_until"):
+    for key in ("__spotify_api_blocked_until", "__spotify_search_blocked_until", "__spotify_server_error_until"):
         disk_until = float(persisted.get(key, 0) or 0)
         caller_until = float(cache.get(key, 0) or 0)
         if disk_until > now and disk_until > caller_until:
@@ -488,6 +488,10 @@ def spotify_request(
             0
         )
 
+        server_until = float(cache.get("__spotify_server_error_until", 0) or 0)
+        if server_until > time.time():
+            raise RuntimeError("Spotify tijdelijke serverpauze is nog actief.")
+
         if blocked_until and time.time() < blocked_until:
             remaining = int(blocked_until - time.time())
 
@@ -575,8 +579,15 @@ def spotify_request(
         # ---------------------------------
         if response.status_code in (500, 502, 503, 504):
             if is_search:
-                # A server error is NOT a missing song. Abort safely instead
-                # of burning more HTTP calls or incrementing not-found counts.
+                # A 5xx is a temporary server outage, NOT a missing track or
+                # a 429. Pause Spotify for three minutes and keep RadioBox live.
+                cache = load_cache()
+                cache["__spotify_server_error_until"] = max(
+                    float(cache.get("__spotify_server_error_until", 0) or 0),
+                    time.time() + 180,
+                )
+                save_cache(cache)
+                print("⏸️ Spotify-serverfout: 180 seconden pauze; radiocontrole blijft actief.")
                 raise RuntimeError(
                     f"Spotify Search HTTP {response.status_code}: tijdelijke serverfout; "
                     "nummer blijft in de wachtrij, geen mislukte match."
@@ -4900,11 +4911,14 @@ def sync():
     # hierboven gebruikt geen Spotify API; verdere matcher-/playliststappen
     # zouden dat wel kunnen doen. Daarom hier bewust vroeg terugkeren.
     blocked_until = float(cache.get("__spotify_api_blocked_until", 0) or 0)
-    if blocked_until > time.time():
+    server_until = float(cache.get("__spotify_server_error_until", 0) or 0)
+    if max(blocked_until, server_until) > time.time():
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
-        print(f"⏸️ v67 RADIO-ONLY: Spotify geblokkeerd tot "
-              f"{time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime(blocked_until))}.")
+        pause_until = max(blocked_until, server_until)
+        kind = "Spotify 429-cooldown" if blocked_until >= server_until else "tijdelijke Spotify-serverpauze"
+        print(f"⏸️ v70 RADIO-ONLY ({kind}) tot "
+              f"{time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime(pause_until))}.")
         print(f"📻 Nieuwe RadioBox-titels veilig bewaard; "
               f"{len(live_queue)} nummers in wachtrij; 0 Spotify-verzoeken.")
         return
@@ -6120,9 +6134,16 @@ if __name__ == "__main__":
         if isinstance(error, RuntimeError) and (
             "Spotify 429:" in str(error)
             or "Spotify rate-limit is nog actief" in str(error)
+            or "Spotify Search HTTP 500: tijdelijke serverfout" in str(error)
+            or "Spotify Search HTTP 502: tijdelijke serverfout" in str(error)
+            or "Spotify Search HTTP 503: tijdelijke serverfout" in str(error)
+            or "Spotify Search HTTP 504: tijdelijke serverfout" in str(error)
+            or "Spotify tijdelijke serverpauze is nog actief" in str(error)
         ):
-            until = float(load_cache().get("__spotify_api_blocked_until", 0) or 0)
+            stored = load_cache()
+            until = max(float(stored.get("__spotify_api_blocked_until", 0) or 0),
+                        float(stored.get("__spotify_server_error_until", 0) or 0))
             if until > time.time():
-                print("⏸️ v67: volgende 2-minutenronde wordt RADIO-ONLY.")
+                print("⏸️ v70: volgende 2-minutenronde wordt RADIO-ONLY.")
                 raise SystemExit(75)
         raise

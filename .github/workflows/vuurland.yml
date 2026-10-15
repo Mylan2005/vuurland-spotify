@@ -113,7 +113,7 @@ jobs:
             echo "💾 Sync-status opslaan..."
 
             if [ "$SYNC_EXIT" -eq 75 ]; then
-              echo "⏸️ Spotify-cooldown opgeslagen. RadioBox blijft om de 120 seconden gevolgd worden."
+              echo "⏸️ Spotify-pauze (429 of tijdelijke 5xx) opgeslagen. RadioBox blijft om de 120 seconden gevolgd worden."
               if ! push_state; then
                 echo "❌ State kon niet veilig naar GitHub worden gepusht."
                 exit 1
@@ -160,7 +160,7 @@ jobs:
               --repo "$GITHUB_REPOSITORY" \
               --ref main
           else
-            echo "⏸️ Geen nieuwe runner gestart vanwege Spotify-rate-limit."
+            echo "⏸️ Geen nieuwe runner gestart wegens een niet-herstelbare fout."
             echo "🕒 De geplande workflow probeert later opnieuw."
           fi
 
