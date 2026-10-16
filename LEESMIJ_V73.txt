@@ -1,0 +1,33 @@
+Vuurland v73 — 403 en veilige GitHub-state
+==========================================
+Bestanden:
+- vuurland_sync.py
+- .github/workflows/vuurland.yml
+- v73_offline_test.py
+
+1. Spotify Search 403 (geen 429 en geen song-not-found):
+   bewaar één uur Spotify-pauze en laat RadioBox blijven volgen.
+   Toon beperkte API-foutuitleg; nooit tokens.
+   Geen extra Spotify Search voor dezelfde ronde; queue blijft staan.
+   Een 403 kan door app-/accountrechten komen en verdwijnt niet
+   noodzakelijk vanzelf na een uur. Controleer de fouttekst in de logs.
+
+2. Vóór iedere radio-ronde: haal een veilige fast-forward van main op.
+   Hierdoor draaien langlevende runners niet door met verouderde code/
+   status als ondertussen nieuwe commits zijn gepusht.
+   Bij conflicterende JSON-state: NIET forceren of automatisch kiezen.
+   Lokale herstelkopie naar een GitHub Actions artifact (7 dagen).
+
+Bestaande live queue, playlist, likes, ISRC en versievoorkeuren niet gereset.
+Beschikbaarheid blijft op basis van de Spotify-zoekresultaten; er is
+geen v73-wijziging aan de inhoudelijke matcher.
+
+Offline test:
+    python3 -m py_compile vuurland_sync.py
+    python3 v71_offline_test.py
+    python3 v72_offline_test.py
+    python3 v73_offline_test.py
+
+INSTALLATIE: zip uitpakken in ~/vuurland-spotify-github (de .github
+submap blijft behouden), de code testen, alleen de vier relevante
+bestanden adden, committen, rebasen en pushen.

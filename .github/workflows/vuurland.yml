@@ -47,6 +47,16 @@ jobs:
           END_TIME=$((SECONDS + 345 * 60))
           SYNC_EXIT=0
 
+          # Houd een lokale herstelkopie bij als een statuspush botst met
+          # wijzigingen op GitHub. Nooit automatisch queue-JSON overschrijven.
+          save_recovery() {
+            mkdir -p v73_state_recovery
+            for f in vuurland_seen.json vuurland_live_queue.json .vuurland_spotify_cache.json; do
+              if [ -f "$f" ]; then cp "$f" "v73_state_recovery/$f"; fi
+            done
+            echo "⚠️ Lokale state als herstelartifact bewaard; niet geforceerd gepusht."
+          }
+
           push_state() {
             git add \
               vuurland_seen.json \
@@ -68,6 +78,7 @@ jobs:
               if ! git rebase origin/main; then
                 echo "❌ Rebase-conflict tijdens opslaan sync-state."
                 git rebase --abort || true
+                save_recovery
                 return 1
               fi
 
@@ -92,12 +103,28 @@ jobs:
               fi
             done
 
+            save_recovery
             echo "❌ GitHub state-push is na 15 pogingen nog steeds mislukt."
             echo "🛑 Sync wordt gestopt zodat niet verder wordt gewerkt op state die nog niet duurzaam op GitHub staat."
             return 1
           }
 
           while [ "$SECONDS" -lt "$END_TIME" ]; do
+            # Oude langdurige runners mogen niet doorgaan op verouderde code
+            # of JSON-state. Alleen bij een schone checkout verversen.
+            if [ -z "$(git status --porcelain --untracked-files=no)" ]; then
+              git fetch origin main
+              if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+                echo "🔄 v73: nieuwste code en status ophalen vóór volgende ronde."
+                git merge --ff-only origin/main || {
+                  echo "🛑 Geen veilige fast-forward mogelijk."; exit 1;
+                }
+              fi
+            else
+              echo "🛑 Niet-gepushte state aanwezig; geen nieuwe Spotify-ronde."
+              save_recovery
+              exit 1
+            fi
             echo ""
             echo "========================================"
             echo "📻 Vuurland sync"
@@ -113,7 +140,7 @@ jobs:
             echo "💾 Sync-status opslaan..."
 
             if [ "$SYNC_EXIT" -eq 75 ]; then
-              echo "⏸️ Spotify-pauze (429 of tijdelijke 5xx) opgeslagen. RadioBox blijft om de 120 seconden gevolgd worden."
+              echo "⏸️ Spotify-pauze (429, 403 of tijdelijke 5xx) opgeslagen. RadioBox blijft om de 120 seconden gevolgd worden."
               if ! push_state; then
                 echo "❌ State kon niet veilig naar GitHub worden gepusht."
                 exit 1
@@ -175,3 +202,12 @@ jobs:
           path: v64_matcher_rapport/
           if-no-files-found: warn
           retention-days: 30
+
+      - name: Bewaar conflicterende state voor herstel
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v73-state-herstel
+          path: v73_state_recovery/
+          if-no-files-found: ignore
+          retention-days: 7

@@ -610,6 +610,30 @@ def spotify_request(
             time.sleep(wait)
             continue
 
+        # v73: HTTP 403 is geen ontbrekend lied en geen 429.
+        # Log alleen een beperkte Spotify-foutomschrijving; nooit tokens.
+        # Bewaar een Spotify-only cooldown en houd de radioqueue intact.
+        if response.status_code == 403:
+            explanation = ""
+            try:
+                detail = response.json().get("error", {})
+                if isinstance(detail, dict):
+                    explanation = str(detail.get("message", ""))[:160]
+            except (ValueError, TypeError, AttributeError):
+                pass
+            print(f"🚫 Spotify HTTP 403 op {endpoint.split('?', 1)[0]}"
+                  + (f": {explanation}" if explanation else ""))
+            cache = load_cache()
+            cache["__spotify_server_error_until"] = max(
+                float(cache.get("__spotify_server_error_until", 0) or 0),
+                time.time() + 3600,
+            )
+            save_cache(cache)
+            raise RuntimeError(
+                "Spotify HTTP 403: toegangsweigering; 60 minuten "
+                "Spotify-pauze, radiowachtrij bewaren."
+            )
+
         # ---------------------------------
         # TOKEN VERLOPEN
         # ---------------------------------
@@ -6321,6 +6345,7 @@ if __name__ == "__main__":
             or "Spotify Search HTTP 502: tijdelijke serverfout" in str(error)
             or "Spotify Search HTTP 503: tijdelijke serverfout" in str(error)
             or "Spotify Search HTTP 504: tijdelijke serverfout" in str(error)
+            or "Spotify HTTP 403:" in str(error)
             or "Spotify tijdelijke serverpauze is nog actief" in str(error)
         ):
             stored = load_cache()
