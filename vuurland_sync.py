@@ -1548,6 +1548,12 @@ def find_spotify_track(
         value = re.sub(r"[^a-z0-9]+", " ", value)
         return " ".join(value.split())
 
+    # Radioproject met bandleden tussen haakjes: Spotify gebruikt de
+    # projectnaam als hoofdartiest en de leden als extra artiestobjects.
+    project_credit = re.match(r'^(.+?)\s*\(([^()]+)\)\s*$', primary_search_artist)
+    if project_credit and len(v71_credit_parts(project_credit.group(2))) >= 2:
+        primary_search_artist = project_credit.group(1).strip()
+
     normalized_primary = alias_key(primary_search_artist)
 
     search_artist_aliases = ARTIST_ALIASES.get(
@@ -2648,6 +2654,10 @@ def find_spotify_track(
             flags=re.IGNORECASE
         ).strip()
 
+        # v71: '(with Cat Power)' is een credit, geen uitvoeringsversie.
+        raw_value = re.sub(r'\s*\(with\s+[^()]+\)\s*$', '', raw_value,
+                           flags=re.IGNORECASE)
+
         # Featuring-credit in de officiële Spotify-titel hoort niet bij
         # de muzikale kerntitel; de artiestenmetadata wordt apart getest.
         raw_value = re.sub(
@@ -2787,6 +2797,11 @@ def find_spotify_track(
     wanted_version = requested_version(title)
 
     wanted_artists = artist_parts(artist)
+
+    # v71: expliciet gecrediteerde gast in de radiotitel.
+    with_credit = re.search(r'\(with\s+([^()]+)\)\s*$', str(title), flags=re.I)
+    if with_credit and normalize(with_credit.group(1)) not in wanted_artists:
+        wanted_artists.append(normalize(with_credit.group(1)))
 
     # Bewezen historische bandcredit is één artiestenidentiteit, niet
     # een verplichte extra gastartiest. Elders blijft de collab-regel streng.
@@ -3007,9 +3022,27 @@ def find_spotify_track(
                 v51_named_band_credit = True
                 primary_artist_score = 1.0
                 primary_artist_exact = True
+        # v71: 'Vince Guaraldi' -> 'Vince Guaraldi Trio' wordt alleen
+        # toegestaan als de volledige eigennaam + expliciet 'Trio' klopt.
+        if (len(spotify_artists) == 1
+                and alias_key(spotify_artists[0]) == alias_key(wanted_artists[0]) + ' trio'):
+            v51_credit_rescue = True
+
         if v51_credit_rescue:
             primary_artist_score = 1.0
             primary_artist_exact = True
+
+        # v71: Spotify publiceert een project ook als band + afzonderlijke
+        # leden. De VOLLEDIGE projectnaam moet de eerste Spotify-artiest
+        # zijn; leden moeten exact onder de extra credits staan.
+        project_members = re.match(r'^(.+?)\s*\(([^()]+)\)\s*$', str(artist))
+        if project_members and len(spotify_artists) >= 2:
+            if (alias_key(project_members.group(1)) == alias_key(spotify_artists[0])
+                    and set(v71_credit_parts(project_members.group(2))).issubset(
+                        {normalize_match(x) for x in spotify_artists[1:]})):
+                primary_artist_exact = True
+                primary_artist_score = 1.0
+                v51_credit_rescue = True
 
         # v45: ALGEMENE regels voor Spotify-project- en samenwerkingscredits.
         # Geen artiest-/titel-specifieke uitzonderingen.
@@ -3625,6 +3658,13 @@ def find_spotify_track(
             )
         )
 
+        # v71: beperkte catalogustitel-correctie; korte algemene titels
+        # worden buiten dit bevestigde duo NOOIT prefixgewijs gekoppeld.
+        if (primary_artist_exact and
+                v71_same_song_title(wanted_title_for_match, item.get('name', ''), artist)
+                and wanted_base_compact != spotify_base_compact):
+            structural_title_match = True
+
         # Confidence-klassen zijn belangrijker dan een klein scoreverschil.
         # Een fuzzy kandidaat mag zo nooit een structureel exactere match
         # voorbijsteken door toevallige artiest-/featurebonussen.
@@ -3845,6 +3885,7 @@ def find_spotify_track(
             "live": ["live", "ordinary", "remaster", "mix"],
             "remaster": ["remaster", "ordinary", "live", "mix"],
             "mix": ["mix", "ordinary", "remaster", "live"],
+            "acoustic": ["acoustic", "ordinary", "remaster", "live", "mix"],
         }
         # Catalogus-/sessieopnames zijn een laatste redmiddel, GEEN gewone
         # studioversies. Bijvoorbeeld "Flume - Spotify Singles" bij FINNEAS.
@@ -4182,6 +4223,56 @@ def normalize_match(value):
     return " ".join(value.split())
 
 
+def v71_credit_parts(value):
+    """Volledige samenwerkingscredits, zonder een bandnaam zomaar te splitsen."""
+    import re
+    raw = str(value or '').strip()
+    raw = re.sub(r'\s*\(\s*([^()]+?)\s*\)\s*$',
+                 lambda m: ' & ' + m.group(1) if re.search(r'(?i)\b(?:and|&|with)\b', m.group(1)) else m.group(0), raw)
+    raw = re.sub(r'(?i)\s+\b(?:feat\.?|ft\.?|featuring|with|w/)\s+', ' & ', raw)
+    return [normalize_match(x) for x in re.split(r'\s+(?:&|and)\s+|\s*,\s*', raw) if normalize_match(x)]
+
+
+def v71_core_song_title(value):
+    """Alleen duidelijk afgescheiden uitvoeringslabels verwijderen."""
+    import re
+    raw = str(value or '').strip()
+    raw = re.sub(r'(?i)\s*\((?:with|feat\.?|featuring|ft\.?)\s+[^()]+\)\s*$', '', raw)
+    suffix = r'(?:\d{4}\s+)?(?:remaster(?:ed)?(?:\s+version)?|live(?:\s+(?:at|in|from)\s+.+)?|acoustic(?:\s+version)?|studio(?:\s+version)?|(?:radio|club|extended|album|single|original)\s+(?:mix|edit|version)|remix|mix|version)'
+    old=None
+    while old != raw:
+        old=raw
+        raw=re.sub(r'\s*(?:\(\s*'+suffix+r'\s*\)|\s+[-–—]\s+'+suffix+r')\s*$', '', raw, flags=re.I).strip()
+    return normalize_match(raw)
+
+
+def v71_same_song_title(a, b, artist=''):
+    left, right = v71_core_song_title(a), v71_core_song_title(b)
+    if left == right:
+        return bool(left)
+    # Eén expliciet bevestigde RadioBox-verkorting; niet generiek
+    # 'Someone' aan 'Someone Else' gelijkstellen.
+    known = {'eskobar & heather nova', 'eskobar and heather nova'}
+    if normalize_match(artist) in known:
+        return {left, right} == {'someone', 'someone new'}
+    return False
+
+
+def v71_same_artist_credit(requested, candidate):
+    """Bandnaam exact OF volledige gedeelde samenwerking, geen substring."""
+    a, b = normalize_match(requested), normalize_match(candidate)
+    if a == b:
+        return True
+    parts_a = v71_credit_parts(requested)
+    parts_b = v71_credit_parts(candidate)
+    # Eén hoofdartiest plus extra Spotify-gasten is toegestaan;
+    # omgekeerd alleen bij volledige expliciete samenwerking.
+    return bool(parts_a and parts_b and (
+        (len(parts_a) > 1 and set(parts_a).issubset(set(parts_b)))
+        or (len(parts_a) == 1 and parts_a[0] == parts_b[0])
+    ))
+
+
 def make_playlist_keys(track):
     """
     Maak meerdere lokale sleutels voor één Spotify-track.
@@ -4225,6 +4316,11 @@ def make_playlist_keys(track):
         combined_amp = " & ".join(artists)
         keys.add(f"{combined_amp}|||{title}")
 
+    # v71: een nummer mag maar één versie in de playlist hebben.
+    # De bestaande volledige metadata-keys blijven behouden.
+    core_title = v71_core_song_title(track.get('name', ''))
+    if core_title and artists:
+        keys.add(f"{artists[0]}|||{core_title}")
     return keys
 
 
@@ -4347,6 +4443,19 @@ def radio_matches_playlist(
 
     if not radio_artists or not title_key:
         return False
+
+    # v71: deel dezelfde lied-identiteit over gewone, live-, remaster-
+    # en mixversies. Een Spotify-song met een andere ISRC is geen reden
+    # om hetzelfde lied opnieuw toe te voegen.
+    for key in playlist_keys:
+        if '|||' not in key:
+            continue
+        saved_artist, saved_title = key.split('|||', 1)
+        if v71_same_song_title(playlist_match_title, saved_title, artist_text) and (
+            any(v71_same_artist_credit(a, saved_artist) for a in radio_artists)
+            or v71_same_artist_credit(artist_text, saved_artist)
+        ):
+            return True
 
     # Elke afzonderlijke artiest controleren.
     for artist in radio_artists:
@@ -4885,6 +4994,59 @@ def sync():
                     queued_item["_v34_search_variant"] = 0
         cache["__v49_confirmed_links_released"] = True
         print("🎯 v49: bevestigde Spotify-links voor To R. en Est Plus vrijgegeven.")
+
+    # v71: alleen de zes door de gebruiker nagekeken afwijzingen éénmalig
+    # opnieuw proberen. Neem de ECHTE bron uit de bestaande cache over;
+    # maak geen radio-uitzending of artiest-/titelvariant uit het niets.
+    if not cache.get('__v71_six_matcher_retries_released'):
+        reviewed = {
+            (normalize_match(a), normalize_match(t))
+            for a, t in (
+                ('THE ANXIETY (WILLOW & TYLER COLE)', 'Meet me at our spot'),
+                ('Meshell Ndegeocello', 'Don’t You Want Me (with Cat Power)'),
+                ('ESKOBAR & HEATHER NOVA', 'Someone'),
+                ('Mark Knopfler and Emmylou Harris', 'Beachcombing'),
+                ('Vince Guaraldi', 'Charlie Brown Theme'),
+                ('Eurythmics', 'Here Comes the Rain Again (acoustic)'),
+            )
+        }
+        active = {_v47_key(x.get('artist',''), x.get('title',''))
+                  for x in live_queue if isinstance(x,dict)}
+        released = 0
+        old_failed = cache.setdefault('__v47_failed_tracks', {})
+        parked = cache.setdefault('__v51_radio_unmatched', {})
+        all_keys = set(old_failed) | set(parked)
+        for key in sorted(all_keys):
+            entry = parked.get(key) or old_failed.get(key)
+            if not isinstance(entry, dict):
+                continue
+            artist, title = entry.get('artist',''), entry.get('title','')
+            if (normalize_match(artist), normalize_match(title)) not in reviewed:
+                continue
+            source = entry.get('source')
+            if source not in ('vuurland', 'mellow_mix'):
+                continue
+            old_failed.pop(key,None)
+            parked.pop(key,None)
+            cache.get('__v51_radio_failed_searches', {}).pop(key,None)
+            cache.get('__v51_radio_failed_cycles', {}).pop(key,None)
+            cache.pop(f'__not_found_v{MATCHING_RULES_VERSION}__'+key,None)
+            cache.pop(f'__match_v{MATCHING_RULES_VERSION}__'+key,None)
+            if key not in active:
+                live_queue.append({'artist':artist, 'title':title, 'source':source,
+                                   '_v34_search_variant':0})
+                active.add(key)
+            released += 1
+        for item in live_queue:
+            if not isinstance(item, dict):
+                continue
+            if (normalize_match(item.get('artist','')),
+                normalize_match(item.get('title',''))) in reviewed:
+                item.pop('_v34_retry_at',None)
+                item['_v34_search_variant']=0
+        cache['__v71_six_matcher_retries_released'] = True
+        if released:
+            print(f'♻️ v71: {released} eerder geparkeerde nummers opnieuw ingepland.')
 
     queued_keys = {
         f"{normalize_match(item.get('artist', ''))}|||"
@@ -6067,6 +6229,11 @@ def sync():
 
         # Meteen lokaal als bestaand markeren.
         playlist_keys.add(cache_key)
+        # Bewaar ook een versie-onafhankelijke sleutel meteen na toevoegen.
+        radio_core = v71_core_song_title(title)
+        if radio_core:
+            for radio_artist in normalize_radio_artists(artist):
+                playlist_keys.add(f"{radio_artist}|||{radio_core}")
 
         cache[
             "__playlist_keys"

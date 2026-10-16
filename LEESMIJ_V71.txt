@@ -1,0 +1,34 @@
+VUURLAND v71 — matcherverbetering, 16 oktober 2026
+
+VERANDERINGEN
+- Alle zes gemelde radio-cases als offline regressietests.
+- Herkenning van band/project met leden tussen haakjes, officiële samenwerkingen
+  in losse Spotify-artiestvelden, featuring en (with ...) in titels.
+- Exacte, bevestigde titelkoppeling Eskobar & Heather Nova: Someone / Someone New.
+- Voor Spotify-credits 'Vince Guaraldi Trio' de volledige naam 'Vince Guaraldi'
+  plus exact Trio als veilige identiteitsvariant.
+- Versievolgorde: gewone / live / remaster / mix volgens eerder ingestelde
+  voorkeursvolgorde. Akoestische opname eerst akoestisch, dan gewone opname,
+  remaster, live, mix. Geen extra Spotify Search per ronde.
+- Versie-onafhankelijke liedherkenning in Spotify-playlist tegen dubbele nummers.
+- Eénmalig eerder geparkeerde zes radio-afwijzingen opnieuw inplannen voor
+  zover hun artiest/titel EN originele radiobron nog in de huidige cache staan.
+- Geen wijziging aan de twee radiobronnen, beurtrol, Spotify-429/5xx-cooldowns,
+  24-uurscache, likes, ISRC-check of bestaande Spotify-playlist-ID.
+
+BELANGRIJK
+De offline tests gebruiken gesimuleerde Spotify-resultaten en bewijzen geen
+live Spotify-beschikbaarheid. De zes oude nummers worden niet gegarandeerd
+onmiddellijk opnieuw gevonden. Geen automatische scan van historische radio-
+uitzendingen en geen losse onbekende nummers in de queue gefabriceerd.
+
+INSTALLEREN (Mac Terminal)
+cd ~/vuurland-spotify-github
+unzip -o ~/Downloads/vuurland-v71-matcher.zip -d .
+python3 -m py_compile vuurland_sync.py
+python3 v71_offline_test.py
+git add vuurland_sync.py v71_offline_test.py LEESMIJ_V71.txt
+git commit -m "Vuurland v71: matcher en versie-onafhankelijke duplicaten"
+git push
+
+Het workflowbestand blijft byte-voor-byte gelijk aan v70.
