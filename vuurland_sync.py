@@ -178,7 +178,8 @@ if SPOTIFY_SEARCH_BLOCKED_UNTIL <= time.time():
 
 SCOPES = (
     "playlist-read-private playlist-modify-private "
-    "playlist-modify-public user-library-modify user-library-read"
+    "playlist-modify-public user-library-modify user-library-read "
+    "user-read-private"  # Vereist door Spotify voor GET /search (2026).
 )
 
 AUTH_URL = "https://accounts.spotify.com/authorize"

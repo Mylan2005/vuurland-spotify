@@ -1,0 +1,26 @@
+# Vuurland v74 — Spotify Search toestemming
+
+De 403 'Insufficient client scope' bij GET /search komt overeen met ontbrekende `user-read-private` in de OAuth-toestemmingen. Spotify noemt Search onder die scope. Deze patch wijzigt ALLEEN de scope in `vuurland_sync.py`, plus nieuwe herautorisatie- en testbestanden. De workflow, queue, matcher, playlist en caches worden niet gewijzigd.
+
+## Installatie
+
+1. Pak ZIP uit in `~/vuurland-spotify-github`.
+2. `python3 -m py_compile vuurland_sync.py v74_spotify_herkoppelen.py`
+3. `python3 v71_offline_test.py && python3 v72_offline_test.py && python3 v73_offline_test.py && python3 v74_offline_test.py`
+4. `git add vuurland_sync.py v74_spotify_herkoppelen.py v74_offline_test.py LEESMIJ_V74.txt`
+5. `git commit -m "Vuurland v74: Spotify Search scope"`
+6. `git pull --rebase origin main && git push origin main`
+
+## Eenmalige Spotify-herautorisatie op Mac
+
+1. Zorg dat je Spotify-app in het Developer Dashboard redirect URI `http://127.0.0.1:8888/callback` heeft. Gebruik dezelfde app/Client ID als je GitHub SPOTIFY_CLIENT_ID secret.
+2. Start lokaal `python3 v74_spotify_herkoppelen.py` (eventueel eerder `export SPOTIFY_CLIENT_ID='jouw client id'`).
+3. Keur de Spotify-toestemmingen in je browser goed.
+4. Het nieuwe refresh-token komt op je Mac-klembord zonder in de Terminal te verschijnen.
+5. Open GitHub repo Settings → Secrets and variables → Actions → `SPOTIFY_REFRESH_TOKEN` → Update. Plak en bewaar.
+6. Wis het Mac-klembord: `printf '' | pbcopy`.
+7. Laat een nieuwe GitHub Actions-run starten of start er één handmatig indien er geen actieve run is.
+
+NOOIT refresh-token, client secret of access-token in ChatGPT of GitHub-logs plakken.
+
+Let op: oudere al draaiende Actions-runners houden hun huidige environment variabelen. Wacht tot een nieuwe runner start om het vernieuwde secret te gebruiken. Een nieuwe scope garandeert niet dat er geen andere Spotify 403-oorzaken zijn.
