@@ -1,0 +1,37 @@
+VUURLAND v72 — slimmere artiesten en regiofilter
+================================================
+Gebaseerd op de door de gebruiker geïnstalleerde v71-code.
+
+WIJZIGINGEN
+- Spotify Search krijgt market=from_token: regiocontext van het Spotify-account.
+- Kandidaten met is_playable=false of restrictions.reason=market worden geweigerd.
+- Officiële artiestengroepen met een &/and in de NAAM blijven één artiest;
+  geen impliciete soloversie van de eerste helft van een duo meer.
+- Volledige samenwerkingscredits met meerdere Spotify-artist objects
+  blijven aanvaardbaar via de bestaande strenge validator.
+- Bij tweede zoekstrategie voor korte titels zoeken we op tracktitel met
+  een zachte volledige artiestiethint, zonder harde gecombineerde artist-filter.
+- Eén bestaande Search per zoekstrategie/ronde; geen extra Search voor regio.
+- Playlist ID, wachtrij, cache, syncschema en liked songs worden niet gereset.
+
+BELANGRIJKE BEPERKINGEN
+- Dit zijn offline tests met gesimuleerde Spotify-responses; geen Spotify-accountcheck.
+- Een bestaande handmatig bevestigde directe Spotify-link/oud cache-item kan
+  buiten het nieuwe regiocheckpad vallen. Voor volledige bescherming moeten
+  ook bestaande cache/override-URI's gecontroleerd worden bij gebruik.
+- De codebasis van v71 bevat al een optionele extra 'rescue' Search onder
+  bepaalde omstandigheden; deze patch verandert die bestaande logica niet.
+- Zoekresultaten met ontbrekend is_playable veld worden niet automatisch geweigerd.
+
+INSTALLATIE (eerst oude werkmap/gewijzigde bestanden veilig houden)
+cd ~/vuurland-spotify-github
+unzip -o ~/Downloads/vuurland-v72-matcher.zip -d .
+python3 -m py_compile vuurland_sync.py
+python3 v71_offline_test.py
+python3 v72_offline_test.py
+git add vuurland_sync.py v72_offline_test.py LEESMIJ_V72.txt
+git commit -m 'Vuurland v72: regio en veilige artiestidentiteit'
+git pull --rebase origin main
+git push origin main
+
+Gebruik GEEN force push. Bij conflicts stop en stuur de uitvoer door.

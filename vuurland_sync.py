@@ -1790,7 +1790,11 @@ def find_spotify_track(
                 'ø': 'o', 'Ø': 'O', 'æ': 'ae', 'Æ': 'Ae',
                 'œ': 'oe', 'Œ': 'Oe', 'ß': 'ss',
             }))
-            query = ' '.join(part for part in (loose_artist, quoted_title) if part)
+            # v72: niet op één artist:-veld vastlopen wanneer Spotify
+            # een samenwerking als twee artist-objects opslaat.
+            # Volledige artiestnaam blijft een zachte zoekhint; de
+            # uiteindelijke kandidaat krijgt een strenge creditcontrole.
+            query = ' '.join(part for part in (f'track:"{quoted_title}"', loose_artist) if part)
         else:
             # Zoek met de artiest als ZACHTE hint en een brede kerntitel.
             # Een harde track:-filter op bronmetadata, bv. '(live)', sloot
@@ -1813,7 +1817,10 @@ def find_spotify_track(
         params={
             "q": query,
             "type": "track",
-            "limit": 10
+            "limit": 10,
+            # Spotify bepaalt de afspeelbaarheid voor het land van de
+            # ingelogde gebruiker. Geen hardcoded BE of extra HTTP-call.
+            "market": "from_token",
         }
     )
 
@@ -2080,7 +2087,8 @@ def find_spotify_track(
                 params={
                     "q": rescue_query,
                     "type": "track",
-                    "limit": 10
+                    "limit": 10,
+                    "market": "from_token",
                 }
             )
 
@@ -2853,6 +2861,16 @@ def find_spotify_track(
     candidates = []
 
     for item in items:
+        # v72: een resultaat dat voor dit account niet speelbaar is,
+        # nooit toevoegen. Spotify Search met market=from_token kan
+        # is_playable=False of restrictions.reason=market teruggeven.
+        # Ontbrekende velden betekenen niet automatisch 'onbeschikbaar'.
+        if item.get("is_playable") is False:
+            print(f"⏭️ Niet afspeelbaar in accountregio: {item.get('name', '')}")
+            continue
+        if (item.get("restrictions") or {}).get("reason") == "market":
+            print(f"⏭️ Regionaal geblokkeerd: {item.get('name', '')}")
+            continue
         spotify_artist_objects = [
             a
             for a in item.get("artists", [])
@@ -3146,13 +3164,11 @@ def find_spotify_track(
         # Officiële bandnamen blijven beschermd tegen splitsen.
         possible_collab = re.split(r"\s+(?:&|and)\s+", wanted_artists[0])
         solo_collab_fallback = False
-        if (len(possible_collab) == 2
-                and len(wanted_artists) == 1
-                and not primary_artist_exact
-                and compact(possible_collab[0]) == spotify_primary_compact
-                and len(spotify_artists) == 1
-                and not re.match(r"^(?:the\s+)?(?:bad seeds|wailers|the stampede|double trouble|the heart breakers)$", possible_collab[1])):
-            solo_collab_fallback = True
+        # v72: 'Angus & Julia Stone', 'Simon & Garfunkel' en andere
+        # officiële duo-/bandnamen mogen NOOIT stilzwijgend als een
+        # solo-opname van het eerste naamdeel worden goedgekeurd.
+        # Volledige bandcredit of aantoonbaar afzonderlijke Spotify-
+        # artist objects blijven geldig (reversed_duo_match hierboven).
 
         # "The" aan het begin van een artiestennaam is vaak
         # alleen een catalogusverschil:
