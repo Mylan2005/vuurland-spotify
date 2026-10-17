@@ -1,0 +1,33 @@
+VUURLAND v78 — tijdelijke prioriteit voor de vijf opgeloste matcherproblemen
+
+Boven op de aangeleverde v77-code. Bestaande API-limieten blijven intact.
+
+Doel:
+- De vijf v77-probleemgevallen krijgen als eerste de kans om verwerkt te worden.
+- Een geparkeerd nummer wordt alleen hersteld met een aantoonbare bron
+  (bewaarde queue/cache of de opgehaalde RadioBox-historiek).
+- Mislukte zoekstrategieën en not-found-cooldowns voor deze gevallen worden
+  eenmaal vrijgegeven. Onbekende nummers krijgen nooit een verzonnen bron.
+- Maximaal één echte Spotify Search en één toevoeging per 120 seconden.
+- Alle bestaande checks voor duplicaten en Belgische afspeelbaarheid blijven.
+- Als een nummer al in de playlist staat, mag het niet dubbel toegevoegd worden.
+
+BELANGRIJK: Eerst bestaande GitHub-code vergelijken, want het pakket is
+gebaseerd op het v77-script uit deze chat, niet rechtstreeks van origin/main.
+
+Terminal:
+cd ~/vuurland-spotify-github
+git pull --rebase origin main
+# Vergelijk de actuele versie voor je de ZIP over de projectcode zet.
+# Na goedgekeurde vergelijking:
+unzip -o ~/Downloads/vuurland-v78-prioriteit.zip -d .
+python3 -m py_compile vuurland_sync.py
+python3 v77_offline_test.py
+python3 v78_offline_test.py
+# Pas na succesvolle tests:
+git add vuurland_sync.py v78_offline_test.py LEESMIJ_V78.txt
+git commit -m "Vuurland v78: veilige prioriteit voor vijf matcherherstellingen"
+git pull --rebase origin main
+git push origin main
+
+Live werking is nog niet getest. Geen playlist/queue/cache resetten.

@@ -4947,6 +4947,67 @@ def load_duyster_confirmed_links(csv_path):
     return links
 
 
+# v78: eenmalige inhaalprioriteit voor gecontroleerde v77-matcherherstellingen.
+# Geen directe Spotify-toevoegingen: alle gewone playlist-, duplicaat-,
+# afspeelbaarheids- en API-controles blijven actief.
+V78_RECOVERY_TRACKS = (
+    ("BON IVER", "Speyside"),
+    ("Don Williams", "'Till The Rivers Run Dry"),
+    ("Prince", "affirmations Way Back Home"),
+    ("The Gabby Pahinui Hawaiian Band", "Wahine uʻi"),
+    ("NOVASTAR & PIET GODDAER", "Never back down"),
+)
+
+
+def v78_recover_and_prioritize(cache, live_queue, radio_sources):
+    """Herstel alleen aantoonbaar bestaande radiosongs; houd hun volgorde vast.
+
+    Bron moet blijken uit radiohistoriek of bewaarde state, nooit gegokt.
+    De migratie loopt slechts eenmaal; opnieuw starten dupliceert niets.
+    """
+    target_keys = [_v47_key(a, t) for a, t in V78_RECOVERY_TRACKS]
+    if not cache.get('__v78_recovery_initialized'):
+        source_for = {}
+        for source in radio_sources:
+            for artist, title in source.get('tracks', []):
+                source_for.setdefault(_v47_key(artist, title), source['id'])
+        for store_name in ('__v47_failed_tracks', '__v51_radio_unmatched'):
+            for key, entry in cache.get(store_name, {}).items():
+                if isinstance(entry, dict) and entry.get('source') in ('vuurland', 'mellow_mix'):
+                    source_for.setdefault(key, entry['source'])
+        for item in live_queue:
+            if isinstance(item, dict) and item.get('source') in ('vuurland', 'mellow_mix'):
+                source_for.setdefault(_v47_key(item.get('artist',''), item.get('title','')), item['source'])
+        existing = {_v47_key(x.get('artist',''), x.get('title',''))
+                    for x in live_queue if isinstance(x, dict)}
+        restored = 0
+        for artist, title in V78_RECOVERY_TRACKS:
+            key = _v47_key(artist, title)
+            if key not in source_for:
+                print(f'ℹ️ v78: bron niet bevestigd; geen kunstmatige queue-entry: {artist} — {title}')
+                continue
+            cache.setdefault('__v47_failed_tracks', {}).pop(key, None)
+            cache.setdefault('__v51_radio_unmatched', {}).pop(key, None)
+            cache.setdefault('__v51_radio_failed_searches', {}).pop(key, None)
+            cache.setdefault('__v51_radio_failed_cycles', {}).pop(key, None)
+            for prefix in ('__not_found_v35__', '__match_v35__'):
+                cache.pop(prefix + key, None)
+            if key not in existing:
+                live_queue.append({'artist': artist, 'title': title,
+                                   'source': source_for[key], '_v34_search_variant': 0})
+                existing.add(key)
+                restored += 1
+            for item in live_queue:
+                if isinstance(item, dict) and _v47_key(item.get('artist',''), item.get('title','')) == key:
+                    item.pop('_v34_retry_at', None)
+                    item['_v34_search_variant'] = 0
+        cache['__v78_recovery_initialized'] = True
+        print(f'🎯 v78: {restored} geparkeerde matcher-items hersteld; prioriteit alleen voor bestaande radiobronnen.')
+    active = {_v47_key(x.get('artist',''), x.get('title',''))
+              for x in live_queue if isinstance(x, dict)}
+    return {key: pos for pos, key in enumerate(target_keys) if key in active}
+
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -5147,6 +5208,9 @@ def sync():
         cache['__v71_six_matcher_retries_released'] = True
         if released:
             print(f'♻️ v71: {released} eerder geparkeerde nummers opnieuw ingepland.')
+
+    # v78: gecontroleerde v77-missers opnieuw zoekklaar en bovenaan.
+    v78_recover_and_prioritize(cache, live_queue, radio_sources)
 
     queued_keys = {
         f"{normalize_match(item.get('artist', ''))}|||"
@@ -5633,6 +5697,10 @@ def sync():
             for pos, (artist, title) in enumerate(radio_source["tracks"][:12])
         }
 
+    # v78-prioriteit wordt per ronde afgeleid uit de nog aanwezige queue.
+    # Nadat een nummer is toegevoegd/verwijderd, verdwijnt die prioriteit vanzelf.
+    v78_priority_order = {_v47_key(a, t): i for i, (a, t) in enumerate(V78_RECOVERY_TRACKS)}
+
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
             break
@@ -5645,17 +5713,32 @@ def sync():
         # Alle bronnen krijgen evenveel kansen op een nieuwe Spotify Search.
         # Wanneer het zoekbudget op is: alleen zekere playlist/cache-hits.
         turn_index = source_order.index(round_start_source)
-        for preferred_source in source_order[turn_index:] + source_order[:turn_index]:
+        round_sources = source_order[turn_index:] + source_order[:turn_index]
+        # Uitzonderlijke, tijdelijke inhaalbeurt: eerst de bron van het
+        # hoogst gerangschikte zoekklare v78-nummer. Normale beurtrol
+        # blijft ongewijzigd voor alle overige rondes.
+        recovery_ready = [x for x in live_queue if isinstance(x, dict)
+                          and _v47_key(x.get('artist',''), x.get('title','')) in v78_priority_order
+                          and x.get('source') in round_sources
+                          and id(x) not in processed_item_ids
+                          and now >= _v41_cooldown_until(x)]
+        if recovery_ready and searches_used < MAX_SEARCHES_PER_RUN:
+            next_priority = min(recovery_ready, key=lambda x:
+                v78_priority_order[_v47_key(x.get('artist',''), x.get('title',''))])
+            round_sources = [next_priority['source']] + [s for s in round_sources if s != next_priority['source']]
+        for preferred_source in round_sources:
             # Recentste 12 zichtbare radioplays eerst binnen deze bron,
             # daarna de bestaande wachtrij in ongewijzigde volgorde.
             candidates = list(enumerate(live_queue))
             if preferred_source in recent_radio_rank:
                 ranks = recent_radio_rank[preferred_source]
                 candidates.sort(key=lambda pair: (
+                    0 if _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")) in v78_priority_order else 1,
+                    v78_priority_order.get(_v47_key(pair[1].get("artist", ""), pair[1].get("title", "")), 999999),
                     0 if _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")) in ranks else 1,
                     ranks.get(_v47_key(pair[1].get("artist", ""), pair[1].get("title", "")), 999999),
                     pair[0],
-                ) if isinstance(pair[1], dict) else (2, 999999, pair[0]))
+                ) if isinstance(pair[1], dict) else (2, 999999, 2, 999999, pair[0]))
             for index, candidate in candidates:
                 if not isinstance(candidate, dict):
                     continue
