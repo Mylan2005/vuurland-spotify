@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "king krule|||border line",
+  "__last_radio_key_vuurland": "bear's den|||auld wives",
   "__last_radio_key_mellow_mix": "wild strawberries|||everyone's got the blues on sunday",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -74,6 +74,7 @@
       "beach house|||ppp",
       "beach house|||space song",
       "bear's den|||above the clouds of pompeii",
+      "bear's den|||auld wives",
       "bear's den|||spiders",
       "beck|||everybody's got to learn sometime",
       "beck|||ride lonesome",
@@ -488,6 +489,7 @@
       "mooneye|||this thing",
       "mount kimbie feat king krule|||empty and silent",
       "mrcy|||angels",
+      "mrcy|||man",
       "my morning jacket|||golden",
       "naive set|||no relation",
       "nathaniel rateliff & the night sweats|||what if i",
@@ -1769,7 +1771,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3732,
+  "__vuurland_active_playlist_count": 3733,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||hey jack kerouac",
@@ -2240,6 +2242,7 @@
     "bear's den|||above the clouds of pompeii",
     "bear's den|||agape",
     "bear's den|||all that you are",
+    "bear's den|||auld wives",
     "bear's den|||honest mistake",
     "bear's den|||i would die 4 u",
     "bear's den|||imitation",
@@ -9773,6 +9776,7 @@
     "spotify:track:5SxuGQBG2bWFMPz186m5cN",
     "spotify:track:5T00EN4oZmDQx3hqVAC4Fx",
     "spotify:track:5TOyUOptT0J2ZC28DdGqLF",
+    "spotify:track:5TPXeJ2fg41Qnx9ZFpEMZg",
     "spotify:track:5TSj6ySt4WqDuljv61Q4D5",
     "spotify:track:5TYnWTit6kBSCJ3AfFZtJv",
     "spotify:track:5UBBJnFxsfjFxfrtvErQoH",
@@ -11593,6 +11597,7 @@
     "GB6TW1300035",
     "GB6TW1400045",
     "GB6TW1400047",
+    "GB6TW1600026",
     "GB6TW1800028",
     "GB6TW1800053",
     "GB6TW1800126",
@@ -18328,7 +18333,8 @@
     "spotify:track:6lPbvFOOpN4pltOqJp7ddN": "USAT20000066",
     "spotify:track:04CwADpo37TwnwqQLskoo5": "GBBKS1300090",
     "spotify:track:3BCNSMSW9sHyWqJNd6shIH": "QZLBC2401733",
-    "spotify:track:4PWI70b5s9uol6rzgLlsDR": "CAN119800209"
+    "spotify:track:4PWI70b5s9uol6rzgLlsDR": "CAN119800209",
+    "spotify:track:5TPXeJ2fg41Qnx9ZFpEMZg": "GB6TW1600026"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -19925,6 +19931,10 @@
     "wild strawberries|||everyone's got the blues on sunday": {
       "artist": "Wild Strawberries",
       "title": "Everyone's Got the Blues on Sunday"
+    },
+    "bear's den|||auld wives": {
+      "artist": "Bear's Den",
+      "title": "Auld Wives"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -20708,6 +20718,11 @@
       "uri": "spotify:track:4PWI70b5s9uol6rzgLlsDR",
       "artist": "Wild Strawberries",
       "title": "Everyone's Got the Blues on Sunday"
+    },
+    "bear's den|||auld wives": {
+      "uri": "spotify:track:5TPXeJ2fg41Qnx9ZFpEMZg",
+      "artist": "Bear's Den",
+      "title": "Auld Wives"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -20872,5 +20887,6 @@
   "__match_v35__crosby stills & nash|||marrakesh express": "spotify:track:6lPbvFOOpN4pltOqJp7ddN",
   "__match_v35__king krule|||border line": "spotify:track:04CwADpo37TwnwqQLskoo5",
   "__match_v35__gone gone beyond|||back to zero w/ dirtwire": "spotify:track:3BCNSMSW9sHyWqJNd6shIH",
-  "__match_v35__wild strawberries|||everyone's got the blues on sunday": "spotify:track:4PWI70b5s9uol6rzgLlsDR"
+  "__match_v35__wild strawberries|||everyone's got the blues on sunday": "spotify:track:4PWI70b5s9uol6rzgLlsDR",
+  "__match_v35__bear's den|||auld wives": "spotify:track:5TPXeJ2fg41Qnx9ZFpEMZg"
 }
