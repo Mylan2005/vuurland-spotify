@@ -1,0 +1,25 @@
+name: Vuurland dagelijks gezondheidsrapport
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 6 * * *'
+permissions:
+  contents: read
+jobs:
+  rapport:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Lees state en maak rapport zonder Spotify-verzoeken
+        run: |
+          python3 vuurland_v86_rapport.py --data-dir . --output vuurland_v86_gezondheidsrapport.md
+          cat vuurland_v86_gezondheidsrapport.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v86-gezondheidsrapport
+          path: vuurland_v86_gezondheidsrapport.md
+          retention-days: 30

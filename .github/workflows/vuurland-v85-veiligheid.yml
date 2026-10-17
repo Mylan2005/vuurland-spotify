@@ -7,6 +7,9 @@ on:
       - 'test_v*_offline.py'
       - 'v*_offline_test.py'
       - '.github/workflows/vuurland-v85-veiligheid.yml'
+      - 'vuurland_v86_rapport.py'
+      - '.github/workflows/vuurland.yml'
+      - '.github/workflows/vuurland-v86-dagrapport.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,6 +29,7 @@ jobs:
         run: |
           python -m py_compile vuurland_sync.py
           python test_v85_offline.py
+          python test_v86_offline.py
           for v in 77 78 79 80 81 82; do
             python "v${v}_offline_test.py"
           done
