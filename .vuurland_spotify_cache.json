@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "mitski|||heaven",
-  "__last_radio_key_mellow_mix": "patti smith|||paths that cross",
+  "__last_radio_key_mellow_mix": "euphoria|||desert drive",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1077,6 +1077,7 @@
       "eric hilton|||a sky so close",
       "erik satie|||gnossienne no1",
       "erik satie|||gymnopedie no 1",
+      "euphoria|||desert drive",
       "eurythmics|||here comes the rain again acoustic",
       "eva cassidy|||ain't no sunshine",
       "eva cassidy|||kathy's song",
@@ -1821,7 +1822,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3768,
+  "__vuurland_active_playlist_count": 3769,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||hey jack kerouac",
@@ -3411,6 +3412,7 @@
     "ethel cain|||for sure",
     "ethel cain|||fuck me eyes",
     "ethel cain|||nettles",
+    "euphoria|||desert drive",
     "eurythmics & annie lennox & dave stewart|||here comes the rain again",
     "eurythmics|||annie lennox|||dave stewart|||here comes the rain again",
     "eurythmics|||here comes the rain again",
@@ -10475,6 +10477,7 @@
     "spotify:track:6nD7oFYIKMjGBFRhVX7vYz",
     "spotify:track:6nMglILldVs8rrZDcckdfK",
     "spotify:track:6o2yIQVzajJjRrgICzcfAf",
+    "spotify:track:6o3HUEBS84q1xL3rGBhKLg",
     "spotify:track:6o5q8AfVvepf91QadXRsXu",
     "spotify:track:6o65Xn8X3IXf7zmxVjXDWJ",
     "spotify:track:6oBIzNjrQ7ibErxk1ZbdfA",
@@ -13593,6 +13596,7 @@
     "US64G2317108",
     "US64G2615505",
     "US68Z0500068",
+    "US6DR0000100",
     "US6R21520100",
     "US72W1311099",
     "US72W1511354",
@@ -18524,7 +18528,8 @@
     "spotify:track:2Dq2GxffwFlSPcOd2GA8L4": "GBLEY0500011",
     "spotify:track:4DWRhnsa7MAVr4meyed1EF": "USAM18790009",
     "spotify:track:7du504gsgnBEdLP08tdEmp": "USAR19600148",
-    "spotify:track:3qhlB30KknSejmIvZZLjOD": "GBKPL2205058"
+    "spotify:track:3qhlB30KknSejmIvZZLjOD": "GBKPL2205058",
+    "spotify:track:6o3HUEBS84q1xL3rGBhKLg": "US6DR0000100"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -20264,6 +20269,10 @@
     "djo|||end of beginning": {
       "artist": "Djo",
       "title": "End of Beginning"
+    },
+    "euphoria|||desert drive": {
+      "artist": "Euphoria",
+      "title": "Desert Drive"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -21227,6 +21236,11 @@
       "uri": "spotify:track:3qhlB30KknSejmIvZZLjOD",
       "artist": "Djo",
       "title": "End of Beginning"
+    },
+    "euphoria|||desert drive": {
+      "uri": "spotify:track:6o3HUEBS84q1xL3rGBhKLg",
+      "artist": "Euphoria",
+      "title": "Desert Drive"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -21429,5 +21443,6 @@
   "__match_v35__jon redfern|||i love the sun": "spotify:track:2Dq2GxffwFlSPcOd2GA8L4",
   "__match_v35__suzanne vega|||gypsy": "spotify:track:4DWRhnsa7MAVr4meyed1EF",
   "__match_v35__patti smith|||paths that cross": "spotify:track:7du504gsgnBEdLP08tdEmp",
-  "__match_v35__djo|||end of beginning": "spotify:track:3qhlB30KknSejmIvZZLjOD"
+  "__match_v35__djo|||end of beginning": "spotify:track:3qhlB30KknSejmIvZZLjOD",
+  "__match_v35__euphoria|||desert drive": "spotify:track:6o3HUEBS84q1xL3rGBhKLg"
 }
