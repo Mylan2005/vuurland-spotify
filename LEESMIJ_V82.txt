@@ -1,0 +1,24 @@
+VUURLAND v82 — VEILIGE MATCHERUITBREIDING
+
+Basis: actuele lokaal beschikbare v81 (GitHub-commit 05d3de42 volgens log).
+
+1. Catalogusgeheugen voor veilig gevonden Spotify-opnames, maximaal 2000 exacte RadioBox-sleutels.
+   V82 onthoudt een URI enkel na de bestaande veilige matcherselectie.
+   Een volgende exacte radiotitel kan via GET /tracks/{id} gecontroleerd worden.
+   Elke kandidaat ondergaat opnieuw de normale artiest-, titel-, regio- en versiecontroles.
+   Geen extra Spotify Search; wel een andere GET-aanvraag die aan Spotify-quota onderworpen blijft.
+2. Beter leesbare gedetailleerde afwijsreden naast de v80-melding.
+3. Bestaande zoekroutes, artiestcontrole, versievoorkeur, queue en prioriteiten blijven behouden.
+   Extra schrijfwijzen worden via bestaande v79/v80 routes hergebruikt; geen riskante fuzzy matching.
+4. Alle v77–v82-offlinetests draaien zonder netwerk.
+
+LET OP: De positieve matchcache van oudere versies kan een URI direct teruggeven.
+Het v82-geheugen groeit uitsluitend bij nieuwe veilige matches via find_spotify_track.
+Dit is geen zelfstandige onbeperkte Spotify-cataloguszoekmachine.
+
+Veilige installatie: eerst git pull --rebase origin main, dan hash vergelijken met
+V82_BASIS_SHA256.txt. Bij verschil: NIET overschrijven.
+Unzip; python3 -m py_compile vuurland_sync.py;
+python3 v77_offline_test.py ... python3 v82_offline_test.py
+Daarna uitsluitend script, v82-test, leesmij en hashbestand committen.
+Nooit JSON-state, workflow, playlist of likes resetten.

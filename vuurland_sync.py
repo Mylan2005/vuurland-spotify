@@ -1211,6 +1211,60 @@ def v81_catalog_locator(artist, title):
     return V81_VERIFIED_CATALOG_TRACKS.get(key)
 
 
+# === v82: veilige cataloguskennis en uitlegbare zoekstrategie ===
+# Uitsluitend identieke RadioBox artiest/titel sleutels. Een onthouden URI
+# is een locator, NOOIT toestemming om de kandidaat zonder validatie te kiezen.
+def v82_confirmed_locator(cache, artist, title):
+    records = cache.get('__v82_confirmed_catalog', {})
+    if not isinstance(records, dict):
+        return None
+    record = records.get(_v47_key(artist, title))
+    if not isinstance(record, dict):
+        return None
+    uri = record.get('uri', '')
+    if isinstance(uri, str) and re.fullmatch(r'spotify:track:[A-Za-z0-9]{22}', uri):
+        return uri.rsplit(':', 1)[1]
+    return None
+
+
+def v82_remember_catalog(cache, artist, title, uri, metadata):
+    if not metadata or not isinstance(metadata, (tuple, list)) or len(metadata) != 2:
+        return False
+    if not isinstance(uri, str) or not re.fullmatch(r'spotify:track:[A-Za-z0-9]{22}', uri):
+        return False
+    records = cache.setdefault('__v82_confirmed_catalog', {})
+    if not isinstance(records, dict):
+        return False
+    key = _v47_key(artist, title)
+    if key not in records and len(records) >= 2000:
+        return False
+    records[key] = {'uri': uri, 'artist': str(metadata[0])[:160],
+                    'title': str(metadata[1])[:320]}
+    return True
+
+
+def v82_match_diagnosis(items, artist, title):
+    # Dit is uitsluitend uitleg bij een afwijzing, geen acceptatiebeslissing.
+    if not items:
+        return 'geen_resultaten'
+    playable = [x for x in items if isinstance(x, dict)
+                and x.get('is_playable') is not False]
+    if not playable:
+        return 'niet_afspeelbaar'
+    def clean(text):
+        import unicodedata
+        text = unicodedata.normalize('NFKD', v80_unicode_search_text(text).casefold())
+        return ''.join(ch for ch in text if ch.isalnum() and not unicodedata.combining(ch))
+    wanted_artist, wanted_title = clean(artist), clean(title)
+    artist_hits = [x for x in playable if wanted_artist in
+                   [clean(a.get('name', '')) for a in x.get('artists', []) if isinstance(a, dict)]]
+    if not artist_hits:
+        return 'artiestcredits_of_rangschikking'
+    if not any(clean(x.get('name', '')) == wanted_title for x in artist_hits):
+        return 'titel_of_versie_verschilt'
+    return 'veiligheidscontrole_of_ambiguiteit'
+
+
 def find_spotify_track(
     artist,
     title,
@@ -1976,8 +2030,13 @@ def find_spotify_track(
     # vruchteloze Search. Maximaal één Spotify-opzoekactie per ronde;
     # de gemeenschappelijke kandidaatvalidatie hieronder blijft intact.
     catalog_id = v81_catalog_locator(artist, title)
+    catalog_reason = 'v81' if catalog_id else None
+    if not catalog_id:
+        catalog_id = v82_confirmed_locator(load_cache(), artist, title)
+        if catalog_id:
+            catalog_reason = 'v82'
     if catalog_id:
-        print(f"📀 v81 cataloguscontrole: {artist} — {title} (geen Search nodig)")
+        print(f"📀 {catalog_reason} cataloguscontrole: {artist} — {title} (geen Search nodig; volledige validatie)")
         catalog_track = spotify_request(
             "GET", f"/tracks/{catalog_id}", params={"market": "from_token"}
         )
@@ -4225,6 +4284,7 @@ def find_spotify_track(
         return candidates[0][5]
 
     print(f"🧭 v80 matcher-diagnose: {v80_failure_reason(items, artist, title)} | zoekstrategie={search_variant}")
+    print(f"🧭 v82 afwijsreden: {v82_match_diagnosis(items, artist, title)} | zoekstrategie={search_variant}")
     print(f"🧪 Spotify-query zonder veilige match: {query}")
 
     if items:
@@ -6352,6 +6412,7 @@ def sync():
                     v80_record_confirmed(cache, artist, title,
                                          LAST_SPOTIFY_MATCH_METADATA[0],
                                          LAST_SPOTIFY_MATCH_METADATA[1], uri)
+                    v82_remember_catalog(cache, artist, title, uri, LAST_SPOTIFY_MATCH_METADATA)
                 cache.get('__v51_radio_failed_cycles', {}).pop(_v47_key(artist,title),None)
                 cache.get('__v51_radio_unmatched', {}).pop(_v47_key(artist,title),None)
                 cache.get('__v51_radio_failed_searches', {}).pop(_v47_key(artist,title),None)
