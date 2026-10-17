@@ -96,6 +96,7 @@ SPOTIFY_SEARCH_HTTP_LIMIT = 1
 # find_spotify_track() blijft gewoon een URI-string teruggeven,
 # zodat bestaande code en regressietests niet veranderen.
 LAST_SPOTIFY_MATCH_ISRC = None
+LAST_SPOTIFY_MATCH_METADATA = None
 
 DATA_DIR = os.environ.get("VUURLAND_DATA_DIR", os.path.expanduser("~"))
 TOKEN_FILE = os.path.join(DATA_DIR, ".vuurland_spotify_token.json")
@@ -1142,13 +1143,67 @@ def _numbered_title_equivalent(value):
     return f"{word} {numeric}"
 
 
+
+# === v80: conservatieve cataloguskennis (geen extra Spotify-requests) ===
+def v80_unicode_search_text(value):
+    """Veilige zoek-Schrijfwijze: behoud alle betekenisvolle woorden/cijfers."""
+    import unicodedata
+    text = str(value or '').translate(str.maketrans({
+        'ʻ': "'", 'ʼ': "'", '’': "'", '‘': "'", '＇': "'",
+        'æ': 'ae', 'Æ': 'Ae', 'œ': 'oe', 'Œ': 'Oe', 'ø': 'o', 'Ø': 'O', 'ß': 'ss',
+        'ﬁ': 'fi', 'ﬂ': 'fl',
+    }))
+    text = unicodedata.normalize('NFKC', text)
+    return ' '.join(text.split())
+
+
+def v80_search_route(artist, title, variant, confirmed=None):
+    """Herbruikbare zoekroute. Onzekerheid leidt NOOIT tot automatische match."""
+    title = v80_unicode_search_text(title)
+    artist = v80_unicode_search_text(artist)
+    if confirmed and confirmed.get('title') and confirmed.get('artist'):
+        # Alleen eerder gevalideerde artiest/titel; validatie blijft verplicht.
+        return {'title': confirmed['title'], 'artist': confirmed['artist'], 'reason': 'confirmed_catalog_spellings'}
+    if variant == 1 and re.fullmatch(r'[A-Za-z]{6,16}', title):
+        return {'title': ' '.join(title.upper()), 'artist': artist, 'reason': 'spaced_letters'}
+    return {'title': title, 'artist': artist, 'reason': 'ordinary'}
+
+
+def v80_record_confirmed(cache, artist, title, spotify_artist, spotify_title, uri):
+    """Onthoud een veilige zoekhint alleen na gekozen match, zonder URI-autorisatie."""
+    if not uri or not str(uri).startswith('spotify:track:'):
+        return False
+    key = _v47_key(artist, title)
+    learned = cache.setdefault('__v80_confirmed_spellings', {})
+    if not isinstance(learned, dict):
+        return False
+    # Vaste limiet tegen onbeperkte groei; geen ongecontroleerd model-leren.
+    if key not in learned and len(learned) >= 2000:
+        return False
+    learned[key] = {'artist': str(spotify_artist)[:160], 'title': str(spotify_title)[:320]}
+    return True
+
+
+def v80_failure_reason(items, artist, title):
+    """Verklarende diagnose; nooit zelfstandig beslissen dat iets matcht."""
+    if not items:
+        return 'no_results'
+    if any(not x.get('is_playable', True) for x in items):
+        return 'includes_unplayable_candidates'
+    wanted = normalize_match(artist)
+    names = [normalize_match(a.get('name', '')) for x in items for a in x.get('artists', [])]
+    if wanted and wanted not in names:
+        return 'artist_credit_or_search_ranking'
+    return 'title_version_or_ambiguity'
+
 def find_spotify_track(
     artist,
     title,
     search_variant=0
 ):
-    global LAST_SPOTIFY_MATCH_ISRC
+    global LAST_SPOTIFY_MATCH_ISRC, LAST_SPOTIFY_MATCH_METADATA
     LAST_SPOTIFY_MATCH_ISRC = None
+    LAST_SPOTIFY_MATCH_METADATA = None
 
     """
     Zoek een Spotify-track veilig op artiest + titel.
@@ -1701,6 +1756,19 @@ def find_spotify_track(
         # Alleen randquotes verwijderen; apostrofs in woorden behouden.
         text = text.strip(' "`“”')
         return " ".join(text.split())
+
+    # v80: gekozen zoekroute uit schrijfwijzen; geen extra aanvraag.
+    # Bewezen catalogushints hebben voorrang, maar zijn nooit vrijstellingen
+    # van de originele artiest-, titel- en afspeelbaarheidscontrole.
+    learned_spellings = load_cache().get('__v80_confirmed_spellings', {})
+    learned_entry = learned_spellings.get(_v47_key(artist, title)) if isinstance(learned_spellings, dict) else None
+    route = v80_search_route(primary_search_artist, search_title, search_variant,
+                             learned_entry if isinstance(learned_entry, dict) else None)
+    if learned_entry and route['reason'] == 'confirmed_catalog_spellings':
+        search_title = route['title']
+        spotify_search_artist = route['artist']
+    else:
+        search_title = v80_unicode_search_text(search_title)
 
     # v77: Spotify catalogiseert sommige enkelwoordtitels als losse
     # letters (Speyside -> S P E Y S I D E). Alleen op een later zoekpad
@@ -4120,6 +4188,7 @@ def find_spotify_track(
             ):
                 return None
 
+        LAST_SPOTIFY_MATCH_METADATA = (candidates[0][8], candidates[0][7])
         LAST_SPOTIFY_MATCH_ISRC = candidates[0][6]
         print(
             "🎯 Spotify match gekozen: "
@@ -4128,6 +4197,7 @@ def find_spotify_track(
         )
         return candidates[0][5]
 
+    print(f"🧭 v80 matcher-diagnose: {v80_failure_reason(items, artist, title)} | zoekstrategie={search_variant}")
     print(f"🧪 Spotify-query zonder veilige match: {query}")
 
     if items:
@@ -6205,6 +6275,10 @@ def sync():
             if uri is not None:
 
                 cache[match_cache_key] = uri
+                if LAST_SPOTIFY_MATCH_METADATA:
+                    v80_record_confirmed(cache, artist, title,
+                                         LAST_SPOTIFY_MATCH_METADATA[0],
+                                         LAST_SPOTIFY_MATCH_METADATA[1], uri)
                 cache.get('__v51_radio_failed_cycles', {}).pop(_v47_key(artist,title),None)
                 cache.get('__v51_radio_unmatched', {}).pop(_v47_key(artist,title),None)
                 cache.get('__v51_radio_failed_searches', {}).pop(_v47_key(artist,title),None)

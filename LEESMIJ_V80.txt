@@ -1,0 +1,33 @@
+VUURLAND v80 — geïntegreerde matcherverbetering
+==============================================
+Basis: v79 ZIP uit dezelfde conversatie. GEEN live GitHub-checkout.
+
+De zeven aandachtspunten:
+1. Zoekkeuze: herbruikbare zoekroute voor structurele lettertitels en eerder bevestigde catalogusspellingen; geen extra Spotify HTTP.
+2. Artiestcredits: bestaande strenge checks, gecontroleerde aliassen en samenwerkingen behouden, zonder onveilige algemene fuzzy artiestenmatching.
+3. Unicode/schrijfwijzen: okina/apostrof, ligaturen, enkele catalogustekens en Unicode-spaties geharmoniseerd voor zoektermen.
+4. Spotify-versievoorkeur: bestaande veilige prioriteiten studio/remaster/live/remix onveranderd behouden.
+5. Matchgeheugen: uitsluitend na een reeds door de bestaande matcher goedgekeurde match bewaren we de gevonden titel/artist als zoekHINT in bestaande cache (max. 2000); bij volgende zoekacties zijn ALLE controles opnieuw verplicht. Dit is geen automatische AI-zelftraining.
+6. Herproberen: bestaande gespreide zoekstrategieën en cooldowns behouden; nieuwe diagnostiek duidt reden aan (geen resultaten, artiest/credits/ranking, titels/versies/ambiguïteit of niet-afspeelbaar). Diagnoses zijn aanwijzingen, geen absolute zekerheid.
+7. Regressies: v77, v78, v79 en nieuwe v80-offlinetests. Testen zonder echte Spotify-requests.
+
+Niet gewijzigd: 1 Search HTTP per 120 seconden, max 1 toevoeging, bestaande queue/beurtrol, playlist/liked songs, API-cooldowns en deduplicatie.
+De extra zoekhint in __v80_confirmed_spellings is cachemetadata, geen directe playlistwijziging. Live correctheid kan alleen via echte GitHub Actions logs bevestigd worden.
+
+VEILIGE INSTALLATIE — PAS NA VERGELIJKING MET LIVE GITHUB-MAIN:
+  cd ~/vuurland-spotify-github
+  git pull --rebase origin main
+  shasum -a 256 vuurland_sync.py
+Vergelijk die hash eerst met de bronhash van v79 in dit pakket (via manifest).
+Pak de ZIP niet uit voordat de basis overeenkomt. Na controle:
+  unzip -o ~/Downloads/vuurland-v80-alles-in-een.zip -d .
+  python3 -m py_compile vuurland_sync.py
+  python3 v77_offline_test.py
+  python3 v78_offline_test.py
+  python3 v79_offline_test.py
+  python3 v80_offline_test.py
+  git add vuurland_sync.py v80_offline_test.py LEESMIJ_V80.txt
+  git commit -m 'Vuurland v80: conservatieve intelligente matcher'
+  git pull --rebase origin main
+  git push origin main
+Bij een conflict NIET forceren, eerst onderzoeken.
