@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "mount kimbie feat king krule|||empty and silent",
-  "__last_radio_key_mellow_mix": "turin brakes|||other side",
+  "__last_radio_key_vuurland": "kurt vile|||zoom 97",
+  "__last_radio_key_mellow_mix": "bruce cockburn|||closer to the light",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -249,6 +249,7 @@
       "hana vu|||care",
       "hazel english|||off my mind",
       "hermanos gutierrez|||canto andino",
+      "hermanos gutierrez|||it's all in your mind",
       "het zesde metaal|||dien blik",
       "het zesde metaal|||geef mie nen dag",
       "het zesde metaal|||ploegsteert",
@@ -800,6 +801,7 @@
       "brian eno|||suddenly w/ beatie wolfe",
       "bright eyes|||first day of my life",
       "bruce cockburn|||child of the wind",
+      "bruce cockburn|||closer to the light",
       "bruce cockburn|||creation dream",
       "bruce cockburn|||train in the rain",
       "buena vista social club|||chan chan",
@@ -1551,7 +1553,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3573,
+  "__vuurland_active_playlist_count": 3574,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||hey jack kerouac",
@@ -2408,6 +2410,7 @@
     "broken glass heroes|||let's not fall apart",
     "broken social scene|||lover's spit",
     "bruce cockburn|||child of the wind",
+    "bruce cockburn|||closer to the light",
     "bruce cockburn|||creation dream",
     "bruce hornsby & justin vernon|||cast-off (feat. justin vernon)",
     "bruce hornsby|||cast-off",
@@ -9923,6 +9926,7 @@
     "spotify:track:7H0UxIN751StFi2tznmHlg",
     "spotify:track:7H7NyZ3G075GqPx2evsfeb",
     "spotify:track:7HJ4hqIjR15WorVjzHaYvP",
+    "spotify:track:7HNeuV8LuvX3wVIOq2dc7m",
     "spotify:track:7HdDZScUII7zKRQKqXKUrH",
     "spotify:track:7HdyKsr1RXenJRtMKcyQ3K",
     "spotify:track:7HpLno7sjlrVAmwMP64UOU",
@@ -10618,6 +10622,7 @@
     "CAR129000558",
     "CAT241000209",
     "CAT247900171",
+    "CAT249300467",
     "CAW119701331",
     "CAX1M1810002",
     "CAX1M2310001",
@@ -17319,7 +17324,8 @@
     "spotify:track:63XgNKVieYn9wr9xcc2j2c": "USNO10162503",
     "spotify:track:2DDS5Rc6eYwCHxHIwg0Ewd": "USEE17400001",
     "spotify:track:2wvfMTbZDPzpZhOt7z6tVo": "USRW30500015",
-    "spotify:track:3g3TPcKPithtln0AWjIxYA": "GBDCG0700007"
+    "spotify:track:3g3TPcKPithtln0AWjIxYA": "GBDCG0700007",
+    "spotify:track:7HNeuV8LuvX3wVIOq2dc7m": "CAT249300467"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792162835,
@@ -18312,6 +18318,10 @@
     "turin brakes|||other side": {
       "artist": "Turin Brakes",
       "title": "Other Side"
+    },
+    "bruce cockburn|||closer to the light": {
+      "artist": "Bruce Cockburn",
+      "title": "Closer To The Light"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -18365,6 +18375,11 @@
       "uri": "spotify:track:3g3TPcKPithtln0AWjIxYA",
       "artist": "Turin Brakes",
       "title": "Other Side"
+    },
+    "bruce cockburn|||closer to the light": {
+      "uri": "spotify:track:7HNeuV8LuvX3wVIOq2dc7m",
+      "artist": "Bruce Cockburn",
+      "title": "Closer To The Light"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -18376,5 +18391,6 @@
   "__match_v35__foo fighters|||still": "spotify:track:2wvfMTbZDPzpZhOt7z6tVo",
   "__match_v35__mount kimbie feat king krule|||empty and silent": "spotify:track:64mpPHhJIs1Fzlk1n7b9Kn",
   "__match_v35__turin brakes|||other side": "spotify:track:3g3TPcKPithtln0AWjIxYA",
-  "__not_found_v35__joan osborne|||do i ever cross your mind": 1792240926
+  "__not_found_v35__joan osborne|||do i ever cross your mind": 1792240926,
+  "__match_v35__bruce cockburn|||closer to the light": "spotify:track:7HNeuV8LuvX3wVIOq2dc7m"
 }
