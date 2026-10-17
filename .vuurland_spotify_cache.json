@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "phoebe bridgers|||motion sickness",
-  "__last_radio_key_mellow_mix": "jon redfern|||i love the sun",
+  "__last_radio_key_mellow_mix": "suzanne vega|||gypsy",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1569,6 +1569,7 @@
       "supreme beings of leisure|||never the same",
       "susan enan|||skin bone and silicone",
       "suzanne vega|||calypso",
+      "suzanne vega|||gypsy",
       "suzanne vega|||left of center w/ joe jackson",
       "suzanne vega|||luka",
       "syml|||apollo",
@@ -1816,7 +1817,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3765,
+  "__vuurland_active_playlist_count": 3766,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||hey jack kerouac",
@@ -6291,6 +6292,7 @@
     "susto|||if it is reimagined",
     "suzanne vega & joe jackson|||left of center",
     "suzanne vega|||calypso",
+    "suzanne vega|||gypsy",
     "suzanne vega|||joe jackson|||left of center",
     "suzanne vega|||left of center",
     "swimming paul & alecc crisostomo|||still fading",
@@ -9280,6 +9282,7 @@
     "spotify:track:4DA7O0HPRrtgogx39VdfGI",
     "spotify:track:4DEAiNBvq5yBy7NzpVc02h",
     "spotify:track:4DQyuScz1ZNuTmjKvPqnVG",
+    "spotify:track:4DWRhnsa7MAVr4meyed1EF",
     "spotify:track:4DetLjoCdk1vLMPegBxbWO",
     "spotify:track:4Dj8VDoJPIYkryOKrJdI0e",
     "spotify:track:4Dm0OK7V5hNvWsZtB3nQsr",
@@ -13669,6 +13672,7 @@
     "USAM18700040",
     "USAM18704270",
     "USAM18790007",
+    "USAM18790009",
     "USAM19500628",
     "USAM19500634",
     "USAM19500635",
@@ -18507,7 +18511,8 @@
     "spotify:track:3Cs4g3w33H9YEptmg34DQc": "GBK3W1000258",
     "spotify:track:6QIMK1TeQa3PQEVECoDD3b": "USEE19800015",
     "spotify:track:5eBpMC85TXJ7i7cnwiJWEs": "QM4TW2421365",
-    "spotify:track:2Dq2GxffwFlSPcOd2GA8L4": "GBLEY0500011"
+    "spotify:track:2Dq2GxffwFlSPcOd2GA8L4": "GBLEY0500011",
+    "spotify:track:4DWRhnsa7MAVr4meyed1EF": "USAM18790009"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -20235,6 +20240,10 @@
     "jon redfern|||i love the sun": {
       "artist": "Jon Redfern",
       "title": "I Love the Sun"
+    },
+    "suzanne vega|||gypsy": {
+      "artist": "Suzanne Vega",
+      "title": "Gypsy"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -21183,6 +21192,11 @@
       "uri": "spotify:track:2Dq2GxffwFlSPcOd2GA8L4",
       "artist": "Jon Redfern",
       "title": "I Love the Sun"
+    },
+    "suzanne vega|||gypsy": {
+      "uri": "spotify:track:4DWRhnsa7MAVr4meyed1EF",
+      "artist": "Suzanne Vega",
+      "title": "Gypsy"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -21382,5 +21396,6 @@
   "__match_v35__natalie merchant|||life is sweet": "spotify:track:6QIMK1TeQa3PQEVECoDD3b",
   "__not_found_v35__nick drake|||hazey jane": 1792277147,
   "__match_v35__anders osborne|||dark decatur love": "spotify:track:5eBpMC85TXJ7i7cnwiJWEs",
-  "__match_v35__jon redfern|||i love the sun": "spotify:track:2Dq2GxffwFlSPcOd2GA8L4"
+  "__match_v35__jon redfern|||i love the sun": "spotify:track:2Dq2GxffwFlSPcOd2GA8L4",
+  "__match_v35__suzanne vega|||gypsy": "spotify:track:4DWRhnsa7MAVr4meyed1EF"
 }
