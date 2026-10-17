@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "boygenius|||not strong enough",
-  "__last_radio_key_mellow_mix": "beck|||turn away",
+  "__last_radio_key_mellow_mix": "bebel gilberto|||so nice summer samba",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -836,6 +836,7 @@
       "badly drawn boy|||the shining",
       "bastille|||blue sky & the painter",
       "baswod|||sleep",
+      "bebel gilberto|||so nice summer samba",
       "beck|||blue moon",
       "beck|||i only have eyes for you",
       "beck|||morning",
@@ -1726,7 +1727,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3694,
+  "__vuurland_active_playlist_count": 3695,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||hey jack kerouac",
@@ -2201,6 +2202,7 @@
     "bear's den|||summer & smoke",
     "bearcubs|||something in the water",
     "beatie wolfe|||suddenly",
+    "bebel gilberto|||so nice summer samba",
     "beck|||blue moon",
     "beck|||everybody's gotta learn sometime",
     "beck|||morning",
@@ -10505,6 +10507,7 @@
     "spotify:track:7Jyt9tIVvp3hB0HPFfMA6P",
     "spotify:track:7KR6gWz4Tx62OnqGT7f7NQ",
     "spotify:track:7KX65PC1UZuImsUInThbav",
+    "spotify:track:7Kl7Umto8BIl4saZsauWUK",
     "spotify:track:7KlUMYCMjmAaiG2Oxio870",
     "spotify:track:7L0junHFqLigZqQYXbSSfV",
     "spotify:track:7L3vFvxbQMp08hWBCECxYO",
@@ -10835,6 +10838,7 @@
     "BE5HY2600014",
     "BE5IT2600002",
     "BE5JW2000007",
+    "BE6F50001660",
     "BE8JH2300001",
     "BE9GL2000003",
     "BE9GL2000016",
@@ -18132,7 +18136,8 @@
     "spotify:track:2FHLGKeSyp7qzfpGeR2EYY": "USSM10014408",
     "spotify:track:1TIeyzNHCY6yR3V6PPX3zZ": "USCA29300045",
     "spotify:track:41c8iFH2Q8n87lkrlaRZ1X": "USJ5G2335705",
-    "spotify:track:6Tdf6ngDboRqCwsew2zqyT": "US3841400054"
+    "spotify:track:6Tdf6ngDboRqCwsew2zqyT": "US3841400054",
+    "spotify:track:7Kl7Umto8BIl4saZsauWUK": "BE6F50001660"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -19572,6 +19577,10 @@
     "beck|||turn away": {
       "artist": "Beck",
       "title": "Turn Away"
+    },
+    "bebel gilberto|||so nice summer samba": {
+      "artist": "Bebel Gilberto",
+      "title": "So Nice (Summer Samba)"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -20165,6 +20174,11 @@
       "uri": "spotify:track:6Tdf6ngDboRqCwsew2zqyT",
       "artist": "Beck",
       "title": "Turn Away"
+    },
+    "bebel gilberto|||so nice summer samba": {
+      "uri": "spotify:track:7Kl7Umto8BIl4saZsauWUK",
+      "artist": "Bebel Gilberto",
+      "title": "So Nice (Summer Samba)"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -20291,5 +20305,6 @@
   "__match_v35__jeff beck|||suspension": "spotify:track:2FHLGKeSyp7qzfpGeR2EYY",
   "__match_v35__crowded house|||private universe": "spotify:track:1TIeyzNHCY6yR3V6PPX3zZ",
   "__match_v35__khruangbin|||pon pon": "spotify:track:41c8iFH2Q8n87lkrlaRZ1X",
-  "__match_v35__beck|||turn away": "spotify:track:6Tdf6ngDboRqCwsew2zqyT"
+  "__match_v35__beck|||turn away": "spotify:track:6Tdf6ngDboRqCwsew2zqyT",
+  "__match_v35__bebel gilberto|||so nice summer samba": "spotify:track:7Kl7Umto8BIl4saZsauWUK"
 }
