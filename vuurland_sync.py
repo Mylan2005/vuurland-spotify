@@ -70,6 +70,8 @@ ARTIST_ALIASES = {
     "novastar piet goddaer": [
         "Novastar",
     ],
+    "novastar and piet goddaer": ["Novastar"],
+    "the gabby pahinui hawaiian band": ["Gabby Pahinui"],
 
     # Bewezen solo/band catalogusnaam: exacte naam, geen vrije substring.
     "sam roberts": [
@@ -1193,6 +1195,20 @@ def find_spotify_track(
         title = "Sing My Songs to Me"
         known_title = title.casefold()
 
+    # v77: gecontroleerde RadioBox-catalogustitels. De aanpassing gebeurt
+    # voor het zoeken; de gewone artiest-, titel-, regio- en versiechecks
+    # blijven vereist. Geen vrije fuzzy vervanging van ontbrekende woorden.
+    confirmed_radio_titles = {
+        ("don williams", "'till the rivers run dry"): "'Till The Rivers All Run Dry",
+        ("don williams", "till the rivers run dry"): "'Till The Rivers All Run Dry",
+        ("prince", "affirmations way back home"): "Way Back Home",
+    }
+    corrected_title = confirmed_radio_titles.get((known_artist, known_title))
+    if corrected_title:
+        print(f"📝 Bevestigde RadioBox-titelcorrectie: {artist} — {corrected_title}")
+        title = corrected_title
+        known_title = title.casefold()
+
     known_uri_overrides = {
         # Verifieerbare originele Spotify-uitvoeringen wanneer Search enkel
         # covers/karaoke laat zien (beperkt tot exacte artiest en titel).
@@ -1686,6 +1702,12 @@ def find_spotify_track(
         text = text.strip(' "`“”')
         return " ".join(text.split())
 
+    # v77: Spotify catalogiseert sommige enkelwoordtitels als losse
+    # letters (Speyside -> S P E Y S I D E). Alleen op een later zoekpad
+    # één structureel gespelde zoekterm; geen extra Spotify HTTP-call.
+    if (search_variant == 1 and re.fullmatch(r"[A-Za-z]{6,16}", str(search_title).strip())):
+        search_title = " ".join(str(search_title).strip().upper())
+
     # v38: benoemde versies horen bij zoekpoging nul in de zoekterm te
     # blijven; anders vinden we b.v. een pianoversie vaak niet.
     explicit_version_request = re.search(
@@ -2174,7 +2196,7 @@ def find_spotify_track(
             if not unicodedata.combining(char)
         )
 
-        value = value.replace("’", "'")
+        value = value.replace("’", "'").replace("ʻ", "'").replace("ʼ", "'")
         value = value.replace("–", "-")
         value = value.replace("—", "-")
         value = value.replace("+", " ")
@@ -4262,6 +4284,8 @@ def normalize_match(value):
     import unicodedata
 
     value = str(value or "").strip().lower()
+    # Unicode-okina en modifier-apostrof zijn catalogus-schrijfvarianten.
+    value = value.replace("ʻ", "'").replace("ʼ", "'").replace("’", "'")
 
     value = unicodedata.normalize(
         "NFKD",
@@ -4317,6 +4341,17 @@ def v71_same_song_title(a, b, artist=''):
         return {left, right} == {'someone', 'someone new'}
     # v76: dezelfde bewezen RadioBox-correctie voor de duplicaatcontrole.
     # Enkel Jackson Browne; geen algemene For Everyman / To Me-fuzzy match.
+    # v77: expliciet bevestigde catalogusverschillen, ook in de
+    # duplicaatcontrole. Enkel dezelfde volledige artiest + titelpaar.
+    confirmed = {
+        'don williams': ({'till the rivers run dry', 'till the rivers all run dry'},),
+        'prince': ({'affirmations way back home', 'way back home'},),
+    }
+    comparable = lambda x: normalize_match(x).replace("'", "").lstrip()
+    artist_key = comparable(artist)
+    title_pair = {comparable(left), comparable(right)}
+    if any(title_pair == set(pair) for pair in confirmed.get(artist_key, ())):
+        return True
     if normalize_match(artist) == 'jackson browne':
         if {left, right} == {'sing my songs for everyman', 'sing my songs to me'}:
             return True

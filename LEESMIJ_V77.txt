@@ -1,0 +1,34 @@
+VUURLAND v77 — matcherverbeteringen — 17 oktober 2026
+
+Wijzigingen op basis van het door de gebruiker aangeleverde Python-script:
+- Bon Iver / Speyside: bestaande compacte-lettercontrole bevestigd, bij alternatieve zoekstrategie kan een gespatieerde lettertitel worden gebruikt.
+- Don Williams / 'Till The Rivers Run Dry: strikt afgebakende titelcorrectie naar 'Till The Rivers All Run Dry.
+- Prince / affirmations Way Back Home: strikt afgebakende interpretatie naar Way Back Home. LET OP: dit is een veronderstelling over de RadioBox-metadata; controleer de daadwerkelijke opname.
+- Gabby Pahinui: expliciet bevestigde band/solo-alias, algemene Unicode-okina/apostrofnormalisatie.
+- Novastar & Piet Goddaer: aanvulling van de bekende catalogus-alias voor &/and.
+- Correcties Don Williams en Prince gelden eveneens in v71_same_song_title.
+
+OFFLINE: v77_offline_test.py: 5 positieve tests; 3 verkeerde matches geweigerd; niet-speelbare kandidaat geweigerd; gerichte duplicaatgrens getest. Alle Spotify-antwoorden in deze test zijn gesimuleerd. Geen live accountconnectie.
+
+BELANGRIJK:
+* Geen JSON-state, wachtrij of playlist opnieuw initialiseren.
+* Harde Spotify-zoeklimiet blijft 1 echte HTTP-aanvraag per 120 seconden per ronde.
+* Geen automatische herinplanning van reeds uitgeputte queue-titels toegevoegd.
+* Eerst GitHub Actions bekijken na push; live toevoegen is niet bevestigd.
+* Actuele repository moet gecontroleerd worden: deze ZIP is gebaseerd op het meegestuurde script en niet op een latere GitHub-commit.
+
+INSTALLATIE (alleen na controle dat de repository hetzelfde script bevat):
+cd ~/vuurland-spotify-github
+git status --short
+git pull --rebase origin main
+# CONTROLEER EERST verschillen met de aangeleverde v77-code; overschrijf geen nieuwere wijzigingen.
+# unzip -o ~/Downloads/vuurland-v77-matcher.zip -d .
+# python3 -m py_compile vuurland_sync.py
+# python3 v77_offline_test.py
+# git diff -- vuurland_sync.py
+# git add vuurland_sync.py v77_offline_test.py LEESMIJ_V77.txt
+# git commit -m "Vuurland v77: veilige matcherverbeteringen"
+# git pull --rebase origin main
+# git push origin main
+
+De commentaartekens bij installatie zijn bewust: niet blind overschrijven wanneer GitHub tussentijds verder evolueerde.
