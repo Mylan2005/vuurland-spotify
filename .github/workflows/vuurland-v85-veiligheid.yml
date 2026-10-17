@@ -1,0 +1,29 @@
+name: Vuurland offline veiligheidstests
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'vuurland_sync.py'
+      - 'test_v*_offline.py'
+      - 'v*_offline_test.py'
+      - '.github/workflows/vuurland-v85-veiligheid.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regressie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntaxis en offline veiligheid
+        run: |
+          python -m py_compile vuurland_sync.py
+          python test_v85_offline.py
+          for v in 77 78 79 80 81 82; do
+            python "v${v}_offline_test.py"
+          done
+          python test_v83_offline.py
