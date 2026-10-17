@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "beabadoobee|||glue song",
-  "__last_radio_key_mellow_mix": "bastille|||the soprano & midnight wonderings w/ bim",
+  "__last_radio_key_vuurland": "olivia dean|||i've seen it",
+  "__last_radio_key_mellow_mix": "bob seger|||against the wind",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -513,6 +513,7 @@
       "oh wonder|||ultralife",
       "oh wonder|||without you",
       "olivia dean|||baby steps",
+      "olivia dean|||i've seen it",
       "olivia dean|||nice to each other",
       "olivia dean|||so easy to fall in love",
       "palace|||bleach",
@@ -883,6 +884,7 @@
       "bob marley|||one love",
       "bob marley|||positive vibration",
       "bob marley|||time will tell",
+      "bob seger|||against the wind",
       "bon iver|||s p e y s i d e",
       "bon iver|||things behind things behind things",
       "bonnie raitt|||have a heart",
@@ -1656,12 +1658,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "sarah harmer|||lodestar": {
-      "artist": "Sarah Harmer",
-      "title": "Lodestar",
-      "source": "mellow_mix",
-      "failed_at": 1792178445
-    },
     "dominic fike|||king of everything": {
       "artist": "DOMINIC FIKE",
       "title": "King of everything",
@@ -1741,7 +1737,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3702,
+  "__vuurland_active_playlist_count": 3703,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||hey jack kerouac",
@@ -2492,6 +2488,7 @@
     "bob marley & the wailers|||one love",
     "bob marley & the wailers|||positive vibration",
     "bob marley & the wailers|||time will tell",
+    "bob seger|||against the wind",
     "bobbi lu|||pass through time",
     "bombay bicycle club|||always like this",
     "bon iver & danielle haim|||if only i could wait",
@@ -7742,6 +7739,7 @@
     "spotify:track:1S3wVO6ylPVKoQOMeTGIKe",
     "spotify:track:1SAiMVOIMzwcm5VDBACiFI",
     "spotify:track:1SRORNqAMHK0mRzSwK5RAT",
+    "spotify:track:1SWmFiFSIBoDbQJjNKC7SR",
     "spotify:track:1Sbdw0lMZXkfVmjuH1UTb8",
     "spotify:track:1So1uPbSqoaYxybwBwP4cg",
     "spotify:track:1T5SkWVuMdu85SSnyGtz3S",
@@ -13592,6 +13590,7 @@
     "USC4R2667536",
     "USC4R2668590",
     "USCA20101436",
+    "USCA20300155",
     "USCA21101298",
     "USCA21101837",
     "USCA21201985",
@@ -18179,7 +18178,8 @@
     "spotify:track:0p7nP5ddNnk9I5v3QoCKYm": "USRE19900604",
     "spotify:track:33xWFHznOMhvrRycTP2txp": "USWR60200139",
     "spotify:track:5oP6KeYIPOijMlTNF31HM0": "GBUM72403875",
-    "spotify:track:3iBgrkexCzVuPy4O9vx7Mf": "GBK3W2302568"
+    "spotify:track:3iBgrkexCzVuPy4O9vx7Mf": "GBK3W2302568",
+    "spotify:track:1SWmFiFSIBoDbQJjNKC7SR": "USCA20300155"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -19651,6 +19651,10 @@
     "beabadoobee|||glue song": {
       "artist": "beabadoobee",
       "title": "Glue Song"
+    },
+    "bob seger|||against the wind": {
+      "artist": "Bob Seger",
+      "title": "Against The Wind"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -20284,6 +20288,11 @@
       "uri": "spotify:track:3iBgrkexCzVuPy4O9vx7Mf",
       "artist": "beabadoobee",
       "title": "Glue Song"
+    },
+    "bob seger|||against the wind": {
+      "uri": "spotify:track:1SWmFiFSIBoDbQJjNKC7SR",
+      "artist": "Bob Seger",
+      "title": "Against The Wind"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -20418,5 +20427,6 @@
   "__match_v35__chris isaak|||two hearts": "spotify:track:0p7nP5ddNnk9I5v3QoCKYm",
   "__match_v35__sixpence none the richer|||a million parachutes": "spotify:track:33xWFHznOMhvrRycTP2txp",
   "__match_v35__bastille|||the soprano & midnight wonderings w/ bim": "spotify:track:5oP6KeYIPOijMlTNF31HM0",
-  "__match_v35__beabadoobee|||glue song": "spotify:track:3iBgrkexCzVuPy4O9vx7Mf"
+  "__match_v35__beabadoobee|||glue song": "spotify:track:3iBgrkexCzVuPy4O9vx7Mf",
+  "__match_v35__bob seger|||against the wind": "spotify:track:1SWmFiFSIBoDbQJjNKC7SR"
 }
