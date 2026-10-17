@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "thomas azier|||year in a spiral",
+  "__last_radio_key_vuurland": "leon bridges|||river",
   "__last_radio_key_mellow_mix": "r e m|||i've been high",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -231,6 +231,7 @@
       "feist|||how come you never go there",
       "fink|||follow you down",
       "finneas|||flume",
+      "finneas|||lotus eater",
       "finneas|||what they'll say about us",
       "first aid kit|||emmylou",
       "fleet foxes|||sunblind",
@@ -369,6 +370,7 @@
       "leon bridges & khruangbin|||texas sun",
       "leon bridges feat lydia kitto|||all day all night",
       "leon bridges|||better man",
+      "leon bridges|||river",
       "leon bridges|||that was yesterday",
       "lianne la havas|||green & gold",
       "lianne la havas|||hey that's no way to say goodbye",
@@ -1610,7 +1612,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3613,
+  "__vuurland_active_playlist_count": 3614,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||hey jack kerouac",
@@ -3193,6 +3195,7 @@
     "fink|||wishing for blue sky - edit",
     "finneas|||flume - spotify singles",
     "finneas|||home sweet home",
+    "finneas|||lotus eater",
     "finneas|||what they'll say about us",
     "fionn regan|||hurricane bruise",
     "first aid kit|||america",
@@ -7715,6 +7718,7 @@
     "spotify:track:2Dj9OOoQHG5f0jlL5vt7Ve",
     "spotify:track:2DoOwShumnfKzcwS22Vq0A",
     "spotify:track:2DykKJYrNv9y1FPrkijqbw",
+    "spotify:track:2E1C3NlPA0AfmiFJE4MTXT",
     "spotify:track:2E8p2xkMaloP8V7tSgi0Ba",
     "spotify:track:2EJIhrHP6blx5hwVPbZZoi",
     "spotify:track:2EL9uWRulB1rcgDmjYMzTO",
@@ -13722,6 +13726,7 @@
     "USUG12310192",
     "USUG12402310",
     "USUG12403625",
+    "USUG12404410",
     "USUG12405628",
     "USUG12409104",
     "USUG12409115",
@@ -17539,7 +17544,8 @@
     "spotify:track:0RFduQOfkrP1jhoV0m8US2": "FRS630300094",
     "spotify:track:130O0GAaK3XboUB7lw7kv0": "USSM19402110",
     "spotify:track:3gt9NjxYqizmPb2lxNsfyI": "USCA29500165",
-    "spotify:track:3rTFNeaHbShC48F4ES57JA": "USWB10101591"
+    "spotify:track:3rTFNeaHbShC48F4ES57JA": "USWB10101591",
+    "spotify:track:2E1C3NlPA0AfmiFJE4MTXT": "USUG12404410"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792162835,
@@ -18692,6 +18698,10 @@
     "r e m|||i've been high": {
       "artist": "R.E.M.",
       "title": "I've Been High"
+    },
+    "finneas|||lotus eater": {
+      "artist": "FINNEAS",
+      "title": "Lotus Eater"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -18945,6 +18955,11 @@
       "uri": "spotify:track:3rTFNeaHbShC48F4ES57JA",
       "artist": "R.E.M.",
       "title": "I've Been High"
+    },
+    "finneas|||lotus eater": {
+      "uri": "spotify:track:2E1C3NlPA0AfmiFJE4MTXT",
+      "artist": "FINNEAS",
+      "title": "Lotus Eater"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -18996,5 +19011,6 @@
   "__match_v35__air|||surfing on a rocket": "spotify:track:0RFduQOfkrP1jhoV0m8US2",
   "__match_v35__shawn colvin|||this must be the place": "spotify:track:130O0GAaK3XboUB7lw7kv0",
   "__match_v35__john hiatt|||the river knows your name": "spotify:track:3gt9NjxYqizmPb2lxNsfyI",
-  "__match_v35__r e m|||i've been high": "spotify:track:3rTFNeaHbShC48F4ES57JA"
+  "__match_v35__r e m|||i've been high": "spotify:track:3rTFNeaHbShC48F4ES57JA",
+  "__match_v35__finneas|||lotus eater": "spotify:track:2E1C3NlPA0AfmiFJE4MTXT"
 }
