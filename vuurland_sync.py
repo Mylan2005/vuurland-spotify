@@ -5787,26 +5787,17 @@ def sync():
 
             for entry in remove:
                 print(
-                    f"   verwijderen: {entry['uri']}"
+                    f"   mogelijk duplicaat: {entry['uri']}"
                 )
                 duplicate_uris_to_remove.append(
                     entry["uri"]
                 )
 
         if duplicate_uris_to_remove:
-            remove_tracks(
-                playlist_id,
-                duplicate_uris_to_remove
-            )
-
-            playlist_uris.difference_update(
-                duplicate_uris_to_remove
-            )
-
             print(
-                f"✅ {len(set(duplicate_uris_to_remove))} "
-                "dubbele Spotify-URI('s) verwijderd "
-                "op basis van exacte ISRC."
+                f"🛡️ v84: {len(set(duplicate_uris_to_remove))} "
+                "mogelijke bestaande ISRC-duplicaten gevonden. "
+                "Geen nummers verwijderd."
             )
 
         active_playlist_count = playlist_position
