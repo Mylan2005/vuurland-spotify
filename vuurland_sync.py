@@ -1183,6 +1183,16 @@ def find_spotify_track(
         title.strip().casefold().split()
     )
 
+    # v76: uitsluitend deze door de gebruiker bevestigde RadioBox-titel.
+    # Corrigeer de ZOEKtitel vóór Spotify Search, maar behoud alle bestaande
+    # Spotify-controles op artiest, afspeelbaarheid en versie.
+    if (known_artist, known_title) == (
+        "jackson browne", "sing my songs for everyman"
+    ):
+        print("📝 RadioBox-titelcorrectie: Jackson Browne — Sing My Songs to Me")
+        title = "Sing My Songs to Me"
+        known_title = title.casefold()
+
     known_uri_overrides = {
         # Verifieerbare originele Spotify-uitvoeringen wanneer Search enkel
         # covers/karaoke laat zien (beperkt tot exacte artiest en titel).
@@ -4305,6 +4315,11 @@ def v71_same_song_title(a, b, artist=''):
     known = {'eskobar & heather nova', 'eskobar and heather nova'}
     if normalize_match(artist) in known:
         return {left, right} == {'someone', 'someone new'}
+    # v76: dezelfde bewezen RadioBox-correctie voor de duplicaatcontrole.
+    # Enkel Jackson Browne; geen algemene For Everyman / To Me-fuzzy match.
+    if normalize_match(artist) == 'jackson browne':
+        if {left, right} == {'sing my songs for everyman', 'sing my songs to me'}:
+            return True
     return False
 
 

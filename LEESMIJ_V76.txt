@@ -1,0 +1,31 @@
+VUURLAND v76 — JACKSON BROWNE TITELCORRECTIE
+
+Deze patch is gebaseerd op het eerder gemaakte v75-bestand.
+
+Voor exact:
+  artiest: Jackson Browne
+  RadioBox-titel: Sing My Songs For Everyman
+zoekt de matcher nu op:
+  Sing My Songs to Me
+
+Alle bestaande Spotify-match-, versie-, regio- en duplicaatregels blijven actief.
+Ook de herkenning van reeds toegevoegde versies gebruikt deze beperkte correctie.
+Er wordt geen Spotify-ID vastgepind, geen playlist gewijzigd en geen queue gereset.
+Andere artiesten/titels blijven ongemoeid.
+
+INSTALLATIE (eerst de huidige workflow veilig laten stoppen of wachten tot runner nieuwe code inlaadt):
+cd ~/vuurland-spotify-github
+git pull --rebase origin main
+unzip -o ~/Downloads/vuurland-v76-jackson-browne.zip -d .
+python3 -m py_compile vuurland_sync.py
+python3 v76_offline_test.py
+python3 v75_offline_test.py
+git add vuurland_sync.py v76_offline_test.py LEESMIJ_V76.txt
+git commit -m "Vuurland v76: Jackson Browne RadioBox-titelcorrectie"
+git pull --rebase origin main
+git push origin main
+
+N.B. Nummer dat al definitief uit de live-queue is verdwenen wordt niet
+vanzelf opnieuw ingepland door alleen de code te installeren. Deze patch
+corrigeert de match wanneer de track opnieuw verwerkt wordt. Controleer
+live-log voor daadwerkelijk toevoegen.
