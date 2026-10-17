@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Python-afhankelijkheden installeren
-        run: python -m pip install requests
+        run: python -m pip install requests beautifulsoup4
 
       - name: Syntaxis en offline veiligheid
         run: |
