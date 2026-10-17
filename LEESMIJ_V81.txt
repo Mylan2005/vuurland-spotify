@@ -1,0 +1,29 @@
+VUURLAND v81 — Gipsy Kings: veilige catalogusroute
+
+Basis: v80 (zoals aangeleverd in vuurland-v80-alles-in-een.zip).
+
+Wijzigingen:
+- De exact bevestigde Spotify-track 'Gipsy Kings – Recuerdo apasionado' (4I1hdRXL4tCnbtJfuqv58A) wordt via GET /tracks/{id} opgehaald in plaats van via Spotify Search.
+- Het resultaat moet nog altijd langs de volledige bestaande veilige matcher: artiest, titel, versie en Belgische afspeelbaarheid.
+- Geen extra Spotify Search: de bestaande maximumlimiet van één per ronde en één toevoeging per ronde blijft intact.
+- Eenmalige herplanning uit de bewaarde RadioBox-state, enkel als de herkomst (vuurland/mellow_mix) bevestigd is. Geen verwijdering van overige queue-items, geen reset van cache.
+- Voor dit catalogusnummer eenmalige prioriteit terwijl het nog in queue staat; daarna hervat de bestaande beurtrol.
+- Andere artiest/titelcombinaties blijven strikt; uitbreiding van de cataloguslocators vereist een exact bevestigde Spotify-track.
+
+BELANGRIJK
+Offline tests bewijzen alleen het gedrag met gesimuleerde trackgegevens. In jouw Belgische Spotify-account moet de opname nog werkelijk afspeelbaar en toegestaan zijn. De live-run kan het ook als duplicaat herkennen.
+
+INSTALLATIE — eerst actuele SHA vergelijken met V81_BASIS_SHA256.txt.
+cd ~/vuurland-spotify-github
+git pull --rebase origin main
+shasum -a 256 vuurland_sync.py
+# Alleen installeren als hash exact overeenkomt met V81_BASIS_SHA256.txt:
+unzip -o ~/Downloads/vuurland-v81-gipsy-kings.zip -d .
+python3 -m py_compile vuurland_sync.py
+python3 v77_offline_test.py
+python3 v78_offline_test.py
+python3 v79_offline_test.py
+python3 v80_offline_test.py
+python3 v81_offline_test.py
+
+Nog niet pushen totdat de testuitvoer is nagekeken.

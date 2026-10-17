@@ -1196,6 +1196,21 @@ def v80_failure_reason(items, artist, title):
         return 'artist_credit_or_search_ranking'
     return 'title_version_or_ambiguity'
 
+# v81: gecontroleerde cataloguslocators bij een Spotify Search-indexprobleem.
+# De track-ID is een LOCATOR, geen gegarandeerde match. Via GET /tracks/{id}
+# doorloopt de kandidaat dezelfde artiest-, titel-, regio- en versietoetsen.
+# Geen vrij toepasbare fuzzy uitzondering en geen tweede Spotify Search.
+V81_VERIFIED_CATALOG_TRACKS = {
+    ("gipsy kings", "recuerdo apasionado"): "4I1hdRXL4tCnbtJfuqv58A",
+}
+
+
+def v81_catalog_locator(artist, title):
+    key = (" ".join(str(artist).casefold().split()),
+           " ".join(str(title).casefold().split()))
+    return V81_VERIFIED_CATALOG_TRACKS.get(key)
+
+
 def find_spotify_track(
     artist,
     title,
@@ -1957,18 +1972,30 @@ def find_spotify_track(
     if search_variant == 1 and re.fullmatch(r"[A-Za-z](?: [A-Za-z]){5,15}", str(search_query_title)):
         query = f'{spotify_search_artist} "{search_query_title}"'
 
-    data = spotify_request(
-        "GET",
-        "/search",
-        params={
+    # v81: exact geverifieerde cataloguslocator in plaats van nog een
+    # vruchteloze Search. Maximaal één Spotify-opzoekactie per ronde;
+    # de gemeenschappelijke kandidaatvalidatie hieronder blijft intact.
+    catalog_id = v81_catalog_locator(artist, title)
+    if catalog_id:
+        print(f"📀 v81 cataloguscontrole: {artist} — {title} (geen Search nodig)")
+        catalog_track = spotify_request(
+            "GET", f"/tracks/{catalog_id}", params={"market": "from_token"}
+        )
+        data = {"tracks": {"items": [catalog_track] if isinstance(catalog_track, dict)
+                                           and catalog_track.get("id") == catalog_id else []}}
+    else:
+        data = spotify_request(
+            "GET",
+            "/search",
+            params={
             "q": query,
             "type": "track",
             "limit": 10,
             # Spotify bepaalt de afspeelbaarheid voor het land van de
             # ingelogde gebruiker. Geen hardcoded BE of extra HTTP-call.
             "market": "from_token",
-        }
-    )
+            }
+        )
 
     items = data.get(
         "tracks",
@@ -5099,6 +5126,50 @@ def v78_recover_and_prioritize(cache, live_queue, radio_sources):
     return {key: pos for pos, key in enumerate(target_keys) if key in active}
 
 
+# v81: eenmalige veilige herkansing zodra de cataloguslocator beschikbaar is.
+# Alleen een eerder werkelijk gezien radioliedje; geen nieuwe bron verzinnen.
+def v81_requeue_confirmed_catalog(cache, live_queue, radio_sources):
+    if cache.get('__v81_catalog_retry_initialized'):
+        return 0
+    sources = {}
+    for source in radio_sources:
+        for artist, title in source.get('tracks', []):
+            key = _v47_key(artist, title)
+            sources.setdefault(key, source['id'])
+    for store_name in ('__v47_failed_tracks', '__v51_radio_unmatched'):
+        for key, entry in cache.get(store_name, {}).items():
+            if isinstance(entry, dict) and entry.get('source') in ('vuurland','mellow_mix'):
+                sources.setdefault(key, entry['source'])
+    active = {_v47_key(x.get('artist',''), x.get('title','')) for x in live_queue
+              if isinstance(x, dict)}
+    released = 0
+    for (artist, title), locator in V81_VERIFIED_CATALOG_TRACKS.items():
+        key = _v47_key(artist, title)
+        source = sources.get(key)
+        if not source:
+            print(f'ℹ️ v81: radiobron niet bevestigd; geen nieuwe queue-entry: {artist} — {title}')
+            continue
+        cache.get('__v47_failed_tracks', {}).pop(key, None)
+        cache.get('__v51_radio_unmatched', {}).pop(key, None)
+        cache.get('__v51_radio_failed_searches', {}).pop(key, None)
+        cache.get('__v51_radio_failed_cycles', {}).pop(key, None)
+        for name in list(cache):
+            if name.startswith('__not_found_v') and name.endswith(key):
+                cache.pop(name, None)
+        if key not in active:
+            live_queue.insert(0, {'artist':artist, 'title':title, 'source':source,
+                                  '_v34_search_variant':0})
+            active.add(key)
+            released += 1
+        for item in live_queue:
+            if isinstance(item, dict) and _v47_key(item.get('artist',''),item.get('title','')) == key:
+                item.pop('_v34_retry_at', None)
+                item['_v34_search_variant'] = 0
+    cache['__v81_catalog_retry_initialized'] = True
+    print(f'📀 v81: {released} bevestigd(e) catalogusnummer(s) opnieuw ingepland.')
+    return released
+
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -5302,6 +5373,7 @@ def sync():
 
     # v78: gecontroleerde v77-missers opnieuw zoekklaar en bovenaan.
     v78_recover_and_prioritize(cache, live_queue, radio_sources)
+    v81_requeue_confirmed_catalog(cache, live_queue, radio_sources)
 
     queued_keys = {
         f"{normalize_match(item.get('artist', ''))}|||"
@@ -5790,7 +5862,8 @@ def sync():
 
     # v78-prioriteit wordt per ronde afgeleid uit de nog aanwezige queue.
     # Nadat een nummer is toegevoegd/verwijderd, verdwijnt die prioriteit vanzelf.
-    v78_priority_order = {_v47_key(a, t): i for i, (a, t) in enumerate(V78_RECOVERY_TRACKS)}
+    v78_priority_order = {_v47_key(a, t): i + 1 for i, (a, t) in enumerate(V78_RECOVERY_TRACKS)}
+    v78_priority_order[_v47_key('Gipsy Kings', 'Recuerdo Apasionado')] = 0
 
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
