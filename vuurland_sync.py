@@ -5230,6 +5230,31 @@ def v81_requeue_confirmed_catalog(cache, live_queue, radio_sources):
     return released
 
 
+# v83: wis uitsluitend foutregistraties nadat een nummer aantoonbaar is
+# verwerkt (gevonden, al aanwezig of als duplicaat geweigerd).
+# Geen bulkopschoning van oude mislukkingen; geen Spotify-verzoeken.
+def v83_clear_resolved_failures(cache, artist, title):
+    key = _v47_key(artist, title)
+    removed = 0
+    for name in (
+        '__v47_failed_tracks',
+        '__v51_radio_unmatched',
+        '__v51_radio_failed_searches',
+        '__v51_radio_failed_cycles',
+    ):
+        store = cache.get(name)
+        if isinstance(store, dict) and key in store:
+            del store[key]
+            removed += 1
+    for name in list(cache):
+        if name.startswith('__not_found_v') and name.endswith('__' + key):
+            cache.pop(name, None)
+            removed += 1
+    if removed:
+        print(f"🧹 v83: {removed} oude foutregistratie(s) opgelost: {artist} — {title}")
+    return removed
+
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -6263,6 +6288,7 @@ def sync():
 
             live_queue.pop(0)
             seen.add(cache_key)
+            v83_clear_resolved_failures(cache, artist, title)
 
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
@@ -6413,6 +6439,7 @@ def sync():
                                          LAST_SPOTIFY_MATCH_METADATA[0],
                                          LAST_SPOTIFY_MATCH_METADATA[1], uri)
                     v82_remember_catalog(cache, artist, title, uri, LAST_SPOTIFY_MATCH_METADATA)
+                v83_clear_resolved_failures(cache, artist, title)
                 cache.get('__v51_radio_failed_cycles', {}).pop(_v47_key(artist,title),None)
                 cache.get('__v51_radio_unmatched', {}).pop(_v47_key(artist,title),None)
                 cache.get('__v51_radio_failed_searches', {}).pop(_v47_key(artist,title),None)
@@ -6556,6 +6583,7 @@ def sync():
 
             live_queue.pop(0)
             seen.add(cache_key)
+            v83_clear_resolved_failures(cache, artist, title)
 
             save_seen(seen)
             save_cache(cache)
@@ -6580,6 +6608,7 @@ def sync():
 
             live_queue.pop(0)
             seen.add(cache_key)
+            v83_clear_resolved_failures(cache, artist, title)
 
             save_seen(seen)
             save_cache(cache)
@@ -6673,6 +6702,7 @@ def sync():
         live_queue.pop(0)
 
         seen.add(cache_key)
+        v83_clear_resolved_failures(cache, artist, title)
         save_seen(seen)
 
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
