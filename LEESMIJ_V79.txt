@@ -1,0 +1,3 @@
+Vuurland v79: Bon Iver Speyside zoekverbetering. Gebouwd bovenop v78.
+Eerste zoekpoging Bon Iver gebruikt bekende gespatieerde titel; tweede zoekpoging gebruikt algemeen een vrije catalogusquery voor gespatieerde letters. De bestaande kandidaatvalidatie, wachtrij, API-limiet, likes en duplicatecontrole blijven ongewijzigd.
+Installeer alleen na vergelijking met actuele GitHub-code. Offline tests: v77_offline_test.py, v78_offline_test.py, v79_offline_test.py.

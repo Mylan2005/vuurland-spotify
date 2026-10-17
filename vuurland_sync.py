@@ -1708,6 +1708,14 @@ def find_spotify_track(
     if (search_variant == 1 and re.fullmatch(r"[A-Za-z]{6,16}", str(search_title).strip())):
         search_title = " ".join(str(search_title).strip().upper())
 
+    # v79: een bekende structureel gespatieerde catalogustitel mag al
+    # bij de eerste zoekpoging met de Spotify-schrijfwijze gezocht worden.
+    # Dit is uitsluitend een zoekvorm, geen bypass van de veilige matcher.
+    if (search_variant == 0 and
+        str(primary_search_artist).casefold().strip() == "bon iver" and
+        str(search_title).casefold().strip() == "speyside"):
+        search_title = "S P E Y S I D E"
+
     # v38: benoemde versies horen bij zoekpoging nul in de zoekterm te
     # blijven; anders vinden we b.v. een pianoversie vaak niet.
     explicit_version_request = re.search(
@@ -1851,7 +1859,16 @@ def find_spotify_track(
             # een samenwerking als twee artist-objects opslaat.
             # Volledige artiestnaam blijft een zachte zoekhint; de
             # uiteindelijke kandidaat krijgt een strenge creditcontrole.
-            query = ' '.join(part for part in (f'track:"{quoted_title}"', loose_artist) if part)
+            # v79: een track:-filter met losse letters kan de juiste opname
+            # wegfilteren. Maak bij deze STRUCTURELE schrijfwijze een vrije
+            # catalogusquery (de kandidaatvalidatie blijft strikt).
+            is_spaced_letter_title = bool(re.fullmatch(
+                r"[A-Za-z](?: [A-Za-z]){5,15}", quoted_title
+            ))
+            if is_spaced_letter_title:
+                query = ' '.join(part for part in (loose_artist, f'"{quoted_title}"') if part)
+            else:
+                query = ' '.join(part for part in (f'track:"{quoted_title}"', loose_artist) if part)
         else:
             # Zoek met de artiest als ZACHTE hint en een brede kerntitel.
             # Een harde track:-filter op bronmetadata, bv. '(live)', sloot
@@ -1867,6 +1884,10 @@ def find_spotify_track(
         core_title = v521_broad_catalog_title(search_query_title)
         broad_title = v521_distinct_search_terms(core_title)
         query = f'artist:"{quoted_artist}" {broad_title}'
+
+    # v79: do not prune spaced letters to six tokens.
+    if search_variant == 1 and re.fullmatch(r"[A-Za-z](?: [A-Za-z]){5,15}", str(search_query_title)):
+        query = f'{spotify_search_artist} "{search_query_title}"'
 
     data = spotify_request(
         "GET",
