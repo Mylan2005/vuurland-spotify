@@ -2526,13 +2526,16 @@ def find_spotify_track(
         if re.search(r"\bslowed(?:\s*\+?\s*reverb)?\b", context): return "slowed"
         if re.search(r"\bnightcore\b", context): return "nightcore"
         if re.search(r"\bkaraoke\b", context): return "karaoke"
+        if re.search(r"\b(?:ep\s+version|ep\s+edit)\b", context): return "ep version"
         if re.search(r"\bradio\s+edit\b", context): return "edit"
         if re.search(r"\bedit\b", context): return "edit"
         if re.search(r"\bbonus\s+track\b", context): return "bonus track"
+        if re.search(r"\b(?:radio|single|album)\s+mix\b", context): return "mix"
         if re.search(r"\bsingle\s+version\b", context): return "single version"
         if re.search(r"\balbum\s+version\b", context): return "album version"
         if re.search(r"\boriginal\s+version\b", context): return "original version"
         if re.search(r"\bremaster(?:ed)?\b", context): return "remaster"
+        if re.search(r"\b(?:deluxe|anniversary|original|standard)\s+(?:edition|version)\b", context): return "edition"
         if re.search(r"\bversion\b", context):
             # Alleen exact "Version" is neutraal. Benoemde varianten zoals
             # "Mfp Version" / "Then Again Version" blijven apart en lager.
@@ -3922,17 +3925,17 @@ def find_spotify_track(
         wanted_family = preferred_family(wanted_version)
         candidate_family = preferred_family(spotify_version)
         preferred_order = {
-            "ordinary": ["ordinary", "remaster", "live", "mix"],
-            "live": ["live", "ordinary", "remaster", "mix"],
-            "remaster": ["remaster", "ordinary", "live", "mix"],
-            "mix": ["mix", "ordinary", "remaster", "live"],
-            "acoustic": ["acoustic", "ordinary", "remaster", "live", "mix"],
+            "ordinary": ["ordinary", "remaster", "ep version", "edit", "edition", "acoustic", "unplugged", "stripped", "spotify singles", "session", "live", "demo", "alternate", "take", "re-recorded", "piano version", "orchestral version", "instrumental", "extended", "mono", "stereo", "mix", "remix", "named version"],
         }
         # Catalogus-/sessieopnames zijn een laatste redmiddel, GEEN gewone
         # studioversies. Bijvoorbeeld "Flume - Spotify Singles" bij FINNEAS.
         # Alleen toelaten als de hoofdartiest en volledige kerntitel exact
         # overeenkomen; de vier bestaande opnamevoorkeuren blijven voorop.
         session_fallbacks = {"spotify singles", "session"}
+        # v75: de gewone uitvoering gaat ALTIJD voor, ook als de radio
+        # een speciale versie vermeldt. Daarna veilige officiële alternatieven.
+        if wanted_family != "ordinary":
+            preferred_order[wanted_family] = preferred_order["ordinary"]
         if wanted_family in preferred_order:
             order = preferred_order[wanted_family]
             if candidate_family in session_fallbacks:
@@ -3942,6 +3945,11 @@ def find_spotify_track(
                     continue
                 version_tier = len(order)
             elif candidate_family in order:
+                # Onbekende benoemde versie alleen als de basis ECHT exact is.
+                if candidate_family == "named version" and (
+                    not primary_artist_exact or spotify_base_compact != wanted_base_compact
+                ):
+                    continue
                 version_tier = order.index(candidate_family)
             else:
                 continue
@@ -3977,8 +3985,9 @@ def find_spotify_track(
             if not same_core_title or primary_artist_score < 0.95:
                 continue
         if spotify_version == "named version" and not wanted_named_variant:
-            # Unrequested, unfamiliar named recordings are not safe substitutes.
-            continue
+            # v75: alleen veilig als volledige kern én hoofdartiest exact zijn.
+            if not primary_artist_exact or spotify_base_compact != wanted_base_compact:
+                continue
         # Een solo-collab fallback mag nooit een slecht passende titel redden.
         if (solo_collab_fallback or missing_feature_count) and (
             not same_core_title or spotify_base_compact != wanted_base_compact

@@ -1,0 +1,13 @@
+Vuurland v75 — algemene versievoorkeur
+
+Installatie: pak deze ZIP uit in de bestaande vuurland-spotify-github map.
+Bevat alleen vuurland_sync.py, v75_offline_test.py en dit leesbestand.
+
+- Bij betrouwbare, afspeelbare kandidaten voor hetzelfde lied kiest v75 ALTIJD de gewone opname eerst, ook als de radio een andere versie noemt.
+- Daarna volgen remaster, EP Version, Radio Edit, verdere officiële uitvoeringen waaronder Spotify Singles, acoustic, live, demo, mix en remix.
+- Bekende suffixen worden geclassificeerd, niet ieder willekeurig deel na '-' verwijderd.
+- Onbekende benoemde versies alleen met exacte kerntitel en hoofdartiest.
+- Spotify 403/429-afhandeling, radiobeurtrol, Search-budget, cache, playlist en likes blijven ongewijzigd.
+- Offline tests simuleren Spotify; ze garanderen geen live catalogusresultaat. Eén Search per ronde betekent dat de matcher alleen tussen die resultaten kan rangschikken; hij kan geen ontbrekende gewone versie garanderen.
+- Geen automatische herkansing van reeds definitief afgewezen oude queue-items of reset.
+- v71_offline_test.py heeft één oude test die live vóór gewone prefereert; die verwachting geldt vanaf v75 niet meer. Gebruik de nieuwe test voor de gewijzigde prioriteit.
