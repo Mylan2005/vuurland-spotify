@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "first aid kit|||my silver lining",
-  "__last_radio_key_mellow_mix": "marc ribot|||aurora en pekin",
+  "__last_radio_key_vuurland": "lucy dacus|||planting tomatoes",
+  "__last_radio_key_mellow_mix": "sierra ferrell|||whispering waltz",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1563,6 +1563,7 @@
       "shawn mullins|||blue as you",
       "sierra ferrell|||in dreams",
       "sierra ferrell|||lighthouse",
+      "sierra ferrell|||whispering waltz",
       "simon & garfunkel|||american tune",
       "simon & garfunkel|||the sound of silence",
       "sinead lohan|||to ramona",
@@ -1864,7 +1865,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3795,
+  "__vuurland_active_playlist_count": 3796,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -6130,6 +6131,7 @@
     "sienna spiro|||die on this hill",
     "sierra ferrell|||i was born to love you",
     "sierra ferrell|||in dreams",
+    "sierra ferrell|||whispering waltz",
     "sigur ros|||gold",
     "sigur ros|||hljomalind",
     "sigur ros|||hljómalind",
@@ -10121,6 +10123,7 @@
     "spotify:track:5qGF9n1aXKPRGJnbgkXiFn",
     "spotify:track:5qJqzpNdEbt92roedFwoDR",
     "spotify:track:5qKuefgF5B0caDyqNReAM2",
+    "spotify:track:5qVjXhHDBf8hmYRmxb5iJN",
     "spotify:track:5qi2iUTdb6wMuaSembt71H",
     "spotify:track:5qngJJcuGPqUyX3VPKvH11",
     "spotify:track:5r9WJVe1yhJx9ZUg30XEHQ",
@@ -14458,6 +14461,7 @@
     "USRO20419201",
     "USRO20625203",
     "USRO22102559",
+    "USRO22102561",
     "USRO22102886",
     "USRO22606891",
     "USRW30500015",
@@ -18675,7 +18679,8 @@
     "spotify:track:16qFn7OIytcrb16D6b5jCP": "FRZ089904110",
     "spotify:track:2zxI4rnWjs45u6Ex37cujC": "GBAYE1001390",
     "spotify:track:6TJTzEVtYciiZzPoywIQ3G": "GBVHB2100010",
-    "spotify:track:7FS8URfbyqoy7uGpMx0gW5": "USAT29800289"
+    "spotify:track:7FS8URfbyqoy7uGpMx0gW5": "USAT29800289",
+    "spotify:track:5qVjXhHDBf8hmYRmxb5iJN": "USRO22102561"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -20522,6 +20527,10 @@
     "marc ribot|||aurora en pekin": {
       "artist": "Marc Ribot, Los Cubanos",
       "title": "Aurora En Pekin"
+    },
+    "sierra ferrell|||whispering waltz": {
+      "artist": "Sierra Ferrell",
+      "title": "Whispering Waltz"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -21620,6 +21629,11 @@
       "uri": "spotify:track:7FS8URfbyqoy7uGpMx0gW5",
       "artist": "Marc Ribot, Los Cubanos",
       "title": "Aurora En Pekin"
+    },
+    "sierra ferrell|||whispering waltz": {
+      "uri": "spotify:track:5qVjXhHDBf8hmYRmxb5iJN",
+      "artist": "Sierra Ferrell",
+      "title": "Whispering Waltz"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -21850,5 +21864,6 @@
   "__match_v35__youssou n'dour|||she doesn't need to fall": "spotify:track:16qFn7OIytcrb16D6b5jCP",
   "__match_v35__daniele luppi|||problem queen w/ norah jones": "spotify:track:2zxI4rnWjs45u6Ex37cujC",
   "__match_v35__tom rosenthal|||little joys": "spotify:track:6TJTzEVtYciiZzPoywIQ3G",
-  "__match_v35__marc ribot|||aurora en pekin": "spotify:track:7FS8URfbyqoy7uGpMx0gW5"
+  "__match_v35__marc ribot|||aurora en pekin": "spotify:track:7FS8URfbyqoy7uGpMx0gW5",
+  "__match_v35__sierra ferrell|||whispering waltz": "spotify:track:5qVjXhHDBf8hmYRmxb5iJN"
 }
