@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "alt-j|||something good",
-  "__last_radio_key_mellow_mix": "laufey|||madwoman",
+  "__last_radio_key_mellow_mix": "marianne faithfull|||crazy love",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1470,6 +1470,7 @@
       "marc cohn|||valley of the kings",
       "marc ribot|||aurora en pekin",
       "marc scibilia|||more to this",
+      "marianne faithfull|||crazy love",
       "marion rampal|||de beaux dimanches",
       "mark almond|||the city",
       "mark ambor|||good to be",
@@ -2080,7 +2081,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3924,
+  "__vuurland_active_playlist_count": 3925,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -5142,6 +5143,7 @@
     "margot liotta|||pocket",
     "mari samuelsen|||all human beings",
     "maria taylor|||summer's end - spotify singles",
+    "marianne faithfull|||crazy love",
     "maribou state & andreya triana|||all i need",
     "maribou state & holly walker|||midas",
     "maribou state & holly walker|||nervous tics",
@@ -9938,6 +9940,7 @@
     "spotify:track:4VhbsGXRGDncpi79aiX8eE",
     "spotify:track:4VhvGhj8pdAqFJBuAfUW38",
     "spotify:track:4VkBE5kqScj5MfYASQRVwA",
+    "spotify:track:4Vnqf6VUV84hET5vLdS4MM",
     "spotify:track:4Vs2i8GdP5s7vd8vfSRcDk",
     "spotify:track:4W1gUkq2TAOOFCBet3i3WR",
     "spotify:track:4WNleofxwO4NQIWcBfXlFl",
@@ -12160,6 +12163,7 @@
     "FR32F9700003",
     "FR35O1780000",
     "FR47Q0200550",
+    "FR47Q0300810",
     "FR53O2501150",
     "FR59R1740348",
     "FR59R1740350",
@@ -19411,7 +19415,8 @@
     "spotify:track:3wScjEbCUk4hFUA18ky4Wm": "USAM19604270",
     "spotify:track:0OPS7w8noS9WdaxEOfjflA": "GBAJE0300216",
     "spotify:track:6Q4bnXfg3vySX1t85bd8xJ": "USEE10240646",
-    "spotify:track:0UqHzMvRQnaOXEPKgFVhxN": "US6R22525838"
+    "spotify:track:0UqHzMvRQnaOXEPKgFVhxN": "US6R22525838",
+    "spotify:track:4Vnqf6VUV84hET5vLdS4MM": "FR47Q0300810"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -21790,6 +21795,10 @@
     "laufey|||madwoman": {
       "artist": "Laufey",
       "title": "Madwoman"
+    },
+    "marianne faithfull|||crazy love": {
+      "artist": "Marianne Faithfull, Nick Cave",
+      "title": "Crazy Love"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -23538,6 +23547,11 @@
       "uri": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
       "artist": "Laufey",
       "title": "Madwoman"
+    },
+    "marianne faithfull|||crazy love": {
+      "uri": "spotify:track:4Vnqf6VUV84hET5vLdS4MM",
+      "artist": "Marianne Faithfull, Nick Cave",
+      "title": "Crazy Love"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -23905,5 +23919,6 @@
   "__match_v35__the paper kites|||bloom": "spotify:track:1HMQmOWrkieKYWlFsjUP3D",
   "__match_v35__widespread panic|||fishing": "spotify:track:0OPS7w8noS9WdaxEOfjflA",
   "__match_v35__tracy chapman|||you're the one": "spotify:track:6Q4bnXfg3vySX1t85bd8xJ",
-  "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN"
+  "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
+  "__match_v35__marianne faithfull|||crazy love": "spotify:track:4Vnqf6VUV84hET5vLdS4MM"
 }
