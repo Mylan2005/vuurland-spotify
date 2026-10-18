@@ -12,7 +12,7 @@ with tempfile.TemporaryDirectory() as tmp:
     spec.loader.exec_module(mod)
     lookup={r['number']:r for r in CASES}
     # Cataloguslocators are candidate sources, NEVER a free bypass into playlist.
-    expected={11:'3lpkLZfD2RJltSaAGgmoxb',13:'3EYj5rxRbNM3nijF9dOtry',18:'0ktm6PQBeehUHJORIH76UX'}
+    expected={5:'1REPTIRIQ4zI15g6rD2bpX',11:'3lpkLZfD2RJltSaAGgmoxb',13:'3EYj5rxRbNM3nijF9dOtry',14:'5UN8ZYczY8p56eRWhZAKVm',18:'0ktm6PQBeehUHJORIH76UX'}
     for n,r in lookup.items():
         identifier=mod.v81_catalog_locator(r['requested_artist'],r['requested_title'])
         if n in expected:

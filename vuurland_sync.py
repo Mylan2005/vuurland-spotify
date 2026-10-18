@@ -1210,6 +1210,9 @@ V81_VERIFIED_CATALOG_TRACKS = {
     ("bon iver", "22 (over s??n)"): "3EYj5rxRbNM3nijF9dOtry",
     ("bon iver", "22 (over s∞∞n)"): "3EYj5rxRbNM3nijF9dOtry",
     ("this is lorelei", "box for buddy, box for star"): "0ktm6PQBeehUHJORIH76UX",
+    # v87-batch: publieke Spotify-track plus volledige markt-, artiest- en titelvalidatie.
+    ("ludwig van beethoven", "für elise"): "1REPTIRIQ4zI15g6rD2bpX",
+    ("nick lowe", "when i write the book"): "5UN8ZYczY8p56eRWhZAKVm",
 }
 
 
@@ -1306,6 +1309,13 @@ def find_spotify_track(
     #
     # Deze controle gebeurt vóór Spotify Search zodat
     # bekende mappings ook werken tijdens een Search-block.
+
+    # v87 batch-15: alleen deze exacte RadioBox-credit, bevestigd door gebruiker.
+    # War nam "Summer" op; dit is geen algemene Eric Burdon/War-alias.
+    if (" ".join(str(artist).casefold().split()),
+        " ".join(str(title).casefold().split())) == ("eric burdon & war", "summer"):
+        artist = "War"
+        print("📝 Bevestigde cataloguscredit: Eric Burdon & War — Summer → War — Summer")
 
     known_artist = " ".join(
         artist.strip().casefold()
