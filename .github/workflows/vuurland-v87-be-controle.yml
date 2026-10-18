@@ -1,0 +1,29 @@
+name: Vuurland v87 Belgische cataloguscontrole
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - name: Spotify BE alleen-lezen controle voor alle 18
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: python vuurland_v87_be_controle.py
+      - name: Bewaar auditrapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v87-be-controle
+          path: |
+            vuurland_v87_be_resultaten.json
+            vuurland_v87_be_rapport.md
+          if-no-files-found: ignore
