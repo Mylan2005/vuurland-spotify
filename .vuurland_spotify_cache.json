@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "birame|||the worst parts of you",
-  "__last_radio_key_mellow_mix": "karin ann|||favorite star",
+  "__last_radio_key_vuurland": "arlo parks|||black dog",
+  "__last_radio_key_mellow_mix": "strunz & farah|||dark fire",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -56,6 +56,7 @@
       "arcade fire|||the suburbs",
       "arctic monkeys|||body paint",
       "arctic monkeys|||sculptures of anything goes",
+      "arlo parks|||black dog",
       "arlo parks|||eugene",
       "arlo parks|||hope",
       "arno|||la verite",
@@ -1771,6 +1772,7 @@
       "sting|||shape of my heart",
       "sting|||she walks this earth",
       "storm large|||where is my mind",
+      "strunz & farah|||dark fire",
       "sufjan stevens|||chicago",
       "sufjan stevens|||should have known better",
       "supergrass|||sad girl",
@@ -2085,7 +2087,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3929,
+  "__vuurland_active_playlist_count": 3930,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -2443,6 +2445,7 @@
     "arlo parks & phoebe bridgers|||pegasus (ft. phoebe bridgers)",
     "arlo parks & war child records|||nothing i could hide",
     "arlo parks|||beams",
+    "arlo parks|||black dog",
     "arlo parks|||cola",
     "arlo parks|||eugene",
     "arlo parks|||hope",
@@ -9238,6 +9241,7 @@
     "spotify:track:37Tmv4NnfQeb0ZgUC4fOJj",
     "spotify:track:37kGpZDrqQekpIQswHYHw6",
     "spotify:track:37lFcUSBJZtsxnSZ8DGEjB",
+    "spotify:track:37pShAS4iuRXJeRAa9k6xw",
     "spotify:track:387dz8hopy5xjxMYtZbXXi",
     "spotify:track:38KHfmKiOSEaYWbeFLwst6",
     "spotify:track:38PTaSqKcn1NKafQRdXSby",
@@ -13081,6 +13085,7 @@
     "GBKPL2290761",
     "GBKZV1600083",
     "GBKZV1900097",
+    "GBKZV2000037",
     "GBKZV2000121",
     "GBKZV2200237",
     "GBKZV2500156",
@@ -19436,7 +19441,8 @@
     "spotify:track:4OTdFcuAndBtoPJTsBIyQi": "GBBRP1128308",
     "spotify:track:5qW6ZYct54PhKliCntyxRX": "QMHBS1397401",
     "spotify:track:6cqIt3uZ0BeKExFxSIbIlP": "SKAQ72300006",
-    "spotify:track:4W1lPDxb5GVtvS86l5rIPD": "CAHQJ2518039"
+    "spotify:track:4W1lPDxb5GVtvS86l5rIPD": "CAHQJ2518039",
+    "spotify:track:37pShAS4iuRXJeRAa9k6xw": "GBKZV2000037"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -21835,6 +21841,10 @@
     "birame|||the worst parts of you": {
       "artist": "Birame",
       "title": "The Worst Parts of You"
+    },
+    "arlo parks|||black dog": {
+      "artist": "Arlo Parks",
+      "title": "Black Dog"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -23608,6 +23618,11 @@
       "uri": "spotify:track:4W1lPDxb5GVtvS86l5rIPD",
       "artist": "Birame",
       "title": "The Worst Parts of You"
+    },
+    "arlo parks|||black dog": {
+      "uri": "spotify:track:37pShAS4iuRXJeRAa9k6xw",
+      "artist": "Arlo Parks",
+      "title": "Black Dog"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -23980,5 +23995,6 @@
   "__match_v35__fleet foxes|||lorelai": "spotify:track:4OTdFcuAndBtoPJTsBIyQi",
   "__match_v35__jason isbell|||cover me up": "spotify:track:5qW6ZYct54PhKliCntyxRX",
   "__match_v35__karin ann|||favorite star": "spotify:track:6cqIt3uZ0BeKExFxSIbIlP",
-  "__match_v35__birame|||the worst parts of you": "spotify:track:4W1lPDxb5GVtvS86l5rIPD"
+  "__match_v35__birame|||the worst parts of you": "spotify:track:4W1lPDxb5GVtvS86l5rIPD",
+  "__match_v35__arlo parks|||black dog": "spotify:track:37pShAS4iuRXJeRAa9k6xw"
 }
