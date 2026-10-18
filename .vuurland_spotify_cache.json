@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "phoebe bridgers|||kyoto",
-  "__last_radio_key_mellow_mix": "nanci griffith|||speed of the sound of lonliness",
+  "__last_radio_key_mellow_mix": "paul simon|||another galaxy",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1667,6 +1667,7 @@
       "patty larkin|||who holds your hand",
       "paul mccartney|||days we left behind",
       "paul mccartney|||the song we were singing",
+      "paul simon|||another galaxy",
       "paul simon|||diamonds on the soles of her shoes",
       "paul simon|||duncan",
       "paul simon|||love & blessings",
@@ -2140,6 +2141,12 @@
       "title": "Colorado",
       "source": "mellow_mix",
       "failed_at": 1792325207
+    },
+    "jordan rakei & jalen n'gonda|||what it gave me": {
+      "artist": "JORDAN RAKEI & JALEN N'GONDA",
+      "title": "What it gave me",
+      "source": "vuurland",
+      "failed_at": 1792326330
     }
   },
   "__v51_radio_release_pending": [],
@@ -19810,7 +19817,7 @@
     "kate miller-heidke|||your friends will tell you who you are": 3,
     "beth orton|||don't wanna know 'bout evil": 3,
     "manassas|||colorado": 3,
-    "jordan rakei & jalen n'gonda|||what it gave me": 2
+    "jordan rakei & jalen n'gonda|||what it gave me": 3
   },
   "__match_v35__delvis|||walk alone track": "spotify:track:1TbzpNoZ6rrUTytsAfraik",
   "__match_v35__tom petty|||it's good to be king": "spotify:track:1c0flvMImhKMuiZIc0VzEb",
@@ -19842,7 +19849,8 @@
     "raymond kane|||popoki slack key": 1,
     "kate miller-heidke|||your friends will tell you who you are": 1,
     "beth orton|||don't wanna know 'bout evil": 1,
-    "manassas|||colorado": 1
+    "manassas|||colorado": 1,
+    "jordan rakei & jalen n'gonda|||what it gave me": 1
   },
   "__match_v35__marble sounds|||leave a light on": "spotify:track:7d0VYHsLGjonizpQboVOL2",
   "__match_v35__dan mangan|||diminishing returns": "spotify:track:6QmNuanzOQNCgV2uhpQFL7",
@@ -24649,5 +24657,6 @@
   "__match_v35__future islands|||back in the tall grass": "spotify:track:20FHDDxEbDjg3UUsIl4z6y",
   "__match_v35__kruger brothers|||up 18 north": "spotify:track:7EDGRYnkrkbxQmZPHdZ6Lr",
   "__match_v35__down like silver|||to the river": "spotify:track:41HivVqNww7KRZ39tklgu5",
-  "__match_v35__nanci griffith|||speed of the sound of lonliness": "spotify:track:4wESSHqChrl4kwWmZ6otXc"
+  "__match_v35__nanci griffith|||speed of the sound of lonliness": "spotify:track:4wESSHqChrl4kwWmZ6otXc",
+  "__not_found_v35__jordan rakei & jalen n'gonda|||what it gave me": 1792326330
 }
