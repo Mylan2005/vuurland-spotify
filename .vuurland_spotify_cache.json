@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "bon iver|||8 circle",
+  "__last_radio_key_vuurland": "fleet foxes|||lorelai",
   "__last_radio_key_mellow_mix": "marianne faithfull|||crazy love",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -292,6 +292,7 @@
       "finneas|||what they'll say about us",
       "first aid kit|||emmylou",
       "first aid kit|||my silver lining",
+      "fleet foxes|||lorelai",
       "fleet foxes|||sunblind",
       "fleet foxes|||white winter hymnal",
       "florence the machine|||cosmic love",
@@ -2081,7 +2082,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3925,
+  "__vuurland_active_playlist_count": 3926,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -3804,6 +3805,7 @@
     "fleet foxes|||helplessness blues",
     "fleet foxes|||if you need to keep time on me",
     "fleet foxes|||if you need to, keep time on me",
+    "fleet foxes|||lorelai",
     "fleet foxes|||mykonos",
     "fleet foxes|||phoenix",
     "fleet foxes|||ragged wood",
@@ -9877,6 +9879,7 @@
     "spotify:track:4O4sagsck561vvXzsoHYwV",
     "spotify:track:4O8uW41RxfVF6AJRehcG9W",
     "spotify:track:4OMhhmQM3y3XC8ux64nFna",
+    "spotify:track:4OTdFcuAndBtoPJTsBIyQi",
     "spotify:track:4Ojpf3xHb6ZmyW1zFgVOCi",
     "spotify:track:4OxDppy29ZuxXgQ1kMEjCr",
     "spotify:track:4Oy185yBcxHHi5x2sa6iiv",
@@ -12758,6 +12761,7 @@
     "GBBRP0922401",
     "GBBRP1022501",
     "GBBRP1128303",
+    "GBBRP1128308",
     "GBBRP1129403",
     "GBBRP1233202",
     "GBBRP1341205",
@@ -19416,7 +19420,8 @@
     "spotify:track:0OPS7w8noS9WdaxEOfjflA": "GBAJE0300216",
     "spotify:track:6Q4bnXfg3vySX1t85bd8xJ": "USEE10240646",
     "spotify:track:0UqHzMvRQnaOXEPKgFVhxN": "US6R22525838",
-    "spotify:track:4Vnqf6VUV84hET5vLdS4MM": "FR47Q0300810"
+    "spotify:track:4Vnqf6VUV84hET5vLdS4MM": "FR47Q0300810",
+    "spotify:track:4OTdFcuAndBtoPJTsBIyQi": "GBBRP1128308"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -21799,6 +21804,10 @@
     "marianne faithfull|||crazy love": {
       "artist": "Marianne Faithfull, Nick Cave",
       "title": "Crazy Love"
+    },
+    "fleet foxes|||lorelai": {
+      "artist": "Fleet Foxes",
+      "title": "Lorelai"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -23552,6 +23561,11 @@
       "uri": "spotify:track:4Vnqf6VUV84hET5vLdS4MM",
       "artist": "Marianne Faithfull, Nick Cave",
       "title": "Crazy Love"
+    },
+    "fleet foxes|||lorelai": {
+      "uri": "spotify:track:4OTdFcuAndBtoPJTsBIyQi",
+      "artist": "Fleet Foxes",
+      "title": "Lorelai"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -23920,5 +23934,6 @@
   "__match_v35__widespread panic|||fishing": "spotify:track:0OPS7w8noS9WdaxEOfjflA",
   "__match_v35__tracy chapman|||you're the one": "spotify:track:6Q4bnXfg3vySX1t85bd8xJ",
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
-  "__match_v35__marianne faithfull|||crazy love": "spotify:track:4Vnqf6VUV84hET5vLdS4MM"
+  "__match_v35__marianne faithfull|||crazy love": "spotify:track:4Vnqf6VUV84hET5vLdS4MM",
+  "__match_v35__fleet foxes|||lorelai": "spotify:track:4OTdFcuAndBtoPJTsBIyQi"
 }
