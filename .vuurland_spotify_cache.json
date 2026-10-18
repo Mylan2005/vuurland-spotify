@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "eddie vedder|||the haves",
-  "__last_radio_key_mellow_mix": "django reinhardt|||beyond the sea",
+  "__last_radio_key_mellow_mix": "doc & merle watson|||hesitation blues",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1217,6 +1217,7 @@
       "dido|||don't leave home",
       "dire straits|||portobello belle",
       "django reinhardt|||beyond the sea",
+      "doc & merle watson|||hesitation blues",
       "dolly parton|||shine",
       "don williams|||'till the rivers run dry",
       "donovan|||high your love",
@@ -2119,12 +2120,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "ludwig van beethoven|||fur elise": {
-      "artist": "Ludwig van Beethoven",
-      "title": "Für Elise",
-      "source": "mellow_mix",
-      "failed_at": 1792253856
-    },
     "clear season|||don't take too long": {
       "artist": "CLEAR SEASON",
       "title": "Don't take too long",
@@ -2240,7 +2235,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4031,
+  "__vuurland_active_playlist_count": 4032,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -3667,6 +3662,7 @@
     "dire straits|||your latest trick",
     "dirtwire|||back to zero",
     "djo|||end of beginning",
+    "doc & merle watson|||hesitation blues",
     "dolly parton|||shine",
     "dolores forever|||rothko",
     "dom maker|||somehow she's still here",
@@ -12029,6 +12025,7 @@
     "spotify:track:7ydJaSdC8Au68eYgspNznY",
     "spotify:track:7ydapdmQ4oivP54X29q7Af",
     "spotify:track:7ygrTWuppClAgsCa8QD5go",
+    "spotify:track:7yu0eHAurbXfBJplfCyyfU",
     "spotify:track:7yxpQfWHCvOMYjH1UpNdDg",
     "spotify:track:7z8k59NKAcnwK6OOHt3i3k",
     "spotify:track:7zEnKQaNBcuOSsUZdRnPZM",
@@ -15635,6 +15632,7 @@
     "USSH50185254",
     "USSH51101342",
     "USSH51101349",
+    "USSH58440995",
     "USSLF2400124",
     "USSM10000744",
     "USSM10001864",
@@ -20120,7 +20118,8 @@
     "spotify:track:0NiWSr6RZQQKWH2yG7fnrC": "IEACJ2300007",
     "spotify:track:0ydCckEdZbyPWuLpKqm0S0": "USQE92300110",
     "spotify:track:0DAmSYQW9kq9gQNDI002KP": "USRE19600231",
-    "spotify:track:7qKRueZZIBzHdepFiZPKMK": "USUG12104377"
+    "spotify:track:7qKRueZZIBzHdepFiZPKMK": "USUG12104377",
+    "spotify:track:7yu0eHAurbXfBJplfCyyfU": "USSH58440995"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792335838,
@@ -22963,6 +22962,10 @@
     "eddie vedder|||the haves": {
       "artist": "Eddie Vedder",
       "title": "The Haves"
+    },
+    "doc & merle watson|||hesitation blues": {
+      "artist": "Doc & Merle Watson",
+      "title": "Hesitation Blues"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -25246,6 +25249,11 @@
       "uri": "spotify:track:7qKRueZZIBzHdepFiZPKMK",
       "artist": "Eddie Vedder",
       "title": "The Haves"
+    },
+    "doc & merle watson|||hesitation blues": {
+      "uri": "spotify:track:7yu0eHAurbXfBJplfCyyfU",
+      "artist": "Doc & Merle Watson",
+      "title": "Hesitation Blues"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -25728,5 +25736,6 @@
   "__match_v35__mgmt|||mother nature": "spotify:track:0ydCckEdZbyPWuLpKqm0S0",
   "__not_found_v35__patty griffin|||my dear old friend": 1792339806,
   "__match_v35__joni mitchell|||river": "spotify:track:0DAmSYQW9kq9gQNDI002KP",
-  "__match_v35__eddie vedder|||the haves": "spotify:track:7qKRueZZIBzHdepFiZPKMK"
+  "__match_v35__eddie vedder|||the haves": "spotify:track:7qKRueZZIBzHdepFiZPKMK",
+  "__match_v35__doc & merle watson|||hesitation blues": "spotify:track:7yu0eHAurbXfBJplfCyyfU"
 }
