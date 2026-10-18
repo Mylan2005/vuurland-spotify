@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "sohn|||conrad",
-  "__last_radio_key_mellow_mix": "joni mitchell|||jericho",
+  "__last_radio_key_vuurland": "jjerome87|||track and field",
+  "__last_radio_key_mellow_mix": "diana krall|||a case of you",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -391,6 +391,7 @@
       "jungle|||keep me satisfied",
       "jungle|||let's go back",
       "junip|||line of fire",
+      "k zia|||love is",
       "kacey musgraves|||if the world burns down",
       "kae tempest & lianne la havas|||no prizes",
       "kaleo|||way down we go",
@@ -1091,6 +1092,7 @@
       "dead can dance|||american dreaming",
       "death cab for cutie|||your heart is an empty room",
       "del amitri|||be my downfall",
+      "diana krall|||a case of you",
       "diana krall|||temptation",
       "dido|||don't leave home",
       "dire straits|||portobello belle",
@@ -1970,7 +1972,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3854,
+  "__vuurland_active_playlist_count": 3855,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -4479,6 +4481,7 @@
     "k d lang|||save me",
     "k d lang|||the air that i breathe",
     "k d lang|||the siss boom bang|||heaven",
+    "k zia|||love is",
     "kacey musgraves|||if the world burns down",
     "kae tempest & lianne la havas|||no prizes",
     "kaidi akinnibi|||days of us",
@@ -10536,6 +10539,7 @@
     "spotify:track:6Gh6lzW6QeiXkFSfsvNS0b",
     "spotify:track:6GlYe4WViloOfVhVvoFLSn",
     "spotify:track:6GvAM8oyVApQHGMgpBt8yl",
+    "spotify:track:6H6epZrWk5V52YGtGv1kIF",
     "spotify:track:6HBNGrp119jJwbklsGOuUh",
     "spotify:track:6HO2zHiURg661Lh8RrWhEv",
     "spotify:track:6HPaL50EYgABZSHM3xt0ju",
@@ -11959,6 +11963,7 @@
     "FRUM72203029",
     "FRX201939617",
     "FRX202115764",
+    "FRX202303081",
     "FRX281737328",
     "FRX282488117",
     "FRX452221567",
@@ -19018,7 +19023,8 @@
     "spotify:track:3T3U9f5UJTTvZttYLW4J8C": "CA4QE1900003",
     "spotify:track:54jCmeAxT4NZMav0qQYC7P": "GBARL0901622",
     "spotify:track:0tBTnrMcc91qKP9dHqhsS7": "GBAAM8200001",
-    "spotify:track:3WX7QrHh1LN3OjPRAJCTr5": "USEE10170368"
+    "spotify:track:3WX7QrHh1LN3OjPRAJCTr5": "USEE10170368",
+    "spotify:track:6H6epZrWk5V52YGtGv1kIF": "FRX202303081"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -21109,6 +21115,10 @@
     "joni mitchell|||jericho": {
       "artist": "Joni Mitchell",
       "title": "Jericho"
+    },
+    "k zia|||love is": {
+      "artist": "K.ZIA",
+      "title": "Love Is"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -22502,6 +22512,11 @@
       "uri": "spotify:track:3WX7QrHh1LN3OjPRAJCTr5",
       "artist": "Joni Mitchell",
       "title": "Jericho"
+    },
+    "k zia|||love is": {
+      "uri": "spotify:track:6H6epZrWk5V52YGtGv1kIF",
+      "artist": "K.ZIA",
+      "title": "Love Is"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -22794,5 +22809,6 @@
   "__match_v35__joe jackson|||steppin' out": "spotify:track:0tBTnrMcc91qKP9dHqhsS7",
   "__match_v35__joni mitchell|||jericho": "spotify:track:3WX7QrHh1LN3OjPRAJCTr5",
   "__not_found_v35__the christian club feat lucy ryan|||atlas": 1792299981,
-  "__not_found_v35__pieta brown|||lullaby": 1792300106
+  "__not_found_v35__pieta brown|||lullaby": 1792300106,
+  "__match_v35__k zia|||love is": "spotify:track:6H6epZrWk5V52YGtGv1kIF"
 }
