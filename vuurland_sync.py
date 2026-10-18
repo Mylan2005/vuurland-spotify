@@ -1202,6 +1202,14 @@ def v80_failure_reason(items, artist, title):
 # Geen vrij toepasbare fuzzy uitzondering en geen tweede Spotify Search.
 V81_VERIFIED_CATALOG_TRACKS = {
     ("gipsy kings", "recuerdo apasionado"): "4I1hdRXL4tCnbtJfuqv58A",
+    # v87: aparte BE-cataloguscontrole; track-ID is alleen een locator.
+    # Elke kandidaat moet nog door de bestaande volledige matcher.
+    ("nick drake", "hangin on a star"): "3lpkLZfD2RJltSaAGgmoxb",
+    ("nick drake", "hangin' on a star"): "3lpkLZfD2RJltSaAGgmoxb",
+    ("nick drake", "hanging on a star"): "3lpkLZfD2RJltSaAGgmoxb",
+    ("bon iver", "22 (over s??n)"): "3EYj5rxRbNM3nijF9dOtry",
+    ("bon iver", "22 (over s∞∞n)"): "3EYj5rxRbNM3nijF9dOtry",
+    ("this is lorelei", "box for buddy, box for star"): "0ktm6PQBeehUHJORIH76UX",
 }
 
 
@@ -2398,6 +2406,9 @@ def find_spotify_track(
 
         # Het Spotify-symbool ∞ wordt in "S∞N" gebruikt
         # als gestileerde "oo".
+        # v87: S∞∞N is gestileerd als SOON; niet twee keer 'oo'.
+        # Uitsluitend deze woordvorm, geen algemene fuzzy-versoepeling.
+        value = re.sub(r"\bs∞∞n\b", "soon", value)
         value = value.replace("∞", "oo")
 
         for char in [
