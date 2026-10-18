@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "sons of the east|||into the sun",
-  "__last_radio_key_mellow_mix": "eva cassidy|||fields of gold",
+  "__last_radio_key_vuurland": "matt berninger & rosanne cash|||who loves the sun",
+  "__last_radio_key_mellow_mix": "bruce cockburn|||us all",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1085,6 +1085,7 @@
       "bruce cockburn|||the coming rains",
       "bruce cockburn|||the whole night sky bob weir=harmony vocals/bonnie raitt=slide guitar",
       "bruce cockburn|||train in the rain",
+      "bruce cockburn|||us all",
       "bruce cockburn|||wondering where the lions are live",
       "bruce springsteen|||the promised land",
       "buddy holly|||well all right",
@@ -2165,7 +2166,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3981,
+  "__vuurland_active_playlist_count": 3982,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -3090,6 +3091,7 @@
     "bruce cockburn|||creation dream",
     "bruce cockburn|||the coming rains",
     "bruce cockburn|||the whole night sky bob weir=harmony vocals/bonnie raitt=slide guitar",
+    "bruce cockburn|||us all",
     "bruce cockburn|||wondering where the lions are",
     "bruce cockburn|||wondering where the lions are live",
     "bruce hornsby & justin vernon|||cast-off (feat. justin vernon)",
@@ -10031,6 +10033,7 @@
     "spotify:track:4LKH9EGWayUvhM3CzmPVEI",
     "spotify:track:4LNHI3ugcaRGEfa4D0zNtM",
     "spotify:track:4LY7VZhDLlRpsUlBIOZ7Ew",
+    "spotify:track:4LopWKNx1hI6UgnTOt21Qy",
     "spotify:track:4LpUpiYoZ2M3Z1kmhn4EQo",
     "spotify:track:4LuVCdZLCLcaOCzomwp4es",
     "spotify:track:4LzDXEiPfMqzO6TqXyBrK7",
@@ -12249,6 +12252,7 @@
     "CAT241000209",
     "CAT241000210",
     "CAT241700085",
+    "CAT242300006",
     "CAT247900171",
     "CAT249300467",
     "CAT249600019",
@@ -19724,7 +19728,8 @@
     "spotify:track:2J051fjLklkoPbzOoTAACZ": "USUM72500706",
     "spotify:track:6hp0zWKAfFht6Hbd4aet0K": "USCA20000965",
     "spotify:track:4DwOYnExTuY1Xlvamk2jjx": "GBA176800100",
-    "spotify:track:2KljBtyq1wS2ruCPdeCLtp": "USQX91100436"
+    "spotify:track:2KljBtyq1wS2ruCPdeCLtp": "USQX91100436",
+    "spotify:track:4LopWKNx1hI6UgnTOt21Qy": "CAT242300006"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792249374,
@@ -22364,6 +22369,10 @@
     "eva cassidy|||fields of gold": {
       "artist": "Michael Bolton, Eva Cassidy",
       "title": "Fields of Gold"
+    },
+    "bruce cockburn|||us all": {
+      "artist": "Bruce Cockburn",
+      "title": "Us All"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -24397,6 +24406,11 @@
       "uri": "spotify:track:2KljBtyq1wS2ruCPdeCLtp",
       "artist": "Michael Bolton, Eva Cassidy",
       "title": "Fields of Gold"
+    },
+    "bruce cockburn|||us all": {
+      "uri": "spotify:track:4LopWKNx1hI6UgnTOt21Qy",
+      "artist": "Bruce Cockburn",
+      "title": "Us All"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -24825,5 +24839,6 @@
   "__match_v35__role model|||sally when the wine runs out": "spotify:track:2J051fjLklkoPbzOoTAACZ",
   "__match_v35__peggy lee|||bali ha'i": "spotify:track:6hp0zWKAfFht6Hbd4aet0K",
   "__match_v35__the moody blues|||visions of paradise": "spotify:track:4DwOYnExTuY1Xlvamk2jjx",
-  "__match_v35__eva cassidy|||fields of gold": "spotify:track:2KljBtyq1wS2ruCPdeCLtp"
+  "__match_v35__eva cassidy|||fields of gold": "spotify:track:2KljBtyq1wS2ruCPdeCLtp",
+  "__match_v35__bruce cockburn|||us all": "spotify:track:4LopWKNx1hI6UgnTOt21Qy"
 }
