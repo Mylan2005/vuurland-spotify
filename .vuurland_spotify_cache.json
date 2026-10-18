@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "roscoe|||all i do",
-  "__last_radio_key_mellow_mix": "elton john|||daniel",
+  "__last_radio_key_vuurland": "arlo parks|||hurt",
+  "__last_radio_key_mellow_mix": "nick mulvey|||mountain to move",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -63,6 +63,7 @@
       "arlo parks|||black dog",
       "arlo parks|||eugene",
       "arlo parks|||hope",
+      "arlo parks|||hurt",
       "arno|||la verite",
       "asgeir|||against the current",
       "audrey hobert|||wet hair",
@@ -1683,6 +1684,7 @@
       "nick drake|||which will",
       "nick lowe|||when i write the book",
       "nick mulvey|||mecca",
+      "nick mulvey|||mountain to move",
       "nicole atkins|||dancing in the dark",
       "nik kershaw|||wouldn't it be good acoustic",
       "nils frahm|||ambre",
@@ -2234,7 +2236,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4038,
+  "__vuurland_active_playlist_count": 4039,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -2602,6 +2604,7 @@
     "arlo parks|||cola",
     "arlo parks|||eugene",
     "arlo parks|||hope",
+    "arlo parks|||hurt",
     "arlo parks|||nothing i could hide",
     "arlo parks|||pegasus",
     "arlo parks|||pegasus (ft. phoebe bridgers)",
@@ -11410,6 +11413,7 @@
     "spotify:track:6ZJen1qSP6PUWfyOUrEci5",
     "spotify:track:6ZMYbLF33jIECoG2MClauD",
     "spotify:track:6ZUZ33Hz83h6szgf56gzJx",
+    "spotify:track:6ZVVax9sMTB6HPKu36eYZs",
     "spotify:track:6ZW6EW1Uf4iLL8O2VIaBNz",
     "spotify:track:6ZZPjYECelIeOGGf1OGiHs",
     "spotify:track:6ZcjTx0iLJSyuztsaTmxjO",
@@ -13591,6 +13595,7 @@
     "GBKZV1600083",
     "GBKZV1900097",
     "GBKZV2000037",
+    "GBKZV2000087",
     "GBKZV2000121",
     "GBKZV2200237",
     "GBKZV2500156",
@@ -20142,7 +20147,8 @@
     "spotify:track:7ADBL3WZ9Oyj7zgkg7ODT8": "USC4R1706367",
     "spotify:track:2AkbpHqE8STBmNDekA4Uxa": "USEE11400101",
     "spotify:track:3x6jYJ1ggk4nwTa7UHZIsE": "BEP012102005",
-    "spotify:track:1BvJmtaXsqtH438BcDPeBb": "GBAMB9500001"
+    "spotify:track:1BvJmtaXsqtH438BcDPeBb": "GBAMB9500001",
+    "spotify:track:6ZVVax9sMTB6HPKu36eYZs": "GBKZV2000087"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792335838,
@@ -23011,6 +23017,10 @@
     "elton john|||daniel": {
       "artist": "Elton John",
       "title": "Daniel"
+    },
+    "arlo parks|||hurt": {
+      "artist": "Arlo Parks",
+      "title": "Hurt"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -25329,6 +25339,11 @@
       "uri": "spotify:track:1BvJmtaXsqtH438BcDPeBb",
       "artist": "Elton John",
       "title": "Daniel"
+    },
+    "arlo parks|||hurt": {
+      "uri": "spotify:track:6ZVVax9sMTB6HPKu36eYZs",
+      "artist": "Arlo Parks",
+      "title": "Hurt"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -25817,5 +25832,6 @@
   "__match_v35__nathaniel rateliff & the night sweats|||you worry me": "spotify:track:7ADBL3WZ9Oyj7zgkg7ODT8",
   "__match_v35__jackson browne|||for a dancer": "spotify:track:2AkbpHqE8STBmNDekA4Uxa",
   "__match_v35__roscoe|||all i do": "spotify:track:3x6jYJ1ggk4nwTa7UHZIsE",
-  "__match_v35__elton john|||daniel": "spotify:track:1BvJmtaXsqtH438BcDPeBb"
+  "__match_v35__elton john|||daniel": "spotify:track:1BvJmtaXsqtH438BcDPeBb",
+  "__match_v35__arlo parks|||hurt": "spotify:track:6ZVVax9sMTB6HPKu36eYZs"
 }
