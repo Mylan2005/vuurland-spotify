@@ -1213,6 +1213,12 @@ V81_VERIFIED_CATALOG_TRACKS = {
     # v87-batch: publieke Spotify-track plus volledige markt-, artiest- en titelvalidatie.
     ("ludwig van beethoven", "für elise"): "1REPTIRIQ4zI15g6rD2bpX",
     ("nick lowe", "when i write the book"): "5UN8ZYczY8p56eRWhZAKVm",
+    # v88: exact door gebruiker geteste Spotify-links; GET + volledige validatie.
+    ("anoushka shankar & karsh kale", "easy (w/ norah jones)"): "1Zlp3AkCc1CCtp3yUwqdRr",
+    ("casualties of cool", "flight"): "73qdi1UuN5aHXwG2trXim4",
+    ("gabriels", "angels & queens"): "3C0kO7Bc51DEcJMep1deQg",
+    ("jordan rakei & jalen ngonda", "what it gave me"): "40QovgBEbr3XnqTJA55jLC",
+    ("manassas", "colorado"): "6VyuVYEJnZmlEQ5GT9LQvT",
 }
 
 
@@ -1316,6 +1322,17 @@ def find_spotify_track(
         " ".join(str(title).casefold().split())) == ("eric burdon & war", "summer"):
         artist = "War"
         print("📝 Bevestigde cataloguscredit: Eric Burdon & War — Summer → War — Summer")
+
+    # v88: uitsluitend exacte, door gebruiker gecontroleerde radiocredits.
+    # Cataloguslocators worden nog steeds gevalideerd; nooit vrij aliasen.
+    v88_radio_key = (" ".join(str(artist).casefold().split()),
+                     " ".join(str(title).casefold().split()))
+    if v88_radio_key == ("casualties of cool", "flight"):
+        artist = "Devin Townsend & Ché Aimee Dorval"
+        print("📝 v88: Casualties of Cool — Flight → Devin Townsend & Ché Aimee Dorval")
+    elif v88_radio_key == ("manassas", "colorado"):
+        artist = "Stephen Stills"
+        print("📝 v88: Manassas — Colorado → Stephen Stills (albumcontrole verplicht)")
 
     known_artist = " ".join(
         artist.strip().casefold()
@@ -2047,7 +2064,7 @@ def find_spotify_track(
     # v81: exact geverifieerde cataloguslocator in plaats van nog een
     # vruchteloze Search. Maximaal één Spotify-opzoekactie per ronde;
     # de gemeenschappelijke kandidaatvalidatie hieronder blijft intact.
-    catalog_id = v81_catalog_locator(artist, title)
+    catalog_id = v81_catalog_locator(*v88_radio_key) if v88_radio_key in {("casualties of cool", "flight"), ("manassas", "colorado")} else v81_catalog_locator(artist, title)
     catalog_reason = 'v81' if catalog_id else None
     if not catalog_id:
         catalog_id = v82_confirmed_locator(load_cache(), artist, title)
@@ -3117,6 +3134,12 @@ def find_spotify_track(
     candidates = []
 
     for item in items:
+        if v88_radio_key == ("manassas", "colorado"):
+            # Catalogus van Stephen Stills bevat veel Colorado-opnames.
+            # RadioBox vraagt de opname uit het album Manassas.
+            if (item.get("id") != "6VyuVYEJnZmlEQ5GT9LQvT"
+                    or str((item.get("album") or {}).get("name", "")).casefold().strip() != "manassas"):
+                continue
         # v72: een resultaat dat voor dit account niet speelbaar is,
         # nooit toevoegen. Spotify Search met market=from_token kan
         # is_playable=False of restrictions.reason=market teruggeven.
