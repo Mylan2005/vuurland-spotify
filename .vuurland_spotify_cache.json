@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "bleachers|||you and forever",
-  "__last_radio_key_mellow_mix": "noel gallagher|||don't look back in anger",
+  "__last_radio_key_vuurland": "school is cool|||close",
+  "__last_radio_key_mellow_mix": "neil young|||helpless",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -146,6 +146,7 @@
       "big thief|||shark smile",
       "big thief|||simulation swarm",
       "big thief|||vampire empire",
+      "big thief|||velvet ring",
       "bill callahan|||too many birds",
       "billie eilish|||chihiro",
       "billie eilish|||what was i made for?",
@@ -830,6 +831,7 @@
       "sault|||fight for love",
       "sault|||i just want to dance",
       "sault|||wildfires",
+      "school is cool|||close",
       "sea peoples|||vibeland",
       "selah sue|||fade away",
       "selah sue|||summertime",
@@ -1894,6 +1896,7 @@
       "neil young|||goin' back",
       "neil young|||harvest moon",
       "neil young|||heart of gold",
+      "neil young|||helpless",
       "neil young|||human highway",
       "neil young|||look out for my love",
       "neil young|||razor love",
@@ -2518,7 +2521,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4267,
+  "__vuurland_active_playlist_count": 4268,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -7169,6 +7172,7 @@
     "sault|||stronger",
     "sault|||we are the sun",
     "sault|||wildfires",
+    "school is cool|||close",
     "sea oleena|||uh oh",
     "sea wolf|||old friend",
     "sea ❨peoples❩|||vibeland",
@@ -11531,6 +11535,7 @@
     "spotify:track:5Nz6HaUETPBFauFg26BFoT",
     "spotify:track:5O6qLZc3ucu2XvndYX47v1",
     "spotify:track:5O8jA5esx67O3FoqKwBjQV",
+    "spotify:track:5OALkG3x5wCyxtEiNudEuQ",
     "spotify:track:5OZ9qK8X32s0pTcNxi7lcH",
     "spotify:track:5Ob2Wt2IifgoFrSFrBnRZJ",
     "spotify:track:5Oio96E2uNogZwG9DDz8pp",
@@ -13114,6 +13119,7 @@
     "BEUM72400175",
     "BEUM72500062",
     "BEV482500009",
+    "BEV881900013",
     "BEW011300026",
     "BEW160912501",
     "BEW160912503",
@@ -21349,7 +21355,8 @@
     "spotify:track:46ShsS3tyqJAJdxUjPezdI": "USAR19700539",
     "spotify:track:4tiuoO2lhdeF32Mt6KGRh7": "USSUB1620002",
     "spotify:track:26MIynckGNn231BFt9ZjDj": "GBCNR0500006",
-    "spotify:track:3OpYcQgXt0bsWccSAsmZxf": "GBQCP0900025"
+    "spotify:track:3OpYcQgXt0bsWccSAsmZxf": "GBQCP0900025",
+    "spotify:track:5OALkG3x5wCyxtEiNudEuQ": "BEV881900013"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792335838,
@@ -25244,6 +25251,10 @@
     "noel gallagher|||don't look back in anger": {
       "artist": "Noel Gallagher",
       "title": "Don't Look Back In Anger - Live For Teenage Cancer Trust"
+    },
+    "school is cool|||close": {
+      "artist": "School Is Cool",
+      "title": "Close"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -28722,6 +28733,11 @@
       "uri": "spotify:track:3OpYcQgXt0bsWccSAsmZxf",
       "artist": "Noel Gallagher",
       "title": "Don't Look Back In Anger - Live For Teenage Cancer Trust"
+    },
+    "school is cool|||close": {
+      "uri": "spotify:track:5OALkG3x5wCyxtEiNudEuQ",
+      "artist": "School Is Cool",
+      "title": "Close"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -29448,5 +29464,6 @@
   "__match_v35__sarah mclachlan|||sweet surrender": "spotify:track:46ShsS3tyqJAJdxUjPezdI",
   "__match_v35__father john misty|||total entertainment forever": "spotify:track:4tiuoO2lhdeF32Mt6KGRh7",
   "__match_v35__kate bush|||how to be invisible": "spotify:track:26MIynckGNn231BFt9ZjDj",
-  "__match_v35__noel gallagher|||don't look back in anger": "spotify:track:3OpYcQgXt0bsWccSAsmZxf"
+  "__match_v35__noel gallagher|||don't look back in anger": "spotify:track:3OpYcQgXt0bsWccSAsmZxf",
+  "__match_v35__school is cool|||close": "spotify:track:5OALkG3x5wCyxtEiNudEuQ"
 }
