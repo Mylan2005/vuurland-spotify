@@ -3452,6 +3452,16 @@ def find_spotify_track(
         reversed_duo_match = False
         if len(spotify_artists) == 2 and len(wanted_artists) == 1:
             wanted_duo = re.split(r"\s+(?:&|and)\s+", wanted_artists[0])
+            # v92: werk hier met de ORIGINELE RadioBox-credit: normalize()
+            # verwijdert komma's en zet '&Tilly' om naar 'and tilly'.
+            # Alleen 'A, &B' is een ondubbelzinnige twee-artiesten-credit.
+            comma_ampersand_duo = re.fullmatch(
+                r"\s*([^,]+?)\s*,\s*(&\s*[^,]+?)\s*",
+                str(artist),
+            )
+            if comma_ampersand_duo:
+                wanted_duo = [comma_ampersand_duo.group(1),
+                              comma_ampersand_duo.group(2)]
             if (len(wanted_duo) == 2
                     and all(compact(name) for name in wanted_duo)
                     and {compact(name) for name in wanted_duo}
