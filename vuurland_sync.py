@@ -4952,8 +4952,9 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
                 continue
             to_prepend.append({"artist": artist, "title": title, "source": sid})
             known_queue.add(key)
-        # Nieuwe nummers vooraan, FIFO-selectie verderop verwerkt oud eerst.
-        live_queue[0:0] = to_prepend
+        # v95: RadioBox levert nieuwste eerst; zet ontdekte nummers
+        # chronologisch (oudste eerst) ACHTERAAN in de blijvende queue.
+        live_queue.extend(reversed(to_prepend))
         newly_queued += len(to_prepend)
         discovered[sid] = sorted(source_seen)
         print(f"📚 {source['name']}: {scanned} nog niet eerder gescande titels; "
@@ -5556,9 +5557,40 @@ def sync():
         if released:
             print(f'♻️ v71: {released} eerder geparkeerde nummers opnieuw ingepland.')
 
-    # v78: gecontroleerde v77-missers opnieuw zoekklaar en bovenaan.
-    v78_recover_and_prioritize(cache, live_queue, radio_sources)
-    v81_requeue_confirmed_catalog(cache, live_queue, radio_sources)
+    # v95: eenmalige overgang naar uitsluitend uitzendingen VANAF de omschakeling.
+    # Bewaar de oude wachtrij als archief in de bestaande cache: geen verlies
+    # van informatie, maar geen historische Spotify-zoekopdrachten meer.
+    # Vereis drie geslaagde RadioBox-metingen voordat de nulmeting plaatsvindt.
+    if not cache.get("__v95_live_fifo_initialized"):
+        if any(not src.get("tracks") for src in radio_sources):
+            print("⏳ v95: wacht op drie volledige bronmetingen vóór live-start; "
+                  "bestaande wachtrij blijft bewaard.")
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            return
+        archived = cache.setdefault("__v95_archived_pre_live_queue", [])
+        archived.extend(x for x in live_queue if isinstance(x, dict))
+        removed = len(live_queue)
+        live_queue.clear()
+        discovered = cache.setdefault("__v47_radio_discovered", {})
+        for src in radio_sources:
+            previous = set(discovered.get(src["id"], []))
+            previous.update(_v47_key(a, t) for a, t in src["tracks"] if a and t)
+            discovered[src["id"]] = sorted(previous)
+        # Oude mislukte matches blijven in het archief, niet actief als retries.
+        old_failed = cache.get("__v47_failed_tracks", {})
+        if isinstance(old_failed, dict):
+            cache["__v95_archived_pre_live_failures"] = dict(old_failed)
+            cache["__v47_failed_tracks"] = {}
+        cache["__v95_live_fifo_initialized"] = True
+        # Behoud de beurtrolcursor van de bestaande state.
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_cache(cache)
+        print(f"🕒 v95: live-start vanaf huidige RadioBox-meting; "
+              f"{removed} oude wachtitems veilig gearchiveerd, niet meer actief.")
+
+    # Geen historische herstel-injecties in de nieuwe live FIFO.
+    # De bestaande matcher- en playlist-cache blijven behouden.
 
     queued_keys = {
         f"{normalize_match(item.get('artist', ''))}|||"
@@ -5604,7 +5636,7 @@ def sync():
     rechecks = 0  # v54: geen ongefilterde Duyster-revivals
     if rechecks:
         print(f"♻️ v51: {rechecks} vroegere Duyster-misser opnieuw ingepland met nieuwe matcher.")
-    released_radio = v51_release_old_radio_failures(cache)
+    released_radio = 0  # v95: oude radio-fouten niet opnieuw activeren
     if released_radio:
         print(f'♻️ v51: {released_radio} radio-misser opnieuw beoordeeld na matcherupdate.')
     restored = v47_restore_retries(cache, seen, live_queue)
@@ -5622,11 +5654,16 @@ def sync():
     # ---------------------------------
 
     if not live_queue:
-
+        # v95: ook lege rondes tellen mee in de vaste 3-bronnenbeurtrol.
+        _order = ("vuurland", "mellow_mix", "big_sonic_heaven")
+        _current = cache.get("__v42_source_turn", "vuurland")
+        if _current not in _order:
+            _current = "vuurland"
+        _next = _order[(_order.index(_current) + 1) % len(_order)]
+        cache["__v42_source_turn"] = _next
         atomic_save_json(live_queue_file, [], indent=2, ensure_ascii=False)
-
         save_cache(cache)
-
+        print(f"🔁 v95: lege beurt {_current}; volgende bron {_next}.")
         print("ℹ️ Live queue is leeg.")
         return
 
@@ -6025,21 +6062,8 @@ def sync():
           + f"; startbron deze ronde: {round_start_source}; "
           + f"volgende ronde: {next_round_source}.")
 
-    # v66: de RadioBox-lijsten komen nieuwste-eerst binnen. Prioriteer
-    # opnieuw gespeelde nummers OOK wanneer ze al in de historische queue
-    # stonden. Alleen de meest recente zichtbare tracks krijgen voorrang;
-    # anders zou de volledige RadioBox-historiek de backlog uithongeren.
-    recent_radio_rank = {}
-    for radio_source in radio_sources:
-        recent_radio_rank[radio_source["id"]] = {
-            _v47_key(artist, title): pos
-            for pos, (artist, title) in enumerate(radio_source["tracks"][:12])
-        }
-
-    # v78-prioriteit wordt per ronde afgeleid uit de nog aanwezige queue.
-    # Nadat een nummer is toegevoegd/verwijderd, verdwijnt die prioriteit vanzelf.
-    v78_priority_order = {_v47_key(a, t): i + 1 for i, (a, t) in enumerate(V78_RECOVERY_TRACKS)}
-    v78_priority_order[_v47_key('Gipsy Kings', 'Recuerdo Apasionado')] = 0
+    # v95: strikte FIFO per bron. Nieuwe uitzendingen staan achteraan.
+    # Geen nieuwe-muziek-voorrang of historische v78-herstelprioriteit.
 
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
@@ -6050,36 +6074,12 @@ def sync():
         waiting_for_retry = False
         now = time.time()
 
-        # Alle bronnen krijgen evenveel kansen op een nieuwe Spotify Search.
-        # Wanneer het zoekbudget op is: alleen zekere playlist/cache-hits.
-        turn_index = source_order.index(round_start_source)
-        round_sources = source_order[turn_index:] + source_order[:turn_index]
-        # Uitzonderlijke, tijdelijke inhaalbeurt: eerst de bron van het
-        # hoogst gerangschikte zoekklare v78-nummer. Normale beurtrol
-        # blijft ongewijzigd voor alle overige rondes.
-        recovery_ready = [x for x in live_queue if isinstance(x, dict)
-                          and _v47_key(x.get('artist',''), x.get('title','')) in v78_priority_order
-                          and x.get('source') in round_sources
-                          and id(x) not in processed_item_ids
-                          and now >= _v41_cooldown_until(x)]
-        if recovery_ready and searches_used < MAX_SEARCHES_PER_RUN:
-            next_priority = min(recovery_ready, key=lambda x:
-                v78_priority_order[_v47_key(x.get('artist',''), x.get('title',''))])
-            round_sources = [next_priority['source']] + [s for s in round_sources if s != next_priority['source']]
+        # v95: exact één bron krijgt per ronde een beurt, óók wanneer
+        # andere bronnen wel nummers hebben. Geen fallback naar andere bron.
+        round_sources = [round_start_source]
         for preferred_source in round_sources:
-            # v93: oudste in de blijvende wachtrij eerst per bron.
+            # v95: oudste eerst volgens de opgeslagen FIFO-volgorde.
             candidates = list(enumerate(live_queue))
-            # v93: oudste nog wachtende nummers eerst per bron. Nieuwe
-            # radioplays worden vóór in de wachtrij gezet; een hogere index
-            # betekent dus een ouder item. De v78-herstelprioriteit blijft.
-            candidates.sort(key=lambda pair: (
-                0 if isinstance(pair[1], dict) and
-                     _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")) in v78_priority_order else 1,
-                v78_priority_order.get(
-                    _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")), 999999
-                ) if isinstance(pair[1], dict) else 999999,
-                -pair[0],
-            ))
             for index, candidate in candidates:
                 if not isinstance(candidate, dict):
                     continue
