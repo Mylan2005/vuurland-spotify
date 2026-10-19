@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "big_sonic_heaven",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "king hannah feat sharon van etten|||big swimmer",
-  "__last_radio_key_mellow_mix": "vampire weekend|||harmony hall",
+  "__last_radio_key_mellow_mix": "jethro tull|||reasons for waiting",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2840,7 +2840,14 @@
     ]
   },
   "__v69_bootstrap_complete": true,
-  "__v47_failed_tracks": {},
+  "__v47_failed_tracks": {
+    "spc eco|||nobody knows": {
+      "artist": "SPC ECO",
+      "title": "Nobody Knows",
+      "source": "big_sonic_heaven",
+      "failed_at": 1792452983
+    }
+  },
   "__v51_radio_release_pending": [],
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
@@ -22541,7 +22548,7 @@
     "shriekback|||the underwaterboys": 3,
     "meshell ndegeocello|||with god on our side w/ bill callahan chris thile": 3,
     "gypsy tailwind|||way to here": 3,
-    "spc eco|||nobody knows": 2
+    "spc eco|||nobody knows": 3
   },
   "__match_v35__delvis|||walk alone track": "spotify:track:1TbzpNoZ6rrUTytsAfraik",
   "__match_v35__tom petty|||it's good to be king": "spotify:track:1c0flvMImhKMuiZIc0VzEb",
@@ -22582,7 +22589,8 @@
     "a filetta|||like a breath of air": 1,
     "shriekback|||the underwaterboys": 1,
     "meshell ndegeocello|||with god on our side w/ bill callahan chris thile": 1,
-    "gypsy tailwind|||way to here": 1
+    "gypsy tailwind|||way to here": 1,
+    "spc eco|||nobody knows": 1
   },
   "__match_v35__marble sounds|||leave a light on": "spotify:track:7d0VYHsLGjonizpQboVOL2",
   "__match_v35__dan mangan|||diminishing returns": "spotify:track:6QmNuanzOQNCgV2uhpQFL7",
@@ -33267,6 +33275,7 @@
       "leif vollebekk|||transatlantic flight"
     ],
     "mellow_mix": [
+      "jethro tull|||reasons for waiting",
       "vampire weekend|||harmony hall",
       "trace bundy|||tres capos",
       "lone justice|||don't toss us away",
@@ -33365,8 +33374,7 @@
       "leonard cohen|||everybody knows",
       "richard houghten|||garden of emotion",
       "sam phillips|||how to dream",
-      "baka beyond|||spirit of the forest",
-      "gregory alan isakov|||the stable song"
+      "baka beyond|||spirit of the forest"
     ],
     "big_sonic_heaven": [
       "fleeting colours|||autumn",
@@ -33483,5 +33491,6 @@
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__trace bundy|||tres capos": "spotify:track:3lDzFfj9C0BFxVC98ZpH9g",
   "__match_v35__melissa auf der maur|||and the next day": "spotify:track:5InE9SicL7UXEdGeg92g9n",
-  "__match_v35__nectar woode|||rivers end": "spotify:track:4iU6dFUo07jr6jBuwaUUk8"
+  "__match_v35__nectar woode|||rivers end": "spotify:track:4iU6dFUo07jr6jBuwaUUk8",
+  "__not_found_v35__spc eco|||nobody knows": 1792452983
 }
