@@ -4891,7 +4891,8 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
     discovered = cache.setdefault("__v47_radio_discovered", {})
     # v69: bij nieuwe start: markeer bestaande zichtbare RadioBox-historiek
     # als reeds gezien. Enkel het nú gespeelde nummer per bron is nieuw.
-    # Daarna scannen we uitsluitend de meest recente 12 items per ronde.
+    # v93: scan na bootstrap de volledige zichtbare historiek zodat ook
+    # tussen twee controles uitgezonden nummers geregistreerd worden.
     if cache.get("__v69_radio_only_fresh_start") and not cache.get("__v69_bootstrap_complete"):
         # Bij tijdelijke RadioBox-storing geen lege beginmeting vastleggen.
         if any(not src.get("tracks") for src in radio_sources):
@@ -4912,8 +4913,8 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
         source_seen = set(discovered.get(sid, []))
         to_prepend = []
         scanned = 0
-        visible_tracks = (source["tracks"][:12] if cache.get("__v69_radio_only_fresh_start")
-                          else source["tracks"])
+        # v93: ALLE zichtbare radioplays inlezen, niet slechts twaalf.
+        visible_tracks = source["tracks"]
         for artist, title in visible_tracks:
             artist, title = artist.strip(), title.strip()
             if not artist or not title:
@@ -4936,8 +4937,8 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
                 continue
             to_prepend.append({"artist": artist, "title": title, "source": sid})
             known_queue.add(key)
-        # New live songs go ahead of old backlog while preserving radio order.
-        live_queue[0:0] = list(reversed(to_prepend))
+        # Nieuwe nummers vooraan, FIFO-selectie verderop verwerkt oud eerst.
+        live_queue[0:0] = to_prepend
         newly_queued += len(to_prepend)
         discovered[sid] = sorted(source_seen)
         print(f"📚 {source['name']}: {scanned} nog niet eerder gescande titels; "
@@ -6051,18 +6052,19 @@ def sync():
                 v78_priority_order[_v47_key(x.get('artist',''), x.get('title',''))])
             round_sources = [next_priority['source']] + [s for s in round_sources if s != next_priority['source']]
         for preferred_source in round_sources:
-            # Recentste 12 zichtbare radioplays eerst binnen deze bron,
-            # daarna de bestaande wachtrij in ongewijzigde volgorde.
+            # v93: oudste in de blijvende wachtrij eerst per bron.
             candidates = list(enumerate(live_queue))
-            if preferred_source in recent_radio_rank:
-                ranks = recent_radio_rank[preferred_source]
-                candidates.sort(key=lambda pair: (
-                    0 if _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")) in v78_priority_order else 1,
-                    v78_priority_order.get(_v47_key(pair[1].get("artist", ""), pair[1].get("title", "")), 999999),
-                    0 if _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")) in ranks else 1,
-                    ranks.get(_v47_key(pair[1].get("artist", ""), pair[1].get("title", "")), 999999),
-                    pair[0],
-                ) if isinstance(pair[1], dict) else (2, 999999, 2, 999999, pair[0]))
+            # v93: oudste nog wachtende nummers eerst per bron. Nieuwe
+            # radioplays worden vóór in de wachtrij gezet; een hogere index
+            # betekent dus een ouder item. De v78-herstelprioriteit blijft.
+            candidates.sort(key=lambda pair: (
+                0 if isinstance(pair[1], dict) and
+                     _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")) in v78_priority_order else 1,
+                v78_priority_order.get(
+                    _v47_key(pair[1].get("artist", ""), pair[1].get("title", "")), 999999
+                ) if isinstance(pair[1], dict) else 999999,
+                -pair[0],
+            ))
             for index, candidate in candidates:
                 if not isinstance(candidate, dict):
                     continue
