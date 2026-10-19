@@ -1215,6 +1215,8 @@ def v80_failure_reason(items, artist, title):
 # doorloopt de kandidaat dezelfde artiest-, titel-, regio- en versietoetsen.
 # Geen vrij toepasbare fuzzy uitzondering en geen tweede Spotify Search.
 V81_VERIFIED_CATALOG_TRACKS = {
+    # v94: user-confirmed original studio recording; GET /tracks validates it.
+    ("the cure", "the snakepit"): "2VeryXhfwHZmwHEYqB0phS",
     ("gipsy kings", "recuerdo apasionado"): "4I1hdRXL4tCnbtJfuqv58A",
     # v87: aparte BE-cataloguscontrole; track-ID is alleen een locator.
     # Elke kandidaat moet nog door de bestaande volledige matcher.
@@ -3718,6 +3720,19 @@ def find_spotify_track(
         )
 
         spotify_version = spotify_candidate_version(item)
+
+        # v94: a radio title without an explicit live request must never
+        # resolve to a bootleg concert recording (even as last-resort fallback).
+        # An explicitly requested live recording keeps the established rules.
+        candidate_name = str(item.get("name", "") or "")
+        candidate_album = str((item.get("album") or {}).get("name", "") or "")
+        if wanted_version != "live" and (
+            re.search(r"\bbootleg\b", candidate_name, flags=re.IGNORECASE)
+            or (spotify_version == "live" and re.search(
+                r"\bbootleg\b", candidate_album, flags=re.IGNORECASE
+            ))
+        ):
+            continue
 
         # "Soccer Mommy Version" <-> "Soccer Mommy Cut":
         # alleen equivalent als de benoemde variantnaam exact gelijk is.
