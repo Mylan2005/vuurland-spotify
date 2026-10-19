@@ -4962,6 +4962,66 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
     return newly_queued
 
 
+# v96: Detecteer nieuwe uitzendingen via de VORIGE RadioBox-meting,
+# niet via het levenslange ontdekkingsgeheugen van v47.
+def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
+                           matching_version=35):
+    snapshots = cache.setdefault("__v96_radio_snapshots", {})
+    playlist_keys = set(cache.get("__playlist_keys", []))
+    known_queue = {_v47_key(x.get("artist", ""), x.get("title", ""))
+                   for x in live_queue if isinstance(x, dict)}
+    discovered = cache.setdefault("__v47_radio_discovered", {})
+    added = 0
+    for source in radio_sources:
+        sid = source["id"]
+        tracks = [(str(a).strip(), str(t).strip())
+                  for a, t in source.get("tracks", []) if a and t]
+        if not tracks:
+            print(f"⏳ v96 {source['name']}: lege bronmeting; vorige stand behouden.")
+            continue
+        current = [(_v47_key(a, t), a, t) for a, t in tracks]
+        old = snapshots.get(sid)
+        if not isinstance(old, list):
+            # Eenmalige zachte overgang: alleen de 12 meest recente titels
+            # nagaan, niet de volledige oude RadioBox-historiek opnieuw laden.
+            arrivals = current[:12]
+            print(f"🕒 v96 {source['name']}: recente 12 nummers bij start nagekeken.")
+        else:
+            previous = set(old)
+            # De eerste gemeenschappelijke titel is de grens tussen de vorige
+            # en de nieuwe meting; niets van vóór die grens inhalen.
+            boundary = next((i for i, (key, _, _) in enumerate(current)
+                             if key in previous), None)
+            if boundary is None:
+                # Tijdelijke radiogeschiedeniswissel: vermijd massale backfill.
+                arrivals = current[:12]
+                print(f"⚠️ v96 {source['name']}: geen overlap; maximaal 12 recente titels nagekeken.")
+            else:
+                arrivals = current[:boundary]
+        accepted = 0
+        seen_this_scan = set()
+        for key, artist, title in reversed(arrivals):
+            if key in seen_this_scan:
+                continue
+            seen_this_scan.add(key)
+            if is_interview_fragment(title) or key in known_queue or key in seen:
+                continue
+            # Spotify-playlist-cache blijft gezaghebbend voor al aanwezige tracks.
+            if key in playlist_keys or radio_matches_playlist(artist, title, playlist_keys):
+                continue
+            if cache.get(f"__not_found_v{matching_version}__" + key) is not None:
+                continue
+            live_queue.append({"artist": artist, "title": title, "source": sid})
+            known_queue.add(key)
+            accepted += 1
+        added += accepted
+        discovered[sid] = sorted(set(discovered.get(sid, [])) | {k for k, _, _ in current})
+        snapshots[sid] = [k for k, _, _ in current[:100]]
+        print(f"📚 v96 {source['name']}: {len(arrivals)} recente uitzending(en) sinds vorige meting; "
+              f"{accepted} toegevoegd aan live queue.")
+    return added
+
+
 # v50: Duyster-missers verdwijnen na de volledige set zoekstrategieën
 # uit de shuffle. Bewaar ze afzonderlijk zodat we ze bij een latere
 # algemene matcherverbetering gecontroleerd opnieuw kunnen beoordelen.
@@ -5606,7 +5666,7 @@ def sync():
             artist, title = source["tracks"][0]
             cache[source["cache_key"]] = _v47_key(artist, title)
 
-    added_to_live_queue = v47_collect_radio_history(
+    added_to_live_queue = v96_collect_live_plays(
         radio_sources, cache, seen, live_queue, MATCHING_RULES_VERSION)
     if added_to_live_queue:
         print(f"🆕 {added_to_live_queue} beschikbare RadioBox-titels in wachtrij.")
