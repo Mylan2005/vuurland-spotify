@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "fleet foxes|||your protector",
+  "__last_radio_key_vuurland": "nick cave & the bad seeds|||long dark night",
   "__last_radio_key_mellow_mix": "madeleine peyroux|||i'm all right",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -652,6 +652,7 @@
       "neomi|||skipping stone",
       "neomi|||so i let you 15th of june - evening",
       "nick cave & the bad seeds|||bright horses",
+      "nick cave & the bad seeds|||long dark night",
       "nick cave & the bad sees|||skeleton tree",
       "nick cave & warren ellis|||carnage",
       "nick cave and the bad seeds|||frogs",
@@ -2401,7 +2402,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4146,
+  "__vuurland_active_playlist_count": 4147,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -6058,6 +6059,7 @@
     "nick cave & the bad seeds|||jubilee street - live at alexandra palace 2020",
     "nick cave & the bad seeds|||jubilee street - live at alexandra palace, 2020",
     "nick cave & the bad seeds|||kylie minogue|||where the wild roses grow - 2011 - remaster",
+    "nick cave & the bad seeds|||long dark night",
     "nick cave & the bad seeds|||o children",
     "nick cave & the bad seeds|||rings of saturn",
     "nick cave & the bad seeds|||shoot me down",
@@ -9176,6 +9178,7 @@
     "spotify:track:1g0xyCMUBKUaMDCk00Hhmk",
     "spotify:track:1g1rFaOD5cQXY2cbP5V8F1",
     "spotify:track:1g9GiiPPaL7KcDHlDzu7lT",
+    "spotify:track:1gIfQhhv0inJEugVgnP4gy",
     "spotify:track:1gLtAfef6KQwWG28NlvKKq",
     "spotify:track:1gQOnWynwP1cPFNIh5D8sR",
     "spotify:track:1gbvCuQHPTgU7sgWCbqtVV",
@@ -14066,6 +14069,7 @@
     "GBSG42300006",
     "GBSG42400003",
     "GBSG42400007",
+    "GBSG42400008",
     "GBSTK0700004",
     "GBSTK0700007",
     "GBSTK0700009",
@@ -20745,7 +20749,8 @@
     "spotify:track:4ymd3iAOgswyIZFHdwTILF": "USC4R1901438",
     "spotify:track:2q0WFOsFc7Gd9cujpPmZMC": "FRS630300092",
     "spotify:track:2Bx62uYPdyvACpPB0gu7MX": "USMTD1505827",
-    "spotify:track:4260lC2xwUDOMvLp10cLNm": "USRO20625201"
+    "spotify:track:4260lC2xwUDOMvLp10cLNm": "USRO20625201",
+    "spotify:track:1gIfQhhv0inJEugVgnP4gy": "GBSG42400008"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792335838,
@@ -24112,6 +24117,10 @@
     "madeleine peyroux|||i'm all right": {
       "artist": "Madeleine Peyroux",
       "title": "I'm All Right"
+    },
+    "nick cave & the bad seeds|||long dark night": {
+      "artist": "Nick Cave & The Bad Seeds",
+      "title": "Long Dark Night"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -26990,6 +26999,11 @@
       "uri": "spotify:track:4260lC2xwUDOMvLp10cLNm",
       "artist": "Madeleine Peyroux",
       "title": "I'm All Right"
+    },
+    "nick cave & the bad seeds|||long dark night": {
+      "uri": "spotify:track:1gIfQhhv0inJEugVgnP4gy",
+      "artist": "Nick Cave & The Bad Seeds",
+      "title": "Long Dark Night"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -27595,5 +27609,6 @@
   "__match_v35__r e m|||strange currencies": "spotify:track:4ymd3iAOgswyIZFHdwTILF",
   "__match_v35__air|||universal traveler": "spotify:track:2q0WFOsFc7Gd9cujpPmZMC",
   "__match_v35__tobias jesso jr|||how could you babe": "spotify:track:2Bx62uYPdyvACpPB0gu7MX",
-  "__match_v35__madeleine peyroux|||i'm all right": "spotify:track:4260lC2xwUDOMvLp10cLNm"
+  "__match_v35__madeleine peyroux|||i'm all right": "spotify:track:4260lC2xwUDOMvLp10cLNm",
+  "__match_v35__nick cave & the bad seeds|||long dark night": "spotify:track:1gIfQhhv0inJEugVgnP4gy"
 }
