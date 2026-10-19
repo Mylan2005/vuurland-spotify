@@ -1230,6 +1230,10 @@ V81_VERIFIED_CATALOG_TRACKS = {
     # v89: publiek bekende originele opname; uitsluitend GET-kandidaat.
     # Volledige validatie blijft verplicht, geen toelating op basis van dit ID.
     ("pieta brown", "lullaby"): "6TnvLATtSG3WsW9vUuUZgQ",
+    # v91: RadioBox voegt Phoebe Bridgers toe aan de hoofdartiestcredit.
+    # De officiële Spotify-credit is jasmine.4.t; ID blijft alleen locator
+    # en wordt via GET /tracks volledig gevalideerd.
+    ("jasmine.4.t & phoebe bridgers", "guy fawkes tesco dissociation"): "6bPvOeqJRytjU4KFl6Wzdy",
     # v88: exact door gebruiker geteste Spotify-links; GET + volledige validatie.
     ("anoushka shankar & karsh kale", "easy (w/ norah jones)"): "1Zlp3AkCc1CCtp3yUwqdRr",
     ("casualties of cool", "flight"): "73qdi1UuN5aHXwG2trXim4",
@@ -1350,6 +1354,9 @@ def find_spotify_track(
     elif v88_radio_key == ("manassas", "colorado"):
         artist = "Stephen Stills"
         print("📝 v88: Manassas — Colorado → Stephen Stills (albumcontrole verplicht)")
+    elif v88_radio_key == ("jasmine.4.t & phoebe bridgers", "guy fawkes tesco dissociation"):
+        artist = "jasmine.4.t"
+        print("📝 v91: RadioBox-duetcredit → Spotify-hoofdartiest jasmine.4.t")
 
     known_artist = " ".join(
         artist.strip().casefold()
@@ -2081,7 +2088,7 @@ def find_spotify_track(
     # v81: exact geverifieerde cataloguslocator in plaats van nog een
     # vruchteloze Search. Maximaal één Spotify-opzoekactie per ronde;
     # de gemeenschappelijke kandidaatvalidatie hieronder blijft intact.
-    catalog_id = v81_catalog_locator(*v88_radio_key) if v88_radio_key in {("casualties of cool", "flight"), ("manassas", "colorado")} else v81_catalog_locator(artist, title)
+    catalog_id = v81_catalog_locator(*v88_radio_key) if v88_radio_key in {("casualties of cool", "flight"), ("manassas", "colorado"), ("jasmine.4.t & phoebe bridgers", "guy fawkes tesco dissociation")} else v81_catalog_locator(artist, title)
     catalog_reason = 'v81' if catalog_id else None
     if not catalog_id:
         catalog_id = v82_confirmed_locator(load_cache(), artist, title)
