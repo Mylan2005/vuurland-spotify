@@ -26,7 +26,8 @@ with tempfile.TemporaryDirectory() as temp:
  spec=importlib.util.spec_from_file_location('v87batch',root/'vuurland_sync.py')
  mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
  expected={('Ludwig van Beethoven','Für Elise'):'1REPTIRIQ4zI15g6rD2bpX',
-           ('Nick Lowe','When I Write The Book'):'5UN8ZYczY8p56eRWhZAKVm'}
+           ('Nick Lowe','When I Write The Book'):'5UN8ZYczY8p56eRWhZAKVm',
+           ('Pieta Brown','Lullaby'):'6TnvLATtSG3WsW9vUuUZgQ'}
  for entry in cases:
   assert mod.v81_catalog_locator(*entry)==expected.get(entry),entry
   print('✅',entry[0],'—',entry[1],':', 'cataloguslookup met volledige validatie' if entry in expected else 'geen onveilige geforceerde koppeling')

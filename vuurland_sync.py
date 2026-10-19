@@ -1164,6 +1164,11 @@ def v80_search_route(artist, title, variant, confirmed=None):
     if confirmed and confirmed.get('title') and confirmed.get('artist'):
         # Alleen eerder gevalideerde artiest/titel; validatie blijft verplicht.
         return {'title': confirmed['title'], 'artist': confirmed['artist'], 'reason': 'confirmed_catalog_spellings'}
+    # v89: afwijkende zoekroute bij gewone woorden in gemiste radiotitels.
+    # De vorige strategie maakte van "Lullaby" bijvoorbeeld "L U L L A B Y".
+    # Dit was geen officiële catalogustitel. Houd de normale woorden intact.
+    if variant == 1 and artist.casefold().strip() == "pieta brown" and title.casefold().strip() == "lullaby":
+        return {'title': title, 'artist': artist, 'reason': 'v89_preserve_title'}
     if variant == 1 and re.fullmatch(r'[A-Za-z]{6,16}', title):
         return {'title': ' '.join(title.upper()), 'artist': artist, 'reason': 'spaced_letters'}
     return {'title': title, 'artist': artist, 'reason': 'ordinary'}
@@ -1213,6 +1218,9 @@ V81_VERIFIED_CATALOG_TRACKS = {
     # v87-batch: publieke Spotify-track plus volledige markt-, artiest- en titelvalidatie.
     ("ludwig van beethoven", "für elise"): "1REPTIRIQ4zI15g6rD2bpX",
     ("nick lowe", "when i write the book"): "5UN8ZYczY8p56eRWhZAKVm",
+    # v89: publiek bekende originele opname; uitsluitend GET-kandidaat.
+    # Volledige validatie blijft verplicht, geen toelating op basis van dit ID.
+    ("pieta brown", "lullaby"): "6TnvLATtSG3WsW9vUuUZgQ",
     # v88: exact door gebruiker geteste Spotify-links; GET + volledige validatie.
     ("anoushka shankar & karsh kale", "easy (w/ norah jones)"): "1Zlp3AkCc1CCtp3yUwqdRr",
     ("casualties of cool", "flight"): "73qdi1UuN5aHXwG2trXim4",
