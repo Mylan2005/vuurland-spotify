@@ -85,6 +85,7 @@ ARTIST_ALIASES = {
 
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlist/?lang=nl"
+BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 
 CHECK_EVERY_SECONDS = 120  # 2 minuten
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1114,6 +1115,14 @@ def get_mellow_mix_tracks():
     return get_radiobox_tracks(
         MELLOW_MIX_SOURCE_URL,
         "Radio Paradise Mellow Mix",
+    )
+
+
+def get_big_sonic_heaven_tracks():
+    return get_radiobox_tracks(
+        BIG_SONIC_HEAVEN_SOURCE_URL,
+        "Big Sonic Heaven Radio",
+        {"big sonic heaven radio"},
     )
 
 
@@ -5040,7 +5049,7 @@ def v51_release_old_radio_failures(cache, limit=1):
     if '__v51_radio_release_pending' not in cache:
         cache['__v51_radio_release_pending'] = [
             key for key, entry in failed.items()
-            if isinstance(entry,dict) and entry.get('source') in ('vuurland','mellow_mix')
+            if isinstance(entry,dict) and entry.get('source') in ('vuurland','mellow_mix','big_sonic_heaven')
         ]
     pending = cache['__v51_radio_release_pending']
     released = 0
@@ -5203,10 +5212,10 @@ def v78_recover_and_prioritize(cache, live_queue, radio_sources):
                 source_for.setdefault(_v47_key(artist, title), source['id'])
         for store_name in ('__v47_failed_tracks', '__v51_radio_unmatched'):
             for key, entry in cache.get(store_name, {}).items():
-                if isinstance(entry, dict) and entry.get('source') in ('vuurland', 'mellow_mix'):
+                if isinstance(entry, dict) and entry.get('source') in ('vuurland', 'mellow_mix', 'big_sonic_heaven'):
                     source_for.setdefault(key, entry['source'])
         for item in live_queue:
-            if isinstance(item, dict) and item.get('source') in ('vuurland', 'mellow_mix'):
+            if isinstance(item, dict) and item.get('source') in ('vuurland', 'mellow_mix', 'big_sonic_heaven'):
                 source_for.setdefault(_v47_key(item.get('artist',''), item.get('title','')), item['source'])
         existing = {_v47_key(x.get('artist',''), x.get('title',''))
                     for x in live_queue if isinstance(x, dict)}
@@ -5250,7 +5259,7 @@ def v81_requeue_confirmed_catalog(cache, live_queue, radio_sources):
             sources.setdefault(key, source['id'])
     for store_name in ('__v47_failed_tracks', '__v51_radio_unmatched'):
         for key, entry in cache.get(store_name, {}).items():
-            if isinstance(entry, dict) and entry.get('source') in ('vuurland','mellow_mix'):
+            if isinstance(entry, dict) and entry.get('source') in ('vuurland','mellow_mix','big_sonic_heaven'):
                 sources.setdefault(key, entry['source'])
     active = {_v47_key(x.get('artist',''), x.get('title','')) for x in live_queue
               if isinstance(x, dict)}
@@ -5326,6 +5335,12 @@ def sync():
             "name": "Radio Paradise Mellow Mix",
             "tracks": get_mellow_mix_tracks(),
             "cache_key": "__last_radio_key_mellow_mix",
+        },
+        {
+            "id": "big_sonic_heaven",
+            "name": "Big Sonic Heaven Radio",
+            "tracks": get_big_sonic_heaven_tracks(),
+            "cache_key": "__last_radio_key_big_sonic_heaven",
         },
     ]
 
@@ -5484,7 +5499,7 @@ def sync():
             if (normalize_match(artist), normalize_match(title)) not in reviewed:
                 continue
             source = entry.get('source')
-            if source not in ('vuurland', 'mellow_mix'):
+            if source not in ('vuurland', 'mellow_mix', 'big_sonic_heaven'):
                 continue
             old_failed.pop(key,None)
             parked.pop(key,None)
@@ -5565,7 +5580,7 @@ def sync():
 
     # v69: alleen RadioBox. Verwijder eventueel resterende Duyster-queue-items.
     live_queue = [x for x in live_queue if isinstance(x, dict) and
-                  x.get("source") in ("vuurland", "mellow_mix")]
+                  x.get("source") in ("vuurland", "mellow_mix", "big_sonic_heaven")]
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
 
@@ -5909,7 +5924,7 @@ def sync():
     # v66: één succesvolle toevoeging per ronde, roterend over de bronnen.
     processed_item_ids = set()
     max_queue_items_per_round = 35
-    source_order = ("vuurland", "mellow_mix")
+    source_order = ("vuurland", "mellow_mix", "big_sonic_heaven")
     source_turn = str(cache.get("__v42_source_turn", "vuurland"))
     if source_turn not in source_order:
         source_turn = "vuurland"
@@ -5951,7 +5966,7 @@ def sync():
     for _candidate in live_queue:
         if not isinstance(_candidate, dict):
             continue
-        if str(_candidate.get("source") or "vuurland").strip() not in ("vuurland", "mellow_mix"):
+        if str(_candidate.get("source") or "vuurland").strip() not in ("vuurland", "mellow_mix", "big_sonic_heaven"):
             continue
         if _v41_cooldown_until(_candidate) > _queue_now:
             key = (f"{normalize_match(_candidate.get('artist', ''))}|||"
@@ -6401,7 +6416,7 @@ def sync():
         # Radiomissers na vijf echte, mislukte zoekacties niet meer zoeken.
         # Geen blokkering van bestaande positieve Spotify-matches.
         radio_source = item.get('source', 'duyster')
-        if (radio_source in ('vuurland', 'mellow_mix')
+        if (radio_source in ('vuurland', 'mellow_mix', 'big_sonic_heaven')
                 and match_cache_key not in cache
                 and v51_radio_failed_count(cache, artist, title) >= RADIO_FAILED_SEARCH_LIMIT):
             v51_radio_park(cache, artist, title, radio_source,
@@ -6499,7 +6514,7 @@ def sync():
         if uri is None:
 
             failed_source = item.get('source', 'duyster')
-            if failed_source in ('vuurland', 'mellow_mix'):
+            if failed_source in ('vuurland', 'mellow_mix', 'big_sonic_heaven'):
                 key = v51_radio_failure_key(artist, title)
                 counts = cache.setdefault('__v51_radio_failed_searches', {})
                 count = int(counts.get(key, 0) or 0) + 1
