@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "palace|||face in the crowd",
-  "__last_radio_key_mellow_mix": "the barr brothers|||beggar in the morning",
+  "__last_radio_key_vuurland": "rosalia|||sauvignon blanc",
+  "__last_radio_key_mellow_mix": "crosby stills & nash|||helplessly hoping",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1294,6 +1294,7 @@
       "cowboy junkies|||lay it down",
       "cowboy junkies|||sweet jane live",
       "cracker|||the golden age",
+      "crosby stills & nash|||helplessly hoping",
       "crosby stills & nash|||just a song before i go",
       "crosby stills & nash|||marrakesh express",
       "crosby stills & nash|||southern cross",
@@ -2464,7 +2465,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4211,
+  "__vuurland_active_playlist_count": 4212,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -3723,6 +3724,7 @@
     "cristovam|||fever",
     "cristovam|||fever (feat. boy & bear)",
     "cristovam|||fever feat boy & bear",
+    "crosby stills & nash|||helplessly hoping",
     "crosby stills & nash|||just a song before i go",
     "crosby stills & nash|||marrakesh express",
     "crosby stills & nash|||southern cross",
@@ -12471,6 +12473,7 @@
     "spotify:track:7iLt00qQRBUbcBj0ZlWCAq",
     "spotify:track:7iTz3BptKtiH3uyLmaQS0F",
     "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
+    "spotify:track:7ieCy9tubdq5vsDm5MY2d7",
     "spotify:track:7ihwGiBDcSFAnbqtVdPCfr",
     "spotify:track:7isVqPzG3R5ni6IM4YG0sv",
     "spotify:track:7izvpfJAEi2EObfHFOxfkG",
@@ -15601,6 +15604,7 @@
     "USAT20000094",
     "USAT20001177",
     "USAT20001527",
+    "USAT20100512",
     "USAT20100904",
     "USAT20103282",
     "USAT20105338",
@@ -21068,7 +21072,8 @@
     "spotify:track:1r8BiPbyYhKaWEXOjMEip4": "USNO11300387",
     "spotify:track:0byOqNZN9ailhoORv5Ps0Z": "USSM16501154",
     "spotify:track:45rroidzhDiL3Q392OILFj": "FRZ089904080",
-    "spotify:track:7pCF5qq2HYbPTXXglBdqaO": "CA0RZ1100071"
+    "spotify:track:7pCF5qq2HYbPTXXglBdqaO": "CA0RZ1100071",
+    "spotify:track:7ieCy9tubdq5vsDm5MY2d7": "USAT20100512"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792335838,
@@ -24717,6 +24722,10 @@
     "the barr brothers|||beggar in the morning": {
       "artist": "The Barr Brothers",
       "title": "Beggar in the Morning"
+    },
+    "crosby stills & nash|||helplessly hoping": {
+      "artist": "Crosby, Stills & Nash",
+      "title": "Helplessly Hoping"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -27920,6 +27929,11 @@
       "uri": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
       "artist": "The Barr Brothers",
       "title": "Beggar in the Morning"
+    },
+    "crosby stills & nash|||helplessly hoping": {
+      "uri": "spotify:track:7ieCy9tubdq5vsDm5MY2d7",
+      "artist": "Crosby, Stills & Nash",
+      "title": "Helplessly Hoping"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -28589,5 +28603,6 @@
   "__match_v35__oscar isaac|||green green rocky road": "spotify:track:1r8BiPbyYhKaWEXOjMEip4",
   "__match_v35__simon & garfunkel|||i am a rock": "spotify:track:0byOqNZN9ailhoORv5Ps0Z",
   "__match_v35__youssou n'dour|||this dream w/ peter gabriel": "spotify:track:45rroidzhDiL3Q392OILFj",
-  "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO"
+  "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
+  "__match_v35__crosby stills & nash|||helplessly hoping": "spotify:track:7ieCy9tubdq5vsDm5MY2d7"
 }
