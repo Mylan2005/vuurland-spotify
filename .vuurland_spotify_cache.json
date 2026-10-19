@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "boy & bear|||feeding line",
-  "__last_radio_key_mellow_mix": "air|||left bank",
+  "__last_radio_key_mellow_mix": "k d lang|||after the gold rush",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1711,6 +1711,7 @@
       "jump little children|||sparrow",
       "jump little children|||words of wisdom",
       "junius meyvant|||carry on with me",
+      "k d lang|||after the gold rush",
       "k d lang|||coming home",
       "k d lang|||constant craving",
       "k d lang|||heaven",
@@ -2565,7 +2566,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4313,
+  "__vuurland_active_playlist_count": 4314,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -5366,6 +5367,7 @@
     "justin vernon|||daphne",
     "justin vernon|||song for a lover - of long ago",
     "k d lang & the siss boom bang|||heaven",
+    "k d lang|||after the gold rush",
     "k d lang|||coming home",
     "k d lang|||constant craving",
     "k d lang|||heaven",
@@ -10343,6 +10345,7 @@
     "spotify:track:2tRxHjEkdgGMv9kZbOyqOH",
     "spotify:track:2tSjhsJNIMBjNpnapXnd7y",
     "spotify:track:2tdNTV4xpZgiom27mENc2N",
+    "spotify:track:2tlYXcTPCg8FyzwAz4M3p1",
     "spotify:track:2tnlTf2pIIYlQtUAo5AbNE",
     "spotify:track:2tr4oclswJ6v3dfDlI01HD",
     "spotify:track:2tr8uTaifUtZimedSRmcoY",
@@ -16655,6 +16658,7 @@
     "USNO10480706",
     "USNO10480904",
     "USNO10482605",
+    "USNO10484701",
     "USNO10600996",
     "USNO10750505",
     "USNO10750506",
@@ -21661,7 +21665,8 @@
     "spotify:track:0rib9hiYy1NWL0w8BUYgmd": "USSM10205135",
     "spotify:track:3qqgZJRKoi4oRva6eCrCC4": "USTCF1082519",
     "spotify:track:6y4xl2pOwGszgqlJxiZKwr": "USSM10022804",
-    "spotify:track:08MmZd9Xslaltyae3AG8lY": "FRU052060006"
+    "spotify:track:08MmZd9Xslaltyae3AG8lY": "FRU052060006",
+    "spotify:track:2tlYXcTPCg8FyzwAz4M3p1": "USNO10484701"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792422292,
@@ -25768,6 +25773,10 @@
     "air|||left bank": {
       "artist": "Air",
       "title": "Left Bank"
+    },
+    "k d lang|||after the gold rush": {
+      "artist": "k.d. lang",
+      "title": "After the Gold Rush"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -29466,6 +29475,11 @@
       "uri": "spotify:track:08MmZd9Xslaltyae3AG8lY",
       "artist": "Air",
       "title": "Left Bank"
+    },
+    "k d lang|||after the gold rush": {
+      "uri": "spotify:track:2tlYXcTPCg8FyzwAz4M3p1",
+      "artist": "k.d. lang",
+      "title": "After the Gold Rush"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -30238,5 +30252,6 @@
   "__match_v35__uncle tupelo|||sandusky": "spotify:track:0rib9hiYy1NWL0w8BUYgmd",
   "__match_v35__john hiatt|||crossing muddy waters": "spotify:track:3qqgZJRKoi4oRva6eCrCC4",
   "__match_v35__toad the wet sprocket|||windmills": "spotify:track:6y4xl2pOwGszgqlJxiZKwr",
-  "__match_v35__air|||left bank": "spotify:track:08MmZd9Xslaltyae3AG8lY"
+  "__match_v35__air|||left bank": "spotify:track:08MmZd9Xslaltyae3AG8lY",
+  "__match_v35__k d lang|||after the gold rush": "spotify:track:2tlYXcTPCg8FyzwAz4M3p1"
 }
