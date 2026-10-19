@@ -6122,7 +6122,7 @@ def sync():
           + f"; startbron deze ronde: {round_start_source}; "
           + f"volgende ronde: {next_round_source}.")
 
-    # v95: strikte FIFO per bron. Nieuwe uitzendingen staan achteraan.
+    # v97: FIFO per bron met eerlijke fallback bij een lege beurt.
     # Geen nieuwe-muziek-voorrang of historische v78-herstelprioriteit.
 
     for _queue_slot in range(max_queue_items_per_round):
@@ -6134,9 +6134,12 @@ def sync():
         waiting_for_retry = False
         now = time.time()
 
-        # v95: exact één bron krijgt per ronde een beurt, óók wanneer
-        # andere bronnen wel nummers hebben. Geen fallback naar andere bron.
-        round_sources = [round_start_source]
+        # v97: vaste bron heeft altijd voorrang; is die leeg of wachten
+        # alle items op een retry, gebruik de andere bronnen als fallback.
+        # De opgeslagen volgende beurt verandert hierdoor nooit.
+        # Binnen iedere bron blijft de wachtrij FIFO (oudste eerst).
+        source_offset = source_order.index(round_start_source)
+        round_sources = list(source_order[source_offset:] + source_order[:source_offset])
         for preferred_source in round_sources:
             # v95: oudste eerst volgens de opgeslagen FIFO-volgorde.
             candidates = list(enumerate(live_queue))
