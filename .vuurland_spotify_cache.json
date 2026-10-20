@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "the veils|||lavinia",
-  "__last_radio_key_mellow_mix": "vince guaraldi|||charlie brown theme",
+  "__last_radio_key_vuurland": "tom odell feat aurora|||butterflies",
+  "__last_radio_key_mellow_mix": "van morrison|||precious time",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -283,6 +283,7 @@
       "deus|||1989",
       "deus|||7 days 7 weeks",
       "deus|||eternal woman",
+      "deus|||keep you close",
       "deus|||love breaks down",
       "deus|||nothing really ends",
       "deus|||smokers reflect",
@@ -3160,7 +3161,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4664,
+  "__vuurland_active_playlist_count": 4665,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly|||clearest blue",
@@ -4712,6 +4713,7 @@
     "destroyer|||kaputt",
     "deus|||1989",
     "deus|||7 days 7 weeks",
+    "deus|||keep you close",
     "deus|||love breaks down",
     "deus|||nothing really ends",
     "deus|||smokers reflect",
@@ -13526,6 +13528,7 @@
     "spotify:track:6TJTzEVtYciiZzPoywIQ3G",
     "spotify:track:6TLGmbTgp7hJ7jsDTTHRzw",
     "spotify:track:6TU0zW9qJaG53vSa1R57qb",
+    "spotify:track:6Tc6yNMsztFOG3qmxRZqEj",
     "spotify:track:6Tdf6ngDboRqCwsew2zqyT",
     "spotify:track:6Thn8AOHIwPCkf2O4ZgfC2",
     "spotify:track:6TjUg1cTUzWHbal6yQAi7c",
@@ -14637,6 +14640,7 @@
     "BEP012315001",
     "BEP012450004",
     "BEP012550006",
+    "BEPO11100091",
     "BEQ591910003",
     "BEQ591910010",
     "BET020901002",
@@ -23675,7 +23679,8 @@
     "spotify:track:0gZQ4BdbiHMb6WGntdmorw": "UKPRM1800913",
     "spotify:track:5jWXMkoKxn1NOvImfLqkP5": "GBUM71507629",
     "spotify:track:1Tn31wDSYGPyFlKRLLFfq9": "GBCVZ0300719",
-    "spotify:track:5CARkEp37BcQdq8t4b1D1E": "GBGPY0700004"
+    "spotify:track:5CARkEp37BcQdq8t4b1D1E": "GBGPY0700004",
+    "spotify:track:6Tc6yNMsztFOG3qmxRZqEj": "BEPO11100091"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792422292,
@@ -29202,6 +29207,10 @@
     "sing-sing|||i'll be 2026 remaster": {
       "artist": "Sing-Sing",
       "title": "I'll Be"
+    },
+    "deus|||keep you close": {
+      "artist": "dEUS",
+      "title": "Keep You Close"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -34645,6 +34654,11 @@
       "uri": "spotify:track:5CARkEp37BcQdq8t4b1D1E",
       "artist": "Sing-Sing",
       "title": "I'll Be"
+    },
+    "deus|||keep you close": {
+      "uri": "spotify:track:6Tc6yNMsztFOG3qmxRZqEj",
+      "artist": "dEUS",
+      "title": "Keep You Close"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -36616,6 +36630,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "tom odell feat aurora|||butterflies",
+      "deus|||keep you close",
       "the veils|||lavinia",
       "kings of leon|||my whole world",
       "gregory alan isakov|||liars",
@@ -36663,6 +36679,7 @@
       "phoebe bridgers|||summers end"
     ],
     "mellow_mix": [
+      "van morrison|||precious time",
       "vince guaraldi|||charlie brown theme",
       "j j cale|||after midnight",
       "neil young|||harvest moon",
@@ -37014,5 +37031,6 @@
   "__match_v35__massive attack & azekel|||ritual spirit": "spotify:track:5jWXMkoKxn1NOvImfLqkP5",
   "__match_v35__the veils|||lavinia": "spotify:track:1Tn31wDSYGPyFlKRLLFfq9",
   "__not_found_v35__kashtin|||akua tuta": 1792489939,
-  "__match_v35__sing-sing|||i'll be 2026 remaster": "spotify:track:5CARkEp37BcQdq8t4b1D1E"
+  "__match_v35__sing-sing|||i'll be 2026 remaster": "spotify:track:5CARkEp37BcQdq8t4b1D1E",
+  "__match_v35__deus|||keep you close": "spotify:track:6Tc6yNMsztFOG3qmxRZqEj"
 }
