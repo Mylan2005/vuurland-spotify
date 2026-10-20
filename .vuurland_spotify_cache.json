@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "joji|||glimpse of us",
-  "__last_radio_key_mellow_mix": "the band|||atlantic city",
+  "__last_radio_key_mellow_mix": "bruce springsteen|||brilliant disguise",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1363,6 +1363,7 @@
       "bruce cockburn|||us all",
       "bruce cockburn|||wondering where the lions are",
       "bruce cockburn|||wondering where the lions are live",
+      "bruce springsteen|||brilliant disguise",
       "bruce springsteen|||i'm on fire",
       "bruce springsteen|||the promised land",
       "bryan ferry|||slave to love",
@@ -3324,7 +3325,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4798,
+  "__vuurland_active_playlist_count": 4799,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -4901,6 +4902,7 @@
     "dean blunt|||5",
     "dean blunt|||elias rønnenfelt|||5",
     "deary|||aurelia",
+    "deary|||beauty in all blue satin",
     "death cab for cutie|||here to forever",
     "death cab for cutie|||i will follow you into the dark",
     "death cab for cutie|||pepper",
@@ -12575,6 +12577,7 @@
     "spotify:track:3w3seawXfQGat9yH2B8Tge",
     "spotify:track:3wAX3qn53iQUFE84hpfeen",
     "spotify:track:3wBzbRG2OnmKl9jYyR6umu",
+    "spotify:track:3wNIlcZaZnpYPLVgMJwF2I",
     "spotify:track:3wR09YCqB7SA60ZgtPFIOu",
     "spotify:track:3wScjEbCUk4hFUA18ky4Wm",
     "spotify:track:3wXX9ucjagXvMpl2io6dk7",
@@ -15868,6 +15871,7 @@
     "GB77R1400025",
     "GB77R1400039",
     "GB77R1400043",
+    "GB8FC2300032",
     "GB8FC2400067",
     "GB8FC2500009",
     "GB8FC2500084",
@@ -24539,7 +24543,8 @@
     "spotify:track:7893nIGWrR1Era5QyoAIEG": "USSH59843263",
     "spotify:track:2EB1aFLWC4uIfld5Z3Yj1z": "USWB11304510",
     "spotify:track:5aSNQlOXr7V4sAxQ4YOlBV": "GBAFL0700003",
-    "spotify:track:6nmr64Mo4RD3R1pLshvmoG": "GBUM71800809"
+    "spotify:track:6nmr64Mo4RD3R1pLshvmoG": "GBUM71800809",
+    "spotify:track:3wNIlcZaZnpYPLVgMJwF2I": "GB8FC2300032"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -30573,6 +30578,10 @@
     "florence the machine|||patricia": {
       "artist": "Florence + The Machine",
       "title": "Patricia"
+    },
+    "deary|||beauty in all blue satin": {
+      "artist": "deary",
+      "title": "Beauty In All Blue Satin"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -36636,6 +36645,11 @@
       "uri": "spotify:track:6nmr64Mo4RD3R1pLshvmoG",
       "artist": "Florence + The Machine",
       "title": "Patricia"
+    },
+    "deary|||beauty in all blue satin": {
+      "uri": "spotify:track:3wNIlcZaZnpYPLVgMJwF2I",
+      "artist": "deary",
+      "title": "Beauty In All Blue Satin"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -38709,6 +38723,7 @@
       "daughter|||youth"
     ],
     "mellow_mix": [
+      "bruce springsteen|||brilliant disguise",
       "the band|||atlantic city",
       "grateful dead|||sugar magnolia",
       "james mcmurtry|||walk between the raindrops",
@@ -38807,8 +38822,7 @@
       "kashtin|||akua tuta",
       "tori amos|||general joy",
       "third world|||feel a little better",
-      "eric clapton|||promises",
-      "the rolling stones|||sweet black angel"
+      "eric clapton|||promises"
     ],
     "big_sonic_heaven": [
       "tokyo shoegazer|||new dawn",
@@ -39307,5 +39321,6 @@
   "__match_v35__james mcmurtry|||walk between the raindrops": "spotify:track:7893nIGWrR1Era5QyoAIEG",
   "__match_v35__grateful dead|||sugar magnolia": "spotify:track:2EB1aFLWC4uIfld5Z3Yj1z",
   "__match_v35__dead can dance|||ocean": "spotify:track:5aSNQlOXr7V4sAxQ4YOlBV",
-  "__match_v35__florence the machine|||patricia": "spotify:track:6nmr64Mo4RD3R1pLshvmoG"
+  "__match_v35__florence the machine|||patricia": "spotify:track:6nmr64Mo4RD3R1pLshvmoG",
+  "__match_v35__deary|||beauty in all blue satin": "spotify:track:3wNIlcZaZnpYPLVgMJwF2I"
 }
