@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "phoebe bridgers|||scott street",
-  "__last_radio_key_mellow_mix": "the slow show|||god only knows",
+  "__last_radio_key_mellow_mix": "van morrison|||and it stoned me",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -3356,7 +3356,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4818,
+  "__vuurland_active_playlist_count": 4819,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -5526,6 +5526,7 @@
     "full trunk & sivan talmor|||as a stone",
     "full trunk|||as a stone",
     "full trunk|||sivan talmor|||as a stone",
+    "fun with ether|||sea burst blue",
     "fun with ether|||soft smiles only",
     "future islands|||back in the tall grass",
     "future islands|||peach",
@@ -13275,6 +13276,7 @@
     "spotify:track:4x7SI484m7dDMMACLMlsFJ",
     "spotify:track:4x8BYyjXTCgvE1GEBghcDH",
     "spotify:track:4xAHN13Q8MgKXO18rSyvzU",
+    "spotify:track:4xCI8H51Dwvq3GuGSzWiRq",
     "spotify:track:4xFxK0FXmNlUDRgCaIQCVn",
     "spotify:track:4xUDSGjehVdoEkaC62rsTL",
     "spotify:track:4xiyq1iRdsxuU1BPUJ490Z",
@@ -17640,6 +17642,7 @@
     "QZCWY2200001",
     "QZDA42468804",
     "QZDA52397704",
+    "QZDA52397705",
     "QZDA72031335",
     "QZDA82575614",
     "QZDA82592467",
@@ -24651,7 +24654,8 @@
     "spotify:track:68n1IuuXABjTwytnb6IhMS": "USHM91996645",
     "spotify:track:5omla5BqDJ4hHKz3IW89Py": "GB5KW2600790",
     "spotify:track:1i6AKXriagrBMkC1yuPOPr": "DECB81400134",
-    "spotify:track:5LYt0LwMFz7u5NsK6VO4rC": "GBAFL8500066"
+    "spotify:track:5LYt0LwMFz7u5NsK6VO4rC": "GBAFL8500066",
+    "spotify:track:4xCI8H51Dwvq3GuGSzWiRq": "QZDA52397705"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -30768,6 +30772,10 @@
     "cocteau twins|||sultitan itan": {
       "artist": "Cocteau Twins",
       "title": "Sultitan Itan"
+    },
+    "fun with ether|||sea burst blue": {
+      "artist": "Fun With Ether",
+      "title": "Sea Burst Blue"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -36931,6 +36939,11 @@
       "uri": "spotify:track:5LYt0LwMFz7u5NsK6VO4rC",
       "artist": "Cocteau Twins",
       "title": "Sultitan Itan"
+    },
+    "fun with ether|||sea burst blue": {
+      "uri": "spotify:track:4xCI8H51Dwvq3GuGSzWiRq",
+      "artist": "Fun With Ether",
+      "title": "Sea Burst Blue"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -39004,6 +39017,7 @@
       "isbells|||dreamer"
     ],
     "mellow_mix": [
+      "van morrison|||and it stoned me",
       "the slow show|||god only knows",
       "paul simon|||was a sunny day",
       "jackie wilson|||your love keeps lifting me higher & higher",
@@ -39102,8 +39116,7 @@
       "daniel lanois|||jolie louise",
       "nickel creek|||tomorrow is a long time",
       "norah jones|||carry on",
-      "the beatles|||girl",
-      "beck|||everybody's gotta learn sometime"
+      "the beatles|||girl"
     ],
     "big_sonic_heaven": [
       "stereolab|||fed up with your job",
@@ -39624,5 +39637,6 @@
   "__match_v35__ships in the night|||lost times": "spotify:track:68n1IuuXABjTwytnb6IhMS",
   "__match_v35__johnny marr|||all in a life": "spotify:track:5omla5BqDJ4hHKz3IW89Py",
   "__match_v35__the slow show|||god only knows": "spotify:track:1i6AKXriagrBMkC1yuPOPr",
-  "__match_v35__cocteau twins|||sultitan itan": "spotify:track:5LYt0LwMFz7u5NsK6VO4rC"
+  "__match_v35__cocteau twins|||sultitan itan": "spotify:track:5LYt0LwMFz7u5NsK6VO4rC",
+  "__match_v35__fun with ether|||sea burst blue": "spotify:track:4xCI8H51Dwvq3GuGSzWiRq"
 }
