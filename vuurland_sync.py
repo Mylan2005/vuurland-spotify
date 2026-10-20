@@ -1153,6 +1153,89 @@ def _numbered_title_equivalent(value):
 
 
 
+# === v98: algemene metadata-equivalenties, nooit autorisatie op track-ID ===
+def v98_credit_identity(value):
+    """Exacte creditidentiteit met veilige parenthetische transliteratie.
+
+    Een artiest kan bij Spotify een naam in een ander schrift gebruiken
+    met de RadioBox-naam expliciet tussen haakjes. Geen fuzzy transliteratie.
+    """
+    raw = str(value or '').strip()
+    import unicodedata
+    raw = unicodedata.normalize('NFKD', raw.casefold().replace('&', ' and '))
+    raw = ''.join(c for c in raw if not unicodedata.combining(c))
+    return ''.join(c for c in raw if c.isalnum())
+
+
+def v98_exact_collaboration(radio_credit, spotify_names):
+    """Volledige meerdere artiesten, ongeacht volgorde, zonder ontbrekende gasten.
+
+    Alleen actief als Spotify 2+ losse artist objects geeft. Splits geen
+    gewone bandnamen naar willekeurige zelfstandige solo-opnames.
+    """
+    if len(spotify_names) < 2:
+        return False
+    radio = str(radio_credit or '').strip()
+    # `A, B & C`, `A, B and C`, `A and B` en `A & B`.
+    pieces = re.split(r'\s*,\s*|\s+(?:&|and)\s+', radio, flags=re.I)
+    pieces = [p.strip().lstrip('& ').strip() for p in pieces if p.strip().lstrip('& ').strip()]
+    expected = [v98_credit_identity(x) for x in pieces]
+    actual = [v98_credit_identity(x) for x in spotify_names]
+    if (len(expected) == len(actual) and len(set(expected)) == len(expected)
+            and sorted(expected) == sorted(actual)):
+        return True
+    # Bandnamen kunnen zelf `&` bevatten: `Iron & Wine and Calexico`.
+    # Test daarom ook exacte volledige Spotify-namen, in elke volgorde,
+    # zonder die bandnaam ooit tot `Iron` en `Wine` te reduceren.
+    if 2 <= len(spotify_names) <= 4:
+        import itertools
+        wanted = v98_credit_identity(radio_credit)
+        for permutation in itertools.permutations(spotify_names):
+            for separator in (' and ', ' & ', ', ', ', '):
+                if v98_credit_identity(separator.join(permutation)) == wanted:
+                    return True
+    return False
+
+
+def v98_parenthetical_artist_alias(radio_artist, spotify_artist):
+    """Alleen letterlijk vermelde volledige naam in Spotify-haakjes."""
+    radio_key = v98_credit_identity(radio_artist)
+    spotify_text = str(spotify_artist or '')
+    return bool(radio_key and any(
+        v98_credit_identity(part) == radio_key
+        for part in re.findall(r'\(([^()]+)\)', spotify_text)
+    ))
+
+
+def v98_classical_movement_key(value):
+    """Voorzichtig werk+deel, zonder uitvoerder uit radiometadata af te leiden."""
+    s = str(value or '').casefold()
+    s = re.sub(r'[^a-z0-9]+', ' ', s)
+    words = set(s.split())
+    # Alleen specifieke bekende structuur: Four Seasons / Summer / movement I.
+    # Geen naam-/ID-exceptie, wel volledige compositie- en bewegingstoets.
+    seasons = ('four seasons' in s or '4 seasons' in s)
+    summer = 'summer' in words
+    movement = ('allegro non molto' in s or 'allegro non moto' in s)
+    if seasons and summer and movement:
+        return ('four seasons', 'summer', 'i', 'allegro non molto')
+    return None
+
+
+def v98_classical_composer_in_title(radio_composer, spotify_title):
+    """Componist in werkmetadata, terwijl Spotify alleen uitvoerders crediteert.
+
+    Vereis de volledige achternaam als afzonderlijk woord in de officiële
+    titel. Dit geeft uitsluitend een artiestbewijs voor een al exact
+    geïdentificeerd klassiek werk en deel, nooit voor een los nummer.
+    """
+    name = str(radio_composer or '').strip().casefold().split()
+    if len(name) < 2 or len(name[-1]) < 5:
+        return False
+    return bool(re.search(r'(?<!\w)' + re.escape(name[-1]) + r'(?!\w)',
+                          str(spotify_title or '').casefold()))
+
+
 # === v80: conservatieve cataloguskennis (geen extra Spotify-requests) ===
 def v80_unicode_search_text(value):
     """Veilige zoek-Schrijfwijze: behoud alle betekenisvolle woorden/cijfers."""
@@ -1987,6 +2070,34 @@ def find_spotify_track(
         if str(part or "").strip()
     )
 
+    # v98: bij samengestelde artiestcredits met meerdere afzonderlijke
+    # namen rangschikt Spotify de volledige radio-string soms slecht.
+    # Gebruik enkel de eerste volledige naam plus exacte titel als zoekhint;
+    # ALLE artiesten blijven verplicht in de lokale kandidaatvalidatie.
+    v98_search_collaborators = re.split(
+        r'\s*,\s*|\s+(?:&|and)\s+',
+        str(primary_search_artist or ''), flags=re.I
+    )
+    if len(v98_search_collaborators) >= 2 and all(
+        len(x.strip()) >= 4 for x in v98_search_collaborators
+    ):
+        first_credit = v98_search_collaborators[0].strip()
+        if len(first_credit) < 5:
+            first_credit = v98_search_collaborators[-1].strip()
+        query = f'"{first_credit}" {search_query_title}'
+
+    # Bij titels van losse letters + een lange artiestnaam verhindert het
+    # fragment 'School of' vaak de vindbaarheid; zoek de GEHELE artiest.
+    if re.fullmatch(r'(?:[A-Za-z]\s+){2,}[A-Za-z]', str(search_query_title).strip()):
+        query = f'"{spotify_search_artist}" "{search_query_title}"'
+
+    # Houd een remaster-jaartal uit de zoekquery; de muziekidentiteit
+    # en versiekeuze worden NADAT Spotify kandidaten geeft gecontroleerd.
+    if re.search(r'(?i)\(\s*\d{4}\s+remaster(?:ed)?\s*\)\s*$', str(search_title)):
+        core = re.sub(r'(?i)\s*\(\s*\d{4}\s+remaster(?:ed)?\s*\)\s*$', '', str(search_title)).strip()
+        if core:
+            query = f'artist:"{spotify_search_artist}" track:"{core}"'
+
     # v49: ultrakorte titels zijn moeilijk te ranken met een ingekorte
     # artiestennaam (bv. "To R. Father John"). Gebruik meteen de volledige
     # artiest + exact afgebakende titel. Bij latere varianten blijft het
@@ -1996,6 +2107,24 @@ def find_spotify_track(
         quoted_title = search_query_title.replace('"', ' ').strip()
         if quoted_artist and quoted_title:
             query = f'artist:"{quoted_artist}" track:"{quoted_title}"'
+
+    # v98: ultrakorte titels met samengestelde artiestcredits hoeven niet
+    # de letterlijk samengevoegde RadioBox-string als artist:-veld te hebben.
+    if len(v98_search_collaborators) >= 2 and all(
+        len(x.strip()) >= 4 for x in v98_search_collaborators
+    ) and search_variant == 0:
+        first_credit = v98_search_collaborators[0].strip()
+        if len(first_credit) < 5:
+            first_credit = v98_search_collaborators[-1].strip()
+        query = f'"{first_credit}" {search_query_title}'
+
+    # v98: niet onnodig filteren op een algemene EP-versieaanduiding.
+    # De eindmatch controleert wel de EP-familie.
+    if (search_variant == 0 and
+            re.search(r'(?i)\(\s*ep\s+version\s*\)\s*$', str(search_title))):
+        core = re.sub(r'(?i)\s*\(\s*ep\s+version\s*\)\s*$', '', str(search_title)).strip()
+        if core:
+            query = f'"{spotify_search_artist}" "{core}"'
 
     # v52.1: Zoekstrategie 1/2 gebruikt de KERNTITEL als de bron een
     # uitvoeringslabel toevoegt. Versievoorkeur blijft uitsluitend in de
@@ -2974,6 +3103,18 @@ def find_spotify_track(
             flags=re.IGNORECASE
         )
 
+        # v98: EP-aanduiding met een extra EP-naam ('Up Home EP version')
+        # is dezelfde familie, zonder de genoemde EP-naam als een andere
+        # song te behandelen. Versiecontrole blijft verplicht.
+        raw_value = re.sub(
+            r'(?i)\s*(?:-\s*)?\([^()]*\bep\s+version\)\s*$',
+            '', raw_value
+        ).strip()
+        raw_value = re.sub(
+            r'(?i)\s+-\s+[^-()]*\bep\s+version\s*$',
+            '', raw_value
+        ).strip()
+
         # Cataloguslabels die dezelfde opname/titel beschrijven.
         raw_value = re.sub(
             r"\s*\((?:[^)]*?\s+version|from\s+the\s+vault)\)",
@@ -3473,6 +3614,49 @@ def find_spotify_track(
                 primary_artist_exact = True
                 primary_artist_score = 1.0
 
+        # v98: exacte 2+ credit-set, ook voor `A, B & C` en omgekeerde
+        # volgorde. Geen ontbrekende gast / geen fuzzy artiestenvergelijking.
+        if (len(wanted_artists) == 1
+                and v98_exact_collaboration(artist, spotify_artists)):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+            v51_credit_rescue = True
+
+        # v98: originele spelling letterlijk in haakjes achter Spotify-
+        # artiestnaam (bv. niet-Latijns schrift + transliteratie).
+        if (len(wanted_artists) == 1
+                and v98_parenthetical_artist_alias(
+                    wanted_artists[0], spotify_artist_objects[0].get("name", ""))):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+
+        # v98: in klassieke muziek kan Spotify de uitvoerders als artiesten
+        # tonen, met de componist uitsluitend in de VOLLEDIGE werktitel.
+        # De strenge werk+deelvergelijking hieronder blijft verplicht.
+        v98_performer_classical_credit = bool(
+            v98_classical_movement_key(title)
+            and v98_classical_movement_key(title)
+                == v98_classical_movement_key(item.get('name', ''))
+            and v98_classical_composer_in_title(
+                wanted_artists[0], item.get('name', ''))
+        )
+        if v98_performer_classical_credit:
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+            v51_credit_rescue = True
+
+        # v98: een artiest met exact dezelfde volledige naam kan later
+        # als gast op soundtrackcredits staan. Alleen het VOLLEDIGE
+        # kernnummer mag matchen; nooit een andere titel of vage substring.
+        v98_credit_at_any_position = bool(
+            len(wanted_artists) == 1 and len(spotify_artists) >= 3
+            and compact(wanted_artists[0]) in spotify_artist_compact
+        )
+        if v98_credit_at_any_position:
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+            v51_credit_rescue = True
+
         # v30: RadioBox kan een samenwerking als "A & B" schrijven,
         # terwijl Spotify alleen A als primaire artiest heeft. Dit is
         # uitsluitend een solo-fallback bij exacte A-credit; geen fuzzy prefix.
@@ -3784,6 +3968,11 @@ def find_spotify_track(
         if (
             wanted_named_variant
             and spotify_named_variant != wanted_named_variant
+            # Een onbenoemde EP-version mag aan een benoemde EP gekoppeld
+            # worden; een gevraagde specifieke EP-naam nooit aan een andere.
+            and not (wanted_named_variant == 'ep'
+                     and spotify_named_variant
+                     and spotify_named_variant.endswith(' ep'))
         ):
             continue
 
@@ -3979,6 +4168,19 @@ def find_spotify_track(
         if v51_classical_title_match:
             structural_title_match = True
 
+        # v98: conservatieve klassieke muziek-metadata. Hetzelfde werk,
+        # seizoen en deel zijn verplicht. Alleen als de volledige
+        # opgegeven componist een Spotify-credit is. Welke uitvoering
+        # RadioBox bedoelde, blijft zonder performer in bron onbekend.
+        v98_classical_equivalent = (
+            primary_artist_exact
+            and v98_classical_movement_key(wanted_title_for_match) is not None
+            and v98_classical_movement_key(wanted_title_for_match)
+                == v98_classical_movement_key(spotify_title)
+        )
+        if v98_classical_equivalent:
+            structural_title_match = True
+
         # v40: a catalog may prefix a FULL song title with "Theme from".
         # Only permit complete equality of the remaining title (at least
         # two words); never a partial title or an arbitrary soundtrack title.
@@ -4091,6 +4293,9 @@ def find_spotify_track(
             spotify_compact == wanted_compact
             or spotify_base_compact == wanted_base_compact
             or structural_title_match
+            # Ook bij een extra officiële verklarende ondertitel blijft
+            # de volledige hoofdtitel exact verplicht, geen substring.
+            or (primary_artist_exact and extension_title_match)
         ):
             continue
 
@@ -4207,7 +4412,10 @@ def find_spotify_track(
         # vastgelegde fallbackvolgorde. Eén Spotify Search blijft één call.
         # "acoustic"/"demo"/"instrumental" krijgen uitsluitend een
         # exacte match: die zijn niet gelijk aan gewone/live-opnames.
-        if wanted_named_variant and spotify_named_variant != wanted_named_variant:
+        if (wanted_named_variant and spotify_named_variant != wanted_named_variant
+                and not (wanted_named_variant == 'ep'
+                         and spotify_named_variant
+                         and spotify_named_variant.endswith(' ep'))):
             continue
 
         def preferred_family(family):
