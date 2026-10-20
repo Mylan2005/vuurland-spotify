@@ -4412,11 +4412,12 @@ def find_spotify_track(
         # vastgelegde fallbackvolgorde. Eén Spotify Search blijft één call.
         # "acoustic"/"demo"/"instrumental" krijgen uitsluitend een
         # exacte match: die zijn niet gelijk aan gewone/live-opnames.
-        if (wanted_named_variant and spotify_named_variant != wanted_named_variant
-                and not (wanted_named_variant == 'ep'
-                         and spotify_named_variant
-                         and spotify_named_variant.endswith(' ep'))):
-            continue
+        if wanted_named_variant and spotify_named_variant != wanted_named_variant:
+            # Alleen onbenoemde EP-versie mag matchen met benoemde EP.
+            if not (wanted_named_variant == 'ep'
+                    and spotify_named_variant
+                    and spotify_named_variant.endswith(' ep')):
+                continue
 
         def preferred_family(family):
             if family in (None, "ordinary", "original version", "album version",
