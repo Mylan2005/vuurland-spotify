@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "big_sonic_heaven",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "beck|||ride lonesome",
-  "__last_radio_key_mellow_mix": "paul simon|||was a sunny day",
+  "__last_radio_key_vuurland": "phoebe bridgers|||scott street",
+  "__last_radio_key_mellow_mix": "the slow show|||god only knows",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2613,6 +2613,7 @@
       "the shins|||those to come",
       "the shins|||turn on me",
       "the shins|||young pilgrims",
+      "the slow show|||god only knows",
       "the smashing pumpkins|||crush",
       "the smashing pumpkins|||once upon a time",
       "the smashing pumpkins|||thirty-three",
@@ -3354,7 +3355,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4816,
+  "__vuurland_active_playlist_count": 4817,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -9481,6 +9482,7 @@
     "the slow show|||bloodline",
     "the slow show|||bloodline - 2 meter session",
     "the slow show|||builder boy",
+    "the slow show|||god only knows",
     "the slow show|||hard to hide",
     "the slow show|||hey lover",
     "the slow show|||mountbatten",
@@ -11212,6 +11214,7 @@
     "spotify:track:1htwDRp2FTHqcdhQTwPOr8",
     "spotify:track:1htxavfXT3UPQQ8tj0QXzf",
     "spotify:track:1hu6rRRA5PQTqPzQ2P8CJ1",
+    "spotify:track:1i6AKXriagrBMkC1yuPOPr",
     "spotify:track:1i9ctdSzErTZNk2IwbnhUt",
     "spotify:track:1iKN8tUM8SQ1pt4x3XHo5K",
     "spotify:track:1iOPoPTFROlTeYpJik7VMs",
@@ -15612,6 +15615,7 @@
     "DEB337813101",
     "DEB338018104",
     "DECB81400126",
+    "DECB81400134",
     "DED620017302",
     "DED620118402",
     "DED620221307",
@@ -24641,7 +24645,8 @@
     "spotify:track:7rKyITVLEwldhdXIy7P6Vw": "USSM10012978",
     "spotify:track:5qyq1H5OPMlfuvZQ1wQNo7": "USBWC0010022",
     "spotify:track:68n1IuuXABjTwytnb6IhMS": "USHM91996645",
-    "spotify:track:5omla5BqDJ4hHKz3IW89Py": "GB5KW2600790"
+    "spotify:track:5omla5BqDJ4hHKz3IW89Py": "GB5KW2600790",
+    "spotify:track:1i6AKXriagrBMkC1yuPOPr": "DECB81400134"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -30750,6 +30755,10 @@
     "johnny marr|||all in a life": {
       "artist": "Johnny Marr",
       "title": "All in a Life"
+    },
+    "the slow show|||god only knows": {
+      "artist": "The Slow Show",
+      "title": "God Only Knows"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -36903,6 +36912,11 @@
       "uri": "spotify:track:5omla5BqDJ4hHKz3IW89Py",
       "artist": "Johnny Marr",
       "title": "All in a Life"
+    },
+    "the slow show|||god only knows": {
+      "uri": "spotify:track:1i6AKXriagrBMkC1yuPOPr",
+      "artist": "The Slow Show",
+      "title": "God Only Knows"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -38874,6 +38888,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "phoebe bridgers|||scott street",
+      "snow patrol|||don't give in",
       "beck|||ride lonesome",
       "metronomy|||things will be fine",
       "solange|||cranes in the sky",
@@ -38971,11 +38987,10 @@
       "father john misty|||goodbye mr blue",
       "london grammar|||strong",
       "nick cave & warren ellis|||carnage",
-      "isbells|||dreamer",
-      "cigarettes after sex|||twizzler",
-      "jaguar jaguar|||so long"
+      "isbells|||dreamer"
     ],
     "mellow_mix": [
+      "the slow show|||god only knows",
       "paul simon|||was a sunny day",
       "jackie wilson|||your love keeps lifting me higher & higher",
       "indigo girls|||closer to fine",
@@ -39074,8 +39089,7 @@
       "nickel creek|||tomorrow is a long time",
       "norah jones|||carry on",
       "the beatles|||girl",
-      "beck|||everybody's gotta learn sometime",
-      "the cranberries|||when you're gone"
+      "beck|||everybody's gotta learn sometime"
     ],
     "big_sonic_heaven": [
       "fun with ether|||sea burst blue",
@@ -39594,5 +39608,6 @@
   "__match_v35__indigo girls|||closer to fine": "spotify:track:7rKyITVLEwldhdXIy7P6Vw",
   "__match_v35__jackie wilson|||your love keeps lifting me higher & higher": "spotify:track:5qyq1H5OPMlfuvZQ1wQNo7",
   "__match_v35__ships in the night|||lost times": "spotify:track:68n1IuuXABjTwytnb6IhMS",
-  "__match_v35__johnny marr|||all in a life": "spotify:track:5omla5BqDJ4hHKz3IW89Py"
+  "__match_v35__johnny marr|||all in a life": "spotify:track:5omla5BqDJ4hHKz3IW89Py",
+  "__match_v35__the slow show|||god only knows": "spotify:track:1i6AKXriagrBMkC1yuPOPr"
 }
