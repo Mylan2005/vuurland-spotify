@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "beck|||ride lonesome",
-  "__last_radio_key_mellow_mix": "marvin gaye|||let's get it on",
+  "__last_radio_key_mellow_mix": "eric hilton|||the dharma lovers",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1545,6 +1545,7 @@
       "eric clapton|||my father's eyes",
       "eric clapton|||promises",
       "eric hilton|||a sky so close",
+      "eric hilton|||the dharma lovers",
       "erik satie|||gnossienne no1",
       "erik satie|||gymnopedie no 1",
       "erik scott|||peace on saturn",
@@ -3119,7 +3120,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4631,
+  "__vuurland_active_playlist_count": 4632,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -4955,6 +4956,7 @@
     "eric d johnson|||once on another day",
     "eric d johnson|||summer dream",
     "eric hilton|||a sky so close",
+    "eric hilton|||the dharma lovers",
     "eric rigler|||maggie's reel",
     "erik satie & alexandre tharaud|||gnossienne: no. 1",
     "erik satie|||alexandre tharaud|||gnossienne: no. 1",
@@ -10145,6 +10147,7 @@
     "spotify:track:0xLrMI4R2xTwRHWV3UQCAZ",
     "spotify:track:0xM73Y61yIuNSy1SdsmwZg",
     "spotify:track:0xOeB16JDbBJBJKSdHbElT",
+    "spotify:track:0xdO6OpFqkOAK1j8Vi9cbK",
     "spotify:track:0xujAq2OtDCpGYO2A5n2pf",
     "spotify:track:0y3u7LbmL9oKMeBRB3YFdH",
     "spotify:track:0y74BqFLkaMbhZtywFJ1I4",
@@ -17373,6 +17376,7 @@
     "USA2P2514642",
     "USA2P2520715",
     "USA2P2520716",
+    "USA2P2545274",
     "USA2P2551789",
     "USA2P2551924",
     "USA2P2561958",
@@ -23498,7 +23502,8 @@
     "spotify:track:2wdP2s8TacmeL389h5jq2l": "SELEI0600602",
     "spotify:track:7iqGCmVbTFd9pCBJavFTEc": "QM6MZ1925337",
     "spotify:track:3mdPJDlZkCs0WHnf2m3MEa": "QT6622642552",
-    "spotify:track:4YO5Kl4BIPIY5qeUsPUMqr": "USLZJ1906513"
+    "spotify:track:4YO5Kl4BIPIY5qeUsPUMqr": "USLZJ1906513",
+    "spotify:track:0xdO6OpFqkOAK1j8Vi9cbK": "USA2P2545274"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792422292,
@@ -28895,6 +28900,10 @@
     "the nunnery|||we are the stars": {
       "artist": "The Nunnery",
       "title": "We are the Stars"
+    },
+    "eric hilton|||the dharma lovers": {
+      "artist": "Eric Hilton",
+      "title": "The Dharma Lovers"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -34178,6 +34187,11 @@
       "uri": "spotify:track:4YO5Kl4BIPIY5qeUsPUMqr",
       "artist": "The Nunnery",
       "title": "We are the Stars"
+    },
+    "eric hilton|||the dharma lovers": {
+      "uri": "spotify:track:0xdO6OpFqkOAK1j8Vi9cbK",
+      "artist": "Eric Hilton",
+      "title": "The Dharma Lovers"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -36176,6 +36190,7 @@
       "phoebe bridgers|||summers end"
     ],
     "mellow_mix": [
+      "eric hilton|||the dharma lovers",
       "marvin gaye|||let's get it on",
       "the nunnery|||we are the stars",
       "the durutti column|||sargasso sea w/ caoilfhionn rose",
@@ -36453,5 +36468,6 @@
   "__match_v35__koop|||come to me w/ yukimi nagano": "spotify:track:2wdP2s8TacmeL389h5jq2l",
   "__match_v35__arctic lake|||cherry-coloured funk": "spotify:track:7iqGCmVbTFd9pCBJavFTEc",
   "__match_v35__yumeia & tre flip|||mai": "spotify:track:3mdPJDlZkCs0WHnf2m3MEa",
-  "__match_v35__the nunnery|||we are the stars": "spotify:track:4YO5Kl4BIPIY5qeUsPUMqr"
+  "__match_v35__the nunnery|||we are the stars": "spotify:track:4YO5Kl4BIPIY5qeUsPUMqr",
+  "__match_v35__eric hilton|||the dharma lovers": "spotify:track:0xdO6OpFqkOAK1j8Vi9cbK"
 }
