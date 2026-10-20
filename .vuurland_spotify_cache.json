@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "kids with buns|||bad grades",
-  "__last_radio_key_mellow_mix": "lana del rey|||henry come on",
+  "__last_radio_key_vuurland": "the whitest boy alive|||golden cage",
+  "__last_radio_key_mellow_mix": "elton john|||amoreena",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1513,6 +1513,7 @@
       "ella fitzgerald|||over the rainbow",
       "elliot easton|||walk on walden",
       "ellis paul|||maria's beautiful mess",
+      "elton john|||amoreena",
       "elton john|||border song",
       "elton john|||daniel",
       "elton john|||goodbye yellow brick road",
@@ -3094,7 +3095,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4612,
+  "__vuurland_active_playlist_count": 4613,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -4878,6 +4879,7 @@
     "elliott smith|||waltz, no. 2 (xo)",
     "ellis paul|||maria's beautiful mess",
     "ellis|||saturn return",
+    "elton john|||amoreena",
     "elton john|||daniel",
     "elton john|||goodbye yellow brick road",
     "elton john|||i need you to turn to",
@@ -14065,6 +14067,7 @@
     "spotify:track:7qcXUzPwoxSBFxjTbNrV0B",
     "spotify:track:7qfC3mu9cBBFegTKsNAyt8",
     "spotify:track:7qhNiOVggMw2y3ypxAyyZT",
+    "spotify:track:7qilLNLdlGyALqKVecG3Lt",
     "spotify:track:7qitgFPgLVhZxlsqpohecV",
     "spotify:track:7qjF1j0sMTLcmiTKXwVh09",
     "spotify:track:7qshYIOUFQAGgYfWXg1m9N",
@@ -15320,6 +15323,7 @@
     "GBAMB7100002",
     "GBAMB7200006",
     "GBAMB9500001",
+    "GBAMB9500022",
     "GBAMB9500058",
     "GBAMB9500072",
     "GBAMB9500073",
@@ -23396,7 +23400,8 @@
     "spotify:track:0Z1jAjczJ9oJJcArMabRba": "SEVMM1008003",
     "spotify:track:67yQEeXMXyjhmexDr4PxF0": "BE9JT2000001",
     "spotify:track:6CYldrsUPBsiPtfLW4xZCl": "GBUM72501764",
-    "spotify:track:2mQjhWtvMPERHKNRSGMn25": "FR59R2632296"
+    "spotify:track:2mQjhWtvMPERHKNRSGMn25": "FR59R2632296",
+    "spotify:track:7qilLNLdlGyALqKVecG3Lt": "GBAMB9500022"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792422292,
@@ -28715,6 +28720,10 @@
     "glazyhaze|||do you?": {
       "artist": "Glazyhaze",
       "title": "Do You?"
+    },
+    "elton john|||amoreena": {
+      "artist": "Elton John",
+      "title": "Amoreena"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -33903,6 +33912,11 @@
       "uri": "spotify:track:2mQjhWtvMPERHKNRSGMn25",
       "artist": "Glazyhaze",
       "title": "Do You?"
+    },
+    "elton john|||amoreena": {
+      "uri": "spotify:track:7qilLNLdlGyALqKVecG3Lt",
+      "artist": "Elton John",
+      "title": "Amoreena"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -35874,6 +35888,7 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the whitest boy alive|||golden cage",
       "kids with buns|||bad grades",
       "the japanese house|||boyhood",
       "noah kahan|||doors",
@@ -35887,6 +35902,7 @@
       "phoebe bridgers|||summers end"
     ],
     "mellow_mix": [
+      "elton john|||amoreena",
       "lana del rey|||henry come on",
       "phosphorescent|||song for zula",
       "hippie sabotage|||feet in the sand",
@@ -36118,5 +36134,6 @@
   "__match_v35__acid house kings|||would you say stop?": "spotify:track:0Z1jAjczJ9oJJcArMabRba",
   "__match_v35__kids with buns|||bad grades": "spotify:track:67yQEeXMXyjhmexDr4PxF0",
   "__match_v35__lana del rey|||henry come on": "spotify:track:6CYldrsUPBsiPtfLW4xZCl",
-  "__match_v35__glazyhaze|||do you?": "spotify:track:2mQjhWtvMPERHKNRSGMn25"
+  "__match_v35__glazyhaze|||do you?": "spotify:track:2mQjhWtvMPERHKNRSGMn25",
+  "__match_v35__elton john|||amoreena": "spotify:track:7qilLNLdlGyALqKVecG3Lt"
 }
