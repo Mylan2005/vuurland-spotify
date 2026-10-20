@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "rhye|||open",
-  "__last_radio_key_mellow_mix": "dan mangan|||diminishing returns",
+  "__last_radio_key_mellow_mix": "phoebe snow|||poetry man",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2182,6 +2182,7 @@
       "phoebe bridgers|||moon song",
       "phoebe green|||love song feat gizmo varillas",
       "phoebe snow|||every night",
+      "phoebe snow|||poetry man",
       "phosphorescent|||c’est la vie no 2",
       "phosphorescent|||song for zula",
       "pieta brown|||dreamin' of",
@@ -3101,7 +3102,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4619,
+  "__vuurland_active_playlist_count": 4620,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -7638,6 +7639,7 @@
     "phoebe bridgers|||your mind is not your friend feat phoebe bridgers",
     "phoebe green|||love song",
     "phoebe snow|||every night",
+    "phoebe snow|||poetry man",
     "phoenix|||if i ever feel better",
     "phosphorescent|||c'est la vie no 2",
     "phosphorescent|||c'est la vie no.2",
@@ -14077,6 +14079,7 @@
     "spotify:track:7pLuEMFougkSHXrPBtNxTR",
     "spotify:track:7pU7xdjTwZyDW1XoZpV5Dl",
     "spotify:track:7pbDuswyvS0Bx8V3BzER00",
+    "spotify:track:7peP5eNPRYiS8z72eHoVj6",
     "spotify:track:7phTxbdPX8sLRehWtLPxHl",
     "spotify:track:7q0NtdbzOqnsEznSgkuAnQ",
     "spotify:track:7qF0FfuzBFwMe1lNHkEDxW",
@@ -18266,6 +18269,7 @@
     "USSE52000214",
     "USSE59900009",
     "USSE90729552",
+    "USSH49400001",
     "USSH49500112",
     "USSH50185254",
     "USSH51101342",
@@ -23432,7 +23436,8 @@
     "spotify:track:4YSjv3LnnD0BSXhcsWKN31": "USEP41718400",
     "spotify:track:0yhsFLjmPS3vdk89uDIH8x": "QT3F42694663",
     "spotify:track:2CxSqwdvyCPJubhZpgVCTd": "GBAHW0800019",
-    "spotify:track:4rVcpsM8Br439degVfquBo": "US28E2434202"
+    "spotify:track:4rVcpsM8Br439degVfquBo": "US28E2434202",
+    "spotify:track:7peP5eNPRYiS8z72eHoVj6": "USSH49400001"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792422292,
@@ -28780,6 +28785,10 @@
     "blushing|||tamagotchi": {
       "artist": "Blushing",
       "title": "Tamagotchi"
+    },
+    "phoebe snow|||poetry man": {
+      "artist": "Phoebe Snow",
+      "title": "Poetry Man"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -34003,6 +34012,11 @@
       "uri": "spotify:track:4rVcpsM8Br439degVfquBo",
       "artist": "Blushing",
       "title": "Tamagotchi"
+    },
+    "phoebe snow|||poetry man": {
+      "uri": "spotify:track:7peP5eNPRYiS8z72eHoVj6",
+      "artist": "Phoebe Snow",
+      "title": "Poetry Man"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -35993,6 +36007,7 @@
       "phoebe bridgers|||summers end"
     ],
     "mellow_mix": [
+      "phoebe snow|||poetry man",
       "dan mangan|||diminishing returns",
       "paul simon|||50 ways to leave your lover",
       "tom waits|||the heart of saturday night",
@@ -36241,5 +36256,6 @@
   "__match_v35__tom waits|||the heart of saturday night": "spotify:track:4YSjv3LnnD0BSXhcsWKN31",
   "__match_v35__left at orion|||jellyfish": "spotify:track:0yhsFLjmPS3vdk89uDIH8x",
   "__match_v35__808 state|||spanish heart feat bernard sumner": "spotify:track:2CxSqwdvyCPJubhZpgVCTd",
-  "__match_v35__blushing|||tamagotchi": "spotify:track:4rVcpsM8Br439degVfquBo"
+  "__match_v35__blushing|||tamagotchi": "spotify:track:4rVcpsM8Br439degVfquBo",
+  "__match_v35__phoebe snow|||poetry man": "spotify:track:7peP5eNPRYiS8z72eHoVj6"
 }
