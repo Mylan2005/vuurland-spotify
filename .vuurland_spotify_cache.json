@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "big_sonic_heaven",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "the shins|||simple song",
-  "__last_radio_key_mellow_mix": "bob dylan|||if not for you",
+  "__last_radio_key_mellow_mix": "j j cale|||city girls",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1657,6 +1657,7 @@
       "ivan & alyosha|||running for cover",
       "j j cale|||after midnight",
       "j j cale|||cajun moon",
+      "j j cale|||city girls",
       "j j cale|||magnolia",
       "j j cale|||midnight in memphis",
       "j s ondara|||an alien in minneapolis",
@@ -2930,7 +2931,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4484,
+  "__vuurland_active_playlist_count": 4485,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "10 000 maniacs|||don't talk",
@@ -5388,6 +5389,7 @@
     "j bernardt|||wicked streets",
     "j j cale|||after midnight",
     "j j cale|||cajun moon",
+    "j j cale|||city girls",
     "j j cale|||midnight in memphis",
     "j s ondara|||saying goodbye",
     "j views & rhye|||love affair",
@@ -13192,6 +13194,7 @@
     "spotify:track:6tHVEMyRfxGgQuXRzl2yOF",
     "spotify:track:6tXnRSvuNgOq4QcxpIN54r",
     "spotify:track:6tYeb3dJvVwaeIl3ynkvGt",
+    "spotify:track:6tZF1isUvYNQviZjSlVPmr",
     "spotify:track:6tclkDfOgetmI3nE5nY0Xw",
     "spotify:track:6teNMe4qWwenOKOY0G8yoe",
     "spotify:track:6tj4Xa4fq6UVIyYHOmwJXh",
@@ -15909,6 +15912,7 @@
     "NLF057490003",
     "NLF057790030",
     "NLF057890045",
+    "NLF058290003",
     "NLF712605939",
     "NLF7S1600001",
     "NLF7S1800025",
@@ -22715,7 +22719,8 @@
     "spotify:track:3WBapTZ46XatGmeRwoZj3C": "USBCJ0681006",
     "spotify:track:20dt11ZTAtjsfcNJLP9u30": "USWB10102189",
     "spotify:track:4PqgB442TI25iz4G6d6BBD": "USUM71810630",
-    "spotify:track:7AU4mE70UDz5cWby5fFYeg": "US38Y2240056"
+    "spotify:track:7AU4mE70UDz5cWby5fFYeg": "US38Y2240056",
+    "spotify:track:6tZF1isUvYNQviZjSlVPmr": "NLF058290003"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792422292,
@@ -27514,6 +27519,10 @@
     "justin vernon|||hazelton": {
       "artist": "Justin Vernon",
       "title": "hazelton"
+    },
+    "j j cale|||city girls": {
+      "artist": "J.J. Cale",
+      "title": "City Girls"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -32067,6 +32076,11 @@
       "uri": "spotify:track:7AU4mE70UDz5cWby5fFYeg",
       "artist": "Justin Vernon",
       "title": "hazelton"
+    },
+    "j j cale|||city girls": {
+      "uri": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
+      "artist": "J.J. Cale",
+      "title": "City Girls"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -34140,6 +34154,7 @@
       "bon iver|||perth"
     ],
     "mellow_mix": [
+      "j j cale|||city girls",
       "bob dylan|||if not for you",
       "j s ondara|||saying goodbye",
       "tom petty|||time to move on",
@@ -34238,8 +34253,7 @@
       "jimi hendrix|||the wind cries mary",
       "gretel|||another thing that i'm supposed to do and i don't want to",
       "joni mitchell|||chelsea morning",
-      "iron & wine|||passing afternoon",
-      "alan sparhawk|||stranger"
+      "iron & wine|||passing afternoon"
     ],
     "big_sonic_heaven": [
       "echo & the bunnymen|||can't be sold",
@@ -34421,5 +34435,6 @@
   "__match_v35__tom petty|||time to move on": "spotify:track:20dt11ZTAtjsfcNJLP9u30",
   "__match_v35__j s ondara|||saying goodbye": "spotify:track:4PqgB442TI25iz4G6d6BBD",
   "__not_found_v35__this mortal coil|||bitter / baby ray baby": 1792461760,
-  "__match_v35__justin vernon|||hazelton": "spotify:track:7AU4mE70UDz5cWby5fFYeg"
+  "__match_v35__justin vernon|||hazelton": "spotify:track:7AU4mE70UDz5cWby5fFYeg",
+  "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr"
 }
