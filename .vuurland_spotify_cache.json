@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "julia jacklin|||someday triple j like a version",
-  "__last_radio_key_mellow_mix": "third world|||feel a little better",
+  "__last_radio_key_mellow_mix": "tori amos|||general joy",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2603,6 +2603,7 @@
       "tony furtado|||portlandia",
       "toots & the maytals|||i've got dreams to remember",
       "tori amos|||a sorta fairytale",
+      "tori amos|||general joy",
       "tori amos|||honey",
       "tori amos|||rattlesnakes",
       "tori amos|||sleeps with butterflies",
@@ -3140,7 +3141,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4653,
+  "__vuurland_active_playlist_count": 4654,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly|||clearest blue",
@@ -5417,6 +5418,7 @@
     "hammock|||it's ok to be afraid of the universe",
     "hammock|||longest year (2020)",
     "hammock|||longest year 2020",
+    "hammock|||raising your voice trying to stop an echo",
     "hammock|||the unsetting sun",
     "hammock|||then the quiet explosion",
     "hammock|||when it hurts to remember",
@@ -10361,6 +10363,7 @@
     "spotify:track:1De66xUavye2fNqhCwtgyo",
     "spotify:track:1E5HgxGmPFETzZp6g929hu",
     "spotify:track:1EAciAN6W2LWDqwonSKpZ6",
+    "spotify:track:1EDnCdELPaNtu0PnGHRHdd",
     "spotify:track:1EEm8G2N213mjTDmUYv9hK",
     "spotify:track:1EKk6Xvei9N9scaQcrax2S",
     "spotify:track:1ESnL2ni8yDFuWa2vBlyWh",
@@ -17475,6 +17478,7 @@
     "USA4D0111103",
     "USA4D0111106",
     "USA4D0617601",
+    "USA4D0617602",
     "USA4D0617617",
     "USA4D1267003",
     "USA4D2135803",
@@ -23608,7 +23612,8 @@
     "spotify:track:60OdLDvZpHe4kVDYwNtYh9": "GBCJN7200008",
     "spotify:track:3Dhox1LEPj5yBIuuWdeOXg": "GBEFS0100028",
     "spotify:track:41hT6idTUfXX5Dmv32TXpO": "USWWW0124879",
-    "spotify:track:5gz7C7pokQ1bgIwC1FHJeM": "FR6V80758436"
+    "spotify:track:5gz7C7pokQ1bgIwC1FHJeM": "FR6V80758436",
+    "spotify:track:1EDnCdELPaNtu0PnGHRHdd": "USA4D0617602"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792422292,
@@ -29089,6 +29094,10 @@
     "air formation|||cold morning": {
       "artist": "Air Formation",
       "title": "Cold Morning"
+    },
+    "hammock|||raising your voice trying to stop an echo": {
+      "artist": "Hammock",
+      "title": "Raising Your Voice... Trying to Stop an Echo"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -34477,6 +34486,11 @@
       "uri": "spotify:track:5gz7C7pokQ1bgIwC1FHJeM",
       "artist": "Air Formation",
       "title": "Cold Morning"
+    },
+    "hammock|||raising your voice trying to stop an echo": {
+      "uri": "spotify:track:1EDnCdELPaNtu0PnGHRHdd",
+      "artist": "Hammock",
+      "title": "Raising Your Voice... Trying to Stop an Echo"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -36489,6 +36503,7 @@
       "phoebe bridgers|||summers end"
     ],
     "mellow_mix": [
+      "tori amos|||general joy",
       "third world|||feel a little better",
       "eric clapton|||promises",
       "the rolling stones|||sweet black angel",
@@ -36812,5 +36827,6 @@
   "__match_v35__the rolling stones|||sweet black angel": "spotify:track:60OdLDvZpHe4kVDYwNtYh9",
   "__match_v35__ride|||chelsea girl": "spotify:track:3Dhox1LEPj5yBIuuWdeOXg",
   "__match_v35__third world|||feel a little better": "spotify:track:41hT6idTUfXX5Dmv32TXpO",
-  "__match_v35__air formation|||cold morning": "spotify:track:5gz7C7pokQ1bgIwC1FHJeM"
+  "__match_v35__air formation|||cold morning": "spotify:track:5gz7C7pokQ1bgIwC1FHJeM",
+  "__match_v35__hammock|||raising your voice trying to stop an echo": "spotify:track:1EDnCdELPaNtu0PnGHRHdd"
 }
