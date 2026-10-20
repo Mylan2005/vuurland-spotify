@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "bjork|||stonemilker",
-  "__last_radio_key_mellow_mix": "jeremy loops|||mortal man",
+  "__last_radio_key_vuurland": "celeste|||love is back",
+  "__last_radio_key_mellow_mix": "marianne faithfull|||the ballad of lucy jordan",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2012,6 +2012,7 @@
       "marc ribot|||aurora en pekin",
       "marc scibilia|||more to this",
       "marianne faithfull|||crazy love",
+      "marianne faithfull|||the ballad of lucy jordan",
       "marion rampal|||de beaux dimanches",
       "mark almond|||the city",
       "mark ambor|||good to be",
@@ -3398,7 +3399,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4862,
+  "__vuurland_active_playlist_count": 4863,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -4606,6 +4607,7 @@
     "cathedral bells|||overdrive",
     "celeste|||i can see the change",
     "celeste|||little runaway",
+    "celeste|||love is back",
     "celeste|||milk & honey",
     "celeste|||people always change",
     "celeste|||strange - edit",
@@ -13273,6 +13275,7 @@
     "spotify:track:4kaiSmJrLgQq0w2qFuzAwy",
     "spotify:track:4klmKtdoQRFiUy81avReWA",
     "spotify:track:4kxC8W2KEFkbhknjgcIwcD",
+    "spotify:track:4kzcJJUonbCSlNXrHXt6n8",
     "spotify:track:4l6Krq6DFH8aW9PlJwSYc6",
     "spotify:track:4lBNkW8PZXnNey9o5rq7Dw",
     "spotify:track:4lIYjf9rjhRYduh8BKGWyZ",
@@ -17155,6 +17158,7 @@
     "GBUM71905966",
     "GBUM71905970",
     "GBUM71905971",
+    "GBUM72000458",
     "GBUM72001750",
     "GBUM72002052",
     "GBUM72002056",
@@ -24870,7 +24874,8 @@
     "spotify:track:0hkx769R7bsBrn7skQNza9": "QM6P42683657",
     "spotify:track:16Bl2x34VTuYgxYeHv5HMf": "USMRG2074703",
     "spotify:track:5eSOQ25XUEYd4vPBphHlpr": "SE6SA2021543",
-    "spotify:track:5gRx7E3Pqhi2sdeGGWN87I": "QT4QS2600072"
+    "spotify:track:5gRx7E3Pqhi2sdeGGWN87I": "QT4QS2600072",
+    "spotify:track:4kzcJJUonbCSlNXrHXt6n8": "GBUM72000458"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -31159,6 +31164,10 @@
     "grazer|||paradise": {
       "artist": "GRAZER",
       "title": "Paradise"
+    },
+    "celeste|||love is back": {
+      "artist": "Celeste",
+      "title": "Love Is Back"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -37537,6 +37546,11 @@
       "uri": "spotify:track:5gRx7E3Pqhi2sdeGGWN87I",
       "artist": "GRAZER",
       "title": "Paradise"
+    },
+    "celeste|||love is back": {
+      "uri": "spotify:track:4kzcJJUonbCSlNXrHXt6n8",
+      "artist": "Celeste",
+      "title": "Love Is Back"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -39508,6 +39522,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "celeste|||love is back",
+      "whitney|||giving up",
       "bjork|||stonemilker",
       "m83|||outro",
       "damien rice|||i don't want to change you",
@@ -39605,11 +39621,10 @@
       "men i trust|||lauren",
       "sharon van etten|||the end of the world",
       "elis floreen|||panther",
-      "leon bridges & khruangbin|||b-side",
-      "the last dinner party|||sinner",
-      "mooneye|||lover to stranger"
+      "leon bridges & khruangbin|||b-side"
     ],
     "mellow_mix": [
+      "marianne faithfull|||the ballad of lucy jordan",
       "jeremy loops|||mortal man",
       "fruit bats|||today",
       "the black sorrows|||saint georges road",
@@ -39708,8 +39723,7 @@
       "morgan wallen|||love somebody",
       "crowded house|||don't dream it's over",
       "loreena mckennitt|||the dark night of the soul",
-      "the be good tanyas|||scattered leaves",
-      "shawn colvin|||diamond in the rough"
+      "the be good tanyas|||scattered leaves"
     ],
     "big_sonic_heaven": [
       "grazer|||paradise",
@@ -40274,5 +40288,6 @@
   "__match_v35__the secret french postcards|||last dance": "spotify:track:0hkx769R7bsBrn7skQNza9",
   "__match_v35__fruit bats|||today": "spotify:track:16Bl2x34VTuYgxYeHv5HMf",
   "__match_v35__møaa|||exist": "spotify:track:5eSOQ25XUEYd4vPBphHlpr",
-  "__match_v35__grazer|||paradise": "spotify:track:5gRx7E3Pqhi2sdeGGWN87I"
+  "__match_v35__grazer|||paradise": "spotify:track:5gRx7E3Pqhi2sdeGGWN87I",
+  "__match_v35__celeste|||love is back": "spotify:track:4kzcJJUonbCSlNXrHXt6n8"
 }
