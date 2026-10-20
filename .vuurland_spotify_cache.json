@@ -1,6 +1,6 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "wet leg|||obvious",
@@ -3392,7 +3392,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4855,
+  "__vuurland_active_playlist_count": 4856,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -4971,6 +4971,8 @@
     "dead can dance|||cantara",
     "dead can dance|||dawn of the iconoclast",
     "dead can dance|||dawn of the iconoclast - remastered",
+    "dead can dance|||enigma of the absolute",
+    "dead can dance|||enigma of the absolute remastered",
     "dead can dance|||frontier",
     "dead can dance|||frontier - remastered",
     "dead can dance|||mesmerism",
@@ -13997,6 +13999,7 @@
     "spotify:track:62v5GiGaMWmNCfX7KYm6D5",
     "spotify:track:62xgZndm9gNlh8fJEfio6F",
     "spotify:track:63AXbG0B9D4g0ZHzfu4jLn",
+    "spotify:track:63U9G71yjhem5xirnZ89Cb",
     "spotify:track:63V1zBOx4IP2Z91EOHYNtc",
     "spotify:track:63XgNKVieYn9wr9xcc2j2c",
     "spotify:track:63bLd77FlCaPIzD46kXJfA",
@@ -16243,6 +16246,7 @@
     "GBAFL8700082",
     "GBAFL8700083",
     "GBAFL9000318",
+    "GBAFL9000320",
     "GBAFL9200176",
     "GBAFL9300122",
     "GBAFL9700058",
@@ -24835,7 +24839,8 @@
     "spotify:track:1BDUDxgFearfsAEssN6sOm": "TCAJE2587588",
     "spotify:track:1NfSFSdNRKikofOiMuWQfP": "GX8KD2446400",
     "spotify:track:5fJRHZyjnb6891ny5IOkL6": "USUM71107382",
-    "spotify:track:7K93FbvCq3eznYM8dSfsWU": "USMM70400333"
+    "spotify:track:7K93FbvCq3eznYM8dSfsWU": "USMM70400333",
+    "spotify:track:63U9G71yjhem5xirnZ89Cb": "GBAFL9000320"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -31096,6 +31101,10 @@
     "al petteway|||sundog": {
       "artist": "Al Petteway, Amy White, Bonnie Rideout, Maggie Sansone, Eric Rigler, Abby Newton",
       "title": "Sundog"
+    },
+    "dead can dance|||enigma of the absolute remastered": {
+      "artist": "Dead Can Dance",
+      "title": "Enigma of the Absolute"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -37439,6 +37448,11 @@
       "uri": "spotify:track:7K93FbvCq3eznYM8dSfsWU",
       "artist": "Al Petteway, Amy White, Bonnie Rideout, Maggie Sansone, Eric Rigler, Abby Newton",
       "title": "Sundog"
+    },
+    "dead can dance|||enigma of the absolute remastered": {
+      "uri": "spotify:track:63U9G71yjhem5xirnZ89Cb",
+      "artist": "Dead Can Dance",
+      "title": "Enigma of the Absolute"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -40169,5 +40183,6 @@
   "__match_v35__maquillage|||are you safe?": "spotify:track:1BDUDxgFearfsAEssN6sOm",
   "__match_v35__yndling|||monopoly": "spotify:track:1NfSFSdNRKikofOiMuWQfP",
   "__match_v35__mayer hawthorne|||a long time": "spotify:track:5fJRHZyjnb6891ny5IOkL6",
-  "__match_v35__al petteway|||sundog": "spotify:track:7K93FbvCq3eznYM8dSfsWU"
+  "__match_v35__al petteway|||sundog": "spotify:track:7K93FbvCq3eznYM8dSfsWU",
+  "__match_v35__dead can dance|||enigma of the absolute remastered": "spotify:track:63U9G71yjhem5xirnZ89Cb"
 }
