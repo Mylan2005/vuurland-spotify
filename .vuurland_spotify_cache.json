@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "future islands|||peach",
+  "__last_radio_key_vuurland": "dan auerbach|||king of a one horse town",
   "__last_radio_key_mellow_mix": "robert plant|||song to the siren",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3404,7 +3404,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 4867,
+  "__vuurland_active_playlist_count": 4868,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -9802,6 +9802,7 @@
     "todd hannigan|||thicker than water",
     "todd thibaud|||good things now",
     "tokyo shoegazer|||new dawn",
+    "tokyo shoegazer|||remains",
     "tom mcfarland|||easy to love",
     "tom misch & kaidi akinnibi|||days of us",
     "tom misch & loyle carner|||colourblind",
@@ -13324,6 +13325,7 @@
     "spotify:track:4oYfMQ6NDGHq0GcbICqsDw",
     "spotify:track:4obCSDqXxraEBvuiO8O0pC",
     "spotify:track:4odb2UIgc0u22MNV7p4iQq",
+    "spotify:track:4pELiGfCPPTLu8NxAsQoLZ",
     "spotify:track:4pR4OUNzzhK3vDY89PN1Oa",
     "spotify:track:4piHJ7eCeWUIuo9ekm8Qh6",
     "spotify:track:4przkHpP9uPwmNNcYW7ZnY",
@@ -17435,6 +17437,7 @@
     "ITB282000103",
     "ITC002000644",
     "JP92J2600928",
+    "JP92J2600929",
     "JPVI09204730",
     "LU4MD2500053",
     "LU4MD2600001",
@@ -24896,7 +24899,8 @@
     "spotify:track:4gj5Wv7rAJYhBrGPu01mxD": "GBAAN7900009",
     "spotify:track:6DXMGLE9TaJmmXWXC9TSTg": "QMK5L1200001",
     "spotify:track:1fiFM3yHMJSfXMcbTAQmo1": "QZTFD2600005",
-    "spotify:track:3KufCVeuvBYl5YoeGpwPTp": "GBUM71105040"
+    "spotify:track:3KufCVeuvBYl5YoeGpwPTp": "GBUM71105040",
+    "spotify:track:4pELiGfCPPTLu8NxAsQoLZ": "JP92J2600929"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -31206,6 +31210,10 @@
     "robert plant|||song to the siren": {
       "artist": "Alfie Boe, Robert Plant",
       "title": "Song To The Siren"
+    },
+    "tokyo shoegazer|||remains": {
+      "artist": "東京酒吐座(Tokyo Shoegazer)",
+      "title": "Remains"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -37609,6 +37617,11 @@
       "uri": "spotify:track:3KufCVeuvBYl5YoeGpwPTp",
       "artist": "Alfie Boe, Robert Plant",
       "title": "Song To The Siren"
+    },
+    "tokyo shoegazer|||remains": {
+      "uri": "spotify:track:4pELiGfCPPTLu8NxAsQoLZ",
+      "artist": "東京酒吐座(Tokyo Shoegazer)",
+      "title": "Remains"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -39580,6 +39593,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "dan auerbach|||king of a one horse town",
+      "sufjan stevens|||mystery of love",
       "future islands|||peach",
       "kurt vile|||zoom 97",
       "celeste|||love is back",
@@ -39677,9 +39692,7 @@
       "dominic fike|||king of everything",
       "noah kahan|||porch light",
       "daniel norgren|||moonshine got me",
-      "het zesde metaal|||ploegsteert",
-      "men i trust|||lauren",
-      "sharon van etten|||the end of the world"
+      "het zesde metaal|||ploegsteert"
     ],
     "mellow_mix": [
       "robert plant|||song to the siren",
@@ -40351,5 +40364,6 @@
   "__match_v35__marianne faithfull|||the ballad of lucy jordan": "spotify:track:4gj5Wv7rAJYhBrGPu01mxD",
   "__match_v35__the bellwether syndicate|||all fire": "spotify:track:6DXMGLE9TaJmmXWXC9TSTg",
   "__match_v35__cigarettes for breakfast|||flowing": "spotify:track:1fiFM3yHMJSfXMcbTAQmo1",
-  "__match_v35__robert plant|||song to the siren": "spotify:track:3KufCVeuvBYl5YoeGpwPTp"
+  "__match_v35__robert plant|||song to the siren": "spotify:track:3KufCVeuvBYl5YoeGpwPTp",
+  "__match_v35__tokyo shoegazer|||remains": "spotify:track:4pELiGfCPPTLu8NxAsQoLZ"
 }
