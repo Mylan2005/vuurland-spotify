@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "the haunted youth|||wake up",
-  "__last_radio_key_mellow_mix": "emmylou harris|||here i am",
+  "__last_radio_key_mellow_mix": "bob dylan|||love minus zero no limit",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1358,6 +1358,7 @@
       "bob dylan|||forever young",
       "bob dylan|||i'll be your baby tonight",
       "bob dylan|||if not for you",
+      "bob dylan|||love minus zero no limit",
       "bob dylan|||sad eyed lady of the lowlands",
       "bob dylan|||simple twist of fate",
       "bob dylan|||tangled up in blue",
@@ -3694,7 +3695,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5094,
+  "__vuurland_active_playlist_count": 5095,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -5563,6 +5564,7 @@
     "edward hogston|||matthew jarvis|||collide",
     "edward hogston|||oliver barclay|||another love",
     "edward hogston|||where we belong",
+    "edward ka-spel|||dark horse",
     "edward sharpe & the magnetic zeros|||better days",
     "edward sharpe & the magnetic zeros|||dear believer",
     "edward sharpe & the magnetic zeros|||home",
@@ -12881,6 +12883,7 @@
     "spotify:track:38nbfowGG8bDTe03xkIZQF",
     "spotify:track:38zsOOcu31XbbYj9BIPUF1",
     "spotify:track:39Bd345OWEhRNyfayhp9gv",
+    "spotify:track:39C5VHocIHGfLcaP2xr79j",
     "spotify:track:39CNVSQxYkpF8hGDZ6g3iX",
     "spotify:track:39IbHHG7IX49JO8C6VonSE",
     "spotify:track:39VbkhkTpTEqBpMtrMuRPp",
@@ -18811,6 +18814,7 @@
     "QZWDW2496784",
     "QZWDW2597354",
     "QZWFH2370434",
+    "QZWFJ2616230",
     "QZWFL2681916",
     "QZWFM2644587",
     "QZWFN2464386",
@@ -26105,7 +26109,8 @@
     "spotify:track:25dL9LaSKX3IyqTeBGrShJ": "USRE19800507",
     "spotify:track:5fwelxllkT6VmviwZRsbUs": "USMR10110083",
     "spotify:track:5xirs2Ln4YF90C445Z8kGX": "CAC480600001",
-    "spotify:track:5F4ksIKmuXEtgBf6SfEQRr": "USSM11002206"
+    "spotify:track:5F4ksIKmuXEtgBf6SfEQRr": "USSM11002206",
+    "spotify:track:39C5VHocIHGfLcaP2xr79j": "QZWFJ2616230"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -33361,6 +33366,10 @@
     "paul simon|||loves me like a rock": {
       "artist": "Paul Simon",
       "title": "Loves Me Like a Rock"
+    },
+    "edward ka-spel|||dark horse": {
+      "artist": "Edward Ka-Spel",
+      "title": "Dark Horse"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -40894,6 +40903,11 @@
       "uri": "spotify:track:5F4ksIKmuXEtgBf6SfEQRr",
       "artist": "Paul Simon",
       "title": "Loves Me Like a Rock"
+    },
+    "edward ka-spel|||dark horse": {
+      "uri": "spotify:track:39C5VHocIHGfLcaP2xr79j",
+      "artist": "Edward Ka-Spel",
+      "title": "Dark Horse"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -42940,6 +42954,7 @@
       "edward sharpe & the magnetic zeros|||better days"
     ],
     "mellow_mix": [
+      "bob dylan|||love minus zero no limit",
       "emmylou harris|||here i am",
       "i am kloot|||even the stars",
       "the moody blues|||voices in the sky",
@@ -43781,5 +43796,6 @@
   "__match_v35__chris isaak|||this time": "spotify:track:25dL9LaSKX3IyqTeBGrShJ",
   "__match_v35__lucinda williams|||steal your love": "spotify:track:5fwelxllkT6VmviwZRsbUs",
   "__match_v35__cowboy junkies|||brand new world": "spotify:track:5xirs2Ln4YF90C445Z8kGX",
-  "__match_v35__paul simon|||loves me like a rock": "spotify:track:5F4ksIKmuXEtgBf6SfEQRr"
+  "__match_v35__paul simon|||loves me like a rock": "spotify:track:5F4ksIKmuXEtgBf6SfEQRr",
+  "__match_v35__edward ka-spel|||dark horse": "spotify:track:39C5VHocIHGfLcaP2xr79j"
 }
