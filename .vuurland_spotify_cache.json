@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "faces on tv|||traveling blind",
-  "__last_radio_key_mellow_mix": "chris isaak|||this time",
+  "__last_radio_key_vuurland": "sylvie kreusch|||walk walk",
+  "__last_radio_key_mellow_mix": "lucinda williams|||steal your love",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2052,6 +2052,7 @@
       "lucinda williams|||are you down",
       "lucinda williams|||out of touch",
       "lucinda williams|||right in time",
+      "lucinda williams|||steal your love",
       "lucinda williams|||sweet old world",
       "lucinda williams|||which will",
       "ludovico einaudi|||divenire",
@@ -3662,7 +3663,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5066,
+  "__vuurland_active_playlist_count": 5067,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -9753,6 +9754,7 @@
     "the cure|||snakepit",
     "the cure|||the top",
     "the cure|||untitled",
+    "the damned|||the shadow of love",
     "the daysleepers|||arclights",
     "the decemberists|||12/17/12",
     "the decemberists|||carolina low",
@@ -13659,6 +13661,7 @@
     "spotify:track:4QF8w44G6fU4VNxQJK1OJn",
     "spotify:track:4QMxpwLOwo4PIxpIMYjbAP",
     "spotify:track:4QXhfnolhg3LnJkLaVW5FC",
+    "spotify:track:4QaOESIMfFp1MYOOOBHXrE",
     "spotify:track:4QecB7Q334BITuDDErAAya",
     "spotify:track:4Qegqm597Rw1PfaV43WkLy",
     "spotify:track:4Qf8HOtPqUC1tbPNgIKh3o",
@@ -17229,6 +17232,7 @@
     "GBBBM8400006",
     "GBBBN6800001",
     "GBBBN7200001",
+    "GBBBY0300038",
     "GBBBY0300069",
     "GBBGU9700150",
     "GBBHR1909267",
@@ -25961,7 +25965,8 @@
     "spotify:track:6NSlOEEtWlqvEFrjQsry77": "CAN110501047",
     "spotify:track:70f23gQJEKE6kPRGWzOOa0": "USAS10100010",
     "spotify:track:7qma5VZZ9cgKyLFX0u0qdx": "USSE50300004",
-    "spotify:track:5d8OAW7clgESJAo64wmG48": "USATO0300112"
+    "spotify:track:5d8OAW7clgESJAo64wmG48": "USATO0300112",
+    "spotify:track:4QaOESIMfFp1MYOOOBHXrE": "GBBBY0300038"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -33092,6 +33097,10 @@
     "patty griffin|||useless desires": {
       "artist": "Patty Griffin",
       "title": "Useless Desires"
+    },
+    "the damned|||the shadow of love": {
+      "artist": "The Damned",
+      "title": "The Shadow Of Love"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -40490,6 +40499,11 @@
       "uri": "spotify:track:5d8OAW7clgESJAo64wmG48",
       "artist": "Patty Griffin",
       "title": "Useless Desires"
+    },
+    "the damned|||the shadow of love": {
+      "uri": "spotify:track:4QaOESIMfFp1MYOOOBHXrE",
+      "artist": "The Damned",
+      "title": "The Shadow Of Love"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -42461,6 +42475,7 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sylvie kreusch|||walk walk",
       "faces on tv|||traveling blind",
       "hermanos gutierrez|||canto andino",
       "spinvis|||icarus",
@@ -42518,6 +42533,7 @@
       "edward sharpe & the magnetic zeros|||better days"
     ],
     "mellow_mix": [
+      "lucinda williams|||steal your love",
       "chris isaak|||this time",
       "shawn colvin|||wichita skyline",
       "greg brown|||laughing river",
@@ -43295,5 +43311,6 @@
   "__match_v35__the weepies|||world spins madly on": "spotify:track:6NSlOEEtWlqvEFrjQsry77",
   "__match_v35__jackson browne|||for everyman": "spotify:track:70f23gQJEKE6kPRGWzOOa0",
   "__match_v35__aimee mann|||the scientist live": "spotify:track:7qma5VZZ9cgKyLFX0u0qdx",
-  "__match_v35__patty griffin|||useless desires": "spotify:track:5d8OAW7clgESJAo64wmG48"
+  "__match_v35__patty griffin|||useless desires": "spotify:track:5d8OAW7clgESJAo64wmG48",
+  "__match_v35__the damned|||the shadow of love": "spotify:track:4QaOESIMfFp1MYOOOBHXrE"
 }
