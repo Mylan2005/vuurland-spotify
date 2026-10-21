@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "angus & julia stone|||karaoke bar",
+  "__last_radio_key_vuurland": "charlotte day wilson|||canopy",
   "__last_radio_key_mellow_mix": "sting|||desert rose",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3658,7 +3658,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5059,
+  "__vuurland_active_playlist_count": 5060,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -5108,6 +5108,7 @@
     "cranes|||paris and rome - flood mix",
     "crazy horse|||my my hey hey out of the blue - live; 2016 remaster",
     "creedence clearwater revival|||have you ever seen the rain",
+    "creedence clearwater revival|||who'll stop the rain",
     "cristovam & boy & bear|||fever (feat. boy & bear)",
     "cristovam|||boy & bear|||fever (feat. boy & bear)",
     "cristovam|||fever",
@@ -12835,6 +12836,7 @@
     "spotify:track:3BYO4FZQKY1odgs5mfdxjY",
     "spotify:track:3Bbb7sfVmXbJnuy75MidP3",
     "spotify:track:3BeaiIXko9QV8689eWB6yd",
+    "spotify:track:3Bh6uInhcVBVvLraGZdkKD",
     "spotify:track:3Blg6ZTHUJwPxP5CgUPvD8",
     "spotify:track:3BnqXLIouQrCtUljR1cGru",
     "spotify:track:3BntzKsnLf2pc0dsvE3Zav",
@@ -19458,6 +19460,7 @@
     "USBS50310286",
     "USBWC0010022",
     "USC4R0714922",
+    "USC4R0817634",
     "USC4R0817643",
     "USC4R1601922",
     "USC4R1702113",
@@ -25928,7 +25931,8 @@
     "spotify:track:06KMxCt6MwBqgivE20KDC4": "USAJN0502801",
     "spotify:track:5AALdJSCeSABNrHvDXhXYG": "GBAFL9500045",
     "spotify:track:0IwXp8V7wgFCIthRh2z8Ot": "USCA20601220",
-    "spotify:track:6cBGDBRtE1kCiGstk2lWlH": "AUWB01500002"
+    "spotify:track:6cBGDBRtE1kCiGstk2lWlH": "AUWB01500002",
+    "spotify:track:3Bh6uInhcVBVvLraGZdkKD": "USC4R0817634"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -33030,6 +33034,10 @@
     "the waifs|||beautiful you": {
       "artist": "The Waifs",
       "title": "Beautiful You"
+    },
+    "creedence clearwater revival|||who'll stop the rain": {
+      "artist": "Creedence Clearwater Revival",
+      "title": "Who'll Stop The Rain"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -40393,6 +40401,11 @@
       "uri": "spotify:track:6cBGDBRtE1kCiGstk2lWlH",
       "artist": "The Waifs",
       "title": "Beautiful You"
+    },
+    "creedence clearwater revival|||who'll stop the rain": {
+      "uri": "spotify:track:3Bh6uInhcVBVvLraGZdkKD",
+      "artist": "Creedence Clearwater Revival",
+      "title": "Who'll Stop The Rain"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -42364,6 +42377,7 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "charlotte day wilson|||canopy",
       "angus & julia stone|||karaoke bar",
       "maro|||to grieve you",
       "girl in red|||we fell in love in october",
@@ -43180,5 +43194,6 @@
   "__match_v35__iron & wine and calexico|||he lays in the reins": "spotify:track:06KMxCt6MwBqgivE20KDC4",
   "__match_v35__liquorice|||blew it": "spotify:track:5AALdJSCeSABNrHvDXhXYG",
   "__match_v35__the decemberists|||the crane wife 3": "spotify:track:0IwXp8V7wgFCIthRh2z8Ot",
-  "__match_v35__the waifs|||beautiful you": "spotify:track:6cBGDBRtE1kCiGstk2lWlH"
+  "__match_v35__the waifs|||beautiful you": "spotify:track:6cBGDBRtE1kCiGstk2lWlH",
+  "__match_v35__creedence clearwater revival|||who'll stop the rain": "spotify:track:3Bh6uInhcVBVvLraGZdkKD"
 }
