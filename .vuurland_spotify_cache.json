@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "maggie rogers|||so sick of dreaming",
-  "__last_radio_key_mellow_mix": "laura veirs|||shape shifter",
+  "__last_radio_key_mellow_mix": "agnes obel|||chord left",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1224,6 +1224,7 @@
       "abigail washburn|||song of the traveling daughter",
       "adrian legg|||kinvarra's child",
       "afro celt sound system|||when you're falling w/ peter gabriel",
+      "agnes obel|||chord left",
       "agnes obel|||it's happening again",
       "agnes obel|||the curse",
       "ahi|||black monday",
@@ -3953,7 +3954,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5428,
+  "__vuurland_active_playlist_count": 5429,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -4083,6 +4084,7 @@
     "afro celt sound system|||when you're falling",
     "agents of time|||your love - agents of time remix",
     "agnes obel|||brother sparrow",
+    "agnes obel|||chord left",
     "agnes obel|||island of doom",
     "agnes obel|||it's happening again",
     "agnes obel|||riverside",
@@ -13939,6 +13941,7 @@
     "spotify:track:3GppcLIGlSlvujXgR0pPRt",
     "spotify:track:3H60URdntoG9QPBCKSRwY3",
     "spotify:track:3H7dxjwIXABXYLAxacLnUZ",
+    "spotify:track:3H8tLzrJPjfGEiAf7E3sab",
     "spotify:track:3HBcQ5GenzAlBhCIgDGL3x",
     "spotify:track:3HC6U39266ytr7fMW9M2Mz",
     "spotify:track:3HFBqhotJeEKHJzMEW31jZ",
@@ -17338,6 +17341,7 @@
     "BEP011200031",
     "BEP011200038",
     "BEP011300114",
+    "BEP011300128",
     "BEP011300228",
     "BEP011870001",
     "BEP011970001",
@@ -27915,7 +27919,8 @@
     "spotify:track:0tHOTQBn2M4CD2dcyHivth": "USAT20180654",
     "spotify:track:06B0uQYZ9V63rVtehVgMOT": "GBAJH0503430",
     "spotify:track:6KbkmrCXCBanKxhdpqkRfB": "GBPVV2204108",
-    "spotify:track:2JOpMWPotreAzbtJJMCboE": "GBBRP2501416"
+    "spotify:track:2JOpMWPotreAzbtJJMCboE": "GBBRP2501416",
+    "spotify:track:3H8tLzrJPjfGEiAf7E3sab": "BEP011300128"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -36369,6 +36374,10 @@
     "miki berenyi trio lol tolhurst & gray|||stranger": {
       "artist": "Miki Berenyi Trio, Lol Tolhurst, Gray",
       "title": "Stranger"
+    },
+    "agnes obel|||chord left": {
+      "artist": "Agnes Obel",
+      "title": "Chord Left"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -45262,6 +45271,11 @@
       "uri": "spotify:track:2JOpMWPotreAzbtJJMCboE",
       "artist": "Miki Berenyi Trio, Lol Tolhurst, Gray",
       "title": "Stranger"
+    },
+    "agnes obel|||chord left": {
+      "uri": "spotify:track:3H8tLzrJPjfGEiAf7E3sab",
+      "artist": "Agnes Obel",
+      "title": "Chord Left"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -47335,6 +47349,7 @@
       "cigarettes after sex|||nothing's gonna hurt you baby"
     ],
     "mellow_mix": [
+      "agnes obel|||chord left",
       "laura veirs|||shape shifter",
       "teodor wolgers|||abandoned places",
       "leon bridges|||river",
@@ -47433,8 +47448,7 @@
       "the head and the heart|||lost in my mind",
       "beirut|||fisher island sound",
       "beth orton|||central reservation",
-      "warren zevon|||keep me in your heart",
-      "madi diaz|||be careful"
+      "warren zevon|||keep me in your heart"
     ],
     "big_sonic_heaven": [
       "lamb|||what sound",
@@ -48526,5 +48540,6 @@
   "__match_v35__the cure|||burn": "spotify:track:0tHOTQBn2M4CD2dcyHivth",
   "__match_v35__he said|||could you?": "spotify:track:06B0uQYZ9V63rVtehVgMOT",
   "__match_v35__teodor wolgers|||abandoned places": "spotify:track:6KbkmrCXCBanKxhdpqkRfB",
-  "__match_v35__miki berenyi trio lol tolhurst & gray|||stranger": "spotify:track:2JOpMWPotreAzbtJJMCboE"
+  "__match_v35__miki berenyi trio lol tolhurst & gray|||stranger": "spotify:track:2JOpMWPotreAzbtJJMCboE",
+  "__match_v35__agnes obel|||chord left": "spotify:track:3H8tLzrJPjfGEiAf7E3sab"
 }
