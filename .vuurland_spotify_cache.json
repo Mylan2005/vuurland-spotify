@@ -1,6 +1,6 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "hozier|||too sweet",
@@ -3386,6 +3386,7 @@
       "she's green|||bleed",
       "she's green|||dear ivy",
       "she's green|||empty house",
+      "she's green|||lakes",
       "she's green|||locket",
       "she's green|||mandy",
       "she's green|||paper thin",
@@ -3581,12 +3582,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "kashtin|||akua tuta": {
-      "artist": "Kashtin",
-      "title": "Akua Tuta",
-      "source": "mellow_mix",
-      "failed_at": 1792489939
-    },
     "mary mclaughlin|||caoineadh na mara'amen": {
       "artist": "Mary McLaughlin",
       "title": "Caoineadh Na Mara'amen",
@@ -3696,7 +3691,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5096,
+  "__vuurland_active_playlist_count": 5097,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -8278,6 +8273,8 @@
     "novo amor|||state lines",
     "novo amor|||terraform",
     "novo amor|||years on",
+    "now always fades|||coalesce",
+    "now always fades|||coalesce feat olive kimoto",
     "nyxjvh|||moths",
     "oasis|||stop crying your heart out",
     "ocie elliott & nathan kawanishi|||run to you - lofi",
@@ -10902,6 +10899,7 @@
     "spotify:track:09tv20euln883gMT36Agpr",
     "spotify:track:09uY5LeSXSPKKH4LxI7byG",
     "spotify:track:09wgaiTbBRtfvDYLvKjIZm",
+    "spotify:track:0AJPjOXreWjuNPcY4uelRs",
     "spotify:track:0AKkJA9fOLjUPYtXhButOt",
     "spotify:track:0ANotAkjPrCjfbdqwqSaSK",
     "spotify:track:0AUBFe4HCHU01mKj8Wlf45",
@@ -18629,6 +18627,7 @@
     "QT3FF2623670",
     "QT4K42515326",
     "QT4K42634907",
+    "QT4K42648358",
     "QT4QS2600072",
     "QT5M52569627",
     "QT62V2512212",
@@ -26115,7 +26114,8 @@
     "spotify:track:5xirs2Ln4YF90C445Z8kGX": "CAC480600001",
     "spotify:track:5F4ksIKmuXEtgBf6SfEQRr": "USSM11002206",
     "spotify:track:39C5VHocIHGfLcaP2xr79j": "QZWFJ2616230",
-    "spotify:track:1xZ6XBwdlBvWUU8nSpHBNt": "USDW10300216"
+    "spotify:track:1xZ6XBwdlBvWUU8nSpHBNt": "USDW10300216",
+    "spotify:track:0AJPjOXreWjuNPcY4uelRs": "QT4K42648358"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -33379,6 +33379,10 @@
     "eastmountainsouth|||show me the river": {
       "artist": "Eastmountainsouth",
       "title": "Show Me The River"
+    },
+    "now always fades|||coalesce feat olive kimoto": {
+      "artist": "Now Always Fades, Olive Kimoto",
+      "title": "Coalesce"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -40922,6 +40926,11 @@
       "uri": "spotify:track:1xZ6XBwdlBvWUU8nSpHBNt",
       "artist": "Eastmountainsouth",
       "title": "Show Me The River"
+    },
+    "now always fades|||coalesce feat olive kimoto": {
+      "uri": "spotify:track:0AJPjOXreWjuNPcY4uelRs",
+      "artist": "Now Always Fades, Olive Kimoto",
+      "title": "Coalesce"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -41746,7 +41755,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "hammock|||deconstructing",
+  "__last_radio_key_big_sonic_heaven": "she's green|||lakes",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -43047,6 +43056,7 @@
       "the afghan whigs|||algiers"
     ],
     "big_sonic_heaven": [
+      "she's green|||lakes",
       "hammock|||deconstructing",
       "m83|||gone",
       "attic ocean|||could it be you",
@@ -43816,5 +43826,6 @@
   "__match_v35__cowboy junkies|||brand new world": "spotify:track:5xirs2Ln4YF90C445Z8kGX",
   "__match_v35__paul simon|||loves me like a rock": "spotify:track:5F4ksIKmuXEtgBf6SfEQRr",
   "__match_v35__edward ka-spel|||dark horse": "spotify:track:39C5VHocIHGfLcaP2xr79j",
-  "__match_v35__eastmountainsouth|||show me the river": "spotify:track:1xZ6XBwdlBvWUU8nSpHBNt"
+  "__match_v35__eastmountainsouth|||show me the river": "spotify:track:1xZ6XBwdlBvWUU8nSpHBNt",
+  "__match_v35__now always fades|||coalesce feat olive kimoto": "spotify:track:0AJPjOXreWjuNPcY4uelRs"
 }
