@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "big thief|||paul",
-  "__last_radio_key_mellow_mix": "the pretenders|||back on the chain gang",
+  "__last_radio_key_mellow_mix": "madi diaz|||be careful",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2113,6 +2113,7 @@
       "madeleine peyroux|||california raining",
       "madeleine peyroux|||dance me to the end of love",
       "madeleine peyroux|||i'm all right",
+      "madi diaz|||be careful",
       "madredeus|||as ilhas dos acores",
       "madrugada|||majesty",
       "madrugada|||the lost gospel",
@@ -3783,7 +3784,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5286,
+  "__vuurland_active_playlist_count": 5287,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -7849,6 +7850,7 @@
     "madeleine peyroux|||blue alert",
     "madeleine peyroux|||dance me to the end of love",
     "madeleine peyroux|||i'm all right",
+    "madi diaz|||be careful",
     "madison cunningham|||all i've ever known",
     "madison cunningham|||all i’ve ever known",
     "madison cunningham|||life according to raechel",
@@ -15623,6 +15625,7 @@
     "spotify:track:6PFwlbsQ7AM2D2llQR1JOT",
     "spotify:track:6PT4eFe20wZ2mi5jB3wKrD",
     "spotify:track:6PdWPdgPoVCT9WLFMVnhxx",
+    "spotify:track:6PoMRNbAahzOCWvRGePExt",
     "spotify:track:6Pu1G8OV5m38PkLQHyZfPp",
     "spotify:track:6PypGyiu0Y2lCDBN1XZEnP",
     "spotify:track:6Pz86QWDHx7y6WzBHFNX3y",
@@ -20713,6 +20716,7 @@
     "USEP42201004",
     "USEP42201005",
     "USEP42201009",
+    "USEP42236003",
     "USEP42237005",
     "USEP42237006",
     "USEP42237012",
@@ -27173,7 +27177,8 @@
     "spotify:track:6eATBDie6e8LGLdKB5nNPI": "DE1QW2632506",
     "spotify:track:7vqGtCfX1PKbK34Hf0qByp": "US64G1937601",
     "spotify:track:21iOWZ4ey2q17RIGfUJ4P8": "QT6682602321",
-    "spotify:track:06HNFgZGJjhrBX72w07Yn5": "GBALB0300029"
+    "spotify:track:06HNFgZGJjhrBX72w07Yn5": "GBALB0300029",
+    "spotify:track:6PoMRNbAahzOCWvRGePExt": "USEP42236003"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -34993,6 +34998,10 @@
     "the cure|||breathe": {
       "artist": "The Cure",
       "title": "Breathe"
+    },
+    "madi diaz|||be careful": {
+      "artist": "Madi Diaz, S.G. Goodman, Joy Oladokun",
+      "title": "Be Careful"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -43176,6 +43185,11 @@
       "uri": "spotify:track:06HNFgZGJjhrBX72w07Yn5",
       "artist": "The Cure",
       "title": "Breathe"
+    },
+    "madi diaz|||be careful": {
+      "uri": "spotify:track:6PoMRNbAahzOCWvRGePExt",
+      "artist": "Madi Diaz, S.G. Goodman, Joy Oladokun",
+      "title": "Be Careful"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -45249,6 +45263,7 @@
       "oh wonder|||ultralife"
     ],
     "mellow_mix": [
+      "madi diaz|||be careful",
       "the pretenders|||back on the chain gang",
       "allison russell|||nightflyer",
       "joe cocker|||darling be home soon",
@@ -45347,8 +45362,7 @@
       "eastmountainsouth|||show me the river",
       "sarah mclachlan|||world on fire",
       "madeleine peyroux|||blue alert",
-      "paul simon|||loves me like a rock",
-      "cowboy junkies|||brand new world"
+      "paul simon|||loves me like a rock"
     ],
     "big_sonic_heaven": [
       "trentemøller|||swerve",
@@ -46286,5 +46300,6 @@
   "__match_v35__attic ocean|||love spells": "spotify:track:6eATBDie6e8LGLdKB5nNPI",
   "__match_v35__sufjan stevens|||love yourself": "spotify:track:7vqGtCfX1PKbK34Hf0qByp",
   "__match_v35__kate de rosset|||chase the bloom": "spotify:track:21iOWZ4ey2q17RIGfUJ4P8",
-  "__match_v35__the cure|||breathe": "spotify:track:06HNFgZGJjhrBX72w07Yn5"
+  "__match_v35__the cure|||breathe": "spotify:track:06HNFgZGJjhrBX72w07Yn5",
+  "__match_v35__madi diaz|||be careful": "spotify:track:6PoMRNbAahzOCWvRGePExt"
 }
