@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "lady wray|||guilty",
-  "__last_radio_key_mellow_mix": "caro emerald|||a night like this",
+  "__last_radio_key_vuurland": "jordan rakei & tom mcfarland|||easy to love",
+  "__last_radio_key_mellow_mix": "fleetwood mac|||landslide",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -3698,7 +3698,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5104,
+  "__vuurland_active_playlist_count": 5105,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -8770,6 +8770,7 @@
     "ray lamontagne & sierra ferrell|||i was born to love you",
     "ray lamontagne|||and they called her california",
     "ray lamontagne|||be here now",
+    "ray lamontagne|||beg steal or borrow",
     "ray lamontagne|||broken sky",
     "ray lamontagne|||empty",
     "ray lamontagne|||i was born to love you",
@@ -15697,6 +15698,7 @@
     "spotify:track:7evvxU1jHX4ZFYoM8xtPM4",
     "spotify:track:7fHzjaSpIqRPXP2s5hJS1M",
     "spotify:track:7fMVF2j6htufTR0vBcNPW2",
+    "spotify:track:7fMYBrlKl9mkcMTUGT4j6l",
     "spotify:track:7fRvTEbngyFprSPRvRDyM8",
     "spotify:track:7fRyTrsjp2ZqzgJGi8SsgM",
     "spotify:track:7fUCykbqXwMyKVTDxp2Kuw",
@@ -20311,6 +20313,7 @@
     "USRC10600340",
     "USRC10800298",
     "USRC10800306",
+    "USRC11000407",
     "USRC11000683",
     "USRC11000689",
     "USRC11000691",
@@ -26150,7 +26153,8 @@
     "spotify:track:3vQUDLivkDfUkmr4yw7Bvp": "USSUB1409001",
     "spotify:track:1Nw6yQXcLVqW0urcUAYt3P": "CAT241000217",
     "spotify:track:6rSZmBlzTgiVT23uMgOajV": "TCABI1234237",
-    "spotify:track:44pVgu4qtIu479fBuJNKyd": "GBJRZ2400002"
+    "spotify:track:44pVgu4qtIu479fBuJNKyd": "GBJRZ2400002",
+    "spotify:track:7fMYBrlKl9mkcMTUGT4j6l": "USRC11000407"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -33458,6 +33462,10 @@
     "air formation|||finding gravity": {
       "artist": "Air Formation",
       "title": "Finding Gravity"
+    },
+    "ray lamontagne|||beg steal or borrow": {
+      "artist": "Ray LaMontagne, The Pariah Dogs",
+      "title": "Beg Steal or Borrow (with The Pariah Dogs)"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -41036,6 +41044,11 @@
       "uri": "spotify:track:44pVgu4qtIu479fBuJNKyd",
       "artist": "Air Formation",
       "title": "Finding Gravity"
+    },
+    "ray lamontagne|||beg steal or borrow": {
+      "uri": "spotify:track:7fMYBrlKl9mkcMTUGT4j6l",
+      "artist": "Ray LaMontagne, The Pariah Dogs",
+      "title": "Beg Steal or Borrow (with The Pariah Dogs)"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -43007,6 +43020,7 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "jordan rakei & tom mcfarland|||easy to love",
       "lady wray|||guilty",
       "pj harvey & thom yorke|||this mess we're in",
       "villagers|||a trick of the light",
@@ -43089,6 +43103,7 @@
       "edward sharpe & the magnetic zeros|||better days"
     ],
     "mellow_mix": [
+      "fleetwood mac|||landslide",
       "caro emerald|||a night like this",
       "govi|||andalusian nights",
       "jose gonzalez|||stay alive",
@@ -43954,5 +43969,6 @@
   "__match_v35__luluc|||small window": "spotify:track:3vQUDLivkDfUkmr4yw7Bvp",
   "__match_v35__the wailin' jennys|||what has been done": "spotify:track:1Nw6yQXcLVqW0urcUAYt3P",
   "__match_v35__jonathan coulton|||now i am an arsonist w/ suzanne vega": "spotify:track:6rSZmBlzTgiVT23uMgOajV",
-  "__match_v35__air formation|||finding gravity": "spotify:track:44pVgu4qtIu479fBuJNKyd"
+  "__match_v35__air formation|||finding gravity": "spotify:track:44pVgu4qtIu479fBuJNKyd",
+  "__match_v35__ray lamontagne|||beg steal or borrow": "spotify:track:7fMYBrlKl9mkcMTUGT4j6l"
 }
