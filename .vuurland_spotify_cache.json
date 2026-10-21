@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "dope lemon|||miami baby",
-  "__last_radio_key_mellow_mix": "garrett kato|||holding on to you",
+  "__last_radio_key_vuurland": "bear's den|||spiders",
+  "__last_radio_key_mellow_mix": "jackson browne|||for everyman",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1795,6 +1795,7 @@
       "jackson browne|||doctor my eyes",
       "jackson browne|||farther on",
       "jackson browne|||for a dancer",
+      "jackson browne|||for everyman",
       "jackson browne|||fountain of sorrow",
       "jackson browne|||jamaica say you will",
       "jackson browne|||late for the sky",
@@ -3638,7 +3639,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5014,
+  "__vuurland_active_playlist_count": 5015,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -5020,6 +5021,7 @@
     "cocteau twins & harold budd|||sea, swallow me",
     "cocteau twins|||harold budd|||sea, swallow me",
     "cocteau twins|||in our angelhood",
+    "cocteau twins|||in the gold dust rush",
     "cocteau twins|||lazy calm",
     "cocteau twins|||plain tiger",
     "cocteau twins|||sea swallow me",
@@ -13035,6 +13037,7 @@
     "spotify:track:3cNyJCm0nf1DPr6hvSLu8Q",
     "spotify:track:3cYXvkaZPIEMRpYzsQHXRU",
     "spotify:track:3cfcXcHx15uP9zuZVU9CAO",
+    "spotify:track:3cncUbvmRdvKS4PDUlXlOH",
     "spotify:track:3d1sRLMVrXnCBawEZo69bR",
     "spotify:track:3d3cv8o19nzTsVK9d98V0j",
     "spotify:track:3dP1f7L5XyiX5q2LB8Ywsg",
@@ -16836,6 +16839,7 @@
     "GBAFL2600230",
     "GBAFL8300054",
     "GBAFL8300058",
+    "GBAFL8300060",
     "GBAFL8500065",
     "GBAFL8500066",
     "GBAFL8500084",
@@ -25726,7 +25730,8 @@
     "spotify:track:4G2bXH8q5RBLGkZBaDWwgn": "GBV8F2000139",
     "spotify:track:1QAdhE2gwAaTcPTXmYcBA5": "USNCB2625403",
     "spotify:track:5xZt2WdMLvuUbqB6oY0uw2": "GBARS9800129",
-    "spotify:track:6tq2THu61yugQqQiOfoGzr": "DEG442191070"
+    "spotify:track:6tq2THu61yugQqQiOfoGzr": "DEG442191070",
+    "spotify:track:3cncUbvmRdvKS4PDUlXlOH": "GBAFL8300060"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792508749,
@@ -32656,6 +32661,10 @@
     "bilbao|||slow it down w/ thala": {
       "artist": "BILBAO, Thala",
       "title": "Slow It Down"
+    },
+    "cocteau twins|||in the gold dust rush": {
+      "artist": "Cocteau Twins",
+      "title": "In The Gold Dust Rush"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -39799,6 +39808,11 @@
       "uri": "spotify:track:6tq2THu61yugQqQiOfoGzr",
       "artist": "BILBAO, Thala",
       "title": "Slow It Down"
+    },
+    "cocteau twins|||in the gold dust rush": {
+      "uri": "spotify:track:3cncUbvmRdvKS4PDUlXlOH",
+      "artist": "Cocteau Twins",
+      "title": "In The Gold Dust Rush"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -41770,6 +41784,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "bear's den|||spiders",
+      "beck|||think i'm in love",
       "dope lemon|||miami baby",
       "lisa hannigan|||snow",
       "noah kahan|||doors",
@@ -41793,6 +41809,7 @@
       "edward sharpe & the magnetic zeros|||better days"
     ],
     "mellow_mix": [
+      "jackson browne|||for everyman",
       "garrett kato|||holding on to you",
       "the weepies|||world spins madly on",
       "the wailin' jennys|||long time traveller",
@@ -42461,5 +42478,6 @@
   "__match_v35__thea gilmore|||crazy love": "spotify:track:4G2bXH8q5RBLGkZBaDWwgn",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
   "__match_v35__beth orton|||pass in time": "spotify:track:5xZt2WdMLvuUbqB6oY0uw2",
-  "__match_v35__bilbao|||slow it down w/ thala": "spotify:track:6tq2THu61yugQqQiOfoGzr"
+  "__match_v35__bilbao|||slow it down w/ thala": "spotify:track:6tq2THu61yugQqQiOfoGzr",
+  "__match_v35__cocteau twins|||in the gold dust rush": "spotify:track:3cncUbvmRdvKS4PDUlXlOH"
 }
