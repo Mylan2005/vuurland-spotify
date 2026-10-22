@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "kurt vile|||zoom 97",
+  "__last_radio_key_vuurland": "angus and julia stone|||big jet plane",
   "__last_radio_key_mellow_mix": "first aid kit|||my silver lining",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4168,12 +4168,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "patty griffin|||stolen car": {
-      "artist": "Patty Griffin",
-      "title": "Stolen Car",
-      "source": "mellow_mix",
-      "failed_at": 1792612327
-    },
     "dead can dance|||nada": {
       "artist": "Dead Can Dance",
       "title": "Nada",
@@ -4397,7 +4391,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5792,
+  "__vuurland_active_playlist_count": 5793,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -5410,6 +5404,7 @@
     "bluhm|||hello to heaven",
     "bluhm|||i don't care i want you now",
     "bluhm|||i don't care, i want you now",
+    "bluhm|||low light",
     "bluhm|||sugar phantom blackout",
     "bluhm|||when you're gone",
     "blushing|||seafoam",
@@ -13301,6 +13296,7 @@
     "spotify:track:0vTRzQ8v0ma3FUaHPFllKO",
     "spotify:track:0vTvkf24wkCG3DTKgoNnih",
     "spotify:track:0vdkAEDR7eNWjFgpceWoVn",
+    "spotify:track:0veiddMVVdajBCOUJzGcpg",
     "spotify:track:0vuj9C2EaijzROiGd4yAvz",
     "spotify:track:0vyNxE8W1tkbOA9s64UfGa",
     "spotify:track:0wHqiTo9z8KnQpB5cgTEpX",
@@ -21677,6 +21673,7 @@
     "QZNWV2244159",
     "QZNWV2591606",
     "QZNWW2187988",
+    "QZNWW2517913",
     "QZNWY2360180",
     "QZNWY2574295",
     "QZNWZ2696778",
@@ -30001,7 +29998,8 @@
     "spotify:track:7I5TgzRBPcnUafTJaZFbfy": "GBAFL8800059",
     "spotify:track:0yrQSQ7WFiM3PD0NGuz4J4": "USBHM0510146",
     "spotify:track:7z7hFPOywArj5VZHVAdAjz": "THSM10551837",
-    "spotify:track:0qQvmU1UyPMQ7p1ZxmoCzS": "GBUM72310452"
+    "spotify:track:0qQvmU1UyPMQ7p1ZxmoCzS": "GBUM72310452",
+    "spotify:track:0veiddMVVdajBCOUJzGcpg": "QZNWW2517913"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792681903,
@@ -51518,6 +51516,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "angus and julia stone|||big jet plane",
+      "maggie rogers|||in the living room",
       "kurt vile|||zoom 97",
       "tiny ruins|||me at the museum you in the wintergardens",
       "stephen sanchez|||be more",
@@ -51615,9 +51615,7 @@
       "angus & julia stone|||down to the sea",
       "whitney|||strange overtones",
       "cass mccombs|||bum bum bum",
-      "noah kahan|||doors",
-      "phoebe bridgers|||smoke signals",
-      "olivia dean|||nice to each other"
+      "noah kahan|||doors"
     ],
     "mellow_mix": [
       "first aid kit|||my silver lining",
@@ -53181,5 +53179,6 @@
   "__match_v35__airiel|||swimming through us": "spotify:track:0yrQSQ7WFiM3PD0NGuz4J4",
   "__match_v35__death of heather|||head in the sand": "spotify:track:7z7hFPOywArj5VZHVAdAjz",
   "__match_v35__aurora|||the conflict of the mind": "spotify:track:0qQvmU1UyPMQ7p1ZxmoCzS",
-  "__not_found_v35__taj mahal|||african herbsman": 1792698639
+  "__not_found_v35__taj mahal|||african herbsman": 1792698639,
+  "__match_v35__bluhm|||low light": "spotify:track:0veiddMVVdajBCOUJzGcpg"
 }
