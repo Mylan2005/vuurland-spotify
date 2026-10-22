@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "mitski|||heaven",
-  "__last_radio_key_mellow_mix": "the mamas & the papas|||dream a little dream of me",
+  "__last_radio_key_vuurland": "big thief|||vampire empire",
+  "__last_radio_key_mellow_mix": "mavis staples|||we got to have peace",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2217,6 +2217,7 @@
       "matson belle|||float",
       "mavis staples|||everybody needs love",
       "mavis staples|||satisfied mind",
+      "mavis staples|||we got to have peace",
       "mavis staples|||you are not alone",
       "may erlewine|||easy w/ theo katzman",
       "may erlewine|||palm of my hand",
@@ -4140,7 +4141,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5554,
+  "__vuurland_active_playlist_count": 5555,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -6648,6 +6649,7 @@
     "fun with ether|||soft smiles only",
     "future islands|||a song for our grandfathers",
     "future islands|||back in the tall grass",
+    "future islands|||one day",
     "future islands|||peach",
     "future islands|||sail",
     "future islands|||the moon is blue",
@@ -11930,6 +11932,7 @@
     "spotify:track:00s77x3CO21IhBAsGndnqM",
     "spotify:track:00sdzt2UJOGSrBw3V2rZXn",
     "spotify:track:01AbB47Hm60LTIStyzMb2g",
+    "spotify:track:01B7qxPPBnjAhVCZ61aAkF",
     "spotify:track:01K4zKU104LyJ8gMb7227B",
     "spotify:track:01KbD3gTJC5Pfq1pEzFh5a",
     "spotify:track:01OGOTQscKD0ej6C9fVwQP",
@@ -18720,6 +18723,7 @@
     "GBAFL2500529",
     "GBAFL2500553",
     "GBAFL2500645",
+    "GBAFL2500716",
     "GBAFL2500721",
     "GBAFL2500778",
     "GBAFL2600209",
@@ -28608,7 +28612,8 @@
     "spotify:track:2gzHic7z5OBTla4d3sV51h": "QZZ7P2636129",
     "spotify:track:3r92A6qjrG4sihvzl2nZDi": "GBAHT8403650",
     "spotify:track:27hhIs2fp6w06N5zx4Eaa5": "USMC16846393",
-    "spotify:track:5iAV3NygJBG2eeizzeFyyg": "QMDA72547908"
+    "spotify:track:5iAV3NygJBG2eeizzeFyyg": "QMDA72547908",
+    "spotify:track:01B7qxPPBnjAhVCZ61aAkF": "GBAFL2500716"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -37643,6 +37648,10 @@
     "fawn|||fleeting sun": {
       "artist": "fawn",
       "title": "Fleeting Sun"
+    },
+    "future islands|||one day": {
+      "artist": "Future Islands",
+      "title": "One Day"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -47166,6 +47175,11 @@
       "uri": "spotify:track:5iAV3NygJBG2eeizzeFyyg",
       "artist": "fawn",
       "title": "Fleeting Sun"
+    },
+    "future islands|||one day": {
+      "uri": "spotify:track:01B7qxPPBnjAhVCZ61aAkF",
+      "artist": "Future Islands",
+      "title": "One Day"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -49137,6 +49151,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "big thief|||vampire empire",
+      "matt berninger & rosanne cash|||who loves the sun",
       "mitski|||heaven",
       "the war on drugs|||under the pressure",
       "mooneye|||in between",
@@ -49234,11 +49250,10 @@
       "mooneye|||girl like you",
       "the xx|||islands",
       "daughter|||candles",
-      "jack johnson|||banana pancakes",
-      "sigur ros|||hoppipolla",
-      "maggie rogers|||so sick of dreaming"
+      "jack johnson|||banana pancakes"
     ],
     "mellow_mix": [
+      "mavis staples|||we got to have peace",
       "the mamas & the papas|||dream a little dream of me",
       "tracy chapman|||heaven's here on earth",
       "sophie zelmani|||so long",
@@ -49337,8 +49352,7 @@
       "teodor wolgers|||abandoned places",
       "leon bridges|||river",
       "jesse colin young|||the pretty and the fair",
-      "carsie blanton|||hope",
-      "tom waits|||downtown train"
+      "carsie blanton|||hope"
     ],
     "big_sonic_heaven": [
       "slowdive|||machine gun",
@@ -50571,5 +50585,6 @@
   "__match_v35__midsommar|||dive in": "spotify:track:2gzHic7z5OBTla4d3sV51h",
   "__match_v35__echo & the bunnymen|||ocean rain": "spotify:track:3r92A6qjrG4sihvzl2nZDi",
   "__match_v35__the mamas & the papas|||dream a little dream of me": "spotify:track:27hhIs2fp6w06N5zx4Eaa5",
-  "__match_v35__fawn|||fleeting sun": "spotify:track:5iAV3NygJBG2eeizzeFyyg"
+  "__match_v35__fawn|||fleeting sun": "spotify:track:5iAV3NygJBG2eeizzeFyyg",
+  "__match_v35__future islands|||one day": "spotify:track:01B7qxPPBnjAhVCZ61aAkF"
 }
