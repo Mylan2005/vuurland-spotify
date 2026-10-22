@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "big_sonic_heaven",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "portland|||lay me down",
-  "__last_radio_key_mellow_mix": "elbow|||weather to fly",
+  "__last_radio_key_mellow_mix": "gordon lightfoot|||early morning rain",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -4213,6 +4213,12 @@
       "title": "The Machine feat. Rosa Rocca Serra",
       "source": "big_sonic_heaven",
       "failed_at": 1792650627
+    },
+    "equation|||hard underground": {
+      "artist": "Equation",
+      "title": "Hard Underground",
+      "source": "mellow_mix",
+      "failed_at": 1792655882
     }
   },
   "__v51_radio_release_pending": [],
@@ -29105,7 +29111,7 @@
     "kruger brothers|||the gate of memory": 3,
     "patty griffin|||making pies": 3,
     "theis thaws tricky rosa rocca-serra|||the machine feat rosa rocca serra": 3,
-    "equation|||hard underground": 2
+    "equation|||hard underground": 3
   },
   "__match_v35__delvis|||walk alone track": "spotify:track:1TbzpNoZ6rrUTytsAfraik",
   "__match_v35__tom petty|||it's good to be king": "spotify:track:1c0flvMImhKMuiZIc0VzEb",
@@ -29205,7 +29211,8 @@
     "fleeting joys|||throwaway": 1,
     "kruger brothers|||the gate of memory": 1,
     "patty griffin|||making pies": 1,
-    "theis thaws tricky rosa rocca-serra|||the machine feat rosa rocca serra": 1
+    "theis thaws tricky rosa rocca-serra|||the machine feat rosa rocca serra": 1,
+    "equation|||hard underground": 1
   },
   "__match_v35__marble sounds|||leave a light on": "spotify:track:7d0VYHsLGjonizpQboVOL2",
   "__match_v35__dan mangan|||diminishing returns": "spotify:track:6QmNuanzOQNCgV2uhpQFL7",
@@ -49950,6 +49957,7 @@
       "wednesday|||elderberry wine"
     ],
     "mellow_mix": [
+      "gordon lightfoot|||early morning rain",
       "elbow|||weather to fly",
       "bruce cockburn|||the whole night sky bob weir=harmony vocals/bonnie raitt=slide guitar",
       "david gilmour|||smile",
@@ -51218,5 +51226,6 @@
   "__match_v35__tindersticks|||friday night": "spotify:track:3wIgr7DAXdJTeVF8xhEJxW",
   "__match_v35__the innocence mission|||speak our minds demo": "spotify:track:75nMynJb7vAbVVcmGLC1q6",
   "__match_v35__the smiths|||the headmaster ritual": "spotify:track:4tFGNFIIZ9ANSewxGZyiDD",
-  "__match_v35__portland|||lay me down": "spotify:track:6oJKreCa4e0G4KVwFbLaZr"
+  "__match_v35__portland|||lay me down": "spotify:track:6oJKreCa4e0G4KVwFbLaZr",
+  "__not_found_v35__equation|||hard underground": 1792655882
 }
