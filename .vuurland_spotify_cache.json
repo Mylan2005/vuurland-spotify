@@ -1,6 +1,6 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "phoebe bridgers|||motion sickness",
@@ -3539,6 +3539,7 @@
       "love & rockets|||an american dream",
       "lowly|||softy",
       "lucid express|||faux sweetness",
+      "lucid express|||something blue",
       "lucy la dusk|||angel milk tears with troche",
       "lush|||500 shake baby shake",
       "lush|||leaves me cold",
@@ -4165,7 +4166,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5575,
+  "__vuurland_active_playlist_count": 5576,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -8270,6 +8271,7 @@
     "luca fogale|||worthy of love",
     "luca fogale|||you tried",
     "lucid express|||faux sweetness",
+    "lucid express|||something blue",
     "lucinda williams|||2 kool 2 be 4-gotten",
     "lucinda williams|||are you down",
     "lucinda williams|||car wheels on a gravel road",
@@ -12423,6 +12425,7 @@
     "spotify:track:0dzbfio3qTYG9uk40SJNcr",
     "spotify:track:0e8vSOY64eTGsrgLGsUWRc",
     "spotify:track:0eBryM7ePQH3Klt3jz8xZd",
+    "spotify:track:0eC5DI6DHdKNl6gCZR1HEO",
     "spotify:track:0eFNaChl2NS58NP04hdLIn",
     "spotify:track:0eKxJBDphC5Xt2iFPBx24E",
     "spotify:track:0eP8eYZ8xErLFaZJsAkwFI",
@@ -21042,6 +21045,7 @@
     "US28E2127902",
     "US28E2434202",
     "US28E2434203",
+    "US28E2639003",
     "US28E2639007",
     "US2AH0402003",
     "US2AR0130508",
@@ -28717,7 +28721,8 @@
     "spotify:track:7fectUUMiPjZijOJIJaN3S": "GBAFL9000010",
     "spotify:track:2tw78QsqAbaNO8y1YauUFP": "QZES72581556",
     "spotify:track:4nCCrKplAjWWtiEJYAfysW": "USWB19700940",
-    "spotify:track:0F2H1g3MqO97LJLPlMPDhT": "USRHR8500809"
+    "spotify:track:0F2H1g3MqO97LJLPlMPDhT": "USRHR8500809",
+    "spotify:track:0eC5DI6DHdKNl6gCZR1HEO": "US28E2639003"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -37849,6 +37854,10 @@
     "greg brown|||just a bum": {
       "artist": "Greg Brown",
       "title": "Just A Bum"
+    },
+    "lucid express|||something blue": {
+      "artist": "Lucid Express",
+      "title": "Something Blue"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -47477,6 +47486,11 @@
       "uri": "spotify:track:0F2H1g3MqO97LJLPlMPDhT",
       "artist": "Greg Brown",
       "title": "Just A Bum"
+    },
+    "lucid express|||something blue": {
+      "uri": "spotify:track:0eC5DI6DHdKNl6gCZR1HEO",
+      "artist": "Lucid Express",
+      "title": "Something Blue"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -48301,7 +48315,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "she's green|||dear ivy",
+  "__last_radio_key_big_sonic_heaven": "lucid express|||something blue",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -49480,6 +49494,7 @@
       "phoebe green|||love song feat gizmo varillas"
     ],
     "big_sonic_heaven": [
+      "lucid express|||something blue",
       "she's green|||dear ivy",
       "bluhm|||when you're gone",
       "pale saints|||sight of you",
@@ -50640,5 +50655,6 @@
   "__match_v35__bluhm|||when you're gone": "spotify:track:2tw78QsqAbaNO8y1YauUFP",
   "__match_v35__steve earle|||telephone road": "spotify:track:4nCCrKplAjWWtiEJYAfysW",
   "__match_v35__greg brown|||just a bum": "spotify:track:0F2H1g3MqO97LJLPlMPDhT",
-  "__not_found_v35__fleeting joys|||throwaway": 1792648125
+  "__not_found_v35__fleeting joys|||throwaway": 1792648125,
+  "__match_v35__lucid express|||something blue": "spotify:track:0eC5DI6DHdKNl6gCZR1HEO"
 }
