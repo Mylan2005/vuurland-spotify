@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "cigarettes after sex|||apocalypse",
-  "__last_radio_key_mellow_mix": "the tea party|||winter solstice",
+  "__last_radio_key_vuurland": "jjerome87|||track and field",
+  "__last_radio_key_mellow_mix": "the waifs|||rowena and wallace",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2980,6 +2980,7 @@
       "the waifs|||beautiful you",
       "the waifs|||i learn the hard way",
       "the waifs|||rescue",
+      "the waifs|||rowena and wallace",
       "the waifs|||sun dirt water",
       "the wailin' jennys|||all the stars",
       "the wailin' jennys|||apocalypse lullaby",
@@ -4212,7 +4213,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5597,
+  "__vuurland_active_playlist_count": 5598,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -11305,6 +11306,7 @@
     "the waifs|||beautiful you",
     "the waifs|||i learn the hard way",
     "the waifs|||rescue",
+    "the waifs|||rowena and wallace",
     "the waifs|||sun dirt water",
     "the wailin' jennys|||all the stars",
     "the wailin' jennys|||arlington",
@@ -13221,6 +13223,7 @@
     "spotify:track:1fIV3ZUlTu5KS0jOadiPs8",
     "spotify:track:1fJugqPsts978jDBOenJaa",
     "spotify:track:1fLQ7ZQ8ZCQKhM74rk62LS",
+    "spotify:track:1fNOJca3LYzWl5Khp7Ctnv",
     "spotify:track:1fRlDQzrpvWd4BlIzifUkJ",
     "spotify:track:1fRnysUhiECVtlgdFN8Io4",
     "spotify:track:1fSdmIgkLD4zsy21GfRCrU",
@@ -17748,6 +17751,7 @@
     "AUWB00700002",
     "AUWB01100001",
     "AUWB01500002",
+    "AUWB01500010",
     "AUXN22471508",
     "AUZW41100002",
     "BE2GM1800012",
@@ -28852,7 +28856,8 @@
     "spotify:track:0RT3to8HyDrjW2duPLpZFT": "GBARL0800262",
     "spotify:track:0LGtevpB8bRYhpkdLnl3ZP": "QZFZ22380118",
     "spotify:track:7MhCZaLXU5jrrRBkmkNyWA": "GBARL0300528",
-    "spotify:track:4PgnxORv2VQfkV8yMtTnJI": "CAE159400106"
+    "spotify:track:4PgnxORv2VQfkV8yMtTnJI": "CAE159400106",
+    "spotify:track:1fNOJca3LYzWl5Khp7Ctnv": "AUWB01500010"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -38077,6 +38082,10 @@
     "the tea party|||winter solstice": {
       "artist": "The Tea Party",
       "title": "Winter Solstice"
+    },
+    "the waifs|||rowena and wallace": {
+      "artist": "The Waifs",
+      "title": "Rowena And Wallace"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -47815,6 +47824,11 @@
       "uri": "spotify:track:4PgnxORv2VQfkV8yMtTnJI",
       "artist": "The Tea Party",
       "title": "Winter Solstice"
+    },
+    "the waifs|||rowena and wallace": {
+      "uri": "spotify:track:1fNOJca3LYzWl5Khp7Ctnv",
+      "artist": "The Waifs",
+      "title": "Rowena And Wallace"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -49786,6 +49800,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "jjerome87|||track and field",
+      "lord huron|||looking back",
       "cigarettes after sex|||apocalypse",
       "eefje de visser|||scheef",
       "mac demarco|||my kind of woman",
@@ -49827,6 +49843,7 @@
       "wednesday|||elderberry wine"
     ],
     "mellow_mix": [
+      "the waifs|||rowena and wallace",
       "the tea party|||winter solstice",
       "the lumineers|||ophelia",
       "ray lamontagne|||shelter",
@@ -51075,5 +51092,6 @@
   "__match_v35__my bloody valentine|||swallow": "spotify:track:0RT3to8HyDrjW2duPLpZFT",
   "__match_v35__twin ultra|||what you give": "spotify:track:0LGtevpB8bRYhpkdLnl3ZP",
   "__match_v35__spiritualized|||lay back in the sun": "spotify:track:7MhCZaLXU5jrrRBkmkNyWA",
-  "__match_v35__the tea party|||winter solstice": "spotify:track:4PgnxORv2VQfkV8yMtTnJI"
+  "__match_v35__the tea party|||winter solstice": "spotify:track:4PgnxORv2VQfkV8yMtTnJI",
+  "__match_v35__the waifs|||rowena and wallace": "spotify:track:1fNOJca3LYzWl5Khp7Ctnv"
 }
