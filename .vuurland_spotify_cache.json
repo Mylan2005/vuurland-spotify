@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "bear's den|||auld wives",
-  "__last_radio_key_mellow_mix": "madeleine peyroux|||instead",
+  "__last_radio_key_vuurland": "cameron winter|||cancer of the skull",
+  "__last_radio_key_mellow_mix": "patsy cline|||crazy",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -3291,6 +3291,7 @@
       "dead can dance|||cantara",
       "dead can dance|||dawn of the iconoclast remastered",
       "dead can dance|||death cults",
+      "dead can dance|||eleusis",
       "dead can dance|||enigma of the absolute remastered",
       "dead can dance|||frontier",
       "dead can dance|||mesmerism remastered",
@@ -4063,7 +4064,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5516,
+  "__vuurland_active_playlist_count": 5517,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -6203,6 +6204,7 @@
     "emma anderson|||taste the air",
     "emma anderson|||the presence",
     "emma anderson|||tonight is mine",
+    "emma anderson|||willow and mallow",
     "emma hessels|||always lost",
     "emma hessels|||insular",
     "emmylou harris|||beachcombing",
@@ -12071,6 +12073,7 @@
     "spotify:track:0ObrXLrfrqJUNc8RfmIBHP",
     "spotify:track:0OjK31xScHW69HjAgfTrVs",
     "spotify:track:0Oqxt6JixieLHbwMfnJGWO",
+    "spotify:track:0P1HE6CtG88T0yIJ62IqJQ",
     "spotify:track:0P3IR2ldn9FWKZ9N9De2lh",
     "spotify:track:0P52wuYOxOXkRioz4hFYzW",
     "spotify:track:0P7AVxjat3yqECvJ2Waphr",
@@ -18353,6 +18356,7 @@
     "GB8FC2300042",
     "GB8FC2300043",
     "GB8FC2300045",
+    "GB8FC2300046",
     "GB8FC2300047",
     "GB8FC2300049",
     "GB8FC2300101",
@@ -28378,7 +28382,8 @@
     "spotify:track:0nfq0wKQfIwATbUDJZD0ln": "NLF057990024",
     "spotify:track:19DGoJIuutY9D9esT3ifOx": "USATO0800039",
     "spotify:track:1PhG8YjgpijG9Jt0V4UpMd": "GBUM72600408",
-    "spotify:track:29QksJV1n13inzZ2F6iNSP": "USRO20927201"
+    "spotify:track:29QksJV1n13inzZ2F6iNSP": "USRO20927201",
+    "spotify:track:0P1HE6CtG88T0yIJ62IqJQ": "GB8FC2300046"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -37251,6 +37256,10 @@
     "madeleine peyroux|||instead": {
       "artist": "Madeleine Peyroux",
       "title": "Instead"
+    },
+    "emma anderson|||willow and mallow": {
+      "artist": "Emma Anderson",
+      "title": "Willow And Mallow"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -46584,6 +46593,11 @@
       "uri": "spotify:track:29QksJV1n13inzZ2F6iNSP",
       "artist": "Madeleine Peyroux",
       "title": "Instead"
+    },
+    "emma anderson|||willow and mallow": {
+      "uri": "spotify:track:0P1HE6CtG88T0yIJ62IqJQ",
+      "artist": "Emma Anderson",
+      "title": "Willow And Mallow"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -47408,7 +47422,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "curve|||horror head",
+  "__last_radio_key_big_sonic_heaven": "dead can dance|||eleusis",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -48555,6 +48569,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "cameron winter|||cancer of the skull",
+      "whitney|||kansas",
       "bear's den|||auld wives",
       "elis floreen|||panther",
       "arno|||la verite",
@@ -48652,11 +48668,10 @@
       "tom odell|||heal",
       "the tallest man on earth|||looking for love",
       "katie gregson-macleod|||white lies",
-      "sufjan stevens|||casimir pulaski day",
-      "paolo nutini|||radio",
-      "wilco|||evicted"
+      "sufjan stevens|||casimir pulaski day"
     ],
     "mellow_mix": [
+      "patsy cline|||crazy",
       "madeleine peyroux|||instead",
       "the beatles|||michelle",
       "my morning jacket|||librarian",
@@ -48755,10 +48770,10 @@
       "the barr brothers|||even the darkness has arms",
       "leo kottke|||living in the country",
       "paul simon|||graceland",
-      "cult with no name|||you know me better than i know myself",
-      "tim buckley|||happy time"
+      "cult with no name|||you know me better than i know myself"
     ],
     "big_sonic_heaven": [
+      "dead can dance|||eleusis",
       "curve|||horror head",
       "winter|||the beach",
       "&tilly|||clearest blue",
@@ -48857,8 +48872,7 @@
       "boy harsher|||bleed",
       "my bloody valentine|||soon",
       "tycho|||small sanctuary",
-      "yndling|||like love is real",
-      "air formation|||only so much light"
+      "yndling|||like love is real"
     ]
   },
   "__match_v35__beck|||ride lonesome": "spotify:track:4ZNjYG7CW4ogsOtIB36h1j",
@@ -49944,5 +49958,6 @@
   "__match_v35__my morning jacket|||librarian": "spotify:track:19DGoJIuutY9D9esT3ifOx",
   "__not_found_v35__aerial love feed|||got you updated version": 1792635364,
   "__match_v35__the beatles|||michelle": "spotify:track:1PhG8YjgpijG9Jt0V4UpMd",
-  "__match_v35__madeleine peyroux|||instead": "spotify:track:29QksJV1n13inzZ2F6iNSP"
+  "__match_v35__madeleine peyroux|||instead": "spotify:track:29QksJV1n13inzZ2F6iNSP",
+  "__match_v35__emma anderson|||willow and mallow": "spotify:track:0P1HE6CtG88T0yIJ62IqJQ"
 }
