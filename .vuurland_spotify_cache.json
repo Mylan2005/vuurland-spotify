@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "vuurland",
+  "__v42_source_turn": "mellow_mix",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "ben howard|||conrad",
+  "__last_radio_key_vuurland": "kurt vile|||zoom 97",
   "__last_radio_key_mellow_mix": "steve earle|||telephone road",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4157,7 +4157,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5573,
+  "__vuurland_active_playlist_count": 5574,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -10440,6 +10440,7 @@
     "stereolab|||perversion",
     "stereolab|||super-electric",
     "stereolab|||wow and flutter",
+    "steve earle|||telephone road",
     "steve forbert|||goin' down to laurel",
     "steve forbert|||romeo's tune",
     "steve forbert|||song for katrina",
@@ -15415,6 +15416,7 @@
     "spotify:track:4n891jBZgtsfEHzdzX9zLW",
     "spotify:track:4nBWCJLx6CjopFUyuLJkvf",
     "spotify:track:4nBzwUdPBNuKiFfLTeG2sV",
+    "spotify:track:4nCCrKplAjWWtiEJYAfysW",
     "spotify:track:4nLi9mBuKqwngcQu1S07Vj",
     "spotify:track:4nbzHgdF7DUKWOA9jwtwnM",
     "spotify:track:4nhzG7UC1ktrt1ycaWbNZg",
@@ -23029,6 +23031,7 @@
     "USWB19600182",
     "USWB19600254",
     "USWB19700594",
+    "USWB19700940",
     "USWB19800215",
     "USWB19800225",
     "USWB19900169",
@@ -28701,7 +28704,8 @@
     "spotify:track:3lhedrzrxjiBmDfuoDnd78": "USTC40881787",
     "spotify:track:0iGNd4z2m80OjE2JcWmBSs": "GBA178100050",
     "spotify:track:7fectUUMiPjZijOJIJaN3S": "GBAFL9000010",
-    "spotify:track:2tw78QsqAbaNO8y1YauUFP": "QZES72581556"
+    "spotify:track:2tw78QsqAbaNO8y1YauUFP": "QZES72581556",
+    "spotify:track:4nCCrKplAjWWtiEJYAfysW": "USWB19700940"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -37823,6 +37827,10 @@
     "bluhm|||when you're gone": {
       "artist": "Bluhm",
       "title": "When You're Gone"
+    },
+    "steve earle|||telephone road": {
+      "artist": "Steve Earle, The Fairfield Four",
+      "title": "Telephone Road"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -47441,6 +47449,11 @@
       "uri": "spotify:track:2tw78QsqAbaNO8y1YauUFP",
       "artist": "Bluhm",
       "title": "When You're Gone"
+    },
+    "steve earle|||telephone road": {
+      "uri": "spotify:track:4nCCrKplAjWWtiEJYAfysW",
+      "artist": "Steve Earle, The Fairfield Four",
+      "title": "Telephone Road"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -49412,6 +49425,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "kurt vile|||zoom 97",
+      "jose gonzalez|||teardrop",
       "ben howard|||conrad",
       "the tallest man on earth|||king of spain",
       "dressed like boys|||healing",
@@ -50593,5 +50608,6 @@
   "__match_v35__josh ritter|||come and find me": "spotify:track:3lhedrzrxjiBmDfuoDnd78",
   "__match_v35__the moody blues|||the voice": "spotify:track:0iGNd4z2m80OjE2JcWmBSs",
   "__match_v35__pale saints|||sight of you": "spotify:track:7fectUUMiPjZijOJIJaN3S",
-  "__match_v35__bluhm|||when you're gone": "spotify:track:2tw78QsqAbaNO8y1YauUFP"
+  "__match_v35__bluhm|||when you're gone": "spotify:track:2tw78QsqAbaNO8y1YauUFP",
+  "__match_v35__steve earle|||telephone road": "spotify:track:4nCCrKplAjWWtiEJYAfysW"
 }
