@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "sam amidon|||blue mountains",
-  "__last_radio_key_mellow_mix": "dido|||here with me",
+  "__last_radio_key_mellow_mix": "fleetwood mac|||crystal",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -1706,6 +1706,7 @@
       "fleetwood mac|||albatross",
       "fleetwood mac|||beautiful child",
       "fleetwood mac|||bleed to love her",
+      "fleetwood mac|||crystal",
       "fleetwood mac|||dreams",
       "fleetwood mac|||landslide",
       "fleetwood mac|||never going back again",
@@ -2650,6 +2651,7 @@
       "sophie solomon|||lazarus",
       "sophie zelmani|||going home",
       "sophie zelmani|||happier man",
+      "sophie zelmani|||hard to know",
       "sophie zelmani|||if i could",
       "sophie zelmani|||so long",
       "sophie zelmani|||time to kill",
@@ -3991,7 +3993,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5475,
+  "__vuurland_active_playlist_count": 5476,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -4946,6 +4948,7 @@
     "blind pilot|||the story i heard",
     "blind pilot|||we are the tide",
     "blitzen trapper|||don't be a stranger",
+    "blonde redhead|||23",
     "blonde redhead|||if",
     "blonde redhead|||kiss her kiss her",
     "blonde redhead|||melody experiment",
@@ -15027,6 +15030,7 @@
     "spotify:track:4goLYQrqyQ5vNANg88gwrK",
     "spotify:track:4gokcRUfXofTcQySfKvvAd",
     "spotify:track:4gxKVUQyfkIbO6WuET4HlW",
+    "spotify:track:4h9pwQbHEz9HSGeOE8UMf4",
     "spotify:track:4hDAo8XmsImYb1AmL6dI3A",
     "spotify:track:4hInqJexDaX8mnQPvWAClG",
     "spotify:track:4hJ5jWbqstdYt555NhdtNk",
@@ -18286,6 +18290,7 @@
     "GBAFL0100003",
     "GBAFL0100011",
     "GBAFL0300097",
+    "GBAFL0600097",
     "GBAFL0700002",
     "GBAFL0700003",
     "GBAFL0700055",
@@ -28142,7 +28147,8 @@
     "spotify:track:3x7LTEzj8V3egWqwf43SEF": "GBARL1900484",
     "spotify:track:6tqAvJBSAn0tzL1Bg4WLAi": "AUGNB1300001",
     "spotify:track:7CvTVCdZdtAKc22a6akUix": "USHM81565047",
-    "spotify:track:4cA95h1qxWBUeslja4R2k5": "GBBTF0500526"
+    "spotify:track:4cA95h1qxWBUeslja4R2k5": "GBBTF0500526",
+    "spotify:track:4h9pwQbHEz9HSGeOE8UMf4": "GBAFL0600097"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -36800,6 +36806,10 @@
     "levy|||rotten love": {
       "artist": "Levy, James Levy",
       "title": "Rotten Love"
+    },
+    "blonde redhead|||23": {
+      "artist": "Blonde Redhead",
+      "title": "23"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -45928,6 +45938,11 @@
       "uri": "spotify:track:4cA95h1qxWBUeslja4R2k5",
       "artist": "Levy, James Levy",
       "title": "Rotten Love"
+    },
+    "blonde redhead|||23": {
+      "uri": "spotify:track:4h9pwQbHEz9HSGeOE8UMf4",
+      "artist": "Blonde Redhead",
+      "title": "23"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -48001,6 +48016,8 @@
       "mount kimbie feat king krule|||empty and silent"
     ],
     "mellow_mix": [
+      "fleetwood mac|||crystal",
+      "sophie zelmani|||hard to know",
       "dido|||here with me",
       "eliza gilkyson|||peace in our hearts",
       "sons of the east|||hold on",
@@ -48098,9 +48115,7 @@
       "cracker|||the golden age",
       "blind faith|||can't find my way home",
       "hurray for the riff raff|||alibi",
-      "lana del rey|||how to disappear",
-      "uncle tupelo|||still be around",
-      "todd hannigan|||thicker than water"
+      "lana del rey|||how to disappear"
     ],
     "big_sonic_heaven": [
       "midlake|||a bridge too far",
@@ -49241,5 +49256,6 @@
   "__match_v35__prefab sprout|||bonny": "spotify:track:3x7LTEzj8V3egWqwf43SEF",
   "__match_v35__sons of the east|||hold on": "spotify:track:6tqAvJBSAn0tzL1Bg4WLAi",
   "__match_v35__be forest|||glow": "spotify:track:7CvTVCdZdtAKc22a6akUix",
-  "__match_v35__levy|||rotten love": "spotify:track:4cA95h1qxWBUeslja4R2k5"
+  "__match_v35__levy|||rotten love": "spotify:track:4cA95h1qxWBUeslja4R2k5",
+  "__match_v35__blonde redhead|||23": "spotify:track:4h9pwQbHEz9HSGeOE8UMf4"
 }
