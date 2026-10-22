@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "mellow_mix",
+  "__v42_source_turn": "big_sonic_heaven",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "arlo parks|||eugene",
-  "__last_radio_key_mellow_mix": "johann sebastian bach|||prelude #1 in c",
+  "__last_radio_key_mellow_mix": "rosalia|||memoria",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2659,6 +2659,7 @@
       "rod stewart|||you wear it well",
       "roo panes|||nightjar and the nightingale",
       "rosalia|||magnolias",
+      "rosalia|||memoria",
       "rosanne cash|||a feather's not a bird",
       "rosanne cash|||i'm only sleeping",
       "rosanne cash|||runaway train",
@@ -3665,6 +3666,7 @@
       "lanterns on the lake|||swimming lessons",
       "lanterns on the lake|||the saboteur",
       "lanterns on the lake|||this is not a drill",
+      "lanterns on the lake|||through the cellar door by",
       "lanterns on the lake|||when it all comes true",
       "laveda|||better now",
       "laveda|||clean",
@@ -4171,12 +4173,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "fleeting joys|||dreaming girl in a drowning world": {
-      "artist": "Fleeting Joys",
-      "title": "Dreaming Girl In A Drowning World",
-      "source": "big_sonic_heaven",
-      "failed_at": 1792613342
-    },
     "swans|||love will tear us apart": {
       "artist": "Swans",
       "title": "Love Will Tear Us Apart",
@@ -4388,7 +4384,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5796,
+  "__vuurland_active_playlist_count": 5797,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -10371,6 +10367,7 @@
     "roo panes|||tiger striped sky",
     "roosevelt|||in the blank space roosevelt remix",
     "rosalia|||magnolias",
+    "rosalia|||memoria",
     "rosalia|||sauvignon blanc",
     "rosalia|||where is gone?",
     "rosanne cash|||a feather's not a bird",
@@ -16263,6 +16260,7 @@
     "spotify:track:4uOVw1W4XjoNCx9wlnvLZ6",
     "spotify:track:4uXwTz4opiuvyyYU9FwFla",
     "spotify:track:4uckOLZsEjRqNDQtCQSi4d",
+    "spotify:track:4ukpy7Q6QmrB7ttNMSAcG2",
     "spotify:track:4uwthOD85fy8PGvCcmYEAK",
     "spotify:track:4v9yiqFQDQdABheK20XtD4",
     "spotify:track:4vDBJeeQCbhP9FaPPMsYkY",
@@ -23653,6 +23651,7 @@
     "USSM12405608",
     "USSM12405613",
     "USSM12500866",
+    "USSM12504045",
     "USSM12504046",
     "USSM12509220",
     "USSM12602957",
@@ -30008,7 +30007,8 @@
     "spotify:track:0veiddMVVdajBCOUJzGcpg": "QZNWW2517913",
     "spotify:track:7BekKBRhD7H6rLgzZ0szIJ": "GBGEY2500020",
     "spotify:track:5NNRDPRlNOPROSu0vCtFLs": "QZAKB2454744",
-    "spotify:track:6JU4rnhEilaBaH7x6qH06D": "QZTB72391917"
+    "spotify:track:6JU4rnhEilaBaH7x6qH06D": "QZTB72391917",
+    "spotify:track:4ukpy7Q6QmrB7ttNMSAcG2": "USSM12504045"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792681903,
@@ -50386,7 +50386,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "thelma's dream|||sofia",
+  "__last_radio_key_big_sonic_heaven": "lanterns on the lake|||through the cellar door by",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -51635,6 +51635,7 @@
       "the haunted youth|||wake up"
     ],
     "mellow_mix": [
+      "rosalia|||memoria",
       "johann sebastian bach|||prelude #1 in c",
       "takuro okada|||the near end the dark night the county line",
       "glen hansard|||you will become",
@@ -51733,10 +51734,11 @@
       "the byrds|||turn! turn! turn!",
       "eddie vedder|||society",
       "sting|||the book of my life feat anoushka shankar",
-      "billie eilish|||when i was older",
-      "sade|||no ordinary love"
+      "billie eilish|||when i was older"
     ],
     "big_sonic_heaven": [
+      "lanterns on the lake|||through the cellar door by",
+      "levy|||rotten love",
       "thelma's dream|||sofia",
       "the wolfgang press|||speakers don't speak",
       "bat for lashes|||horse & i",
@@ -51834,9 +51836,7 @@
       "searows|||dirt",
       "mint julep|||all that we'll ever be",
       "fleeting colours|||autumn",
-      "night tapes|||leave it all behind mike",
-      "catherine wheel|||crank",
-      "stefano guzzetti|||it's a fine day feat ian masters"
+      "night tapes|||leave it all behind mike"
     ]
   },
   "__match_v35__beck|||ride lonesome": "spotify:track:4ZNjYG7CW4ogsOtIB36h1j",
@@ -53200,5 +53200,6 @@
   "__match_v35__bluhm|||low light": "spotify:track:0veiddMVVdajBCOUJzGcpg",
   "__match_v35__alice costelloe|||feet on the sand": "spotify:track:7BekKBRhD7H6rLgzZ0szIJ",
   "__match_v35__takuro okada|||the near end the dark night the county line": "spotify:track:5NNRDPRlNOPROSu0vCtFLs",
-  "__match_v35__thelma's dream|||sofia": "spotify:track:6JU4rnhEilaBaH7x6qH06D"
+  "__match_v35__thelma's dream|||sofia": "spotify:track:6JU4rnhEilaBaH7x6qH06D",
+  "__match_v35__rosalia|||memoria": "spotify:track:4ukpy7Q6QmrB7ttNMSAcG2"
 }
