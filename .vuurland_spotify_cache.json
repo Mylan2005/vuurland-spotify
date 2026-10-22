@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "sam fender & olivia dean|||rein me in",
-  "__last_radio_key_mellow_mix": "otis redding|||these arms of mine",
+  "__last_radio_key_vuurland": "this is lorelei|||holo boy",
+  "__last_radio_key_mellow_mix": "gregg allman|||queen of hearts",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -4143,7 +4143,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 5559,
+  "__vuurland_active_playlist_count": 5560,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -10256,6 +10256,7 @@
     "slowdive|||alife",
     "slowdive|||alison",
     "slowdive|||chained to a cloud",
+    "slowdive|||machine gun",
     "slowdive|||shanty",
     "slowdive|||skin in the game",
     "slowdive|||sugar for the pill",
@@ -13287,6 +13288,7 @@
     "spotify:track:1w9GbyMG2HKGQ7UcgiTnRd",
     "spotify:track:1wMEIqhJymp4uOPD3FS0Cy",
     "spotify:track:1wQXj5bgxyZQ2XmE2X9s6n",
+    "spotify:track:1wXJjKJy5Pt38Bu3tUzTUL",
     "spotify:track:1wYBt2URytGTqxoscQV9Py",
     "spotify:track:1wbDsUJJyIecgYhlxjEyms",
     "spotify:track:1wcbiRER4ChnikvcLc2OE6",
@@ -19155,6 +19157,7 @@
     "GBBPW2501799",
     "GBBQY0202057",
     "GBBQY0400035",
+    "GBBQY0400036",
     "GBBQY0400041",
     "GBBRE0100007",
     "GBBRP0611701",
@@ -28631,7 +28634,8 @@
     "spotify:track:1P53fDDQtze3ZgfFhcwAjj": "USEP42529007",
     "spotify:track:1QAE8YNHxRo5Sf2D1epx08": "USA2B2200953",
     "spotify:track:7pttXx6E8Vp9B6shTVzmA2": "BEUM72400101",
-    "spotify:track:4skknrc3sJqaPTtUr2cwFq": "USAT26700003"
+    "spotify:track:4skknrc3sJqaPTtUr2cwFq": "USAT26700003",
+    "spotify:track:1wXJjKJy5Pt38Bu3tUzTUL": "GBBQY0400036"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792595245,
@@ -37687,6 +37691,10 @@
     "otis redding|||these arms of mine": {
       "artist": "Otis Redding",
       "title": "These Arms of Mine"
+    },
+    "slowdive|||machine gun": {
+      "artist": "Slowdive",
+      "title": "Machine Gun"
     }
   },
   "__match_v35__bob dylan|||simple twist of fate": "spotify:track:3wAX3qn53iQUFE84hpfeen",
@@ -47235,6 +47243,11 @@
       "uri": "spotify:track:4skknrc3sJqaPTtUr2cwFq",
       "artist": "Otis Redding",
       "title": "These Arms of Mine"
+    },
+    "slowdive|||machine gun": {
+      "uri": "spotify:track:1wXJjKJy5Pt38Bu3tUzTUL",
+      "artist": "Slowdive",
+      "title": "Machine Gun"
     }
   },
   "__match_v35__portland|||don't stop believin'": "spotify:track:0Y3TWaVN9Gm72fbLfow3P6",
@@ -49206,6 +49219,7 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "this is lorelei|||holo boy",
       "sam fender & olivia dean|||rein me in",
       "milo meskens|||when she's around",
       "big thief|||vampire empire",
@@ -49304,10 +49318,10 @@
       "mac demarco|||all of our yesterdays",
       "eefje de visser|||gloeien",
       "hermanos gutierrez|||canto andino",
-      "mooneye|||girl like you",
-      "the xx|||islands"
+      "mooneye|||girl like you"
     ],
     "mellow_mix": [
+      "gregg allman|||queen of hearts",
       "otis redding|||these arms of mine",
       "crowded house|||fall at your feet",
       "mavis staples|||we got to have peace",
@@ -49406,8 +49420,7 @@
       "crowded house|||into temptation",
       "agnes obel|||chord left",
       "laura veirs|||shape shifter",
-      "teodor wolgers|||abandoned places",
-      "leon bridges|||river"
+      "teodor wolgers|||abandoned places"
     ],
     "big_sonic_heaven": [
       "love & rockets|||all in my mind",
@@ -50645,5 +50658,6 @@
   "__match_v35__mavis staples|||we got to have peace": "spotify:track:1P53fDDQtze3ZgfFhcwAjj",
   "__match_v35__bathe alone|||waste it": "spotify:track:1QAE8YNHxRo5Sf2D1epx08",
   "__match_v35__milo meskens|||when she's around": "spotify:track:7pttXx6E8Vp9B6shTVzmA2",
-  "__match_v35__otis redding|||these arms of mine": "spotify:track:4skknrc3sJqaPTtUr2cwFq"
+  "__match_v35__otis redding|||these arms of mine": "spotify:track:4skknrc3sJqaPTtUr2cwFq",
+  "__match_v35__slowdive|||machine gun": "spotify:track:1wXJjKJy5Pt38Bu3tUzTUL"
 }
