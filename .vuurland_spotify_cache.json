@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "big_sonic_heaven",
+  "__v42_source_turn": "vuurland",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "bear's den|||spiders",
-  "__last_radio_key_mellow_mix": "grateful dead|||dire wolf live",
+  "__last_radio_key_vuurland": "birame|||the worst parts of you",
+  "__last_radio_key_mellow_mix": "sierra ferrell|||don't let your deal go down",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -2829,6 +2829,7 @@
       "sheryl crow|||strong enough",
       "shook twins|||growing things",
       "shriekback|||the underwaterboys",
+      "sierra ferrell|||don't let your deal go down",
       "sierra ferrell|||in dreams",
       "sierra ferrell|||lighthouse",
       "sierra ferrell|||the sea",
@@ -3552,6 +3553,7 @@
       "clinic stars|||april's past",
       "cloakroom|||a force at play",
       "clover|||the things",
+      "club 8|||none of this will matter when you are dead",
       "club 8|||the sweetness of honey",
       "cocteau twins & harold budd|||sea swallow me",
       "cocteau twins|||blue bell knoll",
@@ -31521,7 +31523,7 @@
     "mint julep|||all that we'll ever be": 5,
     "oscar lopez|||bolero amor": 5,
     "fleeting joys|||hooked into my soul": 5,
-    "stefano guzzetti|||love's riddle feat emma anderson & heidi berry": 4,
+    "stefano guzzetti|||love's riddle feat emma anderson & heidi berry": 5,
     "a fine frenzy|||last of days": 3,
     "resala|||nabeel": 3,
     "plaaato|||endlessgrass": 3,
@@ -32663,6 +32665,14 @@
       "title": "Hooked Into My Soul",
       "source": "big_sonic_heaven",
       "failed_at": 1792763920,
+      "matching_version": 35,
+      "failed_searches": 5
+    },
+    "stefano guzzetti|||love's riddle feat emma anderson & heidi berry": {
+      "artist": "Stefano Guzzetti",
+      "title": "Love's Riddle (feat. Emma Anderson & Heidi Berry)",
+      "source": "big_sonic_heaven",
+      "failed_at": 1792767644,
       "matching_version": 35,
       "failed_searches": 5
     }
@@ -51924,7 +51934,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "the cure|||from the edge of the deep green sea",
+  "__last_radio_key_big_sonic_heaven": "club 8|||none of this will matter when you are dead",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -53071,6 +53081,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "birame|||the worst parts of you",
+      "syml feat guy garvey|||lost myself",
       "bear's den|||spiders",
       "tamino|||indigo night",
       "the antler king|||swing448",
@@ -53168,11 +53180,10 @@
       "isaac roux|||soaking skin",
       "lea sen|||luv him about u",
       "beirut|||nantes",
-      "rex orange county|||threat",
-      "thomas azier|||year in a spiral",
-      "the paper kites feat julia stone|||without your love"
+      "rex orange county|||threat"
     ],
     "mellow_mix": [
+      "sierra ferrell|||don't let your deal go down",
       "grateful dead|||dire wolf live",
       "joan osborne|||brokedown palace",
       "cowboy junkies|||angel mine",
@@ -53271,10 +53282,10 @@
       "sierra ferrell|||the sea",
       "crowded house|||archer's arrows",
       "matt berninger|||inland ocean",
-      "death cab for cutie|||your heart is an empty room",
-      "jesse winchester|||nothin' but a breeze"
+      "death cab for cutie|||your heart is an empty room"
     ],
     "big_sonic_heaven": [
+      "club 8|||none of this will matter when you are dead",
       "the cure|||from the edge of the deep green sea",
       "clan of xymox|||fire",
       "velveteen|||unanswered",
@@ -53373,8 +53384,7 @@
       "echo & the bunnymen|||brussels is haunted",
       "poster paints|||not sorry",
       "the sewing club|||complicated",
-      "toothpaste|||hazlewood",
-      "bjork|||it's oh so quiet"
+      "toothpaste|||hazlewood"
     ]
   },
   "__match_v35__beck|||ride lonesome": "spotify:track:4ZNjYG7CW4ogsOtIB36h1j",
