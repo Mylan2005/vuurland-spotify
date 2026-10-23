@@ -1,10 +1,10 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "indie_select",
+  "__v42_source_turn": "championship_vinyl",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "s10|||paris texas",
-  "__last_radio_key_mellow_mix": "jackson browne|||the long way around",
+  "__last_radio_key_mellow_mix": "the smashing pumpkins|||thirty-three",
   "__v47_radio_discovered": {
     "vuurland": [
       "abby sage|||backwards directions",
@@ -4494,6 +4494,7 @@
       "blossoms|||i can't stand it acoustic",
       "blossoms|||there's a reason why i never returned your calls acoustic",
       "blossoms|||your girlfriend acoustic",
+      "blur|||she's so high",
       "blur|||the universal",
       "blur|||to the end",
       "bob dylan|||blowin' in the wind",
@@ -4633,6 +4634,7 @@
     "indie_select": [
       "!!! chk chk chk|||am/fm",
       "/- plus/minus|||you are one",
+      "arcade fire|||the suburbs",
       "basement revolver|||johnny pt 2",
       "beach house|||ppp",
       "beady eye|||iz rite",
@@ -4934,12 +4936,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "plaaato|||endlessgrass": {
-      "artist": "plaaato",
-      "title": "endlessgrass",
-      "source": "big_sonic_heaven",
-      "failed_at": 1792692272
-    },
     "lugovye mari|||joratem love": {
       "artist": "Lugovye Mari",
       "title": "Joratem (Love)",
@@ -5019,7 +5015,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 6139,
+  "__vuurland_active_playlist_count": 6140,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -11957,6 +11953,7 @@
     "stereolab|||perversion",
     "stereolab|||super-electric",
     "stereolab|||wow and flutter",
+    "stereophonics|||dakota",
     "steve earle & the fairfield four|||telephone road",
     "steve earle|||telephone road",
     "steve earle|||the fairfield four|||telephone road",
@@ -16737,6 +16734,7 @@
     "spotify:track:3qHudMhbArLsMbnfi2NArH",
     "spotify:track:3qJImzh896FdKl5mJfpFaC",
     "spotify:track:3qTx09RfTk18uwaJ2hKiVx",
+    "spotify:track:3qaSqrrevBrb84xl5JlptU",
     "spotify:track:3qaYp431qLh8NvKUQlWd5v",
     "spotify:track:3qhlB30KknSejmIvZZLjOD",
     "spotify:track:3qiUi5vB2Dj89Yrrm3P8O4",
@@ -21638,6 +21636,7 @@
     "GBBKT9700051",
     "GBBLK0100193",
     "GBBLK0300075",
+    "GBBLK0500005",
     "GBBLK0500165",
     "GBBLK0500175",
     "GBBLK0800003",
@@ -32141,7 +32140,8 @@
     "spotify:track:1C8VMfbSqTK6wXrmZ1MNkA": "USSH48900002",
     "spotify:track:33ywudfjEdPdOYzi08Z99d": "GBALB8500004",
     "spotify:track:3DoWktD3hVd25VmWXOMz30": "QZ47A2500103",
-    "spotify:track:49skdn8Truaufvcz8BXmtT": "GBGEY0900107"
+    "spotify:track:49skdn8Truaufvcz8BXmtT": "GBGEY0900107",
+    "spotify:track:3qaSqrrevBrb84xl5JlptU": "GBBLK0500005"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792768451,
@@ -52775,7 +52775,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "the wolfgang press|||speakers don't speak",
+  "__last_radio_key_big_sonic_heaven": "au revoir borealis|||the winter room",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -54024,6 +54024,7 @@
       "phoebe bridgers|||scott street"
     ],
     "mellow_mix": [
+      "the smashing pumpkins|||thirty-three",
       "jackson browne|||the long way around",
       "leon russell|||stranger in a strange land",
       "my morning jacket|||the way that he sings",
@@ -54122,10 +54123,10 @@
       "the mighty rootsmen|||i won't back down",
       "diana krall|||fly me to the moon",
       "james taylor|||copperline",
-      "aukai|||slow sun w/ richard houghten",
-      "sinead o'connor|||dancing lessons"
+      "aukai|||slow sun w/ richard houghten"
     ],
     "big_sonic_heaven": [
+      "au revoir borealis|||the winter room",
       "the wolfgang press|||speakers don't speak",
       "ummagma|||lama robin guthrie mix",
       "air|||sexy boy",
@@ -54219,7 +54220,6 @@
       "lumenette|||once more",
       "gergana dimitrova & lisa gerrard|||sun and moon",
       "the chameleons|||swamp thing",
-      "au revoir borealis|||the winter room",
       "double vision|||the streets",
       "edward ka-spel|||dark horse",
       "she's green|||little birds",
@@ -54228,6 +54228,7 @@
       "zola jesus|||ash to bone johnny jewel remix"
     ],
     "radio_x_chilled": [
+      "blur|||she's so high",
       "blossoms|||i can't stand it acoustic",
       "morcheeba|||the sea",
       "the drums|||let's go surfing",
@@ -54326,10 +54327,10 @@
       "blink-182|||i miss you",
       "jose gonzalez|||stay alive",
       "massive attack|||unfinished sympathy",
-      "paolo nutini|||last request",
-      "oasis|||don't go away mustique demo"
+      "paolo nutini|||last request"
     ],
     "indie_select": [
+      "arcade fire|||the suburbs",
       "shields|||miserly",
       "castlebeat|||research",
       "nation of language|||i will never learn",
@@ -54428,8 +54429,7 @@
       "chilly gonzales|||advantage points",
       "you say party! we say die!|||laura palmers prom",
       "beatsteaks|||ticket",
-      "florence and the machine|||shake it out",
-      "depeche mode|||where's the revolution"
+      "florence and the machine|||shake it out"
     ],
     "championship_vinyl": [
       "bon iver|||michicant",
@@ -56205,8 +56205,8 @@
   "__match_v35__the haunted youth|||broken": "spotify:track:3EJ7h1f0Nvvnpt1mRNCcOz",
   "__match_v35__phoebe bridgers|||sidelines": "spotify:track:4SKvKJaqkRl1bUZWEqTYzl",
   "__match_v35__the smiths|||last night i dreamt that somebody loved me": "spotify:track:17zN523CEjJWBGXrUb3xex",
-  "__last_radio_key_radio_x_chilled": "blossoms|||i can't stand it acoustic",
-  "__last_radio_key_indie_select": "shields|||miserly",
+  "__last_radio_key_radio_x_chilled": "blur|||she's so high",
+  "__last_radio_key_indie_select": "arcade fire|||the suburbs",
   "__last_radio_key_championship_vinyl": "bon iver|||michicant",
   "__match_v35__kylie minogue|||confide in me": "spotify:track:0U0VCzqz0CvbjrYOFKQC6W",
   "__match_v35__richard ashcroft|||a song for the lovers": "spotify:track:7a90gal9tr3yS8bEXUvu8D",
@@ -56244,5 +56244,6 @@
   "__match_v35__leon russell|||stranger in a strange land": "spotify:track:1C8VMfbSqTK6wXrmZ1MNkA",
   "__match_v35__the cure|||six different ways": "spotify:track:33ywudfjEdPdOYzi08Z99d",
   "__match_v35__she's green|||silhouette": "spotify:track:3DoWktD3hVd25VmWXOMz30",
-  "__match_v35__the drums|||let's go surfing": "spotify:track:49skdn8Truaufvcz8BXmtT"
+  "__match_v35__the drums|||let's go surfing": "spotify:track:49skdn8Truaufvcz8BXmtT",
+  "__match_v35__stereophonics|||dakota": "spotify:track:3qaSqrrevBrb84xl5JlptU"
 }
