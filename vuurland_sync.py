@@ -86,6 +86,15 @@ ARTIST_ALIASES = {
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
+RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
+INDIE_SELECT_SOURCE_URL = "https://onlineradiobox.com/de/indieselect/playlist/?lang=nl"
+CHAMPIONSHIP_VINYL_SOURCE_URL = "https://onlineradiobox.com/de/championshipvinyl/playlist/?lang=nl"
+
+# Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
+RADIO_SOURCE_ORDER = (
+    "vuurland", "mellow_mix", "big_sonic_heaven",
+    "radio_x_chilled", "indie_select", "championship_vinyl",
+)
 
 CHECK_EVERY_SECONDS = 120  # 2 minuten
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1124,6 +1133,52 @@ def get_big_sonic_heaven_tracks():
         "Big Sonic Heaven Radio",
         {"big sonic heaven radio"},
     )
+
+
+def get_radio_x_chilled_tracks():
+    return get_radiobox_tracks(RADIO_X_CHILLED_SOURCE_URL, "Radio X Chilled")
+
+
+def get_indie_select_tracks():
+    return get_radiobox_tracks(INDIE_SELECT_SOURCE_URL, "Indie Select")
+
+
+def get_championship_vinyl_tracks():
+    return get_radiobox_tracks(CHAMPIONSHIP_VINYL_SOURCE_URL, "Championship Vinyl")
+
+
+# Alleen duidelijke Duitstalige titels weren; niet alle Duitse artiesten.
+# De taal van de zang kan niet betrouwbaar uit alleen RadioBox-metadata worden
+# vastgesteld. Engelstalige en instrumentale nummers blijven toegelaten.
+_GERMAN_STRONG = frozenset({
+    "ich", "mich", "dich", "dir", "nicht", "nichts", "meine", "meiner",
+    "meinem", "meinen", "deine", "deiner", "euch", "unsere", "unser",
+    "niemals", "immer", "gestern", "heute", "schön", "schöne",
+    "schönheit", "liebe", "liebes", "herzen", "nächte", "stücke",
+    "weihnachten", "zerschmettert", "begrab", "begraben", "schickt",
+    "transsylvanische", "verwandte", "sonnendeck", "wunder",
+})
+_GERMAN_COMMON = frozenset({
+    "die", "der", "das", "dem", "den", "des", "ein", "eine", "und",
+    "ist", "im", "am", "vom", "von", "zu", "zur", "zum", "für", "mit",
+    "auf", "aus", "bei", "über", "unter", "als", "auch", "noch",
+    "wir", "sie", "du", "er", "es", "was", "wer", "wo", "wie",
+})
+
+
+def is_german_language_title(title):
+    """Conservatieve titelherkenning; geen gok op basis van artiest/herkomst."""
+    raw = str(title or "").casefold()
+    # Versie-informatie (bijv. Live/Remix) is geen taalsignaal.
+    raw = re.sub(r"\s*\((?:live|acoustic|radio x studio session|remix|edit)[^)]*\)\s*$", "", raw)
+    words = re.findall(r"[^\W\d_]+", raw, flags=re.UNICODE)
+    strong = sum(w in _GERMAN_STRONG for w in words)
+    common = sum(w in _GERMAN_COMMON for w in words)
+    unmistakable = {"ich", "mich", "dich", "dir", "nicht", "zerschmettert",
+                    "begrab", "transsylvanische", "weihnachten", "sonnendeck"}
+    return (any(w in unmistakable for w in words)
+            or strong >= 2 or (strong >= 1 and common >= 1)
+            or (any(c in raw for c in "äöüß") and (strong >= 1 or common >= 1)))
 
 
 # =========================
@@ -5191,10 +5246,14 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         current = [(_v47_key(a, t), a, t) for a, t in tracks]
         old = snapshots.get(sid)
         if not isinstance(old, list):
-            # Eenmalige zachte overgang: alleen de 12 meest recente titels
-            # nagaan, niet de volledige oude RadioBox-historiek opnieuw laden.
-            arrivals = current[:12]
-            print(f"🕒 v96 {source['name']}: recente 12 nummers bij start nagekeken.")
+            if sid in ("radio_x_chilled", "indie_select", "championship_vinyl"):
+                # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
+                arrivals = []
+                print(f"🕒 v96 {source['name']}: nulmeting; geen oude uitzendingen ingehaald.")
+            else:
+                # Bestaande bronnen: oorspronkelijk v98.1-gedrag behouden.
+                arrivals = current[:12]
+                print(f"🕒 v96 {source['name']}: recente 12 nummers bij start nagekeken.")
         else:
             previous = set(old)
             # De eerste gemeenschappelijke titel is de grens tussen de vorige
@@ -5213,6 +5272,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
             if key in seen_this_scan:
                 continue
             seen_this_scan.add(key)
+            if is_german_language_title(title):
+                print(f"⏭️ Duidelijk Duitstalige titel overgeslagen: {artist} — {title}")
+                continue
             if is_interview_fragment(title) or key in known_queue or key in seen:
                 continue
             # Spotify-playlist-cache blijft gezaghebbend voor al aanwezige tracks.
@@ -5645,6 +5707,24 @@ def sync():
             "tracks": get_big_sonic_heaven_tracks(),
             "cache_key": "__last_radio_key_big_sonic_heaven",
         },
+        {
+            "id": "radio_x_chilled",
+            "name": "Radio X Chilled",
+            "tracks": get_radio_x_chilled_tracks(),
+            "cache_key": "__last_radio_key_radio_x_chilled",
+        },
+        {
+            "id": "indie_select",
+            "name": "Indie Select",
+            "tracks": get_indie_select_tracks(),
+            "cache_key": "__last_radio_key_indie_select",
+        },
+        {
+            "id": "championship_vinyl",
+            "name": "Championship Vinyl",
+            "tracks": get_championship_vinyl_tracks(),
+            "cache_key": "__last_radio_key_championship_vinyl",
+        },
     ]
 
     print()
@@ -5831,7 +5911,8 @@ def sync():
     # van informatie, maar geen historische Spotify-zoekopdrachten meer.
     # Vereis drie geslaagde RadioBox-metingen voordat de nulmeting plaatsvindt.
     if not cache.get("__v95_live_fifo_initialized"):
-        if any(not src.get("tracks") for src in radio_sources):
+        if any(not src.get("tracks") for src in radio_sources
+               if src["id"] in RADIO_SOURCE_ORDER[:3]):
             print("⏳ v95: wacht op drie volledige bronmetingen vóór live-start; "
                   "bestaande wachtrij blijft bewaard.")
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
@@ -5912,9 +5993,10 @@ def sync():
     if restored:
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
 
-    # v69: alleen RadioBox. Verwijder eventueel resterende Duyster-queue-items.
+    # v69: alleen RadioBox; daarnaast duidelijk Duitstalige titels weren.
     live_queue = [x for x in live_queue if isinstance(x, dict) and
-                  x.get("source") in ("vuurland", "mellow_mix", "big_sonic_heaven")]
+                  x.get("source") in RADIO_SOURCE_ORDER and
+                  not is_german_language_title(x.get("title", ""))]
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
 
@@ -5924,7 +6006,7 @@ def sync():
 
     if not live_queue:
         # v95: ook lege rondes tellen mee in de vaste 3-bronnenbeurtrol.
-        _order = ("vuurland", "mellow_mix", "big_sonic_heaven")
+        _order = RADIO_SOURCE_ORDER
         _current = cache.get("__v42_source_turn", "vuurland")
         if _current not in _order:
             _current = "vuurland"
@@ -6263,7 +6345,7 @@ def sync():
     # v66: één succesvolle toevoeging per ronde, roterend over de bronnen.
     processed_item_ids = set()
     max_queue_items_per_round = 35
-    source_order = ("vuurland", "mellow_mix", "big_sonic_heaven")
+    source_order = RADIO_SOURCE_ORDER
     source_turn = str(cache.get("__v42_source_turn", "vuurland"))
     if source_turn not in source_order:
         source_turn = "vuurland"
@@ -6305,7 +6387,7 @@ def sync():
     for _candidate in live_queue:
         if not isinstance(_candidate, dict):
             continue
-        if str(_candidate.get("source") or "vuurland").strip() not in ("vuurland", "mellow_mix", "big_sonic_heaven"):
+        if str(_candidate.get("source") or "vuurland").strip() not in RADIO_SOURCE_ORDER:
             continue
         if _v41_cooldown_until(_candidate) > _queue_now:
             key = (f"{normalize_match(_candidate.get('artist', ''))}|||"
@@ -6416,6 +6498,13 @@ def sync():
 
         artist = item["artist"]
         title = item["title"]
+
+        if is_german_language_title(title):
+            print(f"⏭️ Duidelijk Duitstalige titel overgeslagen: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
 
         # Bronregel extra beveiliging.
         if (
