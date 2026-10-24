@@ -1,6 +1,6 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "indie_select",
+  "__v42_source_turn": "championship_vinyl",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "jjerome87|||track and field",
@@ -5736,7 +5736,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 6553,
+  "__vuurland_active_playlist_count": 6554,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -6679,6 +6679,7 @@
     "bilbao & thala|||slow it down",
     "bilbao|||slow it down",
     "bilbao|||thala|||slow it down",
+    "bilderbuch|||sprit n' soda",
     "bill callahan & smog|||beautiful child",
     "bill callahan|||beautiful child",
     "bill callahan|||coyotes",
@@ -16967,6 +16968,7 @@
     "spotify:track:2Xb6wJYGi0QXwURw5WWvI5",
     "spotify:track:2XbGCUjNjQgJPMO1QbMp5a",
     "spotify:track:2Xc9Xna3ixq18nANCAWSLW",
+    "spotify:track:2Xh2VefYZRzQraQAFNXxo4",
     "spotify:track:2Xl7Aw8qNgxodJbxJV49Rc",
     "spotify:track:2XmElimJJTpdRG3CWxlUOx",
     "spotify:track:2Xn7NadvZ56D0B2D7x2CSL",
@@ -21398,6 +21400,7 @@
     "AEA3A1936617",
     "ARF410701462",
     "ARNDG1500028",
+    "ATAI71700002",
     "ATAI72400056",
     "ATUM72000088",
     "ATZ060603303",
@@ -34531,7 +34534,8 @@
     "spotify:track:32r2PKxfSJhDBSyO702TaO": "USIR20110375",
     "spotify:track:4e41Kd7WsZ0CfomJihS3GE": "USQX91402192",
     "spotify:track:6FHbMPxolJx6YXCzofDPB6": "USR7P1208301",
-    "spotify:track:2BndJYJQ17UcEeUFJP5JmY": "GBAAA0900963"
+    "spotify:track:2BndJYJQ17UcEeUFJP5JmY": "GBAAA0900963",
+    "spotify:track:2Xh2VefYZRzQraQAFNXxo4": "ATAI71700002"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792768451,
@@ -59127,12 +59131,20 @@
       "countries": [
         "GB"
       ]
+    },
+    "bilderbuch": {
+      "decision": "allow",
+      "until": 1800612775.9801524,
+      "countries": [
+        "AT"
+      ]
     }
   },
-  "__v108_musicbrainz_next_lookup_at": 1792836769.1154678,
+  "__v108_musicbrainz_next_lookup_at": 1792836835.9801524,
   "__match_v35__moddi|||house by the sea": "spotify:track:34Qk1WJ2ukktGOCNcRzxus",
   "__match_v35__bourgeois tagg|||i don't mind at all": "spotify:track:32r2PKxfSJhDBSyO702TaO",
   "__match_v35__simon & garfunkel|||scarborough fair": "spotify:track:4e41Kd7WsZ0CfomJihS3GE",
   "__match_v35__airiel|||funerals": "spotify:track:6FHbMPxolJx6YXCzofDPB6",
-  "__match_v35__massive attack|||paradise circus": "spotify:track:2BndJYJQ17UcEeUFJP5JmY"
+  "__match_v35__massive attack|||paradise circus": "spotify:track:2BndJYJQ17UcEeUFJP5JmY",
+  "__match_v35__bilderbuch|||sprit n' soda": "spotify:track:2Xh2VefYZRzQraQAFNXxo4"
 }
