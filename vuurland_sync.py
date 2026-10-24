@@ -1529,7 +1529,7 @@ def find_spotify_track(
         return None
     # Alleen expliciete Radio X-sessietag mag als gewone studio-opname gelden.
     # Alle andere live/akoestische/remix-specificaties blijven streng.
-    if re.search(r"\(\s*live\s+for\s+radio\s+x\s*\)\s*$", str(title), re.I):
+    if v101_radio_x_studio_title(title) != str(title).strip():
         title = v101_radio_x_studio_title(title)
         print(f"📝 v101: Radio X-sessietag genegeerd; studio-opname: {artist} — {title}")
 
