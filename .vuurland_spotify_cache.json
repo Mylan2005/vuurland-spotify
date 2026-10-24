@@ -1,9 +1,9 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "radio_x_chilled",
+  "__v42_source_turn": "indie_select",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "tom odell feat aurora|||butterflies",
+  "__last_radio_key_vuurland": "ben howard|||a boat to an island on the wall",
   "__last_radio_key_mellow_mix": "paul simon|||loves me like a rock",
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5850,12 +5850,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "novastar|||can't stand losing you": {
-      "artist": "NOVASTAR",
-      "title": "Can't stand losing you",
-      "source": "vuurland",
-      "failed_at": 1792758340
-    },
     "jj|||new work": {
       "artist": "jj",
       "title": "New Work",
@@ -5965,7 +5959,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 6630,
+  "__vuurland_active_playlist_count": 6631,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -9107,6 +9101,7 @@
     "grizzly bear|||mourning sound",
     "grizzly bear|||two weeks",
     "grizzly bear|||yet again",
+    "groove armada|||at the river",
     "groove armada|||my friend",
     "grouper|||heavy water/i'd rather be sleeping",
     "grover washington jr & bill withers|||just the two of us (feat. bill withers)",
@@ -15412,6 +15407,7 @@
     "spotify:track:0JdMDyLh4VJFdmWTO6BbuK",
     "spotify:track:0JhOWLV0il0wcoyOr2kaCx",
     "spotify:track:0Jm0RTOlF7DsbQ689QclaF",
+    "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9",
     "spotify:track:0KQSI0spQTuzStAIvYRAkq",
     "spotify:track:0KZ4YV3NRLAoNhAnTXtmyG",
     "spotify:track:0KggVXnyF20Gdk2CsiTkJG",
@@ -23289,6 +23285,7 @@
     "GBAHJ0900001",
     "GBAHJ9500098",
     "GBAHK0100110",
+    "GBAHK9900067",
     "GBAHS0104635",
     "GBAHS0104705",
     "GBAHS0200093",
@@ -35070,7 +35067,8 @@
     "spotify:track:3oW3ojSv7v0dwawQbU16IY": "USSV10300140",
     "spotify:track:5fdtuaPY8aX8fpEmfdsGdB": "GBXRC0900002",
     "spotify:track:4CqbJHZ6JtVM3MLh41y7JI": "USRE10300534",
-    "spotify:track:2mSaim2gy4fbyjIWXyfIiw": "GBARL0400348"
+    "spotify:track:2mSaim2gy4fbyjIWXyfIiw": "GBARL0400348",
+    "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9": "GBAHK9900067"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792768451,
@@ -55818,7 +55816,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "slowdive|||blue skied an' clear",
+  "__last_radio_key_big_sonic_heaven": "lucid express|||faux sweetness",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -56965,6 +56963,8 @@
   "__match_v35__spirtiualized|||ladies and gentlemen we are floating in space": "spotify:track:0fOjUafaAhJV16oRBgCtz7",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "ben howard|||a boat to an island on the wall",
+      "silversun pickups|||lazy eye",
       "tom odell feat aurora|||butterflies",
       "eefje de visser|||ongeveer",
       "camille camille|||in a song",
@@ -57062,9 +57062,7 @@
       "novastar & piet goddaer|||never back down",
       "mac demarco|||salad days",
       "the war on drugs|||nothing to find",
-      "ciska ciska|||angel",
-      "boy & bear|||southern sun",
-      "hooverphonic|||vinegar & salt"
+      "ciska ciska|||angel"
     ],
     "mellow_mix": [
       "paul simon|||loves me like a rock",
@@ -57169,6 +57167,7 @@
       "jude cole|||speed of life"
     ],
     "big_sonic_heaven": [
+      "lucid express|||faux sweetness",
       "slowdive|||blue skied an' clear",
       "brian eno|||just another day",
       "autoregulate|||double sky",
@@ -57267,8 +57266,7 @@
       "tricky|||you don't wanna feat ambersunshower",
       "nonsense rats|||dead end generation",
       "ringo deathstarr|||summertime",
-      "throwing muses|||albatross",
-      "silk daisys|||my love"
+      "throwing muses|||albatross"
     ],
     "radio_x_chilled": [
       "paolo nutini|||candy",
@@ -60295,9 +60293,16 @@
       "countries": [
         "GB"
       ]
+    },
+    "groove armada": {
+      "decision": "allow",
+      "until": 1800620772.731465,
+      "countries": [
+        "GB"
+      ]
     }
   },
-  "__v108_musicbrainz_next_lookup_at": 1792844763.5440776,
+  "__v108_musicbrainz_next_lookup_at": 1792844832.731465,
   "__match_v35__moddi|||house by the sea": "spotify:track:34Qk1WJ2ukktGOCNcRzxus",
   "__match_v35__bourgeois tagg|||i don't mind at all": "spotify:track:32r2PKxfSJhDBSyO702TaO",
   "__match_v35__simon & garfunkel|||scarborough fair": "spotify:track:4e41Kd7WsZ0CfomJihS3GE",
@@ -60383,5 +60388,6 @@
   "__match_v35__the stone roses|||she bangs the drums": "spotify:track:3oW3ojSv7v0dwawQbU16IY",
   "__match_v35__oi va voi|||i know what you are": "spotify:track:5fdtuaPY8aX8fpEmfdsGdB",
   "__match_v35__neil young|||like a hurricane": "spotify:track:4CqbJHZ6JtVM3MLh41y7JI",
-  "__match_v35__curve|||fait accompli": "spotify:track:2mSaim2gy4fbyjIWXyfIiw"
+  "__match_v35__curve|||fait accompli": "spotify:track:2mSaim2gy4fbyjIWXyfIiw",
+  "__match_v35__groove armada|||at the river": "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9"
 }
