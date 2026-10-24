@@ -1273,9 +1273,25 @@ def v108_artist_country_decision(artist, cache):
         response.raise_for_status()
         results = response.json().get("artists", [])
     except (requests.RequestException, ValueError) as exc:
-        # Geen veronderstelling bij storing: dit nummer later opnieuw proberen.
-        print(f"⚠️ MusicBrainz tijdelijk onbereikbaar voor {artist_name}: {type(exc).__name__}")
-        cache["__v108_musicbrainz_next_lookup_at"] = now + 300
+        # v112: adaptieve MusicBrainz-cooldown. Een incidentele netwerkfout
+        # hoeft niet alle bronnen vijf minuten stil te leggen. Een HTTP 429/503
+        # (rate limit of serveroverbelasting) blijft WEL minstens 5 minuten geblokkeerd en respecteert
+        # indien aanwezig Retry-After. Geen enkele artiest wordt hierdoor
+        # zonder herkomstcontrole toegelaten.
+        # v112: adaptieve MusicBrainz-cooldown
+        response_error = getattr(exc, "response", None)
+        status = getattr(response_error, "status_code", None)
+        delay = 300 if status in (429, 503) else 60
+        if status in (429, 503) and response_error is not None:
+            retry_after = response_error.headers.get("Retry-After", "")
+            try:
+                delay = max(delay, min(86400, int(float(retry_after))))
+            except (TypeError, ValueError):
+                pass
+        print(f"⚠️ MusicBrainz tijdelijk onbereikbaar voor {artist_name}: "
+              f"{type(exc).__name__} (HTTP {status or 'onbekend'}); "
+              f"volgende poging na minstens {delay} seconden.")
+        cache["__v108_musicbrainz_next_lookup_at"] = time.time() + delay
         save_cache(cache)
         return "later"
 
