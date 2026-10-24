@@ -6608,10 +6608,9 @@ def sync():
         # v106: geen nieuw, onbeoordeeld nummer naar Spotify laten gaan.
         language_decision = v106_language_decision(artist, title)
         if language_decision == "review":
-            print(f"🛑 Taal nog niet goedgekeurd; wacht op controle: {artist} — {title}")
-            live_queue.append(live_queue.pop(0))
-            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-            continue
+            # v107: onbekende taal registreren, maar sync niet stilleggen.
+            # Alleen expliciet bevestigde Duitse zang wordt geblokkeerd.
+            print(f"📝 Taal nog niet beoordeeld (sync gaat door): {artist} — {title}")
         if language_decision == "block":
             print(f"⏭️ Duitstalige zang geblokkeerd: {artist} — {title}")
             live_queue.pop(0)
