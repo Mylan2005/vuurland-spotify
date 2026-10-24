@@ -92,11 +92,12 @@ BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/play
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
 INDIE_SELECT_SOURCE_URL = "https://onlineradiobox.com/de/indieselect/playlist/?lang=nl"
 CHAMPIONSHIP_VINYL_SOURCE_URL = "https://onlineradiobox.com/de/championshipvinyl/playlist/?lang=nl"
+DARK_EDGE_SOURCE_URL = "https://onlineradiobox.com/ro/darkedge/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
 RADIO_SOURCE_ORDER = (
     "vuurland", "mellow_mix", "big_sonic_heaven",
-    "radio_x_chilled", "indie_select", "championship_vinyl",
+    "radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
 )
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
@@ -1148,6 +1149,16 @@ def get_indie_select_tracks():
 
 def get_championship_vinyl_tracks():
     return get_radiobox_tracks(CHAMPIONSHIP_VINYL_SOURCE_URL, "Championship Vinyl")
+
+
+def get_dark_edge_tracks():
+    # RadioBox toont deze identieke zenderjingle honderden keren.
+    # Zonder program_labels zou de matcher hem zien als artiest - titel.
+    return get_radiobox_tracks(
+        DARK_EDGE_SOURCE_URL,
+        "Dark Edge Radio",
+        {"dark edge radio - soft alternative/indie music"},
+    )
 
 
 # v102: Duitse ZANG uitsluiten, niet Duitse titels of artiesten.
@@ -5424,7 +5435,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         current = [(_v47_key(a, t), a, t) for a, t in tracks]
         old = snapshots.get(sid)
         if not isinstance(old, list):
-            if sid in ("radio_x_chilled", "indie_select", "championship_vinyl"):
+            if sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge"):
                 # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
                 arrivals = []
                 print(f"🕒 v96 {source['name']}: nulmeting; geen oude uitzendingen ingehaald.")
@@ -5902,6 +5913,12 @@ def sync():
             "name": "Championship Vinyl",
             "tracks": get_championship_vinyl_tracks(),
             "cache_key": "__last_radio_key_championship_vinyl",
+        },
+        {
+            "id": "dark_edge",
+            "name": "Dark Edge Radio",
+            "tracks": get_dark_edge_tracks(),
+            "cache_key": "__last_radio_key_dark_edge",
         },
     ]
 
