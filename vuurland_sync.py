@@ -6428,17 +6428,10 @@ def sync():
     # ---------------------------------
 
     if not live_queue:
-        # v95: ook lege rondes tellen mee in de vaste 3-bronnenbeurtrol.
-        _order = RADIO_SOURCE_ORDER
-        _current = cache.get("__v42_source_turn", "vuurland")
-        if _current not in _order:
-            _current = "vuurland"
-        _next = _order[(_order.index(_current) + 1) % len(_order)]
-        cache["__v42_source_turn"] = _next
+        # v120: geen bronbeurtrol, ook niet wanneer de wachtrij leeg is.
         atomic_save_json(live_queue_file, [], indent=2, ensure_ascii=False)
         save_cache(cache)
-        print(f"🔁 v95: lege beurt {_current}; volgende bron {_next}.")
-        print("ℹ️ Live queue is leeg.")
+        print("ℹ️ v120: gezamenlijke live queue is leeg.")
         return
 
     # ---------------------------------
@@ -6762,27 +6755,13 @@ def sync():
 
     duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
 
-    # v42: drie gelijkwaardige bronnen. Persistente round-robin voorkomt
-    # dat een constante radiostroom Duyster kan uithongeren of omgekeerd.
-    # Bestaande playlist/cache-hits blijven ook na de Search mogelijk.
-    # v66: één succesvolle toevoeging per ronde, roterend over de bronnen.
+    # v120: gezamenlijke FIFO zonder bronbeurtrol.
+    # Alle zeven RadioBox-bronnen blijven iedere ronde nieuwe titels achteraan
+    # toevoegen. De bestaande persistente _v116_fifo_seq blijft leidend.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    source_turn = str(cache.get("__v42_source_turn", "vuurland"))
-    if source_turn not in source_order:
-        source_turn = "vuurland"
-    # v68: per ronde exact één vaste startbron. De volgende ronde schuift
-    # altijd één bron op, onafhankelijk van skips en fallback-toevoegingen.
-    # Dezelfde startbron blijft tijdens DEZE ronde gelden, ook wanneer
-    # meerdere wachtrij-items worden overgeslagen.
-    round_start_source = source_turn
-    next_round_source = source_order[(source_order.index(round_start_source) + 1)
-                                     % len(source_order)]
-    cache["__v42_source_turn"] = next_round_source
-    save_cache(cache)
-    print(f"🔁 v68 beurtrol: deze ronde {round_start_source}; "
-          f"volgende ronde {next_round_source} (onafhankelijk van fallback).")
+    print("🔀 v120: 7 bronnen samen, één FIFO, geen beurtrol.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
@@ -6831,13 +6810,11 @@ def sync():
         _source = str(_candidate.get("source") or "vuurland").strip()
         if _source in _source_counts and _v41_cooldown_until(_candidate) <= _queue_now:
             _source_counts[_source] += 1
-    print("🔁 Gelijke bronverdeling: "
+    print("📊 v120 wachtrij per bron: "
           + ", ".join(f"{name}={_source_counts[name]} zoekklaar" for name in source_order)
-          + f"; startbron deze ronde: {round_start_source}; "
-          + f"volgende ronde: {next_round_source}.")
+          + "; gezamenlijke FIFO zonder bronvoorrang.")
 
-    # v97: FIFO per bron met eerlijke fallback bij een lege beurt.
-    # Geen nieuwe-muziek-voorrang of historische v78-herstelprioriteit.
+    # v120: oudste beschikbare nummer, ongeacht radiobron.
 
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
@@ -6848,27 +6825,16 @@ def sync():
         waiting_for_retry = False
         now = time.time()
 
-        # v116: bronbeurtrol + STRICT oudste item per bron.
-        # Het fysieke verschuiven van items bij retries verandert de
-        # opgeslagen _v116_fifo_seq NIET. Als het oudste item wacht,
-        # slaan we die hele bron tijdelijk over, niet het oudste item.
-        source_offset = source_order.index(round_start_source)
-        round_sources = list(source_order[source_offset:] + source_order[:source_offset])
-        for preferred_source in round_sources:
-            # Per bron alleen het oudste nog aanwezige item bekijken.
-            source_candidates = [
-                (index, candidate) for index, candidate in enumerate(live_queue)
-                if isinstance(candidate, dict)
-                and str(candidate.get("source") or "vuurland").strip() == preferred_source
-            ]
-            if not source_candidates:
-                continue
-            index, candidate = min(
-                source_candidates,
-                key=lambda pair: pair[1].get("_v116_fifo_seq", 10**30),
-            )
-            # Als dit item deze ronde al geprobeerd werd, niet naar het
-            # tweede item van dezelfde bron springen.
+        # v120: sorteer ALLE zeven bronnen op hun onveranderlijke FIFO-nummer.
+        # Tijdelijke cooldowns en reeds geprobeerde items worden overgeslagen,
+        # maar blijven bewaard voor latere sync-rondes.
+        candidates = sorted(
+            ((index, candidate) for index, candidate in enumerate(live_queue)
+             if isinstance(candidate, dict)
+             and str(candidate.get("source") or "vuurland").strip() in source_order),
+            key=lambda pair: (pair[1].get("_v116_fifo_seq", 10**30), pair[0]),
+        )
+        for index, candidate in candidates:
             if id(candidate) in processed_item_ids:
                 continue
             if now < _v41_cooldown_until(candidate):
@@ -6882,7 +6848,7 @@ def sync():
                 if not (known_in_playlist or known_match or candidate_key in seen):
                     continue
             selected_index = index
-            selected_source = preferred_source
+            selected_source = str(candidate.get("source") or "vuurland").strip()
             break
 
         if selected_index is None:
@@ -6896,11 +6862,10 @@ def sync():
             selected_item = live_queue.pop(selected_index)
             live_queue.insert(0, selected_item)
 
-        print(f"🔢 v116 FIFO {selected_source}: oudste wachtende "
-              f"volgnummer {live_queue[0].get('_v116_fifo_seq')} geselecteerd.")
+        print(f"🔢 v120 gezamenlijke FIFO: volgnummer "
+              f"{live_queue[0].get('_v116_fifo_seq')} geselecteerd "
+              f"(bron: {selected_source}).")
         processed_item_ids.add(id(live_queue[0]))
-        # v68: de startbeurt is vóór deze ronde al opgeslagen. De bron van
-        # dit specifieke wachtrij-item mag die volgende beurt niet wijzigen.
 
         # Nooit ISRC-metadata van het vorige queue-item hergebruiken.
         LAST_SPOTIFY_MATCH_ISRC = None
