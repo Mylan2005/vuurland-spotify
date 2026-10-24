@@ -5985,6 +5985,45 @@ def v83_clear_resolved_failures(cache, artist, title):
     return removed
 
 
+# v116: stabiele FIFO-volgorde per bron, ook na retries.
+# De bestaande queue wordt bij de eerste run éénmalig in zijn huidige volgorde
+# genummerd. Daarna krijgen ALLEEN nieuwe items een hoger volgnummer.
+# Niets wissen, hersorteren of uit de queue verplaatsen.
+def v116_stamp_fifo(live_queue, cache):
+    raw = cache.get("__v116_fifo_next_sequence", 1)
+    try:
+        next_seq = max(1, int(raw))
+    except (TypeError, ValueError, OverflowError):
+        next_seq = 1
+    used = set()
+    # Ook na een oudere state-restore nooit bestaande nummers hergebruiken.
+    for item in live_queue:
+        if not isinstance(item, dict):
+            continue
+        seq = item.get("_v116_fifo_seq")
+        if type(seq) is int and seq > 0 and seq not in used:
+            used.add(seq)
+            next_seq = max(next_seq, seq + 1)
+    stamped = 0
+    seen_here = set()
+    for item in live_queue:
+        if not isinstance(item, dict):
+            continue
+        seq = item.get("_v116_fifo_seq")
+        if type(seq) is int and seq > 0 and seq not in seen_here:
+            seen_here.add(seq)
+            continue
+        while next_seq in used:
+            next_seq += 1
+        item["_v116_fifo_seq"] = next_seq
+        used.add(next_seq)
+        seen_here.add(next_seq)
+        next_seq += 1
+        stamped += 1
+    cache["__v116_fifo_next_sequence"] = next_seq
+    return stamped
+
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -6273,6 +6312,10 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
+    _v116_new = v116_stamp_fifo(live_queue, cache)
+    if _v116_new:
+        print(f"📥 v116: {_v116_new} queue-item(s) een vaste FIFO-positie gegeven.")
+
     # v67: blijf RadioBox volgen tijdens de Spotify-cooldown. De ingestie
     # hierboven gebruikt geen Spotify API; verdere matcher-/playliststappen
     # zouden dat wel kunnen doen. Daarom hier bewust vroeg terugkeren.
@@ -6309,6 +6352,12 @@ def sync():
                   not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", ""))]
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
+
+    _v116_restored = v116_stamp_fifo(live_queue, cache)
+    if _v116_restored:
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_cache(cache)
+        print(f"📥 v116: {_v116_restored} herstelde queue-item(s) achteraan genummerd.")
 
     # ---------------------------------
     # ALS ER GEEN NUMMER TE VERWERKEN IS
@@ -6735,44 +6784,42 @@ def sync():
         waiting_for_retry = False
         now = time.time()
 
-        # v97: vaste bron heeft altijd voorrang; is die leeg of wachten
-        # alle items op een retry, gebruik de andere bronnen als fallback.
-        # De opgeslagen volgende beurt verandert hierdoor nooit.
-        # Binnen iedere bron blijft de wachtrij FIFO (oudste eerst).
+        # v116: bronbeurtrol + STRICT oudste item per bron.
+        # Het fysieke verschuiven van items bij retries verandert de
+        # opgeslagen _v116_fifo_seq NIET. Als het oudste item wacht,
+        # slaan we die hele bron tijdelijk over, niet het oudste item.
         source_offset = source_order.index(round_start_source)
         round_sources = list(source_order[source_offset:] + source_order[:source_offset])
         for preferred_source in round_sources:
-            # v95: oudste eerst volgens de opgeslagen FIFO-volgorde.
-            candidates = list(enumerate(live_queue))
-            for index, candidate in candidates:
-                if not isinstance(candidate, dict):
+            # Per bron alleen het oudste nog aanwezige item bekijken.
+            source_candidates = [
+                (index, candidate) for index, candidate in enumerate(live_queue)
+                if isinstance(candidate, dict)
+                and str(candidate.get("source") or "vuurland").strip() == preferred_source
+            ]
+            if not source_candidates:
+                continue
+            index, candidate = min(
+                source_candidates,
+                key=lambda pair: pair[1].get("_v116_fifo_seq", 10**30),
+            )
+            # Als dit item deze ronde al geprobeerd werd, niet naar het
+            # tweede item van dezelfde bron springen.
+            if id(candidate) in processed_item_ids:
+                continue
+            if now < _v41_cooldown_until(candidate):
+                waiting_for_retry = True
+                continue
+            candidate_key = (f"{normalize_match(candidate.get('artist', ''))}|||"
+                             f"{normalize_match(candidate.get('title', ''))}")
+            if searches_used >= MAX_SEARCHES_PER_RUN:
+                known_in_playlist = candidate_key in playlist_keys
+                known_match = (f"__match_v{MATCHING_RULES_VERSION}__" + candidate_key) in cache
+                if not (known_in_playlist or known_match or candidate_key in seen):
                     continue
-                if id(candidate) in processed_item_ids:
-                    continue
-                source_id = str(candidate.get("source") or "vuurland").strip()
-                if source_id != preferred_source:
-                    continue
-                if source_id == 'duyster' and duyster_additions_this_round >= 1:
-                    continue
-                candidate_key = (f"{normalize_match(candidate.get('artist', ''))}|||"
-                                 f"{normalize_match(candidate.get('title', ''))}")
-                linked_duyster = (source_id == 'duyster' and
-                                  candidate_key in duyster_confirmed_links)
-                if not linked_duyster and now < _v41_cooldown_until(candidate):
-                    waiting_for_retry = True
-                    continue
-                if searches_used >= MAX_SEARCHES_PER_RUN:
-                    key = (f"{normalize_match(candidate.get('artist', ''))}|||"
-                           f"{normalize_match(candidate.get('title', ''))}")
-                    known_in_playlist = key in playlist_keys
-                    known_match = (f"__match_v{MATCHING_RULES_VERSION}__" + key) in cache
-                    if not (known_in_playlist or known_match or key in seen or linked_duyster):
-                        continue
-                selected_index = index
-                selected_source = source_id
-                break
-            if selected_index is not None:
-                break
+            selected_index = index
+            selected_source = preferred_source
+            break
 
         if selected_index is None:
             if waiting_for_retry:
@@ -6785,6 +6832,8 @@ def sync():
             selected_item = live_queue.pop(selected_index)
             live_queue.insert(0, selected_item)
 
+        print(f"🔢 v116 FIFO {selected_source}: oudste wachtende "
+              f"volgnummer {live_queue[0].get('_v116_fifo_seq')} geselecteerd.")
         processed_item_ids.add(id(live_queue[0]))
         # v68: de startbeurt is vóór deze ronde al opgeslagen. De bron van
         # dit specifieke wachtrij-item mag die volgende beurt niet wijzigen.
