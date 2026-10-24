@@ -1161,6 +1161,60 @@ def get_dark_edge_tracks():
     )
 
 
+# v119: Duitse numMERTITELS, niet Duitse artiesten, blokkeren.
+# Herkenning gebeurt op TITEL, niet op artiestennaam of radioland.
+# Bij twijfel nooit een Engelse titel blokkeren wegens de nationaliteit.
+V119_GERMAN_TITLES = frozenset({
+    "weil das morgen noch so ist", "ich muss gar nix", "ich muß gar nix",
+    "ein song reicht", "die bomben meiner stadt",
+    "zum laichen und sterben ziehen die lachse den fluss hinauf",
+    "die schonheit der chance", "die schönheit der chance",
+    "nicht atmen", "der elektrische reiter", "dialog mit dem tolpel",
+    "wie kann es sein", "ich tauche auf", "neuer morgen",
+    "wir waren jung und wir brauchten das geld",
+    "wahre arbeit wahrer lohn", "bis ans ende der welt",
+    "mama schickt mich", "begrab mein herz",
+    "die transsylvanische verwandte ist da", "auch ein guter sommer",
+    "jonny du lump", "lied vom ende des kapitalismus",
+    "die große sporadische", "das ende der beschwerde",
+    "keine bewegung", "die toten auf dem rücksitz",
+})
+
+
+def v119_title_normalize(value):
+    import re
+    import unicodedata
+    text = unicodedata.normalize("NFKC", str(value or "")).casefold()
+    text = text.replace("ß", "ss")
+    # Live/remix-aanduidingen mogen Duitse basistitels niet verbergen.
+    text = re.sub(r"\([^)]*\)", " ", text)
+    text = re.sub(r"[^\wäöü]+", " ", text, flags=re.UNICODE)
+    return " ".join(text.split())
+
+
+def v119_is_german_title(title):
+    import re
+    text = v119_title_normalize(title)
+    if not text:
+        return False
+    if text in V119_GERMAN_TITLES:
+        return True
+    # Gecontroleerde basistitels met live/remix/toevoegingen.
+    if any(text.startswith(base + " ") for base in V119_GERMAN_TITLES if len(base) >= 13):
+        return True
+    # Duitse zinsdelen die voldoende onderscheidend zijn.
+    patterns = (
+        r"\bweil\s+(?:das|ich|du|wir|sie)\b",
+        r"\b(?:ich|wir|du)\s+(?:bin|habe|hab|will|muss|musst|waren|brauchen|brauchten|tauche|liebe)\b",
+        r"\b(?:nicht|kein|keine|keinen)\s+(?:atmen|mehr|bewegung|zeit|angst|liebe)\b",
+        r"\b(?:wie|was|wer|warum)\s+(?:kann|ist|soll|sind|wird|geht|macht)\b",
+        r"\b(?:zum|zur)\s+(?:laichen|sterben|welt|sonne|hölle|hoelle)\b",
+        r"\b(?:meiner|meinem|meinen|deiner|deinem|deinen)\s+\w+\b",
+        r"\b(?:der|die|das)\s+(?:elektrische|schonheit|schönheit|bomben|toten|ende|transsylvanische|große|grosse)\b",
+    )
+    return any(re.search(pattern, text) for pattern in patterns)
+
+
 # v102: Duitse ZANG uitsluiten, niet Duitse titels of artiesten.
 # Alleen gecontroleerde opnames. Geen automatische taalherkenning op metadata.
 GERMAN_VOCAL_RADIO_TRACKS = frozenset({
@@ -6350,10 +6404,16 @@ def sync():
     if restored:
         print(f"🔁 {restored} eerdere onbetrouwbare match(es) opnieuw ingepland.")
 
-    # v69: alleen RadioBox; daarnaast duidelijk Duitstalige titels weren.
+    # v119: verwijder Duitse TITELS uit de bestaande wachtrij; geen Spotify-mutatie.
+    # Duitse artiesten met niet-Duitse titels blijven behouden.
+    _v119_before = len(live_queue)
     live_queue = [x for x in live_queue if isinstance(x, dict) and
                   x.get("source") in RADIO_SOURCE_ORDER and
+                  not v119_is_german_title(x.get("title", "")) and
                   not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", ""))]
+    _v119_removed = _v119_before - len(live_queue)
+    if _v119_removed:
+        print(f"🧹 v119: {_v119_removed} Duitstalige titel(s)/bevestigde Duitse zang uit live queue verwijderd.")
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
 
@@ -6866,7 +6926,14 @@ def sync():
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
 
-        # v106: geen nieuw, onbeoordeeld nummer naar Spotify laten gaan.
+        # v119: titelcheck vóór elke Spotify Search, onafhankelijk van artiestenland.
+        if v119_is_german_title(title):
+            print(f"⛔ v119 Duitse titel geblokkeerd: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
+
         language_decision = v106_language_decision(artist, title)
         if language_decision == "review":
             # v107: onbekende taal registreren, maar sync niet stilleggen.
@@ -6879,26 +6946,9 @@ def sync():
             save_cache(cache)
             continue
 
-        # v118: Duitse artiesten vóór elke Spotify Search tegenhouden.
-        # Alleen expliciet bevestigde niet-Duitse herkomst mag door.
-        # Onbekend, ambigu, storing of cooldown => bewaren en wachten.
-        country_decision = v108_artist_country_decision(artist, cache)
-        if country_decision == "block":
-            print(f"⏭️ Duitse artiest automatisch geblokkeerd: {artist} — {title}")
-            live_queue.pop(0)
-            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-            save_cache(cache)
-            continue
-        # v118: fail-closed. Alleen 'allow' bereikt Spotify Search.
-        # Ook 'unknown' uit v117 mag nooit door naar Spotify.
-        if country_decision != "allow":
-            if not locals().get("_v118_country_wait_reported", False):
-                print("⏳ v118 veilige herkomstcontrole: onbekend/cooldown; "
-                      "nummer blijft in wachtrij, andere bronnen krijgen een kans.")
-                _v118_country_wait_reported = True
-            live_queue.append(live_queue.pop(0))
-            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-            continue
+        # v119: artiestenland speelt GEEN rol meer. Geen MusicBrainz-calls,
+        # geen land-cooldown en geen Duitse-artiestenblokkering.
+        # Bevestigde Duitse zang blijft wel geblokkeerd.
 
         if is_confirmed_german_vocal(artist, title):
             print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
