@@ -1,6 +1,6 @@
 {
   "__v69_radio_only_fresh_start": true,
-  "__v42_source_turn": "indie_select",
+  "__v42_source_turn": "championship_vinyl",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "ben howard|||a boat to an island on the wall",
@@ -5959,7 +5959,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 6631,
+  "__vuurland_active_playlist_count": 6632,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -14772,6 +14772,7 @@
     "velveteen|||a fool's paradise",
     "velveteen|||shoot me down",
     "velveteen|||unanswered",
+    "veto|||you're hard to get",
     "victoria & jacob|||with no certainty",
     "victoria canal|||15%",
     "vienna teng|||blue caravan",
@@ -16001,6 +16002,7 @@
     "spotify:track:10jl9GxEKfVn0nk8vc1r7V",
     "spotify:track:10pLmMEidgvRhd6MEqxb2r",
     "spotify:track:10uxlzuPGekUTay2ZpZ4pR",
+    "spotify:track:10xW2KZs6gz5HRM2HPWsBD",
     "spotify:track:117HTqcCgGXFsXwnP3jfDW",
     "spotify:track:117XTs9axKflCk5FDwf2kI",
     "spotify:track:119MXpXxpY20WUkDIdE6U4",
@@ -22654,6 +22656,7 @@
     "DGA0S2419502",
     "DGA0T2419043",
     "DK4R51900307",
+    "DKADG1100002",
     "DKK8E2400109",
     "DKMFA2201004",
     "DKW922002102",
@@ -35068,7 +35071,8 @@
     "spotify:track:5fdtuaPY8aX8fpEmfdsGdB": "GBXRC0900002",
     "spotify:track:4CqbJHZ6JtVM3MLh41y7JI": "USRE10300534",
     "spotify:track:2mSaim2gy4fbyjIWXyfIiw": "GBARL0400348",
-    "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9": "GBAHK9900067"
+    "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9": "GBAHK9900067",
+    "spotify:track:10xW2KZs6gz5HRM2HPWsBD": "DKADG1100002"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792768451,
@@ -60300,9 +60304,16 @@
       "countries": [
         "GB"
       ]
+    },
+    "veto": {
+      "decision": "allow",
+      "until": 1800620840.9782636,
+      "countries": [
+        "DK"
+      ]
     }
   },
-  "__v108_musicbrainz_next_lookup_at": 1792844832.731465,
+  "__v108_musicbrainz_next_lookup_at": 1792844900.9782636,
   "__match_v35__moddi|||house by the sea": "spotify:track:34Qk1WJ2ukktGOCNcRzxus",
   "__match_v35__bourgeois tagg|||i don't mind at all": "spotify:track:32r2PKxfSJhDBSyO702TaO",
   "__match_v35__simon & garfunkel|||scarborough fair": "spotify:track:4e41Kd7WsZ0CfomJihS3GE",
@@ -60389,5 +60400,6 @@
   "__match_v35__oi va voi|||i know what you are": "spotify:track:5fdtuaPY8aX8fpEmfdsGdB",
   "__match_v35__neil young|||like a hurricane": "spotify:track:4CqbJHZ6JtVM3MLh41y7JI",
   "__match_v35__curve|||fait accompli": "spotify:track:2mSaim2gy4fbyjIWXyfIiw",
-  "__match_v35__groove armada|||at the river": "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9"
+  "__match_v35__groove armada|||at the river": "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9",
+  "__match_v35__veto|||you're hard to get": "spotify:track:10xW2KZs6gz5HRM2HPWsBD"
 }
