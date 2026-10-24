@@ -1216,6 +1216,78 @@ def v106_language_decision(artist, title):
     return "review"
 
 
+# v108: artiesten uit Duitsland blokkeren via MusicBrainz.
+# Dit filtert op artiest-land, NIET op zangtaal. Ook Engelse zang en
+# instrumentale tracks van Duitse artiesten worden dus geblokkeerd.
+# Eén MusicBrainz-opzoeking per >=60 seconden, cache in bestaande Spotify-state.
+def v108_artist_country_decision(artist, cache):
+    import urllib.parse
+    import time
+    import requests
+    import unicodedata
+
+    def norm(value):
+        value = unicodedata.normalize("NFKD", str(value).casefold())
+        return " ".join("".join(c for c in value if not unicodedata.combining(c)).split())
+
+    artist_name = str(artist).strip()
+    key = norm(artist_name)
+    if not key:
+        return "unknown"
+
+    state = cache.setdefault("__v108_musicbrainz_artists", {})
+    now = time.time()
+    saved = state.get(key)
+    if isinstance(saved, dict) and float(saved.get("until", 0) or 0) > now:
+        return saved.get("decision", "unknown")
+
+    next_at = float(cache.get("__v108_musicbrainz_next_lookup_at", 0) or 0)
+    if now < next_at:
+        return "later"
+
+    # Bewaar de cooldown VÓÓR de HTTP-call; ook een fout telt als poging.
+    cache["__v108_musicbrainz_next_lookup_at"] = now + 60
+    save_cache(cache)
+    try:
+        # Een exact gequote artiestennaam voorkomt een zoekopdracht op losse woorden.
+        quoted = artist_name.replace("\\", " ").replace('"', " ")
+        query = 'artist:"' + quoted + '"'
+        response = requests.get(
+            "https://musicbrainz.org/ws/2/artist/",
+            params={"query": query, "fmt": "json", "limit": 10},
+            headers={"User-Agent": "VuurlandSpotifySync/108 (https://github.com/Mylan2005/vuurland-spotify)",
+                     "Accept": "application/json"},
+            timeout=8,
+        )
+        response.raise_for_status()
+        results = response.json().get("artists", [])
+    except (requests.RequestException, ValueError) as exc:
+        # Geen veronderstelling bij storing: dit nummer later opnieuw proberen.
+        print(f"⚠️ MusicBrainz tijdelijk onbereikbaar voor {artist_name}: {type(exc).__name__}")
+        cache["__v108_musicbrainz_next_lookup_at"] = now + 300
+        save_cache(cache)
+        return "later"
+
+    matches = [r for r in results if norm(r.get("name", "")) == key
+               and int(r.get("score", 0) or 0) >= 95]
+    countries = {str(r.get("country", "")).upper() for r in matches if r.get("country")}
+    # Alleen DE blokkeren als de naam eenduidig is: bij meerdere landen
+    # is een artiestennaam onvoldoende om de juiste act te identificeren.
+    if countries == {"DE"}:
+        decision = "block"
+    elif countries and "DE" not in countries:
+        decision = "allow"
+    else:
+        decision = "unknown"
+
+    # Onbekende/ambigue artiesten korter cachen; later opnieuw beoordelen.
+    ttl = 7 * 86400 if decision == "unknown" else 90 * 86400
+    state[key] = {"decision": decision, "until": now + ttl,
+                  "countries": sorted(countries)}
+    save_cache(cache)
+    return decision
+
+
 # =========================
 # NUMMER ZOEKEN
 # =========================
@@ -6617,6 +6689,23 @@ def sync():
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
             continue
+
+        # v108: Duitse artiesten vóór elke Spotify Search tegenhouden.
+        # Bij MusicBrainz-storing wachten; bij onbekende herkomst doorlaten.
+        country_decision = v108_artist_country_decision(artist, cache)
+        if country_decision == "block":
+            print(f"⏭️ Duitse artiest automatisch geblokkeerd: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
+        if country_decision == "later":
+            print(f"⏳ Herkomst nog niet opgezocht: {artist} — {title}")
+            live_queue.append(live_queue.pop(0))
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            continue
+        if country_decision == "unknown":
+            print(f"ℹ️ Artiestenland onzeker; bestaande regels blijven gelden: {artist}")
 
         if is_confirmed_german_vocal(artist, title):
             print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
