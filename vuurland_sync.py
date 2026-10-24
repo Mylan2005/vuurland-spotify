@@ -1268,7 +1268,7 @@ def v108_artist_country_decision(artist, cache):
             params={"query": query, "fmt": "json", "limit": 10},
             headers={"User-Agent": "VuurlandSpotifySync/108 (https://github.com/Mylan2005/vuurland-spotify)",
                      "Accept": "application/json"},
-            timeout=8,
+            timeout=(4, 15),  # connect 4 s; trage MusicBrainz-read tot 15 s
         )
         response.raise_for_status()
         results = response.json().get("artists", [])
@@ -1297,6 +1297,14 @@ def v108_artist_country_decision(artist, cache):
                   "countries": sorted(countries)}
     save_cache(cache)
     return decision
+
+
+# v110: bekende fout in artiestentag van Indie Select.
+# Alleen exact "M8310" (niet andere M83-achtige artiestennamen).
+def v110_correct_radio_artist(artist, source):
+    if str(source).strip().casefold() == "indie_select" and str(artist).strip().casefold() == "m8310":
+        return "M83"
+    return artist
 
 
 # =========================
@@ -5427,7 +5435,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
     added = 0
     for source in radio_sources:
         sid = source["id"]
-        tracks = [(str(a).strip(), str(t).strip())
+        tracks = [(str(v110_correct_radio_artist(a, sid)).strip(), str(t).strip())
                   for a, t in source.get("tracks", []) if a and t]
         if not tracks:
             print(f"⏳ v96 {source['name']}: lege bronmeting; vorige stand behouden.")
@@ -6691,7 +6699,11 @@ def sync():
             print("⏳ Alternatieve Spotify-zoekpoging wacht tot later.")
             continue
 
-        artist = item["artist"]
+        artist = v110_correct_radio_artist(item["artist"], item.get("source", ""))
+        if artist != item["artist"]:
+            print(f"🛠️ RadioBox-artiest gecorrigeerd: {item['artist']} → {artist}")
+            item["artist"] = artist
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
 
         # v106: geen nieuw, onbeoordeeld nummer naar Spotify laten gaan.
@@ -6717,7 +6729,10 @@ def sync():
             save_cache(cache)
             continue
         if country_decision == "later":
-            print(f"⏳ Herkomst nog niet opgezocht: {artist} — {title}")
+            if not locals().get("_v110_country_wait_reported", False):
+                print("⏳ MusicBrainz wacht/cooldown: herkomstcontroles worden later hervat; "
+                      "nummers blijven in de wachtrij.")
+                _v110_country_wait_reported = True
             live_queue.append(live_queue.pop(0))
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             continue
