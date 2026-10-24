@@ -1173,6 +1173,49 @@ def is_blocked_german_spotify_uri(uri):
     return str(uri or "").rsplit(":", 1)[-1] in GERMAN_VOCAL_SPOTIFY_IDS
 
 
+# v106: fail-closed taalcontrole voor nieuwe radio-items.
+# Onbekende taal = wachten op beslissing; geen gok op basis van artiest of titel.
+def v106_language_decision(artist, title):
+    import csv
+    from pathlib import Path
+
+    key = (" ".join(str(artist).casefold().split()),
+           " ".join(str(title).casefold().split()))
+    decisions_path = Path("vuurland_taalbeslissingen.csv")
+    pending_path = Path("vuurland_taalcontrole_nieuw.csv")
+
+    if is_confirmed_german_vocal(artist, title):
+        return "block"
+
+    if decisions_path.exists():
+        with decisions_path.open("r", encoding="utf-8-sig", newline="") as handle:
+            for row in csv.DictReader(handle):
+                row_key = (" ".join(str(row.get("artist", "")).casefold().split()),
+                           " ".join(str(row.get("title", "")).casefold().split()))
+                if row_key != key:
+                    continue
+                status = str(row.get("beslissing", "")).strip().casefold()
+                if status in ("toestaan", "allow", "ok"):
+                    return "allow"
+                if status in ("blokkeren", "block", "duits"):
+                    return "block"
+                return "review"
+
+    existing = set()
+    if pending_path.exists():
+        with pending_path.open("r", encoding="utf-8-sig", newline="") as handle:
+            for row in csv.DictReader(handle):
+                existing.add((" ".join(str(row.get("artist", "")).casefold().split()),
+                              " ".join(str(row.get("title", "")).casefold().split())))
+    if key not in existing:
+        with pending_path.open("a", encoding="utf-8", newline="") as handle:
+            writer = csv.writer(handle)
+            if pending_path.stat().st_size == 0:
+                writer.writerow(["artist", "title"])
+            writer.writerow([artist, title])
+    return "review"
+
+
 # =========================
 # NUMMER ZOEKEN
 # =========================
@@ -6561,6 +6604,20 @@ def sync():
 
         artist = item["artist"]
         title = item["title"]
+
+        # v106: geen nieuw, onbeoordeeld nummer naar Spotify laten gaan.
+        language_decision = v106_language_decision(artist, title)
+        if language_decision == "review":
+            print(f"🛑 Taal nog niet goedgekeurd; wacht op controle: {artist} — {title}")
+            live_queue.append(live_queue.pop(0))
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            continue
+        if language_decision == "block":
+            print(f"⏭️ Duitstalige zang geblokkeerd: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
 
         if is_confirmed_german_vocal(artist, title):
             print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
