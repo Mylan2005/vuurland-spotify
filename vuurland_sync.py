@@ -5540,25 +5540,45 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                 print(f"⚠️ v96 {source['name']}: geen overlap; maximaal 12 recente titels nagekeken.")
             else:
                 arrivals = current[:boundary]
+        # v114: verklaar elke nieuwe uitzending en controleer FIFO-append.
         accepted = 0
+        queue_length_before = len(live_queue)
+        queue_prefix_before = list(live_queue)
+        reasons = {}
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
             if key in seen_this_scan:
-                continue
-            seen_this_scan.add(key)
-            if is_confirmed_german_vocal(artist, title):
-                print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
-                continue
-            if is_interview_fragment(title) or key in known_queue or key in seen:
-                continue
-            # Spotify-playlist-cache blijft gezaghebbend voor al aanwezige tracks.
-            if key in playlist_keys or radio_matches_playlist(artist, title, playlist_keys):
-                continue
-            if cache.get(f"__not_found_v{matching_version}__" + key) is not None:
-                continue
-            live_queue.append({"artist": artist, "title": title, "source": sid})
-            known_queue.add(key)
-            accepted += 1
+                reason = "herhaling binnen deze bronmeting"
+            else:
+                seen_this_scan.add(key)
+                if is_confirmed_german_vocal(artist, title):
+                    reason = "bevestigde Duitse zang"
+                elif is_interview_fragment(title):
+                    reason = "interviewfragment"
+                elif key in known_queue:
+                    reason = "staat al in live queue"
+                elif key in seen:
+                    reason = "al eerder verwerkt (seen-geheugen)"
+                elif key in playlist_keys or radio_matches_playlist(artist, title, playlist_keys):
+                    reason = "staat al in Spotify-playlist (cache)"
+                elif cache.get(f"__not_found_v{matching_version}__" + key) is not None:
+                    reason = "bestaande niet-gevondenregistratie"
+                else:
+                    live_queue.append({"artist": artist, "title": title, "source": sid})
+                    known_queue.add(key)
+                    accepted += 1
+                    reason = f"ACHTERAAN toegevoegd (positie {len(live_queue)})"
+            reasons[reason] = reasons.get(reason, 0) + 1
+            print(f"🔍 v114 {source['name']}: {artist} — {title} → {reason}")
+        # Append mag nooit bestaande queue-items verplaatsen of verwijderen.
+        if (len(live_queue) != queue_length_before + accepted
+                or live_queue[:queue_length_before] != queue_prefix_before):
+            raise RuntimeError(f"v114 FIFO-integriteitscontrole mislukt: {sid}")
+        if arrivals:
+            print(f"🧾 v114 {source['name']}: " + "; ".join(
+                f"{reason}={count}" for reason, count in reasons.items()))
+        print(f"📥 v114 {source['name']}: bestaande {queue_length_before} queue-items "
+              f"behouden; {accepted} achteraan toegevoegd; nu {len(live_queue)}.")
         added += accepted
         discovered[sid] = sorted(set(discovered.get(sid, [])) | {k for k, _, _ in current})
         snapshots[sid] = [k for k, _, _ in current[:100]]
