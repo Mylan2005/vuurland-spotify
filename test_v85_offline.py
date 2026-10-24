@@ -7,7 +7,7 @@ tree = ast.parse(source)
 functions = {n.name: n for n in tree.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))}
 assert 'sync' in functions and 'find_spotify_track' in functions
 assert 'SPOTIFY_SEARCH_HTTP_LIMIT = 1' in source
-assert 'CHECK_EVERY_SECONDS = 120' in source
+assert 'CHECK_EVERY_SECONDS = 60' in source
 assert 'max_additions_per_round = 1' in source
 
 # No automated call removing existing playlist entries (function declaration is fine).
@@ -46,6 +46,6 @@ assert choose(['live']) == 'live'
 assert choose(['remaster', 'ordinary']) == 'ordinary'
 assert choose(['acoustic', 'remaster']) == 'remaster'
 print('✅ v85: studio/remaster/akoestisch/live voorkeursvolgorde gecontroleerd')
-print('✅ v85: versiebeperkingen, één Search, één toevoeging/120s aanwezig')
+print('✅ v85: versiebeperkingen, één Search, één toevoeging/60s aanwezig')
 print('✅ v85: geen rechtstreekse automatische remove_tracks-aanroepen')
 print('ℹ️ Dit is een offline structuur- en prioriteitstest; geen live Spotify-eindtest.')

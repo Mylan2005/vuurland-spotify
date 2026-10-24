@@ -166,7 +166,7 @@ jobs:
             echo "💾 Sync-status opslaan..."
 
             if [ "$SYNC_EXIT" -eq 75 ]; then
-              echo "⏸️ Spotify-pauze (429, 403 of tijdelijke 5xx) opgeslagen. RadioBox blijft om de 120 seconden gevolgd worden."
+              echo "⏸️ Spotify-pauze (429, 403 of tijdelijke 5xx) opgeslagen. RadioBox blijft om de 60 seconden gevolgd worden."
               if ! push_state; then
                 echo "❌ State kon niet veilig naar GitHub worden gepusht."
                 exit 1
@@ -197,9 +197,9 @@ jobs:
 
             echo "⏳ Wachten op volgende controle..."
 
-            for i in 1 2 3 4; do
+            for i in 1 2; do
               sleep 30
-              echo "⏳ Nog bezig... $((i * 30))/120 seconden"
+              echo "⏳ Nog bezig... $((i * 30))/60 seconden"
             done
           done
 

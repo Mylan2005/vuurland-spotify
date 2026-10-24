@@ -30,7 +30,7 @@ assert cache['__playlist_keys']==[key] and cache['unrelated']=='preserved'
 assert clear({}, 'ISE', 'Ik reis door de nacht (live)') == 0
 # Veiligheidsgrenzen in de volledige bron
 assert 'SPOTIFY_SEARCH_HTTP_LIMIT = 1' in source
-assert 'CHECK_EVERY_SECONDS = 120' in source
+assert 'CHECK_EVERY_SECONDS = 60' in source
 assert 'max_additions_per_round = 1' in source
 assert source.count('v83_clear_resolved_failures(cache, artist, title)') == 6
 print('✅ v83: oude foutstatus selectief opgeschoond; overige state intact')

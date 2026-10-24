@@ -22,7 +22,7 @@ for available, wanted in [(['live', 'ordinary'], 'ordinary'), (['live'], 'live')
     assert min(available, key=order.index) == wanted
 assert 'SPOTIFY_SEARCH_HTTP_LIMIT = 1' in source
 assert 'max_additions_per_round = 1' in source
-assert 'CHECK_EVERY_SECONDS = 120' in source
+assert 'CHECK_EVERY_SECONDS = 60' in source
 assert not any(isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == 'remove_tracks'
                for n in ast.walk(tree))
 assert failed_list({'__v51_radio_failed_searches': {'pinback|||loro':3, 'x':0}}) == [(3, 'pinback|||loro')]
@@ -30,6 +30,6 @@ with tempfile.TemporaryDirectory() as tmp:
     report = make_report(Path(tmp))
     assert 'ontbreekt' in report and 'Geen Spotify-aanvragen' in report
 print('✅ v86: strenge titel-/artiest-/versiegrenzen en terugvalvolgorde aanwezig')
-print('✅ v86: één Search, één toevoeging/120s; geen automatische remove_tracks')
+print('✅ v86: één Search, één toevoeging/60s; geen automatische remove_tracks')
 print('✅ v86: gezondheidsrapport leest ontbrekende state veilig')
 print('ℹ️ Offline guards, geen end-to-end Spotify-test')

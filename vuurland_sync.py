@@ -96,7 +96,7 @@ RADIO_SOURCE_ORDER = (
     "radio_x_chilled", "indie_select", "championship_vinyl",
 )
 
-CHECK_EVERY_SECONDS = 120  # 2 minuten
+CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
 # Actual HTTP attempts (including token retries), reset each sync round.
 SPOTIFY_SEARCH_HTTP_USED = 0
@@ -1497,6 +1497,11 @@ def find_spotify_track(
     elif v88_radio_key == ("jasmine.4.t & phoebe bridgers", "guy fawkes tesco dissociation"):
         artist = "jasmine.4.t"
         print("📝 v91: RadioBox-duetcredit → Spotify-hoofdartiest jasmine.4.t")
+    elif v88_radio_key == ("波卡利甜 pocari sweet", "by the ocean"):
+        # Exacte RadioBox-credit en titel; geen algemene versoepeling.
+        # Spotify zet de Latijnse naam vóór de Chinese naam, aaneengeschreven.
+        artist = "Pocari Sweet波卡利甜"
+        print("📝 Exacte artiestcorrectie: 波卡利甜 Pocari Sweet → Pocari Sweet波卡利甜")
 
     known_artist = " ".join(
         artist.strip().casefold()
