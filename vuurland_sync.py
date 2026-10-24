@@ -1227,6 +1227,59 @@ def v106_language_decision(artist, title):
     return "review"
 
 
+# v113: gecontroleerde niet-Duitse artiesten (exacte naam, geen fuzzy match).
+# Alleen de expliciet genoemde acts: niet op woorddelen of muziekstijl gokken.
+# Een bestaande MusicBrainz-blokkering krijgt altijd voorrang.
+V113_VERIFIED_NON_GERMAN_ARTISTS = {
+    'arctic monkeys': 'GB',
+    'beady eye': 'GB',
+    'biffy clyro': 'GB',
+    'blink-182': 'US',
+    'blonde redhead': 'US',
+    'bombay bicycle club': 'GB',
+    'brian eno': 'GB',
+    'david bowie': 'GB',
+    'david gray': 'GB',
+    "dma's": 'AU',
+    'elliott smith': 'US',
+    'gorillaz': 'GB',
+    "guns n' roses": 'US',
+    'hozier': 'IE',
+    'inhaler': 'IE',
+    'jamie t': 'GB',
+    'lisa gerrard': 'AU',
+    'lorde': 'NZ',
+    'maximo park': 'GB',
+    'metallica': 'US',
+    'mumford & sons': 'GB',
+    'nick cave & the bad seeds': 'AU',
+    'noel gallagher': 'GB',
+    'paolo nutini': 'GB',
+    'paramore': 'US',
+    'peter bjorn and john': 'SE',
+    'pj harvey': 'GB',
+    'r.e.m.': 'US',
+    'red hot chili peppers': 'US',
+    'richard ashcroft': 'GB',
+    'sam fender': 'GB',
+    'slowdive': 'GB',
+    'suede': 'GB',
+    'the beatles': 'GB',
+    'the church': 'AU',
+    'the coral': 'GB',
+    'the cranberries': 'IE',
+    'the cure': 'GB',
+    'the flaming lips': 'US',
+    'the horrors': 'GB',
+    'the jam': 'GB',
+    'the lathums': 'GB',
+    'the maccabees': 'GB',
+    'the rolling stones': 'GB',
+    'the temper trap': 'AU',
+    'the verve': 'GB',
+}
+
+
 # v108: artiesten uit Duitsland blokkeren via MusicBrainz.
 # Dit filtert op artiest-land, NIET op zangtaal. Ook Engelse zang en
 # instrumentale tracks van Duitse artiesten worden dus geblokkeerd.
@@ -1249,6 +1302,14 @@ def v108_artist_country_decision(artist, cache):
     state = cache.setdefault("__v108_musicbrainz_artists", {})
     now = time.time()
     saved = state.get(key)
+    # v113: een bestaande Duitse artiestenblokkering nooit omzeilen.
+    if isinstance(saved, dict) and saved.get("decision") == "block":
+        return "block"
+    # v113: deze exact geïdentificeerde niet-Duitse acts hoeven niet op een
+    # MusicBrainz-storing te wachten. Spotify-match/versie/duplicates blijven
+    # volledig door de bestaande controles gaan.
+    if key in V113_VERIFIED_NON_GERMAN_ARTISTS:
+        return "allow"
     if isinstance(saved, dict) and float(saved.get("until", 0) or 0) > now:
         return saved.get("decision", "unknown")
 
