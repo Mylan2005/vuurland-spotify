@@ -1154,6 +1154,7 @@ def get_championship_vinyl_tracks():
 # Alleen gecontroleerde opnames. Geen automatische taalherkenning op metadata.
 GERMAN_VOCAL_RADIO_TRACKS = frozenset({
     ("tomte", "die schönheit der chance"),
+    ("tomte", "die schonheit der chance"),
 })
 GERMAN_VOCAL_SPOTIFY_IDS = frozenset({
     "1j10uvA0XYl6TNNyY7XqGm",  # Door gebruiker bevestigde Duitse zang.
