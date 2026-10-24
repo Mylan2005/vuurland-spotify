@@ -1153,6 +1153,9 @@ def get_championship_vinyl_tracks():
 # v102: Duitse ZANG uitsluiten, niet Duitse titels of artiesten.
 # Alleen gecontroleerde opnames. Geen automatische taalherkenning op metadata.
 GERMAN_VOCAL_RADIO_TRACKS = frozenset({
+    ("thees uhlmann", "zum laichen und sterben ziehen die lachse den fluss hinauf"),
+    ("thees uhlmann", "zum laichen und sterben ziehen die lachse den fluss hinauf live gf36"),
+
     ("tomte", "die schönheit der chance"),
     ("tomte", "die schonheit der chance"),
 })
