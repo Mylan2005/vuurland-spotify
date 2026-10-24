@@ -35,6 +35,9 @@ PLAYLIST_ID = os.environ.get("VUURLAND_PLAYLIST_ID", "555lFTvdRswe9ukybmOM8T")
 #
 # De normale titelcontrole blijft volledig actief.
 ARTIST_ALIASES = {
+    # v101: officiële artiestcredits die RadioBox onder een andere naam toont.
+    "hybris": ["Postiljonen"],
+    "xymox": ["Clan of Xymox"],
     # Historische artiestennaam: één artiest, twee officiële catalogusnamen.
     "manitoba": ["Caribou"],
     "the indien": [
@@ -1348,6 +1351,48 @@ def v80_failure_reason(items, artist, title):
         return 'artist_credit_or_search_ranking'
     return 'title_version_or_ambiguity'
 
+# v101: bevestigde catalogus-ID's blijven locators: GET + dezelfde matcher,
+# nooit blind toevoegen. Deze exacte bronregels verbruiken GEEN Spotify Search.
+V101_VERIFIED_CATALOG_TRACKS = {
+    ("hybris", "how can our love be blind"): "0tAO41U8SChmfAZaehIhuy",
+    ("noah & the whale", "five years time"): "12je8giC2S9smUHJ81tpiL",
+    ("the kooks", "naive (live for radio x)"): "7BHPGtpuuWWsvE7cCaMuEU",
+    ("zbigniew preisner & lisa gerrard", "believe in yourself"): "13w23mzuktOwHzdKqtOYYV",
+    ("hybris", "blood flow"): "31Rl9OwQxiRk2T66rqfJfJ",
+    ("josefin öhrn & the liberation", "rushing through my mind (mang dynasty extended version)"): "2O5iXIhZbnusoU8au9gast",
+    ("the flaming lips", "do you realise?"): "1GjpSlPPKzrCFD0n8Zjhp3",
+    ("xymox", "imagination"): "6YVKkyrX3PkBcr5AaxrCWw",
+    ("anna domino", "rhythm"): "3599axkmRnbvIAGOzV0uch",
+    ("giovanni battista pergolesi", "stabat mater dolorosa"): "7LcypCVM2DeybABIv1Ydaa",
+}
+
+# Een door de gebruiker expliciet uitgesloten opname wordt niet gezocht,
+# niet uit cache hersteld en niet aan de playlist toegevoegd.
+V101_EXCLUDED_RADIO_TRACKS = {
+    ("nick cave", "evil ('silver alert' remix feat. matt berninger)"),
+    ("kelley polar", "entropy reigns (pearson and usher's second law dynamix)"),
+}
+
+
+def v101_radio_key(artist, title):
+    return (" ".join(str(artist).casefold().split()),
+            " ".join(str(title).casefold().split()))
+
+
+def v101_radio_x_studio_title(title):
+    """Enkel Radio X-live-tag is broncontext, geen gevraagde live-opname."""
+    return re.sub(r"\s*\(\s*live\s+for\s+radio\s+x\s*\)\s*$",
+                  "", str(title), flags=re.I).strip()
+
+
+def v101_safe_title_spelling(title):
+    """Alleen exacte, algemeen bekende orthografische varianten."""
+    text = str(title).casefold().strip()
+    text = re.sub(r"[?!]+$", "", text).strip()
+    text = re.sub(r"\brealise\b", "realize", text)
+    return text
+
+
 # v81: gecontroleerde cataloguslocators bij een Spotify Search-indexprobleem.
 # De track-ID is een LOCATOR, geen gegarandeerde match. Via GET /tracks/{id}
 # doorloopt de kandidaat dezelfde artiest-, titel-, regio- en versietoetsen.
@@ -1386,7 +1431,8 @@ V81_VERIFIED_CATALOG_TRACKS = {
 def v81_catalog_locator(artist, title):
     key = (" ".join(str(artist).casefold().split()),
            " ".join(str(title).casefold().split()))
-    return V81_VERIFIED_CATALOG_TRACKS.get(key)
+    return (V101_VERIFIED_CATALOG_TRACKS.get(key)
+            or V81_VERIFIED_CATALOG_TRACKS.get(key))
 
 
 # === v82: veilige cataloguskennis en uitlegbare zoekstrategie ===
@@ -1476,6 +1522,16 @@ def find_spotify_track(
     #
     # Deze controle gebeurt vóór Spotify Search zodat
     # bekende mappings ook werken tijdens een Search-block.
+
+    v101_original_key = v101_radio_key(artist, title)
+    if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
+        print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
+        return None
+    # Alleen expliciete Radio X-sessietag mag als gewone studio-opname gelden.
+    # Alle andere live/akoestische/remix-specificaties blijven streng.
+    if re.search(r"\(\s*live\s+for\s+radio\s+x\s*\)\s*$", str(title), re.I):
+        title = v101_radio_x_studio_title(title)
+        print(f"📝 v101: Radio X-sessietag genegeerd; studio-opname: {artist} — {title}")
 
     # v87 batch-15: alleen deze exacte RadioBox-credit, bevestigd door gebruiker.
     # War nam "Summer" op; dit is geen algemene Eric Burdon/War-alias.
@@ -1749,7 +1805,7 @@ def find_spotify_track(
         (known_artist, known_title)
     )
 
-    if known_uri:
+    if known_uri and v101_original_key not in V101_VERIFIED_CATALOG_TRACKS:
         return known_uri
 
     if time.time() < SPOTIFY_SEARCH_BLOCKED_UNTIL:
@@ -2279,7 +2335,7 @@ def find_spotify_track(
     # v81: exact geverifieerde cataloguslocator in plaats van nog een
     # vruchteloze Search. Maximaal één Spotify-opzoekactie per ronde;
     # de gemeenschappelijke kandidaatvalidatie hieronder blijft intact.
-    catalog_id = v81_catalog_locator(*v88_radio_key) if v88_radio_key in {("casualties of cool", "flight"), ("manassas", "colorado"), ("jasmine.4.t & phoebe bridgers", "guy fawkes tesco dissociation")} else v81_catalog_locator(artist, title)
+    catalog_id = v81_catalog_locator(*v101_original_key) or (v81_catalog_locator(*v88_radio_key) if v88_radio_key in {("casualties of cool", "flight"), ("manassas", "colorado"), ("jasmine.4.t & phoebe bridgers", "guy fawkes tesco dissociation")} else v81_catalog_locator(artist, title))
     catalog_reason = 'v81' if catalog_id else None
     if not catalog_id:
         catalog_id = v82_confirmed_locator(load_cache(), artist, title)
@@ -4203,6 +4259,14 @@ def find_spotify_track(
              or v51_descriptive_parenthesis(spotify_title, wanted_title_for_match))
         )
         if v51_descriptive_title_match:
+            structural_title_match = True
+
+        # v101: Britse/Amerikaanse schrijfwijze + eindinterpunctie.
+        # Geen substring- of fuzzy-ontheffing: volledige kerntitel moet gelijk
+        # zijn EN de hoofdartiest moet al exact gevalideerd zijn.
+        if (primary_artist_exact and
+                v101_safe_title_spelling(wanted_title_base_for_match)
+                == v101_safe_title_spelling(spotify_title_base)):
             structural_title_match = True
 
         # v51: klassieke catalogi draaien werknaam en deel om en noemen
@@ -6825,6 +6889,17 @@ def sync():
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
             print(f'🗃️ Radio: na vijf mislukte Spotify-zoekacties geparkeerd: {artist} - {title}')
+            continue
+
+        # v101: harde uitsluiting vóór cache, archiefkoppeling en Spotify Search.
+        # Ook oudere positieve cachevermeldingen mogen dit niet omzeilen.
+        if v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS:
+            print(f"⏭️ v101: expliciet uitgesloten: {artist} - {title}")
+            live_queue.pop(0)
+            seen.add(cache_key)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_seen(seen)
+            save_cache(cache)
             continue
 
         # ---------------------------------
