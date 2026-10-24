@@ -1313,12 +1313,13 @@ def v108_artist_country_decision(artist, cache):
     if isinstance(saved, dict) and float(saved.get("until", 0) or 0) > now:
         return saved.get("decision", "unknown")
 
-    # v115: tijdens een MusicBrainz-storing geen wachtrijblokkade.
-    # Bestaande Duitse 'block'-beslissingen zijn hierboven al afgehandeld.
+    # v117: MusicBrainz-cooldown houdt Spotify niet tegen.
+    # Geen MusicBrainz HTTP-aanvraag tijdens cooldown (ook na HTTP 429).
+    # Bekende Duitse artiesten zijn hierboven reeds onvoorwaardelijk geblokkeerd.
+    # LET OP: onbekende Duitse herkomst kan daardoor tijdelijk passeren.
     next_at = float(cache.get("__v108_musicbrainz_next_lookup_at", 0) or 0)
-    outage_until = float(cache.get("__v115_musicbrainz_outage_until", 0) or 0)
     if now < next_at:
-        return "unknown" if now < outage_until else "later"
+        return "unknown"
 
     # Bewaar de cooldown VÓÓR de HTTP-call; ook een fout telt als poging.
     cache["__v108_musicbrainz_next_lookup_at"] = now + 60
@@ -1337,11 +1338,9 @@ def v108_artist_country_decision(artist, cache):
         response.raise_for_status()
         results = response.json().get("artists", [])
     except (requests.RequestException, ValueError) as exc:
-        # v112: adaptieve MusicBrainz-cooldown. Een incidentele netwerkfout
-        # hoeft niet alle bronnen vijf minuten stil te leggen. Een HTTP 429/503
-        # (rate limit of serveroverbelasting) blijft WEL minstens 5 minuten geblokkeerd en respecteert
-        # indien aanwezig Retry-After. Geen enkele artiest wordt hierdoor
-        # zonder herkomstcontrole toegelaten.
+        # v117: adaptieve MusicBrainz-cooldown; respecteer HTTP 429/503
+        # en Retry-After, zonder onbekende artiesten uit Spotify te houden.
+        # Bij onzekere herkomst is Duitse afkomst niet gegarandeerd uitgesloten.
         # v112: adaptieve MusicBrainz-cooldown
         response_error = getattr(exc, "response", None)
         status = getattr(response_error, "status_code", None)
@@ -1357,14 +1356,15 @@ def v108_artist_country_decision(artist, cache):
               f"volgende poging na minstens {delay} seconden.")
         retry_at = time.time() + delay
         cache["__v108_musicbrainz_next_lookup_at"] = retry_at
-        # HTTP 503/netwerkstoring: tijdelijke 'unknown' i.p.v. wachtrijstop.
-        # HTTP 429 blijft wachten om rate limits te respecteren.
+        # v117: HTTP 429 blijft volledig gerespecteerd: niet opnieuw
+        # MusicBrainz raadplegen vóór retry_at. De radioqueue gaat WEL door.
+        # Ook bij 503/netwerkfouten geldt dit. Bekende DE-blokkades blijven.
         if status != 429:
             cache["__v115_musicbrainz_outage_until"] = retry_at
-            print("⚠️ v115: MusicBrainz-storing; onbekende herkomst gaat tijdelijk "
-                  "door. Duitse herkomst is dan NIET gegarandeerd uitgesloten.")
+        print("⚠️ v117: MusicBrainz-cooldown actief; onbekende artiesten "
+              "gaan door naar Spotify. Duitse herkomst is niet gegarandeerd uitgesloten.")
         save_cache(cache)
-        return "later" if status == 429 else "unknown"
+        return "unknown"
 
     matches = [r for r in results if norm(r.get("name", "")) == key
                and int(r.get("score", 0) or 0) >= 95]
