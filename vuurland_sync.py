@@ -95,13 +95,12 @@ CHAMPIONSHIP_VINYL_SOURCE_URL = "https://onlineradiobox.com/de/championshipvinyl
 DARK_EDGE_SOURCE_URL = "https://onlineradiobox.com/ro/darkedge/playlist/?lang=nl"
 DREAMPOP_SOURCE_URL = "https://onlineradiobox.com/de/dreampop/playlist/?lang=nl"
 RADIO_INDIE_ALTERNATIVE_SOURCE_URL = "https://onlineradiobox.com/de/31alternative/playlist/?lang=nl"
-QCINDIE_SOURCE_URL = "https://onlineradiobox.com/ca/qcindiecom/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
 RADIO_SOURCE_ORDER = (
     "vuurland", "mellow_mix", "big_sonic_heaven",
     "radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
-    "dreampop_radio", "radio_indie_alternative", "qcindie",
+    "dreampop_radio", "radio_indie_alternative",
 )
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
@@ -1182,34 +1181,6 @@ def get_radio_indie_alternative_tracks():
             "alternative radio - jingle2",
         },
     )
-
-
-# v123: Alleen exact bevestigde QCIndie-stationidentificatie en programma's.
-# Dit is GEEN artiesten- of genreblacklist. Alle echte nummers blijven toegelaten.
-QCINDIE_NONMUSIC_ENTRIES = frozenset({
-    "qcindie.com - regina's alternative",
-    "qcindie - regina music minute",
-    "qcindie - what's new on q",
-    "qcindie - total knock out experience hour 1",
-    "qcindie - total knock out experience hour 2",
-})
-
-
-def qcindie_is_nonmusic(artist, title):
-    entry = f"{str(artist or '').strip()} - {str(title or '').strip()}"
-    return " ".join(entry.casefold().split()) in QCINDIE_NONMUSIC_ENTRIES
-
-
-def get_qcindie_tracks():
-    # De exacte jingles worden al bij RadioBox-inlezing genegeerd.
-    tracks = get_radiobox_tracks(
-        QCINDIE_SOURCE_URL,
-        "QCIndie - Regina's Alternative",
-        QCINDIE_NONMUSIC_ENTRIES,
-    )
-    # Extra veiligheid bij afwijkende RadioBox-HTML.
-    return [(artist, title) for artist, title in tracks
-            if not qcindie_is_nonmusic(artist, title)]
 
 
 # v119: Duitse numMERTITELS, niet Duitse artiesten, blokkeren.
@@ -5640,7 +5611,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         old = snapshots.get(sid)
         if not isinstance(old, list):
             if sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
-                       "dreampop_radio", "radio_indie_alternative", "qcindie"):
+                       "dreampop_radio", "radio_indie_alternative"):
                 # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
                 arrivals = []
                 print(f"🕒 v96 {source['name']}: nulmeting; geen oude uitzendingen ingehaald.")
@@ -6195,12 +6166,6 @@ def sync():
             "name": "Radio Indie Alternative",
             "tracks": get_radio_indie_alternative_tracks(),
             "cache_key": "__last_radio_key_radio_indie_alternative",
-        },
-        {
-            "id": "qcindie",
-            "name": "QCIndie - Regina's Alternative",
-            "tracks": get_qcindie_tracks(),
-            "cache_key": "__last_radio_key_qcindie",
         },
     ]
 
@@ -6961,13 +6926,6 @@ def sync():
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
 
-        # v123: bestaande QCIndie-jingles in de wachtrij nooit Spotify-zoeken.
-        if item.get("source") == "qcindie" and qcindie_is_nonmusic(artist, title):
-            print(f"⏭️ QCIndie niet-muziek overgeslagen: {artist} — {title}")
-            live_queue.pop(0)
-            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-            save_cache(cache)
-            continue
 
         # v119: titelcheck vóór elke Spotify Search, onafhankelijk van artiestenland.
         if v119_is_german_title(title):
