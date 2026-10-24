@@ -93,11 +93,14 @@ RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playli
 INDIE_SELECT_SOURCE_URL = "https://onlineradiobox.com/de/indieselect/playlist/?lang=nl"
 CHAMPIONSHIP_VINYL_SOURCE_URL = "https://onlineradiobox.com/de/championshipvinyl/playlist/?lang=nl"
 DARK_EDGE_SOURCE_URL = "https://onlineradiobox.com/ro/darkedge/playlist/?lang=nl"
+DREAMPOP_SOURCE_URL = "https://onlineradiobox.com/de/dreampop/playlist/?lang=nl"
+RADIO_INDIE_ALTERNATIVE_SOURCE_URL = "https://onlineradiobox.com/de/31alternative/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
 RADIO_SOURCE_ORDER = (
     "vuurland", "mellow_mix", "big_sonic_heaven",
     "radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
+    "dreampop_radio", "radio_indie_alternative",
 )
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
@@ -1158,6 +1161,25 @@ def get_dark_edge_tracks():
         DARK_EDGE_SOURCE_URL,
         "Dark Edge Radio",
         {"dark edge radio - soft alternative/indie music"},
+    )
+
+
+def get_dreampop_radio_tracks():
+    return get_radiobox_tracks(
+        DREAMPOP_SOURCE_URL,
+        "Dreampop Radio",
+    )
+
+
+def get_radio_indie_alternative_tracks():
+    # Exacte zenderjingles blokkeren vóór de Spotify-matcher en wachtrij.
+    return get_radiobox_tracks(
+        RADIO_INDIE_ALTERNATIVE_SOURCE_URL,
+        "Radio Indie Alternative",
+        {
+            "alternative radio - jingle1",
+            "alternative radio - jingle2",
+        },
     )
 
 
@@ -5588,7 +5610,8 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         current = [(_v47_key(a, t), a, t) for a, t in tracks]
         old = snapshots.get(sid)
         if not isinstance(old, list):
-            if sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge"):
+            if sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
+                       "dreampop_radio", "radio_indie_alternative"):
                 # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
                 arrivals = []
                 print(f"🕒 v96 {source['name']}: nulmeting; geen oude uitzendingen ingehaald.")
@@ -6131,6 +6154,18 @@ def sync():
             "name": "Dark Edge Radio",
             "tracks": get_dark_edge_tracks(),
             "cache_key": "__last_radio_key_dark_edge",
+        },
+        {
+            "id": "dreampop_radio",
+            "name": "Dreampop Radio",
+            "tracks": get_dreampop_radio_tracks(),
+            "cache_key": "__last_radio_key_dreampop_radio",
+        },
+        {
+            "id": "radio_indie_alternative",
+            "name": "Radio Indie Alternative",
+            "tracks": get_radio_indie_alternative_tracks(),
+            "cache_key": "__last_radio_key_radio_indie_alternative",
         },
     ]
 
@@ -6756,12 +6791,12 @@ def sync():
     duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
 
     # v120: gezamenlijke FIFO zonder bronbeurtrol.
-    # Alle zeven RadioBox-bronnen blijven iedere ronde nieuwe titels achteraan
+    # Alle negen RadioBox-bronnen blijven iedere ronde nieuwe titels achteraan
     # toevoegen. De bestaande persistente _v116_fifo_seq blijft leidend.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 v120: 7 bronnen samen, één FIFO, geen beurtrol.")
+    print("🔀 v120: 9 bronnen samen, één FIFO, geen beurtrol.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
@@ -6825,7 +6860,7 @@ def sync():
         waiting_for_retry = False
         now = time.time()
 
-        # v120: sorteer ALLE zeven bronnen op hun onveranderlijke FIFO-nummer.
+        # v120: sorteer ALLE negen bronnen op hun onveranderlijke FIFO-nummer.
         # Tijdelijke cooldowns en reeds geprobeerde items worden overgeslagen,
         # maar blijven bewaard voor latere sync-rondes.
         candidates = sorted(
