@@ -1302,6 +1302,12 @@ def v108_artist_country_decision(artist, cache):
     state = cache.setdefault("__v108_musicbrainz_artists", {})
     now = time.time()
     saved = state.get(key)
+    # v118: onbekende artiestenherkomst is GEEN toestemming.
+    # Bevestigde Duitse band; normalisatie maakt Groß/Gross schrijfvarianten gelijk
+    # waar de umlaut verschilt. Ook vóór de MusicBrainz-cooldown blokkeren.
+    if key in {"großstadtgefluster", "grossstadtgefluster", "grossstadtgefluester",
+               "großstadtgefluester"}:
+        return "block"
     # v113: een bestaande Duitse artiestenblokkering nooit omzeilen.
     if isinstance(saved, dict) and saved.get("decision") == "block":
         return "block"
@@ -1313,10 +1319,8 @@ def v108_artist_country_decision(artist, cache):
     if isinstance(saved, dict) and float(saved.get("until", 0) or 0) > now:
         return saved.get("decision", "unknown")
 
-    # v117: MusicBrainz-cooldown houdt Spotify niet tegen.
-    # Geen MusicBrainz HTTP-aanvraag tijdens cooldown (ook na HTTP 429).
-    # Bekende Duitse artiesten zijn hierboven reeds onvoorwaardelijk geblokkeerd.
-    # LET OP: onbekende Duitse herkomst kan daardoor tijdelijk passeren.
+    # v118: tijdens MusicBrainz-cooldown geen nieuwe MusicBrainz HTTP-call.
+    # 'unknown' wordt door de aanroeper veilig in de wachtrij gehouden.
     next_at = float(cache.get("__v108_musicbrainz_next_lookup_at", 0) or 0)
     if now < next_at:
         return "unknown"
@@ -1361,8 +1365,8 @@ def v108_artist_country_decision(artist, cache):
         # Ook bij 503/netwerkfouten geldt dit. Bekende DE-blokkades blijven.
         if status != 429:
             cache["__v115_musicbrainz_outage_until"] = retry_at
-        print("⚠️ v117: MusicBrainz-cooldown actief; onbekende artiesten "
-              "gaan door naar Spotify. Duitse herkomst is niet gegarandeerd uitgesloten.")
+        print("⏳ v118: MusicBrainz-cooldown actief; onbekende artiesten "
+              "blijven veilig in de wachtrij en gaan NIET naar Spotify.")
         save_cache(cache)
         return "unknown"
 
@@ -6875,8 +6879,9 @@ def sync():
             save_cache(cache)
             continue
 
-        # v108: Duitse artiesten vóór elke Spotify Search tegenhouden.
-        # Bij MusicBrainz-storing wachten; bij onbekende herkomst doorlaten.
+        # v118: Duitse artiesten vóór elke Spotify Search tegenhouden.
+        # Alleen expliciet bevestigde niet-Duitse herkomst mag door.
+        # Onbekend, ambigu, storing of cooldown => bewaren en wachten.
         country_decision = v108_artist_country_decision(artist, cache)
         if country_decision == "block":
             print(f"⏭️ Duitse artiest automatisch geblokkeerd: {artist} — {title}")
@@ -6884,16 +6889,16 @@ def sync():
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
             continue
-        if country_decision == "later":
-            if not locals().get("_v110_country_wait_reported", False):
-                print("⏳ MusicBrainz wacht/cooldown: herkomstcontroles worden later hervat; "
-                      "nummers blijven in de wachtrij.")
-                _v110_country_wait_reported = True
+        # v118: fail-closed. Alleen 'allow' bereikt Spotify Search.
+        # Ook 'unknown' uit v117 mag nooit door naar Spotify.
+        if country_decision != "allow":
+            if not locals().get("_v118_country_wait_reported", False):
+                print("⏳ v118 veilige herkomstcontrole: onbekend/cooldown; "
+                      "nummer blijft in wachtrij, andere bronnen krijgen een kans.")
+                _v118_country_wait_reported = True
             live_queue.append(live_queue.pop(0))
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             continue
-        if country_decision == "unknown":
-            print(f"ℹ️ Artiestenland onzeker; bestaande regels blijven gelden: {artist}")
 
         if is_confirmed_german_vocal(artist, title):
             print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
