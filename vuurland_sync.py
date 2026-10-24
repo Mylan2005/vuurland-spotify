@@ -1150,38 +1150,23 @@ def get_championship_vinyl_tracks():
     return get_radiobox_tracks(CHAMPIONSHIP_VINYL_SOURCE_URL, "Championship Vinyl")
 
 
-# Alleen duidelijke Duitstalige titels weren; niet alle Duitse artiesten.
-# De taal van de zang kan niet betrouwbaar uit alleen RadioBox-metadata worden
-# vastgesteld. Engelstalige en instrumentale nummers blijven toegelaten.
-_GERMAN_STRONG = frozenset({
-    "ich", "mich", "dich", "dir", "nicht", "nichts", "meine", "meiner",
-    "meinem", "meinen", "deine", "deiner", "euch", "unsere", "unser",
-    "niemals", "immer", "gestern", "heute", "schön", "schöne",
-    "schönheit", "liebe", "liebes", "herzen", "nächte", "stücke",
-    "weihnachten", "zerschmettert", "begrab", "begraben", "schickt",
-    "transsylvanische", "verwandte", "sonnendeck", "wunder",
+# v102: Duitse ZANG uitsluiten, niet Duitse titels of artiesten.
+# Alleen gecontroleerde opnames. Geen automatische taalherkenning op metadata.
+GERMAN_VOCAL_RADIO_TRACKS = frozenset({
+    ("tomte", "die schönheit der chance"),
 })
-_GERMAN_COMMON = frozenset({
-    "die", "der", "das", "dem", "den", "des", "ein", "eine", "und",
-    "ist", "im", "am", "vom", "von", "zu", "zur", "zum", "für", "mit",
-    "auf", "aus", "bei", "über", "unter", "als", "auch", "noch",
-    "wir", "sie", "du", "er", "es", "was", "wer", "wo", "wie",
+GERMAN_VOCAL_SPOTIFY_IDS = frozenset({
+    "1j10uvA0XYl6TNNyY7XqGm",  # Door gebruiker bevestigde Duitse zang.
 })
 
 
-def is_german_language_title(title):
-    """Conservatieve titelherkenning; geen gok op basis van artiest/herkomst."""
-    raw = str(title or "").casefold()
-    # Versie-informatie (bijv. Live/Remix) is geen taalsignaal.
-    raw = re.sub(r"\s*\((?:live|acoustic|radio x studio session|remix|edit)[^)]*\)\s*$", "", raw)
-    words = re.findall(r"[^\W\d_]+", raw, flags=re.UNICODE)
-    strong = sum(w in _GERMAN_STRONG for w in words)
-    common = sum(w in _GERMAN_COMMON for w in words)
-    unmistakable = {"ich", "mich", "dich", "dir", "nicht", "zerschmettert",
-                    "begrab", "transsylvanische", "weihnachten", "sonnendeck"}
-    return (any(w in unmistakable for w in words)
-            or strong >= 2 or (strong >= 1 and common >= 1)
-            or (any(c in raw for c in "äöüß") and (strong >= 1 or common >= 1)))
+def is_confirmed_german_vocal(artist, title):
+    return (" ".join(str(artist).casefold().split()),
+            " ".join(str(title).casefold().split())) in GERMAN_VOCAL_RADIO_TRACKS
+
+
+def is_blocked_german_spotify_uri(uri):
+    return str(uri or "").rsplit(":", 1)[-1] in GERMAN_VOCAL_SPOTIFY_IDS
 
 
 # =========================
@@ -4733,6 +4718,11 @@ def add_tracks(
     if not uris:
         return
 
+    # Laatste beveiliging: ook cache/locator mag geblokkeerde opname niet toevoegen.
+    blocked = [uri for uri in uris if is_blocked_german_spotify_uri(uri)]
+    if blocked:
+        raise RuntimeError("v102: geblokkeerde Duitstalige Spotify-opname; niet toegevoegd.")
+
     for i in range(
         0,
         len(uris),
@@ -5341,8 +5331,8 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
             if key in seen_this_scan:
                 continue
             seen_this_scan.add(key)
-            if is_german_language_title(title):
-                print(f"⏭️ Duidelijk Duitstalige titel overgeslagen: {artist} — {title}")
+            if is_confirmed_german_vocal(artist, title):
+                print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
                 continue
             if is_interview_fragment(title) or key in known_queue or key in seen:
                 continue
@@ -6065,7 +6055,7 @@ def sync():
     # v69: alleen RadioBox; daarnaast duidelijk Duitstalige titels weren.
     live_queue = [x for x in live_queue if isinstance(x, dict) and
                   x.get("source") in RADIO_SOURCE_ORDER and
-                  not is_german_language_title(x.get("title", ""))]
+                  not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", ""))]
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
 
@@ -6568,8 +6558,8 @@ def sync():
         artist = item["artist"]
         title = item["title"]
 
-        if is_german_language_title(title):
-            print(f"⏭️ Duidelijk Duitstalige titel overgeslagen: {artist} — {title}")
+        if is_confirmed_german_vocal(artist, title):
+            print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
             live_queue.pop(0)
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
@@ -7069,6 +7059,14 @@ def sync():
                 f"{searches_used}/{MAX_SEARCHES_PER_RUN}"
             )
 
+            continue
+
+        # v102: voorkom toevoegen via Spotify-cache of een cataloguslocator.
+        if is_blocked_german_spotify_uri(uri):
+            print(f"⏭️ v102: Duitstalige Spotify-opname geblokkeerd: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
             continue
 
         # ---------------------------------
