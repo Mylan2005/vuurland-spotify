@@ -1313,9 +1313,12 @@ def v108_artist_country_decision(artist, cache):
     if isinstance(saved, dict) and float(saved.get("until", 0) or 0) > now:
         return saved.get("decision", "unknown")
 
+    # v115: tijdens een MusicBrainz-storing geen wachtrijblokkade.
+    # Bestaande Duitse 'block'-beslissingen zijn hierboven al afgehandeld.
     next_at = float(cache.get("__v108_musicbrainz_next_lookup_at", 0) or 0)
+    outage_until = float(cache.get("__v115_musicbrainz_outage_until", 0) or 0)
     if now < next_at:
-        return "later"
+        return "unknown" if now < outage_until else "later"
 
     # Bewaar de cooldown VÓÓR de HTTP-call; ook een fout telt als poging.
     cache["__v108_musicbrainz_next_lookup_at"] = now + 60
@@ -1352,9 +1355,16 @@ def v108_artist_country_decision(artist, cache):
         print(f"⚠️ MusicBrainz tijdelijk onbereikbaar voor {artist_name}: "
               f"{type(exc).__name__} (HTTP {status or 'onbekend'}); "
               f"volgende poging na minstens {delay} seconden.")
-        cache["__v108_musicbrainz_next_lookup_at"] = time.time() + delay
+        retry_at = time.time() + delay
+        cache["__v108_musicbrainz_next_lookup_at"] = retry_at
+        # HTTP 503/netwerkstoring: tijdelijke 'unknown' i.p.v. wachtrijstop.
+        # HTTP 429 blijft wachten om rate limits te respecteren.
+        if status != 429:
+            cache["__v115_musicbrainz_outage_until"] = retry_at
+            print("⚠️ v115: MusicBrainz-storing; onbekende herkomst gaat tijdelijk "
+                  "door. Duitse herkomst is dan NIET gegarandeerd uitgesloten.")
         save_cache(cache)
-        return "later"
+        return "later" if status == 429 else "unknown"
 
     matches = [r for r in results if norm(r.get("name", "")) == key
                and int(r.get("score", 0) or 0) >= 95]
