@@ -8194,6 +8194,7 @@
       "gloss|||rosary",
       "grazer|||when you looked at me",
       "green star|||lush",
+      "gvth dvddy|||who knows how it ends",
       "hazel english|||conversations",
       "hazel english|||gimme",
       "held|||standby",
@@ -8334,6 +8335,7 @@
       "brian jonestown massacre|||she made me",
       "catherine wheel|||ferment",
       "catherine wheel|||painful thing",
+      "catherine wheel|||shallow",
       "catherine wheel|||shocking",
       "chapterhouse|||breather",
       "chapterhouse|||guilt",
@@ -8799,6 +8801,12 @@
       "title": "Fall Away",
       "source": "big_sonic_heaven",
       "failed_at": 1792940208
+    },
+    "errors|||the village": {
+      "artist": "Errors",
+      "title": "The Village",
+      "source": "indie_select",
+      "failed_at": 1792942884
     }
   },
   "__v51_radio_release_pending": [],
@@ -41798,7 +41806,8 @@
     "state of grace|||diamonds in the sand": 1,
     "the kissaway trail|||sarah jevo": 1,
     "memphis|||love comes quickly": 1,
-    "my brilliant beast|||fall away": 1
+    "my brilliant beast|||fall away": 1,
+    "errors|||the village": 1
   },
   "__match_v35__marble sounds|||leave a light on": "spotify:track:7d0VYHsLGjonizpQboVOL2",
   "__match_v35__dan mangan|||diminishing returns": "spotify:track:6QmNuanzOQNCgV2uhpQFL7",
@@ -64463,6 +64472,7 @@
       "newdad|||nosebleed"
     ],
     "dkfm_shoegaze": [
+      "gvth dvddy|||who knows how it ends",
       "phantom handshakes|||for you",
       "alison's halo|||stuck",
       "just penelope|||after",
@@ -64561,10 +64571,10 @@
       "shades of violette|||kinetic",
       "otsyuda|||honey",
       "soft siren|||california heatwave",
-      "atmos bloom|||thorns",
-      "rxghost|||subway"
+      "atmos bloom|||thorns"
     ],
     "dkfm_classic": [
+      "catherine wheel|||shallow",
       "house of love|||someone's got to love you",
       "innocence mission|||go",
       "the charlottes|||venus album version",
@@ -64663,8 +64673,7 @@
       "bailterspace|||get lost",
       "chimera|||2 sunny",
       "adorable|||i'll be your saint",
-      "seefeel|||filter dub",
-      "whimsical|||masterpiece"
+      "seefeel|||filter dub"
     ]
   },
   "__match_v35__beck|||ride lonesome": "spotify:track:4ZNjYG7CW4ogsOtIB36h1j",
@@ -67685,7 +67694,7 @@
   "__match_v35__the flaming lips|||do you realise?": "spotify:track:1GjpSlPPKzrCFD0n8Zjhp3",
   "__match_v35__hexes & ohs|||h-h-highschool": "spotify:track:6JLvv6xOazGDQHn9P8ast3",
   "__match_v35__elton john|||tiny dancer": "spotify:track:2TVxnKdb3tqe1nhQWwwZCO",
-  "__v116_fifo_next_sequence": 2267,
+  "__v116_fifo_next_sequence": 2269,
   "__match_v35__good posture|||last time": "spotify:track:2wlqQfTm8x7RY0WldjFmT3",
   "__match_v35__billy strings|||gild the lily": "spotify:track:181YsWsKwhTmoHYZ4xtiuZ",
   "__match_v35__new order|||every little counts": "spotify:track:3uJmmY9zBGV3ONk3KiMfWY",
@@ -68269,7 +68278,7 @@
   "__match_v35__the dream academy|||please please please let me get what i want": "spotify:track:0smzrlYiBiecxfG8p5QDcQ",
   "__match_v35__the smiths|||how soon is now?": "spotify:track:0Nmu7zxpMYNJ3N9YDY6VEN",
   "__match_v35__hozier|||eat your young": "spotify:track:3hbKcj640iYmPQgecainOr",
-  "__last_radio_key_dkfm_shoegaze": "phantom handshakes|||for you",
+  "__last_radio_key_dkfm_shoegaze": "gvth dvddy|||who knows how it ends",
   "__match_v35__hot chip|||need you now": "spotify:track:5MRYyecW552BEq2nRBfIQX",
   "__match_v35__paula cole|||where have all the cowboys gone?": "spotify:track:2ck13qfgRZ1msyEJlDqzvk",
   "__match_v35__the knocks feat foster the people|||ride or die": "spotify:track:38Zr5Q5O5o6CYaioIRHSqL",
@@ -68319,7 +68328,7 @@
   "__match_v35__joan armatrading|||love and affection": "spotify:track:6Mnne5V9ZifNID59dswUcZ",
   "__match_v35__liam gallagher|||once": "spotify:track:34fv3psKQOOwWZBRxoIF4I",
   "__match_v35__boy|||this is the beginning": "spotify:track:36QX8n9GdBgmgMGoR8MpHd",
-  "__last_radio_key_dkfm_classic": "house of love|||someone's got to love you",
+  "__last_radio_key_dkfm_classic": "catherine wheel|||shallow",
   "__match_v35__junip|||always": "spotify:track:5kbjKLy1Lc03BAuAHDDIzG",
   "__match_v35__mt si|||911": "spotify:track:4JoQ83hGXh5qdDUYZ8aAfZ",
   "__match_v35__balthazar|||losers": "spotify:track:6otUjBoNrp27EubqsoYGQx",
@@ -68468,5 +68477,6 @@
   "__match_v35__scouting for girls|||i wish i was james bond": "spotify:track:5sCu5ASRG4nDhfthTFeGSN",
   "__match_v35__velour 100|||1863": "spotify:track:3Oh6Ealf4HsgV3XMAJVji3",
   "__match_v35__new order|||restless": "spotify:track:4yMAaPNlGMKNRO35hWBLtn",
-  "__match_v35__red hot chili peppers|||soul to squeeze": "spotify:track:3arKRnq9OUd7yq6LRwVW8I"
+  "__match_v35__red hot chili peppers|||soul to squeeze": "spotify:track:3arKRnq9OUd7yq6LRwVW8I",
+  "__not_found_v35__errors|||the village": 1792942884
 }
