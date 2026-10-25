@@ -6241,6 +6241,29 @@ def v116_stamp_fifo(live_queue, cache):
     return stamped
 
 
+
+# v131: expliciete gebruikersvoorkeur; alleen CJK-schrift herkennen, geen taalgok.
+def v131_block_nonlatin_east_asian(artist, title):
+    # Han (Chinese karakters / Kanji), Hiragana, Katakana, Hangul, Bopomofo.
+    # Andere alfabetten en Latijnse letters met accenten blijven behouden.
+    for character in str(artist or "") + str(title or ""):
+        cp = ord(character)
+        if (0x3400 <= cp <= 0x9FFF or
+            0xF900 <= cp <= 0xFAFF or
+            0x20000 <= cp <= 0x3134F or
+            0x3040 <= cp <= 0x30FF or
+            0x31F0 <= cp <= 0x31FF or
+            0xFF66 <= cp <= 0xFF9F or
+            0xAC00 <= cp <= 0xD7AF or
+            0x1100 <= cp <= 0x11FF or
+            0x3130 <= cp <= 0x318F or
+            0xA960 <= cp <= 0xA97F or
+            0xD7B0 <= cp <= 0xD7FF or
+            0x3100 <= cp <= 0x312F or
+            0x31A0 <= cp <= 0x31BF):
+            return True
+    return False
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -6589,6 +6612,13 @@ def sync():
 
     # v119: verwijder Duitse TITELS uit de bestaande wachtrij; geen Spotify-mutatie.
     # Duitse artiesten met niet-Duitse titels blijven behouden.
+    # v131: bestaande en nieuw toegevoegde FIFO-items vóór Spotify opschonen.
+    _v131_before = len(live_queue)
+    live_queue = [x for x in live_queue if not (
+        isinstance(x, dict) and v131_block_nonlatin_east_asian(
+            x.get("artist", ""), x.get("title", "")))]
+    if len(live_queue) != _v131_before:
+        print(f"⏭️ v131: {_v131_before - len(live_queue)} CJK-titel(s)/artiest(en) uit FIFO geweerd.")
     _v119_before = len(live_queue)
     live_queue = [x for x in live_queue if isinstance(x, dict) and
                   x.get("source") in RADIO_SOURCE_ORDER and
@@ -7074,6 +7104,14 @@ def sync():
             item["artist"] = artist
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
+
+        # v131: extra veiligheidscontrole vóór iedere Spotify-zoekactie/toevoeging.
+        if v131_block_nonlatin_east_asian(artist, title):
+            print(f"⏭️ v131: Japanse/Chinese/Koreaanse tekens overgeslagen: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
 
 
         # v119: titelcheck vóór elke Spotify Search, onafhankelijk van artiestenland.
