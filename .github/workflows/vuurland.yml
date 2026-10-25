@@ -229,6 +229,21 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
+      - name: Maak eenvoudig muziekoverzicht
+        if: always()
+        run: |
+          python3 maak_muziekoverzicht.py vuurland_matcher_sync.log
+          cat vuurland_toegevoegde_nummers.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Downloadbaar muziekoverzicht
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-toegevoegde-nummers
+          path: |
+            vuurland_toegevoegde_nummers.md
+            vuurland_toegevoegde_nummers.txt
+          if-no-files-found: warn
+          retention-days: 30
       - name: Bewaar conflicterende state voor herstel
         if: always()
         uses: actions/upload-artifact@v4
