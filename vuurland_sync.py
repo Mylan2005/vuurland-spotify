@@ -1784,6 +1784,14 @@ V101_EXCLUDED_RADIO_TRACKS = {
     ('dj vadim feat. sarah jones', 'your revolution'),
     ('dj vadim featuring sarah jones', 'your revolution'),
     ('sarah jones', 'your revolution'),
+    # v135: persoonlijk uitgesloten Spotify-track 72Q9SbemyeHRt8HuLzfCyC
+    ('em', "it's not safe to turn off your computer"),
+    ('silent strike', "it's not safe to turn off your computer"),
+    ('silent strike & em', "it's not safe to turn off your computer"),
+    ('silent strike feat. em', "it's not safe to turn off your computer"),
+    ('silent strike featuring em', "it's not safe to turn off your computer"),
+    ('silent strike, em', "it's not safe to turn off your computer"),
+
 }
 
 
