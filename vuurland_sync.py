@@ -1375,8 +1375,22 @@ def v119_is_german_title(title):
         r"\b(?:meiner|meinem|meinen|deiner|deinem|deinen)\s+\w+\b",
         r"\b(?:der|die|das)\s+(?:elektrische|schonheit|schönheit|bomben|toten|ende|transsylvanische|große|grosse)\b",
     )
-    return any(re.search(pattern, text) for pattern in patterns)
-
+    if any(re.search(pattern, text) for pattern in patterns):
+        return True
+    # v139: extra herkenning van duidelijk Duitse TITELTAAL, niet
+    # de nationaliteit van een artiest. Ambigue woorden op zichzelf
+    # (bijv. nacht, in, die, das, love) zijn onvoldoende.
+    v139_clear_german_phrases = (
+        r"\b(?:ich|du|wir|ihr)\s+(?:liebe|hasse|suche|brauche|vermisse|vergesse|finde|sehe|hoere|höre|gehe|bleibe|komme|sind|bist|seid|moechte|möchte)\b",
+        r"\b(?:du|ihr|wir)\s+(?:hast|habt|haben|kannst|koennt|könnt|koennen|können|wollt|wollen|werdet)\b",
+        r"\b(?:ich|du|wir)\s+(?:will|werde|werd|kann|konnte|moechte|möchte|darf|darfst|soll|sollte)\b",
+        r"\b(?:mein|meine|meinen|meinem|meiner|dein|deine|deinen|deinem|deiner)\s+(?:herz|leben|liebe|welt|traum|träume|traeume|augen|freund|freunde|seele|gedanken|zeit)\b",
+        r"\b(?:ohne|gegen|wegen|zwischen)\s+(?:dich|mich|uns|euch|meine|deine)\b",
+        r"\b(?:nicht|niemals)\s+(?:allein|mehr|vergessen|zurueck|zurück|hier|da|wieder)\b",
+        r"\b(?:zerschmettert|zerbrochen|verloren|vergessen|sehnsucht|einsamkeit|unendlichkeit|herzschmerz|liebeslied|traurigkeit)\b",
+        r"\b(?:stuecke|stücke)\b",
+    )
+    return any(re.search(pattern, text) for pattern in v139_clear_german_phrases)
 
 # v102: Duitse ZANG uitsluiten, niet Duitse titels of artiesten.
 # Alleen gecontroleerde opnames. Geen automatische taalherkenning op metadata.
