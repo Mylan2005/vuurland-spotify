@@ -1670,9 +1670,14 @@ def v101_radio_key(artist, title):
 
 
 def v101_radio_x_studio_title(title):
-    """Enkel Radio X-live-tag is broncontext, geen gevraagde live-opname."""
-    return re.sub(r"\s*\(\s*live\s+for\s+radio\s+x\s*\)\s*$",
-                  "", str(title), flags=re.I).strip()
+    """v127: Radio X session suffix is broninformatie, geen gewenste live-versie."""
+    value = str(title)
+    # Alleen een afsluitende Radio X-vermelding tussen haakjes/haakjesparen.
+    return re.sub(
+        r"\s*[\(\[]\s*(?=[^\)\]]*\bradio\s*x\b)"
+        r"(?:[^\)\]]*)[\)\]]\s*$",
+        "", value, flags=re.I,
+    ).strip()
 
 
 def v101_safe_title_spelling(title):
@@ -1849,6 +1854,20 @@ def find_spotify_track(
         artist = "Pocari Sweet波卡利甜"
         print("📝 Exacte artiestcorrectie: 波卡利甜 Pocari Sweet → Pocari Sweet波卡利甜")
 
+    # v127: gerichte, bevestigde schrijfwijzen (geen fuzzy zoekopdrachten).
+    v127_artist_key = " ".join(str(artist).casefold().split())
+    if v127_artist_key == "llyod cole":
+        artist = "Lloyd Cole"
+    elif v127_artist_key == "llyod cole & the commotions":
+        artist = "Lloyd Cole & The Commotions"
+    elif v127_artist_key in {"/- {plus/minus}", "/- (plus/minus)", "+/- {plus/minus}", "plus/minus"}:
+        artist = "+/-"
+    v127_key = (" ".join(str(artist).casefold().split()),
+                " ".join(str(title).casefold().split()))
+    if v127_key == ("phoenix", "liztomania"):
+        title = "Lisztomania"
+    elif v127_key == ("white lies", "getting even (demo)"):
+        title = "Getting Even"   # gewone opname/remaster, exact dezelfde song
     known_artist = " ".join(
         artist.strip().casefold()
         .replace("feat.", "feat")
