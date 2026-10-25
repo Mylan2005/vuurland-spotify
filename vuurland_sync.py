@@ -1355,6 +1355,40 @@ def v119_title_normalize(value):
     return " ".join(text.split())
 
 
+# v140: Roemeense TITELS blokkeren zonder Roemeense artiesten categorisch te weren.
+# Titelherkenning kan de gezongen taal niet altijd vaststellen.
+def v140_is_romanian_title(title):
+    import re
+    import unicodedata
+    value = unicodedata.normalize("NFKD", str(title or "").casefold())
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = value.replace("ș", "s").replace("ş", "s").replace("ț", "t").replace("ţ", "t")
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    value = " ".join(value.split())
+    if not value:
+        return False
+    confirmed = {
+        "pastreaza mi calmul",  # EYEDROPS
+        "luna si noi",         # Vita de Vie / Blue Noise
+        "cine iubeste si lasa",# Urma
+    }
+    if value in confirmed:
+        return True
+    # Duidelijke grammaticale combinaties; vermijd losse woorden zoals 'in', 'la', 'de'.
+    phrases = (
+        r"\b(?:pastreaza|iubeste|iubesti|vorbeste|asculta|aminteste|spune|spui)\s+(?:mi|ma|te|ne|si|ce|tot|adevarul|calmul|cine)\b",
+        r"\b(?:nu|sa)\s+(?:ma|te|ne|spui|uiti|pleci|iubesti|stii|uita|uitați)\b",
+        r"\b(?:inima|sufletul|dragostea|dorul|iubirea|viata|ochii|noaptea)\s+(?:mea|ta|noastra|mei|tai)\b",
+        r"\b(?:cine|unde|cand|când|de ce)\s+(?:iubeste|esti|suntem|pleci|spui|vine|ramane)\b",
+        r"\b(?:fara|pana|langa)\s+(?:tine|mine|noi|iubire|sfarsit)\b",
+    )
+    return any(re.search(pattern, value) for pattern in phrases)
+
+
+def v140_is_unwanted_language_title(title):
+    return v119_is_german_title(title) or v140_is_romanian_title(title)
+
+
 def v119_is_german_title(title):
     import re
     text = v119_title_normalize(title)
@@ -6680,7 +6714,7 @@ def sync():
     _v119_before = len(live_queue)
     live_queue = [x for x in live_queue if isinstance(x, dict) and
                   x.get("source") in RADIO_SOURCE_ORDER and
-                  not v119_is_german_title(x.get("title", "")) and
+                  not v140_is_unwanted_language_title(x.get("title", "")) and
                   not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", ""))]
     _v119_removed = _v119_before - len(live_queue)
     if _v119_removed:
@@ -7173,7 +7207,7 @@ def sync():
 
 
         # v119: titelcheck vóór elke Spotify Search, onafhankelijk van artiestenland.
-        if v119_is_german_title(title):
+        if v140_is_unwanted_language_title(title):
             print(f"⛔ v119 Duitse titel geblokkeerd: {artist} — {title}")
             live_queue.pop(0)
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
