@@ -2844,6 +2844,17 @@ def find_spotify_track(
     if search_variant == 1 and re.fullmatch(r"[A-Za-z](?: [A-Za-z]){5,15}", str(search_query_title)):
         query = f'{spotify_search_artist} "{search_query_title}"'
 
+    # v142d: eerste poging op Acoustic/Unplugged richten; bij geen match
+    # probeert de bestaande retrylogica een bredere zoekopdracht later.
+    v142_requested_acoustic = re.search(
+        r"(?i)\b(acoustic|unplugged)\b", str(title or "")
+    )
+    if v142_requested_acoustic and search_variant == 0:
+        qualifier = v142_requested_acoustic.group(1).lower()
+        if not re.search(rf"(?i)\b{qualifier}\b", query):
+            query = f"{query} {qualifier}"
+        print(f"🎸 Eerst gericht zoeken naar {qualifier}.")
+
     # v81: exact geverifieerde cataloguslocator in plaats van nog een
     # vruchteloze Search. Maximaal één Spotify-opzoekactie per ronde;
     # de gemeenschappelijke kandidaatvalidatie hieronder blijft intact.
@@ -5077,9 +5088,14 @@ def find_spotify_track(
         # Alleen toelaten als de hoofdartiest en volledige kerntitel exact
         # overeenkomen; de vier bestaande opnamevoorkeuren blijven voorop.
         session_fallbacks = {"spotify singles", "session"}
-        # v75: de gewone uitvoering gaat ALTIJD voor, ook als de radio
-        # een speciale versie vermeldt. Daarna veilige officiële alternatieven.
-        if wanted_family != "ordinary":
+        # v142d: expliciete Acoustic/Unplugged gaat vóór ordinary.
+        # Op latere zoekrondes blijft ordinary een veilige fallback.
+        # Andere versieaanvragen behouden hun oude gedrag.
+        if wanted_family in ("acoustic", "unplugged"):
+            preferred_order[wanted_family] = [wanted_family] + [
+                x for x in preferred_order["ordinary"] if x != wanted_family
+            ]
+        elif wanted_family != "ordinary":
             preferred_order[wanted_family] = preferred_order["ordinary"]
         if wanted_family in preferred_order:
             order = preferred_order[wanted_family]
@@ -5169,6 +5185,15 @@ def find_spotify_track(
                 spotify_version or "ordinary",
             )
         )
+
+    # v142d: geen stille gewone-versie-fallback in de eerste zoekronde.
+    # Alleen een passende Acoustic/Unplugged mag deze ronde door;
+    # de gewone opname is toegestaan bij de volgende zoekstrategie.
+    if v142_requested_acoustic and search_variant == 0:
+        qualifier = v142_requested_acoustic.group(1).lower()
+        candidates = [c for c in candidates if c[10] == qualifier]
+        if not candidates:
+            print("🎸 Akoestische match niet gevonden; gewone versie later proberen.")
 
     if candidates:
         candidates.sort(
