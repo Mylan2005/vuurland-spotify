@@ -4,7 +4,7 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "elbow|||magnificent she says",
-  "__last_radio_key_mellow_mix": "billie marten|||planets",
+  "__last_radio_key_mellow_mix": "crowded house|||weather with you",
   "__v47_radio_discovered": {
     "vuurland": [
       "a blaze of feather|||carousel",
@@ -3898,6 +3898,7 @@
       "dayflower|||crush",
       "dayflower|||heart shaped tambourines sunday version",
       "dazzled|||soft focus",
+      "dead can dance|||american dreaming",
       "dead can dance|||cantara",
       "dead can dance|||carnival of light remastered",
       "dead can dance|||dawn of the iconoclast remastered",
@@ -7315,6 +7316,7 @@
       "sara lov|||animals",
       "sara lov|||just my heart talkin'",
       "sara watkins|||take up your spade",
+      "say lou lou|||everything we touch",
       "scott matthews|||place to be",
       "sea wolf|||old friend",
       "sea wolf|||priscilla",
@@ -8244,6 +8246,7 @@
       "red red sun|||lucky you lucky me",
       "red red sun|||paper swan",
       "relay tapes|||teeth",
+      "ringlet|||december",
       "rosaviolento|||-malsueno",
       "rxghost|||subway",
       "sadfields|||despiertame",
@@ -8459,12 +8462,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "chvrches|||the mother we share - errors rmx": {
-      "artist": "Chvrches",
-      "title": "The Mother We Share - Errors RMX",
-      "source": "indie_select",
-      "failed_at": 1792856800
-    },
     "the other two|||inside": {
       "artist": "The Other Two",
       "title": "Inside",
@@ -8820,7 +8817,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 7395,
+  "__vuurland_active_playlist_count": 7396,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -17427,6 +17424,7 @@
     "the avett brothers|||i and love and you",
     "the awakening|||until the dawn",
     "the band|||stage fright",
+    "the band|||the weight w/ the staples family",
     "the band|||up on cripple creek",
     "the barr brothers|||beggar in the morning",
     "the barr brothers|||even the darkness has arms",
@@ -21478,6 +21476,7 @@
     "spotify:track:2UbfGu7OgZ8D7w5ynxxDh5",
     "spotify:track:2UdLLIJygjz2yiOa3GVMV0",
     "spotify:track:2UeYOPHXD3sNdMuuElx8el",
+    "spotify:track:2UgZeV435iztRTLrUeOrtk",
     "spotify:track:2Uwjr7EnHRXMgmL9SmX1Gj",
     "spotify:track:2UyWClHKt6fut3IpS2tJiR",
     "spotify:track:2Uyv4IymecQUPjKchJKC3R",
@@ -32128,6 +32127,7 @@
     "USCA21101837",
     "USCA21201985",
     "USCA28500095",
+    "USCA28500167",
     "USCA28500274",
     "USCA28600048",
     "USCA28600262",
@@ -41373,7 +41373,8 @@
     "spotify:track:4yMAaPNlGMKNRO35hWBLtn": "GBR8R1500214",
     "spotify:track:3arKRnq9OUd7yq6LRwVW8I": "USWB10102659",
     "spotify:track:4nAmlRetwMEZr2TsXuHcpD": "QM5BK1900478",
-    "spotify:track:3YLxropD2RsgTu8KugePzE": "GB6TW1600082"
+    "spotify:track:3YLxropD2RsgTu8KugePzE": "GB6TW1600082",
+    "spotify:track:2UgZeV435iztRTLrUeOrtk": "USCA28500167"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1792941370,
@@ -62217,7 +62218,7 @@
   "__match_v35__florence the machine|||dream girl evil": "spotify:track:7GtOjSSp5Qyi3gNbNDZgja",
   "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
-  "__last_radio_key_big_sonic_heaven": "she's green|||paper thin",
+  "__last_radio_key_big_sonic_heaven": "dead can dance|||american dreaming",
   "__match_v35__echo & the bunnymen|||brussels is haunted": "spotify:track:1CDE5PjSYQFEZ5OTKGL6bx",
   "__match_v35__moaning|||fall in love": "spotify:track:1p7PfqvtknCZRRNwbMzFX8",
   "__match_v35__ninon|||leave on your light": "spotify:track:5N1HyfEiNByqST0DeZkRif",
@@ -63466,6 +63467,7 @@
       "the indien|||sleep when i'm with you"
     ],
     "mellow_mix": [
+      "crowded house|||weather with you",
       "billie marten|||planets",
       "the national|||nobody else will be there",
       "sean angus watson|||lately i've been wondering",
@@ -63564,10 +63566,10 @@
       "gone gone beyond|||by the sea",
       "our native daughters|||i knew i could fly",
       "tracy chapman|||crossroads",
-      "xavier rudd|||spirit bird",
-      "steve earle|||telephone road"
+      "xavier rudd|||spirit bird"
     ],
     "big_sonic_heaven": [
+      "dead can dance|||american dreaming",
       "she's green|||paper thin",
       "blouse|||into black",
       "tombstones in their eyes|||fall",
@@ -63666,10 +63668,10 @@
       "softcult|||one of a million",
       "echo & the bunnymen|||can't be sold",
       "shye|||i wanted it to be you",
-      "bjork|||venus as a boy 7\" american dream mix",
-      "in inertia|||what remains is beautiful feat niskala"
+      "bjork|||venus as a boy 7\" american dream mix"
     ],
     "radio_x_chilled": [
+      "stereophonics|||maybe tomorrow",
       "the war on drugs|||pain",
       "mgmt|||electric feel",
       "kings of leon|||milk",
@@ -63768,8 +63770,7 @@
       "the verve|||bitter sweet symphony",
       "birdy|||skinny love",
       "elbow|||the bones of you",
-      "beirut|||perth",
-      "massive attack|||teardrop"
+      "beirut|||perth"
     ],
     "indie_select": [
       "fujiya & miyagi|||synthetic symphonies",
@@ -64078,6 +64079,7 @@
       "arlie|||big fat mouth"
     ],
     "dreampop_radio": [
+      "say lou lou|||everything we touch",
       "farao|||forces",
       "rachel sermanni|||the fog",
       "fink|||looking too closely",
@@ -64176,8 +64178,7 @@
       "tahiti 80|||1 000 times",
       "bombay bicycle club|||rinse me down",
       "radical face|||holy branches",
-      "telekinesis|||lean on me",
-      "damien jurado|||silver timothy"
+      "telekinesis|||lean on me"
     ],
     "radio_indie_alternative": [
       "fil bo riva|||go rilla",
@@ -64486,6 +64487,8 @@
       "bloom effect|||armour"
     ],
     "dkfm_shoegaze": [
+      "syupeo jenjang|||don't reach me",
+      "ringlet|||december",
       "gvth dvddy|||who knows how it ends",
       "phantom handshakes|||for you",
       "alison's halo|||stuck",
@@ -64583,9 +64586,7 @@
       "the genevieves|||sprinkler",
       "velveteen|||a fool's paradise",
       "shades of violette|||kinetic",
-      "otsyuda|||honey",
-      "soft siren|||california heatwave",
-      "atmos bloom|||thorns"
+      "otsyuda|||honey"
     ],
     "dkfm_classic": [
       "chimera|||bass mover",
@@ -66361,7 +66362,7 @@
   "__match_v35__the haunted youth|||broken": "spotify:track:3EJ7h1f0Nvvnpt1mRNCcOz",
   "__match_v35__phoebe bridgers|||sidelines": "spotify:track:4SKvKJaqkRl1bUZWEqTYzl",
   "__match_v35__the smiths|||last night i dreamt that somebody loved me": "spotify:track:17zN523CEjJWBGXrUb3xex",
-  "__last_radio_key_radio_x_chilled": "the war on drugs|||pain",
+  "__last_radio_key_radio_x_chilled": "stereophonics|||maybe tomorrow",
   "__last_radio_key_indie_select": "fujiya & miyagi|||synthetic symphonies",
   "__last_radio_key_championship_vinyl": "tv on the radio|||halfway home",
   "__match_v35__kylie minogue|||confide in me": "spotify:track:0U0VCzqz0CvbjrYOFKQC6W",
@@ -67708,7 +67709,7 @@
   "__match_v35__the flaming lips|||do you realise?": "spotify:track:1GjpSlPPKzrCFD0n8Zjhp3",
   "__match_v35__hexes & ohs|||h-h-highschool": "spotify:track:6JLvv6xOazGDQHn9P8ast3",
   "__match_v35__elton john|||tiny dancer": "spotify:track:2TVxnKdb3tqe1nhQWwwZCO",
-  "__v116_fifo_next_sequence": 2273,
+  "__v116_fifo_next_sequence": 2278,
   "__match_v35__good posture|||last time": "spotify:track:2wlqQfTm8x7RY0WldjFmT3",
   "__match_v35__billy strings|||gild the lily": "spotify:track:181YsWsKwhTmoHYZ4xtiuZ",
   "__match_v35__new order|||every little counts": "spotify:track:3uJmmY9zBGV3ONk3KiMfWY",
@@ -67774,7 +67775,7 @@
   "__match_v35__nina simone|||let it be me": "spotify:track:67VwElKfqCoaFIYNjhWFr8",
   "__match_v35__foster the people|||helena beat": "spotify:track:4VbDJMkAX3dWNBdn3KH6Wx",
   "__match_v35__ms john soda|||unsleeping": "spotify:track:2JGIQozZVeQNqWpPFfVaI4",
-  "__last_radio_key_dreampop_radio": "farao|||forces",
+  "__last_radio_key_dreampop_radio": "say lou lou|||everything we touch",
   "__last_radio_key_radio_indie_alternative": "fil bo riva|||go rilla",
   "__match_v35__delphic|||submission": "spotify:track:25cWavgdvaLLZO6MGrK4DZ",
   "__match_v35__the twilight sad|||the room": "spotify:track:6fM4QqTv73jDvhoNPdU5gQ",
@@ -68292,7 +68293,7 @@
   "__match_v35__the dream academy|||please please please let me get what i want": "spotify:track:0smzrlYiBiecxfG8p5QDcQ",
   "__match_v35__the smiths|||how soon is now?": "spotify:track:0Nmu7zxpMYNJ3N9YDY6VEN",
   "__match_v35__hozier|||eat your young": "spotify:track:3hbKcj640iYmPQgecainOr",
-  "__last_radio_key_dkfm_shoegaze": "gvth dvddy|||who knows how it ends",
+  "__last_radio_key_dkfm_shoegaze": "syupeo jenjang|||don't reach me",
   "__match_v35__hot chip|||need you now": "spotify:track:5MRYyecW552BEq2nRBfIQX",
   "__match_v35__paula cole|||where have all the cowboys gone?": "spotify:track:2ck13qfgRZ1msyEJlDqzvk",
   "__match_v35__the knocks feat foster the people|||ride or die": "spotify:track:38Zr5Q5O5o6CYaioIRHSqL",
@@ -68494,5 +68495,6 @@
   "__match_v35__red hot chili peppers|||soul to squeeze": "spotify:track:3arKRnq9OUd7yq6LRwVW8I",
   "__not_found_v35__errors|||the village": 1792942884,
   "__match_v35__hippo campus|||boys": "spotify:track:4nAmlRetwMEZr2TsXuHcpD",
-  "__match_v35__matthew and the atlas|||on a midnight street - acoustic version": "spotify:track:3YLxropD2RsgTu8KugePzE"
+  "__match_v35__matthew and the atlas|||on a midnight street - acoustic version": "spotify:track:3YLxropD2RsgTu8KugePzE",
+  "__match_v35__the band|||the weight w/ the staples family": "spotify:track:2UgZeV435iztRTLrUeOrtk"
 }
