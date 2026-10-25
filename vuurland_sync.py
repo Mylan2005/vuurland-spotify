@@ -754,6 +754,79 @@ def _create_volume_playlist(volume_number):
     return playlist_id
 
 
+# === v129 SAFE MULTI-VOLUME DEDUPE RECOVERY ===
+def v129_restore_volume_dedupe(cache, active_volume_number):
+    """Fail closed when completed volumes are not covered by the shared cache.
+
+    Never publish partial rebuilds. Reads use the existing Spotify request wrapper,
+    including its persistent 429 handling. No Spotify writes are performed.
+    """
+    if active_volume_number < 2:
+        return False
+    mapping = dict(cache.get("__vuurland_volume_playlists") or {})
+    mapping["1"] = PLAYLIST_ID
+    expected = [str(n) for n in range(1, active_volume_number + 1)]
+    if any(not mapping.get(n) for n in expected):
+        raise RuntimeError("v129: volume-ID ontbreekt; geen Spotify-toevoegingen")
+    known_uris = cache.get("__playlist_uris")
+    known_keys = cache.get("__playlist_keys")
+    known_isrc = cache.get("__playlist_isrcs")
+    minimum = VOLUME_LIMIT * (active_volume_number - 1)
+    if (cache.get("__playlist_isrc_cache_ready") is True
+            and isinstance(known_uris, list)
+            and isinstance(known_keys, list)
+            and isinstance(known_isrc, list)
+            and len(set(known_uris)) >= minimum):
+        return False
+    print("🛡️ v129: onvolledige volume-cache; alle volumes veilig opnieuw lezen.")
+    new_uris, new_isrcs, new_keys, new_uri_isrc = set(), set(), set(), {}
+    for number in expected:
+        playlist_id = mapping[number]
+        offset = 0
+        while True:
+            data = spotify_request("GET", f"/playlists/{playlist_id}/items",
+                                   params={"limit": 50, "offset": offset})
+            batch = data.get("items")
+            total = data.get("total")
+            if not isinstance(batch, list) or not isinstance(total, int) or total < 0:
+                raise RuntimeError("v129: ongeldige Spotify-pagina; herstel gestopt")
+            for entry in batch:
+                track = (entry or {}).get("item")
+                if not isinstance(track, dict):
+                    continue
+                uri = track.get("uri")
+                if not uri:
+                    continue
+                new_uris.add(uri)
+                code = str((track.get("external_ids") or {}).get("isrc") or "").strip().upper()
+                if code:
+                    new_isrcs.add(code)
+                    new_uri_isrc[uri] = code
+                new_keys.update(make_playlist_keys(track))
+                title = normalize_match(track.get("name", ""))
+                if title:
+                    for artist in track.get("artists", []) or []:
+                        name = normalize_match((artist or {}).get("name", ""))
+                        if name:
+                            new_keys.add(f"{name}|||{title}")
+            offset += len(batch)
+            if offset >= total:
+                break
+            if not batch:
+                raise RuntimeError("v129: onvolledige Spotify-paginering; herstel gestopt")
+    if len(new_uris) < minimum:
+        raise RuntimeError("v129: volume-herstel onvolledig; cache onveranderd")
+    # Atomic swap only after all volumes have been read successfully.
+    cache["__playlist_uris"] = sorted(new_uris)
+    cache["__playlist_isrcs"] = sorted(new_isrcs)
+    cache["__playlist_keys"] = sorted(new_keys)
+    cache["__spotify_uri_isrc"] = new_uri_isrc
+    cache["__playlist_isrc_cache_ready"] = True
+    cache["__playlist_cache_time"] = int(time.time())
+    save_cache(cache)
+    print(f"✅ v129: {len(new_uris)} Spotify-tracks uit {len(expected)} volumes hersteld.")
+    return True
+
 def get_active_volume_playlist(cache):
     volume_playlists = dict(cache.get("__vuurland_volume_playlists", {}))
     volume_playlists.setdefault("1", PLAYLIST_ID)
@@ -6548,6 +6621,7 @@ def sync():
     MAX_SEARCHES_PER_RUN = 1  # v66: één gedeelde Spotify Search per 120 seconden
     NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
 
+    v129_restore_volume_dedupe(cache, active_volume_number)
     # ---------------------------------
     # SPOTIFY PLAYLIST CACHE
     # ---------------------------------
