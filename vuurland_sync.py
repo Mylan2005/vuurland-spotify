@@ -95,12 +95,13 @@ CHAMPIONSHIP_VINYL_SOURCE_URL = "https://onlineradiobox.com/de/championshipvinyl
 DARK_EDGE_SOURCE_URL = "https://onlineradiobox.com/ro/darkedge/playlist/?lang=nl"
 DREAMPOP_SOURCE_URL = "https://onlineradiobox.com/de/dreampop/playlist/?lang=nl"
 RADIO_INDIE_ALTERNATIVE_SOURCE_URL = "https://onlineradiobox.com/de/31alternative/playlist/?lang=nl"
+DKFM_EDGE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmedge/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
 RADIO_SOURCE_ORDER = (
     "vuurland", "mellow_mix", "big_sonic_heaven",
     "radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
-    "dreampop_radio", "radio_indie_alternative",
+    "dreampop_radio", "radio_indie_alternative", "dkfm_edge",
 )
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
@@ -1182,6 +1183,27 @@ def get_radio_indie_alternative_tracks():
         },
     )
 
+
+# v128: enkel expliciete DKFM EDGE-station announcements blokkeren.
+def get_dkfm_edge_tracks():
+    raw = get_radiobox_tracks(
+        DKFM_EDGE_SOURCE_URL,
+        "DKFM Edge",
+        {"dkfm edge"},
+    )
+    clean = []
+    removed = 0
+    for artist, title in raw:
+        # Het station schrijft jingles als "DKFM EDGE" of
+        # "DKFM EDGE - Tested Daily" / "DKFM EDGE - Fully Stocked".
+        # Filter uitsluitend deze zenderidentiteit, niet muziekgenres.
+        if re.match(r"^dkfm\s+edge(?:\b|\s*[-:])", str(artist).strip(), re.I):
+            removed += 1
+            continue
+        clean.append((artist, title))
+    if removed:
+        print(f"⏭️ DKFM Edge: {removed} stationjingle(s) genegeerd.")
+    return clean
 
 # v119: Duitse numMERTITELS, niet Duitse artiesten, blokkeren.
 # Herkenning gebeurt op TITEL, niet op artiestennaam of radioland.
@@ -5630,7 +5652,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         old = snapshots.get(sid)
         if not isinstance(old, list):
             if sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
-                       "dreampop_radio", "radio_indie_alternative"):
+                       "dreampop_radio", "radio_indie_alternative", "dkfm_edge"):
                 # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
                 arrivals = []
                 print(f"🕒 v96 {source['name']}: nulmeting; geen oude uitzendingen ingehaald.")
@@ -6185,6 +6207,12 @@ def sync():
             "name": "Radio Indie Alternative",
             "tracks": get_radio_indie_alternative_tracks(),
             "cache_key": "__last_radio_key_radio_indie_alternative",
+        },
+        {
+            "id": "dkfm_edge",
+            "name": "DKFM Edge",
+            "tracks": get_dkfm_edge_tracks(),
+            "cache_key": "__last_radio_key_dkfm_edge",
         },
     ]
 
@@ -6810,12 +6838,12 @@ def sync():
     duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
 
     # v120: gezamenlijke FIFO zonder bronbeurtrol.
-    # Alle negen RadioBox-bronnen blijven iedere ronde nieuwe titels achteraan
+    # Alle tien RadioBox-bronnen blijven iedere ronde nieuwe titels achteraan
     # toevoegen. De bestaande persistente _v116_fifo_seq blijft leidend.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 v120: 9 bronnen samen, één FIFO, geen beurtrol.")
+    print("🔀 v128: 10 bronnen samen, één FIFO, geen beurtrol.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
