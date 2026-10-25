@@ -1778,6 +1778,12 @@ V101_VERIFIED_CATALOG_TRACKS = {
 V101_EXCLUDED_RADIO_TRACKS = {
     ("nick cave", "evil ('silver alert' remix feat. matt berninger)"),
     ("kelley polar", "entropy reigns (pearson and usher's second law dynamix)"),
+    # v132: persoonlijk uitgesloten Spotify-track 3RnnKPZTVu639oOZ5Qry5y
+    ('dj vadim', 'your revolution'),
+    ('dj vadim & sarah jones', 'your revolution'),
+    ('dj vadim feat. sarah jones', 'your revolution'),
+    ('dj vadim featuring sarah jones', 'your revolution'),
+    ('sarah jones', 'your revolution'),
 }
 
 
