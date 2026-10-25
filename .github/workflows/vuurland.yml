@@ -41,6 +41,8 @@ jobs:
         run: |
           set -e
 
+          # v136: enkel muziekregels zichtbaar; volledige uitvoer naar diagnosebestand.
+          exec > >(python3 -u live_music_stream.py --log vuurland_technische_live.log) 2>&1
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -139,7 +141,6 @@ jobs:
               save_recovery
               exit 1
             fi
-            echo "::group::🔧 Technische syncronde (uitklappen voor details)"
             # v86: elke ronde offline testen, ook na automatische code-update.
             # Bij een rode test STOPPEN vóór enige Spotify-actie.
             echo "🛡️ v86: offline veiligheidspoort vóór Spotify-sync..."
@@ -189,8 +190,6 @@ jobs:
               echo "🛑 State kon niet veilig naar GitHub worden gepusht."
               exit 1
             fi
-
-            echo "::endgroup::"
             python3 -u maak_live_muzieklog.py vuurland_ronde.log
             REMAINING=$((END_TIME - SECONDS))
 
@@ -220,6 +219,14 @@ jobs:
             echo "🕒 De geplande workflow probeert later opnieuw."
           fi
 
+      - name: Technische syncdetails downloaden
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-technische-details
+          path: vuurland_technische_live.log
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Maak matcher-rapport (offline)
         if: always()
         run: python3 v64_matcher_report.py vuurland_matcher_sync.log
