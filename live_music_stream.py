@@ -23,6 +23,7 @@ BRONNEN = {
     'radio_indie_alternative': 'Radio Indie Alternative',
     'dkfm_edge': 'DKFM Edge',
     'dkfm_shoegaze': 'DKFM Shoegaze Radio',
+    'dkfm_classic': 'DKFM Classic',
 }
 SELECTIE = re.compile(r'gezamenlijke FIFO:.*?\(bron:\s*([a-z_]+)\)')
 

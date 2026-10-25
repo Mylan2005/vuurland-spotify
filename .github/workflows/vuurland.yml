@@ -190,6 +190,11 @@ jobs:
               echo "🛑 State kon niet veilig naar GitHub worden gepusht."
               exit 1
             fi
+            # v138: alleen-lezen back-up; nooit terugschrijven naar git/state.
+            mkdir -p v138_state_backup
+            for f in vuurland_seen.json vuurland_live_queue.json .vuurland_spotify_cache.json; do
+              if [ -f "$f" ]; then cp "$f" "v138_state_backup/$f"; fi
+            done
             python3 -u maak_live_muzieklog.py vuurland_ronde.log
             REMAINING=$((END_TIME - SECONDS))
 
@@ -239,6 +244,28 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
+      - name: Brongezondheid en wachtrijoverzicht (alleen lezen)
+        if: always()
+        run: |
+          python3 bronrapport_v138.py vuurland_matcher_sync.log vuurland_live_queue.json
+          cat vuurland_brongezondheid.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Download brongezondheid
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-brongezondheid
+          path: vuurland_brongezondheid.md
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Bewaar back-up van laatste veilige status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v138-backup
+          path: v138_state_backup/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 30
       - name: Maak eenvoudig muziekoverzicht
         if: always()
         run: |
