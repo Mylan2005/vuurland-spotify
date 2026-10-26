@@ -889,24 +889,44 @@ def save_track_to_library(uri):
     spotify_request("PUT", "/me/library", params={"uris": uri})
 
 
-# v151: Spotify-likes in betrouwbare batches; één playlistitem per FIFO-ronde.
-# Elk nieuw playlistitem wordt EERST duurzaam als pending opgeslagen.
-# Pas na een geslaagde PUT worden die URI's uit pending verwijderd.
-V151_LIBRARY_BATCH_SIZE = 5
-V151_LIBRARY_MAX_DELAY_SECONDS = 3600
+# v153: directe likes met duurzaam herstel. Spotify-interval blijft 120 seconden.
+# Na playlist-POST komt de URI eerst duurzaam in pending; daarna DIRECT een
+# Spotify Library PUT. Alleen na bevestigde success wordt pending verwijderd.
+# Mislukte likes worden niet verloren en worden in volgende rondes herprobeerd.
+def _v153_send_pending_like(cache, uri):
+    pending = dict(cache.get("__pending_library_likes", {}))
+    if uri not in pending:
+        return False
+    now = int(time.time())
+    info = dict(pending.get(uri) or {})
+    last_attempt = int(info.get("last_attempt", 0) or 0)
+    if last_attempt and now - last_attempt < PENDING_LIBRARY_LIKE_RETRY_SECONDS:
+        return False
+    try:
+        spotify_request("PUT", "/me/library", params={"uris": uri})
+    except Exception as error:
+        info["last_attempt"] = now
+        info["error"] = str(error)[:200]
+        pending[uri] = info
+        cache["__pending_library_likes"] = pending
+        save_cache(cache)
+        print("⚠️ v153: like mislukt; veilig pending voor latere retry.")
+        return False
+    pending.pop(uri, None)
+    cache["__pending_library_likes"] = pending
+    save_cache(cache)
+    print("❤️ v153: nummer meteen in Liked Songs opgeslagen.")
+    return True
 
 
 def _attempt_library_like(cache, uri):
     if not uri:
         return False
     pending = dict(cache.get("__pending_library_likes", {}))
-    # Reeds bevestigde of reeds wachtende URI's niet opnieuw aanmelden.
-    # Playlist-URI's komen pas hier nadat POST playlist geslaagd is.
     pending.setdefault(uri, {"queued_at": int(time.time()), "last_attempt": 0})
     cache["__pending_library_likes"] = pending
     save_cache(cache)
-    print(f"❤️ v151: Liked Songs veilig ingepland ({len(pending)} pending; batch van 5).")
-    return True
+    return _v153_send_pending_like(cache, uri)
 
 
 def _retry_one_pending_library_like(cache):
@@ -914,43 +934,11 @@ def _retry_one_pending_library_like(cache):
     if not pending:
         return False
     now = int(time.time())
-    eligible = []
     for uri, item in pending.items():
-        info = dict(item or {})
-        last_attempt = int(info.get("last_attempt", 0) or 0)
-        if last_attempt and now - last_attempt < PENDING_LIBRARY_LIKE_RETRY_SECONDS:
-            continue
-        eligible.append(uri)
-    if not eligible:
-        return False
-
-    # Maximaal een uur wachten bij minder dan vijf toevoegingen.
-    # Oude pending likes uit v150 hebben geen queued_at: meteen afwerken.
-    oldest = min(int((pending[uri] or {}).get("queued_at", 0) or 0) for uri in eligible)
-    if len(eligible) < V151_LIBRARY_BATCH_SIZE and oldest and now - oldest < V151_LIBRARY_MAX_DELAY_SECONDS:
-        return False
-
-    uris = eligible[:40]  # Spotify PUT /me/library aanvaardt maximaal 40 URI's.
-    try:
-        spotify_request("PUT", "/me/library", params={"uris": ",".join(uris)})
-    except Exception as error:
-        # De poging kan een 429 of netwerkprobleem zijn; niets verliezen.
-        for uri in uris:
-            info = dict(pending.get(uri) or {})
-            info["last_attempt"] = now
-            info["error"] = str(error)[:200]
-            pending[uri] = info
-        cache["__pending_library_likes"] = pending
-        save_cache(cache)
-        print(f"⚠️ v151: batch van {len(uris)} likes mislukt; alle URI's blijven pending.")
-        return False
-
-    for uri in uris:
-        pending.pop(uri, None)
-    cache["__pending_library_likes"] = pending
-    save_cache(cache)
-    print(f"❤️ v151: {len(uris)} nummer(s) in één API-verzoek aan Liked Songs toegevoegd.")
-    return True
+        last_attempt = int((item or {}).get("last_attempt", 0) or 0)
+        if not last_attempt or now - last_attempt >= PENDING_LIBRARY_LIKE_RETRY_SECONDS:
+            return _v153_send_pending_like(cache, uri)
+    return False
 
 
 def existing_tracks(playlist_id):
