@@ -6854,7 +6854,7 @@ def sync():
               f"{len(live_queue)} nummers veilig in FIFO; 0 Spotify-calls.")
         return
     # Leg het volgende tijdslot vast VOOR enige Spotify-call.
-    cache['__v150_next_spotify_round_at'] = time.time() + 600
+    cache['__v150_next_spotify_round_at'] = time.time() + 180
     save_cache(cache)
 
     blocked_now, removed_from_queue = (0, 0)
