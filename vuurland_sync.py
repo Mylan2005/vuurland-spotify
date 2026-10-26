@@ -889,77 +889,68 @@ def save_track_to_library(uri):
     spotify_request("PUT", "/me/library", params={"uris": uri})
 
 
+# v151: Spotify-likes in betrouwbare batches; één playlistitem per FIFO-ronde.
+# Elk nieuw playlistitem wordt EERST duurzaam als pending opgeslagen.
+# Pas na een geslaagde PUT worden die URI's uit pending verwijderd.
+V151_LIBRARY_BATCH_SIZE = 5
+V151_LIBRARY_MAX_DELAY_SECONDS = 3600
+
+
 def _attempt_library_like(cache, uri):
-    pending = dict(cache.get("__pending_library_likes", {}))
-    pending[uri] = {"last_attempt": 0}
-    cache["__pending_library_likes"] = pending
-    save_cache(cache)
-
-    try:
-        save_track_to_library(uri)
-    except Exception as error:
-        pending = dict(cache.get("__pending_library_likes", {}))
-        pending[uri] = {
-            "last_attempt": int(time.time()),
-            "error": str(error)[:300],
-        }
-        cache["__pending_library_likes"] = pending
-        save_cache(cache)
-        print("⚠️ Track staat in het volume, maar kon nog niet worden geliket; veilig pending.")
-        print(f"   {error}")
+    if not uri:
         return False
-
     pending = dict(cache.get("__pending_library_likes", {}))
-    pending.pop(uri, None)
+    # Reeds bevestigde of reeds wachtende URI's niet opnieuw aanmelden.
+    # Playlist-URI's komen pas hier nadat POST playlist geslaagd is.
+    pending.setdefault(uri, {"queued_at": int(time.time()), "last_attempt": 0})
     cache["__pending_library_likes"] = pending
     save_cache(cache)
-    print("❤️ Opgeslagen in Liked Songs.")
+    print(f"❤️ v151: Liked Songs veilig ingepland ({len(pending)} pending; batch van 5).")
     return True
 
 
-# === VUURLAND PENDING LIKES RETRY v1 ===
 def _retry_one_pending_library_like(cache):
     pending = dict(cache.get("__pending_library_likes", {}))
     if not pending:
         return False
-
     now = int(time.time())
-
-    for uri, info in pending.items():
-        info = dict(info or {})
+    eligible = []
+    for uri, item in pending.items():
+        info = dict(item or {})
         last_attempt = int(info.get("last_attempt", 0) or 0)
-
-        if (
-            last_attempt
-            and now - last_attempt
-            < PENDING_LIBRARY_LIKE_RETRY_SECONDS
-        ):
+        if last_attempt and now - last_attempt < PENDING_LIBRARY_LIKE_RETRY_SECONDS:
             continue
+        eligible.append(uri)
+    if not eligible:
+        return False
 
-        try:
-            save_track_to_library(uri)
-        except Exception as error:
+    # Maximaal een uur wachten bij minder dan vijf toevoegingen.
+    # Oude pending likes uit v150 hebben geen queued_at: meteen afwerken.
+    oldest = min(int((pending[uri] or {}).get("queued_at", 0) or 0) for uri in eligible)
+    if len(eligible) < V151_LIBRARY_BATCH_SIZE and oldest and now - oldest < V151_LIBRARY_MAX_DELAY_SECONDS:
+        return False
+
+    uris = eligible[:40]  # Spotify PUT /me/library aanvaardt maximaal 40 URI's.
+    try:
+        spotify_request("PUT", "/me/library", params={"uris": ",".join(uris)})
+    except Exception as error:
+        # De poging kan een 429 of netwerkprobleem zijn; niets verliezen.
+        for uri in uris:
+            info = dict(pending.get(uri) or {})
             info["last_attempt"] = now
-            info["error"] = str(error)[:300]
+            info["error"] = str(error)[:200]
             pending[uri] = info
-            cache["__pending_library_likes"] = pending
-            save_cache(cache)
-            print(
-                "⚠️ Pending Liked Songs retry mislukt; "
-                "volgende poging pas na cooldown."
-            )
-            return False
-
-        pending.pop(uri, None)
         cache["__pending_library_likes"] = pending
         save_cache(cache)
-        print(
-            "❤️ Eerder pending nummer alsnog opgeslagen "
-            "in Liked Songs."
-        )
-        return True
+        print(f"⚠️ v151: batch van {len(uris)} likes mislukt; alle URI's blijven pending.")
+        return False
 
-    return False
+    for uri in uris:
+        pending.pop(uri, None)
+    cache["__pending_library_likes"] = pending
+    save_cache(cache)
+    print(f"❤️ v151: {len(uris)} nummer(s) in één API-verzoek aan Liked Songs toegevoegd.")
+    return True
 
 
 def existing_tracks(playlist_id):
@@ -6845,7 +6836,7 @@ def sync():
 
     # v150: Development Mode gebruikt ook een gedeelde, niet-gepubliceerde
     # accountquota. Tijdens de pauze blijven de twaalf radiosources actief.
-    # Strenger dan de oude 60s: hoogstens 1 Spotify-verwerkingsronde/10 min.
+    # v151: interval 120 s, met gebundelde library-verzoeken.
     next_spotify_at = float(cache.get('__v150_next_spotify_round_at', 0) or 0)
     if time.time() < next_spotify_at:
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
@@ -6854,7 +6845,7 @@ def sync():
               f"{len(live_queue)} nummers veilig in FIFO; 0 Spotify-calls.")
         return
     # Leg het volgende tijdslot vast VOOR enige Spotify-call.
-    cache['__v150_next_spotify_round_at'] = time.time() + 180
+    cache['__v150_next_spotify_round_at'] = time.time() + 120
     save_cache(cache)
 
     blocked_now, removed_from_queue = (0, 0)
