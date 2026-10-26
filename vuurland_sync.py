@@ -162,7 +162,7 @@ def save_cache(cache):
     # in-memory cache. Never overwrite a newer, still-active disk cooldown.
     persisted = load_cache()
     now = time.time()
-    for key in ("__spotify_api_blocked_until", "__spotify_search_blocked_until", "__spotify_server_error_until"):
+    for key in ("__spotify_api_blocked_until", "__spotify_search_blocked_until", "__spotify_server_error_until", "__v150_next_spotify_round_at"):
         disk_until = float(persisted.get(key, 0) or 0)
         caller_until = float(cache.get(key, 0) or 0)
         if disk_until > now and disk_until > caller_until:
@@ -1468,8 +1468,52 @@ def v148_block_confirmed_romanian(artist, title):
            t.startswith('dezorientat '))
 
 
+# v150: taalfilter en duurzame Spotify-quota-bescherming.
+# Alleen sterke titelsignalen en BEVESTIGDE opnames. Geen nationaliteitsblokkade.
+def v150_is_unwanted_language(artist, title):
+    import re, unicodedata
+    raw = str(title or '')
+    # CJK-script wordt al in de bestaande aparte bron-/titelcheck afgehandeld.
+    # NFKD herkent ook Roemeens zonder accent in radio-metadata.
+    def norm(x):
+        x = unicodedata.normalize('NFKD', str(x or '').casefold())
+        x = ''.join(c for c in x if not unicodedata.combining(c))
+        return ' '.join(re.sub(r'[^a-z0-9]+', ' ', x).split())
+    a, t = norm(artist), norm(title)
+    if not t:
+        return False
+    # Dit zijn bevestigde ongewenste zang/titels; geen algemene artiestblokkade.
+    known = {
+        ('alternosfera', 'ploile nu vin'),
+        ('omul cu sobolani', 'dez orientat'),
+        ('omul cu sobolani', 'dezorientat'),
+        ('suie paparude', 'cea mai buna zi'),
+        ('jurjak', 'vantul'),
+        ('eyedrops', 'pastreaza mi calmul'),
+    }
+    if any(a == ar and (t == ti or t.startswith(ti + ' ')) for ar, ti in known):
+        return True
+    # Roemeense korte zinnen, inclusief 'Ploile nu vin'. Niet enkel 'nu', 'de' of 'la'.
+    romanian = (
+        r'\b(?:ploile|ploaia|zilele|noptile|visele|ochii)\s+(?:nu|vin|mele|mei|tai|tale)\b',
+        r'\b(?:nu|sa)\s+(?:mai|vin|vine|vreau|vrei|stiu|stii|pot|poti|plec|pleci|uita|uiti|fie|spui|suntem)\b',
+        r'\b(?:te|ma|ne)\s+(?:iubesc|iubesti|astept|auzi|uiti)\b',
+        r'\b(?:fara|langa|pana)\s+(?:tine|mine|noi|iubire|sfarsit)\b',
+        r'\b(?:inima|sufletul|viata|iubirea|dragostea)\s+(?:mea|ta|noastra)\b',
+        r'\b(?:unde|cand|cine|cum)\s+(?:esti|suntem|pleci|ramane|vine|stii)\b',
+        r'\b(?:cea|cel)\s+mai\s+(?:buna|bun|frumoasa|frumos)\b',
+    )
+    german = (
+        r'\b(?:ich|du|wir)\s+(?:liebe|vermisse|brauche|suche|habe|hab|bin|bist|mochte|will|kann|weiss)\b',
+        r'\b(?:mein|meine|dein|deine)\s+(?:herz|leben|liebe|seele|welt|traum|augen)\b',
+        r'\b(?:ohne|gegen)\s+(?:dich|mich|uns|euch)\b',
+        r'\b(?:fur|fuer)\s+(?:immer|dich|mich|uns)\b',
+    )
+    return any(re.search(pattern, t) for pattern in romanian + german)
+
+
 def v140_is_unwanted_language_title(title, artist=""):
-    return v148_block_confirmed_romanian(artist, title) or (v143_unwanted_title(title))
+    return v150_is_unwanted_language(artist, title) or (v148_block_confirmed_romanian(artist, title) or (v143_unwanted_title(title)))
 
 
 def v119_is_german_title(title):
@@ -6798,6 +6842,20 @@ def sync():
         print(f"📻 Nieuwe RadioBox-titels veilig bewaard; "
               f"{len(live_queue)} nummers in wachtrij; 0 Spotify-verzoeken.")
         return
+
+    # v150: Development Mode gebruikt ook een gedeelde, niet-gepubliceerde
+    # accountquota. Tijdens de pauze blijven de twaalf radiosources actief.
+    # Strenger dan de oude 60s: hoogstens 1 Spotify-verwerkingsronde/10 min.
+    next_spotify_at = float(cache.get('__v150_next_spotify_round_at', 0) or 0)
+    if time.time() < next_spotify_at:
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_cache(cache)
+        print(f"⏳ v150 SPOTIFY-BUDGET: nog {int(next_spotify_at - time.time())} s; radio blijft lopen; "
+              f"{len(live_queue)} nummers veilig in FIFO; 0 Spotify-calls.")
+        return
+    # Leg het volgende tijdslot vast VOOR enige Spotify-call.
+    cache['__v150_next_spotify_round_at'] = time.time() + 600
+    save_cache(cache)
 
     blocked_now, removed_from_queue = (0, 0)
     if blocked_now or removed_from_queue:
