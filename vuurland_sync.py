@@ -557,6 +557,11 @@ def spotify_request(
             SPOTIFY_SEARCH_HTTP_USED += 1
             print(f"🌐 Spotify Search HTTP: {SPOTIFY_SEARCH_HTTP_USED}/{SPOTIFY_SEARCH_HTTP_LIMIT}")
 
+        # v146: tel echte requests per methode en endpointtype (geen tokens/IDs loggen).
+        v146_kind = ("search" if is_search else
+                     "playlist" if endpoint.startswith("/playlists/") else
+                     "library" if endpoint.startswith("/me/library") else "other")
+        print(f"📊 v146 API-call: {method} {v146_kind}")
         response = requests.request(
             method,
             API_URL + endpoint,
@@ -6822,24 +6827,22 @@ def sync():
         print("ℹ️ v120: gezamenlijke live queue is leeg.")
         return
 
-    # v144: conservatieve Spotify-quotabegroting.
-    # Elke radio-ronde blijft 12 bronnen ophalen; de bestaande FIFO blijft intact.
-    # Alle Spotify-aanvragen (GET/Search/POST/PUT) vallen samen in een budgetslot.
-    # Bewaar het tijdstip VOOR de eerste aanvraag, zodat crashes/runners
-    # niet onmiddellijk extra Spotify-verzoeken veroorzaken.
-    V144_SPOTIFY_INTERVAL_SECONDS = 180
-    v144_now = time.time()
-    v144_last = float(cache.get("__v144_spotify_budget_slot", 0) or 0)
-    if 0 <= v144_now - v144_last < V144_SPOTIFY_INTERVAL_SECONDS:
-        remaining = int(V144_SPOTIFY_INTERVAL_SECONDS - (v144_now - v144_last)) + 1
+    # v146: tijdslot vóór alle Spotify API-werkzaamheden, niet vóór radio-ingestie.
+    # Bewaar slot duurzaam: nieuwe runner kan de ontwikkelaarsquota niet omzeilen.
+    V146_SPOTIFY_INTERVAL_SECONDS = 120
+    v146_now = time.time()
+    v146_last = float(cache.get("__v146_spotify_budget_slot", 0) or 0)
+    if 0 <= v146_now - v146_last < V146_SPOTIFY_INTERVAL_SECONDS:
+        remaining = int(V146_SPOTIFY_INTERVAL_SECONDS - (v146_now - v146_last)) + 1
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
-        print(f"🌱 v144 RADIO-ONLY: Spotify-quotabudget, nog {remaining}s; "
-              f"{len(live_queue)} FIFO-items veilig bewaard; 0 Spotify-verzoeken.")
+        print(f"🌱 v146 RADIO-ONLY: volgend Spotify-slot over {remaining}s; "
+              f"{len(live_queue)} FIFO-items veilig bewaard; 0 Spotify-API-aanvragen.")
         return
-    cache["__v144_spotify_budget_slot"] = v144_now
+    cache["__v146_spotify_budget_slot"] = v146_now
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
     save_cache(cache)
+    print("📊 v146: Spotify-slot gestart (max. één toevoeging, één Search; overige API-aanvragen gemeten).")
 
     # ---------------------------------
     # PLAYLIST
