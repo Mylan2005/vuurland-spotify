@@ -1453,8 +1453,23 @@ def v143_unwanted_title(title):
             or any(re.search(p, text) for p in romanian + german))
 
 
-def v140_is_unwanted_language_title(title):
-    return v143_unwanted_title(title)
+# v148: bevestigde Roemeenstalige opname, geen algemene artiestenblokkade.
+def v148_block_confirmed_romanian(artist, title):
+    import re
+    import unicodedata
+    def clean(text):
+        text = unicodedata.normalize('NFKD', str(text or '').casefold())
+        text = ''.join(ch for ch in text if not unicodedata.combining(ch))
+        return ' '.join(re.sub(r'[^a-z0-9]+', ' ', text).split())
+    a, t = clean(artist), clean(title)
+    # Titel met of zonder haakjes en met gangbare versiesuffixen.
+    return a == 'omul cu sobolani' and (t == 'dez orientat' or
+           t.startswith('dez orientat ') or t == 'dezorientat' or
+           t.startswith('dezorientat '))
+
+
+def v140_is_unwanted_language_title(title, artist=""):
+    return v148_block_confirmed_romanian(artist, title) or (v143_unwanted_title(title))
 
 
 def v119_is_german_title(title):
@@ -6810,7 +6825,7 @@ def sync():
     _v119_before = len(live_queue)
     live_queue = [x for x in live_queue if isinstance(x, dict) and
                   x.get("source") in RADIO_SOURCE_ORDER and
-                  not v140_is_unwanted_language_title(x.get("title", "")) and
+                  not v140_is_unwanted_language_title(x.get("title", ""), x.get("artist", "")) and
                   not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", ""))]
     _v119_removed = _v119_before - len(live_queue)
     if _v119_removed:
@@ -7320,8 +7335,8 @@ def sync():
 
 
         # v119: titelcheck vóór elke Spotify Search, onafhankelijk van artiestenland.
-        if v140_is_unwanted_language_title(title):
-            print(f"⛔ v119 Duitse titel geblokkeerd: {artist} — {title}")
+        if v140_is_unwanted_language_title(title, artist):
+            print(f"⛔ v148 ongewenste taal geblokkeerd: {artist} — {title}")
             live_queue.pop(0)
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
