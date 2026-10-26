@@ -1385,8 +1385,44 @@ def v140_is_romanian_title(title):
     return any(re.search(pattern, value) for pattern in phrases)
 
 
+# v143: extra, conservatieve herkenning van Roemeense en Duitse titels.
+# De taal van de zang is niet betrouwbaar uit metadata af te leiden.
+def v143_unwanted_title(title):
+    import re
+    import unicodedata
+    raw = unicodedata.normalize("NFKD", str(title or "").casefold())
+    plain = "".join(c for c in raw if not unicodedata.combining(c))
+    plain = plain.replace("ș", "s").replace("ş", "s").replace("ț", "t").replace("ţ", "t").replace("ß", "ss")
+    text = " ".join(re.sub(r"[^a-z0-9]+", " ", plain).split())
+    # Vastgestelde Roemeenstalige tracks; accepteer ook versielabels.
+    romanian_titles = (
+        "cea mai buna zi", "vantul", "pastreaza mi calmul",
+        "luna si noi", "cine iubeste si lasa",
+    )
+    if any(text == base or text.startswith(base + " ") for base in romanian_titles):
+        return True
+    # Meerwoordige grammatica is onderscheidender dan losse woorden.
+    romanian = (
+        r"\b(?:cea|cel)\s+mai\s+(?:buna|bun|frumoasa|frumos|mare|mic|trista|trist)\b",
+        r"\b(?:ochii|inima|viata|sufletul|iubirea|noaptea|dragostea|ziua|lumea)\s+(?:mea|ta|noastra|lui|ei)\b",
+        r"\b(?:nu|sa)\s+(?:mai|stiu|vreau|pot|plec|uit|spun|merg|cred|te|ma)\b",
+        r"\b(?:mi|ti)\s+(?:e|ai|este|dor|place)\b",
+        r"\b(?:fara|langa|pana)\s+(?:tine|mine|noi|sfarsit|iubire)\b",
+        r"\b(?:te|ma)\s+(?:iubesc|astept|caut|intorc|doare)\b",
+    )
+    german = (
+        r"\b(?:ich|wir|du)\s+(?:vermiss|vermisse|vermissen|traume|traeume|träume|denke|denken|fuhle|fuehle|fühle|weiss|weisst|weißt|bleib|bleiben)\b",
+        r"\b(?:du|wir)\s+(?:bist|seid|sind|bleibst|bleiben)\s+(?:mein|meine|hier|allein|zusammen)\b",
+        r"\b(?:ohne|fur|fuer|für)\s+(?:dich|mich|uns|euch)\b",
+        r"\b(?:es|das)\s+(?:tut|wird|ist)\s+(?:mir|dir|nicht|gut|weh)\b",
+        r"\b(?:komm|bleib|geh)\s+(?:zuruck|zurueck|zurück|mit|nach|nicht)\b",
+    )
+    return (v119_is_german_title(title) or v140_is_romanian_title(title)
+            or any(re.search(p, text) for p in romanian + german))
+
+
 def v140_is_unwanted_language_title(title):
-    return v119_is_german_title(title) or v140_is_romanian_title(title)
+    return v143_unwanted_title(title)
 
 
 def v119_is_german_title(title):
@@ -6355,25 +6391,20 @@ def v116_stamp_fifo(live_queue, cache):
 
 # v131: expliciete gebruikersvoorkeur; alleen CJK-schrift herkennen, geen taalgok.
 def v131_block_nonlatin_east_asian(artist, title):
-    # Han (Chinese karakters / Kanji), Hiragana, Katakana, Hangul, Bopomofo.
-    # Andere alfabetten en Latijnse letters met accenten blijven behouden.
-    for character in str(artist or "") + str(title or ""):
-        cp = ord(character)
-        if (0x3400 <= cp <= 0x9FFF or
-            0xF900 <= cp <= 0xFAFF or
-            0x20000 <= cp <= 0x3134F or
-            0x3040 <= cp <= 0x30FF or
-            0x31F0 <= cp <= 0x31FF or
-            0xFF66 <= cp <= 0xFF9F or
-            0xAC00 <= cp <= 0xD7AF or
-            0x1100 <= cp <= 0x11FF or
-            0x3130 <= cp <= 0x318F or
-            0xA960 <= cp <= 0xA97F or
-            0xD7B0 <= cp <= 0xD7FF or
-            0x3100 <= cp <= 0x312F or
-            0x31A0 <= cp <= 0x31BF):
-            return True
-    return False
+    import unicodedata
+    # NFKC normalizes half-width/full-width compatibility characters.
+    value = unicodedata.normalize("NFKC", str(artist or "") + " " + str(title or ""))
+    ranges = (
+        (0x2E80, 0x2EFF), (0x2F00, 0x2FDF), (0x2FF0, 0x2FFF),
+        (0x3005, 0x3007), (0x3038, 0x303B),
+        (0x3040, 0x30FF), (0x31F0, 0x31FF),
+        (0x3100, 0x312F), (0x31A0, 0x31BF),
+        (0x3400, 0x9FFF), (0xF900, 0xFAFF),
+        (0x1100, 0x11FF), (0x3130, 0x318F),
+        (0xA960, 0xA97F), (0xAC00, 0xD7AF), (0xD7B0, 0xD7FF),
+        (0x20000, 0x2FA1F), (0x30000, 0x323AF),
+    )
+    return any(lo <= ord(ch) <= hi for ch in value for lo, hi in ranges)
 
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
