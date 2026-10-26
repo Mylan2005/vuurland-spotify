@@ -1901,6 +1901,7 @@ def v80_failure_reason(items, artist, title):
 # v101: bevestigde catalogus-ID's blijven locators: GET + dezelfde matcher,
 # nooit blind toevoegen. Deze exacte bronregels verbruiken GEEN Spotify Search.
 V101_VERIFIED_CATALOG_TRACKS = {
+    ("dayflower", "heart shaped tambourines (sunday version)"): "6TsH1SCDgBSb5wCwT4EivY",  # v147: user supplied; still validate Spotify track
     ("hybris", "how can our love be blind"): "0tAO41U8SChmfAZaehIhuy",
     ("noah & the whale", "five years time"): "12je8giC2S9smUHJ81tpiL",
     ("the kooks", "naive (live for radio x)"): "7BHPGtpuuWWsvE7cCaMuEU",
@@ -2093,6 +2094,13 @@ def find_spotify_track(
     if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
         print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
         return None
+    # v147: uitsluitend de door de gebruiker bevestigde catalogusschrijfwijze.
+    # De originele radio-key blijft behouden voor de v81 locator. Daarna
+    # blijven Spotify artiest/titel/versie en alle overige guards verplicht.
+    if v101_original_key == ("noah & the whale", "five years time"):
+        artist, title = "Noah and the Whale", "5 Years Time"
+        print("📝 v147: gecontroleerde catalogusschrijfwijze Noah And The Whale — 5 Years Time")
+
     # Alleen expliciete Radio X-sessietag mag als gewone studio-opname gelden.
     # Alle andere live/akoestische/remix-specificaties blijven streng.
     if v101_radio_x_studio_title(title) != str(title).strip():
@@ -6829,7 +6837,7 @@ def sync():
 
     # v146: tijdslot vóór alle Spotify API-werkzaamheden, niet vóór radio-ingestie.
     # Bewaar slot duurzaam: nieuwe runner kan de ontwikkelaarsquota niet omzeilen.
-    V146_SPOTIFY_INTERVAL_SECONDS = 120
+    V146_SPOTIFY_INTERVAL_SECONDS = 60
     v146_now = time.time()
     v146_last = float(cache.get("__v146_spotify_budget_slot", 0) or 0)
     if 0 <= v146_now - v146_last < V146_SPOTIFY_INTERVAL_SECONDS:
