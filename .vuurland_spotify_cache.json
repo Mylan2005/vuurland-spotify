@@ -6566,6 +6566,7 @@
       "tv on the radio|||family tree",
       "tv on the radio|||no future shock",
       "tv on the radio|||shout me out",
+      "twelve drummers drumming|||we'll be the first ones",
       "two door cinema club|||beacon",
       "two door cinema club|||cigarettes in the theatre",
       "two door cinema club|||next year",
@@ -10182,6 +10183,7 @@
       "lorelei|||float my bed",
       "lorelei|||inside the crimelab",
       "lorelei|||sometimesmethinks",
+      "love spirals downwards|||drops rain and sea",
       "love spirals downwards|||el pedregal",
       "love spirals downwards|||ladonna dissima",
       "love spirals downwards|||noumena of spirit",
@@ -46095,7 +46097,7 @@
     "a shoreline dream|||down with the upward feat mark gardner": 1,
     "giovanni battista pergolesi|||stabat mater dolorosa": 1,
     "dayflower|||heart shaped tambourines sunday version": 1,
-    "vampire weekend|||exit music for a film": 1,
+    "vampire weekend|||exit music for a film": 2,
     "noah & the whale|||five years time": 1,
     "the giraffe told me in my dream|||glimpse": 1,
     "波卡利甜 pocari sweet|||by the ocean": 1,
@@ -47383,6 +47385,14 @@
       "failed_at": 1793035540,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "vampire weekend|||exit music for a film": {
+      "artist": "Vampire Weekend",
+      "title": "Exit Music (For a Film)",
+      "source": "championship_vinyl",
+      "failed_at": 1793035680,
+      "matching_version": 35,
+      "full_search_cycles": 2
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -68197,6 +68207,7 @@
       "bon iver|||skinny love"
     ],
     "indie_select": [
+      "twelve drummers drumming|||we'll be the first ones",
       "bloc party|||kreuzberg",
       "the legends|||monday to saturday",
       "ben watt stimming & julia biel|||bright star sunset mix",
@@ -68295,8 +68306,7 @@
       "kraftwerk|||radioactivity",
       "the promise ring|||stop playing guitar",
       "james|||hey ma",
-      "heaven 17|||we don't need this fascist groove thang full length 12'' mix",
-      "comsat angels|||total war"
+      "heaven 17|||we don't need this fascist groove thang full length 12'' mix"
     ],
     "championship_vinyl": [
       "the mountain goats|||song for dennis brown",
@@ -68911,6 +68921,7 @@
       "diffident daffodils|||will we ever unite"
     ],
     "dkfm_shoegaze": [
+      "starbelliedbug|||rocket",
       "dead leaf echo|||dream orphans",
       "skymender|||symbols",
       "sakawa boys|||sakawa",
@@ -69009,10 +69020,10 @@
       "yuck|||get away",
       "alvvays|||pressed",
       "versing|||sated",
-      "sun mahshene|||waves",
-      "decay|||greed"
+      "sun mahshene|||waves"
     ],
     "dkfm_classic": [
+      "love spirals downwards|||drops rain and sea",
       "sixpence none the richer|||love salvation the fear of death",
       "cranes|||beautiful friend",
       "the belltower|||in hollow",
@@ -69111,8 +69122,7 @@
       "cranes|||breeze",
       "whimsical|||my daydream",
       "malory|||spring",
-      "ride|||time of her time",
-      "lorelei|||sometimesmethinks"
+      "ride|||time of her time"
     ]
   },
   "__match_v35__beck|||ride lonesome": "spotify:track:4ZNjYG7CW4ogsOtIB36h1j",
@@ -70787,7 +70797,7 @@
   "__match_v35__phoebe bridgers|||sidelines": "spotify:track:4SKvKJaqkRl1bUZWEqTYzl",
   "__match_v35__the smiths|||last night i dreamt that somebody loved me": "spotify:track:17zN523CEjJWBGXrUb3xex",
   "__last_radio_key_radio_x_chilled": "athlete|||you got the style",
-  "__last_radio_key_indie_select": "bloc party|||kreuzberg",
+  "__last_radio_key_indie_select": "twelve drummers drumming|||we'll be the first ones",
   "__last_radio_key_championship_vinyl": "the mountain goats|||song for dennis brown",
   "__match_v35__kylie minogue|||confide in me": "spotify:track:0U0VCzqz0CvbjrYOFKQC6W",
   "__match_v35__richard ashcroft|||a song for the lovers": "spotify:track:7a90gal9tr3yS8bEXUvu8D",
@@ -70958,7 +70968,7 @@
   "__match_v35__lush|||thoughtforms": "spotify:track:6wXVVppPXjHoMn44v7sEVx",
   "__match_v35__alanis morissette|||hand in my pocket acoustic": "spotify:track:78kkknD87Eor8RDGY9Gyuv",
   "__match_v35__dark sky|||rainkist": "spotify:track:01TqEqmVhBDlnsrWkdG9gD",
-  "__not_found_v35__vampire weekend|||exit music for a film": 1792799056,
+  "__not_found_v35__vampire weekend|||exit music for a film": 1793035680,
   "__match_v35__tom rush|||no regrets": "spotify:track:3i0UMhlIJar7XwKN53NKnX",
   "__match_v35__ashes and diamonds|||setting yourself up for love": "spotify:track:7ajTmG5BSIQ39iEgRkFucD",
   "__match_v35__minuit|||aotearoa instrumental": "spotify:track:7wlckWYOiZDAWD8XgN8DA3",
@@ -72132,7 +72142,7 @@
   "__match_v35__the flaming lips|||do you realise?": "spotify:track:1GjpSlPPKzrCFD0n8Zjhp3",
   "__match_v35__hexes & ohs|||h-h-highschool": "spotify:track:6JLvv6xOazGDQHn9P8ast3",
   "__match_v35__elton john|||tiny dancer": "spotify:track:2TVxnKdb3tqe1nhQWwwZCO",
-  "__v116_fifo_next_sequence": 4390,
+  "__v116_fifo_next_sequence": 4392,
   "__match_v35__good posture|||last time": "spotify:track:2wlqQfTm8x7RY0WldjFmT3",
   "__match_v35__billy strings|||gild the lily": "spotify:track:181YsWsKwhTmoHYZ4xtiuZ",
   "__match_v35__new order|||every little counts": "spotify:track:3uJmmY9zBGV3ONk3KiMfWY",
@@ -72716,7 +72726,7 @@
   "__match_v35__the dream academy|||please please please let me get what i want": "spotify:track:0smzrlYiBiecxfG8p5QDcQ",
   "__match_v35__the smiths|||how soon is now?": "spotify:track:0Nmu7zxpMYNJ3N9YDY6VEN",
   "__match_v35__hozier|||eat your young": "spotify:track:3hbKcj640iYmPQgecainOr",
-  "__last_radio_key_dkfm_shoegaze": "dead leaf echo|||dream orphans",
+  "__last_radio_key_dkfm_shoegaze": "starbelliedbug|||rocket",
   "__match_v35__hot chip|||need you now": "spotify:track:5MRYyecW552BEq2nRBfIQX",
   "__match_v35__paula cole|||where have all the cowboys gone?": "spotify:track:2ck13qfgRZ1msyEJlDqzvk",
   "__match_v35__the knocks feat foster the people|||ride or die": "spotify:track:38Zr5Q5O5o6CYaioIRHSqL",
@@ -72766,7 +72776,7 @@
   "__match_v35__joan armatrading|||love and affection": "spotify:track:6Mnne5V9ZifNID59dswUcZ",
   "__match_v35__liam gallagher|||once": "spotify:track:34fv3psKQOOwWZBRxoIF4I",
   "__match_v35__boy|||this is the beginning": "spotify:track:36QX8n9GdBgmgMGoR8MpHd",
-  "__last_radio_key_dkfm_classic": "sixpence none the richer|||love salvation the fear of death",
+  "__last_radio_key_dkfm_classic": "love spirals downwards|||drops rain and sea",
   "__match_v35__junip|||always": "spotify:track:5kbjKLy1Lc03BAuAHDDIzG",
   "__match_v35__mt si|||911": "spotify:track:4JoQ83hGXh5qdDUYZ8aAfZ",
   "__match_v35__balthazar|||losers": "spotify:track:6otUjBoNrp27EubqsoYGQx",
@@ -73538,7 +73548,7 @@
   "__v144_spotify_budget_slot": 1793032587.419216,
   "__not_found_v35__new order|||hellbent original mix": 1793032164,
   "__match_v35__tame impala|||lost in yesterday": "spotify:track:5JWPUEov2wlX7c0jhYZpeB",
-  "__v146_spotify_budget_slot": 1793035539.3365316,
+  "__v146_spotify_budget_slot": 1793035680.0177014,
   "__match_v35__royksopp|||you don't have a clue": "spotify:track:3N7BqwqgJtCJqPXzyd3Fh0",
   "__match_v35__bob dylan|||the times they are a-changin'": "spotify:track:52vA3CYKZqZVdQnzRrdZt6",
   "__match_v35__luke roberts|||unspotted clothes": "spotify:track:0yyg8gbnyiQ88s6Vqkozee",
