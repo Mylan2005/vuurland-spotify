@@ -1002,6 +1002,39 @@ def existing_tracks(playlist_id):
 # ONLINE RADIO BOX
 # =========================
 
+# v145: alleen tijdelijke RadioBox-HTTP/verbindingproblemen opvangen.
+# Geen Spotify-retries, geen wijziging aan FIFO of muziekmatcher.
+def v145_fetch_radiobox_response(source_url, source_name):
+    import requests
+    import time
+
+    for attempt in range(1, 4):
+        try:
+            response = requests.get(
+                source_url,
+                headers={"User-Agent": "Mozilla/5.0"},
+                timeout=30,
+            )
+            response.raise_for_status()
+            return response
+        except (requests.exceptions.ConnectionError,
+                requests.exceptions.Timeout) as error:
+            temporary_error = error
+        except requests.exceptions.HTTPError as error:
+            status = getattr(getattr(error, "response", None), "status_code", None)
+            if status not in (408, 429, 500, 502, 503, 504):
+                raise  # Echte HTTP-fouten niet maskeren.
+            temporary_error = error
+        if attempt < 3:
+            print(f"⚠️ {source_name}: tijdelijke RadioBox-fout; "
+                  f"poging {attempt}/3 mislukt, opnieuw proberen.")
+            time.sleep(2 if attempt == 1 else 5)
+    print(f"⏭️ {source_name}: na 3 mislukte pogingen alleen deze bron "
+          "voor deze ronde overgeslagen. Volgende ronde opnieuw; "
+          "vorige bronstand en FIFO blijven bewaard.")
+    return None
+
+
 def get_radiobox_tracks(
     source_url,
     source_name,
@@ -1011,15 +1044,9 @@ def get_radiobox_tracks(
         f"📻 {source_name} wordt gecontroleerd..."
     )
 
-    response = requests.get(
-        source_url,
-        headers={
-            "User-Agent": "Mozilla/5.0"
-        },
-        timeout=30,
-    )
-
-    response.raise_for_status()
+    response = v145_fetch_radiobox_response(source_url, source_name)
+    if response is None:
+        return []
 
     soup = BeautifulSoup(
         response.text,
