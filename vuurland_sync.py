@@ -1905,8 +1905,9 @@ def v80_search_route(artist, title, variant, confirmed=None):
     # Dit was geen officiële catalogustitel. Houd de normale woorden intact.
     if variant == 1 and artist.casefold().strip() == "pieta brown" and title.casefold().strip() == "lullaby":
         return {'title': title, 'artist': artist, 'reason': 'v89_preserve_title'}
-    if variant == 1 and re.fullmatch(r'[A-Za-z]{6,16}', title):
-        return {'title': ' '.join(title.upper()), 'artist': artist, 'reason': 'spaced_letters'}
+    # v156: gewone enkelwoordtitels nooit automatisch in losse letters
+    # omzetten. Dat schaadt de zoekranking; bekende catalogusuitzonderingen
+    # (zoals Bon Iver - S P E Y S I D E) worden apart en expliciet behandeld.
     return {'title': title, 'artist': artist, 'reason': 'ordinary'}
 
 
@@ -2752,8 +2753,9 @@ def find_spotify_track(
     # v77: Spotify catalogiseert sommige enkelwoordtitels als losse
     # letters (Speyside -> S P E Y S I D E). Alleen op een later zoekpad
     # één structureel gespelde zoekterm; geen extra Spotify HTTP-call.
-    if (search_variant == 1 and re.fullmatch(r"[A-Za-z]{6,16}", str(search_title).strip())):
-        search_title = " ".join(str(search_title).strip().upper())
+    # v156: geen generieke letter-voor-letter-zoekopdracht meer.
+    # De expliciet geverifieerde Bon Iver / Speyside-uitzondering hieronder
+    # blijft actief, ook zonder deze algemene fallback.
 
     # v79: een bekende structureel gespatieerde catalogustitel mag al
     # bij de eerste zoekpoging met de Spotify-schrijfwijze gezocht worden.
