@@ -1,0 +1,31 @@
+name: Nummer uitsluiten
+description: Blokkeer een Spotify-track in Vuurland via je telefoon
+title: "[Uitsluiten] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Plak de Spotify-tracklink. Je bestaande playlist en FIFO worden niet gewijzigd.
+        Optioneel kun je artiest en titel invullen om ook andere uitvoeringen met dezelfde artiest en titel te blokkeren.
+  - type: input
+    id: spotify-link
+    attributes:
+      label: Spotify-link
+      placeholder: https://open.spotify.com/track/2XU0oxnq2qxCpomAAuJY8K
+    validations:
+      required: true
+  - type: input
+    id: artiest
+    attributes:
+      label: Artiest (optioneel)
+      placeholder: Tones and I
+    validations:
+      required: false
+  - type: input
+    id: titel
+    attributes:
+      label: Titel (optioneel)
+      placeholder: Dance Monkey
+    validations:
+      required: false
