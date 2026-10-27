@@ -17,9 +17,15 @@ jobs:
       - name: Lees state en maak rapport zonder Spotify-verzoeken
         run: |
           python3 vuurland_v86_rapport.py --data-dir . --output vuurland_v86_gezondheidsrapport.md
+          python3 vuurland_matcher_audit.py --data-dir . --out-dir .
+          echo "## Matcher-audit" >> "$GITHUB_STEP_SUMMARY"
+          head -n 7 vuurland_matcher_audit.md >> "$GITHUB_STEP_SUMMARY"
           cat vuurland_v86_gezondheidsrapport.md >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
           name: vuurland-v86-gezondheidsrapport
-          path: vuurland_v86_gezondheidsrapport.md
+          path: |
+            vuurland_v86_gezondheidsrapport.md
+            vuurland_matcher_audit.md
+            vuurland_matcher_audit.json
           retention-days: 30
