@@ -23,10 +23,15 @@ with tempfile.TemporaryDirectory() as d:
  for variant in (0,1):
   result,q=run('BON IVER','Speyside',variant,[candidate('Bon Iver','S P E Y S I D E')])
   assert result=='spotify:track:OFFLINE',(variant,result,q)
-  assert 'S P E Y S I D E' in q and 'track:' not in q,(variant,q)
+  if variant == 0:
+   assert 'S P E Y S I D E' in q and 'track:' not in q,(variant,q)
+  else:
+   # Latere zoekpoging behoudt gewone titelwoorden.
+   assert 'Speyside' in q and 'S P E Y S I D E' not in q,(variant,q)
   print('✅ Bon Iver variant',variant, q)
  result,q=run('Another Artist','Sunshine',1,[candidate('Another Artist','S U N S H I N E')])
- assert result=='spotify:track:OFFLINE' and 'track:' not in q,(result,q)
+ assert result=='spotify:track:OFFLINE' and 'Sunshine' in q,(result,q)
+ assert 'S U N S H I N E' not in q,(result,q)
  print('✅ Algemene schrijfwijze',q)
  result,q=run('BON IVER','Speyside',1,[candidate('Wrong Artist','S P E Y S I D E')])
  assert result is None
