@@ -30,6 +30,7 @@ jobs:
           python -m py_compile vuurland_sync.py
           python test_v85_offline.py
           python test_v86_offline.py
+          python test_v155_offline.py
           for v in 77 78 79 80 81 82; do
             python "v${v}_offline_test.py"
           done
