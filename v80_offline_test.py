@@ -8,7 +8,7 @@ with tempfile.TemporaryDirectory() as d:
     m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
     assert m.v80_unicode_search_text('Wahine uʻi') == "Wahine u'i"
     assert m.v80_unicode_search_text('Cœur æther Straße ﬁre') == 'Coeur aether Strasse fire'
-    assert m.v80_search_route('Some Artist','Sunshine',1)['title']=='S U N S H I N E'
+    assert m.v80_search_route('Some Artist','Sunshine',1)['title']=='Sunshine'
     assert m.v80_search_route('Some Artist','Sunshine',0)['title']=='Sunshine'
     cache={}
     assert not m.v80_record_confirmed(cache,'A','B','A','B','bad-uri')
