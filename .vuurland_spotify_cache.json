@@ -4,7 +4,7 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "cigarettes after sex|||twizzler",
-  "__last_radio_key_mellow_mix": "the beatles|||all you need is love",
+  "__last_radio_key_mellow_mix": "dido|||don't leave home",
   "__v47_radio_discovered": {
     "vuurland": [
       "a blaze of feather|||carousel",
@@ -10039,6 +10039,7 @@
       "copperplate|||just breathe",
       "copperplate|||preoccupy",
       "copperplate|||recede",
+      "copperplate|||subtle senses",
       "coral drive|||cold blanket",
       "coral drive|||shifting sand",
       "cosmicdust|||after sadness",
@@ -11014,6 +11015,7 @@
       "etti/etta|||eyes and ears",
       "ex pilots|||thirty days",
       "failure|||force fed rainbow",
+      "fawning|||wait",
       "fawns of love x robin guthrie|||someday robin guthrie version",
       "fawns of love|||girls",
       "fawns of love|||zine days",
@@ -12402,12 +12404,6 @@
   },
   "__v69_bootstrap_complete": true,
   "__v47_failed_tracks": {
-    "the pieces of shit|||lay & love": {
-      "artist": "The Pieces of shit",
-      "title": "Lay & Love",
-      "source": "dreampop_radio",
-      "failed_at": 1793038471
-    },
     "bloc party|||ares foals remix": {
       "artist": "Bloc Party",
       "title": "Ares (Foals Remix)",
@@ -12559,7 +12555,7 @@
   },
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 8330,
+  "__vuurland_active_playlist_count": 8331,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -15343,6 +15339,7 @@
     "dressed like boys|||jaouad",
     "dressed like boys|||nando",
     "dressed like boys|||stonewall riots forever",
+    "drew holcomb & the neighbors|||find your people",
     "drew nelson|||hallelujah morning",
     "driven snow|||in moonlight",
     "dry cleaning|||i have the key",
@@ -30738,6 +30735,7 @@
     "spotify:track:6Gh6lzW6QeiXkFSfsvNS0b",
     "spotify:track:6GlYe4WViloOfVhVvoFLSn",
     "spotify:track:6GmoLmBISzLomNjM18dFgz",
+    "spotify:track:6GuyIXoGIaTw1Pg6Ug9enJ",
     "spotify:track:6GvAM8oyVApQHGMgpBt8yl",
     "spotify:track:6GyDY0yE47rfk8pcuKhioh",
     "spotify:track:6H2NLitfj3bsc068kKVcJY",
@@ -37049,6 +37047,7 @@
     "QMMZN2102407",
     "QMNAQ1200001",
     "QMNGX1500032",
+    "QMP2J2200014",
     "QMQEE1600032",
     "QMQQQ1700001",
     "QMR6U2000018",
@@ -49122,7 +49121,8 @@
     "spotify:track:0uUzr8xm2h9c7d5PD59Zd4": "QMBZ91335891",
     "spotify:track:4leGurVmD94xHXxfbUfZZn": "JPB672404538",
     "spotify:track:1nNrWxZNWovA6xmKOvVP9a": "USHM90606544",
-    "spotify:track:5S373uad437WnwV50YD6nB": "QM7282615810"
+    "spotify:track:5S373uad437WnwV50YD6nB": "QM7282615810",
+    "spotify:track:6GuyIXoGIaTw1Pg6Ug9enJ": "QMP2J2200014"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793114412,
@@ -71363,6 +71363,7 @@
       "damien rice|||cannonball"
     ],
     "mellow_mix": [
+      "dido|||don't leave home",
       "the beatles|||all you need is love",
       "madredeus|||as ilhas dos acores",
       "bob dylan|||tangled up in blue",
@@ -71461,8 +71462,7 @@
       "jimmie spheeris|||let it flow",
       "iron & wine|||call it dreaming",
       "fats domino|||walking to new orleans",
-      "the doobie brothers|||black water",
-      "son volt|||windfall"
+      "the doobie brothers|||black water"
     ],
     "big_sonic_heaven": [
       "velour 100|||sky from underwater",
@@ -72281,6 +72281,7 @@
       "jungle|||romeo"
     ],
     "dkfm_edge": [
+      "copperplate|||subtle senses",
       "casino hearts|||ice in mouth",
       "deary|||selene",
       "shoegazer|||who i am",
@@ -72379,10 +72380,10 @@
       "luster|||all the things we said",
       "theredone|||set visibility high voltage mix",
       "futureheaven|||tired eyes",
-      "springloader|||nothing i want more",
-      "my sister maura|||shattered through"
+      "springloader|||nothing i want more"
     ],
     "dkfm_shoegaze": [
+      "fawning|||wait",
       "beliefs|||tidal wave",
       "jupiter sprites|||a radiant eclipse",
       "twin studies|||still life",
@@ -72481,8 +72482,7 @@
       "no vacation|||how",
       "paradise|||blue flower",
       "well adjusted|||so sick",
-      "ludalloy|||mellow light",
-      "t g shand|||the ease"
+      "ludalloy|||mellow light"
     ],
     "dkfm_classic": [
       "the curtain society|||no answer",
@@ -75601,7 +75601,7 @@
   "__match_v35__the flaming lips|||do you realise?": "spotify:track:1GjpSlPPKzrCFD0n8Zjhp3",
   "__match_v35__hexes & ohs|||h-h-highschool": "spotify:track:6JLvv6xOazGDQHn9P8ast3",
   "__match_v35__elton john|||tiny dancer": "spotify:track:2TVxnKdb3tqe1nhQWwwZCO",
-  "__v116_fifo_next_sequence": 6394,
+  "__v116_fifo_next_sequence": 6398,
   "__match_v35__good posture|||last time": "spotify:track:2wlqQfTm8x7RY0WldjFmT3",
   "__match_v35__billy strings|||gild the lily": "spotify:track:181YsWsKwhTmoHYZ4xtiuZ",
   "__match_v35__new order|||every little counts": "spotify:track:3uJmmY9zBGV3ONk3KiMfWY",
@@ -76154,7 +76154,7 @@
   "__match_v35__stornoway|||zorbing": "spotify:track:1U7axIpxnYI2CrZSYGSQFb",
   "__match_v35__seapony|||prove to me": "spotify:track:4rpBdlQg3Z3QBt5X84CUBL",
   "__not_found_v35__the chameleons|||tears full arrangement": 1792924368,
-  "__last_radio_key_dkfm_edge": "casino hearts|||ice in mouth",
+  "__last_radio_key_dkfm_edge": "copperplate|||subtle senses",
   "__match_v35__the brook & the bluff|||everything is just a mess": "spotify:track:2OMlPoee6u5IJzWTXhS2jN",
   "__match_v35__editors|||cold": "spotify:track:62cCiEdixPkifGDx7Py65Z",
   "__match_v35__marika hackman|||cannibal": "spotify:track:0rLUQX6lhtoXWr1WnVe2m3",
@@ -76185,7 +76185,7 @@
   "__match_v35__the dream academy|||please please please let me get what i want": "spotify:track:0smzrlYiBiecxfG8p5QDcQ",
   "__match_v35__the smiths|||how soon is now?": "spotify:track:0Nmu7zxpMYNJ3N9YDY6VEN",
   "__match_v35__hozier|||eat your young": "spotify:track:3hbKcj640iYmPQgecainOr",
-  "__last_radio_key_dkfm_shoegaze": "beliefs|||tidal wave",
+  "__last_radio_key_dkfm_shoegaze": "fawning|||wait",
   "__match_v35__hot chip|||need you now": "spotify:track:5MRYyecW552BEq2nRBfIQX",
   "__match_v35__paula cole|||where have all the cowboys gone?": "spotify:track:2ck13qfgRZ1msyEJlDqzvk",
   "__match_v35__the knocks feat foster the people|||ride or die": "spotify:track:38Zr5Q5O5o6CYaioIRHSqL",
@@ -77007,7 +77007,7 @@
   "__v144_spotify_budget_slot": 1793032587.419216,
   "__not_found_v35__new order|||hellbent original mix": 1793032164,
   "__match_v35__tame impala|||lost in yesterday": "spotify:track:5JWPUEov2wlX7c0jhYZpeB",
-  "__v146_spotify_budget_slot": 1793124750.1001687,
+  "__v146_spotify_budget_slot": 1793124895.625049,
   "__match_v35__royksopp|||you don't have a clue": "spotify:track:3N7BqwqgJtCJqPXzyd3Fh0",
   "__match_v35__bob dylan|||the times they are a-changin'": "spotify:track:52vA3CYKZqZVdQnzRrdZt6",
   "__match_v35__luke roberts|||unspotted clothes": "spotify:track:0yyg8gbnyiQ88s6Vqkozee",
@@ -77141,7 +77141,7 @@
   "__match_v35__vetiver|||strictly rule": "spotify:track:3CU5Q0ipLGlZ73jJmuiXkl",
   "__match_v35__pale waves|||television romance": "spotify:track:5rZPu3Hdz9v8y2dNi2eoTg",
   "__match_v35__lane 8|||be mine - original mix": "spotify:track:2MdFdormxFKzvWZyz5V3LL",
-  "__v150_next_spotify_round_at": 1793124869.424407,
+  "__v150_next_spotify_round_at": 1793125014.8153477,
   "__match_v35__tennis|||cape dory": "spotify:track:7hRnt1m3v9Xfvczt1wqNKx",
   "__match_v35__mo kenney|||sucker": "spotify:track:2nKFX5FNeySEQgGls7BpXZ",
   "__match_v35__waving blue|||so cold": "spotify:track:4khj4CiIham34ecCn5f12P",
@@ -77406,5 +77406,6 @@
   "__match_v35__sun club|||beauty meat": "spotify:track:0uUzr8xm2h9c7d5PD59Zd4",
   "__match_v35__oeil|||iridescence": "spotify:track:4leGurVmD94xHXxfbUfZZn",
   "__match_v35__cary hudson|||the phoenix": "spotify:track:1nNrWxZNWovA6xmKOvVP9a",
-  "__match_v35__luster|||forever": "spotify:track:5S373uad437WnwV50YD6nB"
+  "__match_v35__luster|||forever": "spotify:track:5S373uad437WnwV50YD6nB",
+  "__match_v35__drew holcomb & the neighbors|||find your people": "spotify:track:6GuyIXoGIaTw1Pg6Ug9enJ"
 }
