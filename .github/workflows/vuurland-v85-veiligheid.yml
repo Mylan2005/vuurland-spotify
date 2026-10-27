@@ -8,6 +8,9 @@ on:
       - 'v*_offline_test.py'
       - '.github/workflows/vuurland-v85-veiligheid.yml'
       - 'vuurland_v86_rapport.py'
+      - 'vuurland_matcher_audit.py'
+      - 'test_matcher_audit_offline.py'
+      - '.github/workflows/vuurland-v86-dagrapport.yml'
       - '.github/workflows/vuurland.yml'
       - '.github/workflows/vuurland-v86-dagrapport.yml'
   workflow_dispatch:
@@ -31,6 +34,7 @@ jobs:
           python test_v85_offline.py
           python test_v86_offline.py
           python test_v155_offline.py
+          python test_matcher_audit_offline.py
           for v in 77 78 79 80 81 82; do
             python "v${v}_offline_test.py"
           done
