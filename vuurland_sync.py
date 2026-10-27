@@ -1939,6 +1939,7 @@ def v80_failure_reason(items, artist, title):
 # v101: bevestigde catalogus-ID's blijven locators: GET + dezelfde matcher,
 # nooit blind toevoegen. Deze exacte bronregels verbruiken GEEN Spotify Search.
 V101_VERIFIED_CATALOG_TRACKS = {
+    ("adrian borland & the citizens", "brittle heaven"): "2on0xeyxeQfAPabhSsz4h9",  # Spotify confirms Adrian Borland + Citizens; matcher still validates
     ("dayflower", "heart shaped tambourines (sunday version)"): "6TsH1SCDgBSb5wCwT4EivY",  # v147: user supplied; still validate Spotify track
     ("hybris", "how can our love be blind"): "0tAO41U8SChmfAZaehIhuy",
     ("noah & the whale", "five years time"): "12je8giC2S9smUHJ81tpiL",
