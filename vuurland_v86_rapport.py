@@ -57,7 +57,9 @@ def make_report(folder):
                       'Dit zijn historische mislukte zoekacties, geen bewijs dat nummers ontbreken op Spotify.',
                       'Automatisch toevoegen blijft verboden zonder de bestaande volledige matchcontrole.', ''])
         if failures:
-            lines.extend(f'- {n} pogingen — `{re.sub(r"[\r\n`]+", " ", key)[:180]}`' for n, key in failures[:100])
+            for n, key in failures[:100]:
+                clean_key = re.sub(r'[\r\n`]+', ' ', key)[:180]
+                lines.append(f'- {n} pogingen — `{clean_key}`')
         else:
             lines.append('Geen geregistreerde mislukte zoekacties.')
     lines.extend(['', '## Zelfherstel en controle', '',
