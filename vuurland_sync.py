@@ -1955,6 +1955,7 @@ V101_VERIFIED_CATALOG_TRACKS = {
 # Een door de gebruiker expliciet uitgesloten opname wordt niet gezocht,
 # niet uit cache hersteld en niet aan de playlist toegevoegd.
 V101_EXCLUDED_RADIO_TRACKS = {
+    ('tones and i', 'dance monkey'),
     ("nick cave", "evil ('silver alert' remix feat. matt berninger)"),
     ("kelley polar", "entropy reigns (pearson and usher's second law dynamix)"),
     # v132: persoonlijk uitgesloten Spotify-track 3RnnKPZTVu639oOZ5Qry5y
