@@ -6,6 +6,8 @@ on:
       - 'vuurland_sync.py'
       - 'test_v*_offline.py'
       - 'v*_offline_test.py'
+      - 'v79_offline_test.py'
+      - 'v80_offline_test.py'
       - '.github/workflows/vuurland-v85-veiligheid.yml'
       - 'vuurland_v86_rapport.py'
       - 'vuurland_matcher_audit.py'
