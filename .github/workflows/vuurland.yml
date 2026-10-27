@@ -224,6 +224,17 @@ jobs:
             echo "🕒 De geplande workflow probeert later opnieuw."
           fi
 
+      # Taalcontrole wordt lokaal verzameld; bewaar de kandidaten apart
+      # zonder onbekende taal als foutief of als toegestaan te bestempelen.
+      - name: Bewaar kandidaten voor taalcontrole
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-taalcontrole-kandidaten
+          path: vuurland_taalcontrole_nieuw.csv
+          if-no-files-found: ignore
+          retention-days: 30
+
       - name: Technische syncdetails downloaden
         if: always()
         uses: actions/upload-artifact@v4
