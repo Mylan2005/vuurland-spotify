@@ -1,0 +1,49 @@
+name: Nummer uitsluiten vanaf gsm
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  exclude:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, '[Uitsluiten]')
+    runs-on: ubuntu-24.04
+    concurrency:
+      group: vuurland-exclusions
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Registreer uitsluiting
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 .github/scripts/nummer_uitsluiten.py
+          git add vuurland_user_exclusions.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Exclude Spotify track requested in issue #${ISSUE_NUMBER}"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo "Rebase-conflict, geen state overschreven" >&2
+                exit 1
+              fi
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" -eq 5 ]; then exit 1; fi
+              sleep 5
+            done
+          fi
+          gh issue comment "$ISSUE_NUMBER" --repo "$GH_REPO" --body "✅ Spotify-opname uitgesloten. De volgende sync met de nieuwe code respecteert deze uitsluiting. Een reeds toegevoegd nummer wordt niet automatisch verwijderd."
+          gh issue close "$ISSUE_NUMBER" --repo "$GH_REPO" --reason completed
