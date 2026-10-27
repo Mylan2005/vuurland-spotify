@@ -1974,6 +1974,27 @@ V101_EXCLUDED_RADIO_TRACKS = {
 
 }
 
+# Mobiele uitsluitingen via GitHub Issues; geen Spotify API-verzoek.
+# Het JSON-bestand staat naast dit script en wordt bij een nieuwe run geladen.
+V155_EXCLUDED_SPOTIFY_IDS = set()
+try:
+    with open(os.path.join(os.path.dirname(__file__), "vuurland_user_exclusions.json"), encoding="utf-8") as _v155_file:
+        _v155_exclusions = json.load(_v155_file)
+    V155_EXCLUDED_SPOTIFY_IDS.update(str(x) for x in _v155_exclusions.get("ids", [])
+                                     if re.fullmatch(r"[A-Za-z0-9]{22}", str(x)))
+    for _v155_pair in _v155_exclusions.get("pairs", []):
+        if isinstance(_v155_pair, list) and len(_v155_pair) == 2:
+            V101_EXCLUDED_RADIO_TRACKS.add((
+                " ".join(str(_v155_pair[0]).casefold().split()),
+                " ".join(str(_v155_pair[1]).casefold().split()),
+            ))
+except FileNotFoundError:
+    pass
+except (OSError, ValueError, TypeError) as _v155_error:
+    # Fail closed: geen Spotify-toevoegingen met onleesbare uitsluitingslijst.
+    raise RuntimeError("Mobiele uitsluitingslijst is ongeldig; sync veilig gestopt") from _v155_error
+
+
 
 def v101_radio_key(artist, title):
     return (" ".join(str(artist).casefold().split()),
@@ -7897,6 +7918,14 @@ def sync():
                 f"{searches_used}/{MAX_SEARCHES_PER_RUN}"
             )
 
+            continue
+
+        # Mobiele uitsluiting: ook bij bekende cachematches op Spotify-ID blokkeren.
+        if str(uri).split(":")[-1].split("/")[-1] in V155_EXCLUDED_SPOTIFY_IDS:
+            print(f"⏭️ v155: expliciet uitgesloten Spotify-ID: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
             continue
 
         # v102: voorkom toevoegen via Spotify-cache of een cataloguslocator.
