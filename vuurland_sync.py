@@ -35,6 +35,7 @@ PLAYLIST_ID = os.environ.get("VUURLAND_PLAYLIST_ID", "555lFTvdRswe9ukybmOM8T")
 #
 # De normale titelcontrole blijft volledig actief.
 ARTIST_ALIASES = {
+    "the twerps": ["Twerps"],  # Verified Spotify catalog name for Dreamin
     # v101: officiële artiestcredits die RadioBox onder een andere naam toont.
     "hybris": ["Postiljonen"],
     "xymox": ["Clan of Xymox"],
