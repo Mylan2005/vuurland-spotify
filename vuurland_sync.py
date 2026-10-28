@@ -101,7 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland",)
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6568,6 +6568,18 @@ def sync():
             "tracks": get_vuurland_tracks(),
             "cache_key": "__last_radio_key_vuurland",
         },
+        {
+            "id": "mellow_mix",
+            "name": "Radio Paradise Mellow Mix",
+            "tracks": get_mellow_mix_tracks(),
+            "cache_key": "__last_radio_key_mellow_mix",
+        },
+        {
+            "id": "big_sonic_heaven",
+            "name": "Big Sonic Heaven Radio",
+            "tracks": get_big_sonic_heaven_tracks(),
+            "cache_key": "__last_radio_key_big_sonic_heaven",
+        },
     ]
 
     print()
@@ -6805,6 +6817,30 @@ def sync():
         print(f"🆕 {added_to_live_queue} beschikbare RadioBox-titels in wachtrij.")
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
+
+    # v167: Big Sonic Heaven is actief als ontdekbron, maar alle nieuwe
+    # titels gaan voorlopig naar de bewaarde beoordelingslijst. Zonder een
+    # betrouwbare trackniveau-classificatie NIET automatisch naar Spotify
+    # of Liked Songs schrijven. Mellow Mix gebruikt de gewone gedeelde FIFO.
+    review = cache.setdefault("__v167_big_sonic_review_pending", {})
+    if not isinstance(review, dict):
+        raise ValueError("Big Sonic beoordelingscache is beschadigd; veilig gestopt")
+    for candidate in live_queue:
+        if not isinstance(candidate, dict) or candidate.get("source") != "big_sonic_heaven":
+            continue
+        artist, title = candidate.get("artist", ""), candidate.get("title", "")
+        key = _v47_key(artist, title)
+        if key not in review:
+            review[key] = {"artist": artist, "title": title,
+                           "source": "big_sonic_heaven", "status": "review_pending"}
+    separated = sum(isinstance(x, dict) and x.get("source") == "big_sonic_heaven"
+                    for x in live_queue)
+    if separated:
+        live_queue = [x for x in live_queue if not (
+            isinstance(x, dict) and x.get("source") == "big_sonic_heaven")]
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_cache(cache)
+        print(f"🎧 v167: {separated} Big Sonic-titel(s) in aparte beoordeling; geen Spotify-mutaties.")
 
     _v116_new = v116_stamp_fifo(live_queue, cache)
     if _v116_new:
