@@ -7459,12 +7459,12 @@ def sync():
     duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
 
     # v120: gezamenlijke FIFO zonder bronbeurtrol.
-    # Alleen Studio Brussel Vuurland voegt nieuwe titels achteraan
-    # toevoegen. De bestaande persistente _v116_fifo_seq blijft leidend.
+    # Nieuwe nummers van alle vier radiobronnen sluiten aan in de FIFO.
+    # De bestaande persistente _v116_fifo_seq blijft leidend.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 Drie radiobronnen actief; één gezamenlijke FIFO.")
+    print("🔀 Vier radiobronnen actief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
