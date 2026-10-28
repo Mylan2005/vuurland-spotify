@@ -101,11 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = (
-    "vuurland", "mellow_mix", "big_sonic_heaven",
-    "radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
-    "dreampop_radio", "radio_indie_alternative", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic",
-)
+RADIO_SOURCE_ORDER = ("vuurland",)
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6572,72 +6568,6 @@ def sync():
             "tracks": get_vuurland_tracks(),
             "cache_key": "__last_radio_key_vuurland",
         },
-        {
-            "id": "mellow_mix",
-            "name": "Radio Paradise Mellow Mix",
-            "tracks": get_mellow_mix_tracks(),
-            "cache_key": "__last_radio_key_mellow_mix",
-        },
-        {
-            "id": "big_sonic_heaven",
-            "name": "Big Sonic Heaven Radio",
-            "tracks": get_big_sonic_heaven_tracks(),
-            "cache_key": "__last_radio_key_big_sonic_heaven",
-        },
-        {
-            "id": "radio_x_chilled",
-            "name": "Radio X Chilled",
-            "tracks": get_radio_x_chilled_tracks(),
-            "cache_key": "__last_radio_key_radio_x_chilled",
-        },
-        {
-            "id": "indie_select",
-            "name": "Indie Select",
-            "tracks": get_indie_select_tracks(),
-            "cache_key": "__last_radio_key_indie_select",
-        },
-        {
-            "id": "championship_vinyl",
-            "name": "Championship Vinyl",
-            "tracks": get_championship_vinyl_tracks(),
-            "cache_key": "__last_radio_key_championship_vinyl",
-        },
-        {
-            "id": "dark_edge",
-            "name": "Dark Edge Radio",
-            "tracks": get_dark_edge_tracks(),
-            "cache_key": "__last_radio_key_dark_edge",
-        },
-        {
-            "id": "dreampop_radio",
-            "name": "Dreampop Radio",
-            "tracks": get_dreampop_radio_tracks(),
-            "cache_key": "__last_radio_key_dreampop_radio",
-        },
-        {
-            "id": "radio_indie_alternative",
-            "name": "Radio Indie Alternative",
-            "tracks": get_radio_indie_alternative_tracks(),
-            "cache_key": "__last_radio_key_radio_indie_alternative",
-        },
-        {
-            "id": "dkfm_edge",
-            "name": "DKFM Edge",
-            "tracks": get_dkfm_edge_tracks(),
-            "cache_key": "__last_radio_key_dkfm_edge",
-        },
-        {
-            "id": "dkfm_shoegaze",
-            "name": "DKFM Shoegaze Radio",
-            "tracks": get_dkfm_shoegaze_tracks(),
-            "cache_key": "__last_radio_key_dkfm_shoegaze",
-        },
-        {
-            "id": "dkfm_classic",
-            "name": "DKFM Classic",
-            "tracks": get_dkfm_classic_tracks(),
-            "cache_key": "__last_radio_key_dkfm_classic",
-        },
     ]
 
     print()
@@ -7342,12 +7272,12 @@ def sync():
     duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
 
     # v120: gezamenlijke FIFO zonder bronbeurtrol.
-    # Alle twaalf RadioBox-bronnen blijven nieuwe titels achteraan
+    # Alleen Studio Brussel Vuurland voegt nieuwe titels achteraan
     # toevoegen. De bestaande persistente _v116_fifo_seq blijft leidend.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 12 bronnen samen, één FIFO, geen beurtrol.")
+    print("🔀 Alleen Studio Brussel Vuurland actief; één FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
