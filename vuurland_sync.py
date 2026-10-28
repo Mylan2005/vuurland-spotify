@@ -6003,7 +6003,10 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         current = [(_v47_key(a, t), a, t) for a, t in tracks]
         old = snapshots.get(sid)
         if not isinstance(old, list):
-            if sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
+            if cache.get("__v168_fresh_start") == "2026-10-28-four" and sid in RADIO_SOURCE_ORDER:
+                arrivals = []
+                print(f"🕒 {source['name']}: eerste geldige nulmeting; geen oude nummers.")
+            elif sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
                        "dreampop_radio", "radio_indie_alternative", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic"):
                 # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
                 arrivals = []
@@ -6765,7 +6768,7 @@ def sync():
         discovered = cache.setdefault("__v47_radio_discovered", {})
         for src in radio_sources:
             tracks = src.get("tracks", [])
-            snapshots[src["id"]] = [_v47_key(a, t) for a, t in tracks[:100]]
+            snapshots[src["id"]] = ([_v47_key(a, t) for a, t in tracks[:100]] if tracks else None)
             discovered[src["id"]] = sorted({_v47_key(a, t) for a, t in tracks})
         cache["__v168_fresh_start"] = "2026-10-28-four"
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
