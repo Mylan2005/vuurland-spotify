@@ -7041,13 +7041,35 @@ def sync():
             playlist_uris = set(cache.get("__playlist_uris", []))
             playlist_isrcs = set(cache.get("__playlist_isrcs", []))
 
-        # Voor veilige bestaande-duplicatecleanup:
-        # per ISRC onthouden welke verschillende URI's voorkomen.
-        playlist_isrc_entries = {}
-        playlist_position = 0
+        # v166: één playlistpagina per Spotify-ronde; tussentijdse sets
+        # worden NOOIT als definitieve dedupe-cache gepubliceerd.
+        # Bij een nieuwe scan of gewijzigde playlist wordt staging gereset.
+        stage = cache.get("__v166_playlist_scan")
+        if (not isinstance(stage, dict)
+                or stage.get("playlist_id") != playlist_id
+                or stage.get("expected_total") != actual_playlist_total
+                or stage.get("volume_number") != active_volume_number):
+            stage = {
+                "playlist_id": playlist_id,
+                "expected_total": actual_playlist_total,
+                "volume_number": active_volume_number,
+                "offset": 0,
+                "position": 0,
+                "keys": sorted(playlist_keys),
+                "uris": sorted(playlist_uris),
+                "isrcs": sorted(playlist_isrcs),
+                "uri_isrc": spotify_uri_isrc,
+                "isrc_entries": {},
+            }
+        playlist_keys = set(stage["keys"])
+        playlist_uris = set(stage["uris"])
+        playlist_isrcs = set(stage["isrcs"])
+        spotify_uri_isrc = dict(stage["uri_isrc"])
+        playlist_isrc_entries = dict(stage["isrc_entries"])
+        playlist_position = int(stage["position"])
+        playlist_offset = int(stage["offset"])
 
-        playlist_offset = 0
-
+        # MAXIMAAL één pagina (50 nummers) per Spotify-slot.
         while True:
 
             try:
@@ -7142,13 +7164,31 @@ def sync():
                     make_playlist_keys(track)
                 )
 
-            if not playlist_data.get("next"):
-                break
+            if playlist_data.get("total") != stage["expected_total"]:
+                cache.pop("__v166_playlist_scan", None)
+                save_cache(cache)
+                print("⏸️ v166: playlisttotaal veranderde tijdens scan; herstart veilig.")
+                return
 
-            playlist_offset += len(
-                playlist_batch
-            )
+            if playlist_data.get("next"):
+                if not playlist_batch:
+                    raise RuntimeError("v166: lege playlistpagina met volgende pagina; veilig gestopt")
+                stage.update({
+                    "offset": playlist_offset + len(playlist_batch),
+                    "position": playlist_position,
+                    "keys": sorted(playlist_keys),
+                    "uris": sorted(playlist_uris),
+                    "isrcs": sorted(playlist_isrcs),
+                    "uri_isrc": spotify_uri_isrc,
+                    "isrc_entries": playlist_isrc_entries,
+                })
+                cache["__v166_playlist_scan"] = stage
+                save_cache(cache)
+                print(f"📋 v166: {playlist_position}/{stage['expected_total']} Spotify-nummers gecontroleerd; volgende pagina in volgende ronde.")
+                return
+            break
 
+        cache.pop("__v166_playlist_scan", None)
         # ---------------------------------
         # VEILIGE ISRC DEDUP
         # ---------------------------------
