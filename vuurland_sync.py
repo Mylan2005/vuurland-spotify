@@ -6930,6 +6930,13 @@ def sync():
     save_cache(cache)
     print("📊 v146: Spotify-slot gestart (max. één toevoeging, één Search; overige API-aanvragen gemeten).")
 
+    # v159: gebruiker heeft de Vuurland-playlist handmatig heropgebouwd.
+    # Eenmalig live Spotify-count + complete playlistscan verplichten.
+    # Token wordt pas na een geslaagde volledige scan gemarkeerd.
+    V159_REBUILD_TOKEN = "vuurland-manual-rebuild-2026-10-28"
+    if cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN:
+        cache["__vuurland_active_playlist_count"] = None
+
     # ---------------------------------
     # PLAYLIST
     # ---------------------------------
@@ -7000,6 +7007,7 @@ def sync():
     if (
         not playlist_isrc_cache_ready
         or time.time() - playlist_cache_time >= PLAYLIST_CACHE_SECONDS
+        or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
     ):
 
         print(
@@ -7230,6 +7238,7 @@ def sync():
         cache[
             "__playlist_cache_time"
         ] = int(time.time())
+        cache["__v159_rebuild_scanned"] = V159_REBUILD_TOKEN
 
         save_cache(cache)
 
