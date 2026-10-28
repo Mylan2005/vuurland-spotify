@@ -1,4 +1,4 @@
-"""Regression: seven live sources, curated DKFM, German-vocal exclusion retained."""
+"""Regression: four live sources, disabled radio queues cleaned, German-vocal exclusion retained."""
 import ast
 from pathlib import Path
 
@@ -15,15 +15,15 @@ assert 'candidate_isrc in playlist_isrcs' in body
 assert '"tracks": get_mellow_mix_tracks()' in body
 assert '"tracks": get_radio_x_chilled_tracks()' in body
 assert '"tracks": get_dreampop_radio_tracks()' in body
-assert '"tracks": get_big_sonic_heaven_tracks()' in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio", "big_sonic_heaven", "dkfm_edge", "dkfm_shoegaze")' in source
-assert '"tracks": dkfm_vuurland_filter(get_dkfm_edge_tracks(), "DKFM Edge")' in body
-assert '"tracks": dkfm_vuurland_filter(get_dkfm_shoegaze_tracks(), "DKFM Shoegaze")' in body
-assert 'DKFM_VUURLAND_ARTIST_KEYS' in source
+assert '"tracks": get_big_sonic_heaven_tracks()' not in body
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio")' in source
+assert '"tracks": dkfm_vuurland_filter(get_dkfm_edge_tracks(), "DKFM Edge")' not in body
+assert '"tracks": dkfm_vuurland_filter(get_dkfm_shoegaze_tracks(), "DKFM Shoegaze")' not in body
+assert 'before_source_filter = len(live_queue)' in body
 assert 'x.get("source") == "big_sonic_heaven"' not in body
 assert 'is_confirmed_german_vocal(artist, title)' in body
 assert 'v140_is_unwanted_language_title(title, artist)' in body
 assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' in body
 assert 'big_sonic_destination(artist) == "review"' in body
 assert '__big_sonic_review_scan_complete' in body
-print("✅ Zeven bronnen, DKFM gefilterd, Duitse zangblokkering behouden.")
+print("✅ Vier actieve bronnen, andere bronnen uit FIFO, Duitse zangblokkering behouden.")
