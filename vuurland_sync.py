@@ -6789,8 +6789,16 @@ def sync():
         cache["__v96_radio_snapshots"] = {}
         cache["__v47_radio_discovered"] = {}
         cache["__v47_failed_tracks"] = {}
+        for key in ("__v51_radio_unmatched", "__v51_radio_failed_searches",
+                    "__v51_radio_failed_cycles"):
+            cache[key] = {}
+        for key in list(cache):
+            if key.startswith("__not_found_v35__"):
+                cache.pop(key, None)
         for sid in RADIO_SOURCE_ORDER:
             cache.pop(f"__last_radio_key_{sid}", None)
+        save_seen(set())
+        seen.clear()
         cache["__v173_radio_reset"] = "2026-10-29-four-live"
         save_cache(cache)
         print("🧹 v173: oude radiocache gereset; FIFO en Spotify-veiligheidsgegevens behouden.")
