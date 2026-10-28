@@ -4,7 +4,7 @@ from pathlib import Path
 
 src = Path("vuurland_sync.py").read_text(encoding="utf-8")
 ast.parse(src)
-assert 'V159_REBUILD_TOKEN = "vuurland-manual-rebuild-2026-10-28"' in src
+assert 'V159_REBUILD_TOKEN = "vuurland-four-sources-fresh-rescan-2026-10-28"' in src
 assert 'cache["__vuurland_active_playlist_count"] = None' in src
 assert 'or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN' in src
 scan = src.index('if (\n        not playlist_isrc_cache_ready')
@@ -33,3 +33,7 @@ assert src.index('cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST
 assert src.index('actual_playlist_total = _get_playlist_total(playlist_id)') < scan
 assert 'if str(item.get("source") or "").strip() != "vuurland":' not in src
 print("✅ v159: playlisttoevoegingen en rebuild scannen; verwijderingen bewaren dedupe-cache")
+
+assert 'v167_restore_four_radio_histories(cache, live_queue, playlist_keys)' in src
+assert 'four-radio-histories-after-fresh-playlist-scan-2026-10-28' in src
+assert 'for sid in RADIO_SOURCE_ORDER:' in src
