@@ -6003,9 +6003,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         current = [(_v47_key(a, t), a, t) for a, t in tracks]
         old = snapshots.get(sid)
         if not isinstance(old, list):
-            if cache.get("__v169_fresh_radio_cache") == "2026-10-28-all-four" and sid in RADIO_SOURCE_ORDER:
-                arrivals = current
-                print(f"🕒 {source['name']}: eerste scan: alle momenteel zichtbare radiotitels in FIFO.")
+            if sid in RADIO_SOURCE_ORDER:
+                arrivals = []
+                print(f"🕒 {source['name']}: live-nulmeting; bestaande RadioBox-historiek niet ingehaald.")
             elif sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
                        "dreampop_radio", "radio_indie_alternative", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic"):
                 # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
@@ -6023,8 +6023,8 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                              if key in previous), None)
             if boundary is None:
                 # Tijdelijke radiogeschiedeniswissel: vermijd massale backfill.
-                arrivals = current[:12]
-                print(f"⚠️ v96 {source['name']}: geen overlap; maximaal 12 recente titels nagekeken.")
+                arrivals = []
+                print(f"⚠️ v96 {source['name']}: geen overlap; nieuwe nulmeting zonder historische backfill.")
             else:
                 arrivals = current[:boundary]
         # v114: verklaar elke nieuwe uitzending en controleer FIFO-append.
@@ -6759,10 +6759,10 @@ def sync():
 
     seen = load_seen()
     cache = load_cache()
-    # One-time fresh start for the four radio stations; preserve Spotify state.
+    # v172: fresh LIVE start (not RadioBox history import); keep Spotify safety.
     # v169: start once with fresh radio history from all four sources.
     # Keep Spotify playlist dedupe, pending likes, and rate-limit timestamps.
-    if cache.get("__v169_fresh_radio_cache") != "2026-10-28-all-four":
+    if cache.get("__v172_live_only_reset") != "2026-10-29-live-only":
         live_queue.clear()
         cache["__v95_live_fifo_initialized"] = True
         cache["__v71_six_matcher_retries_released"] = True
@@ -6778,10 +6778,10 @@ def sync():
         for key in list(cache):
             if key.startswith("__not_found_v35__"):
                 cache.pop(key, None)
-        cache["__v169_fresh_radio_cache"] = "2026-10-28-all-four"
+        cache["__v172_live_only_reset"] = "2026-10-29-live-only"
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
-        print("🆕 v169: radio-cache en FIFO vanaf nul; huidige radiogeschiedenis opnieuw verwerken.")
+        print("🆕 v172: oude radio-FIFO gereset; alle vier bronnen eerst nulmeten, daarna alleen nieuwe plays.")
 
     # =================================
     # MATCHING CACHE MIGRATIE
@@ -7522,9 +7522,9 @@ def sync():
         save_cache(cache)
         print(f"✅ Liked Songs: {len(stage['uris'])} bestaande nummers gecontroleerd.")
     # Deduplicate against both collections, without rewriting playlist cache.
-    playlist_keys.update(cache.get("__v170_liked_keys", []))
-    playlist_uris.update(cache.get("__v170_liked_uris", []))
-    playlist_isrcs.update(cache.get("__v170_liked_isrcs", []))
+    # Liked Songs zijn een afzonderlijke bibliotheek, geen playlistleden.
+    # Een track die enkel geliket is maar niet in Vuurland staat, moet
+    # opnieuw aan de playlist toegevoegd kunnen worden.
 
     # ---------------------------------
     # Big Sonic Heaven volgt de gewone hoofdplaylistroute; geen review-scan.
