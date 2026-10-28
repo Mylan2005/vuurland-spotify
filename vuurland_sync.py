@@ -101,7 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio", "big_sonic_heaven")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "big_sonic_heaven")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6630,12 +6630,6 @@ def sync():
             "cache_key": "__last_radio_key_radio_x_chilled",
         },
         {
-            "id": "dreampop_radio",
-            "name": "Dreampop Radio",
-            "tracks": get_dreampop_radio_tracks(),
-            "cache_key": "__last_radio_key_dreampop_radio",
-        },
-        {
             "id": "big_sonic_heaven",
             "name": "Big Sonic Heaven Radio",
             "tracks": get_big_sonic_heaven_tracks(),
@@ -6672,7 +6666,7 @@ def sync():
     if not isinstance(live_queue, list):
         raise ValueError("Live queue is geen JSON-lijst; niet overschrijven")
 
-    # Alleen de vijf gekozen bronnen blijven in de FIFO.
+    # Alleen de vier gekozen bronnen blijven in de FIFO.
     # Eenmalige Radio Indie Alternative-selectie gebruikt source="vuurland"
     # en blijft daardoor behouden. Onbekende bronnen worden veilig uitgesloten.
     before_source_filter = len(live_queue)
@@ -7436,7 +7430,7 @@ def sync():
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 Vijf radiobronnen actief; één gezamenlijke FIFO.")
+    print("🔀 Vier radiobronnen actief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
