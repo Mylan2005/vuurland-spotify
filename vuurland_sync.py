@@ -6783,6 +6783,18 @@ def sync():
         save_cache(cache)
         print("🆕 v172: oude radio-FIFO gereset; alle vier bronnen eerst nulmeten, daarna alleen nieuwe plays.")
 
+    # v173: eenmalige reset van uitsluitend oude radiogegevens.
+    # Behoud de huidige live FIFO, Spotify-inventaris en alle API-cooldowns.
+    if cache.get("__v173_radio_reset") != "2026-10-29-four-live":
+        cache["__v96_radio_snapshots"] = {}
+        cache["__v47_radio_discovered"] = {}
+        cache["__v47_failed_tracks"] = {}
+        for sid in RADIO_SOURCE_ORDER:
+            cache.pop(f"__last_radio_key_{sid}", None)
+        cache["__v173_radio_reset"] = "2026-10-29-four-live"
+        save_cache(cache)
+        print("🧹 v173: oude radiocache gereset; FIFO en Spotify-veiligheidsgegevens behouden.")
+
     # =================================
     # MATCHING CACHE MIGRATIE
     # =================================
