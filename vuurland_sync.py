@@ -101,7 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6579,6 +6579,12 @@ def sync():
             "name": "Big Sonic Heaven Radio",
             "tracks": get_big_sonic_heaven_tracks(),
             "cache_key": "__last_radio_key_big_sonic_heaven",
+        },
+        {
+            "id": "radio_x_chilled",
+            "name": "Radio X Chilled",
+            "tracks": get_radio_x_chilled_tracks(),
+            "cache_key": "__last_radio_key_radio_x_chilled",
         },
     ]
 
