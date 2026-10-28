@@ -6569,8 +6569,8 @@ BIG_SONIC_REVIEW_PLAYLIST_ID = "3nUiilxNpNehxCOnlCwOQM"
 
 
 def big_sonic_destination(artist):
-    return ("main" if normalize_match(artist) in
-            {normalize_match(a) for a in BIG_SONIC_MAIN_ARTISTS} else "review")
+    """All Big Sonic Heaven artists follow the normal Vuurland queue."""
+    return "main"
 
 
 # Conservatieve DKFM-discovery: alleen artiesten met een sterke
@@ -7387,31 +7387,7 @@ def sync():
         )
 
     # ---------------------------------
-    # Beoordelingsplaylist eerst volledig en stapsgewijs scannen.
-    # Geen writes zolang de duplicaatinventaris onvolledig is.
-    review_uris = set(cache.get("__big_sonic_review_uris", []))
-    if not cache.get("__big_sonic_review_scan_complete"):
-        offset = int(cache.get("__big_sonic_review_scan_offset", 0) or 0)
-        page = spotify_request("GET", f"/playlists/{BIG_SONIC_REVIEW_PLAYLIST_ID}/items",
-                               params={"limit": 50, "offset": offset})
-        items = page.get("items")
-        total = page.get("total")
-        if not isinstance(items, list) or not isinstance(total, int):
-            raise RuntimeError("Reviewplaylist niet leesbaar; veilig gestopt.")
-        for entry in items:
-            track = (entry or {}).get("item") or (entry or {}).get("track") or {}
-            if isinstance(track, dict) and track.get("uri"):
-                review_uris.add(track["uri"])
-        offset += len(items)
-        cache["__big_sonic_review_uris"] = sorted(review_uris)
-        cache["__big_sonic_review_scan_offset"] = offset
-        if offset >= total:
-            cache["__big_sonic_review_scan_complete"] = True
-        elif not items:
-            raise RuntimeError("Reviewplaylistscan zonder voortgang.")
-        save_cache(cache)
-        print("📋 Reviewplaylist wordt veilig geïnventariseerd; geen Spotify-writes.")
-        return
+    # Big Sonic Heaven volgt de gewone hoofdplaylistroute; geen review-scan.
 
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
@@ -8206,23 +8182,6 @@ def sync():
                     active_volume_number,
                     active_playlist_count,
                 ) = get_active_volume_playlist(cache)
-
-        if (item.get("source") == "big_sonic_heaven"
-                and big_sonic_destination(artist) == "review"):
-            if uri not in review_uris:
-                add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])
-                review_uris.add(uri)
-                cache["__big_sonic_review_uris"] = sorted(review_uris)
-                additions_this_round += 1
-                print(f"🎧 Big Sonic twijfelgeval naar aparte lijst: {artist} - {title}")
-            else:
-                print(f"⏭️ Big Sonic twijfelgeval reeds in aparte lijst: {artist} - {title}")
-            live_queue.pop(0)
-            seen.add(cache_key)
-            save_seen(seen)
-            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-            save_cache(cache)
-            continue
 
         add_tracks(
             playlist_id,
