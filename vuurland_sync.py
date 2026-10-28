@@ -7051,13 +7051,20 @@ def sync():
     # Eén keer per 24 uur, om Spotify API-verzoeken te beperken. Een lege nieuwe lijst is ook een geldige
     # cache en mag niet voortdurend opnieuw worden gescand.
     PLAYLIST_CACHE_SECONDS = 86400
-    # v161: handmatige playlistbewerkingen meteen herkennen met één
-    # lichte total-check. Bij verschil volgt de bestaande complete scan.
-    # Geen individuele Spotify-zoekactie en geen playlist-mutatie.
+    # v162: een verwijdering vereist geen dure volledige playlistscan.
+    # De bestaande duplicaatcache blijft conservatief (kan verwijderde
+    # nummers tijdelijk blijven herkennen), zodat geen dubbele opnames
+    # worden toegevoegd. De normale periodieke refresh blijft bestaan.
     actual_playlist_total = _get_playlist_total(playlist_id)
-    playlist_count_changed = actual_playlist_total != active_playlist_count
-    if playlist_count_changed:
-        print(f"🔄 v161: Spotify-playlist gewijzigd ({active_playlist_count} → "
+    playlist_count_changed = actual_playlist_total > active_playlist_count
+    if actual_playlist_total < active_playlist_count:
+        print(f"💾 v162: playlist verkleind ({active_playlist_count} → "
+              f"{actual_playlist_total}); veilige bestaande dedupe-cache behouden.")
+        active_playlist_count = actual_playlist_total
+        cache["__vuurland_active_playlist_count"] = actual_playlist_total
+        save_cache(cache)
+    elif playlist_count_changed:
+        print(f"🔄 v162: playlist gegroeid ({active_playlist_count} → "
               f"{actual_playlist_total}); bestaande nummers opnieuw controleren.")
 
     if (
