@@ -6065,6 +6065,54 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
     return added
 
 
+def v160_restore_vuurland_history(cache, live_queue, playlist_keys):
+    """Herstel eerder ECHT waargenomen Vuurland-uitzendingen na playlist-rebuild.
+
+    De overige elf bronnen blijven ongewijzigd. Niets uit queue of Spotify
+    verwijderen; volledige Spotify-playlistscan moet al afgerond zijn.
+    """
+    token = "vuurland-history-after-manual-rebuild-2026-10-28"
+    if cache.get("__v160_vuurland_history_restored") == token:
+        return 0
+    discovered = cache.get("__v47_radio_discovered", {})
+    previous = discovered.get("vuurland", []) if isinstance(discovered, dict) else []
+    archived = cache.get("__v95_archived_pre_live_queue", [])
+    keys = set()
+    for raw in previous if isinstance(previous, list) else []:
+        if isinstance(raw, str) and "|||" in raw:
+            keys.add(raw)
+    for row in archived if isinstance(archived, list) else []:
+        if isinstance(row, dict) and row.get("source") == "vuurland":
+            keys.add(_v47_key(row.get("artist", ""), row.get("title", "")))
+
+    queued = {_v47_key(row.get("artist", ""), row.get("title", ""))
+              for row in live_queue if isinstance(row, dict)}
+    appended = 0
+    for key in sorted(keys):
+        parts = key.split("|||", 1)
+        if len(parts) != 2 or not all(parts):
+            continue
+        artist, title = parts
+        if (key in queued or key in playlist_keys
+                or radio_matches_playlist(artist, title, playlist_keys)):
+            continue
+        if is_confirmed_german_vocal(artist, title):
+            continue
+        if v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS:
+            continue
+        live_queue.append({"artist": artist, "title": title, "source": "vuurland"})
+        queued.add(key)
+        appended += 1
+    v116_stamp_fifo(live_queue, cache)
+    # Pas als de queue opnieuw duurzaam is opgeslagen, is de herstart compleet.
+    atomic_save_json("vuurland_live_queue.json", live_queue, indent=2, ensure_ascii=False)
+    cache["__v160_vuurland_history_restored"] = token
+    save_cache(cache)
+    print(f"♻️ v160: {appended} eerder gedraaide Vuurland-nummers "
+          "hersteld naar gedeelde FIFO (andere bronnen behouden).")
+    return appended
+
+
 # v50: Duyster-missers verdwijnen na de volledige set zoekstrategieën
 # uit de shuffle. Bewaar ze afzonderlijk zodat we ze bij een latere
 # algemene matcherverbetering gecontroleerd opnieuw kunnen beoordelen.
@@ -7319,6 +7367,10 @@ def sync():
     print("📊 v120 wachtrij per bron: "
           + ", ".join(f"{name}={_source_counts[name]} zoekklaar" for name in source_order)
           + "; gezamenlijke FIFO zonder bronvoorrang.")
+
+    # v160: alleen na de volledige, actuele playlist-scan herstellen.
+    if cache.get("__v159_rebuild_scanned") == V159_REBUILD_TOKEN:
+        v160_restore_vuurland_history(cache, live_queue, playlist_keys)
 
     # v120: oudste beschikbare nummer, ongeacht radiobron.
 
