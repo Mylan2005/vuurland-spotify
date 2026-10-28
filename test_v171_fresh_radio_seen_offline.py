@@ -1,4 +1,4 @@
-"""v171: oude radio-seen mag de vier actieve feeds niet blokkeren."""
+"""v171: live-nulmeting en oude seen-status blokkeren nieuwe uitzendingen niet."""
 import ast
 from pathlib import Path
 
@@ -29,10 +29,14 @@ for sid in ns["RADIO_SOURCE_ORDER"]:
     queue = []
     seen = {key("Artist", "Old")}
     source = [{"id": sid, "name": sid, "tracks": [("Artist", "Old"), ("Artist", "New")]}]
-    assert collect(source, cache, seen, queue) == 2
-    assert [item["title"] for item in queue] == ["New", "Old"]
+    # First page is the baseline, not a historical FIFO import.
     assert collect(source, cache, seen, queue) == 0
-    assert len(queue) == 2
+    assert queue == []
+    source[0]["tracks"] = [("Artist", "Live"), ("Artist", "Old"), ("Artist", "New")]
+    assert collect(source, cache, seen, queue) == 1
+    assert [item["title"] for item in queue] == ["Live"]
+    assert collect(source, cache, seen, queue) == 0
+    assert len(queue) == 1
 
 # Oude snapshots van uitgeschakelde bronnen krijgen geen toegang tot de FIFO.
-print("✅ v171: alle vier radiofeeds negeren verouderde seen-state, FIFO zonder dubbels")
+print("✅ v171: vier radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
