@@ -205,12 +205,23 @@ jobs:
               break
             fi
 
-            echo "⏳ Wachten op volgende controle..."
-
-            for i in 1 2; do
-              sleep 30
-              echo "⏳ Nog bezig... $((i * 30))/60 seconden"
-            done
+            # Houd RadioBox-metingen maximaal 60 s uiteen, maar laat
+            # het Spotify-slot van 120 s geen extra hele minuut missen.
+            # De veiligheidstests en GitHub-fetch kosten ook tijd; start
+            # een volgende ronde iets vóór het Spotify-slot.
+            WAIT_SECONDS=$(python3 - <<'PY'
+          import json, time
+          try:
+              with open(".vuurland_spotify_cache.json", encoding="utf-8") as handle:
+                  cache = json.load(handle)
+              remaining = float(cache.get("__v150_next_spotify_round_at", 0) or 0) - time.time()
+              print(max(5, min(60, int(remaining - 15))))
+          except (OSError, ValueError, TypeError):
+              print(60)
+          PY
+            )
+            echo "⏳ Volgende RadioBox-controle over ${WAIT_SECONDS}s (Spotify-budget 120 s)."
+            sleep "$WAIT_SECONDS"
           done
 
           echo ""
