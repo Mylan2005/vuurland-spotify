@@ -34,5 +34,5 @@ assert all(q["artist"]!="dance" for q in queue[1:])
 assert restore(cache,queue,{"artist|||already"})==0
 assert len(queue)==3 and writes
 assert 'if cache.get("__v159_rebuild_scanned") == V159_REBUILD_TOKEN' in src
-assert 'if str(item.get("source") or "").strip() != "vuurland":' in src
+assert 'if str(item.get("source") or "").strip() != "vuurland":' not in src
 print("✅ v160: historische Vuurland-items veilig terug in FIFO, geen duplicaten")
