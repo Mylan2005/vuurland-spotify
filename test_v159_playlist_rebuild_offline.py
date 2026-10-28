@@ -11,8 +11,8 @@ scan = src.index('if (\n        not playlist_isrc_cache_ready')
 marker = src.index('cache["__v159_rebuild_scanned"] = V159_REBUILD_TOKEN')
 assert scan < marker
 assert src.index('playlist_data = spotify_request(', scan) < marker
-assert src.index('cache["__playlist_uris"]', scan) < marker
-assert src.index('cache["__playlist_isrcs"]', scan) < marker
+assert src.index('"__playlist_uris"', scan) < marker
+assert src.index('"__playlist_isrcs"', scan) < marker
 assert src.index('save_cache(cache)', marker) > marker
 assert 'if str(item.get("source") or "").strip() != "vuurland":' in src
 print("✅ v159: echte playlist opnieuw lezen vóór dedupe, andere bronnen like-only")
