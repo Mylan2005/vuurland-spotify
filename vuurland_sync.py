@@ -101,7 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio", "big_sonic_heaven")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio", "big_sonic_heaven", "dkfm_edge", "dkfm_shoegaze")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6573,6 +6573,36 @@ def big_sonic_destination(artist):
             {normalize_match(a) for a in BIG_SONIC_MAIN_ARTISTS} else "review")
 
 
+# Conservatieve DKFM-discovery: alleen artiesten met een sterke
+# dreampop/melodic-indie aansluiting. Onbekende/zwaardere acts worden
+# niet automatisch naar de hoofdplaylist gestuurd.
+# Dit is een eerste allowlist, geen claim dat alle tracks zijn beluisterd.
+DKFM_VUURLAND_ARTISTS = {
+    "newdad", "softcult", "slowdive", "ride", "lush", "cocteau twins",
+    "hazel english", "sea lemon", "fazerdaze", "wisp", "whitelands",
+    "wishy", "blushing", "alvvays", "the japanese house",
+    "the joy formidable", "the sundays", "diiv", "pale saints",
+    "airiel", "the daysleepers", "japanese heart software",
+    "lucid express", "the suncharms", "tanukichan", "panda riot",
+    "winter", "no vacation", "beach vacation", "deary",
+    "the raveonettes", "cigarettes for breakfast", "star horse",
+    "the veldt", "the verve", "the war on drugs", "the national",
+    "galaxie 500", "auburn lull", "the innocence mission",
+    "my bloody valentine", "the chameleons", "the charlottes",
+    "adore", "tallies", "cruush", "sungaze", "day aches",
+    "phantom handshakes", "the ocean blue", "bedridden",
+    "doused", "mo dotti", "bodywash", "blush", "sobs",
+}
+DKFM_VUURLAND_ARTIST_KEYS = {normalize_match(a) for a in DKFM_VUURLAND_ARTISTS}
+
+
+def dkfm_vuurland_filter(tracks, station):
+    kept = [(artist, title) for artist, title in tracks
+            if normalize_match(artist) in DKFM_VUURLAND_ARTIST_KEYS]
+    print(f"🎧 {station}: {len(kept)}/{len(tracks)} passende plays geselecteerd.")
+    return kept
+
+
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -6610,6 +6640,18 @@ def sync():
             "name": "Big Sonic Heaven Radio",
             "tracks": get_big_sonic_heaven_tracks(),
             "cache_key": "__last_radio_key_big_sonic_heaven",
+        },
+        {
+            "id": "dkfm_edge",
+            "name": "DKFM Edge (gefilterd)",
+            "tracks": dkfm_vuurland_filter(get_dkfm_edge_tracks(), "DKFM Edge"),
+            "cache_key": "__last_radio_key_dkfm_edge",
+        },
+        {
+            "id": "dkfm_shoegaze",
+            "name": "DKFM Shoegaze Radio (gefilterd)",
+            "tracks": dkfm_vuurland_filter(get_dkfm_shoegaze_tracks(), "DKFM Shoegaze"),
+            "cache_key": "__last_radio_key_dkfm_shoegaze",
         },
     ]
 
@@ -7395,7 +7437,7 @@ def sync():
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 Vijf radiobronnen actief; één gezamenlijke FIFO.")
+    print("🔀 Zeven radiobronnen actief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
