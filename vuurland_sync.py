@@ -6071,6 +6071,54 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
     return added
 
 
+def v167_restore_four_radio_histories(cache, live_queue, playlist_keys):
+    """After a fresh Spotify scan, replay previously observed tracks from four active sources.
+
+    Never replay an inactive radio. Keep FIFO, skip playlist matches, and
+    preserve existing queue and Spotify 429 safety gates.
+    """
+    token = "four-radio-histories-after-fresh-playlist-scan-2026-10-28"
+    if cache.get("__v167_four_histories_restored") == token:
+        return 0
+    discovered = cache.get("__v47_radio_discovered", {})
+    if not isinstance(discovered, dict):
+        discovered = {}
+    queued = {_v47_key(row.get("artist", ""), row.get("title", ""))
+              for row in live_queue if isinstance(row, dict)}
+    added = 0
+    for sid in RADIO_SOURCE_ORDER:
+        history = discovered.get(sid, [])
+        if not isinstance(history, list):
+            continue
+        for key in history:
+            if not isinstance(key, str) or "|||" not in key:
+                continue
+            artist, title = key.split("|||", 1)
+            if not artist or not title or key in queued or key in playlist_keys:
+                continue
+            if radio_matches_playlist(artist, title, playlist_keys):
+                continue
+            if is_interview_fragment(title) or is_confirmed_german_vocal(artist, title):
+                continue
+            if v140_is_unwanted_language_title(title, artist):
+                continue
+            if v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS:
+                continue
+            if sid == "radio_britannia" and normalize_match(artist) in (
+                    "daniel roggiano", "radio britannia"):
+                continue
+            live_queue.append({"artist": artist, "title": title, "source": sid})
+            queued.add(key)
+            added += 1
+    v116_stamp_fifo(live_queue, cache)
+    atomic_save_json(os.path.join(DATA_DIR, "vuurland_live_queue.json"),
+                     live_queue, indent=2, ensure_ascii=False)
+    cache["__v167_four_histories_restored"] = token
+    save_cache(cache)
+    print(f"♻️ v167: {added} eerder gedraaide ontbrekende nummers uit vier bronnen terug in FIFO.")
+    return added
+
+
 def v160_restore_vuurland_history(cache, live_queue, playlist_keys):
     """Herstel eerder ECHT waargenomen Vuurland-uitzendingen na playlist-rebuild.
 
@@ -7001,7 +7049,7 @@ def sync():
     # v159: gebruiker heeft de Vuurland-playlist handmatig heropgebouwd.
     # Eenmalig live Spotify-count + complete playlistscan verplichten.
     # Token wordt pas na een geslaagde volledige scan gemarkeerd.
-    V159_REBUILD_TOKEN = "vuurland-manual-rebuild-2026-10-28"
+    V159_REBUILD_TOKEN = "vuurland-four-sources-fresh-rescan-2026-10-28"
     if cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN:
         cache["__vuurland_active_playlist_count"] = None
 
@@ -7077,7 +7125,7 @@ def sync():
     # v165: eenmalige import na handmatige heropbouw (2524 bestaande
     # nummers). Geen toevoeging/like tot de actuele playlist is gelezen.
     # Marker wordt pas na volledige succesvolle scan opgeslagen.
-    EXISTING_PLAYLIST_IMPORT_TOKEN = "vuurland-existing-playlist-2524-2026-10-28"
+    EXISTING_PLAYLIST_IMPORT_TOKEN = "vuurland-four-sources-fresh-import-2026-10-28"
     # v162: een verwijdering vereist geen dure volledige playlistscan.
     # De bestaande duplicaatcache blijft conservatief (kan verwijderde
     # nummers tijdelijk blijven herkennen), zodat geen dubbele opnames
@@ -7472,6 +7520,7 @@ def sync():
     # v160: alleen na de volledige, actuele playlist-scan herstellen.
     if cache.get("__v159_rebuild_scanned") == V159_REBUILD_TOKEN:
         v160_restore_vuurland_history(cache, live_queue, playlist_keys)
+        v167_restore_four_radio_histories(cache, live_queue, playlist_keys)
 
     # v120: oudste beschikbare nummer, ongeacht radiobron.
 
