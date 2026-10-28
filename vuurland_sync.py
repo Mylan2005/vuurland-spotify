@@ -7058,7 +7058,20 @@ def sync():
     # De bestaande duplicaatcache blijft conservatief (kan verwijderde
     # nummers tijdelijk blijven herkennen), zodat geen dubbele opnames
     # worden toegevoegd. De normale periodieke refresh blijft bestaan.
-    actual_playlist_total = _get_playlist_total(playlist_id)
+    # v164: het totaal niet in elke Spotify-ronde via GET opvragen.
+    # Hoogstens om de 6 uur; de eigen POST verhoogt de cachetelling lokaal.
+    # Als de cache ontbreekt of een rebuild nodig is, wel onmiddellijk checken.
+    playlist_count_check_due = (
+        not isinstance(active_playlist_count, int)
+        or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
+        or time.time() - float(cache.get("__v164_playlist_count_checked_at", 0) or 0) >= 21600
+    )
+    if playlist_count_check_due:
+        actual_playlist_total = _get_playlist_total(playlist_id)
+        cache["__v164_playlist_count_checked_at"] = int(time.time())
+        save_cache(cache)
+    else:
+        actual_playlist_total = active_playlist_count
     playlist_count_changed = actual_playlist_total > active_playlist_count
     if actual_playlist_total < active_playlist_count:
         print(f"💾 v162: playlist verkleind ({active_playlist_count} → "
