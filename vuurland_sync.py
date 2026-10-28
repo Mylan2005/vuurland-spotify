@@ -7940,6 +7940,25 @@ def sync():
             save_cache(cache)
             continue
 
+        # v158: curated playlist uitsluitend door Studio Brussel Vuurland.
+        # De overige elf bronnen zijn alleen inspiratie voor Liked Songs.
+        # Dit gebeurt NA de veilige matcher/taal-/uitsluitingscontrole maar
+        # VOOR playlist-ISRC/URI checks en de playlist-write.
+        if str(item.get("source") or "").strip() != "vuurland":
+            _attempt_library_like(cache, uri)
+            # Een mislukte like blijft via __pending_library_likes bewaard
+            # voor de bestaande retry, ook als dit queue-item verdwijnt.
+            additions_this_round += 1
+            print(f"💚 Inspiratie → Liked Songs: {artist} - {title} "
+                  f"(bron: {item.get('source') or 'onbekend'}; NIET in playlist)")
+            live_queue.pop(0)
+            seen.add(cache_key)
+            v83_clear_resolved_failures(cache, artist, title)
+            save_seen(seen)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
+
         # ---------------------------------
         # HARDE ISRC DUPLICATECHECK
         # ---------------------------------
