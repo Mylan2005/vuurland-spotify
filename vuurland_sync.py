@@ -7051,11 +7051,20 @@ def sync():
     # Eén keer per 24 uur, om Spotify API-verzoeken te beperken. Een lege nieuwe lijst is ook een geldige
     # cache en mag niet voortdurend opnieuw worden gescand.
     PLAYLIST_CACHE_SECONDS = 86400
+    # v161: handmatige playlistbewerkingen meteen herkennen met één
+    # lichte total-check. Bij verschil volgt de bestaande complete scan.
+    # Geen individuele Spotify-zoekactie en geen playlist-mutatie.
+    actual_playlist_total = _get_playlist_total(playlist_id)
+    playlist_count_changed = actual_playlist_total != active_playlist_count
+    if playlist_count_changed:
+        print(f"🔄 v161: Spotify-playlist gewijzigd ({active_playlist_count} → "
+              f"{actual_playlist_total}); bestaande nummers opnieuw controleren.")
 
     if (
         not playlist_isrc_cache_ready
         or time.time() - playlist_cache_time >= PLAYLIST_CACHE_SECONDS
         or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
+        or playlist_count_changed
     ):
 
         print(
