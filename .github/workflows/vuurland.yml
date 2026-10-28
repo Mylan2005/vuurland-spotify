@@ -1,21 +1,316 @@
-name: Vuurland Spotify Sync (uitgeschakeld)
+name: Vuurland Spotify Sync
 
-# Vuurland-sync op verzoek gestopt: geen radiobronnen ophalen,
-# geen playlists aanpassen en geen tracks aan Liked Songs toevoegen.
-# Alleen handmatig te starten als zichtbare controle; ook dan geen sync.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
 
 permissions:
-  contents: read
+  contents: write
+  actions: write
+
+concurrency:
+  group: vuurland-sync
+  cancel-in-progress: false
 
 jobs:
-  sync-uitgeschakeld:
+  sync:
     runs-on: ubuntu-24.04
+    timeout-minutes: 355
+
     steps:
-      - name: Bevestig dat Vuurland is uitgeschakeld
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Vuurland 24/7 synchroniseren
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          VUURLAND_DATA_DIR: ${{ github.workspace }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          echo "⏸️ Vuurland-sync uitgeschakeld op verzoek."
-          echo "📻 Geen van de 12 radiobronnen wordt opgehaald."
-          echo "🎵 Er worden geen nummers toegevoegd aan Spotify-playlists of Liked Songs."
-          echo "💾 Bestaande muziek en opgeslagen state blijven behouden."
+          set -e
+
+          # v136: enkel muziekregels zichtbaar; volledige uitvoer naar diagnosebestand.
+          exec > >(python3 -u live_music_stream.py --log vuurland_technische_live.log) 2>&1
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          END_TIME=$((SECONDS + 345 * 60))
+          SYNC_EXIT=0
+
+          # Houd een lokale herstelkopie bij als een statuspush botst met
+          # wijzigingen op GitHub. Nooit automatisch queue-JSON overschrijven.
+          save_recovery() {
+            mkdir -p v73_state_recovery
+            for f in vuurland_seen.json vuurland_live_queue.json .vuurland_spotify_cache.json; do
+              if [ -f "$f" ]; then cp "$f" "v73_state_recovery/$f"; fi
+            done
+            echo "⚠️ Lokale state als herstelartifact bewaard; niet geforceerd gepusht."
+          }
+
+          push_state() {
+            git add \
+              vuurland_seen.json \
+              vuurland_live_queue.json \
+              .vuurland_spotify_cache.json
+
+            if git diff --cached --quiet; then
+              echo "ℹ️ Geen state-wijzigingen."
+              return 0
+            fi
+
+            git commit -m "Update Vuurland sync state"
+
+            for attempt in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
+              echo "🔄 Push-poging $attempt/15..."
+
+              git fetch origin main
+
+              if ! git rebase origin/main; then
+                echo "❌ Rebase-conflict tijdens opslaan sync-state."
+                git rebase --abort || true
+                save_recovery
+                return 1
+              fi
+
+              if git push origin HEAD:main; then
+                echo "✅ Sync-state opgeslagen op GitHub."
+                return 0
+              fi
+
+              echo "⚠️ GitHub state-push mislukt. De lokale state-commit blijft behouden en wordt opnieuw geprobeerd."
+
+              if [ "$attempt" -lt 15 ]; then
+                case "$attempt" in
+                  1) WAIT_SECONDS=15 ;;
+                  2) WAIT_SECONDS=30 ;;
+                  3) WAIT_SECONDS=60 ;;
+                  4|5) WAIT_SECONDS=120 ;;
+                  *) WAIT_SECONDS=180 ;;
+                esac
+
+                echo "⏳ $WAIT_SECONDS seconden wachten en opnieuw proberen..."
+                sleep "$WAIT_SECONDS"
+              fi
+            done
+
+            save_recovery
+            echo "❌ GitHub state-push is na 15 pogingen nog steeds mislukt."
+            echo "🛑 Sync wordt gestopt zodat niet verder wordt gewerkt op state die nog niet duurzaam op GitHub staat."
+            return 1
+          }
+
+          while [ "$SECONDS" -lt "$END_TIME" ]; do
+            # Oude langdurige runners mogen niet doorgaan op verouderde code
+            # of JSON-state. Alleen bij een schone checkout verversen.
+            if [ -z "$(git status --porcelain --untracked-files=no)" ]; then
+              # v86: tijdelijke GitHub-netwerkfout? Maximaal drie pogingen.
+              # Bij blijvende fout stoppen vóór Spotify (nooit verouderde state gebruiken).
+              V86_FETCH_OK=0
+              for V86_FETCH_ATTEMPT in 1 2 3; do
+                if git fetch origin main; then
+                  V86_FETCH_OK=1
+                  break
+                fi
+                echo "⚠️ GitHub-fetch mislukt (poging $V86_FETCH_ATTEMPT/3)."
+                if [ "$V86_FETCH_ATTEMPT" -lt 3 ]; then sleep 15; fi
+              done
+              if [ "$V86_FETCH_OK" -ne 1 ]; then
+                echo "🛑 Geen actuele GitHub-state beschikbaar; geen Spotify-ronde."
+                exit 1
+              fi
+              if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+                echo "🔄 v73: nieuwste code en status ophalen vóór volgende ronde."
+                git merge --ff-only origin/main || {
+                  echo "🛑 Geen veilige fast-forward mogelijk."; exit 1;
+                }
+              fi
+            else
+              echo "🛑 Niet-gepushte state aanwezig; geen nieuwe Spotify-ronde."
+              save_recovery
+              exit 1
+            fi
+            # v86: elke ronde offline testen, ook na automatische code-update.
+            # Bij een rode test STOPPEN vóór enige Spotify-actie.
+            echo "🛡️ v86: offline veiligheidspoort vóór Spotify-sync..."
+            python3 -m py_compile vuurland_sync.py
+            python3 test_v85_offline.py
+            python3 test_v86_offline.py
+            python3 test_v158_routing_offline.py
+            python3 test_v159_playlist_rebuild_offline.py
+            python3 test_v160_requeue_offline.py
+            for V86_TEST_VERSION in 77 78 79 80 81 82; do
+              python3 "v${V86_TEST_VERSION}_offline_test.py"
+            done
+            python3 test_v83_offline.py
+            echo "✅ v86: volledige offline testpoort geslaagd."
+
+            echo ""
+            echo "========================================"
+            echo "📻 Vuurland sync"
+            date
+            echo "========================================"
+
+            set +e
+            python3 -u vuurland_sync.py 2>&1 | tee -a vuurland_matcher_sync.log | tee vuurland_ronde.log
+            SYNC_EXIT=${PIPESTATUS[0]}
+            set -e
+
+            echo ""
+            echo "💾 Sync-status opslaan..."
+
+            if [ "$SYNC_EXIT" -eq 75 ]; then
+              echo "⏸️ Spotify-pauze (429, 403 of tijdelijke 5xx) opgeslagen. RadioBox blijft om de 60 seconden gevolgd worden."
+              if ! push_state; then
+                echo "❌ State kon niet veilig naar GitHub worden gepusht."
+                exit 1
+              fi
+              # Niet stoppen: de volgende ronde doet alleen RadioBox-ingestie.
+              SYNC_EXIT=0
+            elif [ "$SYNC_EXIT" -ne 0 ]; then
+              echo "⚠️ Sync-run gestopt met code $SYNC_EXIT."
+              echo "💾 Ook bij een fout de lokaal geschreven Spotify-cooldown en queue opslaan..."
+              if ! push_state; then
+                echo "❌ State kon niet veilig naar GitHub worden gepusht."
+                exit 1
+              fi
+              echo "🛑 Stop wegens een niet-herstelbare fout."
+              break
+            fi
+
+            if ! push_state; then
+              echo "🛑 State kon niet veilig naar GitHub worden gepusht."
+              exit 1
+            fi
+            # v138: alleen-lezen back-up; nooit terugschrijven naar git/state.
+            mkdir -p v138_state_backup
+            for f in vuurland_seen.json vuurland_live_queue.json .vuurland_spotify_cache.json; do
+              if [ -f "$f" ]; then cp "$f" "v138_state_backup/$f"; fi
+            done
+            python3 -u maak_live_muzieklog.py vuurland_ronde.log
+            REMAINING=$((END_TIME - SECONDS))
+
+            if [ "$REMAINING" -le 180 ]; then
+              break
+            fi
+
+            # Houd RadioBox-metingen maximaal 60 s uiteen, maar laat
+            # het Spotify-slot van 120 s geen extra hele minuut missen.
+            # De veiligheidstests en GitHub-fetch kosten ook tijd; start
+            # een volgende ronde iets vóór het Spotify-slot.
+            WAIT_SECONDS=$(python3 - <<'PY'
+          import json, time
+          try:
+              with open(".vuurland_spotify_cache.json", encoding="utf-8") as handle:
+                  cache = json.load(handle)
+              remaining = float(cache.get("__v150_next_spotify_round_at", 0) or 0) - time.time()
+              print(max(5, min(60, int(remaining - 15))))
+          except (OSError, ValueError, TypeError):
+              print(60)
+          PY
+            )
+            echo "⏳ Volgende RadioBox-controle over ${WAIT_SECONDS}s (Spotify-budget 120 s)."
+            sleep "$WAIT_SECONDS"
+          done
+
+          echo ""
+          echo "🏁 Deze runner gaat stoppen."
+
+          if [ "${SYNC_EXIT:-0}" -eq 0 ]; then
+            echo "🔄 Nieuwe runner wordt gestart..."
+
+            gh workflow run vuurland.yml \
+              --repo "$GITHUB_REPOSITORY" \
+              --ref main
+          else
+            echo "⏸️ Geen nieuwe runner gestart wegens een niet-herstelbare fout."
+            echo "🕒 De geplande workflow probeert later opnieuw."
+          fi
+
+      # Taalcontrole wordt lokaal verzameld; bewaar de kandidaten apart
+      # zonder onbekende taal als foutief of als toegestaan te bestempelen.
+      - name: Bewaar kandidaten voor taalcontrole
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-taalcontrole-kandidaten
+          path: vuurland_taalcontrole_nieuw.csv
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Technische syncdetails downloaden
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-technische-details
+          path: vuurland_technische_live.log
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Maak matcher-rapport (offline)
+        if: always()
+        run: python3 v64_matcher_report.py vuurland_matcher_sync.log
+      - name: Downloadbaar matcher-rapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland_matcher_rapport
+          path: v64_matcher_rapport/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Brongezondheid en wachtrijoverzicht (alleen lezen)
+        if: always()
+        run: |
+          python3 bronrapport_v138.py vuurland_matcher_sync.log vuurland_live_queue.json
+          cat vuurland_brongezondheid.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Download brongezondheid
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-brongezondheid
+          path: vuurland_brongezondheid.md
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Bewaar back-up van laatste veilige status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v138-backup
+          path: v138_state_backup/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Maak eenvoudig muziekoverzicht
+        if: always()
+        run: |
+          python3 maak_muziekoverzicht.py vuurland_matcher_sync.log
+          cat vuurland_toegevoegde_nummers.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Downloadbaar muziekoverzicht
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-toegevoegde-nummers
+          path: |
+            vuurland_toegevoegde_nummers.md
+            vuurland_toegevoegde_nummers.txt
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Bewaar conflicterende state voor herstel
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v73-state-herstel
+          path: v73_state_recovery/
+          if-no-files-found: ignore
+          retention-days: 7
