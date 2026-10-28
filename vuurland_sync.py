@@ -5988,7 +5988,8 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
 def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                            matching_version=35):
     snapshots = cache.setdefault("__v96_radio_snapshots", {})
-    playlist_keys = set(cache.get("__playlist_keys", []))
+    scan_complete = cache.get("__v159_rebuild_scanned") == "vuurland-live-only-rescan-v172-2026-10-29"
+    playlist_keys = set(cache.get("__playlist_keys", [])) if scan_complete else set()
     known_queue = {_v47_key(x.get("artist", ""), x.get("title", ""))
                    for x in live_queue if isinstance(x, dict)}
     discovered = cache.setdefault("__v47_radio_discovered", {})
