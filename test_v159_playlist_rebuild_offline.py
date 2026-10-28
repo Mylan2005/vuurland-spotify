@@ -14,5 +14,9 @@ assert src.index('playlist_data = spotify_request(', scan) < marker
 assert src.index('"__playlist_uris"', scan) < marker
 assert src.index('"__playlist_isrcs"', scan) < marker
 assert src.index('save_cache(cache)', marker) > marker
+assert 'actual_playlist_total = _get_playlist_total(playlist_id)' in src
+assert 'playlist_count_changed = actual_playlist_total != active_playlist_count' in src
+assert 'or playlist_count_changed' in src
+assert src.index('actual_playlist_total = _get_playlist_total(playlist_id)') < scan
 assert 'if str(item.get("source") or "").strip() != "vuurland":' not in src
 print("✅ v159: echte playlist opnieuw lezen vóór dedupe, andere bronnen like-only")
