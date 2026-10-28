@@ -101,7 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio", "big_sonic_heaven")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6587,6 +6587,12 @@ def sync():
             "tracks": get_dreampop_radio_tracks(),
             "cache_key": "__last_radio_key_dreampop_radio",
         },
+        {
+            "id": "big_sonic_heaven",
+            "name": "Big Sonic Heaven Radio",
+            "tracks": get_big_sonic_heaven_tracks(),
+            "cache_key": "__last_radio_key_big_sonic_heaven",
+        },
     ]
 
     print()
@@ -6825,15 +6831,8 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
-    # v169: verwijder oude Big Sonic-queue-items zonder andere bronnen te raken.
-    # Het historische review-archief blijft in de cache, niet actief.
-    before_removed_source = len(live_queue)
-    live_queue = [x for x in live_queue if not (
-        isinstance(x, dict) and x.get("source") == "big_sonic_heaven")]
-    if len(live_queue) != before_removed_source:
-        print(f"🧹 v169: {before_removed_source-len(live_queue)} oude Big Sonic-items uit FIFO.")
-        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-
+    # Big Sonic opnieuw actief. Oude verwijderregel uitgeschakeld.
+    # Reeds verwijderde items worden niet massaal teruggeplaatst.
     _v116_new = v116_stamp_fifo(live_queue, cache)
     if _v116_new:
         print(f"📥 v116: {_v116_new} queue-item(s) een vaste FIFO-positie gegeven.")
@@ -7352,7 +7351,7 @@ def sync():
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 Vier radiobronnen actief; één gezamenlijke FIFO.")
+    print("🔀 Vijf radiobronnen actief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
