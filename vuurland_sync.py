@@ -6984,6 +6984,10 @@ def sync():
     # activeren de volledige scan). Periodiek maximaal eenmaal per 7 dagen.
     # Bij verwijderingen blijft de cache bewust conservatief tot de scan.
     PLAYLIST_CACHE_SECONDS = 7 * 86400
+    # v165: eenmalige import na handmatige heropbouw (2524 bestaande
+    # nummers). Geen toevoeging/like tot de actuele playlist is gelezen.
+    # Marker wordt pas na volledige succesvolle scan opgeslagen.
+    EXISTING_PLAYLIST_IMPORT_TOKEN = "vuurland-existing-playlist-2524-2026-10-28"
     # v162: een verwijdering vereist geen dure volledige playlistscan.
     # De bestaande duplicaatcache blijft conservatief (kan verwijderde
     # nummers tijdelijk blijven herkennen), zodat geen dubbele opnames
@@ -6994,6 +6998,7 @@ def sync():
     playlist_count_check_due = (
         not isinstance(active_playlist_count, int)
         or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
+        or cache.get("__v165_existing_playlist_imported") != EXISTING_PLAYLIST_IMPORT_TOKEN
         or time.time() - float(cache.get("__v164_playlist_count_checked_at", 0) or 0) >= 21600
     )
     if playlist_count_check_due:
@@ -7017,6 +7022,7 @@ def sync():
         not playlist_isrc_cache_ready
         or time.time() - playlist_cache_time >= PLAYLIST_CACHE_SECONDS
         or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
+        or cache.get("__v165_existing_playlist_imported") != EXISTING_PLAYLIST_IMPORT_TOKEN
         or playlist_count_changed
     ):
 
@@ -7249,6 +7255,7 @@ def sync():
             "__playlist_cache_time"
         ] = int(time.time())
         cache["__v159_rebuild_scanned"] = V159_REBUILD_TOKEN
+        cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST_IMPORT_TOKEN
 
         save_cache(cache)
 
