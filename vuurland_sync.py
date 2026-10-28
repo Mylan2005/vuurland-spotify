@@ -101,7 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6555,26 +6555,6 @@ def v131_block_nonlatin_east_asian(artist, title):
     return any(lo <= ord(ch) <= hi for ch in value for lo, hi in ranges)
 
 
-# Alleen overtuigend passende Big Sonic-artiesten naar de hoofdplaylist;
-# alle overige nummers naar de aparte beoordeling, zonder automatische like.
-BIG_SONIC_MAIN_ARTISTS = {
-    "the cure", "slowdive", "beach house", "the haunted youth",
-    "still corners", "hatchie", "sigur ros", "sigur rós", "newdad",
-    "the sundays", "mazzy star", "mojave 3", "the national",
-    "the xx", "portishead", "m83", "the war on drugs",
-    "ben howard", "jeff buckley", "the innocence mission",
-    "camera obscura", "the smiths", "the verve", "the twilight sad",
-    "wolf alice", "lanterns on the lake", "night tapes",
-    "alvvays", "the japanese house", "phoebe bridgers",
-}
-BIG_SONIC_REVIEW_PLAYLIST_ID = "3nUiilxNpNehxCOnlCwOQM"
-
-
-def big_sonic_destination(artist, title):
-    return ("main" if normalize_match(artist) in
-            {normalize_match(a) for a in BIG_SONIC_MAIN_ARTISTS} else "review")
-
-
 def sync():
     global LAST_SPOTIFY_MATCH_ISRC
 
@@ -6596,16 +6576,16 @@ def sync():
             "cache_key": "__last_radio_key_mellow_mix",
         },
         {
-            "id": "big_sonic_heaven",
-            "name": "Big Sonic Heaven Radio",
-            "tracks": get_big_sonic_heaven_tracks(),
-            "cache_key": "__last_radio_key_big_sonic_heaven",
-        },
-        {
             "id": "radio_x_chilled",
             "name": "Radio X Chilled",
             "tracks": get_radio_x_chilled_tracks(),
             "cache_key": "__last_radio_key_radio_x_chilled",
+        },
+        {
+            "id": "dreampop_radio",
+            "name": "Dreampop Radio",
+            "tracks": get_dreampop_radio_tracks(),
+            "cache_key": "__last_radio_key_dreampop_radio",
         },
     ]
 
@@ -6845,29 +6825,14 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
-    # v168: Big Sonic gebruikt voortaan dezelfde FIFO als de andere bronnen.
-    # Maximaal vijf eerder bewaarde kandidaten per ronde terugplaatsen.
-    review_pending = cache.setdefault("__v167_big_sonic_review_pending", {})
-    if not isinstance(review_pending, dict):
-        raise ValueError("Big Sonic review-cache ongeldig")
-    queued_keys = {_v47_key(x.get("artist", ""), x.get("title", ""))
-                   for x in live_queue if isinstance(x, dict)}
-    revived = 0
-    for key, value in list(review_pending.items()):
-        if revived >= 5:
-            break
-        if not isinstance(value, dict):
-            continue
-        if key not in queued_keys and key not in seen:
-            live_queue.append({"artist": value.get("artist", ""),
-                               "title": value.get("title", ""),
-                               "source": "big_sonic_heaven"})
-            queued_keys.add(key)
-            revived += 1
-        review_pending.pop(key, None)
-    if revived:
-        print(f"🎧 v168: {revived} Big Sonic-kandidaten in gedeelde FIFO.")
-    save_cache(cache)
+    # v169: verwijder oude Big Sonic-queue-items zonder andere bronnen te raken.
+    # Het historische review-archief blijft in de cache, niet actief.
+    before_removed_source = len(live_queue)
+    live_queue = [x for x in live_queue if not (
+        isinstance(x, dict) and x.get("source") == "big_sonic_heaven")]
+    if len(live_queue) != before_removed_source:
+        print(f"🧹 v169: {before_removed_source-len(live_queue)} oude Big Sonic-items uit FIFO.")
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
     _v116_new = v116_stamp_fifo(live_queue, cache)
     if _v116_new:
@@ -7376,45 +7341,6 @@ def sync():
         )
 
     # ---------------------------------
-    # v168: eerste inlezing reviewplaylist in pages van 50. Veilig stoppen
-    # vóór alle writes zolang er nog niet volledig gededupliceerd is.
-    review_keys = set(cache.get("__v168_review_keys", []))
-    review_uris = set(cache.get("__v168_review_uris", []))
-    if not cache.get("__v168_review_scan_complete"):
-        scan = cache.get("__v168_review_scan") or {"offset": 0, "keys": [], "uris": []}
-        review_keys.update(scan.get("keys", []))
-        review_uris.update(scan.get("uris", []))
-        offset = int(scan["offset"])
-        page = spotify_request("GET", f"/playlists/{BIG_SONIC_REVIEW_PLAYLIST_ID}/items",
-                               params={"limit": 50, "offset": offset})
-        batch, total = page.get("items"), page.get("total")
-        if not isinstance(batch, list) or not isinstance(total, int):
-            raise RuntimeError("Ongeldige reviewplaylistpagina; geen writes")
-        for entry in batch:
-            track = (entry or {}).get("item") or (entry or {}).get("track") or {}
-            if not isinstance(track, dict):
-                continue
-            if track.get("uri"):
-                review_uris.add(track["uri"])
-            artists = track.get("artists") or []
-            if artists and track.get("name"):
-                review_keys.add(_v47_key(artists[0].get("name", ""), track["name"]))
-        end = offset + len(batch)
-        if end < total and not batch:
-            raise RuntimeError("Reviewplaylistscan zonder voortgang")
-        if end >= total:
-            cache["__v168_review_scan_complete"] = True
-            cache.pop("__v168_review_scan", None)
-        else:
-            cache["__v168_review_scan"] = {
-                "offset": end, "keys": sorted(review_keys), "uris": sorted(review_uris)}
-        cache["__v168_review_keys"] = sorted(review_keys)
-        cache["__v168_review_uris"] = sorted(review_uris)
-        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-        save_cache(cache)
-        print("📋 v168: reviewplaylistscan; deze ronde geen Spotify-writes.")
-        return
-
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
 
@@ -7426,7 +7352,7 @@ def sync():
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 Alleen Studio Brussel Vuurland actief; één FIFO.")
+    print("🔀 Vier radiobronnen actief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
@@ -8208,27 +8134,6 @@ def sync():
                     active_volume_number,
                     active_playlist_count,
                 ) = get_active_volume_playlist(cache)
-
-        # v168: twijfelgevallen alleen naar aparte reviewplaylist; nooit liken.
-        if (item.get("source") == "big_sonic_heaven"
-                and big_sonic_destination(artist, title) == "review"):
-            review_key = _v47_key(artist, title)
-            if uri not in review_uris and review_key not in review_keys:
-                add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])
-                review_uris.add(uri)
-                review_keys.add(review_key)
-                cache["__v168_review_uris"] = sorted(review_uris)
-                cache["__v168_review_keys"] = sorted(review_keys)
-                additions_this_round += 1
-                print(f"🎧 Big Sonic-review: {artist} - {title}")
-            else:
-                print(f"⏭️ Al in Big Sonic-review: {artist} - {title}")
-            live_queue.pop(0)
-            seen.add(cache_key)
-            save_seen(seen)
-            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-            save_cache(cache)
-            continue
 
         add_tracks(
             playlist_id,
