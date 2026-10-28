@@ -6754,6 +6754,22 @@ def sync():
 
     seen = load_seen()
     cache = load_cache()
+    # One-time fresh start for the four radio stations; preserve Spotify state.
+    if cache.get("__v168_fresh_start") != "2026-10-28-four":
+        live_queue.clear()
+        cache["__v95_live_fifo_initialized"] = True
+        cache["__v71_six_matcher_retries_released"] = True
+        cache["__v160_vuurland_history_restored"] = "vuurland-history-after-manual-rebuild-2026-10-28"
+        cache["__v167_four_histories_restored"] = "four-radio-histories-after-fresh-playlist-scan-2026-10-28"
+        snapshots = cache.setdefault("__v96_radio_snapshots", {})
+        discovered = cache.setdefault("__v47_radio_discovered", {})
+        for src in radio_sources:
+            tracks = src.get("tracks", [])
+            snapshots[src["id"]] = [_v47_key(a, t) for a, t in tracks[:100]]
+            discovered[src["id"]] = sorted({_v47_key(a, t) for a, t in tracks})
+        cache["__v168_fresh_start"] = "2026-10-28-four"
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_cache(cache)
 
     # =================================
     # MATCHING CACHE MIGRATIE
