@@ -12,9 +12,10 @@ assert '_attempt_library_like(cache, uri)' in body
 assert body.index('add_tracks(\n            playlist_id,') < body.rindex('_attempt_library_like(cache, uri)')
 assert 'if uri in playlist_uris:' in body
 assert 'candidate_isrc in playlist_isrcs' in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")' in source
 assert '"tracks": get_mellow_mix_tracks()' in body
 assert '"tracks": get_big_sonic_heaven_tracks()' in body
+assert '"tracks": get_radio_x_chilled_tracks()' in body
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled")' in source
 assert 'cache.setdefault("__v167_big_sonic_review_pending", {})' in body
 assert 'candidate.get("source") != "big_sonic_heaven"' in body
 assert 'live_queue = [x for x in live_queue if not (' in body
