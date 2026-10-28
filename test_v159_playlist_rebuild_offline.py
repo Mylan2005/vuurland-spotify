@@ -4,7 +4,7 @@ from pathlib import Path
 
 src = Path("vuurland_sync.py").read_text(encoding="utf-8")
 ast.parse(src)
-assert 'V159_REBUILD_TOKEN = "vuurland-four-sources-fresh-rescan-v169-2026-10-28"' in src
+assert 'V159_REBUILD_TOKEN = "vuurland-live-only-rescan-v172-2026-10-29"' in src
 assert 'cache["__vuurland_active_playlist_count"] = None' in src
 assert 'or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN' in src
 scan = src.index('if (\n        not playlist_isrc_cache_ready')
