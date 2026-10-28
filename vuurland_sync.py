@@ -101,7 +101,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "dreampop_radio", "big_sonic_heaven", "dkfm_edge", "dkfm_shoegaze")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "dreampop_radio")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6624,34 +6624,10 @@ def sync():
             "cache_key": "__last_radio_key_mellow_mix",
         },
         {
-            "id": "radio_x_chilled",
-            "name": "Radio X Chilled",
-            "tracks": get_radio_x_chilled_tracks(),
-            "cache_key": "__last_radio_key_radio_x_chilled",
-        },
-        {
             "id": "dreampop_radio",
             "name": "Dreampop Radio",
             "tracks": get_dreampop_radio_tracks(),
             "cache_key": "__last_radio_key_dreampop_radio",
-        },
-        {
-            "id": "big_sonic_heaven",
-            "name": "Big Sonic Heaven Radio",
-            "tracks": get_big_sonic_heaven_tracks(),
-            "cache_key": "__last_radio_key_big_sonic_heaven",
-        },
-        {
-            "id": "dkfm_edge",
-            "name": "DKFM Edge (gefilterd)",
-            "tracks": dkfm_vuurland_filter(get_dkfm_edge_tracks(), "DKFM Edge"),
-            "cache_key": "__last_radio_key_dkfm_edge",
-        },
-        {
-            "id": "dkfm_shoegaze",
-            "name": "DKFM Shoegaze Radio (gefilterd)",
-            "tracks": dkfm_vuurland_filter(get_dkfm_shoegaze_tracks(), "DKFM Shoegaze"),
-            "cache_key": "__last_radio_key_dkfm_shoegaze",
         },
     ]
 
@@ -6683,6 +6659,19 @@ def sync():
 
     if not isinstance(live_queue, list):
         raise ValueError("Live queue is geen JSON-lijst; niet overschrijven")
+
+    # Alleen de drie gekozen bronnen blijven in de FIFO.
+    # Eenmalige Radio Indie Alternative-selectie gebruikt source="vuurland"
+    # en blijft daardoor behouden. Onbekende bronnen worden veilig uitgesloten.
+    before_source_filter = len(live_queue)
+    live_queue = [item for item in live_queue if (
+        isinstance(item, dict)
+        and str(item.get("source") or "vuurland").strip() in RADIO_SOURCE_ORDER
+    )]
+    if len(live_queue) != before_source_filter:
+        removed_count = before_source_filter - len(live_queue)
+        print(f"🧹 {removed_count} wachtende nummers van uitgeschakelde bronnen verwijderd.")
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
     # v48: interviews uit reeds bestaande wachtrij filteren vóór de scheduler.
     interviews_in_queue = sum(
@@ -6891,8 +6880,6 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
-    # Big Sonic opnieuw actief. Oude verwijderregel uitgeschakeld.
-    # Reeds verwijderde items worden niet massaal teruggeplaatst.
     _v116_new = v116_stamp_fifo(live_queue, cache)
     if _v116_new:
         print(f"📥 v116: {_v116_new} queue-item(s) een vaste FIFO-positie gegeven.")
@@ -7437,7 +7424,7 @@ def sync():
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 Zeven radiobronnen actief; één gezamenlijke FIFO.")
+    print("🔀 Drie radiobronnen actief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
