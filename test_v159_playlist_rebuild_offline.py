@@ -19,6 +19,10 @@ assert 'playlist_count_changed = actual_playlist_total > active_playlist_count' 
 assert 'if actual_playlist_total < active_playlist_count:' in src
 assert 'cache["__vuurland_active_playlist_count"] = actual_playlist_total' in src
 assert 'or playlist_count_changed' in src
+assert 'cache.get("__v165_existing_playlist_imported") != EXISTING_PLAYLIST_IMPORT_TOKEN' in src
+assert 'cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST_IMPORT_TOKEN' in src
+assert src.index('cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST_IMPORT_TOKEN') > scan
+
 assert src.index('actual_playlist_total = _get_playlist_total(playlist_id)') < scan
 assert 'if str(item.get("source") or "").strip() != "vuurland":' not in src
 print("✅ v159: playlisttoevoegingen en rebuild scannen; verwijderingen bewaren dedupe-cache")
