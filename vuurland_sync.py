@@ -103,7 +103,7 @@ DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?l
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
 RADIO_SOURCE_ORDER = (
     "vuurland", "mellow_mix", "big_sonic_heaven",
-    "radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
+    "radio_x_chilled", "indie_select", "championship_vinyl",
     "dreampop_radio", "radio_indie_alternative", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic",
 )
 
@@ -6603,12 +6603,6 @@ def sync():
             "cache_key": "__last_radio_key_championship_vinyl",
         },
         {
-            "id": "dark_edge",
-            "name": "Dark Edge Radio",
-            "tracks": get_dark_edge_tracks(),
-            "cache_key": "__last_radio_key_dark_edge",
-        },
-        {
             "id": "dreampop_radio",
             "name": "Dreampop Radio",
             "tracks": get_dreampop_radio_tracks(),
@@ -7342,12 +7336,12 @@ def sync():
     duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
 
     # v120: gezamenlijke FIFO zonder bronbeurtrol.
-    # Alle twaalf RadioBox-bronnen blijven iedere ronde nieuwe titels achteraan
+    # Alle elf actieve RadioBox-bronnen blijven nieuwe titels achteraan
     # toevoegen. De bestaande persistente _v116_fifo_seq blijft leidend.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 v137: 12 bronnen samen, één FIFO, geen beurtrol.")
+    print("🔀 11 actieve bronnen, één FIFO, geen beurtrol; Dark Edge uitgeschakeld.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
