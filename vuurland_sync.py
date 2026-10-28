@@ -6772,6 +6772,10 @@ def sync():
             snapshots.pop(sid, None)
             discovered[sid] = []
         cache["__v47_failed_tracks"] = {}
+        # Reset old negative radio matching decisions, never the API cooldown.
+        for key in list(cache):
+            if key.startswith("__not_found_v35__"):
+                cache.pop(key, None)
         cache["__v169_fresh_radio_cache"] = "2026-10-28-all-four"
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
