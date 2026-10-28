@@ -32,6 +32,6 @@ assert clear({}, 'ISE', 'Ik reis door de nacht (live)') == 0
 assert 'SPOTIFY_SEARCH_HTTP_LIMIT = 1' in source
 assert 'CHECK_EVERY_SECONDS = 60' in source
 assert 'max_additions_per_round = 1' in source
-assert source.count('v83_clear_resolved_failures(cache, artist, title)') == 6
+assert source.count('v83_clear_resolved_failures(cache, artist, title)') >= 6  # v158: like-only adds a valid cleanup path
 print('✅ v83: oude foutstatus selectief opgeschoond; overige state intact')
 print('✅ v83: bestaande limieten en liveversies ongemoeid')
