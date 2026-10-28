@@ -20,5 +20,7 @@ assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_x_chilled", "drea
 assert 'x.get("source") == "big_sonic_heaven"' not in body
 assert 'is_confirmed_german_vocal(artist, title)' in body
 assert 'v140_is_unwanted_language_title(title, artist)' in body
-assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID' not in body
+assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' in body
+assert 'big_sonic_destination(artist) == "review"' in body
+assert '__big_sonic_review_scan_complete' in body
 print("✅ Dreampop actief, Big Sonic verwijderd, Duitse zangblokkering behouden.")
