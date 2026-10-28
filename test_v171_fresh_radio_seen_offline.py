@@ -38,5 +38,18 @@ for sid in ns["RADIO_SOURCE_ORDER"]:
     assert collect(source, cache, seen, queue) == 0
     assert len(queue) == 1
 
+# A removed song may be present in the old cache, but must enter live FIFO.
+old_key = key("Elton John", "Goodbye Yellow Brick Road")
+for completed in (False, True):
+    cache = {"__playlist_keys": [old_key]}
+    if completed:
+        cache["__v159_rebuild_scanned"] = "vuurland-live-only-rescan-v172-2026-10-29"
+    q = []
+    src = [{"id": "mellow_mix", "name": "Mellow", "tracks": [("Other", "Baseline")]}]
+    assert collect(src, cache, set(), q) == 0
+    src[0]["tracks"] = [("Elton John", "Goodbye Yellow Brick Road"), ("Other", "Baseline")]
+    assert collect(src, cache, set(), q) == (0 if completed else 1)
+    assert len(q) == (0 if completed else 1)
+
 # Oude snapshots van uitgeschakelde bronnen krijgen geen toegang tot de FIFO.
 print("✅ v171: vier radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
