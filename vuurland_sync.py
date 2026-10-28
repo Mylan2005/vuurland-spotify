@@ -90,6 +90,7 @@ ARTIST_ALIASES = {
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
+RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
 INDIE_SELECT_SOURCE_URL = "https://onlineradiobox.com/de/indieselect/playlist/?lang=nl"
 CHAMPIONSHIP_VINYL_SOURCE_URL = "https://onlineradiobox.com/de/championshipvinyl/playlist/?lang=nl"
@@ -101,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_britannia")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1224,6 +1225,15 @@ def get_big_sonic_heaven_tracks():
         "Big Sonic Heaven Radio",
         {"big sonic heaven radio"},
     )
+
+
+def get_radio_britannia_tracks():
+    # De vele Britannia-jingles hebben steeds Daniel Roggiano als artiest.
+    # Filter vóór de Spotify-zoekactie en vóór de gemeenschappelijke wachtrij.
+    return [(artist, title) for artist, title in get_radiobox_tracks(
+        RADIO_BRITANNIA_SOURCE_URL, "Radio Britannia"
+    ) if normalize_match(artist) != "daniel roggiano"
+       and normalize_match(artist) != "radio britannia"]
 
 
 def get_radio_x_chilled_tracks():
@@ -6629,6 +6639,12 @@ def sync():
             "tracks": get_big_sonic_heaven_tracks(),
             "cache_key": "__last_radio_key_big_sonic_heaven",
         },
+        {
+            "id": "radio_britannia",
+            "name": "Radio Britannia",
+            "tracks": get_radio_britannia_tracks(),
+            "cache_key": "__last_radio_key_radio_britannia",
+        },
     ]
 
     print()
@@ -6660,7 +6676,7 @@ def sync():
     if not isinstance(live_queue, list):
         raise ValueError("Live queue is geen JSON-lijst; niet overschrijven")
 
-    # Alleen de drie gekozen bronnen blijven in de FIFO.
+    # Alleen de vier gekozen bronnen blijven in de FIFO.
     # Eenmalige Radio Indie Alternative-selectie gebruikt source="vuurland"
     # en blijft daardoor behouden. Onbekende bronnen worden veilig uitgesloten.
     before_source_filter = len(live_queue)
