@@ -7077,7 +7077,7 @@ def sync():
     # v159: gebruiker heeft de Vuurland-playlist handmatig heropgebouwd.
     # Eenmalig live Spotify-count + complete playlistscan verplichten.
     # Token wordt pas na een geslaagde volledige scan gemarkeerd.
-    V159_REBUILD_TOKEN = "vuurland-four-sources-fresh-rescan-v169-2026-10-28"
+    V159_REBUILD_TOKEN = "vuurland-live-only-rescan-v172-2026-10-29"
     if cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN:
         cache["__vuurland_active_playlist_count"] = None
 
@@ -7153,7 +7153,7 @@ def sync():
     # v165: eenmalige import na handmatige heropbouw (2524 bestaande
     # nummers). Geen toevoeging/like tot de actuele playlist is gelezen.
     # Marker wordt pas na volledige succesvolle scan opgeslagen.
-    EXISTING_PLAYLIST_IMPORT_TOKEN = "vuurland-four-sources-fresh-import-2026-10-28"
+    EXISTING_PLAYLIST_IMPORT_TOKEN = "vuurland-live-only-import-v172-2026-10-29"
     # v162: een verwijdering vereist geen dure volledige playlistscan.
     # De bestaande duplicaatcache blijft conservatief (kan verwijderde
     # nummers tijdelijk blijven herkennen), zodat geen dubbele opnames
@@ -7481,7 +7481,7 @@ def sync():
     # v170: scan Liked Songs once as a second dedupe inventory.
     # One page per Spotify slot; never publish partial library data.
     # Existing playlist and cooldown state are never deleted.
-    library_token = "liked-songs-recheck-four-radio-fifo-2026-10-28"
+    library_token = "liked-songs-live-only-v172-2026-10-29"
     if cache.get("__v170_liked_scan_complete") != library_token:
         stage = cache.get("__v170_liked_stage")
         if not isinstance(stage, dict):
