@@ -147,6 +147,7 @@ jobs:
             python3 -m py_compile vuurland_sync.py
             python3 test_v85_offline.py
             python3 test_v86_offline.py
+            python3 test_v158_routing_offline.py
             for V86_TEST_VERSION in 77 78 79 80 81 82; do
               python3 "v${V86_TEST_VERSION}_offline_test.py"
             done
