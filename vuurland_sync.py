@@ -7075,7 +7075,7 @@ def sync():
     # v159: gebruiker heeft de Vuurland-playlist handmatig heropgebouwd.
     # Eenmalig live Spotify-count + complete playlistscan verplichten.
     # Token wordt pas na een geslaagde volledige scan gemarkeerd.
-    V159_REBUILD_TOKEN = "vuurland-four-sources-fresh-rescan-2026-10-28"
+    V159_REBUILD_TOKEN = "vuurland-four-sources-fresh-rescan-v169-2026-10-28"
     if cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN:
         cache["__vuurland_active_playlist_count"] = None
 
