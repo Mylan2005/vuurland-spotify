@@ -14,5 +14,5 @@ assert src.index('playlist_data = spotify_request(', scan) < marker
 assert src.index('"__playlist_uris"', scan) < marker
 assert src.index('"__playlist_isrcs"', scan) < marker
 assert src.index('save_cache(cache)', marker) > marker
-assert 'if str(item.get("source") or "").strip() != "vuurland":' in src
+assert 'if str(item.get("source") or "").strip() != "vuurland":' not in src
 print("✅ v159: echte playlist opnieuw lezen vóór dedupe, andere bronnen like-only")
