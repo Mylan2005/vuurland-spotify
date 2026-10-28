@@ -7047,10 +7047,13 @@ def sync():
         0
     )
 
-    # v69: detecteer ook handmatig uit Chill Mix toegevoegde nummers.
-    # Eén keer per 24 uur, om Spotify API-verzoeken te beperken. Een lege nieuwe lijst is ook een geldige
-    # cache en mag niet voortdurend opnieuw worden gescand.
-    PLAYLIST_CACHE_SECONDS = 86400
+    # v163: grote playlists niet dagelijks volledig herlezen.
+    # De dagelijkse scan veroorzaakte honderden Spotify GET-verzoeken en 429.
+    # Laat de conservatieve URI/ISRC-dedupe-cache intact en controleer nog
+    # steeds elke ronde het playlisttotaal (nieuwe externe toevoegingen
+    # activeren de volledige scan). Periodiek maximaal eenmaal per 7 dagen.
+    # Bij verwijderingen blijft de cache bewust conservatief tot de scan.
+    PLAYLIST_CACHE_SECONDS = 7 * 86400
     # v162: een verwijdering vereist geen dure volledige playlistscan.
     # De bestaande duplicaatcache blijft conservatief (kan verwijderde
     # nummers tijdelijk blijven herkennen), zodat geen dubbele opnames
