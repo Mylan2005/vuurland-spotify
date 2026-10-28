@@ -43,10 +43,20 @@ def format_music(raw, source, clock=None):
 
 def stream(instream, logfile, emit=print):
     source = None
+    show_error_detail = False
     with open(logfile, 'a', encoding='utf-8', buffering=1) as handle:
         for text in instream:
             handle.write(text)
             line = text.strip()
+            if show_error_detail:
+                # De sync print de echte uitzondering op de regel na deze kop.
+                # Toon uitsluitend die regel, zonder alle diagnose-uitvoer te tonen.
+                if line:
+                    emit(f"❌ Oorzaak: {line}", flush=True)
+                    show_error_detail = False
+                    continue
+            if line == '❌ Er ging iets mis:':
+                show_error_detail = True
             selected = SELECTIE.search(line)
             if selected:
                 source = selected.group(1)
