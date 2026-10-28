@@ -6044,7 +6044,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                     reason = "interviewfragment"
                 elif key in known_queue:
                     reason = "staat al in live queue"
-                elif key in seen:
+                elif key in seen and sid not in RADIO_SOURCE_ORDER:
+                    # Oude seen-state van voor v169 mag de vier nieuwe radiofeeds
+                    # niet blokkeren. Spotify-dedupe en FIFO-dedupe blijven actief.
                     reason = "al eerder verwerkt (seen-geheugen)"
                 elif key in playlist_keys or radio_matches_playlist(artist, title, playlist_keys):
                     reason = "staat al in Spotify-playlist (cache)"
