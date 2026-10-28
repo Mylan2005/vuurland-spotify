@@ -23,7 +23,9 @@ assert 'before_source_filter = len(live_queue)' in body
 assert 'x.get("source") == "big_sonic_heaven"' not in body
 assert 'is_confirmed_german_vocal(artist, title)' in body
 assert 'v140_is_unwanted_language_title(title, artist)' in body
-assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' in body
-assert 'big_sonic_destination(artist) == "review"' in body
-assert '__big_sonic_review_scan_complete' in body
+assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' not in body
+assert 'big_sonic_destination(artist) == "review"' not in body
+assert '__big_sonic_review_scan_complete' not in body
 print("✅ Drie actieve bronnen, andere bronnen uit FIFO, Duitse zangblokkering behouden.")
+
+assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
