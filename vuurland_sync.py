@@ -7007,6 +7007,27 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
+    # v181: herstel uitsluitend twee bewezen ontbrekende Vuurland-plays.
+    # Geen volledige historie-import; FIFO, cache en 120s-tempo blijven intact.
+    if not cache.get("__v181_vuurland_two_missing_recovered"):
+        discovered_vuurland = set(cache.get("__v47_radio_discovered", {}).get("vuurland", []))
+        queued_now = {_v47_key(x.get("artist", ""), x.get("title", ""))
+                      for x in live_queue if isinstance(x, dict)}
+        for artist, title in (("Noah Kahan", "Porch Light"),
+                              ("AURORA", "The Flood")):
+            key = _v47_key(artist, title)
+            cached_uri = cache.get(f"__match_v{MATCHING_RULES_VERSION}__" + key)
+            if (key in discovered_vuurland and key not in queued_now
+                    and key not in playlist_keys and cached_uri
+                    and cached_uri not in playlist_uris
+                    and not radio_matches_playlist(artist, title, playlist_keys)):
+                live_queue.append({"artist": artist, "title": title, "source": "vuurland"})
+                queued_now.add(key)
+                print(f"♻️ v181 ontbrekende Vuurland-play veilig hersteld: {artist} — {title}")
+        cache["__v181_vuurland_two_missing_recovered"] = True
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_cache(cache)
+
     _v116_new = v116_stamp_fifo(live_queue, cache)
     if _v116_new:
         print(f"📥 v116: {_v116_new} queue-item(s) een vaste FIFO-positie gegeven.")
