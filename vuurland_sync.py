@@ -7202,23 +7202,58 @@ def sync():
         cache["__vuurland_active_playlist_count"] = actual_playlist_total
         save_cache(cache)
     elif actual_playlist_total > active_playlist_count:
-        # v176: lees bij kleine externe groei alleen de nieuwste pagina.
-        # Deze controle is aanvullend: geen volledige cache resetten,
-        # geen playlistmutaties, geen nieuwe API-call bij een lopende scan.
-        growth = actual_playlist_total - active_playlist_count
-        incremental_safe = (
-            0 < growth <= 50
-            and playlist_isrc_cache_ready
-            and not isinstance(cache.get("__v166_playlist_scan"), dict)
-            and time.time() - float(playlist_cache_time or 0) < PLAYLIST_CACHE_SECONDS
-        )
-        if incremental_safe:
+        # v177: Spotify voegt zonder expliciete positie ACHTERAAN toe.
+        # Bewaar een cursor naar het oude einde; niet vanaf offset 0 lezen.
+        # Externe invoegingen op andere posities en verwijderingen worden
+        # uiteindelijk door de conservatieve volledige controles verwerkt.
+        if (playlist_isrc_cache_ready
+                and not isinstance(cache.get("__v166_playlist_scan"), dict)
+                and time.time() - float(playlist_cache_time or 0) < PLAYLIST_CACHE_SECONDS):
+            stage = cache.get("__v177_playlist_delta")
+            if not isinstance(stage, dict) or stage.get("playlist_id") != playlist_id:
+                cache["__v177_playlist_delta"] = {
+                    "playlist_id": playlist_id,
+                    "offset": active_playlist_count,
+                    "target": actual_playlist_total,
+                }
+            else:
+                stage["target"] = max(int(stage["target"]), actual_playlist_total)
+        print(f"📌 Playlist gegroeid ({active_playlist_count} → "
+              f"{actual_playlist_total}); geen volledige herscan.")
+        active_playlist_count = actual_playlist_total
+        cache["__vuurland_active_playlist_count"] = actual_playlist_total
+        save_cache(cache)
+
+    # v177: maximaal één extra pagina per ronde; ook bij >50 handmatige
+    # toevoegingen. Een volledige scan heeft altijd voorrang. Tijdens een
+    # delta mag de cache alleen groeien (conservatieve duplicaatbescherming).
+    delta = cache.get("__v177_playlist_delta")
+    delta_allowed = (
+        isinstance(delta, dict)
+        and delta.get("playlist_id") == playlist_id
+        and playlist_isrc_cache_ready
+        and not isinstance(cache.get("__v166_playlist_scan"), dict)
+        and time.time() - float(playlist_cache_time or 0) < PLAYLIST_CACHE_SECONDS
+        and cache.get("__v159_rebuild_scanned") == V159_REBUILD_TOKEN
+        and cache.get("__v165_existing_playlist_imported") == EXISTING_PLAYLIST_IMPORT_TOKEN
+    )
+    if delta_allowed:
+        delta_offset = int(delta.get("offset", 0))
+        delta_target = int(delta.get("target", 0))
+        if delta_offset < delta_target:
             try:
-                recent = spotify_request(
+                batch = spotify_request(
                     "GET", f"/playlists/{playlist_id}/items",
-                    params={"limit": 50, "offset": 0},
+                    params={"limit": min(50, delta_target - delta_offset),
+                            "offset": delta_offset},
                 )
-                for entry in recent.get("items", []):
+            except RuntimeError as error:
+                if "Spotify rate-limit actief" in str(error):
+                    reset_live_sync_after_rate_limit(live_queue_file, cache)
+                raise
+            entries = batch.get("items", [])
+            if entries:
+                for entry in entries:
                     track = entry.get("item") or {}
                     uri = track.get("uri")
                     if uri:
@@ -7234,22 +7269,21 @@ def sync():
                         artist_key = normalize_match(credit.get("name", ""))
                         if artist_key and title_key:
                             playlist_keys.add(f"{artist_key}|||{title_key}")
-                # Alleen bij een volledige, niet-lege pagina publiceren.
-                if recent.get("items"):
-                    cache["__playlist_keys"] = sorted(playlist_keys)
-                    cache["__playlist_uris"] = sorted(playlist_uris)
-                    cache["__playlist_isrcs"] = sorted(playlist_isrcs)
-                    cache["__spotify_uri_isrc"] = spotify_uri_isrc
-                    print(f"📥 v176: nieuwste pagina incrementeel gelezen na {growth} externe toevoegingen.")
-            except RuntimeError as error:
-                if "Spotify rate-limit actief" in str(error):
-                    reset_live_sync_after_rate_limit(live_queue_file, cache)
-                raise
-        print(f"📌 Playlist gegroeid ({active_playlist_count} → "
-              f"{actual_playlist_total}); geen volledige herscan.")
-        active_playlist_count = actual_playlist_total
-        cache["__vuurland_active_playlist_count"] = actual_playlist_total
-        save_cache(cache)
+                delta["offset"] = delta_offset + len(entries)
+                cache["__playlist_keys"] = sorted(playlist_keys)
+                cache["__playlist_uris"] = sorted(playlist_uris)
+                cache["__playlist_isrcs"] = sorted(playlist_isrcs)
+                cache["__spotify_uri_isrc"] = spotify_uri_isrc
+                print(f"📥 v177: incrementeel {delta['offset']}/{delta_target} playlistposities.")
+            else:
+                # Bij een verschoven/lege pagina niet blind cursor opschuiven.
+                print("⚠️ v177: lege delta-pagina; cursor blijft behouden.")
+            if int(delta.get("offset", 0)) >= delta_target:
+                cache.pop("__v177_playlist_delta", None)
+            save_cache(cache)
+        else:
+            cache.pop("__v177_playlist_delta", None)
+            save_cache(cache)
 
     if (
         not playlist_isrc_cache_ready
@@ -7429,6 +7463,7 @@ def sync():
             break
 
         cache.pop("__v166_playlist_scan", None)
+        cache.pop("__v177_playlist_delta", None)  # volledige scan vervangt delta
         # ---------------------------------
         # VEILIGE ISRC DEDUP
         # ---------------------------------
