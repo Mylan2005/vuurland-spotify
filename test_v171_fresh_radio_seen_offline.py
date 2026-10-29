@@ -12,7 +12,7 @@ def key(a, t):
     return a.lower() + "|||" + t.lower()
 
 ns = {
-    "RADIO_SOURCE_ORDER": ("vuurland", "mellow_mix", "radio_britannia"),
+    "RADIO_SOURCE_ORDER": ("vuurland", "mellow_mix", "radio_britannia", "big_sonic_heaven"),
     "_v47_key": key,
     "normalize_match": str.lower,
     "v110_correct_radio_artist": lambda a, sid: a,
@@ -68,4 +68,4 @@ assert collect(source, cache, set(), queue) == 0
 assert not queue
 
 # Oude snapshots van uitgeschakelde bronnen krijgen geen toegang tot de FIFO.
-print("✅ v171: drie radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
+print("✅ v171: vier radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
