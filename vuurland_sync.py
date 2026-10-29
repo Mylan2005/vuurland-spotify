@@ -7242,7 +7242,7 @@ def sync():
         not isinstance(active_playlist_count, int)
         or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
         or cache.get("__v165_existing_playlist_imported") != EXISTING_PLAYLIST_IMPORT_TOKEN
-        or time.time() - float(cache.get("__v164_playlist_count_checked_at", 0) or 0) >= 21600
+        or time.time() - float(cache.get("__v164_playlist_count_checked_at", 0) or 0) >= 600
     )
     if playlist_count_check_due:
         actual_playlist_total = _get_playlist_total(playlist_id)
@@ -7281,6 +7281,38 @@ def sync():
         active_playlist_count = actual_playlist_total
         cache["__vuurland_active_playlist_count"] = actual_playlist_total
         save_cache(cache)
+
+    # v183: bij waargenomen handmatige groei meteen de nieuwste Spotify-
+    # posities lezen. De Spotify-app plaatst invoegingen vaak vooraan;
+    # een uitsluitend append-gerichte delta mist die. Eén pagina per
+    # gedetecteerde wijziging, zonder de cache of FIFO te resetten.
+    if actual_playlist_total > int(cache.get("__v183_last_head_checked_total", -1) or -1):
+        if actual_playlist_total > 0 and actual_playlist_total != int(
+                cache.get("__v183_last_head_checked_total", -1) or -1):
+            head = spotify_request(
+                "GET", f"/playlists/{playlist_id}/items",
+                params={"limit": 50, "offset": 0},
+            )
+            for entry in head.get("items", []) or []:
+                track = entry.get("item") or {}
+                if not isinstance(track, dict):
+                    continue
+                item_uri = track.get("uri")
+                if item_uri:
+                    playlist_uris.add(item_uri)
+                isrc = str((track.get("external_ids") or {}).get("isrc", "")).strip().upper()
+                if isrc:
+                    playlist_isrcs.add(isrc)
+                    if item_uri:
+                        spotify_uri_isrc[item_uri] = isrc
+                playlist_keys.update(make_playlist_keys(track))
+            cache["__playlist_keys"] = sorted(playlist_keys)
+            cache["__playlist_uris"] = sorted(playlist_uris)
+            cache["__playlist_isrcs"] = sorted(playlist_isrcs)
+            cache["__spotify_uri_isrc"] = spotify_uri_isrc
+            cache["__v183_last_head_checked_total"] = actual_playlist_total
+            save_cache(cache)
+            print("🛡️ v183: recentste 50 playlistposities ingelezen voor handmatige duplicaten.")
 
     # v177: maximaal één extra pagina per ronde; ook bij >50 handmatige
     # toevoegingen. Een volledige scan heeft altijd voorrang. Tijdens een
