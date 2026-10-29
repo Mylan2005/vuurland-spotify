@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_britannia")
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_britannia", "big_sonic_heaven")
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6699,6 +6699,12 @@ def sync():
             "tracks": get_radio_britannia_tracks(),
             "cache_key": "__last_radio_key_radio_britannia",
         },
+        {
+            "id": "big_sonic_heaven",
+            "name": "Big Sonic Heaven Radio",
+            "tracks": get_big_sonic_heaven_tracks(),
+            "cache_key": "__last_radio_key_big_sonic_heaven",
+        },
     ]
 
     print()
@@ -6760,6 +6766,14 @@ def sync():
 
     seen = load_seen()
     cache = load_cache()
+    # v180: alleen de heringeschakelde Big Sonic Heaven-bron nulmeten.
+    # Oude snapshots mogen geen historische plays opnieuw importeren.
+    # Behoud de volledige FIFO, Spotify-cache, matcher en API-cooldowns.
+    if not cache.get("__v180_big_sonic_fresh_start"):
+        cache.setdefault("__v96_radio_snapshots", {}).pop("big_sonic_heaven", None)
+        cache.setdefault("__v174_radio_snapshot_times", {}).pop("big_sonic_heaven", None)
+        cache["__v180_big_sonic_fresh_start"] = True
+        save_cache(cache)
     # v172: fresh LIVE start (not RadioBox history import); keep Spotify safety.
     # v169: start once with fresh radio history from all four sources.
     # Keep Spotify playlist dedupe, pending likes, and rate-limit timestamps.
