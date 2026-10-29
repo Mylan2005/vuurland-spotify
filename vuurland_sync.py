@@ -7198,16 +7198,19 @@ def sync():
         save_cache(cache)
     else:
         actual_playlist_total = active_playlist_count
-    playlist_count_changed = actual_playlist_total > active_playlist_count
+    playlist_count_changed = False  # Groei alleen is geen reden voor een volledige herscan.
     if actual_playlist_total < active_playlist_count:
         print(f"💾 v162: playlist verkleind ({active_playlist_count} → "
               f"{actual_playlist_total}); veilige bestaande dedupe-cache behouden.")
         active_playlist_count = actual_playlist_total
         cache["__vuurland_active_playlist_count"] = actual_playlist_total
         save_cache(cache)
-    elif playlist_count_changed:
-        print(f"🔄 v162: playlist gegroeid ({active_playlist_count} → "
-              f"{actual_playlist_total}); bestaande nummers opnieuw controleren.")
+    elif actual_playlist_total > active_playlist_count:
+        print(f"📌 Playlist gegroeid ({active_playlist_count} → "
+              f"{actual_playlist_total}); geen volledige herscan.")
+        active_playlist_count = actual_playlist_total
+        cache["__vuurland_active_playlist_count"] = actual_playlist_total
+        save_cache(cache)
 
     if (
         not playlist_isrc_cache_ready
@@ -7356,10 +7359,17 @@ def sync():
                 )
 
             if playlist_data.get("total") != stage["expected_total"]:
-                cache.pop("__v166_playlist_scan", None)
-                save_cache(cache)
-                print("⏸️ v166: playlisttotaal veranderde tijdens scan; herstart veilig.")
-                return
+                latest_total = int(playlist_data.get("total") or 0)
+                if latest_total >= stage["expected_total"]:
+                    print(f"📌 v175: playlist groeide tijdens scan "
+                          f"({stage['expected_total']} → {latest_total}); verder vanaf bestaande offset.")
+                    stage["expected_total"] = latest_total
+                else:
+                    # Bij verwijderen kunnen pagina-offsets verschuiven.
+                    cache.pop("__v166_playlist_scan", None)
+                    save_cache(cache)
+                    print("⏸️ v175: playlist verkleind tijdens scan; veilige herstart.")
+                    return
 
             if playlist_data.get("next"):
                 if not playlist_batch:
