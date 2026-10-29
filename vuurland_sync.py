@@ -7241,7 +7241,7 @@ def sync():
         stage = cache.get("__v166_playlist_scan")
         if (not isinstance(stage, dict)
                 or stage.get("playlist_id") != playlist_id
-                or stage.get("expected_total") != actual_playlist_total
+                or int(stage.get("expected_total", 0) or 0) > actual_playlist_total
                 or stage.get("volume_number") != active_volume_number):
             stage = {
                 "playlist_id": playlist_id,
