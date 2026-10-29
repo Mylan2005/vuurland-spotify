@@ -51,5 +51,21 @@ for completed in (False, True):
     assert collect(src, cache, set(), q) == (0 if completed else 1)
     assert len(q) == (0 if completed else 1)
 
+# v174: korte feedwissel zonder overlap mag enkele verse nummers behouden.
+cache = {"__playlist_keys": []}
+queue = []
+sid = "big_sonic_heaven"
+source = [{"id": sid, "name": sid, "tracks": [("Anchor", "Before")]}]
+assert collect(source, cache, set(), queue) == 0
+source[0]["tracks"] = [("Fresh", "Newest"), ("Fresh", "Middle"), ("Fresh", "Oldest"), ("Fresh", "Too Old")]
+assert collect(source, cache, set(), queue) == 3
+assert [x["title"] for x in queue] == ["Oldest", "Middle", "Newest"]
+# Een te oude snapshot mag geen historische backfill veroorzaken.
+cache = {"__playlist_keys": [], "__v96_radio_snapshots": {sid: ["gone"]},
+         "__v174_radio_snapshot_times": {sid: 1}}
+queue = []
+assert collect(source, cache, set(), queue) == 0
+assert not queue
+
 # Oude snapshots van uitgeschakelde bronnen krijgen geen toegang tot de FIFO.
 print("✅ v171: vier radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
