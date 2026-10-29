@@ -7196,6 +7196,8 @@ def sync():
         actual_playlist_total = active_playlist_count
     playlist_count_changed = False  # Groei alleen is geen reden voor een volledige herscan.
     if actual_playlist_total < active_playlist_count:
+        # Bij krimp kunnen offsetposities verschuiven: oude delta is ongeldig.
+        cache.pop("__v177_playlist_delta", None)
         print(f"💾 v162: playlist verkleind ({active_playlist_count} → "
               f"{actual_playlist_total}); veilige bestaande dedupe-cache behouden.")
         active_playlist_count = actual_playlist_total
