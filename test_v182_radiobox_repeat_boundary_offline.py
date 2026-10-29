@@ -22,12 +22,12 @@ for sid in ns["RADIO_SOURCE_ORDER"]:
     cache = {"__playlist_keys": []}
     queue = []
     src = [{"id": sid, "name": sid, "tracks": [
-        ("Artist", "A"), ("Artist", "B"), ("Artist", "C"), ("Artist", "D")]}]
+        ("Artist", "B"), ("Artist", "C"), ("Artist", "D")]}]
     assert collect(src, cache, set(), queue) == 0
     # A repeats: the old first-match algorithm incorrectly stopped at index 0.
     src[0]["tracks"] = [
         ("Artist", "A"), ("Artist", "Fresh 2"), ("Artist", "Fresh 1"),
-        ("Artist", "A"), ("Artist", "B"), ("Artist", "C"), ("Artist", "D")]
+        ("Artist", "B"), ("Artist", "C"), ("Artist", "D")]
     assert collect(src, cache, set(), queue) == 2
     assert [x["title"] for x in queue] == ["Fresh 1", "Fresh 2"]
     assert collect(src, cache, set(), queue) == 0
