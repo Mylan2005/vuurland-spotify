@@ -7202,6 +7202,49 @@ def sync():
         cache["__vuurland_active_playlist_count"] = actual_playlist_total
         save_cache(cache)
     elif actual_playlist_total > active_playlist_count:
+        # v176: lees bij kleine externe groei alleen de nieuwste pagina.
+        # Deze controle is aanvullend: geen volledige cache resetten,
+        # geen playlistmutaties, geen nieuwe API-call bij een lopende scan.
+        growth = actual_playlist_total - active_playlist_count
+        incremental_safe = (
+            0 < growth <= 50
+            and playlist_isrc_cache_ready
+            and not isinstance(cache.get("__v166_playlist_scan"), dict)
+            and time.time() - float(playlist_cache_time or 0) < PLAYLIST_CACHE_SECONDS
+        )
+        if incremental_safe:
+            try:
+                recent = spotify_request(
+                    "GET", f"/playlists/{playlist_id}/items",
+                    params={"limit": 50, "offset": 0},
+                )
+                for entry in recent.get("items", []):
+                    track = entry.get("item") or {}
+                    uri = track.get("uri")
+                    if uri:
+                        playlist_uris.add(uri)
+                    isrc = str((track.get("external_ids") or {}).get("isrc", "")).strip().upper()
+                    if isrc:
+                        playlist_isrcs.add(isrc)
+                        if uri:
+                            spotify_uri_isrc[uri] = isrc
+                    playlist_keys.update(make_playlist_keys(track))
+                    title_key = normalize_match(track.get("name", ""))
+                    for credit in track.get("artists", []):
+                        artist_key = normalize_match(credit.get("name", ""))
+                        if artist_key and title_key:
+                            playlist_keys.add(f"{artist_key}|||{title_key}")
+                # Alleen bij een volledige, niet-lege pagina publiceren.
+                if recent.get("items"):
+                    cache["__playlist_keys"] = sorted(playlist_keys)
+                    cache["__playlist_uris"] = sorted(playlist_uris)
+                    cache["__playlist_isrcs"] = sorted(playlist_isrcs)
+                    cache["__spotify_uri_isrc"] = spotify_uri_isrc
+                    print(f"📥 v176: nieuwste pagina incrementeel gelezen na {growth} externe toevoegingen.")
+            except RuntimeError as error:
+                if "Spotify rate-limit actief" in str(error):
+                    reset_live_sync_after_rate_limit(live_queue_file, cache)
+                raise
         print(f"📌 Playlist gegroeid ({active_playlist_count} → "
               f"{actual_playlist_total}); geen volledige herscan.")
         active_playlist_count = actual_playlist_total
