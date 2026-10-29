@@ -38,8 +38,8 @@ assert 'v167_restore_four_radio_histories(cache, live_queue, playlist_keys)' in 
 assert 'four-radio-histories-after-fresh-playlist-scan-2026-10-28' in src
 assert 'for sid in RADIO_SOURCE_ORDER:' in src
 
-# v170: read all liked songs, one page per Spotify slot, before FIFO additions.
-assert 'data = spotify_request("GET", "/me/tracks"' in src
-assert '"limit": 50, "offset": stage["offset"]' in src
-assert 'cache["__v170_liked_scan_complete"] = library_token' in src
-assert src.index('if cache.get("__v170_liked_scan_complete")') < src.index('max_additions_per_round = 1')
+# v174: Liked Songs inventory is optional; the real playlist alone governs dedupe.
+assert 'data = spotify_request("GET", "/me/tracks"' not in src
+assert 'max_additions_per_round = 1' in src
+assert 'cache["__v166_playlist_scan"] = stage' in src
+print("✅ v174: geen onnodige Liked Songs-scan; veilige playlistscan blijft")
