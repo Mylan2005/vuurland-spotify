@@ -6017,8 +6017,23 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
             previous = set(old)
             # De eerste gemeenschappelijke titel is de grens tussen de vorige
             # en de nieuwe meting; niets van vóór die grens inhalen.
-            boundary = next((i for i, (key, _, _) in enumerate(current)
-                             if key in previous), None)
+            # v182: vergelijk de VOLGORDE van opeenvolgende plays, niet
+            # alleen het eerste bekende liedje. Een herhaling die al in de
+            # vorige 100 stond is geen betrouwbaar grenspunt en kon verse
+            # Vuurland-plays ten onrechte verbergen.
+            current_keys = [key for key, _, _ in current]
+            best_overlap = (0, None)
+            for i in range(len(current_keys)):
+                for j in range(len(old)):
+                    n = 0
+                    while (i + n < len(current_keys) and j + n < len(old)
+                           and current_keys[i + n] == old[j + n]):
+                        n += 1
+                    if n >= 2 and (n > best_overlap[0]
+                                   or (n == best_overlap[0]
+                                       and (best_overlap[1] is None or i < best_overlap[1]))):
+                        best_overlap = (n, i)
+            boundary = best_overlap[1]
             if boundary is None:
                 # A brief feed refresh can replace every visible row. Recover
                 # only the newest few plays when our previous scan was recent;
