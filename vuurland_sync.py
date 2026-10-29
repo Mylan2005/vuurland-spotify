@@ -5988,6 +5988,7 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
 def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                            matching_version=35):
     snapshots = cache.setdefault("__v96_radio_snapshots", {})
+    snapshot_times = cache.setdefault("__v174_radio_snapshot_times", {})
     scan_complete = cache.get("__v159_rebuild_scanned") == "vuurland-live-only-rescan-v172-2026-10-29"
     playlist_keys = set(cache.get("__playlist_keys", [])) if scan_complete else set()
     known_queue = {_v47_key(x.get("artist", ""), x.get("title", ""))
@@ -6023,9 +6024,17 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
             boundary = next((i for i, (key, _, _) in enumerate(current)
                              if key in previous), None)
             if boundary is None:
-                # Tijdelijke radiogeschiedeniswissel: vermijd massale backfill.
-                arrivals = []
-                print(f"⚠️ v96 {source['name']}: geen overlap; nieuwe nulmeting zonder historische backfill.")
+                # A brief feed refresh can replace every visible row. Recover
+                # only the newest few plays when our previous scan was recent;
+                # after a long outage, reset rather than import old history.
+                previous_at = float(snapshot_times.get(sid, 0) or 0)
+                elapsed = time.time() - previous_at if previous_at else float("inf")
+                if sid in RADIO_SOURCE_ORDER and 0 <= elapsed <= 240:
+                    arrivals = current[:3]
+                    print(f"⚠️ v174 {source['name']}: geen overlap na {elapsed:.0f}s; maximaal 3 nieuwste plays hersteld.")
+                else:
+                    arrivals = []
+                    print(f"⚠️ v96 {source['name']}: geen overlap na lange/onbekende pauze; nieuwe nulmeting.")
             else:
                 arrivals = current[:boundary]
         # v114: verklaar elke nieuwe uitzending en controleer FIFO-append.
@@ -6072,6 +6081,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         added += accepted
         discovered[sid] = sorted(set(discovered.get(sid, [])) | {k for k, _, _ in current})
         snapshots[sid] = [k for k, _, _ in current[:100]]
+        snapshot_times[sid] = time.time()
         print(f"📚 v96 {source['name']}: {len(arrivals)} recente uitzending(en) sinds vorige meting; "
               f"{accepted} toegevoegd aan live queue.")
     return added
