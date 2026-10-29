@@ -46,3 +46,7 @@ assert 'data = spotify_request("GET", "/me/tracks"' not in src
 assert 'max_additions_per_round = 1' in src
 assert 'cache["__v166_playlist_scan"] = stage' in src
 print("✅ v174: geen onnodige Liked Songs-scan; veilige playlistscan blijft")
+
+# Handmatige playlistgroei mag de gepauzeerde paginering niet resetten.
+assert 'or stage.get("expected_total") != actual_playlist_total' not in src
+assert 'or int(stage.get("expected_total", 0) or 0) > actual_playlist_total' in src
