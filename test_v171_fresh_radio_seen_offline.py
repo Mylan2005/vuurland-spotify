@@ -12,7 +12,7 @@ def key(a, t):
     return a.lower() + "|||" + t.lower()
 
 ns = {
-    "RADIO_SOURCE_ORDER": ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_britannia"),
+    "RADIO_SOURCE_ORDER": ("vuurland", "mellow_mix", "radio_britannia"),
     "_v47_key": key,
     "normalize_match": str.lower,
     "v110_correct_radio_artist": lambda a, sid: a,
@@ -54,7 +54,7 @@ for completed in (False, True):
 # v174: korte feedwissel zonder overlap mag enkele verse nummers behouden.
 cache = {"__playlist_keys": []}
 queue = []
-sid = "big_sonic_heaven"
+sid = "mellow_mix"
 source = [{"id": sid, "name": sid, "tracks": [("Anchor", "Before")]}]
 assert collect(source, cache, set(), queue) == 0
 source[0]["tracks"] = [("Fresh", "Newest"), ("Fresh", "Middle"), ("Fresh", "Oldest"), ("Fresh", "Too Old")]
@@ -68,4 +68,4 @@ assert collect(source, cache, set(), queue) == 0
 assert not queue
 
 # Oude snapshots van uitgeschakelde bronnen krijgen geen toegang tot de FIFO.
-print("✅ v171: vier radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
+print("✅ v171: drie radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
