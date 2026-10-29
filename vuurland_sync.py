@@ -6034,6 +6034,10 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                                        and (best_overlap[1] is None or i < best_overlap[1]))):
                         best_overlap = (n, i)
             boundary = best_overlap[1]
+            # Een pas gestarte bron heeft soms nog maar één ankertrack.
+            if boundary is None and len(old) == 1:
+                boundary = next((i for i, key in enumerate(current_keys)
+                                 if key == old[0]), None)
             if boundary is None:
                 # A brief feed refresh can replace every visible row. Recover
                 # only the newest few plays when our previous scan was recent;
