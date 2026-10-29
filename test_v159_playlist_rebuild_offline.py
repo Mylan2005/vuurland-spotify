@@ -15,7 +15,8 @@ assert src.index('"__playlist_uris"', scan) < marker
 assert src.index('"__playlist_isrcs"', scan) < marker
 assert src.index('save_cache(cache)', marker) > marker
 assert 'actual_playlist_total = _get_playlist_total(playlist_id)' in src
-assert 'playlist_count_changed = actual_playlist_total > active_playlist_count' in src
+assert 'playlist_count_changed = False' in src
+assert 'elif actual_playlist_total > active_playlist_count:' in src
 assert 'if actual_playlist_total < active_playlist_count:' in src
 assert 'cache["__vuurland_active_playlist_count"] = actual_playlist_total' in src
 # v166: staged pagination, safe early return without Spotify writes.
@@ -26,6 +27,8 @@ assert 'playlist_offset + len(playlist_batch)' in src
 assert 'save_cache(cache)\n                print(f"📋 v166:' in src
 assert src.index('cache["__v166_playlist_scan"] = stage') < src.index('add_tracks(\n            playlist_id,')
 assert 'or playlist_count_changed' in src
+assert 'stage["expected_total"] = latest_total' in src
+assert 'cache.pop("__v166_playlist_scan", None)' in src
 assert 'cache.get("__v165_existing_playlist_imported") != EXISTING_PLAYLIST_IMPORT_TOKEN' in src
 assert 'cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST_IMPORT_TOKEN' in src
 assert src.index('cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST_IMPORT_TOKEN') > scan
