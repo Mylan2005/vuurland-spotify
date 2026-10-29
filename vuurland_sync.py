@@ -7499,53 +7499,9 @@ def sync():
             f"{len(playlist_keys)} bestaande nummers."
         )
 
-    # v170: scan Liked Songs once as a second dedupe inventory.
-    # One page per Spotify slot; never publish partial library data.
-    # Existing playlist and cooldown state are never deleted.
-    library_token = "liked-songs-live-only-v172-2026-10-29"
-    if cache.get("__v170_liked_scan_complete") != library_token:
-        stage = cache.get("__v170_liked_stage")
-        if not isinstance(stage, dict):
-            stage = {"offset": 0, "keys": [], "uris": [], "isrcs": []}
-        data = spotify_request("GET", "/me/tracks",
-                               params={"limit": 50, "offset": stage["offset"]})
-        batch = data.get("items", [])
-        keys = set(stage["keys"])
-        uris = set(stage["uris"])
-        isrcs = set(stage["isrcs"])
-        for saved in batch:
-            track = (saved or {}).get("track") or {}
-            uri = track.get("uri")
-            if uri:
-                uris.add(uri)
-            isrc = str((track.get("external_ids") or {}).get("isrc") or "").strip().upper()
-            if isrc:
-                isrcs.add(isrc)
-            title = str(track.get("name") or "").strip()
-            for artist in track.get("artists") or []:
-                name = str((artist or {}).get("name") or "").strip()
-                if name and title:
-                    keys.add(_v47_key(name, title))
-        stage = {"offset": int(stage["offset"]) + len(batch),
-                 "keys": sorted(keys), "uris": sorted(uris),
-                 "isrcs": sorted(isrcs)}
-        total = int(data.get("total", 0) or 0)
-        if data.get("next") and batch:
-            cache["__v170_liked_stage"] = stage
-            save_cache(cache)
-            print(f"📚 Liked Songs: {stage['offset']}/{total} gecontroleerd; volgende pagina later.")
-            return
-        cache["__v170_liked_keys"] = stage["keys"]
-        cache["__v170_liked_uris"] = stage["uris"]
-        cache["__v170_liked_isrcs"] = stage["isrcs"]
-        cache["__v170_liked_scan_complete"] = library_token
-        cache.pop("__v170_liked_stage", None)
-        save_cache(cache)
-        print(f"✅ Liked Songs: {len(stage['uris'])} bestaande nummers gecontroleerd.")
-    # Deduplicate against both collections, without rewriting playlist cache.
-    # Liked Songs zijn een afzonderlijke bibliotheek, geen playlistleden.
-    # Een track die enkel geliket is maar niet in Vuurland staat, moet
-    # opnieuw aan de playlist toegevoegd kunnen worden.
+    # Liked Songs hoeft niet volledig gescand te worden voor playlist-dedupe.
+    # Alleen de actuele Vuurland-playlist bepaalt of een track al in de lijst staat.
+    # De bestaande like-stap bij een nieuwe toevoeging blijft behouden.
 
     # ---------------------------------
     # Big Sonic Heaven volgt de gewone hoofdplaylistroute; geen review-scan.
