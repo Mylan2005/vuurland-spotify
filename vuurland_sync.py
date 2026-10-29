@@ -7013,14 +7013,16 @@ def sync():
         discovered_vuurland = set(cache.get("__v47_radio_discovered", {}).get("vuurland", []))
         queued_now = {_v47_key(x.get("artist", ""), x.get("title", ""))
                       for x in live_queue if isinstance(x, dict)}
+        existing_keys = set(cache.get("__playlist_keys", []))
+        existing_uris = set(cache.get("__playlist_uris", []))
         for artist, title in (("Noah Kahan", "Porch Light"),
                               ("AURORA", "The Flood")):
             key = _v47_key(artist, title)
             cached_uri = cache.get(f"__match_v{MATCHING_RULES_VERSION}__" + key)
             if (key in discovered_vuurland and key not in queued_now
-                    and key not in playlist_keys and cached_uri
-                    and cached_uri not in playlist_uris
-                    and not radio_matches_playlist(artist, title, playlist_keys)):
+                    and key not in existing_keys and cached_uri
+                    and cached_uri not in existing_uris
+                    and not radio_matches_playlist(artist, title, existing_keys)):
                 live_queue.append({"artist": artist, "title": title, "source": "vuurland"})
                 queued_now.add(key)
                 print(f"♻️ v181 ontbrekende Vuurland-play veilig hersteld: {artist} — {title}")
