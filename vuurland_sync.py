@@ -7478,6 +7478,13 @@ def sync():
             break
 
         if not scan_pending:
+            # v179: voeg de tracks die de FIFO tijdens deze periodieke
+            # scan zelf toevoegde toe aan de afgeronde snapshot.
+            # Anders overschrijft de scan die nieuwe dedupe-gegevens.
+            playlist_keys.update(stage.get("live_keys", []))
+            playlist_uris.update(stage.get("live_uris", []))
+            playlist_isrcs.update(stage.get("live_isrcs", []))
+            spotify_uri_isrc.update(stage.get("live_uri_isrc", {}))
             cache.pop("__v166_playlist_scan", None)
             cache.pop("__v177_playlist_delta", None)  # volledige scan vervangt delta
             # ---------------------------------
@@ -7556,7 +7563,10 @@ def sync():
                     "Geen nummers verwijderd."
                 )
 
-            active_playlist_count = playlist_position
+            # Bewaar de lokaal gekende toevoegingen tijdens de scan.
+            active_playlist_count = max(
+                playlist_position, int(cache.get("__vuurland_active_playlist_count", 0) or 0)
+            )
 
             cache[
                 "__vuurland_active_playlist_count"
@@ -8464,6 +8474,25 @@ def sync():
         if radio_core:
             for radio_artist in normalize_radio_artists(artist):
                 playlist_keys.add(f"{radio_artist}|||{radio_core}")
+
+        # v179: publiceer eigen nieuwe nummers ook naar de lopende
+        # periodieke scan. De staging-snapshot blijft verder geïsoleerd.
+        live_stage = cache.get("__v166_playlist_scan")
+        if isinstance(live_stage, dict) and live_stage.get("playlist_id") == playlist_id:
+            live_stage["live_keys"] = sorted(
+                set(live_stage.get("live_keys", [])) | {cache_key}
+                | {f"{radio_artist}|||{radio_core}"
+                   for radio_artist in normalize_radio_artists(artist)}
+                if radio_core else set(live_stage.get("live_keys", [])) | {cache_key}
+            )
+            live_stage["live_uris"] = sorted(
+                set(live_stage.get("live_uris", [])) | {uri}
+            )
+            if candidate_isrc:
+                live_stage["live_isrcs"] = sorted(
+                    set(live_stage.get("live_isrcs", [])) | {candidate_isrc}
+                )
+                live_stage.setdefault("live_uri_isrc", {})[uri] = candidate_isrc
 
         cache[
             "__playlist_keys"
