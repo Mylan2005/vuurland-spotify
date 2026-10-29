@@ -2267,10 +2267,6 @@ def find_spotify_track(
         ("john lennon", "imagine"): "spotify:track:7pKfPomDEeI4TPT6EOYjn9",
         ("gary numan", "down in the park (piano version)"): "spotify:track:34JQZdbVOrShEVhkYCUuNK",
         ("jimin oh-havenith", "prelude in c major (js bach)"): "spotify:track:50jjQJKueYPhNnJmAzMN6O",
-        (
-            "death cab for cutie",
-            "love song",
-        ): "spotify:track:49edirvFZwWjxAMZJRg1hN",
 
         (
             "delvis",
@@ -7811,6 +7807,16 @@ def sync():
         match_cache_key = (
             f"__match_v{MATCHING_RULES_VERSION}__" + cache_key
         )
+
+        # Bescherm tegen een oude foutieve vaste match: dit is The Cure,
+        # niet de uitvoering van Death Cab for Cutie.
+        if (
+            normalize_match(artist) == "death cab for cutie"
+            and normalize_match(title) == "love song"
+            and cache.get(match_cache_key) == "spotify:track:49edirvFZwWjxAMZJRg1hN"
+        ):
+            cache.pop(match_cache_key, None)
+            save_cache(cache)
 
         # ---------------------------------
         # AL IN PLAYLIST?
