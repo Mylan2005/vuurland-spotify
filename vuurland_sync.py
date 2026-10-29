@@ -7287,6 +7287,15 @@ def sync():
             cache.pop("__v177_playlist_delta", None)
             save_cache(cache)
 
+    # v178: een periodieke refresh mag de actieve FIFO niet pauzeren.
+    # Tijdens de allereerste import is er nog geen betrouwbare cache;
+    # die scan blijft bewust blokkerend.
+    background_refresh = (
+        playlist_isrc_cache_ready
+        and cache.get("__v159_rebuild_scanned") == V159_REBUILD_TOKEN
+        and cache.get("__v165_existing_playlist_imported") == EXISTING_PLAYLIST_IMPORT_TOKEN
+    )
+
     if (
         not playlist_isrc_cache_ready
         or time.time() - playlist_cache_time >= PLAYLIST_CACHE_SECONDS
@@ -7339,6 +7348,7 @@ def sync():
         playlist_offset = int(stage["offset"])
 
         # MAXIMAAL één pagina (50 nummers) per Spotify-slot.
+        scan_pending = False
         while True:
 
             try:
@@ -7461,126 +7471,139 @@ def sync():
                 cache["__v166_playlist_scan"] = stage
                 save_cache(cache)
                 print(f"📋 v166: {playlist_position}/{stage['expected_total']} Spotify-nummers gecontroleerd; volgende pagina in volgende ronde.")
-                return
+                if not background_refresh:
+                    return
+                scan_pending = True
+                break
             break
 
-        cache.pop("__v166_playlist_scan", None)
-        cache.pop("__v177_playlist_delta", None)  # volledige scan vervangt delta
-        # ---------------------------------
-        # VEILIGE ISRC DEDUP
-        # ---------------------------------
-        #
-        # Alleen wanneer Spotify voor verschillende URI's
-        # EXACT dezelfde ISRC teruggeeft.
-        #
-        # Zelfde URI meerdere keren wordt hier bewust niet
-        # automatisch aangepakt, omdat verwijderen op URI
-        # alle voorkomens van die URI kan raken.
-        #
-        # Bij meerdere verschillende URI's met dezelfde ISRC
-        # houden we de meest recent toegevoegde entry.
+        if not scan_pending:
+            cache.pop("__v166_playlist_scan", None)
+            cache.pop("__v177_playlist_delta", None)  # volledige scan vervangt delta
+            # ---------------------------------
+            # VEILIGE ISRC DEDUP
+            # ---------------------------------
+            #
+            # Alleen wanneer Spotify voor verschillende URI's
+            # EXACT dezelfde ISRC teruggeeft.
+            #
+            # Zelfde URI meerdere keren wordt hier bewust niet
+            # automatisch aangepakt, omdat verwijderen op URI
+            # alle voorkomens van die URI kan raken.
+            #
+            # Bij meerdere verschillende URI's met dezelfde ISRC
+            # houden we de meest recent toegevoegde entry.
 
-        duplicate_uris_to_remove = []
+            duplicate_uris_to_remove = []
 
-        for isrc, entries in playlist_isrc_entries.items():
+            for isrc, entries in playlist_isrc_entries.items():
 
-            latest_per_uri = {}
+                latest_per_uri = {}
 
-            for entry in entries:
-                uri = entry["uri"]
+                for entry in entries:
+                    uri = entry["uri"]
 
-                previous = latest_per_uri.get(uri)
+                    previous = latest_per_uri.get(uri)
 
-                current_key = (
-                    entry.get("added_at", ""),
-                    entry.get("position", -1),
+                    current_key = (
+                        entry.get("added_at", ""),
+                        entry.get("position", -1),
+                    )
+
+                    previous_key = (
+                        previous.get("added_at", ""),
+                        previous.get("position", -1),
+                    ) if previous else None
+
+                    if (
+                        previous is None
+                        or current_key > previous_key
+                    ):
+                        latest_per_uri[uri] = entry
+
+                # Eén URI voor deze ISRC = niets te doen.
+                if len(latest_per_uri) <= 1:
+                    continue
+
+                ordered = sorted(
+                    latest_per_uri.values(),
+                    key=lambda entry: (
+                        entry.get("added_at", ""),
+                        entry.get("position", -1),
+                    )
                 )
 
-                previous_key = (
-                    previous.get("added_at", ""),
-                    previous.get("position", -1),
-                ) if previous else None
+                keep = ordered[-1]
+                remove = ordered[:-1]
 
-                if (
-                    previous is None
-                    or current_key > previous_key
-                ):
-                    latest_per_uri[uri] = entry
-
-            # Eén URI voor deze ISRC = niets te doen.
-            if len(latest_per_uri) <= 1:
-                continue
-
-            ordered = sorted(
-                latest_per_uri.values(),
-                key=lambda entry: (
-                    entry.get("added_at", ""),
-                    entry.get("position", -1),
-                )
-            )
-
-            keep = ordered[-1]
-            remove = ordered[:-1]
-
-            print(
-                f"🧹 ISRC-duplicaat: {isrc} "
-                f"→ behouden {keep['uri']}"
-            )
-
-            for entry in remove:
                 print(
-                    f"   mogelijk duplicaat: {entry['uri']}"
-                )
-                duplicate_uris_to_remove.append(
-                    entry["uri"]
+                    f"🧹 ISRC-duplicaat: {isrc} "
+                    f"→ behouden {keep['uri']}"
                 )
 
-        if duplicate_uris_to_remove:
+                for entry in remove:
+                    print(
+                        f"   mogelijk duplicaat: {entry['uri']}"
+                    )
+                    duplicate_uris_to_remove.append(
+                        entry["uri"]
+                    )
+
+            if duplicate_uris_to_remove:
+                print(
+                    f"🛡️ v84: {len(set(duplicate_uris_to_remove))} "
+                    "mogelijke bestaande ISRC-duplicaten gevonden. "
+                    "Geen nummers verwijderd."
+                )
+
+            active_playlist_count = playlist_position
+
+            cache[
+                "__vuurland_active_playlist_count"
+            ] = active_playlist_count
+
+            cache[
+                "__playlist_keys"
+            ] = sorted(playlist_keys)
+
+            cache[
+                "__playlist_uris"
+            ] = sorted(playlist_uris)
+
+            cache[
+                "__playlist_isrcs"
+            ] = sorted(playlist_isrcs)
+
+            cache[
+                "__spotify_uri_isrc"
+            ] = spotify_uri_isrc
+
+            cache[
+                "__playlist_isrc_cache_ready"
+            ] = True
+
+            cache[
+                "__playlist_cache_time"
+            ] = int(time.time())
+            cache["__v159_rebuild_scanned"] = V159_REBUILD_TOKEN
+            cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST_IMPORT_TOKEN
+
+            save_cache(cache)
+
             print(
-                f"🛡️ v84: {len(set(duplicate_uris_to_remove))} "
-                "mogelijke bestaande ISRC-duplicaten gevonden. "
-                "Geen nummers verwijderd."
+                f"🛡️ {len(playlist_keys)} bestaande "
+                "Spotify-artiest/titel-combinaties "
+                "gecontroleerd."
             )
 
-        active_playlist_count = playlist_position
-
-        cache[
-            "__vuurland_active_playlist_count"
-        ] = active_playlist_count
-
-        cache[
-            "__playlist_keys"
-        ] = sorted(playlist_keys)
-
-        cache[
-            "__playlist_uris"
-        ] = sorted(playlist_uris)
-
-        cache[
-            "__playlist_isrcs"
-        ] = sorted(playlist_isrcs)
-
-        cache[
-            "__spotify_uri_isrc"
-        ] = spotify_uri_isrc
-
-        cache[
-            "__playlist_isrc_cache_ready"
-        ] = True
-
-        cache[
-            "__playlist_cache_time"
-        ] = int(time.time())
-        cache["__v159_rebuild_scanned"] = V159_REBUILD_TOKEN
-        cache["__v165_existing_playlist_imported"] = EXISTING_PLAYLIST_IMPORT_TOKEN
-
-        save_cache(cache)
-
-        print(
-            f"🛡️ {len(playlist_keys)} bestaande "
-            "Spotify-artiest/titel-combinaties "
-            "gecontroleerd."
-        )
+        else:
+            # De officiële dedupe-cache blijft leidend tijdens het scannen.
+            # Stagegegevens mogen geen onvolledige playlist voorstellen.
+            playlist_keys = set(cache.get("__playlist_keys", []))
+            playlist_uris = set(cache.get("__playlist_uris", []))
+            playlist_isrcs = set(cache.get("__playlist_isrcs", []))
+            spotify_uri_isrc = dict(cache.get("__spotify_uri_isrc", {}))
+            print("📻 v178: periodieke scan loopt verder naast de FIFO.")
 
     else:
 
