@@ -3871,6 +3871,7 @@
     "tom rosenthal|||it's ok",
     "tom rosenthal|||it's ok - acoustic",
     "tom rosenthal|||now you know",
+    "tom smith|||life is for living",
     "tommy ashby|||when love goes dark",
     "tommy lefroy|||jericho beach",
     "tommy lefroy|||the cause",
@@ -5249,6 +5250,7 @@
     "spotify:track:3BOU0eJQjfmhbZsQ76OJi9",
     "spotify:track:3BT0ZZB1ACL6iADQM0zBv4",
     "spotify:track:3BTAVi6gmgSlmtMhuUEKgj",
+    "spotify:track:3BU1YruNRetS73hIWNLrkF",
     "spotify:track:3BUXeHp1WkxeKSFJScFrdy",
     "spotify:track:3BeaiIXko9QV8689eWB6yd",
     "spotify:track:3Blg6ZTHUJwPxP5CgUPvD8",
@@ -7958,6 +7960,7 @@
     "GBENL2404069",
     "GBENL2404078",
     "GBENL2404195",
+    "GBENL2504392",
     "GBENL2604640",
     "GBENL2604722",
     "GBF071700950",
@@ -12431,13 +12434,14 @@
     "spotify:track:0RbuuxLIjKYxdNcQLqqQlb": "GBAFL2200102",
     "spotify:track:3ztATsKz2sh4pPmdp9vUaE": "USQE92600012",
     "spotify:track:4oYfMQ6NDGHq0GcbICqsDw": "TCAGN2235671",
-    "spotify:track:2tfc81XZfVReM0kYQqv7o3": "USA2P2652970"
+    "spotify:track:2tfc81XZfVReM0kYQqv7o3": "USA2P2652970",
+    "spotify:track:3BU1YruNRetS73hIWNLrkF": "GBENL2504392"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2778,
+  "__vuurland_active_playlist_count": 2779,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12549,7 +12553,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793400650.136918
+    "vuurland": 1793400659.8171778
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12841,8 +12845,8 @@
   "__last_radio_key_vuurland": "kurt vile|||one trick ponies",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 66,
-  "__v150_next_spotify_round_at": 1793400653.3003793,
-  "__v146_spotify_budget_slot": 1793400280.092831,
+  "__v150_next_spotify_round_at": 1793400779.8172762,
+  "__v146_spotify_budget_slot": 1793400659.855762,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13022,6 +13026,10 @@
     "kings of leon|||my whole world": {
       "artist": "Kings of Leon",
       "title": "My Whole World"
+    },
+    "tom smith|||life is for living": {
+      "artist": "Tom Smith",
+      "title": "Life Is For Living"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13244,6 +13252,11 @@
       "uri": "spotify:track:2tfc81XZfVReM0kYQqv7o3",
       "artist": "Kings of Leon",
       "title": "My Whole World"
+    },
+    "tom smith|||life is for living": {
+      "uri": "spotify:track:3BU1YruNRetS73hIWNLrkF",
+      "artist": "Tom Smith",
+      "title": "Life Is For Living"
     }
   },
   "__pending_library_likes": {},
@@ -13290,5 +13303,6 @@
   "__match_v35__u s girls|||bless this mess": "spotify:track:0RbuuxLIjKYxdNcQLqqQlb",
   "__match_v35__maya hawke|||bring home my man": "spotify:track:3ztATsKz2sh4pPmdp9vUaE",
   "__match_v35__beck|||everybody's got to learn sometime": "spotify:track:4oYfMQ6NDGHq0GcbICqsDw",
-  "__match_v35__kings of leon|||my whole world": "spotify:track:2tfc81XZfVReM0kYQqv7o3"
+  "__match_v35__kings of leon|||my whole world": "spotify:track:2tfc81XZfVReM0kYQqv7o3",
+  "__match_v35__tom smith|||life is for living": "spotify:track:3BU1YruNRetS73hIWNLrkF"
 }
