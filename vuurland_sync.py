@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "radio_britannia", "big_sonic_heaven")
+RADIO_SOURCE_ORDER = ()  # Alle radiobronnen uitgeschakeld; opnieuw samenstellen op verzoek.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6693,6 +6693,11 @@ def dkfm_vuurland_filter(tracks, station):
 
 
 def sync():
+    # Tijdelijke veilige stop: geen radio-/Spotify-aanvragen of state-wijzigingen.
+    # Laat playlists, likes, wachtrijen en caches intact tot de nieuwe bronnen gekozen zijn.
+    if not RADIO_SOURCE_ORDER:
+        print('⏸️ Alle radiobronnen uitgeschakeld. Geen Spotify-sync; bestaande muziek en state behouden.')
+        return
     global LAST_SPOTIFY_MATCH_ISRC
 
     # =================================
