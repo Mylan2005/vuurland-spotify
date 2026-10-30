@@ -136,6 +136,7 @@
     "always centered at night & moby & jose james|||ache for",
     "always centered at night|||ache for",
     "always centered at night|||moby|||jose james|||ache for",
+    "amatorski|||come home",
     "amble|||moral victory",
     "amble|||the rarest hour",
     "amelia evans|||roslyn - live",
@@ -5060,6 +5061,7 @@
     "spotify:track:2hUOnJj6B7938kFBcPO6l5",
     "spotify:track:2heQS09dKKuGiJqyKApAWz",
     "spotify:track:2hzpbfjj9cVCSB1EeHKGXt",
+    "spotify:track:2iE6BjDzzTOFDEvxMd82lZ",
     "spotify:track:2iGu50v4RTHdoZM58gPnKG",
     "spotify:track:2iULzJ4RcJUHGbYRZgc54P",
     "spotify:track:2iVWKU78MURQCwfyj8Yy7T",
@@ -7096,6 +7098,7 @@
     "BEUM72300080",
     "BEUM72300082",
     "BEV482500009",
+    "BEV600000001",
     "BEW160912503",
     "BEW160912505",
     "BEWO10400002",
@@ -12395,13 +12398,14 @@
     "spotify:track:3yLClpBsDyZhJj7kwrGp15": "BEP011970003",
     "spotify:track:1aXQmPw6vC2e2hyRooAqlH": "GBENL2404195",
     "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq": "GBAYE2200285",
-    "spotify:track:22auw1DYQlYh5XgKv5FtNx": "GBDNH1100097"
+    "spotify:track:22auw1DYQlYh5XgKv5FtNx": "GBDNH1100097",
+    "spotify:track:2iE6BjDzzTOFDEvxMd82lZ": "BEV600000001"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2769,
+  "__vuurland_active_playlist_count": 2770,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12513,7 +12517,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793396310.5106366
+    "vuurland": 1793396320.1641982
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12791,8 +12795,8 @@
   "__last_radio_key_vuurland": "amatorski|||come home",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 57,
-  "__v150_next_spotify_round_at": 1793396313.0032308,
-  "__v146_spotify_budget_slot": 1793396193.040697,
+  "__v150_next_spotify_round_at": 1793396440.1643229,
+  "__v146_spotify_budget_slot": 1793396320.2013624,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -12936,6 +12940,10 @@
     "first aid kit|||emmylou": {
       "artist": "First Aid Kit",
       "title": "Emmylou"
+    },
+    "amatorski|||come home": {
+      "artist": "Amatorski",
+      "title": "Come Home"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13113,6 +13121,11 @@
       "uri": "spotify:track:22auw1DYQlYh5XgKv5FtNx",
       "artist": "First Aid Kit",
       "title": "Emmylou"
+    },
+    "amatorski|||come home": {
+      "uri": "spotify:track:2iE6BjDzzTOFDEvxMd82lZ",
+      "artist": "Amatorski",
+      "title": "Come Home"
     }
   },
   "__pending_library_likes": {},
@@ -13150,5 +13163,6 @@
   "__match_v35__noonzy|||buffalo": "spotify:track:1aXQmPw6vC2e2hyRooAqlH",
   "__match_v35__tom rosenthal|||its ok": "spotify:track:6DAnfSOcjQ1k0pXtIYiZnA",
   "__match_v35__gabriels|||one and only": "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq",
-  "__match_v35__first aid kit|||emmylou": "spotify:track:22auw1DYQlYh5XgKv5FtNx"
+  "__match_v35__first aid kit|||emmylou": "spotify:track:22auw1DYQlYh5XgKv5FtNx",
+  "__match_v35__amatorski|||come home": "spotify:track:2iE6BjDzzTOFDEvxMd82lZ"
 }
