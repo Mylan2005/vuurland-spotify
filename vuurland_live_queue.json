@@ -1,11 +1,5 @@
 [
   {
-    "artist": "The Doobie Brothers",
-    "title": "Mamaloi",
-    "source": "mellow_mix",
-    "_v116_fifo_seq": 9769
-  },
-  {
     "artist": "Oasis",
     "title": "Whatever",
     "source": "radio_britannia",
@@ -3396,14 +3390,6 @@
     "_v116_fifo_seq": 10334
   },
   {
-    "artist": "James Walsh",
-    "title": "This Town",
-    "source": "radio_britannia",
-    "_v116_fifo_seq": 9763,
-    "_v34_search_variant": 1,
-    "_v34_retry_at": 1793321004
-  },
-  {
     "artist": "Hammock",
     "title": "We Close Our Eyes So We Can See",
     "source": "big_sonic_heaven",
@@ -3456,5 +3442,13 @@
     "title": "Uncle John's Band",
     "source": "mellow_mix",
     "_v116_fifo_seq": 10343
+  },
+  {
+    "artist": "James Walsh",
+    "title": "This Town",
+    "source": "radio_britannia",
+    "_v116_fifo_seq": 9763,
+    "_v34_search_variant": 2,
+    "_v34_retry_at": 1793321611
   }
 ]
