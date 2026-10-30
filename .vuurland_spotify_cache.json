@@ -1375,6 +1375,7 @@
     "gabriel rios|||la torre feat devendra banhart",
     "gabriel rios|||police sounds",
     "gabriel rios|||swing low",
+    "gabriels|||one and only",
     "galvanic|||love me",
     "gambles|||new york",
     "gambles|||rooftops",
@@ -5161,6 +5162,7 @@
     "spotify:track:2z7tEDcUvJOpTXGQdjUzXI",
     "spotify:track:2zHTg5sylSRQ9Ng6D4JbC2",
     "spotify:track:2zMjyH4hqFkTNjlqZWK3YL",
+    "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq",
     "spotify:track:2zfxZsXityOS6bJYWNLgJR",
     "spotify:track:2zrtp9krR2IyT9mi2PaIBC",
     "spotify:track:305RKy14KRSxTlYHKAwslx",
@@ -7697,6 +7699,7 @@
     "GBAYE1301608",
     "GBAYE1700151",
     "GBAYE1901074",
+    "GBAYE2200285",
     "GBAYE7800544",
     "GBAYE8000334",
     "GBAYE8100053",
@@ -12387,19 +12390,20 @@
     "spotify:track:0EWHn0McVO8Ewbkqvh53AD": "US2U62235411",
     "spotify:track:75JFxkI2RXiU7L9VXzMkle": "GBAYE0200772",
     "spotify:track:3yLClpBsDyZhJj7kwrGp15": "BEP011970003",
-    "spotify:track:1aXQmPw6vC2e2hyRooAqlH": "GBENL2404195"
+    "spotify:track:1aXQmPw6vC2e2hyRooAqlH": "GBENL2404195",
+    "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq": "GBAYE2200285"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2767,
+  "__vuurland_active_playlist_count": 2768,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
   "__v164_playlist_count_checked_at": 1793393650,
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793394541,
+  "__v184_head_checked_at": 1793395302,
   "__v96_radio_snapshots": {
     "vuurland": [
       "adrianne lenker|||anything",
@@ -12505,7 +12509,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793395292.7778137
+    "vuurland": 1793395302.1775193
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12780,8 +12784,8 @@
   "__last_radio_key_vuurland": "adrianne lenker|||anything",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 55,
-  "__v150_next_spotify_round_at": 1793395295.9652765,
-  "__v146_spotify_budget_slot": 1793394540.7996786,
+  "__v150_next_spotify_round_at": 1793395422.1776114,
+  "__v146_spotify_budget_slot": 1793395302.2146435,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -12917,6 +12921,10 @@
     "tom rosenthal|||its ok": {
       "artist": "Tom Rosenthal",
       "title": "It's Ok"
+    },
+    "gabriels|||one and only": {
+      "artist": "Gabriels",
+      "title": "One and Only"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13084,6 +13092,11 @@
       "uri": "spotify:track:6DAnfSOcjQ1k0pXtIYiZnA",
       "artist": "Tom Rosenthal",
       "title": "It's Ok"
+    },
+    "gabriels|||one and only": {
+      "uri": "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq",
+      "artist": "Gabriels",
+      "title": "One and Only"
     }
   },
   "__pending_library_likes": {},
@@ -13119,5 +13132,6 @@
   "__match_v35__coldplay|||the scientist": "spotify:track:75JFxkI2RXiU7L9VXzMkle",
   "__match_v35__portland|||killer's mind": "spotify:track:3yLClpBsDyZhJj7kwrGp15",
   "__match_v35__noonzy|||buffalo": "spotify:track:1aXQmPw6vC2e2hyRooAqlH",
-  "__match_v35__tom rosenthal|||its ok": "spotify:track:6DAnfSOcjQ1k0pXtIYiZnA"
+  "__match_v35__tom rosenthal|||its ok": "spotify:track:6DAnfSOcjQ1k0pXtIYiZnA",
+  "__match_v35__gabriels|||one and only": "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq"
 }
