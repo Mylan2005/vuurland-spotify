@@ -1630,6 +1630,7 @@
     "isaac roux|||autumn love",
     "isbells|||a little bit longer",
     "isbells|||away you go",
+    "isbells|||dreamer",
     "isbells|||reunite",
     "iskander moon|||saturday silence",
     "island|||stargazer",
@@ -5058,6 +5059,7 @@
     "spotify:track:2kO3IZGrftXAaXzY7JYJEa",
     "spotify:track:2kRFrWaLWiKq48YYVdGcm8",
     "spotify:track:2ksgMG1hHFHV979phZ2lkd",
+    "spotify:track:2l1MgIheVpFWjK41vWZMku",
     "spotify:track:2l6aKj7mOu8MyYX4yFtlZ8",
     "spotify:track:2l7UudWZ44l1WbHx6ANod9",
     "spotify:track:2lFTzUnuGaWlWHJQokjRyb",
@@ -7069,6 +7071,7 @@
     "BEUM72300082",
     "BEV482500009",
     "BEW160912503",
+    "BEW160912505",
     "BEWO10400002",
     "BEWO10400003",
     "BEWO10400005",
@@ -12347,19 +12350,20 @@
     "spotify:track:7Ad3vOePhRkXhrGkUHwdhM": "BEI010800099",
     "spotify:track:4MxHAB3fHQ8oI2jRXSLQ9p": "USMTD1811731",
     "spotify:track:7lEZ4UjPAjgu20XyTZm0j8": "BEKE52300001",
-    "spotify:track:37pShAS4iuRXJeRAa9k6xw": "GBKZV2000037"
+    "spotify:track:37pShAS4iuRXJeRAa9k6xw": "GBKZV2000037",
+    "spotify:track:2l1MgIheVpFWjK41vWZMku": "BEW160912505"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2757,
+  "__vuurland_active_playlist_count": 2758,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v164_playlist_count_checked_at": 1793385765,
+  "__v164_playlist_count_checked_at": 1793389830,
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793388560,
+  "__v184_head_checked_at": 1793389830,
   "__v96_radio_snapshots": {
     "vuurland": [
       "isbells|||dreamer",
@@ -12465,7 +12469,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793389820.516466
+    "vuurland": 1793389830.0857477
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12718,8 +12722,8 @@
   "__last_radio_key_vuurland": "isbells|||dreamer",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 44,
-  "__v150_next_spotify_round_at": 1793389822.8404477,
-  "__v146_spotify_budget_slot": 1793389067.1854181,
+  "__v150_next_spotify_round_at": 1793389950.0858393,
+  "__v146_spotify_budget_slot": 1793389830.1223416,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -12811,6 +12815,10 @@
     "arlo parks|||black dog": {
       "artist": "Arlo Parks",
       "title": "Black Dog"
+    },
+    "isbells|||dreamer": {
+      "artist": "Isbells",
+      "title": "Dreamer"
     }
   },
   "__v82_confirmed_catalog": {
@@ -12923,6 +12931,11 @@
       "uri": "spotify:track:37pShAS4iuRXJeRAa9k6xw",
       "artist": "Arlo Parks",
       "title": "Black Dog"
+    },
+    "isbells|||dreamer": {
+      "uri": "spotify:track:2l1MgIheVpFWjK41vWZMku",
+      "artist": "Isbells",
+      "title": "Dreamer"
     }
   },
   "__pending_library_likes": {},
@@ -12947,5 +12960,6 @@
   "__match_v35__novastar|||because": "spotify:track:7Ad3vOePhRkXhrGkUHwdhM",
   "__match_v35__steve gunn|||vagabond": "spotify:track:4MxHAB3fHQ8oI2jRXSLQ9p",
   "__match_v35__mooneye|||in between": "spotify:track:7lEZ4UjPAjgu20XyTZm0j8",
-  "__match_v35__arlo parks|||black dog": "spotify:track:37pShAS4iuRXJeRAa9k6xw"
+  "__match_v35__arlo parks|||black dog": "spotify:track:37pShAS4iuRXJeRAa9k6xw",
+  "__match_v35__isbells|||dreamer": "spotify:track:2l1MgIheVpFWjK41vWZMku"
 }
