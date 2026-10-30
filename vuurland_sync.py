@@ -7236,13 +7236,13 @@ def sync():
     # nummers tijdelijk blijven herkennen), zodat geen dubbele opnames
     # worden toegevoegd. De normale periodieke refresh blijft bestaan.
     # v164: het totaal niet in elke Spotify-ronde via GET opvragen.
-    # Hoogstens om de 6 uur; de eigen POST verhoogt de cachetelling lokaal.
+    # v184: hoogstens om het uur, omdat de kopscan elke 10 minuten loopt.
     # Als de cache ontbreekt of een rebuild nodig is, wel onmiddellijk checken.
     playlist_count_check_due = (
         not isinstance(active_playlist_count, int)
         or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
         or cache.get("__v165_existing_playlist_imported") != EXISTING_PLAYLIST_IMPORT_TOKEN
-        or time.time() - float(cache.get("__v164_playlist_count_checked_at", 0) or 0) >= 600
+        or time.time() - float(cache.get("__v164_playlist_count_checked_at", 0) or 0) >= 3600
     )
     if playlist_count_check_due:
         actual_playlist_total = _get_playlist_total(playlist_id)
@@ -7283,11 +7283,17 @@ def sync():
         cache["__vuurland_active_playlist_count"] = actual_playlist_total
         save_cache(cache)
 
-    # v183: bij waargenomen handmatige groei meteen de nieuwste Spotify-
-    # posities lezen. De Spotify-app plaatst invoegingen vaak vooraan;
-    # een uitsluitend append-gerichte delta mist die. Eén pagina per
-    # gedetecteerde wijziging, zonder de cache of FIFO te resetten.
-    if playlist_count_changed:
+    # v184: de telling is geen betrouwbare wijzigingsindicator: eigen
+    # POSTs, handmatige toevoegingen en verwijderingen kunnen elkaar
+    # compenseren. Lees daarom periodiek de echte Spotify-kop, OOK wanneer
+    # de count niet veranderd is. Maximaal één pagina per 10 minuten.
+    # Bewaar alle oude keys/URI's/ISRCs: nooit een cache- of FIFO-reset.
+    head_due = (
+        cache.get("__v184_head_playlist_id") != playlist_id
+        or time.time() - float(cache.get("__v184_head_checked_at", 0) or 0) >= 600
+        or playlist_count_changed
+    )
+    if head_due:
         head = spotify_request(
             "GET", f"/playlists/{playlist_id}/items",
             params={"limit": 50, "offset": 0},
@@ -7309,9 +7315,10 @@ def sync():
         cache["__playlist_uris"] = sorted(playlist_uris)
         cache["__playlist_isrcs"] = sorted(playlist_isrcs)
         cache["__spotify_uri_isrc"] = spotify_uri_isrc
-        cache["__v183_last_head_checked_total"] = actual_playlist_total
+        cache["__v184_head_playlist_id"] = playlist_id
+        cache["__v184_head_checked_at"] = int(time.time())
         save_cache(cache)
-        print("🛡️ v183: recentste 50 playlistposities ingelezen voor handmatige duplicaten.")
+        print("🛡️ v184: kop van playlist periodiek gecontroleerd (ook zonder countwijziging).")
 
     # v177: maximaal één extra pagina per ronde; ook bij >50 handmatige
     # toevoegingen. Een volledige scan heeft altijd voorrang. Tijdens een
