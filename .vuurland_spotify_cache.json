@@ -3451,6 +3451,7 @@
     "tame impala|||feels like we only go backwards",
     "tame impala|||four tet|||is it true - four tet remix",
     "tame impala|||is it true - four tet remix",
+    "tame impala|||solitude is bliss",
     "tame impala|||the less i know the better",
     "tamino & angele|||sunflower",
     "tamino & mitski|||sanctuary",
@@ -4971,6 +4972,7 @@
     "spotify:track:2ZVD0RGRnaz9bdJHC0mtZy",
     "spotify:track:2ZgOYo5mjmVpgq0VVXCJtj",
     "spotify:track:2ZqhjS3T4r3DLcQqI2sqf5",
+    "spotify:track:2a2MbiJN2skOxohykOVcss",
     "spotify:track:2a7nwptkSB6kdIidxhR7fp",
     "spotify:track:2aUL6tMV8U7CPK6MZFIJX3",
     "spotify:track:2aUWLSwipg7HR9bevqv6Mw",
@@ -6873,6 +6875,7 @@
     "AUQ0L2409026",
     "AUQ9D2636717",
     "AUQ9D2678034",
+    "AUUM71000136",
     "AUUM71100399",
     "AUUM71100543",
     "AUUM71200073",
@@ -12275,13 +12278,14 @@
     "spotify:track:2GR3y9iXb5Lae2KLQJUy2J": "GBUM72406105",
     "spotify:track:59lQwJcWbr9x3OvTvW5NNX": "US38Y1935006",
     "spotify:track:6wf7Yu7cxBSPrRlWeSeK0Q": "USUM72307484",
-    "spotify:track:3iU2qsthCTo5EeTE03l3Si": "USUM72512347"
+    "spotify:track:3iU2qsthCTo5EeTE03l3Si": "USUM72512347",
+    "spotify:track:2a2MbiJN2skOxohykOVcss": "AUUM71000136"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2740,
+  "__vuurland_active_playlist_count": 2741,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12393,7 +12397,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793386390.8154879
+    "vuurland": 1793386400.3541374
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12632,8 +12636,8 @@
   "__last_radio_key_vuurland": "elephant feat meskerem mees|||the morning",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 34,
-  "__v150_next_spotify_round_at": 1793386392.8636215,
-  "__v146_spotify_budget_slot": 1793386272.9015627,
+  "__v150_next_spotify_round_at": 1793386520.3542683,
+  "__v146_spotify_budget_slot": 1793386400.3933957,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -12657,6 +12661,10 @@
     "noah kahan|||doors": {
       "artist": "Noah Kahan",
       "title": "Doors"
+    },
+    "tame impala|||solitude is bliss": {
+      "artist": "Tame Impala",
+      "title": "Solitude Is Bliss"
     }
   },
   "__v82_confirmed_catalog": {
@@ -12684,11 +12692,17 @@
       "uri": "spotify:track:3iU2qsthCTo5EeTE03l3Si",
       "artist": "Noah Kahan",
       "title": "Doors"
+    },
+    "tame impala|||solitude is bliss": {
+      "uri": "spotify:track:2a2MbiJN2skOxohykOVcss",
+      "artist": "Tame Impala",
+      "title": "Solitude Is Bliss"
     }
   },
   "__pending_library_likes": {},
   "__match_v35__sam fender|||i'm always on stage": "spotify:track:2GR3y9iXb5Lae2KLQJUy2J",
   "__match_v35__bon iver|||u man like": "spotify:track:59lQwJcWbr9x3OvTvW5NNX",
   "__match_v35__billie eilish|||what was i made for?": "spotify:track:6wf7Yu7cxBSPrRlWeSeK0Q",
-  "__match_v35__noah kahan|||doors": "spotify:track:3iU2qsthCTo5EeTE03l3Si"
+  "__match_v35__noah kahan|||doors": "spotify:track:3iU2qsthCTo5EeTE03l3Si",
+  "__match_v35__tame impala|||solitude is bliss": "spotify:track:2a2MbiJN2skOxohykOVcss"
 }
