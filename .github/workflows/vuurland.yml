@@ -1,9 +1,7 @@
 name: Vuurland Spotify Sync
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "17 */6 * * *"
+  workflow_dispatch:  # Enkel handmatig; automatische planning verwijderd.
 
 permissions:
   contents: write
@@ -15,6 +13,7 @@ concurrency:
 
 jobs:
   sync:
+    if: ${{ false }}  # Veilig gepauzeerd tot nieuwe bronnen geconfigureerd zijn.
     runs-on: ubuntu-24.04
     timeout-minutes: 355
 
