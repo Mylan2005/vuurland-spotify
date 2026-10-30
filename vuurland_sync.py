@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ()  # Alle radiobronnen uitgeschakeld; opnieuw samenstellen op verzoek.
+RADIO_SOURCE_ORDER = ("vuurland",)  # Enige actieve radiobron: Studio Brussel Vuurland.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6704,31 +6704,18 @@ def sync():
     # VUURLAND LIVE SYNC
     # =================================
 
+    # Alleen ingeschakelde radiobronnen ophalen; andere bronnen niet contacteren.
+    source_catalog = {
+        "vuurland": ("Studio Brussel Vuurland", get_vuurland_tracks, "__last_radio_key_vuurland"),
+        "mellow_mix": ("Radio Paradise Mellow Mix", get_mellow_mix_tracks, "__last_radio_key_mellow_mix"),
+        "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
+        "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
+    }
     radio_sources = [
-        {
-            "id": "vuurland",
-            "name": "Studio Brussel Vuurland",
-            "tracks": get_vuurland_tracks(),
-            "cache_key": "__last_radio_key_vuurland",
-        },
-        {
-            "id": "mellow_mix",
-            "name": "Radio Paradise Mellow Mix",
-            "tracks": get_mellow_mix_tracks(),
-            "cache_key": "__last_radio_key_mellow_mix",
-        },
-        {
-            "id": "radio_britannia",
-            "name": "Radio Britannia",
-            "tracks": get_radio_britannia_tracks(),
-            "cache_key": "__last_radio_key_radio_britannia",
-        },
-        {
-            "id": "big_sonic_heaven",
-            "name": "Big Sonic Heaven Radio",
-            "tracks": get_big_sonic_heaven_tracks(),
-            "cache_key": "__last_radio_key_big_sonic_heaven",
-        },
+        {"id": sid, "name": source_catalog[sid][0],
+         "tracks": source_catalog[sid][1](),
+         "cache_key": source_catalog[sid][2]}
+        for sid in RADIO_SOURCE_ORDER
     ]
 
     print()
