@@ -2637,6 +2637,7 @@
     "norah jones|||when you're gone with bedouine from “norah jones is playing along” podcast",
     "north downs|||kingdom",
     "northwest stories|||half asleep",
+    "novastar|||because",
     "novastar|||because - re-imagined",
     "novastar|||caramia",
     "novastar|||deep are the eyes",
@@ -6611,6 +6612,7 @@
     "spotify:track:79vS51eJbq9S7ssEj8pBbQ",
     "spotify:track:7AQZ8y4wkeS4FT0uyTwpZ0",
     "spotify:track:7ASFZh1D0DPZro7UXUKGmd",
+    "spotify:track:7Ad3vOePhRkXhrGkUHwdhM",
     "spotify:track:7AgPGHkeXpj8yETLvBn3Kb",
     "spotify:track:7AkPusgKsrTqbOcTTbRnFr",
     "spotify:track:7AuNXwgiihfpxY6Y9iSvFs",
@@ -6973,6 +6975,7 @@
     "BEHG31800001",
     "BEHH41800004",
     "BEI010800095",
+    "BEI010800099",
     "BEJ272100005",
     "BEJ272100007",
     "BEJ432200002",
@@ -12331,13 +12334,14 @@
     "spotify:track:5vs5pCSQ8tzS94nsTwKcrL": "NLP762400050",
     "spotify:track:1Jt24MPLz6fGXSCTlXTjzF": "QZHN92213120",
     "spotify:track:7mHTdjUQLBfnVVCio5xMyy": "NLHG12500004",
-    "spotify:track:1gIfQhhv0inJEugVgnP4gy": "GBSG42400008"
+    "spotify:track:1gIfQhhv0inJEugVgnP4gy": "GBSG42400008",
+    "spotify:track:7Ad3vOePhRkXhrGkUHwdhM": "BEI010800099"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2753,
+  "__vuurland_active_playlist_count": 2754,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12449,7 +12453,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793388168.649275
+    "vuurland": 1793388178.177213
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12697,8 +12701,8 @@
   "__last_radio_key_vuurland": "novastar|||because",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 40,
-  "__v150_next_spotify_round_at": 1793388170.2271116,
-  "__v146_spotify_budget_slot": 1793388050.2635937,
+  "__v150_next_spotify_round_at": 1793388298.1773288,
+  "__v146_spotify_budget_slot": 1793388178.2129347,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -12774,6 +12778,10 @@
     "nick cave & the bad seeds|||long dark night": {
       "artist": "Nick Cave & The Bad Seeds",
       "title": "Long Dark Night"
+    },
+    "novastar|||because": {
+      "artist": "Novastar",
+      "title": "Because"
     }
   },
   "__v82_confirmed_catalog": {
@@ -12866,6 +12874,11 @@
       "uri": "spotify:track:1gIfQhhv0inJEugVgnP4gy",
       "artist": "Nick Cave & The Bad Seeds",
       "title": "Long Dark Night"
+    },
+    "novastar|||because": {
+      "uri": "spotify:track:7Ad3vOePhRkXhrGkUHwdhM",
+      "artist": "Novastar",
+      "title": "Because"
     }
   },
   "__pending_library_likes": {},
@@ -12886,5 +12899,6 @@
   "__match_v35__eefje de visser|||weekenden": "spotify:track:5vs5pCSQ8tzS94nsTwKcrL",
   "__match_v35__wasia project|||ur so pretty": "spotify:track:1Jt24MPLz6fGXSCTlXTjzF",
   "__match_v35__dotan|||let you go": "spotify:track:7mHTdjUQLBfnVVCio5xMyy",
-  "__match_v35__nick cave & the bad seeds|||long dark night": "spotify:track:1gIfQhhv0inJEugVgnP4gy"
+  "__match_v35__nick cave & the bad seeds|||long dark night": "spotify:track:1gIfQhhv0inJEugVgnP4gy",
+  "__match_v35__novastar|||because": "spotify:track:7Ad3vOePhRkXhrGkUHwdhM"
 }
