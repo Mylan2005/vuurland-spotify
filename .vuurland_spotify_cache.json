@@ -929,6 +929,7 @@
     "coldplay|||shiver",
     "coldplay|||sparks",
     "coldplay|||spies",
+    "coldplay|||the scientist",
     "coldplay|||til kingdom come",
     "coldplay|||warning sign",
     "complete mountain almanac|||may",
@@ -6602,6 +6603,7 @@
     "spotify:track:74rfrufWL0TF6ORmled9w8",
     "spotify:track:74sn2URG7dxYBRl6jeCUaY",
     "spotify:track:75GyGLjB9yFLTVltUlDVKI",
+    "spotify:track:75JFxkI2RXiU7L9VXzMkle",
     "spotify:track:75Zy9VqBPciUEWJsE2SmSy",
     "spotify:track:75gwWphI9gXlNV0xDyixMw",
     "spotify:track:75mXvk1iScFx3dw0i5hohp",
@@ -7680,6 +7682,7 @@
     "GBAYE0001578",
     "GBAYE0001582",
     "GBAYE0200770",
+    "GBAYE0200772",
     "GBAYE0200774",
     "GBAYE0200775",
     "GBAYE0200776",
@@ -12375,13 +12378,14 @@
     "spotify:track:6gD86nnXjZPG6bMoJdPEu8": "NLD322200186",
     "spotify:track:1Tr8W3vJZoUPUxel4oBZVl": "BEN582500649",
     "spotify:track:7rB7q4wrrU4t0MlcTQUmVv": "BEHG72200005",
-    "spotify:track:0EWHn0McVO8Ewbkqvh53AD": "US2U62235411"
+    "spotify:track:0EWHn0McVO8Ewbkqvh53AD": "US2U62235411",
+    "spotify:track:75JFxkI2RXiU7L9VXzMkle": "GBAYE0200772"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2764,
+  "__vuurland_active_playlist_count": 2765,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12493,7 +12497,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793391727.2141168
+    "vuurland": 1793391736.662849
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12754,8 +12758,8 @@
   "__last_radio_key_vuurland": "coldplay|||the scientist",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 51,
-  "__v150_next_spotify_round_at": 1793391730.45105,
-  "__v146_spotify_budget_slot": 1793391610.4879572,
+  "__v150_next_spotify_round_at": 1793391856.6629744,
+  "__v146_spotify_budget_slot": 1793391736.700783,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -12875,6 +12879,10 @@
     "indigo de souza|||younger & dumber": {
       "artist": "Indigo De Souza",
       "title": "Younger & Dumber"
+    },
+    "coldplay|||the scientist": {
+      "artist": "Coldplay",
+      "title": "The Scientist"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13022,6 +13030,11 @@
       "uri": "spotify:track:0EWHn0McVO8Ewbkqvh53AD",
       "artist": "Indigo De Souza",
       "title": "Younger & Dumber"
+    },
+    "coldplay|||the scientist": {
+      "uri": "spotify:track:75JFxkI2RXiU7L9VXzMkle",
+      "artist": "Coldplay",
+      "title": "The Scientist"
     }
   },
   "__pending_library_likes": {},
@@ -13053,5 +13066,6 @@
   "__match_v35__neomi|||skipping stone": "spotify:track:6gD86nnXjZPG6bMoJdPEu8",
   "__match_v35__elis floreen|||panther": "spotify:track:1Tr8W3vJZoUPUxel4oBZVl",
   "__match_v35__maru maru|||remedy": "spotify:track:7rB7q4wrrU4t0MlcTQUmVv",
-  "__match_v35__indigo de souza|||younger & dumber": "spotify:track:0EWHn0McVO8Ewbkqvh53AD"
+  "__match_v35__indigo de souza|||younger & dumber": "spotify:track:0EWHn0McVO8Ewbkqvh53AD",
+  "__match_v35__coldplay|||the scientist": "spotify:track:75JFxkI2RXiU7L9VXzMkle"
 }
