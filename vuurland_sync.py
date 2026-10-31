@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge", "soma_digitalis", "soma_folkfwd", "soma_lush")  # Bestaande vier + drie SomaFM-bronnen.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge", "soma_digitalis", "soma_folkfwd")  # Bestaande vier + twee SomaFM-bronnen.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6790,7 +6790,6 @@ def sync():
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
         "soma_digitalis": ("SomaFM Digitalis", get_soma_digitalis_tracks, "__last_radio_key_soma_digitalis"),
         "soma_folkfwd": ("SomaFM Folk Forward", get_soma_folkfwd_tracks, "__last_radio_key_soma_folkfwd"),
-        "soma_lush": ("SomaFM Lush", get_soma_lush_tracks, "__last_radio_key_soma_lush"),
     }
     radio_sources = [
         {"id": sid, "name": source_catalog[sid][0],
@@ -6828,7 +6827,7 @@ def sync():
     if not isinstance(live_queue, list):
         raise ValueError("Live queue is geen JSON-lijst; niet overschrijven")
 
-    # Alleen de zeven actieve bronnen blijven in de FIFO.
+    # Alleen de zes actieve bronnen blijven in de FIFO.
     # Eenmalige Radio Indie Alternative-selectie gebruikt source="vuurland"
     # en blijft daardoor behouden. Onbekende bronnen worden veilig uitgesloten.
     before_source_filter = len(live_queue)
