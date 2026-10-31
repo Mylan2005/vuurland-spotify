@@ -1,4 +1,4 @@
-"""Regression: six live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
+"""Regression: five live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
 import ast
 from pathlib import Path
 
@@ -20,8 +20,8 @@ assert '"tracks": get_radio_x_chilled_tracks()' not in body
 assert '"tracks": get_dreampop_radio_tracks()' not in body
 assert '"big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks,' in body
 assert '"radio_britannia": ("Radio Britannia", get_radio_britannia_tracks,' in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge", "soma_digitalis", "soma_folkfwd")' in source
-assert '"soma_digitalis": ("SomaFM Digitalis", get_soma_digitalis_tracks,' in body
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge", "soma_folkfwd")' in source
+assert '"soma_digitalis": ("SomaFM Digitalis", get_soma_digitalis_tracks,' not in body
 assert '"soma_folkfwd": ("SomaFM Folk Forward", get_soma_folkfwd_tracks,' in body
 assert '"soma_lush": ("SomaFM Lush", get_soma_lush_tracks,' not in body
 assert '"dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks,' in body
@@ -35,7 +35,7 @@ assert 'v140_is_unwanted_language_title(title, artist)' in body
 assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' not in body
 assert 'big_sonic_destination(artist) == "review"' not in body
 assert '__big_sonic_review_scan_complete' not in body
-print("✅ Vier oorspronkelijke bronnen en twee SomaFM-bronnen actief; overige bronnen uit FIFO, Duitse zangblokkering behouden.")
+print("✅ Vier oorspronkelijke bronnen en SomaFM Folk Forward actief; overige bronnen uit FIFO, Duitse zangblokkering behouden.")
 
 assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
 
