@@ -2416,6 +2416,7 @@
     "men i trust|||sugar",
     "menahan street band|||you put the flame on it",
     "mercury rev|||the dark is rising",
+    "meskerem mees|||astronaut",
     "meskerem mees|||seasons shift",
     "meskerem mees|||the morning",
     "meskerem mees|||the writer",
@@ -6572,6 +6573,7 @@
     "spotify:track:6tHVEMyRfxGgQuXRzl2yOF",
     "spotify:track:6tXnRSvuNgOq4QcxpIN54r",
     "spotify:track:6tclkDfOgetmI3nE5nY0Xw",
+    "spotify:track:6teNMe4qWwenOKOY0G8yoe",
     "spotify:track:6trrP0mnHmUCp2g04PpTJG",
     "spotify:track:6uFrjXqqKEfI6vhw02DTjc",
     "spotify:track:6ug8xD1Q4jhgfE8t7r2ZKl",
@@ -7057,6 +7059,7 @@
     "BEJG42200009",
     "BEKE52100009",
     "BEKE52100018",
+    "BEKE52100023",
     "BEKE52100025",
     "BEKE52100056",
     "BEKE52100058",
@@ -12471,13 +12474,14 @@
     "spotify:track:5IXA8J6Xugs507nAzwSa5F": "GBUM72305555",
     "spotify:track:3bzPIGOvMnnePP7GzZrwF2": "USSM12602963",
     "spotify:track:2VWU98gL9ePoBWzjttq3iC": "USUG12306739",
-    "spotify:track:2ZIY5Pr3j0V6iNrE2eCVDW": "BEKE52100009"
+    "spotify:track:2ZIY5Pr3j0V6iNrE2eCVDW": "BEKE52100009",
+    "spotify:track:6teNMe4qWwenOKOY0G8yoe": "BEKE52100023"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2787,
+  "__vuurland_active_playlist_count": 2788,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12589,7 +12593,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793404840.9354043
+    "vuurland": 1793404850.3234503
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12895,8 +12899,8 @@
   "__last_radio_key_vuurland": "iskander moon|||the city",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 76,
-  "__v150_next_spotify_round_at": 1793404843.363532,
-  "__v146_spotify_budget_slot": 1793404342.505017,
+  "__v150_next_spotify_round_at": 1793404970.3235474,
+  "__v146_spotify_budget_slot": 1793404850.3616168,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13108,6 +13112,10 @@
     "mooneye|||fix the heater": {
       "artist": "Mooneye",
       "title": "Fix the Heater"
+    },
+    "meskerem mees|||astronaut": {
+      "artist": "Meskerem Mees",
+      "title": "Astronaut"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13370,6 +13378,11 @@
       "uri": "spotify:track:2ZIY5Pr3j0V6iNrE2eCVDW",
       "artist": "Mooneye",
       "title": "Fix the Heater"
+    },
+    "meskerem mees|||astronaut": {
+      "uri": "spotify:track:6teNMe4qWwenOKOY0G8yoe",
+      "artist": "Meskerem Mees",
+      "title": "Astronaut"
     }
   },
   "__pending_library_likes": {},
@@ -13425,5 +13438,6 @@
   "__match_v35__the last dinner party|||sinner": "spotify:track:5IXA8J6Xugs507nAzwSa5F",
   "__match_v35__leon bridges feat lydia kitto|||all day all night": "spotify:track:3bzPIGOvMnnePP7GzZrwF2",
   "__match_v35__maggie rogers|||so sick of dreaming": "spotify:track:2VWU98gL9ePoBWzjttq3iC",
-  "__match_v35__mooneye|||fix the heater": "spotify:track:2ZIY5Pr3j0V6iNrE2eCVDW"
+  "__match_v35__mooneye|||fix the heater": "spotify:track:2ZIY5Pr3j0V6iNrE2eCVDW",
+  "__match_v35__meskerem mees|||astronaut": "spotify:track:6teNMe4qWwenOKOY0G8yoe"
 }
