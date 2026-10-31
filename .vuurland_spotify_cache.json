@@ -3467,6 +3467,7 @@
     "steven delopoulos|||sweet remission",
     "still corners|||far rider",
     "still corners|||static",
+    "still woozy|||all your life",
     "sting|||englishman in new york",
     "sting|||shape of my heart",
     "storefront church & phoebe bridgers|||words",
@@ -4738,6 +4739,7 @@
     "spotify:track:1QG3f3TYy9mci5ogEu2PyS",
     "spotify:track:1QGVy7iVqFrb45SKBWt6e9",
     "spotify:track:1QUiA9aecDOOnf32A9ZrtW",
+    "spotify:track:1QhvsOQY9nCl74t5R6YwbY",
     "spotify:track:1QnFKAPgZ7GI9sYITPuYyL",
     "spotify:track:1Qpyt7U1yu4tfuJc4LKuzF",
     "spotify:track:1QuJm7XRpFjEfOU6A01mw2",
@@ -9880,6 +9882,7 @@
     "USUG12309516",
     "USUG12400488",
     "USUG12401035",
+    "USUG12402310",
     "USUG12409104",
     "USUG12409115",
     "USUG12503054",
@@ -12874,13 +12877,14 @@
     "spotify:track:19kHhX6f6EfLU7rcO3RqjO": "QM4TX2336316",
     "spotify:track:0NLm9bQG7ikL5k9x9TtYT7": "QZMEM2209263",
     "spotify:track:0pkMY0Gd1SfJbaC3bwkzFE": "IEABQ1200012",
-    "spotify:track:4bhIIFbihd3bL4rCZqe9Hy": "USWB11302515"
+    "spotify:track:4bhIIFbihd3bL4rCZqe9Hy": "USWB11302515",
+    "spotify:track:1QhvsOQY9nCl74t5R6YwbY": "USUG12402310"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2886,
+  "__vuurland_active_playlist_count": 2887,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13094,8 +13098,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793452529.2102993,
-    "mellow_mix": 1793452529.213172
+    "vuurland": 1793452539.1760914,
+    "mellow_mix": 1793452539.1790123
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13671,8 +13675,8 @@
   "__last_radio_key_vuurland": "still woozy|||all your life",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 180,
-  "__v150_next_spotify_round_at": 1793452530.7544837,
-  "__v146_spotify_budget_slot": 1793452410.798133,
+  "__v150_next_spotify_round_at": 1793452659.1791084,
+  "__v146_spotify_budget_slot": 1793452539.2225878,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14292,6 +14296,10 @@
     "van morrison|||caravan": {
       "artist": "Van Morrison",
       "title": "Caravan - Takes 2-3"
+    },
+    "still woozy|||all your life": {
+      "artist": "Still Woozy",
+      "title": "All Your Life"
     }
   },
   "__v82_confirmed_catalog": {
@@ -15064,6 +15072,11 @@
       "uri": "spotify:track:4bhIIFbihd3bL4rCZqe9Hy",
       "artist": "Van Morrison",
       "title": "Caravan - Takes 2-3"
+    },
+    "still woozy|||all your life": {
+      "uri": "spotify:track:1QhvsOQY9nCl74t5R6YwbY",
+      "artist": "Still Woozy",
+      "title": "All Your Life"
     }
   },
   "__pending_library_likes": {},
@@ -15224,5 +15237,6 @@
   "__match_v35__jungle|||back on 74": "spotify:track:19kHhX6f6EfLU7rcO3RqjO",
   "__match_v35__d4vd|||here with me": "spotify:track:0NLm9bQG7ikL5k9x9TtYT7",
   "__match_v35__glen hansard|||come away to the water": "spotify:track:0pkMY0Gd1SfJbaC3bwkzFE",
-  "__match_v35__van morrison|||caravan": "spotify:track:4bhIIFbihd3bL4rCZqe9Hy"
+  "__match_v35__van morrison|||caravan": "spotify:track:4bhIIFbihd3bL4rCZqe9Hy",
+  "__match_v35__still woozy|||all your life": "spotify:track:1QhvsOQY9nCl74t5R6YwbY"
 }
