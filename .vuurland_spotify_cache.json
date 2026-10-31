@@ -12588,6 +12588,7 @@
   "__v184_head_checked_at": 1793418048,
   "__v96_radio_snapshots": {
     "vuurland": [
+      "allah las|||raspberry jam",
       "kurt vile|||zoom 97",
       "smith & burrows|||wonderful life",
       "holly humberstone|||dive",
@@ -12686,12 +12687,11 @@
       "adrianne lenker|||anything",
       "gabriels|||one and only",
       "leif vollebekk|||long blue light",
-      "bleachers|||you and forever",
-      "tom rosenthal|||its ok"
+      "bleachers|||you and forever"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793418546.9588106
+    "vuurland": 1793418556.5572262
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12706,6 +12706,7 @@
       "adrianne lenker|||anything",
       "adrianne lenker|||once a bunch",
       "air|||la femme d'argent",
+      "allah las|||raspberry jam",
       "alt-j|||nara",
       "alt-j|||u&me",
       "amatorski|||come home",
@@ -13024,11 +13025,11 @@
   "__v173_radio_reset": "2026-10-29-four-live",
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__last_radio_key_vuurland": "kurt vile|||zoom 97",
+  "__last_radio_key_vuurland": "allah las|||raspberry jam",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 99,
-  "__v150_next_spotify_round_at": 1793418549.1959932,
-  "__v146_spotify_budget_slot": 1793418175.2428477,
+  "__v116_fifo_next_sequence": 100,
+  "__v150_next_spotify_round_at": 1793418676.557379,
+  "__v146_spotify_budget_slot": 1793418556.5975583,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13340,6 +13341,10 @@
     "smith & burrows|||wonderful life": {
       "artist": "Smith & Burrows",
       "title": "Wonderful Life"
+    },
+    "allah las|||raspberry jam": {
+      "artist": "Allah-Las",
+      "title": "Raspberry Jam"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13727,6 +13732,11 @@
       "uri": "spotify:track:2l9HDZnaCCaPxhL4fPWScK",
       "artist": "Smith & Burrows",
       "title": "Wonderful Life"
+    },
+    "allah las|||raspberry jam": {
+      "uri": "spotify:track:5yVU9NBrOkk9X3AKHzLhoT",
+      "artist": "Allah-Las",
+      "title": "Raspberry Jam"
     }
   },
   "__pending_library_likes": {},
@@ -13807,5 +13817,6 @@
   "__match_v35__daniel caesar|||let me go": "spotify:track:3ym8ajVmKm6Fybgov3WBI5",
   "__match_v35__elbow|||magnificent she says": "spotify:track:7MNAi4I7teNgzuVMe0HPZg",
   "__match_v35__holly humberstone|||dive": "spotify:track:5WMA8AmXGff8wo450I3Ecn",
-  "__match_v35__smith & burrows|||wonderful life": "spotify:track:2l9HDZnaCCaPxhL4fPWScK"
+  "__match_v35__smith & burrows|||wonderful life": "spotify:track:2l9HDZnaCCaPxhL4fPWScK",
+  "__match_v35__allah las|||raspberry jam": "spotify:track:5yVU9NBrOkk9X3AKHzLhoT"
 }
