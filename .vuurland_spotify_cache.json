@@ -3751,6 +3751,7 @@
     "the cinematic orchestra|||london metropolitan orchestra|||arrival of the birds",
     "the cinematic orchestra|||patrick watson|||to build a home",
     "the cinematic orchestra|||to build a home",
+    "the decemberists|||january hymn",
     "the favors & finneas & ashe|||home sweet home",
     "the favors|||finneas|||ashe|||home sweet home",
     "the favors|||home sweet home",
@@ -5337,6 +5338,7 @@
     "spotify:track:2drtd6SptpMJ1KylMQ7mrE",
     "spotify:track:2drzc5eWV0okNKvmc3h2wM",
     "spotify:track:2dtRAYfkYze247YhuCvfZl",
+    "spotify:track:2dunRq7yiVaj0WsPpvADMH",
     "spotify:track:2eU0ZprX3kfI9ZWqTCoAI1",
     "spotify:track:2eVofaQRJvddSUBfcub7Gz",
     "spotify:track:2ehQ2UuXplkqly0XBBAPud",
@@ -9748,6 +9750,7 @@
     "USC4R2667536",
     "USC4R2668590",
     "USCA20101436",
+    "USCA21002595",
     "USCA29100164",
     "USCGH1582144",
     "USCGJ0988301",
@@ -13243,13 +13246,14 @@
     "spotify:track:44V1HgMc28ssybXjnZYmMa": "CAN112501555",
     "spotify:track:3faH327QSxjbRsYngF4Fuf": "BCBL92400011",
     "spotify:track:7mftiXzfJpXrDupesAbx1m": "SEWGI1314010",
-    "spotify:track:0R8P9KfGJCDULmlEoBagcO": "GBAYE0000560"
+    "spotify:track:0R8P9KfGJCDULmlEoBagcO": "GBAYE0000560",
+    "spotify:track:2dunRq7yiVaj0WsPpvADMH": "USCA21002595"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2990,
+  "__vuurland_active_playlist_count": 2991,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13724,12 +13728,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793465152.320409,
-    "mellow_mix": 1793465152.3233519,
-    "big_sonic_heaven": 1793465152.325879,
-    "dkfm_edge": 1793465152.3287842,
-    "soma_digitalis": 1793465152.3289502,
-    "soma_folkfwd": 1793465152.3291004,
+    "vuurland": 1793465163.6475809,
+    "mellow_mix": 1793465163.6504617,
+    "big_sonic_heaven": 1793465163.6529555,
+    "dkfm_edge": 1793465163.655887,
+    "soma_digitalis": 1793465163.6560478,
+    "soma_folkfwd": 1793465163.6561954,
     "soma_lush": 1793465100.5323584
   },
   "__v180_big_sonic_fresh_start": true,
@@ -14799,8 +14803,8 @@
   "__last_radio_key_vuurland": "the haunted youth|||wake up",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 319,
-  "__v150_next_spotify_round_at": 1793465152.4520164,
-  "__v146_spotify_budget_slot": 1793465032.5143802,
+  "__v150_next_spotify_round_at": 1793465283.656316,
+  "__v146_spotify_budget_slot": 1793465163.7141695,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -15772,6 +15776,10 @@
     "coldplay|||trouble": {
       "artist": "Coldplay",
       "title": "Trouble"
+    },
+    "the decemberists|||january hymn": {
+      "artist": "The Decemberists",
+      "title": "January Hymn"
     }
   },
   "__v82_confirmed_catalog": {
@@ -16984,6 +16992,11 @@
       "uri": "spotify:track:0R8P9KfGJCDULmlEoBagcO",
       "artist": "Coldplay",
       "title": "Trouble"
+    },
+    "the decemberists|||january hymn": {
+      "uri": "spotify:track:2dunRq7yiVaj0WsPpvADMH",
+      "artist": "The Decemberists",
+      "title": "January Hymn"
     }
   },
   "__pending_library_likes": {},
@@ -21714,6 +21727,7 @@
       "stephen sanchez|||something about her",
       "the barr brothers|||beggar in the morning",
       "the byrds|||goin' back",
+      "the decemberists|||january hymn",
       "the folk implosion|||pearl",
       "the joy formidable|||cut your face",
       "the national|||don't swallow the cap",
@@ -21750,6 +21764,7 @@
       "spotify:track:27SumQMLlRgVS7RqO7cpk6",
       "spotify:track:2Bx62uYPdyvACpPB0gu7MX",
       "spotify:track:2Waq7aiZNBzjE8BHuNbXvm",
+      "spotify:track:2dunRq7yiVaj0WsPpvADMH",
       "spotify:track:2zbhHh1FpFELv8R6vDriyV",
       "spotify:track:351r2fE9ne4YYTxrOV7cj2",
       "spotify:track:36ZSqoEkEtH6s9FvVS9yNe",
@@ -21844,6 +21859,7 @@
       "US53Q1200031",
       "USAT20100512",
       "USAT29500027",
+      "USCA21002595",
       "USEP41718371",
       "USG9K1800708",
       "USGRX0611203",
@@ -21927,7 +21943,8 @@
       "spotify:track:44V1HgMc28ssybXjnZYmMa": "CAN112501555",
       "spotify:track:3faH327QSxjbRsYngF4Fuf": "BCBL92400011",
       "spotify:track:7mftiXzfJpXrDupesAbx1m": "SEWGI1314010",
-      "spotify:track:0R8P9KfGJCDULmlEoBagcO": "GBAYE0000560"
+      "spotify:track:0R8P9KfGJCDULmlEoBagcO": "GBAYE0000560",
+      "spotify:track:2dunRq7yiVaj0WsPpvADMH": "USCA21002595"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -22001,5 +22018,6 @@
   "__last_radio_key_soma_lush": "minru|||in between",
   "__match_v35__adoravel cliche|||amarga": "spotify:track:3faH327QSxjbRsYngF4Fuf",
   "__match_v35__postiljonen|||atlantis": "spotify:track:7mftiXzfJpXrDupesAbx1m",
-  "__match_v35__coldplay|||trouble": "spotify:track:0R8P9KfGJCDULmlEoBagcO"
+  "__match_v35__coldplay|||trouble": "spotify:track:0R8P9KfGJCDULmlEoBagcO",
+  "__match_v35__the decemberists|||january hymn": "spotify:track:2dunRq7yiVaj0WsPpvADMH"
 }
