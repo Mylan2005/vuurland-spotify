@@ -1288,6 +1288,7 @@
     "feist|||the limit to your love",
     "fejka|||no goodbye",
     "felsmann tiley|||solitude - felsmann tiley reinterpretation",
+    "fenne kuppens|||islandhead",
     "fenne lily|||hypochondriac",
     "fenne lily|||lights light up",
     "fenne lily|||thank you sorry",
@@ -3856,7 +3857,9 @@
     "tim buckley|||once i was",
     "tim buckley|||song to the siren - take 7",
     "tim dawn|||rough around the edges",
+    "tin fingers feat fenne kuppens|||islandhead acoustic version",
     "tin fingers|||fomo for kids",
+    "tin fingers|||islandhead",
     "tinariwen & kurt vile & mark lanegan|||nànnuflày",
     "tinariwen & kurt vile & matt sweeney|||tiwàyyen",
     "tinariwen|||kurt vile|||mark lanegan|||nànnuflày",
@@ -6786,6 +6789,7 @@
     "spotify:track:7LdUTzOChvJJbJPZNhJj5X",
     "spotify:track:7LjdhF3WyK0Q9ynpLjstSh",
     "spotify:track:7LwGBxB0h0CVmkOZxYKn0g",
+    "spotify:track:7M8oRE1BSl5cuATG39btml",
     "spotify:track:7MIMNleq34UeRnlLRdPpGY",
     "spotify:track:7MZHqgTVTnN6xZGYAcEEAf",
     "spotify:track:7MeNOxx8jCmYPNdEFH1hsr",
@@ -8460,6 +8464,7 @@
     "NLB602300036",
     "NLC241800214",
     "NLC241900125",
+    "NLC242100182",
     "NLC242100208",
     "NLC242100308",
     "NLC242100372",
@@ -12551,13 +12556,14 @@
     "spotify:track:15MeoWrsBkJNF6rF6XCKYg": "GBAHT1200263",
     "spotify:track:2WOpBtXX02RS4UCzBholDq": "IEABD1400007",
     "spotify:track:4iU6dFUo07jr6jBuwaUUk8": "GBARL2600502",
-    "spotify:track:4NA7AmM3ZzekeRdAcVy3B7": "BEKE52400064"
+    "spotify:track:4NA7AmM3ZzekeRdAcVy3B7": "BEKE52400064",
+    "spotify:track:7M8oRE1BSl5cuATG39btml": "NLC242100182"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2807,
+  "__vuurland_active_playlist_count": 2808,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12669,7 +12675,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793415626.94367
+    "vuurland": 1793415636.568006
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13002,8 +13008,8 @@
   "__last_radio_key_vuurland": "tin fingers feat fenne kuppens|||islandhead acoustic version",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 95,
-  "__v150_next_spotify_round_at": 1793415629.6185007,
-  "__v146_spotify_budget_slot": 1793415509.6584103,
+  "__v150_next_spotify_round_at": 1793415756.568132,
+  "__v146_spotify_budget_slot": 1793415636.607889,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13295,6 +13301,10 @@
     "isaac roux|||soaking skin": {
       "artist": "Isaac Roux",
       "title": "Soaking Skin"
+    },
+    "tin fingers feat fenne kuppens|||islandhead acoustic version": {
+      "artist": "Tin Fingers, Fenne Kuppens",
+      "title": "Islandhead - Acoustic Version"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13657,6 +13667,11 @@
       "uri": "spotify:track:4NA7AmM3ZzekeRdAcVy3B7",
       "artist": "Isaac Roux",
       "title": "Soaking Skin"
+    },
+    "tin fingers feat fenne kuppens|||islandhead acoustic version": {
+      "uri": "spotify:track:7M8oRE1BSl5cuATG39btml",
+      "artist": "Tin Fingers, Fenne Kuppens",
+      "title": "Islandhead - Acoustic Version"
     }
   },
   "__pending_library_likes": {},
@@ -13732,5 +13747,6 @@
   "__match_v35__lianne la havas|||hey that's no way to say goodbye": "spotify:track:15MeoWrsBkJNF6rF6XCKYg",
   "__match_v35__damien rice|||i don't want to change you": "spotify:track:2WOpBtXX02RS4UCzBholDq",
   "__match_v35__nectar woode|||rivers end": "spotify:track:4iU6dFUo07jr6jBuwaUUk8",
-  "__match_v35__isaac roux|||soaking skin": "spotify:track:4NA7AmM3ZzekeRdAcVy3B7"
+  "__match_v35__isaac roux|||soaking skin": "spotify:track:4NA7AmM3ZzekeRdAcVy3B7",
+  "__match_v35__tin fingers feat fenne kuppens|||islandhead acoustic version": "spotify:track:7M8oRE1BSl5cuATG39btml"
 }
