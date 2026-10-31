@@ -13447,10 +13447,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793457955.5789871,
-    "mellow_mix": 1793457955.5815046,
-    "big_sonic_heaven": 1793457955.5837286,
-    "dkfm_edge": 1793457955.586269
+    "vuurland": 1793457967.1613727,
+    "mellow_mix": 1793457967.1638896,
+    "big_sonic_heaven": 1793457967.1661203,
+    "dkfm_edge": 1793457967.1686678
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -14273,16 +14273,23 @@
       "title": "Don't take too long",
       "source": "vuurland",
       "failed_at": 1793435650
+    },
+    "tucker zimmerman feat big thief twain & iji|||burial at sea": {
+      "artist": "TUCKER ZIMMERMAN feat BIG THIEF, TWAIN & IJI",
+      "title": "Burial at sea",
+      "source": "vuurland",
+      "failed_at": 1793457967
     }
   },
   "__v172_live_only_reset": "2026-10-29-live-only",
   "__v51_radio_unmatched": {},
   "__v51_radio_failed_searches": {
     "clear season|||don't take too long": 3,
-    "tucker zimmerman feat big thief twain & iji|||burial at sea": 2
+    "tucker zimmerman feat big thief twain & iji|||burial at sea": 3
   },
   "__v51_radio_failed_cycles": {
-    "clear season|||don't take too long": 1
+    "clear season|||don't take too long": 1,
+    "tucker zimmerman feat big thief twain & iji|||burial at sea": 1
   },
   "__v173_radio_reset": "2026-10-29-four-live",
   "__matching_rules_version": 35,
@@ -14290,8 +14297,8 @@
   "__last_radio_key_vuurland": "arcade fire|||neighborhood #1 tunnels",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 226,
-  "__v150_next_spotify_round_at": 1793457955.5998738,
-  "__v146_spotify_budget_slot": 1793457835.6720757,
+  "__v150_next_spotify_round_at": 1793458087.1687684,
+  "__v146_spotify_budget_slot": 1793457967.241389,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -19677,5 +19684,6 @@
   "__match_v35__tom waits|||ol'55": "spotify:track:7qbLE7ssJcnWD6EO7My847",
   "__match_v35__she's green|||empty house": "spotify:track:6xtLYhgIZ0ZRSvNlLvolst",
   "__match_v35__the folk implosion|||pearl": "spotify:track:7oYqas8vocLo11azlAmR97",
-  "__match_v35__noah kahan|||the view between villages": "spotify:track:6PdWPdgPoVCT9WLFMVnhxx"
+  "__match_v35__noah kahan|||the view between villages": "spotify:track:6PdWPdgPoVCT9WLFMVnhxx",
+  "__not_found_v35__tucker zimmerman feat big thief twain & iji|||burial at sea": 1793457967
 }
