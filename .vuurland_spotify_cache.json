@@ -888,6 +888,7 @@
     "chet faker|||remember me",
     "chet faker|||talk is cheap",
     "choir of young believers|||hollow talk",
+    "chris isaak|||pretty girls don't cry",
     "chrissie hynde|||adding the blue",
     "christian loffler & mohna|||haul - radio edit",
     "christian loffler & roman flugel|||bergen - roman flügel remix",
@@ -4798,6 +4799,7 @@
     "spotify:track:1YI2VXGIGGrwXI256Dnx41",
     "spotify:track:1YVc2NJBwOtAebQiSUbt5T",
     "spotify:track:1YcABWwgkfrOSw8VMgDWZU",
+    "spotify:track:1Z6kn44XsW9OQQRyjww4Cd",
     "spotify:track:1ZHLEKW4rXRaDJESAX7CR8",
     "spotify:track:1ZIYxthydEXIAta07NYZq5",
     "spotify:track:1ZLroqJA8qoS5QEeCo0fA7",
@@ -9764,6 +9766,7 @@
     "USRE10901340",
     "USRE11600830",
     "USRE19100010",
+    "USRE19600085",
     "USRE19800776",
     "USRE19900182",
     "USRE19900694",
@@ -12894,13 +12897,14 @@
     "spotify:track:7gDVfCpKKC8M5OnAH2LoyR": "CAN111100660",
     "spotify:track:1tJEdsmqcWGSRDM9uU4a67": "USSUB2357009",
     "spotify:track:7qhNiOVggMw2y3ypxAyyZT": "BEY540502004",
-    "spotify:track:7uWS4zoWMNU9fUPojMYilC": "US38Y2445008"
+    "spotify:track:7uWS4zoWMNU9fUPojMYilC": "US38Y2445008",
+    "spotify:track:1Z6kn44XsW9OQQRyjww4Cd": "USRE19600085"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2891,
+  "__vuurland_active_playlist_count": 2892,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13114,8 +13118,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793453169.2115035,
-    "mellow_mix": 1793453169.340993
+    "vuurland": 1793453179.3911383,
+    "mellow_mix": 1793453179.3940206
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13695,8 +13699,8 @@
   "__last_radio_key_vuurland": "absynthe minded|||my heroics part one",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 184,
-  "__v150_next_spotify_round_at": 1793453170.947671,
-  "__v146_spotify_budget_slot": 1793453050.9915912,
+  "__v150_next_spotify_round_at": 1793453299.3941073,
+  "__v146_spotify_budget_slot": 1793453179.4382298,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14336,6 +14340,10 @@
     "bon iver|||there's a rhythm": {
       "artist": "Bon Iver",
       "title": "There's A Rhythmn"
+    },
+    "chris isaak|||pretty girls don't cry": {
+      "artist": "Chris Isaak",
+      "title": "Pretty Girls Don't Cry"
     }
   },
   "__v82_confirmed_catalog": {
@@ -15133,6 +15141,11 @@
       "uri": "spotify:track:7uWS4zoWMNU9fUPojMYilC",
       "artist": "Bon Iver",
       "title": "There's A Rhythmn"
+    },
+    "chris isaak|||pretty girls don't cry": {
+      "uri": "spotify:track:1Z6kn44XsW9OQQRyjww4Cd",
+      "artist": "Chris Isaak",
+      "title": "Pretty Girls Don't Cry"
     }
   },
   "__pending_library_likes": {},
@@ -15298,5 +15311,6 @@
   "__match_v35__great lake swimmers|||think that you might be wrong": "spotify:track:7gDVfCpKKC8M5OnAH2LoyR",
   "__match_v35__the shins|||gone for good": "spotify:track:1tJEdsmqcWGSRDM9uU4a67",
   "__match_v35__absynthe minded|||my heroics part one": "spotify:track:7qhNiOVggMw2y3ypxAyyZT",
-  "__match_v35__bon iver|||there's a rhythm": "spotify:track:7uWS4zoWMNU9fUPojMYilC"
+  "__match_v35__bon iver|||there's a rhythm": "spotify:track:7uWS4zoWMNU9fUPojMYilC",
+  "__match_v35__chris isaak|||pretty girls don't cry": "spotify:track:1Z6kn44XsW9OQQRyjww4Cd"
 }
