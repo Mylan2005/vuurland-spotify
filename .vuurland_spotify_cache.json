@@ -12703,7 +12703,7 @@
   },
   "__v164_playlist_count_checked_at": 1793433726,
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793433726,
+  "__v184_head_checked_at": 1793434367,
   "__v96_radio_snapshots": {
     "vuurland": [
       "clear season|||don't take too long",
@@ -12728,7 +12728,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793434357.1366673
+    "vuurland": 1793434367.0881312
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13102,7 +13102,9 @@
   "__v47_failed_tracks": {},
   "__v172_live_only_reset": "2026-10-29-live-only",
   "__v51_radio_unmatched": {},
-  "__v51_radio_failed_searches": {},
+  "__v51_radio_failed_searches": {
+    "clear season|||don't take too long": 1
+  },
   "__v51_radio_failed_cycles": {},
   "__v173_radio_reset": "2026-10-29-four-live",
   "__matching_rules_version": 35,
@@ -13110,8 +13112,8 @@
   "__last_radio_key_vuurland": "clear season|||don't take too long",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 131,
-  "__v150_next_spotify_round_at": 1793434359.017473,
-  "__v146_spotify_budget_slot": 1793433726.10287,
+  "__v150_next_spotify_round_at": 1793434487.0882154,
+  "__v146_spotify_budget_slot": 1793434367.1298656,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
