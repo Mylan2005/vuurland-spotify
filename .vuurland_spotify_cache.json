@@ -793,6 +793,7 @@
     "buck meek|||jonathan",
     "buffalo springfield|||kind woman",
     "caamp|||fairview feeling",
+    "caamp|||lavender girl",
     "caleb hearn|||1000 reasons",
     "calexico & iron & wine|||father mountain",
     "calexico & iron & wine|||midnight sun",
@@ -4474,6 +4475,7 @@
     "spotify:track:0XvYm7nPXdfzXMBC2lbj84",
     "spotify:track:0YDuDRqzuJnBRPTCv1Q9Jx",
     "spotify:track:0YJ9FWWHn9EfnN0lHwbzvV",
+    "spotify:track:0YKNBbkOkDllbbDaxMPKAZ",
     "spotify:track:0YNSOKJz6WElRl7KPTbGqR",
     "spotify:track:0YOMohOG3vq1sEIYGktSuF",
     "spotify:track:0YZzt5PD7o4pS0wNzV6bNT",
@@ -9836,6 +9838,7 @@
     "USNO12300382",
     "USPGQ0800020",
     "USQ4E1804036",
+    "USQE92100308",
     "USQE92400089",
     "USQE92500057",
     "USQE92600012",
@@ -13051,13 +13054,14 @@
     "spotify:track:7jpt2E1oWTXakcvxoce4mC": "QZNJY2322845",
     "spotify:track:22OxorJWuWAt5qN1QRBrRP": "GBAFL0100003",
     "spotify:track:6DH13QYXK7lKkYHSU88N48": "USUG12505893",
-    "spotify:track:7pttXx6E8Vp9B6shTVzmA2": "BEUM72400101"
+    "spotify:track:7pttXx6E8Vp9B6shTVzmA2": "BEUM72400101",
+    "spotify:track:0YKNBbkOkDllbbDaxMPKAZ": "USQE92100308"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2933,
+  "__vuurland_active_playlist_count": 2934,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13475,10 +13479,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793458923.1936796,
-    "mellow_mix": 1793458923.1962438,
-    "big_sonic_heaven": 1793458923.198514,
-    "dkfm_edge": 1793458923.307139
+    "vuurland": 1793458934.50396,
+    "mellow_mix": 1793458934.5065622,
+    "big_sonic_heaven": 1793458934.5088546,
+    "dkfm_edge": 1793458934.511551
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -14340,8 +14344,8 @@
   "__last_radio_key_vuurland": "florence the machine|||patricia",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 240,
-  "__v150_next_spotify_round_at": 1793458934.2072551,
-  "__v146_spotify_budget_slot": 1793458814.268235,
+  "__v150_next_spotify_round_at": 1793459054.5116587,
+  "__v146_spotify_budget_slot": 1793458934.572725,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -15121,6 +15125,10 @@
     "milo meskens|||when she's around": {
       "artist": "Milo Meskens",
       "title": "When She’s Around"
+    },
+    "caamp|||lavender girl": {
+      "artist": "Caamp",
+      "title": "Lavender Girl"
     }
   },
   "__v82_confirmed_catalog": {
@@ -16093,6 +16101,11 @@
       "uri": "spotify:track:7pttXx6E8Vp9B6shTVzmA2",
       "artist": "Milo Meskens",
       "title": "When She’s Around"
+    },
+    "caamp|||lavender girl": {
+      "uri": "spotify:track:0YKNBbkOkDllbbDaxMPKAZ",
+      "artist": "Caamp",
+      "title": "Lavender Girl"
     }
   },
   "__pending_library_likes": {},
@@ -19727,6 +19740,7 @@
     },
     "live_keys": [
       "air formation|||cold morning",
+      "caamp|||lavender girl",
       "collective soul|||reunion",
       "crosby stills & nash|||helplessly hoping",
       "daniel caesar|||who knows",
@@ -19746,6 +19760,7 @@
       "tom waits|||ol'55"
     ],
     "live_uris": [
+      "spotify:track:0YKNBbkOkDllbbDaxMPKAZ",
       "spotify:track:1xZiJQuvH4AMNjUPrd6P2g",
       "spotify:track:22OxorJWuWAt5qN1QRBrRP",
       "spotify:track:244qqJ3bOjp1FI9ZvjtD1X",
@@ -19781,6 +19796,7 @@
       "USAT20100512",
       "USAT29500027",
       "USEP41718371",
+      "USQE92100308",
       "USUG12004346",
       "USUG12505893",
       "USUM72217181"
@@ -19803,7 +19819,8 @@
       "spotify:track:7jpt2E1oWTXakcvxoce4mC": "QZNJY2322845",
       "spotify:track:22OxorJWuWAt5qN1QRBrRP": "GBAFL0100003",
       "spotify:track:6DH13QYXK7lKkYHSU88N48": "USUG12505893",
-      "spotify:track:7pttXx6E8Vp9B6shTVzmA2": "BEUM72400101"
+      "spotify:track:7pttXx6E8Vp9B6shTVzmA2": "BEUM72400101",
+      "spotify:track:0YKNBbkOkDllbbDaxMPKAZ": "USQE92100308"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -19826,5 +19843,6 @@
   "__match_v35__the joy formidable|||cut your face": "spotify:track:7jpt2E1oWTXakcvxoce4mC",
   "__match_v35__neil halstead|||two stones in my pocket": "spotify:track:22OxorJWuWAt5qN1QRBrRP",
   "__match_v35__daniel caesar|||who knows": "spotify:track:6DH13QYXK7lKkYHSU88N48",
-  "__match_v35__milo meskens|||when she's around": "spotify:track:7pttXx6E8Vp9B6shTVzmA2"
+  "__match_v35__milo meskens|||when she's around": "spotify:track:7pttXx6E8Vp9B6shTVzmA2",
+  "__match_v35__caamp|||lavender girl": "spotify:track:0YKNBbkOkDllbbDaxMPKAZ"
 }
