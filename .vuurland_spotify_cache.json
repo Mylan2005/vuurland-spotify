@@ -1142,6 +1142,7 @@
     "eddie vedder|||long nights",
     "eddie vedder|||rise",
     "eddie vedder|||society",
+    "eddie vedder|||the haves",
     "edward hogston & josh oliver|||little bit longer",
     "edward hogston & josh oliver|||where we belong",
     "edward hogston & matthew jarvis|||collide",
@@ -6881,6 +6882,7 @@
     "spotify:track:7q0NtdbzOqnsEznSgkuAnQ",
     "spotify:track:7qF0FfuzBFwMe1lNHkEDxW",
     "spotify:track:7qH9Z4dJEN0l9bidizW7fq",
+    "spotify:track:7qKRueZZIBzHdepFiZPKMK",
     "spotify:track:7qcXUzPwoxSBFxjTbNrV0B",
     "spotify:track:7qfC3mu9cBBFegTKsNAyt8",
     "spotify:track:7qitgFPgLVhZxlsqpohecV",
@@ -9602,6 +9604,7 @@
     "USUG12100488",
     "USUG12100497",
     "USUG12101891",
+    "USUG12104377",
     "USUG12106470",
     "USUG12209239",
     "USUG12209240",
@@ -12519,13 +12522,14 @@
     "spotify:track:4SqWKzw0CbA05TGszDgMlc": "TCACC1438995",
     "spotify:track:7GgQkU5Ip7if8PCvi67Kw0": "BEN582200313",
     "spotify:track:3LOdLpvUu5MnXfvlmtbzsd": "FR6V80706372",
-    "spotify:track:3nPifd7hjanGVp02REhtlH": "USSUB2458006"
+    "spotify:track:3nPifd7hjanGVp02REhtlH": "USSUB2458006",
+    "spotify:track:7qKRueZZIBzHdepFiZPKMK": "USUG12104377"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2799,
+  "__vuurland_active_playlist_count": 2800,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12637,7 +12641,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793409526.9985554
+    "vuurland": 1793409539.851548
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12955,8 +12959,8 @@
   "__last_radio_key_vuurland": "eddie vedder|||the haves",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 87,
-  "__v150_next_spotify_round_at": 1793409539.2171397,
-  "__v146_spotify_budget_slot": 1793409419.2558022,
+  "__v150_next_spotify_round_at": 1793409659.8516686,
+  "__v146_spotify_budget_slot": 1793409539.8902543,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13216,6 +13220,10 @@
     "suki waterhouse|||my fun": {
       "artist": "Suki Waterhouse",
       "title": "My Fun"
+    },
+    "eddie vedder|||the haves": {
+      "artist": "Eddie Vedder",
+      "title": "The Haves"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13538,6 +13546,11 @@
       "uri": "spotify:track:3nPifd7hjanGVp02REhtlH",
       "artist": "Suki Waterhouse",
       "title": "My Fun"
+    },
+    "eddie vedder|||the haves": {
+      "uri": "spotify:track:7qKRueZZIBzHdepFiZPKMK",
+      "artist": "Eddie Vedder",
+      "title": "The Haves"
     }
   },
   "__pending_library_likes": {},
@@ -13605,5 +13618,6 @@
   "__match_v35__the walters|||i love you so": "spotify:track:4SqWKzw0CbA05TGszDgMlc",
   "__match_v35__porcelain id|||vlaanderen": "spotify:track:7GgQkU5Ip7if8PCvi67Kw0",
   "__match_v35__zita swoon|||i feel alive in the city": "spotify:track:3LOdLpvUu5MnXfvlmtbzsd",
-  "__match_v35__suki waterhouse|||my fun": "spotify:track:3nPifd7hjanGVp02REhtlH"
+  "__match_v35__suki waterhouse|||my fun": "spotify:track:3nPifd7hjanGVp02REhtlH",
+  "__match_v35__eddie vedder|||the haves": "spotify:track:7qKRueZZIBzHdepFiZPKMK"
 }
