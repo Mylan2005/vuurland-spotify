@@ -13478,7 +13478,7 @@
   },
   "__v164_playlist_count_checked_at": 1793474661,
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793474171,
+  "__v184_head_checked_at": 1793474785,
   "__v96_radio_snapshots": {
     "vuurland": [
       "warhaus|||machinery",
@@ -14048,10 +14048,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793474769.2056928,
-    "mellow_mix": 1793474769.2780478,
-    "big_sonic_heaven": 1793474769.2800622,
-    "dkfm_edge": 1793474769.346301,
+    "vuurland": 1793474781.779007,
+    "mellow_mix": 1793474781.781218,
+    "big_sonic_heaven": 1793474781.7830946,
+    "dkfm_edge": 1793474781.7852366,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -15480,6 +15480,12 @@
       "title": "Pluto Drive / Solar Choir",
       "source": "big_sonic_heaven",
       "failed_at": 1793474415
+    },
+    "wires to the temples|||daylight fades": {
+      "artist": "Wires to the Temples",
+      "title": "Daylight Fades",
+      "source": "dkfm_edge",
+      "failed_at": 1793474785
     }
   },
   "__v172_live_only_reset": "2026-10-29-live-only",
@@ -15499,7 +15505,8 @@
     "spirtiualized|||ladies and gentlemen we are floating in space": 1,
     "jeff buckley & elizabeth fraser|||all flowers in time bend towards the sun": 1,
     "a filetta|||like a breath of air": 1,
-    "the creatures|||pluto drive / solar choir": 1
+    "the creatures|||pluto drive / solar choir": 1,
+    "wires to the temples|||daylight fades": 1
   },
   "__v173_radio_reset": "2026-10-29-four-live",
   "__matching_rules_version": 35,
@@ -15507,8 +15514,8 @@
   "__last_radio_key_vuurland": "warhaus|||machinery",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 456,
-  "__v150_next_spotify_round_at": 1793474780.5708108,
-  "__v146_spotify_budget_slot": 1793474660.672428,
+  "__v150_next_spotify_round_at": 1793474904.5739372,
+  "__v146_spotify_budget_slot": 1793474784.6771564,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -67824,11 +67831,505 @@
         "The Notwist",
         "Consequence"
       ]
+    ],
+    "388": [
+      [
+        "Broken Social Scene",
+        "Lover's Spit"
+      ],
+      [
+        "Fink",
+        "See It All"
+      ],
+      [
+        "The Low Anthem",
+        "Charlie Darwin"
+      ],
+      [
+        "Loney, Dear",
+        "Hard Days 1, 2, 3, 4"
+      ],
+      [
+        "The Decemberists",
+        "The Hazards of Love 1 (The Prettiest Whistles Won't Wrestle the Thistles Undone)"
+      ],
+      [
+        "Phosphorescent",
+        "Heartaches of a Fool"
+      ],
+      [
+        "Feist",
+        "The Water"
+      ],
+      [
+        "Great Lake Swimmers",
+        "Everything Is Moving So Fast"
+      ],
+      [
+        "DM Stith",
+        "Pity Dance"
+      ],
+      [
+        "South San Gabriel",
+        "Stupid Is as Stupid Does"
+      ],
+      [
+        "Bonnie 'Prince' Billy",
+        "Without Work, You Have Nothing"
+      ],
+      [
+        "The Bony King of Nowhere",
+        "Maria"
+      ],
+      [
+        "Akron/Family",
+        "They Will Appear"
+      ],
+      [
+        "Au Revoir Simone",
+        "Another Likely Story"
+      ],
+      [
+        "A Silver Mt. Zion",
+        "Sit in the Middle of Three Galloping Dogs"
+      ],
+      [
+        "Tartufi",
+        "Fear of Tall Giraffes, Fear of Some Birds"
+      ],
+      [
+        "June of 44",
+        "Equators to Bi-Polar"
+      ],
+      [
+        "Hanne Hukkelberg",
+        "Midnight Sun Dream"
+      ],
+      [
+        "Remember Remember",
+        "The Dancing"
+      ],
+      [
+        "B. Fleischmann",
+        "Pass By"
+      ],
+      [
+        "Sleepy Sun",
+        "Lord"
+      ],
+      [
+        "Arbouretum",
+        "Down by the Fall Line"
+      ],
+      [
+        "Yeasayer",
+        "No Need to Worry"
+      ],
+      [
+        "Mono",
+        "The Battle to Heaven"
+      ]
+    ],
+    "387": [
+      [
+        "Spain",
+        "Untitled #1"
+      ],
+      [
+        "The Wooden Birds",
+        "The Other One"
+      ],
+      [
+        "John Parish and Polly Jean Harvey",
+        "Passionless, Pointless"
+      ],
+      [
+        "Beck",
+        "Asshole"
+      ],
+      [
+        "Joanna Newsom",
+        "Sprout and the Bean"
+      ],
+      [
+        "King Creosote",
+        "Curtain Craft"
+      ],
+      [
+        "Vetiver",
+        "Through the Front Door"
+      ],
+      [
+        "Star Club West",
+        "54"
+      ],
+      [
+        "Star Club West",
+        "Interview"
+      ],
+      [
+        "Star Club West",
+        "What About That Lofi Ghost Track"
+      ],
+      [
+        "Antony and The Johnsons",
+        "Cripple and the Starfish"
+      ],
+      [
+        "Fink",
+        "See It All"
+      ],
+      [
+        "Geoff Farina",
+        "Already Told You"
+      ],
+      [
+        "Beirut",
+        "La Llorona"
+      ],
+      [
+        "The Notwist",
+        "Where in This World"
+      ],
+      [
+        "Dntel",
+        "Umbrella"
+      ],
+      [
+        "Mono",
+        "The Battle to Heaven"
+      ],
+      [
+        "Balmorhea",
+        "Settler"
+      ],
+      [
+        "Bat for Lashes",
+        "Good Love"
+      ],
+      [
+        "Liquid Vega",
+        "Black Thunder"
+      ],
+      [
+        "Jóhann Jóhannsson",
+        "unknown song"
+      ]
+    ],
+    "386": [
+      [
+        "The Folk Implosion",
+        "One Part Lullaby"
+      ],
+      [
+        "Death Cab For Cutie",
+        "Kicked In"
+      ],
+      [
+        "Promise and The Monster",
+        "Sheets"
+      ],
+      [
+        "Krakow",
+        "Dragging Me Down"
+      ],
+      [
+        "Devendra Banhart",
+        "The Body Breaks"
+      ],
+      [
+        "John Parish and Polly Jean Harvey",
+        "Passionless, Pointless"
+      ],
+      [
+        "Lungfish",
+        "Hear the Children Sing"
+      ],
+      [
+        "Jessica Lea Mayfield",
+        "Interview"
+      ],
+      [
+        "Jessica Lea Mayfield",
+        "For Today"
+      ],
+      [
+        "Jessica Lea Mayfield",
+        "Bible Days"
+      ],
+      [
+        "Bright Eyes",
+        "We Are Nowhere and It's Now"
+      ],
+      [
+        "Local Natives",
+        "World News"
+      ],
+      [
+        "Alela Diane",
+        "Tatted Lace"
+      ],
+      [
+        "Bill Callahan",
+        "All Thoughts Are Prey to Some Beast"
+      ],
+      [
+        "TV on the Radio",
+        "Family Tree"
+      ],
+      [
+        "Unwound",
+        "Below the Salt"
+      ],
+      [
+        "Fennesz",
+        "Perfume for Winter"
+      ],
+      [
+        "Fever Ray",
+        "Keep the Streets Empty for Me"
+      ],
+      [
+        "Remember Remember",
+        "The Dancing"
+      ],
+      [
+        "Hanne Hukkelberg",
+        "Midnight Sun Dream"
+      ],
+      [
+        "Lali Puna",
+        "Nin-Com-Pop"
+      ],
+      [
+        "Jóhann Jóhannsson",
+        "The Rocket Builder (Lo Pan!)"
+      ],
+      [
+        "Pink Mountaintops",
+        "Outside Love"
+      ],
+      [
+        "This Will Destroy You",
+        "The Mighty Rio Grande"
+      ]
+    ],
+    "385": [
+      [
+        "Built to Spill",
+        "Traces"
+      ],
+      [
+        "Local Natives",
+        "World News"
+      ],
+      [
+        "Calexico",
+        "Red Blooms"
+      ],
+      [
+        "Great Lake Swimmers",
+        "Everything Is Moving So Fast"
+      ],
+      [
+        "The Bony King of Nowhere",
+        "Maria"
+      ],
+      [
+        "The Wooden Birds",
+        "The Other One"
+      ],
+      [
+        "Jessica Lea Mayfield",
+        "We've Never Lied"
+      ],
+      [
+        "Pinback",
+        "Rousseau"
+      ],
+      [
+        "Krakow",
+        "What a Woman"
+      ],
+      [
+        "Krakow",
+        "Interview"
+      ],
+      [
+        "Krakow",
+        "Far-Away Look"
+      ],
+      [
+        "Krakow",
+        "Like One"
+      ],
+      [
+        "The Kills",
+        "Black Balloon"
+      ],
+      [
+        "Lisa Germano",
+        "Red Thread"
+      ],
+      [
+        "Bonnie 'Prince' Billy",
+        "Without Work, You Have Nothing"
+      ],
+      [
+        "Jason Lytle",
+        "Rollin' Home Alone"
+      ],
+      [
+        "Bat for Lashes",
+        "Good Love"
+      ],
+      [
+        "Boards of Canada",
+        "Sixtyniner"
+      ],
+      [
+        "Prefuse 73",
+        "Simple Loop Choir"
+      ],
+      [
+        "PETERSONIC",
+        "This Computer Is Not Authorised to Play Heartbeats"
+      ],
+      [
+        "YUKO",
+        "I Don't Know What I Want But I Do Know It Won't Come from You"
+      ],
+      [
+        "Sufjan Stevens",
+        "The Dress Looks Nice On You"
+      ],
+      [
+        "Twiggy Frostbite",
+        "Narrow Pride"
+      ],
+      [
+        "Yo La Tengo",
+        "Don't Have to Be So Sad"
+      ],
+      [
+        "Hanne Hukkelberg",
+        "Midnight Sun Dream"
+      ],
+      [
+        "Soy Un Caballo",
+        "Robin"
+      ],
+      [
+        "Marissa Nadler",
+        "Heart Paper Lover"
+      ],
+      [
+        "Mono",
+        "The Battle to Heaven"
+      ]
+    ],
+    "384": [
+      [
+        "Jens Lekman",
+        "A Postcard To Nina"
+      ],
+      [
+        "Grizzly Bear",
+        "Fine For Now"
+      ],
+      [
+        "Phosphorescent",
+        "Heartaches of a Fool"
+      ],
+      [
+        "My Morning Jacket",
+        "The Bear"
+      ],
+      [
+        "Marissa Nadler",
+        "Heart Paper Lover"
+      ],
+      [
+        "The Long Winters",
+        "The Commander Thinks Aloud"
+      ],
+      [
+        "Fanfarlo",
+        "I'm a Pilot"
+      ],
+      [
+        "School of Seven Bells",
+        "Iamundernodisguise"
+      ],
+      [
+        "School of Seven Bells",
+        "White Elephant Coat"
+      ],
+      [
+        "Great Lake Swimmers",
+        "Everything Is Moving So Fast"
+      ],
+      [
+        "Pedro the Lion",
+        "Criticism as Inspiration"
+      ],
+      [
+        "Julie Doiron",
+        "Spill Yer Lungs"
+      ],
+      [
+        "Alaska in Winter",
+        "We Are Blind and Riding the Merry-Go-Round"
+      ],
+      [
+        "Star Club West",
+        "I Am Human"
+      ],
+      [
+        "Fever Ray",
+        "Coconut"
+      ],
+      [
+        "Four Tet",
+        "High Fives"
+      ],
+      [
+        "Earth",
+        "Omens and Portents I: The Driver"
+      ],
+      [
+        "Twiggy Frostbite",
+        "Narrow Pride"
+      ],
+      [
+        "Kaki King",
+        "So Much For So Little"
+      ],
+      [
+        "Mercury Rev",
+        "Holes"
+      ],
+      [
+        "Mercury Rev",
+        "Black Forest (Lorelei)"
+      ],
+      [
+        "Mercury Rev",
+        "Opus 40"
+      ],
+      [
+        "Mercury Rev",
+        "Diamonds"
+      ],
+      [
+        "Mercury Rev",
+        "The Dark Is Rising"
+      ]
     ]
   },
   "__duyster_archive_latest_v1": 833,
-  "__duyster_archive_latest_at_v1": 1793471176.8770888,
-  "__duyster_archive_next_v1": 388,
+  "__duyster_archive_latest_at_v1": 1793474781.786195,
+  "__duyster_archive_next_v1": 383,
   "__match_v35__echo & the bunnymen|||seven seas": "spotify:track:5qzwrPRbnaqSOK545OEJBq",
   "__match_v35__purplish|||holy ghost": "spotify:track:4LIvHFRN5qhwqY2FfQJMre",
   "__match_v35__mazzy star|||fade into you": "spotify:track:0inFo8dYP6orc0kvNgMpQz",
@@ -67851,5 +68352,6 @@
   "__not_found_v35__a filetta|||like a breath of air": 1793474293,
   "__not_found_v35__the creatures|||pluto drive / solar choir": 1793474415,
   "__match_v35__hollow coves|||see you soon": "spotify:track:04pyymQHOj9epQvpveEC1A",
-  "__match_v35__moby|||natural blues": "spotify:track:0NNCkIadCP6VnV7LeGL1zx"
+  "__match_v35__moby|||natural blues": "spotify:track:0NNCkIadCP6VnV7LeGL1zx",
+  "__not_found_v35__wires to the temples|||daylight fades": 1793474785
 }
