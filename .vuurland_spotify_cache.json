@@ -2737,6 +2737,7 @@
     "novastar|||mars needs woman long version",
     "novastar|||rome",
     "novastar|||smooth flavours",
+    "novastar|||the best is yet to come",
     "novastar|||velvet blue sky",
     "novastar|||velvet blue sky - single edit",
     "novastar|||when the lights go down on the broken hearted",
@@ -5146,6 +5147,7 @@
     "spotify:track:2Xn7NadvZ56D0B2D7x2CSL",
     "spotify:track:2Y61ZvCuuLOhdkgl1B9ekh",
     "spotify:track:2Y6yBb2KctOmsxRSS8ZaKY",
+    "spotify:track:2YSy87pZp2pWFdNK9kEY9u",
     "spotify:track:2YVSb6r4NySKqdwI353kRk",
     "spotify:track:2YjdhziaHroiYMClwCBbIQ",
     "spotify:track:2YxQkpag9yIn4Zk0qJkWyI",
@@ -7341,6 +7343,7 @@
     "BEWO10400002",
     "BEWO10400003",
     "BEWO10400005",
+    "BEWO19900059",
     "BEWO19900060",
     "BEWO19900062",
     "BEWO19900063",
@@ -12822,13 +12825,14 @@
     "spotify:track:7yq4Qj7cqayVTp3FF9CWbm": "AULI01385760",
     "spotify:track:58NHe1ri8uaAJa17SpJcPw": "USEE10140343",
     "spotify:track:052etUv4Njn3u47ljAS5PD": "USGF18714503",
-    "spotify:track:0ya8HEwayalG32jVxg6PSP": "USCW62261902"
+    "spotify:track:0ya8HEwayalG32jVxg6PSP": "USCW62261902",
+    "spotify:track:2YSy87pZp2pWFdNK9kEY9u": "BEWO19900059"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2873,
+  "__vuurland_active_playlist_count": 2874,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13042,8 +13046,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793450606.622776,
-    "mellow_mix": 1793450606.6255329
+    "vuurland": 1793450616.4901907,
+    "mellow_mix": 1793450616.4929664
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13606,8 +13610,8 @@
   "__last_radio_key_vuurland": "cat burns|||go",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 167,
-  "__v150_next_spotify_round_at": 1793450607.9975834,
-  "__v146_spotify_budget_slot": 1793450488.0403423,
+  "__v150_next_spotify_round_at": 1793450736.4930553,
+  "__v146_spotify_budget_slot": 1793450616.5352051,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14175,6 +14179,10 @@
     "artie barsamian|||the enchanting melody": {
       "artist": "Artie Barsamian",
       "title": "The Enchanting Melody"
+    },
+    "novastar|||the best is yet to come": {
+      "artist": "Novastar",
+      "title": "The Best Is Yet to Come"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14882,6 +14890,11 @@
       "uri": "spotify:track:0ya8HEwayalG32jVxg6PSP",
       "artist": "Artie Barsamian",
       "title": "The Enchanting Melody"
+    },
+    "novastar|||the best is yet to come": {
+      "uri": "spotify:track:2YSy87pZp2pWFdNK9kEY9u",
+      "artist": "Novastar",
+      "title": "The Best Is Yet to Come"
     }
   },
   "__pending_library_likes": {},
@@ -15029,5 +15042,6 @@
   "__match_v35__vance joy|||riptide": "spotify:track:7yq4Qj7cqayVTp3FF9CWbm",
   "__match_v35__natalie merchant|||not in this life": "spotify:track:58NHe1ri8uaAJa17SpJcPw",
   "__match_v35__pat metheny group|||last train home": "spotify:track:052etUv4Njn3u47ljAS5PD",
-  "__match_v35__artie barsamian|||the enchanting melody": "spotify:track:0ya8HEwayalG32jVxg6PSP"
+  "__match_v35__artie barsamian|||the enchanting melody": "spotify:track:0ya8HEwayalG32jVxg6PSP",
+  "__match_v35__novastar|||the best is yet to come": "spotify:track:2YSy87pZp2pWFdNK9kEY9u"
 }
