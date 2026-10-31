@@ -3354,6 +3354,7 @@
     "smeyeul|||galvanic|||haux|||love me",
     "smeyeul|||love me",
     "smith & burrows|||when the thames froze",
+    "smith & burrows|||wonderful life",
     "smog|||beautiful child",
     "soccer mommy|||abigail",
     "soccer mommy|||your dog",
@@ -5137,6 +5138,7 @@
     "spotify:track:2l1MgIheVpFWjK41vWZMku",
     "spotify:track:2l6aKj7mOu8MyYX4yFtlZ8",
     "spotify:track:2l7UudWZ44l1WbHx6ANod9",
+    "spotify:track:2l9HDZnaCCaPxhL4fPWScK",
     "spotify:track:2lFTzUnuGaWlWHJQokjRyb",
     "spotify:track:2lJ4d8MCT6ZlDRHKJ1br14",
     "spotify:track:2lJNtl3CiHlGlW9OJHftZo",
@@ -8057,6 +8059,7 @@
     "GBFFM1430001",
     "GBFFM1917627",
     "GBGAC1100031",
+    "GBGAC1100034",
     "GBGDZ1600013",
     "GBGDZ9700008",
     "GBHLW0910940",
@@ -12569,13 +12572,14 @@
     "spotify:track:7M8oRE1BSl5cuATG39btml": "NLC242100182",
     "spotify:track:3ym8ajVmKm6Fybgov3WBI5": "USUG12209350",
     "spotify:track:7MNAi4I7teNgzuVMe0HPZg": "GBUM71606075",
-    "spotify:track:5WMA8AmXGff8wo450I3Ecn": "GBUM72307330"
+    "spotify:track:5WMA8AmXGff8wo450I3Ecn": "GBUM72307330",
+    "spotify:track:2l9HDZnaCCaPxhL4fPWScK": "GBGAC1100034"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2811,
+  "__vuurland_active_playlist_count": 2812,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12687,7 +12691,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793418165.5598695
+    "vuurland": 1793418175.2032897
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13023,8 +13027,8 @@
   "__last_radio_key_vuurland": "smith & burrows|||wonderful life",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 99,
-  "__v150_next_spotify_round_at": 1793418168.0766878,
-  "__v146_spotify_budget_slot": 1793418048.1184158,
+  "__v150_next_spotify_round_at": 1793418295.203385,
+  "__v146_spotify_budget_slot": 1793418175.2428477,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13332,6 +13336,10 @@
     "holly humberstone|||dive": {
       "artist": "Holly Humberstone",
       "title": "Dive"
+    },
+    "smith & burrows|||wonderful life": {
+      "artist": "Smith & Burrows",
+      "title": "Wonderful Life"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13714,6 +13722,11 @@
       "uri": "spotify:track:5WMA8AmXGff8wo450I3Ecn",
       "artist": "Holly Humberstone",
       "title": "Dive"
+    },
+    "smith & burrows|||wonderful life": {
+      "uri": "spotify:track:2l9HDZnaCCaPxhL4fPWScK",
+      "artist": "Smith & Burrows",
+      "title": "Wonderful Life"
     }
   },
   "__pending_library_likes": {},
@@ -13793,5 +13806,6 @@
   "__match_v35__tin fingers feat fenne kuppens|||islandhead acoustic version": "spotify:track:7M8oRE1BSl5cuATG39btml",
   "__match_v35__daniel caesar|||let me go": "spotify:track:3ym8ajVmKm6Fybgov3WBI5",
   "__match_v35__elbow|||magnificent she says": "spotify:track:7MNAi4I7teNgzuVMe0HPZg",
-  "__match_v35__holly humberstone|||dive": "spotify:track:5WMA8AmXGff8wo450I3Ecn"
+  "__match_v35__holly humberstone|||dive": "spotify:track:5WMA8AmXGff8wo450I3Ecn",
+  "__match_v35__smith & burrows|||wonderful life": "spotify:track:2l9HDZnaCCaPxhL4fPWScK"
 }
