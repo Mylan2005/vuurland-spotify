@@ -3916,6 +3916,7 @@
     "tom rosenthal|||it's ok",
     "tom rosenthal|||it's ok - acoustic",
     "tom rosenthal|||now you know",
+    "tom smith|||deep dive",
     "tom smith|||life is for living",
     "tommy ashby|||when love goes dark",
     "tommy lefroy|||jericho beach",
@@ -6644,6 +6645,7 @@
     "spotify:track:6vCd5eD7EQzkTZA5zBXuzD",
     "spotify:track:6vNcgPTLPyXflD733MmkAO",
     "spotify:track:6vV0pi8U9urpm2RdfUiCjP",
+    "spotify:track:6vVMaiofg4IFJtn8yYqQ8x",
     "spotify:track:6vYigll5Zf2hkzRPZwehM1",
     "spotify:track:6vZZtivPrtpggT5SSXsYTy",
     "spotify:track:6vi4I2vZkN5mDePmVSSVTq",
@@ -8062,6 +8064,7 @@
     "GBENL2404069",
     "GBENL2404078",
     "GBENL2404195",
+    "GBENL2504389",
     "GBENL2504392",
     "GBENL2604640",
     "GBENL2604722",
@@ -12601,13 +12604,14 @@
     "spotify:track:2cJNpmbEXVRfL2g7iTnKNX": "BEEZ72300028",
     "spotify:track:1CVCtAkwWTXY1WGAZGJgCN": "BEP012090002",
     "spotify:track:0kA0GzXlFvpOh0JEI3B5cp": "UKMEH2000088",
-    "spotify:track:4R3AU2pjv8ge2siX1fVbZs": "QM4TW2430375"
+    "spotify:track:4R3AU2pjv8ge2siX1fVbZs": "QM4TW2430375",
+    "spotify:track:6vVMaiofg4IFJtn8yYqQ8x": "GBENL2504389"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2819,
+  "__vuurland_active_playlist_count": 2820,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12719,7 +12723,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793421550.992738
+    "vuurland": 1793421561.0372992
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13067,8 +13071,8 @@
   "__last_radio_key_vuurland": "julia jacklin feat faye webster|||good guy",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 108,
-  "__v150_next_spotify_round_at": 1793421552.791329,
-  "__v146_spotify_budget_slot": 1793421049.0091496,
+  "__v150_next_spotify_round_at": 1793421681.0373995,
+  "__v146_spotify_budget_slot": 1793421561.0764902,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13412,6 +13416,10 @@
     "laufey|||goddess": {
       "artist": "Laufey",
       "title": "Goddess"
+    },
+    "tom smith|||deep dive": {
+      "artist": "Tom Smith",
+      "title": "Deep Dive"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13839,6 +13847,11 @@
       "uri": "spotify:track:4R3AU2pjv8ge2siX1fVbZs",
       "artist": "Laufey",
       "title": "Goddess"
+    },
+    "tom smith|||deep dive": {
+      "uri": "spotify:track:6vVMaiofg4IFJtn8yYqQ8x",
+      "artist": "Tom Smith",
+      "title": "Deep Dive"
     }
   },
   "__pending_library_likes": {},
@@ -13927,5 +13940,6 @@
   "__match_v35__iskander moon|||about you": "spotify:track:2cJNpmbEXVRfL2g7iTnKNX",
   "__match_v35__portland|||aftermath": "spotify:track:1CVCtAkwWTXY1WGAZGJgCN",
   "__match_v35__sault|||i just want to dance": "spotify:track:0kA0GzXlFvpOh0JEI3B5cp",
-  "__match_v35__laufey|||goddess": "spotify:track:4R3AU2pjv8ge2siX1fVbZs"
+  "__match_v35__laufey|||goddess": "spotify:track:4R3AU2pjv8ge2siX1fVbZs",
+  "__match_v35__tom smith|||deep dive": "spotify:track:6vVMaiofg4IFJtn8yYqQ8x"
 }
