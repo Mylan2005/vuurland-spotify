@@ -613,6 +613,7 @@
     "blanco white|||treasure i once held",
     "blanco white|||una noche mas",
     "blanco white|||una noche más",
+    "bleach lab|||nothing left to lose",
     "bleachers & bruce springsteen|||chinatown (feat. bruce springsteen)",
     "bleachers|||alma mater",
     "bleachers|||blood brothers",
@@ -4284,6 +4285,7 @@
     "spotify:track:00IrSynHsun7DpDrLkRIjM",
     "spotify:track:00rUWRhMNgDOW9JeJOgXXa",
     "spotify:track:00s77x3CO21IhBAsGndnqM",
+    "spotify:track:00udfYIC2Z9rLaghIxRh3x",
     "spotify:track:01Y7ntOQnQtfcBYQuAR4Jf",
     "spotify:track:01qJhVPCHFFR6wJ5ptyw17",
     "spotify:track:01upY6t7ET9wds0VMbau07",
@@ -7576,6 +7578,7 @@
     "CAN112200982",
     "CAN112201227",
     "CAN112201277",
+    "CAN112300234",
     "CAN112300424",
     "CAN112300618",
     "CAN112300763",
@@ -13075,13 +13078,14 @@
     "spotify:track:15bNXexirzWI3v1T0fayaU": "QZR842500001",
     "spotify:track:5Q0WzHDGAzdxkKIO4xP2To": "QZHN62406715",
     "spotify:track:4HnS7CZWjd8PTQZkh3E1ai": "USWB10901741",
-    "spotify:track:6f02TFRypQBf0wkJNMJHe9": "GBF068500990"
+    "spotify:track:6f02TFRypQBf0wkJNMJHe9": "GBF068500990",
+    "spotify:track:00udfYIC2Z9rLaghIxRh3x": "CAN112300234"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2939,
+  "__vuurland_active_playlist_count": 2940,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13499,10 +13503,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793459771.2861063,
-    "mellow_mix": 1793459771.2889485,
-    "big_sonic_heaven": 1793459771.2913442,
-    "dkfm_edge": 1793459771.2940629
+    "vuurland": 1793459782.5674562,
+    "mellow_mix": 1793459782.5702577,
+    "big_sonic_heaven": 1793459782.5726118,
+    "dkfm_edge": 1793459782.575259
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -14377,8 +14381,8 @@
   "__last_radio_key_vuurland": "erlend oye & la comitiva|||lockdown blues",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 250,
-  "__v150_next_spotify_round_at": 1793459781.6618965,
-  "__v146_spotify_budget_slot": 1793459661.723905,
+  "__v150_next_spotify_round_at": 1793459902.5753665,
+  "__v146_spotify_budget_slot": 1793459782.6386607,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -15182,6 +15186,10 @@
     "siouxsie & the banshees|||lullaby": {
       "artist": "Siouxsie and the Banshees",
       "title": "Lullaby"
+    },
+    "bleach lab|||nothing left to lose": {
+      "artist": "Bleach Lab",
+      "title": "Nothing Left To Lose"
     }
   },
   "__v82_confirmed_catalog": {
@@ -16184,6 +16192,11 @@
       "uri": "spotify:track:6f02TFRypQBf0wkJNMJHe9",
       "artist": "Siouxsie and the Banshees",
       "title": "Lullaby"
+    },
+    "bleach lab|||nothing left to lose": {
+      "uri": "spotify:track:00udfYIC2Z9rLaghIxRh3x",
+      "artist": "Bleach Lab",
+      "title": "Nothing Left To Lose"
     }
   },
   "__pending_library_likes": {},
@@ -19818,6 +19831,7 @@
     },
     "live_keys": [
       "air formation|||cold morning",
+      "bleach lab|||nothing left to lose",
       "blonde redhead|||the dress",
       "caamp|||lavender girl",
       "collective soul|||reunion",
@@ -19843,6 +19857,7 @@
       "tom waits|||ol'55"
     ],
     "live_uris": [
+      "spotify:track:00udfYIC2Z9rLaghIxRh3x",
       "spotify:track:0YKNBbkOkDllbbDaxMPKAZ",
       "spotify:track:15bNXexirzWI3v1T0fayaU",
       "spotify:track:1xZiJQuvH4AMNjUPrd6P2g",
@@ -19871,6 +19886,7 @@
     "live_isrcs": [
       "BEUM72400101",
       "CA0RZ1100071",
+      "CAN112300234",
       "FR6V80758436",
       "GBAFL0100003",
       "GBAFL0600100",
@@ -19918,7 +19934,8 @@
       "spotify:track:15bNXexirzWI3v1T0fayaU": "QZR842500001",
       "spotify:track:5Q0WzHDGAzdxkKIO4xP2To": "QZHN62406715",
       "spotify:track:4HnS7CZWjd8PTQZkh3E1ai": "USWB10901741",
-      "spotify:track:6f02TFRypQBf0wkJNMJHe9": "GBF068500990"
+      "spotify:track:6f02TFRypQBf0wkJNMJHe9": "GBF068500990",
+      "spotify:track:00udfYIC2Z9rLaghIxRh3x": "CAN112300234"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -19947,5 +19964,6 @@
   "__match_v35__inner magic & ruth radelet|||underground": "spotify:track:15bNXexirzWI3v1T0fayaU",
   "__match_v35__distressor|||tragedy": "spotify:track:5Q0WzHDGAzdxkKIO4xP2To",
   "__match_v35__regina spektor|||blue lips": "spotify:track:4HnS7CZWjd8PTQZkh3E1ai",
-  "__match_v35__siouxsie & the banshees|||lullaby": "spotify:track:6f02TFRypQBf0wkJNMJHe9"
+  "__match_v35__siouxsie & the banshees|||lullaby": "spotify:track:6f02TFRypQBf0wkJNMJHe9",
+  "__match_v35__bleach lab|||nothing left to lose": "spotify:track:00udfYIC2Z9rLaghIxRh3x"
 }
