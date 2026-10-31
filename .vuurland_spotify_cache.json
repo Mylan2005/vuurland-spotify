@@ -2629,6 +2629,7 @@
     "mumford & sons|||thistle & weeds - recorded live at vrt/studio brussels",
     "mumford & sons|||white blank page",
     "my head is empty|||this will destroy me",
+    "natalie merchant|||giving up everything",
     "natalie merchant|||not in this life",
     "nathan kawanishi|||run to you - lofi",
     "nathaniel rateliff & gregory alan isakov|||flowers",
@@ -4622,6 +4623,7 @@
     "spotify:track:0szmjOw9XbtbQYWz0GvXSp",
     "spotify:track:0tRVzLVwLYZmEEwyMz24xE",
     "spotify:track:0tbQ08FI6iX6IKS9EgSsC8",
+    "spotify:track:0tjwh4bdd2aPghiVBDJKdE",
     "spotify:track:0tpnZCglXPpI07nqmGR2Js",
     "spotify:track:0u00EMatNmLkyKi8OrKRRC",
     "spotify:track:0u35Dpz37TY2M2j20RUdMf",
@@ -9861,6 +9863,7 @@
     "USNO10166907",
     "USNO10750505",
     "USNO11300387",
+    "USNO11300674",
     "USNO11400295",
     "USNO11700014",
     "USNO11700051",
@@ -13103,13 +13106,14 @@
     "spotify:track:0FgTvIwBKNfvZLeYdrqewB": "QZZ782466669",
     "spotify:track:2Bx62uYPdyvACpPB0gu7MX": "USMTD1505827",
     "spotify:track:2Waq7aiZNBzjE8BHuNbXvm": "QZMEP2677995",
-    "spotify:track:7p4vHnYXkxlzvfePJVpcTr": "USRC11802773"
+    "spotify:track:7p4vHnYXkxlzvfePJVpcTr": "USRC11802773",
+    "spotify:track:0tjwh4bdd2aPghiVBDJKdE": "USNO11300674"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2952,
+  "__vuurland_active_playlist_count": 2953,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13527,10 +13531,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793460737.6533525,
-    "mellow_mix": 1793460737.6560078,
-    "big_sonic_heaven": 1793460737.6583762,
-    "dkfm_edge": 1793460737.6610997
+    "vuurland": 1793460749.5093625,
+    "mellow_mix": 1793460749.512028,
+    "big_sonic_heaven": 1793460749.5143962,
+    "dkfm_edge": 1793460749.517143
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -14415,8 +14419,8 @@
   "__last_radio_key_vuurland": "palace|||bleach",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 259,
-  "__v150_next_spotify_round_at": 1793460747.8733544,
-  "__v146_spotify_budget_slot": 1793460627.939655,
+  "__v150_next_spotify_round_at": 1793460869.5172567,
+  "__v146_spotify_budget_slot": 1793460749.5809977,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -15248,6 +15252,10 @@
     "childish gambino|||feels like summer": {
       "artist": "Childish Gambino",
       "title": "Feels Like Summer"
+    },
+    "natalie merchant|||giving up everything": {
+      "artist": "Natalie Merchant",
+      "title": "Giving up Everything"
     }
   },
   "__v82_confirmed_catalog": {
@@ -16285,6 +16293,11 @@
       "uri": "spotify:track:7p4vHnYXkxlzvfePJVpcTr",
       "artist": "Childish Gambino",
       "title": "Feels Like Summer"
+    },
+    "natalie merchant|||giving up everything": {
+      "uri": "spotify:track:0tjwh4bdd2aPghiVBDJKdE",
+      "artist": "Natalie Merchant",
+      "title": "Giving up Everything"
     }
   },
   "__pending_library_likes": {},
@@ -20445,6 +20458,7 @@
       "inner magic & ruth radelet|||underground",
       "kathleen edwards|||goodnight california",
       "milo meskens|||when she's around",
+      "natalie merchant|||giving up everything",
       "neil halstead|||two stones in my pocket",
       "noah kahan|||the view between villages",
       "nonsense rats|||the night is quiet",
@@ -20466,6 +20480,7 @@
       "spotify:track:00udfYIC2Z9rLaghIxRh3x",
       "spotify:track:0FgTvIwBKNfvZLeYdrqewB",
       "spotify:track:0YKNBbkOkDllbbDaxMPKAZ",
+      "spotify:track:0tjwh4bdd2aPghiVBDJKdE",
       "spotify:track:15bNXexirzWI3v1T0fayaU",
       "spotify:track:1xZiJQuvH4AMNjUPrd6P2g",
       "spotify:track:22OxorJWuWAt5qN1QRBrRP",
@@ -20520,6 +20535,7 @@
       "USAT29500027",
       "USEP41718371",
       "USMTD1505827",
+      "USNO11300674",
       "USQE92100308",
       "USRC11802773",
       "USUG12004346",
@@ -20559,7 +20575,8 @@
       "spotify:track:0FgTvIwBKNfvZLeYdrqewB": "QZZ782466669",
       "spotify:track:2Bx62uYPdyvACpPB0gu7MX": "USMTD1505827",
       "spotify:track:2Waq7aiZNBzjE8BHuNbXvm": "QZMEP2677995",
-      "spotify:track:7p4vHnYXkxlzvfePJVpcTr": "USRC11802773"
+      "spotify:track:7p4vHnYXkxlzvfePJVpcTr": "USRC11802773",
+      "spotify:track:0tjwh4bdd2aPghiVBDJKdE": "USNO11300674"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -20595,5 +20612,6 @@
   "__match_v35__ultra bloom|||signals": "spotify:track:0FgTvIwBKNfvZLeYdrqewB",
   "__match_v35__tobias jesso jr|||how could you babe": "spotify:track:2Bx62uYPdyvACpPB0gu7MX",
   "__match_v35__nonsense rats|||the night is quiet": "spotify:track:2Waq7aiZNBzjE8BHuNbXvm",
-  "__match_v35__childish gambino|||feels like summer": "spotify:track:7p4vHnYXkxlzvfePJVpcTr"
+  "__match_v35__childish gambino|||feels like summer": "spotify:track:7p4vHnYXkxlzvfePJVpcTr",
+  "__match_v35__natalie merchant|||giving up everything": "spotify:track:0tjwh4bdd2aPghiVBDJKdE"
 }
