@@ -2583,6 +2583,7 @@
     "mumford & sons|||thistle & weeds - recorded live at vrt/studio brussels",
     "mumford & sons|||white blank page",
     "my head is empty|||this will destroy me",
+    "natalie merchant|||not in this life",
     "nathan kawanishi|||run to you - lofi",
     "nathaniel rateliff & gregory alan isakov|||flowers",
     "nathaniel rateliff & kevin morby & sam cohen|||there is a war [feat. kevin morby & sam cohen]",
@@ -6111,6 +6112,7 @@
     "spotify:track:58FsmlVRQxpjFmXF8vSKMT",
     "spotify:track:58H2NaOGziZ78HgjFNZ64f",
     "spotify:track:58M27XwW5egKPuFJsXBqwP",
+    "spotify:track:58NHe1ri8uaAJa17SpJcPw",
     "spotify:track:58YJovqkEGgsNzjYjIzWXb",
     "spotify:track:58u2SPkRXXIOFnT9vDYek3",
     "spotify:track:596XdE5YvYMFbvkj37skz2",
@@ -9502,6 +9504,7 @@
     "USDW10300177",
     "USDY41650617",
     "USEE10100192",
+    "USEE10140343",
     "USEE11000498",
     "USEE11300314",
     "USEE19901162",
@@ -12810,13 +12813,14 @@
     "spotify:track:3I9UP9RsiCpyVLNbYkBhQC": "GBAJH0900626",
     "spotify:track:4YGoLwVp9UmYn85RlRpiVJ": "UK69U1400011",
     "spotify:track:3yx4dMokQCCD9QaMGEySr3": "USSM10102829",
-    "spotify:track:7yq4Qj7cqayVTp3FF9CWbm": "AULI01385760"
+    "spotify:track:7yq4Qj7cqayVTp3FF9CWbm": "AULI01385760",
+    "spotify:track:58NHe1ri8uaAJa17SpJcPw": "USEE10140343"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2870,
+  "__vuurland_active_playlist_count": 2871,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13030,8 +13034,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793449836.8743417,
-    "mellow_mix": 1793449836.8776577
+    "vuurland": 1793449846.9894786,
+    "mellow_mix": 1793449846.9927378
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13588,8 +13592,8 @@
   "__last_radio_key_vuurland": "sufjan stevens|||casimir pulaski day",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 163,
-  "__v150_next_spotify_round_at": 1793449838.3835673,
-  "__v146_spotify_budget_slot": 1793449589.5913966,
+  "__v150_next_spotify_round_at": 1793449966.9928522,
+  "__v146_spotify_budget_slot": 1793449847.0350802,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14145,6 +14149,10 @@
     "vance joy|||riptide": {
       "artist": "Vance Joy",
       "title": "Riptide"
+    },
+    "natalie merchant|||not in this life": {
+      "artist": "Natalie Merchant",
+      "title": "Not in This Life"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14837,6 +14845,11 @@
       "uri": "spotify:track:7yq4Qj7cqayVTp3FF9CWbm",
       "artist": "Vance Joy",
       "title": "Riptide"
+    },
+    "natalie merchant|||not in this life": {
+      "uri": "spotify:track:58NHe1ri8uaAJa17SpJcPw",
+      "artist": "Natalie Merchant",
+      "title": "Not in This Life"
     }
   },
   "__pending_library_likes": {},
@@ -14981,5 +14994,6 @@
   "__match_v35__nick cave & the bad seeds|||the ship song": "spotify:track:3I9UP9RsiCpyVLNbYkBhQC",
   "__match_v35__chrissie hynde|||adding the blue": "spotify:track:4YGoLwVp9UmYn85RlRpiVJ",
   "__match_v35__phoebe snow|||every night": "spotify:track:3yx4dMokQCCD9QaMGEySr3",
-  "__match_v35__vance joy|||riptide": "spotify:track:7yq4Qj7cqayVTp3FF9CWbm"
+  "__match_v35__vance joy|||riptide": "spotify:track:7yq4Qj7cqayVTp3FF9CWbm",
+  "__match_v35__natalie merchant|||not in this life": "spotify:track:58NHe1ri8uaAJa17SpJcPw"
 }
