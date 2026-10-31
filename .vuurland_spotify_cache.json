@@ -977,6 +977,7 @@
     "d d dumbo|||satan",
     "d d dumbo|||tropical oceans",
     "d d dumbo|||walrus",
+    "d4vd|||here with me",
     "damien jurado|||anchors",
     "damien jurado|||south",
     "damien rice|||9 crimes",
@@ -4352,6 +4353,7 @@
     "spotify:track:0MpgmNiHDVqNQdpJjnPl6r",
     "spotify:track:0NAcDFrzFFLYym7hlraGY0",
     "spotify:track:0NC3Pb4nIcNZOxpXS16oLX",
+    "spotify:track:0NLm9bQG7ikL5k9x9TtYT7",
     "spotify:track:0NVsz5lExNqzVDznhdPlU8",
     "spotify:track:0NslHuacjxQYfUTOW3HCIV",
     "spotify:track:0O8opD0spCg2nheujR7DyP",
@@ -8941,6 +8943,7 @@
     "QZLBC2513527",
     "QZLBC2513529",
     "QZLBC2513536",
+    "QZMEM2209263",
     "QZMEN2416895",
     "QZMEP2356019",
     "QZMEQ2321149",
@@ -12862,13 +12865,14 @@
     "spotify:track:20hW80qQCtVEHIJgeBJsBW": "GBENL1701881",
     "spotify:track:2mI7H9gV0viQJWtf8j48jS": "GBENL1601621",
     "spotify:track:0wdptlNBbiNuog9juv7DyV": "USCO91767802",
-    "spotify:track:19kHhX6f6EfLU7rcO3RqjO": "QM4TX2336316"
+    "spotify:track:19kHhX6f6EfLU7rcO3RqjO": "QM4TX2336316",
+    "spotify:track:0NLm9bQG7ikL5k9x9TtYT7": "QZMEM2209263"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2883,
+  "__vuurland_active_playlist_count": 2884,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13082,8 +13086,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793452144.62438,
-    "mellow_mix": 1793452144.627239
+    "vuurland": 1793452154.6222816,
+    "mellow_mix": 1793452154.6251638
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13656,8 +13660,8 @@
   "__last_radio_key_vuurland": "d4vd|||here with me",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 177,
-  "__v150_next_spotify_round_at": 1793452146.877621,
-  "__v146_spotify_budget_slot": 1793452026.9221478,
+  "__v150_next_spotify_round_at": 1793452274.6252708,
+  "__v146_spotify_budget_slot": 1793452154.6691427,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14265,6 +14269,10 @@
     "jungle|||back on 74": {
       "artist": "Jungle",
       "title": "Back On 74"
+    },
+    "d4vd|||here with me": {
+      "artist": "d4vd",
+      "title": "Here With Me"
     }
   },
   "__v82_confirmed_catalog": {
@@ -15022,6 +15030,11 @@
       "uri": "spotify:track:19kHhX6f6EfLU7rcO3RqjO",
       "artist": "Jungle",
       "title": "Back On 74"
+    },
+    "d4vd|||here with me": {
+      "uri": "spotify:track:0NLm9bQG7ikL5k9x9TtYT7",
+      "artist": "d4vd",
+      "title": "Here With Me"
     }
   },
   "__pending_library_likes": {},
@@ -15179,5 +15192,6 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__lisa hannigan|||snow": "spotify:track:2mI7H9gV0viQJWtf8j48jS",
   "__match_v35__the infamous stringdusters|||gravity": "spotify:track:0wdptlNBbiNuog9juv7DyV",
-  "__match_v35__jungle|||back on 74": "spotify:track:19kHhX6f6EfLU7rcO3RqjO"
+  "__match_v35__jungle|||back on 74": "spotify:track:19kHhX6f6EfLU7rcO3RqjO",
+  "__match_v35__d4vd|||here with me": "spotify:track:0NLm9bQG7ikL5k9x9TtYT7"
 }
