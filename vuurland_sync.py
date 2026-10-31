@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")  # Drie actieve bronnen in één FIFO.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge")  # Vier actieve bronnen in één FIFO.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6710,6 +6710,7 @@ def sync():
         "mellow_mix": ("Radio Paradise Mellow Mix", get_mellow_mix_tracks, "__last_radio_key_mellow_mix"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
+        "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
     }
     radio_sources = [
         {"id": sid, "name": source_catalog[sid][0],
@@ -6777,6 +6778,14 @@ def sync():
 
     seen = load_seen()
     cache = load_cache()
+    # DKFM Edge bij eerste activering nulmeten, zodat oude RadioBox-historiek
+    # niet in één keer de bestaande FIFO vult. Alle andere state blijft intact.
+    if not cache.get("__v186_dkfm_edge_four_source_baseline"):
+        cache.setdefault("__v96_radio_snapshots", {}).pop("dkfm_edge", None)
+        cache.setdefault("__v174_radio_snapshot_times", {}).pop("dkfm_edge", None)
+        cache.setdefault("__v47_radio_discovered", {}).pop("dkfm_edge", None)
+        cache["__v186_dkfm_edge_four_source_baseline"] = True
+        save_cache(cache)
     # Bij heractivering van Big Sonic Heaven eerst een verse nulmeting doen.
     # Laat bestaande FIFO, andere radiobronnen, playlist-cache en cooldowns intact.
     if not cache.get("__v185_big_sonic_three_source_baseline"):
