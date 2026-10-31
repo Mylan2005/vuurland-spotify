@@ -94,6 +94,7 @@
     "air|||sing sang sung",
     "air|||talisman",
     "air|||venus",
+    "al di meola|||african night",
     "al green|||let's stay together",
     "al stewart|||midas shadow",
     "al stewart|||midas shadow - 2001 remaster",
@@ -4365,6 +4366,7 @@
     "spotify:track:0SK4eSlC1oyOkY7jG7EmmG",
     "spotify:track:0SP2eFIWDUhg3WyLvGz8tg",
     "spotify:track:0SVPZec5mMyqxWCUi3xdmI",
+    "spotify:track:0SeQJcugNMpUfPpEk4QA6r",
     "spotify:track:0SgJzBROysSAqSWZfWzfeH",
     "spotify:track:0SjtVyfdl77VKgd8yrvsWJ",
     "spotify:track:0Sq3wdy9bjXBAnkc0SO2A4",
@@ -9729,6 +9731,7 @@
     "USSM18400411",
     "USSM18900213",
     "USSM19909991",
+    "USSM19916753",
     "USSM19919473",
     "USSM19922898",
     "USSUB0311671",
@@ -12778,13 +12781,14 @@
     "spotify:track:1RxlMG0bJhJdR5H6wL2oJf": "USSM11002346",
     "spotify:track:7vgPcT0kQIeDQJaDWNIqyV": "GBCEL2500560",
     "spotify:track:49OyIwWLgVoGBA0zJBOqB0": "CAO371365011",
-    "spotify:track:1aMJTyCRfxfp8luej4rjAC": "USRY20517339"
+    "spotify:track:1aMJTyCRfxfp8luej4rjAC": "USRY20517339",
+    "spotify:track:0SeQJcugNMpUfPpEk4QA6r": "USSM19916753"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2862,
+  "__vuurland_active_playlist_count": 2863,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12998,8 +13002,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793448425.0885603,
-    "mellow_mix": 1793448425.091224
+    "vuurland": 1793448435.263859,
+    "mellow_mix": 1793448435.2665348
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13536,8 +13540,7 @@
   "__v172_live_only_reset": "2026-10-29-live-only",
   "__v51_radio_unmatched": {},
   "__v51_radio_failed_searches": {
-    "clear season|||don't take too long": 3,
-    "al di meola|||african night": 1
+    "clear season|||don't take too long": 3
   },
   "__v51_radio_failed_cycles": {
     "clear season|||don't take too long": 1
@@ -13548,8 +13551,8 @@
   "__last_radio_key_vuurland": "marble sounds|||leave a light on",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 157,
-  "__v150_next_spotify_round_at": 1793448426.428465,
-  "__v146_spotify_budget_slot": 1793448306.4732401,
+  "__v150_next_spotify_round_at": 1793448555.2666352,
+  "__v146_spotify_budget_slot": 1793448435.3130891,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14073,6 +14076,10 @@
     "brian eno|||spinning away": {
       "artist": "Brian Eno, John Cale",
       "title": "Spinning Away"
+    },
+    "al di meola|||african night": {
+      "artist": "Al Di Meola",
+      "title": "African Night"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14725,6 +14732,11 @@
       "uri": "spotify:track:1aMJTyCRfxfp8luej4rjAC",
       "artist": "Brian Eno, John Cale",
       "title": "Spinning Away"
+    },
+    "al di meola|||african night": {
+      "uri": "spotify:track:0SeQJcugNMpUfPpEk4QA6r",
+      "artist": "Al Di Meola",
+      "title": "African Night"
     }
   },
   "__pending_library_likes": {},
@@ -14861,5 +14873,6 @@
   "__match_v35__paul simon|||she moves on": "spotify:track:1RxlMG0bJhJdR5H6wL2oJf",
   "__match_v35__sasami & soccer mommy|||just be friends soccer mommy version": "spotify:track:7vgPcT0kQIeDQJaDWNIqyV",
   "__match_v35__the wailin' jennys|||take it down": "spotify:track:49OyIwWLgVoGBA0zJBOqB0",
-  "__match_v35__brian eno|||spinning away": "spotify:track:1aMJTyCRfxfp8luej4rjAC"
+  "__match_v35__brian eno|||spinning away": "spotify:track:1aMJTyCRfxfp8luej4rjAC",
+  "__match_v35__al di meola|||african night": "spotify:track:0SeQJcugNMpUfPpEk4QA6r"
 }
