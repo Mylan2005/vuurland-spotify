@@ -4004,6 +4004,7 @@
     "van morrison|||brown eyed girl",
     "van morrison|||sweet thing",
     "van morrison|||sweet thing - 1999 remaster",
+    "vance joy|||riptide",
     "vancouver sleep clinic & pop goes ambient & amelia magdalena|||as it was",
     "vancouver sleep clinic|||as it was",
     "vancouver sleep clinic|||pop goes ambient|||amelia magdalena|||as it was",
@@ -7073,6 +7074,7 @@
     "spotify:track:7ydJaSdC8Au68eYgspNznY",
     "spotify:track:7ydapdmQ4oivP54X29q7Af",
     "spotify:track:7ygrTWuppClAgsCa8QD5go",
+    "spotify:track:7yq4Qj7cqayVTp3FF9CWbm",
     "spotify:track:7yxpQfWHCvOMYjH1UpNdDg",
     "spotify:track:7z8k59NKAcnwK6OOHt3i3k",
     "spotify:track:7zh9Phpu0GVQ6bCbPHiZAf",
@@ -7122,6 +7124,7 @@
     "AUGSG1600016",
     "AUI442200242",
     "AUIYA2300036",
+    "AULI01385760",
     "AULI02565720",
     "AULI02565790",
     "AULJ31600039",
@@ -12806,13 +12809,14 @@
     "spotify:track:61sPEP9ptpNE7ZMSaOzzmH": "QM6MZ1883663",
     "spotify:track:3I9UP9RsiCpyVLNbYkBhQC": "GBAJH0900626",
     "spotify:track:4YGoLwVp9UmYn85RlRpiVJ": "UK69U1400011",
-    "spotify:track:3yx4dMokQCCD9QaMGEySr3": "USSM10102829"
+    "spotify:track:3yx4dMokQCCD9QaMGEySr3": "USSM10102829",
+    "spotify:track:7yq4Qj7cqayVTp3FF9CWbm": "AULI01385760"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2869,
+  "__vuurland_active_playlist_count": 2870,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13026,8 +13030,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793449579.2992485,
-    "mellow_mix": 1793449579.3025725
+    "vuurland": 1793449589.5454316,
+    "mellow_mix": 1793449589.548762
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13582,8 +13586,8 @@
   "__last_radio_key_vuurland": "vance joy|||riptide",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 162,
-  "__v150_next_spotify_round_at": 1793449580.8119419,
-  "__v146_spotify_budget_slot": 1793449460.8551009,
+  "__v150_next_spotify_round_at": 1793449709.5488784,
+  "__v146_spotify_budget_slot": 1793449589.5913966,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14135,6 +14139,10 @@
     "phoebe snow|||every night": {
       "artist": "Phoebe Snow",
       "title": "Every Night"
+    },
+    "vance joy|||riptide": {
+      "artist": "Vance Joy",
+      "title": "Riptide"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14822,6 +14830,11 @@
       "uri": "spotify:track:3yx4dMokQCCD9QaMGEySr3",
       "artist": "Phoebe Snow",
       "title": "Every Night"
+    },
+    "vance joy|||riptide": {
+      "uri": "spotify:track:7yq4Qj7cqayVTp3FF9CWbm",
+      "artist": "Vance Joy",
+      "title": "Riptide"
     }
   },
   "__pending_library_likes": {},
@@ -14965,5 +14978,6 @@
   "__match_v35__jump little children|||sparrow": "spotify:track:61sPEP9ptpNE7ZMSaOzzmH",
   "__match_v35__nick cave & the bad seeds|||the ship song": "spotify:track:3I9UP9RsiCpyVLNbYkBhQC",
   "__match_v35__chrissie hynde|||adding the blue": "spotify:track:4YGoLwVp9UmYn85RlRpiVJ",
-  "__match_v35__phoebe snow|||every night": "spotify:track:3yx4dMokQCCD9QaMGEySr3"
+  "__match_v35__phoebe snow|||every night": "spotify:track:3yx4dMokQCCD9QaMGEySr3",
+  "__match_v35__vance joy|||riptide": "spotify:track:7yq4Qj7cqayVTp3FF9CWbm"
 }
