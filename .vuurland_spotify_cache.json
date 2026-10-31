@@ -2410,6 +2410,7 @@
     "marika hackman|||cigarette - 7 layers sessions",
     "mark ambor|||good to be",
     "mark ambor|||i hope it all works out",
+    "mark knopfler|||coyote",
     "mark lanegan|||bleeding muddy water",
     "mark lanegan|||nannuflay",
     "mark lanegan|||snake song",
@@ -6684,6 +6685,7 @@
     "spotify:track:6kJskZR5qZDd4ADH1Doo9Z",
     "spotify:track:6kNcp1ZJPtDPbzJ6nuaKvx",
     "spotify:track:6kPO9B6QldIif5PxT2f69R",
+    "spotify:track:6kUj7er5CNrWHOCLDsvO1H",
     "spotify:track:6kZRia0ALokUpfEY9BuzCw",
     "spotify:track:6kgn7bCEXk0A5ZrPqrRZwc",
     "spotify:track:6khKJVbTxzfhbGfHMtyOM8",
@@ -8206,6 +8208,7 @@
     "GBENL2604722",
     "GBF071700950",
     "GBF080100262",
+    "GBF080201261",
     "GBF080500360",
     "GBF088500676",
     "GBF088500679",
@@ -12830,13 +12833,14 @@
     "spotify:track:052etUv4Njn3u47ljAS5PD": "USGF18714503",
     "spotify:track:0ya8HEwayalG32jVxg6PSP": "USCW62261902",
     "spotify:track:2YSy87pZp2pWFdNK9kEY9u": "BEWO19900059",
-    "spotify:track:4VtRHZ4tBDHaWltVAytlLY": "GBKPL2013050"
+    "spotify:track:4VtRHZ4tBDHaWltVAytlLY": "GBKPL2013050",
+    "spotify:track:6kUj7er5CNrWHOCLDsvO1H": "GBF080201261"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2875,
+  "__vuurland_active_playlist_count": 2876,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13050,8 +13054,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793450862.341806,
-    "mellow_mix": 1793450862.3446
+    "vuurland": 1793450872.1942043,
+    "mellow_mix": 1793450872.1969526
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13615,8 +13619,8 @@
   "__last_radio_key_vuurland": "cat burns|||go",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 168,
-  "__v150_next_spotify_round_at": 1793450864.6560688,
-  "__v146_spotify_budget_slot": 1793450744.6986847,
+  "__v150_next_spotify_round_at": 1793450992.1970403,
+  "__v146_spotify_budget_slot": 1793450872.2395353,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14192,6 +14196,10 @@
     "cat burns|||go": {
       "artist": "Cat Burns",
       "title": "go"
+    },
+    "mark knopfler|||coyote": {
+      "artist": "Mark Knopfler",
+      "title": "Coyote"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14909,6 +14917,11 @@
       "uri": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
       "artist": "Cat Burns",
       "title": "go"
+    },
+    "mark knopfler|||coyote": {
+      "uri": "spotify:track:6kUj7er5CNrWHOCLDsvO1H",
+      "artist": "Mark Knopfler",
+      "title": "Coyote"
     }
   },
   "__pending_library_likes": {},
@@ -15058,5 +15071,6 @@
   "__match_v35__pat metheny group|||last train home": "spotify:track:052etUv4Njn3u47ljAS5PD",
   "__match_v35__artie barsamian|||the enchanting melody": "spotify:track:0ya8HEwayalG32jVxg6PSP",
   "__match_v35__novastar|||the best is yet to come": "spotify:track:2YSy87pZp2pWFdNK9kEY9u",
-  "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY"
+  "__match_v35__cat burns|||go": "spotify:track:4VtRHZ4tBDHaWltVAytlLY",
+  "__match_v35__mark knopfler|||coyote": "spotify:track:6kUj7er5CNrWHOCLDsvO1H"
 }
