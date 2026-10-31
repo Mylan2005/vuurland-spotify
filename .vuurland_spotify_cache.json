@@ -822,6 +822,7 @@
     "cate le bon|||harbour",
     "cate le bon|||home to you",
     "cate le bon|||st vincent|||always the same (feat. st. vincent)",
+    "celeste|||little runaway",
     "celeste|||milk & honey",
     "celeste|||people always change",
     "celeste|||strange - edit",
@@ -4527,6 +4528,7 @@
     "spotify:track:126ZlwrjTCZJlUqr9f65Bd",
     "spotify:track:126dxlPCG1OTvTar7MAoU4",
     "spotify:track:12AKv7982HuojQZhygZCm6",
+    "spotify:track:12GVuNDjD80UjEmkO46Hd8",
     "spotify:track:12LBW8mA4LOKnURnzCKrvo",
     "spotify:track:12ZWusDVzutJKIexPa1ojH",
     "spotify:track:12homE4JpBey5cckgoepR7",
@@ -8305,6 +8307,7 @@
     "GBUM72002795",
     "GBUM72002796",
     "GBUM72002877",
+    "GBUM72004197",
     "GBUM72005651",
     "GBUM72005748",
     "GBUM72006081",
@@ -12623,13 +12626,14 @@
     "spotify:track:5PnnEBtTbte2jhhfao9aJ9": "GB6HK1300083",
     "spotify:track:54Te8w8d4uJShbLC3BI14J": "NLK530800547",
     "spotify:track:5ExOm0dh4NyRyAdSAO9hyM": "USUG12401035",
-    "spotify:track:2drtd6SptpMJ1KylMQ7mrE": "USC4R1902822"
+    "spotify:track:2drtd6SptpMJ1KylMQ7mrE": "USC4R1902822",
+    "spotify:track:12GVuNDjD80UjEmkO46Hd8": "GBUM72004197"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2824,
+  "__vuurland_active_playlist_count": 2825,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12741,7 +12745,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793423861.9107325
+    "vuurland": 1793423872.206821
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13096,8 +13100,8 @@
   "__last_radio_key_vuurland": "celeste|||little runaway",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 113,
-  "__v150_next_spotify_round_at": 1793423863.4230583,
-  "__v146_spotify_budget_slot": 1793423743.4642234,
+  "__v150_next_spotify_round_at": 1793423992.207002,
+  "__v146_spotify_budget_slot": 1793423872.2481186,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13461,6 +13465,10 @@
     "soccer mommy|||circle the drain": {
       "artist": "Soccer Mommy",
       "title": "circle the drain"
+    },
+    "celeste|||little runaway": {
+      "artist": "Celeste",
+      "title": "Little Runaway"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13913,6 +13921,11 @@
       "uri": "spotify:track:2drtd6SptpMJ1KylMQ7mrE",
       "artist": "Soccer Mommy",
       "title": "circle the drain"
+    },
+    "celeste|||little runaway": {
+      "uri": "spotify:track:12GVuNDjD80UjEmkO46Hd8",
+      "artist": "Celeste",
+      "title": "Little Runaway"
     }
   },
   "__pending_library_likes": {},
@@ -14006,5 +14019,6 @@
   "__match_v35__sampha|||too much": "spotify:track:5PnnEBtTbte2jhhfao9aJ9",
   "__match_v35__balthazar|||the boatman": "spotify:track:54Te8w8d4uJShbLC3BI14J",
   "__match_v35__taylor swift feat florence the machine|||florida!!!": "spotify:track:5ExOm0dh4NyRyAdSAO9hyM",
-  "__match_v35__soccer mommy|||circle the drain": "spotify:track:2drtd6SptpMJ1KylMQ7mrE"
+  "__match_v35__soccer mommy|||circle the drain": "spotify:track:2drtd6SptpMJ1KylMQ7mrE",
+  "__match_v35__celeste|||little runaway": "spotify:track:12GVuNDjD80UjEmkO46Hd8"
 }
