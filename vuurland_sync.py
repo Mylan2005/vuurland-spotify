@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge")  # Vier actieve bronnen in één FIFO.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge", "soma_digitalis", "soma_folkfwd", "soma_lush")  # Bestaande vier + drie SomaFM-bronnen.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1199,6 +1199,83 @@ def get_radiobox_tracks(
         i += 1
 
     return tracks
+
+
+
+def get_somafm_tracks(channel_id, source_name):
+    """SomaFM: laatste gespeelde tracks, nieuwste eerst; nooit audio downloaden."""
+    import requests
+
+    # SomaFM publiceert korte trackgeschiedenissen als JSON. HTML is fallback.
+    url = f"https://somafm.com/songs/{channel_id}.json"
+    songs = []
+    try:
+        response = requests.get(
+            url, headers={"User-Agent": "VuurlandSpotifySync/1.0"},
+            timeout=12,
+        )
+        response.raise_for_status()
+        data = response.json()
+        raw = data.get("songs", []) if isinstance(data, dict) else []
+        if isinstance(raw, list):
+            for song in raw:
+                if not isinstance(song, dict):
+                    continue
+                artist = str(song.get("artist") or "").strip()
+                title = str(song.get("title") or "").strip()
+                if artist and title:
+                    songs.append((artist, title))
+    except (requests.RequestException, ValueError, TypeError) as error:
+        print(f"⚠️ {source_name}: JSON-feed tijdelijk onbruikbaar: {error}")
+
+    if not songs:
+        try:
+            response = requests.get(
+                f"https://somafm.com/{channel_id}/played",
+                headers={"User-Agent": "Mozilla/5.0"},
+                timeout=12,
+            )
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, "html.parser")
+            for table in soup.find_all("table"):
+                for row in table.find_all("tr"):
+                    columns = row.find_all("td", recursive=False)
+                    # SomaFM: Played At | Artist | Song | Album.
+                    if len(columns) < 3:
+                        continue
+                    artist = columns[1].get_text(" ", strip=True)
+                    title = columns[2].get_text(" ", strip=True)
+                    if artist and title:
+                        songs.append((artist, title))
+        except requests.RequestException as error:
+            print(f"⏭️ {source_name}: HTML-fallback onbereikbaar: {error}")
+
+    cleaned, seen = [], set()
+    for artist, title in songs:
+        if not artist or not title or len(artist) > 150 or len(title) > 300:
+            continue
+        if artist.lower() in {"break", "station id", "somafm", "soma fm"}:
+            continue
+        if "station id" in title.lower() or title.lower() in {"break", "station id"}:
+            continue
+        key = (artist.casefold(), title.casefold())
+        if key not in seen:
+            seen.add(key)
+            cleaned.append((artist, title))
+    print(f"🎧 {source_name}: {len(cleaned)} recente nummers.")
+    return cleaned
+
+
+def get_soma_digitalis_tracks():
+    return get_somafm_tracks("digitalis", "SomaFM Digitalis")
+
+
+def get_soma_folkfwd_tracks():
+    return get_somafm_tracks("folkfwd", "SomaFM Folk Forward")
+
+
+def get_soma_lush_tracks():
+    return get_somafm_tracks("lush", "SomaFM Lush")
 
 
 def get_vuurland_tracks():
@@ -6711,6 +6788,9 @@ def sync():
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
+        "soma_digitalis": ("SomaFM Digitalis", get_soma_digitalis_tracks, "__last_radio_key_soma_digitalis"),
+        "soma_folkfwd": ("SomaFM Folk Forward", get_soma_folkfwd_tracks, "__last_radio_key_soma_folkfwd"),
+        "soma_lush": ("SomaFM Lush", get_soma_lush_tracks, "__last_radio_key_soma_lush"),
     }
     radio_sources = [
         {"id": sid, "name": source_catalog[sid][0],
@@ -6748,7 +6828,7 @@ def sync():
     if not isinstance(live_queue, list):
         raise ValueError("Live queue is geen JSON-lijst; niet overschrijven")
 
-    # Alleen de vier gekozen bronnen blijven in de FIFO.
+    # Alleen de zeven actieve bronnen blijven in de FIFO.
     # Eenmalige Radio Indie Alternative-selectie gebruikt source="vuurland"
     # en blijft daardoor behouden. Onbekende bronnen worden veilig uitgesloten.
     before_source_filter = len(live_queue)
