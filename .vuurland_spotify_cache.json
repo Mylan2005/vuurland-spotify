@@ -3397,6 +3397,7 @@
     "sigur ros|||untitled #3 - samskeyti",
     "sigur ros|||við spilum endalaust",
     "silversun pickups|||lazy eye",
+    "simon & garfunkel|||i am a rock",
     "siv jakobsen & ane brun|||sun, moon, stars",
     "siv jakobsen|||ane brun|||sun, moon, stars",
     "siv jakobsen|||sun moon stars",
@@ -4469,6 +4470,7 @@
     "spotify:track:0bTlXQJzw4ddaLQPJ4rGS2",
     "spotify:track:0bbZ3J2KdCT92SlBFORNNU",
     "spotify:track:0bhBtXHQX3u6dSAPF59qGx",
+    "spotify:track:0byOqNZN9ailhoORv5Ps0Z",
     "spotify:track:0cBPuDA3xUjR4Vh9o7CKy8",
     "spotify:track:0cS0wvbbBa2bTY7JdxyieV",
     "spotify:track:0cdB1pBFiryVU7pN6l9Wbp",
@@ -9839,6 +9841,7 @@
     "USSM12602963",
     "USSM12602965",
     "USSM16201242",
+    "USSM16501154",
     "USSM16700357",
     "USSM17200461",
     "USSM17700373",
@@ -12939,13 +12942,14 @@
     "spotify:track:1r8BiPbyYhKaWEXOjMEip4": "USNO11300387",
     "spotify:track:4SKvKJaqkRl1bUZWEqTYzl": "USJ5G2232201",
     "spotify:track:2uunFBdOKuDKSuoAq1HQ3z": "CAQ111311702",
-    "spotify:track:4MbbbyTIhGIqA5cJrULrQZ": "US4B80600002"
+    "spotify:track:4MbbbyTIhGIqA5cJrULrQZ": "US4B80600002",
+    "spotify:track:0byOqNZN9ailhoORv5Ps0Z": "USSM16501154"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2902,
+  "__vuurland_active_playlist_count": 2903,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13252,9 +13256,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793455551.4409707,
-    "mellow_mix": 1793455551.443302,
-    "big_sonic_heaven": 1793455551.4452326
+    "vuurland": 1793455562.282762,
+    "mellow_mix": 1793455562.2851422,
+    "big_sonic_heaven": 1793455562.287044
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13943,8 +13947,8 @@
   "__last_radio_key_vuurland": "air traffic|||no more running away",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 199,
-  "__v150_next_spotify_round_at": 1793455562.1212964,
-  "__v146_spotify_budget_slot": 1793455442.1667364,
+  "__v150_next_spotify_round_at": 1793455682.2871456,
+  "__v146_spotify_budget_slot": 1793455562.333021,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14628,6 +14632,10 @@
     "alexi murdoch|||breathe": {
       "artist": "Alexi Murdoch",
       "title": "Breathe"
+    },
+    "simon & garfunkel|||i am a rock": {
+      "artist": "Simon & Garfunkel",
+      "title": "I Am a Rock"
     }
   },
   "__v82_confirmed_catalog": {
@@ -15480,6 +15488,11 @@
       "uri": "spotify:track:4MbbbyTIhGIqA5cJrULrQZ",
       "artist": "Alexi Murdoch",
       "title": "Breathe"
+    },
+    "simon & garfunkel|||i am a rock": {
+      "uri": "spotify:track:0byOqNZN9ailhoORv5Ps0Z",
+      "artist": "Simon & Garfunkel",
+      "title": "I Am a Rock"
     }
   },
   "__pending_library_likes": {},
@@ -15658,5 +15671,6 @@
   "__match_v35__oscar isaac|||green green rocky road": "spotify:track:1r8BiPbyYhKaWEXOjMEip4",
   "__match_v35__phoebe bridgers|||sidelines": "spotify:track:4SKvKJaqkRl1bUZWEqTYzl",
   "__match_v35__loreena mckennitt|||night ride across the caucasus live": "spotify:track:2uunFBdOKuDKSuoAq1HQ3z",
-  "__match_v35__alexi murdoch|||breathe": "spotify:track:4MbbbyTIhGIqA5cJrULrQZ"
+  "__match_v35__alexi murdoch|||breathe": "spotify:track:4MbbbyTIhGIqA5cJrULrQZ",
+  "__match_v35__simon & garfunkel|||i am a rock": "spotify:track:0byOqNZN9ailhoORv5Ps0Z"
 }
