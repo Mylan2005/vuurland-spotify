@@ -2357,6 +2357,7 @@
     "manchester orchestra|||the way",
     "manchester orchestra|||the way - live from the armory",
     "maple glider|||good thing",
+    "marble sounds|||leave a light on",
     "marc scibilia|||bittersweet",
     "marc scibilia|||more to this",
     "marc scibilia|||summer clothes",
@@ -6934,6 +6935,7 @@
     "spotify:track:7clt57Mm3Md81qjMdAhPKf",
     "spotify:track:7cnbRTFRYERD9bPO6SkDUx",
     "spotify:track:7crOLVTdtuCxsPVnrZJxSZ",
+    "spotify:track:7d0VYHsLGjonizpQboVOL2",
     "spotify:track:7d0XkI4iJ32nxeFAHFXbLQ",
     "spotify:track:7dHEXRJcnEGRksWSvFebg6",
     "spotify:track:7dHowm9WlK1gOuEuM0bd7m",
@@ -7318,6 +7320,7 @@
     "BEV600000001",
     "BEW160912503",
     "BEW160912505",
+    "BEW161314108",
     "BEWO10400002",
     "BEWO10400003",
     "BEWO10400005",
@@ -12786,13 +12789,14 @@
     "spotify:track:49OyIwWLgVoGBA0zJBOqB0": "CAO371365011",
     "spotify:track:1aMJTyCRfxfp8luej4rjAC": "USRY20517339",
     "spotify:track:0SeQJcugNMpUfPpEk4QA6r": "USSM19916753",
-    "spotify:track:7D5mjGj6O2cHHCoBF8O7qV": "USMRG0467004"
+    "spotify:track:7D5mjGj6O2cHHCoBF8O7qV": "USMRG0467004",
+    "spotify:track:7d0VYHsLGjonizpQboVOL2": "BEW161314108"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2864,
+  "__vuurland_active_playlist_count": 2865,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13006,8 +13010,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793448682.1245809,
-    "mellow_mix": 1793448682.1272411
+    "vuurland": 1793448692.2685623,
+    "mellow_mix": 1793448692.271198
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13556,8 +13560,8 @@
   "__last_radio_key_vuurland": "marble sounds|||leave a light on",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 158,
-  "__v150_next_spotify_round_at": 1793448683.6725273,
-  "__v146_spotify_budget_slot": 1793448563.7160776,
+  "__v150_next_spotify_round_at": 1793448812.2712872,
+  "__v146_spotify_budget_slot": 1793448692.3152928,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14089,6 +14093,10 @@
     "arcade fire|||une annee sans lumiere": {
       "artist": "Arcade Fire",
       "title": "Une Annee Sans Lumiere"
+    },
+    "marble sounds|||leave a light on": {
+      "artist": "Marble Sounds",
+      "title": "Leave A Light On"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14751,6 +14759,11 @@
       "uri": "spotify:track:7D5mjGj6O2cHHCoBF8O7qV",
       "artist": "Arcade Fire",
       "title": "Une Annee Sans Lumiere"
+    },
+    "marble sounds|||leave a light on": {
+      "uri": "spotify:track:7d0VYHsLGjonizpQboVOL2",
+      "artist": "Marble Sounds",
+      "title": "Leave A Light On"
     }
   },
   "__pending_library_likes": {},
@@ -14889,5 +14902,6 @@
   "__match_v35__the wailin' jennys|||take it down": "spotify:track:49OyIwWLgVoGBA0zJBOqB0",
   "__match_v35__brian eno|||spinning away": "spotify:track:1aMJTyCRfxfp8luej4rjAC",
   "__match_v35__al di meola|||african night": "spotify:track:0SeQJcugNMpUfPpEk4QA6r",
-  "__match_v35__arcade fire|||une annee sans lumiere": "spotify:track:7D5mjGj6O2cHHCoBF8O7qV"
+  "__match_v35__arcade fire|||une annee sans lumiere": "spotify:track:7D5mjGj6O2cHHCoBF8O7qV",
+  "__match_v35__marble sounds|||leave a light on": "spotify:track:7d0VYHsLGjonizpQboVOL2"
 }
