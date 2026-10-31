@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland",)  # Enige actieve radiobron: Studio Brussel Vuurland.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix")  # Twee actieve bronnen: Vuurland en Radio Paradise Mellow Mix.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -7726,7 +7726,7 @@ def sync():
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = RADIO_SOURCE_ORDER
-    print("🔀 Vier radiobronnen actief; één gezamenlijke FIFO.")
+    print(f"🔀 {len(RADIO_SOURCE_ORDER)} radiobronnen actief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
