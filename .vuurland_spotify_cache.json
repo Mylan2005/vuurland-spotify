@@ -547,6 +547,7 @@
     "bill ryder-jones|||i hold something in my hand",
     "bill withers|||just the two of us feat bill withers",
     "bill withers|||lean on me",
+    "billie eilish|||lunch",
     "billie eilish|||what was i made for?",
     "billie marten|||boxes",
     "billie marten|||cartoon people",
@@ -6462,6 +6463,7 @@
     "spotify:track:61qxP4Vs5DVX0Ic4GnBklu",
     "spotify:track:61sPEP9ptpNE7ZMSaOzzmH",
     "spotify:track:620zXJyl50tD6FMobTqZN6",
+    "spotify:track:629DixmZGHc7ILtEntuiWE",
     "spotify:track:62WiDhDtNdb3n1xc7MVBFa",
     "spotify:track:62gvFywN7B7mpHmrm8BLZF",
     "spotify:track:62sXIT6kAdOgcWqnhEZaRL",
@@ -9954,6 +9956,7 @@
     "USUM72314485",
     "USUM72400057",
     "USUM72400718",
+    "USUM72401991",
     "USUM72505731",
     "USUM72512347",
     "USUM72600177",
@@ -12918,13 +12921,14 @@
     "spotify:track:2PXbSyLoEti71VDLKNpfHv": "USRE19901573",
     "spotify:track:7Kb35VmpAau8hNDGZjdEOg": "QM4TW2574585",
     "spotify:track:56gFySpjZnReAwhZD61Cn8": "USCA20101436",
-    "spotify:track:11iF8F9cOBgxbxVWU7bRjt": "USAT29900738"
+    "spotify:track:11iF8F9cOBgxbxVWU7bRjt": "USAT29900738",
+    "spotify:track:629DixmZGHc7ILtEntuiWE": "USUM72401991"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2897,
+  "__vuurland_active_playlist_count": 2898,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13138,8 +13142,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793454451.19058,
-    "mellow_mix": 1793454451.193932
+    "vuurland": 1793454461.2940433,
+    "mellow_mix": 1793454461.2971637
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13727,8 +13731,8 @@
   "__last_radio_key_vuurland": "billie eilish|||lunch",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 191,
-  "__v150_next_spotify_round_at": 1793454452.907691,
-  "__v146_spotify_budget_slot": 1793454204.9739282,
+  "__v150_next_spotify_round_at": 1793454581.297313,
+  "__v146_spotify_budget_slot": 1793454461.3420258,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14392,6 +14396,10 @@
     "marc cohn|||ghost train": {
       "artist": "Marc Cohn",
       "title": "Ghost Train"
+    },
+    "billie eilish|||lunch": {
+      "artist": "Billie Eilish",
+      "title": "LUNCH"
     }
   },
   "__v82_confirmed_catalog": {
@@ -15219,6 +15227,11 @@
       "uri": "spotify:track:11iF8F9cOBgxbxVWU7bRjt",
       "artist": "Marc Cohn",
       "title": "Ghost Train"
+    },
+    "billie eilish|||lunch": {
+      "uri": "spotify:track:629DixmZGHc7ILtEntuiWE",
+      "artist": "Billie Eilish",
+      "title": "LUNCH"
     }
   },
   "__pending_library_likes": {},
@@ -15390,5 +15403,6 @@
   "__match_v35__luka bloom|||exploring the blue": "spotify:track:2PXbSyLoEti71VDLKNpfHv",
   "__match_v35__luvcat|||love and money": "spotify:track:7Kb35VmpAau8hNDGZjdEOg",
   "__match_v35__bonnie raitt|||silver lining": "spotify:track:56gFySpjZnReAwhZD61Cn8",
-  "__match_v35__marc cohn|||ghost train": "spotify:track:11iF8F9cOBgxbxVWU7bRjt"
+  "__match_v35__marc cohn|||ghost train": "spotify:track:11iF8F9cOBgxbxVWU7bRjt",
+  "__match_v35__billie eilish|||lunch": "spotify:track:629DixmZGHc7ILtEntuiWE"
 }
