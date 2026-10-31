@@ -4057,6 +4057,7 @@
     "tyler ramsey|||bird - from ‘let’s go dancing’ the songs of kevn kinney",
     "tyler ramsey|||paper hearts",
     "u s girls|||bless this mess",
+    "ultra bloom|||signals",
     "unknown mortal orchestra|||hunnybee",
     "unknown mortal orchestra|||layla",
     "unknown mortal orchestra|||multi-love",
@@ -4372,6 +4373,7 @@
     "spotify:track:0FDzVuAWRbrZq0u6OzfKWQ",
     "spotify:track:0FMUxbVQDjEcMs0H7qsUJ2",
     "spotify:track:0FUGzUqkqRktGBvIeM3p2X",
+    "spotify:track:0FgTvIwBKNfvZLeYdrqewB",
     "spotify:track:0Fhm1Jjz3h7bNOeNWr7NzE",
     "spotify:track:0FjTazWaBSHBVWm2PAGghQ",
     "spotify:track:0Fjy4haCEoFaiJME5pvbgB",
@@ -9135,6 +9137,7 @@
     "QZZ4J2400416",
     "QZZ4J2500067",
     "QZZ4J2500069",
+    "QZZ782466669",
     "QZZ7W2629778",
     "QZZ972446904",
     "SE22E1700101",
@@ -13087,13 +13090,14 @@
     "spotify:track:6f02TFRypQBf0wkJNMJHe9": "GBF068500990",
     "spotify:track:00udfYIC2Z9rLaghIxRh3x": "CAN112300234",
     "spotify:track:22is8BNuUBIu8iElnAFhAR": "QM6P42415147",
-    "spotify:track:6ApOqDPnIq3S0ExGiEq1rG": "USZO10811511"
+    "spotify:track:6ApOqDPnIq3S0ExGiEq1rG": "USZO10811511",
+    "spotify:track:0FgTvIwBKNfvZLeYdrqewB": "QZZ782466669"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2948,
+  "__vuurland_active_playlist_count": 2949,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13511,10 +13515,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793460133.4017887,
-    "mellow_mix": 1793460133.5160065,
-    "big_sonic_heaven": 1793460133.5184002,
-    "dkfm_edge": 1793460133.521107
+    "vuurland": 1793460144.3309343,
+    "mellow_mix": 1793460144.3336658,
+    "big_sonic_heaven": 1793460144.3360302,
+    "dkfm_edge": 1793460144.338715
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -14393,8 +14397,8 @@
   "__last_radio_key_vuurland": "palace|||bleach",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 253,
-  "__v150_next_spotify_round_at": 1793460144.145305,
-  "__v146_spotify_budget_slot": 1793460024.208637,
+  "__v150_next_spotify_round_at": 1793460264.3388233,
+  "__v146_spotify_budget_slot": 1793460144.4032192,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -15210,6 +15214,10 @@
     "kathleen edwards|||goodnight california": {
       "artist": "Kathleen Edwards",
       "title": "Goodnight, California"
+    },
+    "ultra bloom|||signals": {
+      "artist": "Ultra Bloom",
+      "title": "Signals"
     }
   },
   "__v82_confirmed_catalog": {
@@ -16227,6 +16235,11 @@
       "uri": "spotify:track:6ApOqDPnIq3S0ExGiEq1rG",
       "artist": "Kathleen Edwards",
       "title": "Goodnight, California"
+    },
+    "ultra bloom|||signals": {
+      "uri": "spotify:track:0FgTvIwBKNfvZLeYdrqewB",
+      "artist": "Ultra Bloom",
+      "title": "Signals"
     }
   },
   "__pending_library_likes": {},
@@ -20398,10 +20411,12 @@
       "the joy formidable|||cut your face",
       "the national|||don't swallow the cap",
       "tokyo shoegazer|||missing",
-      "tom waits|||ol'55"
+      "tom waits|||ol'55",
+      "ultra bloom|||signals"
     ],
     "live_uris": [
       "spotify:track:00udfYIC2Z9rLaghIxRh3x",
+      "spotify:track:0FgTvIwBKNfvZLeYdrqewB",
       "spotify:track:0YKNBbkOkDllbbDaxMPKAZ",
       "spotify:track:15bNXexirzWI3v1T0fayaU",
       "spotify:track:1xZiJQuvH4AMNjUPrd6P2g",
@@ -20447,6 +20462,7 @@
       "QZHN62406715",
       "QZNJY2322845",
       "QZR842500001",
+      "QZZ782466669",
       "TCACX1725681",
       "USAT20100512",
       "USAT29500027",
@@ -20485,7 +20501,8 @@
       "spotify:track:6f02TFRypQBf0wkJNMJHe9": "GBF068500990",
       "spotify:track:00udfYIC2Z9rLaghIxRh3x": "CAN112300234",
       "spotify:track:22is8BNuUBIu8iElnAFhAR": "QM6P42415147",
-      "spotify:track:6ApOqDPnIq3S0ExGiEq1rG": "USZO10811511"
+      "spotify:track:6ApOqDPnIq3S0ExGiEq1rG": "USZO10811511",
+      "spotify:track:0FgTvIwBKNfvZLeYdrqewB": "QZZ782466669"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -20517,5 +20534,6 @@
   "__match_v35__siouxsie & the banshees|||lullaby": "spotify:track:6f02TFRypQBf0wkJNMJHe9",
   "__match_v35__bleach lab|||nothing left to lose": "spotify:track:00udfYIC2Z9rLaghIxRh3x",
   "__match_v35__actors|||dead inside": "spotify:track:22is8BNuUBIu8iElnAFhAR",
-  "__match_v35__kathleen edwards|||goodnight california": "spotify:track:6ApOqDPnIq3S0ExGiEq1rG"
+  "__match_v35__kathleen edwards|||goodnight california": "spotify:track:6ApOqDPnIq3S0ExGiEq1rG",
+  "__match_v35__ultra bloom|||signals": "spotify:track:0FgTvIwBKNfvZLeYdrqewB"
 }
