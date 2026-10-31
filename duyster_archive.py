@@ -56,6 +56,28 @@ def run(cache, queue, already_known, key_fn):
     archive = cache.setdefault(ARCHIVE, {})
     if not isinstance(archive, dict):
         return 0
+    # Deduplicate the stored archive locally, without any extra website requests.
+    # Keep the first occurrence (and its episode) for each artist/title pair.
+    seen_tracks = set()
+    duplicate_count = 0
+    for episode, tracks in archive.items():
+        if not isinstance(tracks, list):
+            continue
+        unique_tracks = []
+        for entry in tracks:
+            if not isinstance(entry, list) or len(entry) != 2:
+                unique_tracks.append(entry)
+                continue
+            artist, title = entry
+            key = key_fn(artist, title)
+            if key in seen_tracks:
+                duplicate_count += 1
+                continue
+            seen_tracks.add(key)
+            unique_tracks.append(entry)
+        archive[episode] = unique_tracks
+    print(f"📚 Duyster archief: {len(seen_tracks)} unieke nummers; "
+          f"{duplicate_count} dubbele vermeldingen verwijderd.")
     latest = cache.get(LATEST)
     if not isinstance(latest, int) or now - float(cache.get(LATEST_AT, 0) or 0) >= 3600:
         html = fetch(urljoin(ROOT, "playlist.php"))
