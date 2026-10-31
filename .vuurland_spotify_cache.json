@@ -757,6 +757,7 @@
     "brambles|||in the androgynous dark",
     "braulio barrera|||apertura",
     "brian eno|||cmon",
+    "brian eno|||spinning away",
     "bright eyes & phoebe bridgers|||haligh, haligh, a lie, haligh - companion version",
     "bright eyes|||first day of my life",
     "bright eyes|||haligh haligh a lie haligh - companion version",
@@ -4770,6 +4771,7 @@
     "spotify:track:1ZsUx0zG78g51kxphSGz9d",
     "spotify:track:1aBdeAE98HkFQnJYfTF6zE",
     "spotify:track:1aDLUzCyYpRXgrjwUWzV2X",
+    "spotify:track:1aMJTyCRfxfp8luej4rjAC",
     "spotify:track:1aXQmPw6vC2e2hyRooAqlH",
     "spotify:track:1avgH7udg2X4mx82V1ChDC",
     "spotify:track:1bdp1CY6vfKPESMCa2NI1M",
@@ -9687,6 +9689,7 @@
     "USRH10650432",
     "USRO22102886",
     "USRO22606891",
+    "USRY20517339",
     "USSM10013406",
     "USSM10013407",
     "USSM10013410",
@@ -12774,13 +12777,14 @@
     "spotify:track:1UwTYFFUHNFbiyPHQBPTIs": "GBUM71902701",
     "spotify:track:1RxlMG0bJhJdR5H6wL2oJf": "USSM11002346",
     "spotify:track:7vgPcT0kQIeDQJaDWNIqyV": "GBCEL2500560",
-    "spotify:track:49OyIwWLgVoGBA0zJBOqB0": "CAO371365011"
+    "spotify:track:49OyIwWLgVoGBA0zJBOqB0": "CAO371365011",
+    "spotify:track:1aMJTyCRfxfp8luej4rjAC": "USRY20517339"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2861,
+  "__vuurland_active_playlist_count": 2862,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12994,8 +12998,8 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793448168.3935559,
-    "mellow_mix": 1793448168.3962033
+    "vuurland": 1793448178.279613,
+    "mellow_mix": 1793448178.2821944
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13541,8 +13545,8 @@
   "__last_radio_key_vuurland": "sasami & soccer mommy|||just be friends soccer mommy version",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 155,
-  "__v150_next_spotify_round_at": 1793448170.2669902,
-  "__v146_spotify_budget_slot": 1793448050.309752,
+  "__v150_next_spotify_round_at": 1793448298.282285,
+  "__v146_spotify_budget_slot": 1793448178.3255033,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14062,6 +14066,10 @@
     "the wailin' jennys|||take it down": {
       "artist": "The Wailin' Jennys",
       "title": "Take It Down"
+    },
+    "brian eno|||spinning away": {
+      "artist": "Brian Eno, John Cale",
+      "title": "Spinning Away"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14709,6 +14717,11 @@
       "uri": "spotify:track:49OyIwWLgVoGBA0zJBOqB0",
       "artist": "The Wailin' Jennys",
       "title": "Take It Down"
+    },
+    "brian eno|||spinning away": {
+      "uri": "spotify:track:1aMJTyCRfxfp8luej4rjAC",
+      "artist": "Brian Eno, John Cale",
+      "title": "Spinning Away"
     }
   },
   "__pending_library_likes": {},
@@ -14844,5 +14857,6 @@
   "__last_radio_key_mellow_mix": "brian eno|||spinning away",
   "__match_v35__paul simon|||she moves on": "spotify:track:1RxlMG0bJhJdR5H6wL2oJf",
   "__match_v35__sasami & soccer mommy|||just be friends soccer mommy version": "spotify:track:7vgPcT0kQIeDQJaDWNIqyV",
-  "__match_v35__the wailin' jennys|||take it down": "spotify:track:49OyIwWLgVoGBA0zJBOqB0"
+  "__match_v35__the wailin' jennys|||take it down": "spotify:track:49OyIwWLgVoGBA0zJBOqB0",
+  "__match_v35__brian eno|||spinning away": "spotify:track:1aMJTyCRfxfp8luej4rjAC"
 }
