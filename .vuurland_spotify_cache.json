@@ -266,6 +266,7 @@
     "arcade fire|||speaking in tongues feat david byrne",
     "arcade fire|||the suburbs",
     "arcade fire|||wake up",
+    "arctic monkeys|||body paint",
     "arctic monkeys|||sculptures of anything goes",
     "arctic monkeys|||there'd better be a mirrorball",
     "arctic monkeys|||there’d better be a mirrorball",
@@ -5667,6 +5668,7 @@
     "spotify:track:42EMSKPgulAzr4RLY65Eut",
     "spotify:track:42Eoh5RxHjeMc6PXdcZhrU",
     "spotify:track:42G2iOzg2XJ1AGixhNV6cE",
+    "spotify:track:42GuKw49pPxNAkIhWGwgFs",
     "spotify:track:42KRYHsLD4xVaNEwczVdTW",
     "spotify:track:42tTvYqZGOncq2n7tUMNdf",
     "spotify:track:42wOySSV3mE3lSo12wKbmL",
@@ -8005,6 +8007,7 @@
     "GBCEL2100557",
     "GBCEL2200512",
     "GBCEL2200514",
+    "GBCEL2200516",
     "GBCEL2300157",
     "GBCEL2303188",
     "GBCEL2303189",
@@ -12691,13 +12694,14 @@
     "spotify:track:1CCP57xyKnw07GDr1Ch2NN": "FRIDO2212389",
     "spotify:track:0fdafv3aneWHlmBnONMRnQ": "NLB601800402",
     "spotify:track:70M5IzWpbizxtFrPX99JyB": "BET020901008",
-    "spotify:track:61Xa5pBWdJm5b98IQG6kFp": "BE9GL2400001"
+    "spotify:track:61Xa5pBWdJm5b98IQG6kFp": "BE9GL2400001",
+    "spotify:track:42GuKw49pPxNAkIhWGwgFs": "GBCEL2200516"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2841,
+  "__vuurland_active_playlist_count": 2842,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12732,7 +12736,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793435254.1707287
+    "vuurland": 1793435264.2667117
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13119,8 +13123,8 @@
   "__last_radio_key_vuurland": "bleachers|||you and forever",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 132,
-  "__v150_next_spotify_round_at": 1793435256.7547653,
-  "__v146_spotify_budget_slot": 1793435136.7962945,
+  "__v150_next_spotify_round_at": 1793435384.2668085,
+  "__v146_spotify_budget_slot": 1793435264.3087134,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13556,6 +13560,10 @@
     "sylvie kreusch|||comic trip": {
       "artist": "Sylvie Kreusch",
       "title": "Comic Trip"
+    },
+    "arctic monkeys|||body paint": {
+      "artist": "Arctic Monkeys",
+      "title": "Body Paint"
     }
   },
   "__v82_confirmed_catalog": {
@@ -14098,6 +14106,11 @@
       "uri": "spotify:track:61Xa5pBWdJm5b98IQG6kFp",
       "artist": "Sylvie Kreusch",
       "title": "Comic Trip"
+    },
+    "arctic monkeys|||body paint": {
+      "uri": "spotify:track:42GuKw49pPxNAkIhWGwgFs",
+      "artist": "Arctic Monkeys",
+      "title": "Body Paint"
     }
   },
   "__pending_library_likes": {},
@@ -14209,5 +14222,6 @@
   "__match_v35__later|||she is coming": "spotify:track:1CCP57xyKnw07GDr1Ch2NN",
   "__match_v35__danny vera|||oblivious desire": "spotify:track:0fdafv3aneWHlmBnONMRnQ",
   "__match_v35__absynthe minded|||envoi": "spotify:track:70M5IzWpbizxtFrPX99JyB",
-  "__match_v35__sylvie kreusch|||comic trip": "spotify:track:61Xa5pBWdJm5b98IQG6kFp"
+  "__match_v35__sylvie kreusch|||comic trip": "spotify:track:61Xa5pBWdJm5b98IQG6kFp",
+  "__match_v35__arctic monkeys|||body paint": "spotify:track:42GuKw49pPxNAkIhWGwgFs"
 }
