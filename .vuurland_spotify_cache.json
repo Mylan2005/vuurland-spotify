@@ -1181,6 +1181,7 @@
     "eddie vedder|||guaranteed",
     "eddie vedder|||hard sun",
     "eddie vedder|||long nights",
+    "eddie vedder|||matter of time",
     "eddie vedder|||rise",
     "eddie vedder|||society",
     "eddie vedder|||the haves",
@@ -5565,6 +5566,7 @@
     "spotify:track:3PEYu4hdk02Kj8v5qnHrUL",
     "spotify:track:3PMKdAghmG9Fjjct3l9EBp",
     "spotify:track:3PURbsY67tLMyausOABtit",
+    "spotify:track:3PbPLPjQDuliGVHItDtUXr",
     "spotify:track:3PmMPXertCPdzeBqhwWd1D",
     "spotify:track:3PppWqmsD5jpwWBfOM4YNM",
     "spotify:track:3Pqy5RRW33bhxYXN0ZZNXG",
@@ -9953,6 +9955,7 @@
     "USUG11903167",
     "USUG12002838",
     "USUG12002843",
+    "USUG12004346",
     "USUG12004711",
     "USUG12100488",
     "USUG12100497",
@@ -13003,13 +13006,14 @@
     "spotify:track:62xgZndm9gNlh8fJEfio6F": "GBAFL9200176",
     "spotify:track:27SumQMLlRgVS7RqO7cpk6": "USAT29500027",
     "spotify:track:3g2B9XSwb56gfLWx6FTZvy": "GX38U2375439",
-    "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV": "GBAFL1300057"
+    "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV": "GBAFL1300057",
+    "spotify:track:3PbPLPjQDuliGVHItDtUXr": "USUG12004346"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2921,
+  "__vuurland_active_playlist_count": 2922,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13424,10 +13428,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793457208.6873453,
-    "mellow_mix": 1793457208.6897955,
-    "big_sonic_heaven": 1793457208.6919212,
-    "dkfm_edge": 1793457208.6944125
+    "vuurland": 1793457219.7558415,
+    "mellow_mix": 1793457219.7582564,
+    "big_sonic_heaven": 1793457219.7603397,
+    "dkfm_edge": 1793457219.7628102
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -14255,8 +14259,8 @@
   "__last_radio_key_vuurland": "mayorga|||weekend lover",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 215,
-  "__v150_next_spotify_round_at": 1793457219.328943,
-  "__v146_spotify_budget_slot": 1793457099.389566,
+  "__v150_next_spotify_round_at": 1793457339.7629046,
+  "__v146_spotify_budget_slot": 1793457219.822309,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14988,6 +14992,10 @@
     "the national|||don't swallow the cap": {
       "artist": "The National",
       "title": "Don't Swallow the Cap"
+    },
+    "eddie vedder|||matter of time": {
+      "artist": "Eddie Vedder",
+      "title": "Matter of Time"
     }
   },
   "__v82_confirmed_catalog": {
@@ -15900,6 +15908,11 @@
       "uri": "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV",
       "artist": "The National",
       "title": "Don't Swallow the Cap"
+    },
+    "eddie vedder|||matter of time": {
+      "uri": "spotify:track:3PbPLPjQDuliGVHItDtUXr",
+      "artist": "Eddie Vedder",
+      "title": "Matter of Time"
     }
   },
   "__pending_library_likes": {},
@@ -19535,6 +19548,7 @@
     "live_keys": [
       "collective soul|||reunion",
       "crosby stills & nash|||helplessly hoping",
+      "eddie vedder|||matter of time",
       "pale saints|||blue flower",
       "shawn colvin|||looking for the heart of saturday night",
       "the barr brothers|||beggar in the morning",
@@ -19542,6 +19556,7 @@
     ],
     "live_uris": [
       "spotify:track:27SumQMLlRgVS7RqO7cpk6",
+      "spotify:track:3PbPLPjQDuliGVHItDtUXr",
       "spotify:track:3g2B9XSwb56gfLWx6FTZvy",
       "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV",
       "spotify:track:62xgZndm9gNlh8fJEfio6F",
@@ -19554,7 +19569,8 @@
       "GBAFL9200176",
       "GX38U2375439",
       "USAT20100512",
-      "USAT29500027"
+      "USAT29500027",
+      "USUG12004346"
     ],
     "live_uri_isrc": {
       "spotify:track:7pCF5qq2HYbPTXXglBdqaO": "CA0RZ1100071",
@@ -19562,7 +19578,8 @@
       "spotify:track:62xgZndm9gNlh8fJEfio6F": "GBAFL9200176",
       "spotify:track:27SumQMLlRgVS7RqO7cpk6": "USAT29500027",
       "spotify:track:3g2B9XSwb56gfLWx6FTZvy": "GX38U2375439",
-      "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV": "GBAFL1300057"
+      "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV": "GBAFL1300057",
+      "spotify:track:3PbPLPjQDuliGVHItDtUXr": "USUG12004346"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -19572,5 +19589,6 @@
   "__match_v35__shawn colvin|||looking for the heart of saturday night": "spotify:track:3g2B9XSwb56gfLWx6FTZvy",
   "__v186_dkfm_edge_four_source_baseline": true,
   "__last_radio_key_dkfm_edge": "somesurprises|||be reasonable",
-  "__match_v35__the national|||don't swallow the cap": "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV"
+  "__match_v35__the national|||don't swallow the cap": "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV",
+  "__match_v35__eddie vedder|||matter of time": "spotify:track:3PbPLPjQDuliGVHItDtUXr"
 }
