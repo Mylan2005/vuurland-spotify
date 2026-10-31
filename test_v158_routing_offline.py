@@ -1,4 +1,4 @@
-"""Regression: Vuurland + Mellow Mix routing, disabled queues cleaned, German-vocal exclusion retained."""
+"""Regression: three live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
 import ast
 from pathlib import Path
 
@@ -20,7 +20,7 @@ assert '"tracks": get_radio_x_chilled_tracks()' not in body
 assert '"tracks": get_dreampop_radio_tracks()' not in body
 assert '"big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks,' in body
 assert '"radio_britannia": ("Radio Britannia", get_radio_britannia_tracks,' in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix")' in source
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")' in source
 assert '"tracks": dkfm_vuurland_filter(get_dkfm_edge_tracks(), "DKFM Edge")' not in body
 assert '"tracks": dkfm_vuurland_filter(get_dkfm_shoegaze_tracks(), "DKFM Shoegaze")' not in body
 assert 'before_source_filter = len(live_queue)' in body
@@ -30,7 +30,7 @@ assert 'v140_is_unwanted_language_title(title, artist)' in body
 assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' not in body
 assert 'big_sonic_destination(artist) == "review"' not in body
 assert '__big_sonic_review_scan_complete' not in body
-print("✅ Vuurland en Mellow Mix actief, overige bronnen uit FIFO, Duitse zangblokkering behouden.")
+print("✅ Vuurland, Mellow Mix en Big Sonic Heaven actief; overige bronnen uit FIFO, Duitse zangblokkering behouden.")
 
 assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
 
