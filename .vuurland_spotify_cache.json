@@ -979,6 +979,7 @@
     "cristovam|||fever",
     "cristovam|||fever (feat. boy & bear)",
     "cristovam|||fever feat boy & bear",
+    "crosby stills & nash|||helplessly hoping",
     "crowded house|||weather with you",
     "curtis harding|||if words were flowers",
     "curtis mayfield|||when seasons change",
@@ -7061,6 +7062,7 @@
     "spotify:track:7hwBEnwYB2IJxAqemfaghV",
     "spotify:track:7hwtROpIHwUU6Y3xMbjIpo",
     "spotify:track:7iGcDYlAdinPkG3zLrtZTX",
+    "spotify:track:7ieCy9tubdq5vsDm5MY2d7",
     "spotify:track:7ihwGiBDcSFAnbqtVdPCfr",
     "spotify:track:7isVqPzG3R5ni6IM4YG0sv",
     "spotify:track:7izvpfJAEi2EObfHFOxfkG",
@@ -9454,6 +9456,7 @@
     "USAR18200010",
     "USAR19700021",
     "USAT20001177",
+    "USAT20100512",
     "USAT20504676",
     "USAT20504677",
     "USAT20903243",
@@ -12983,13 +12986,14 @@
     "spotify:track:2w9liMSRv3edqM67cGUamD": "GBBKS2600147",
     "spotify:track:0nLkVbVlIYIPsCTUYYiOuu": "GBBKS2600145",
     "spotify:track:3GOOBbC0uedCdUQZfSrwOp": "GBBKS2600143",
-    "spotify:track:7pCF5qq2HYbPTXXglBdqaO": "CA0RZ1100071"
+    "spotify:track:7pCF5qq2HYbPTXXglBdqaO": "CA0RZ1100071",
+    "spotify:track:7ieCy9tubdq5vsDm5MY2d7": "USAT20100512"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2916,
+  "__vuurland_active_playlist_count": 2917,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -13298,9 +13302,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793456445.4810653,
-    "mellow_mix": 1793456445.4834268,
-    "big_sonic_heaven": 1793456445.4854324
+    "vuurland": 1793456456.4221678,
+    "mellow_mix": 1793456456.42459,
+    "big_sonic_heaven": 1793456456.4265623
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -13998,8 +14002,8 @@
   "__last_radio_key_vuurland": "arno|||la verite",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 206,
-  "__v150_next_spotify_round_at": 1793456445.5412443,
-  "__v146_spotify_budget_slot": 1793456325.5882454,
+  "__v150_next_spotify_round_at": 1793456576.42665,
+  "__v146_spotify_budget_slot": 1793456456.4856236,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -14711,6 +14715,10 @@
     "the barr brothers|||beggar in the morning": {
       "artist": "The Barr Brothers",
       "title": "Beggar in the Morning"
+    },
+    "crosby stills & nash|||helplessly hoping": {
+      "artist": "Crosby, Stills & Nash",
+      "title": "Helplessly Hoping"
     }
   },
   "__v82_confirmed_catalog": {
@@ -15598,6 +15606,11 @@
       "uri": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
       "artist": "The Barr Brothers",
       "title": "Beggar in the Morning"
+    },
+    "crosby stills & nash|||helplessly hoping": {
+      "uri": "spotify:track:7ieCy9tubdq5vsDm5MY2d7",
+      "artist": "Crosby, Stills & Nash",
+      "title": "Helplessly Hoping"
     }
   },
   "__pending_library_likes": {},
@@ -19231,17 +19244,22 @@
       ]
     },
     "live_keys": [
+      "crosby stills & nash|||helplessly hoping",
       "the barr brothers|||beggar in the morning"
     ],
     "live_uris": [
+      "spotify:track:7ieCy9tubdq5vsDm5MY2d7",
       "spotify:track:7pCF5qq2HYbPTXXglBdqaO"
     ],
     "live_isrcs": [
-      "CA0RZ1100071"
+      "CA0RZ1100071",
+      "USAT20100512"
     ],
     "live_uri_isrc": {
-      "spotify:track:7pCF5qq2HYbPTXXglBdqaO": "CA0RZ1100071"
+      "spotify:track:7pCF5qq2HYbPTXXglBdqaO": "CA0RZ1100071",
+      "spotify:track:7ieCy9tubdq5vsDm5MY2d7": "USAT20100512"
     }
   },
-  "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO"
+  "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
+  "__match_v35__crosby stills & nash|||helplessly hoping": "spotify:track:7ieCy9tubdq5vsDm5MY2d7"
 }
