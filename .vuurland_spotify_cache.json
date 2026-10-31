@@ -2729,6 +2729,7 @@
     "ocie elliott|||thinking about you",
     "octave lissner|||my grace",
     "octave lissner|||penelope",
+    "oh wonder|||lose it",
     "olafur arnalds & arnor dan & nils frahm|||for now i am winter - nils frahm rework",
     "olafur arnalds & ella mcrobb|||and we’ll leave it there…",
     "olafur arnalds & jfdr|||back to the sky",
@@ -4981,6 +4982,7 @@
     "spotify:track:2PuakTXE2v2j2F86V92ZvD",
     "spotify:track:2QDMRklSN0gJhfHH9W2CvD",
     "spotify:track:2QPgkd7IteBb7ONLgTQ5nc",
+    "spotify:track:2QgNcjwEn0vGmTommfszQd",
     "spotify:track:2QhURnm7mQDxBb5jWkbDug",
     "spotify:track:2QlpF2Z39wnjFmo4RZlPax",
     "spotify:track:2QmF1h2swBGZMCgaNXvwvF",
@@ -7589,6 +7591,7 @@
     "GB6TW2500284",
     "GB8MX2200923",
     "GB8MX2201129",
+    "GB9L31400027",
     "GB9TP1900260",
     "GBA176700080",
     "GBAAM0201175",
@@ -12495,13 +12498,14 @@
     "spotify:track:7sONKBwdIl3XUBzpZTpKQ9": "BET020901002",
     "spotify:track:12LBW8mA4LOKnURnzCKrvo": "USC4R2556041",
     "spotify:track:3boMR8d6f8NA8OYsiSRMkH": "QZXDB2300087",
-    "spotify:track:4KlL5Bwlm4yHYxr0B2rHci": "GBARL1202014"
+    "spotify:track:4KlL5Bwlm4yHYxr0B2rHci": "GBARL1202014",
+    "spotify:track:2QgNcjwEn0vGmTommfszQd": "GB9L31400027"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2793,
+  "__vuurland_active_playlist_count": 2794,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12613,7 +12617,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793406872.8385491
+    "vuurland": 1793406882.2024057
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12924,8 +12928,8 @@
   "__last_radio_key_vuurland": "oh wonder|||lose it",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 81,
-  "__v150_next_spotify_round_at": 1793406876.0891113,
-  "__v146_spotify_budget_slot": 1793406756.1278975,
+  "__v150_next_spotify_round_at": 1793407002.2025087,
+  "__v146_spotify_budget_slot": 1793406882.2406106,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13161,6 +13165,10 @@
     "tom odell|||heal": {
       "artist": "Tom Odell",
       "title": "Heal"
+    },
+    "oh wonder|||lose it": {
+      "artist": "Oh Wonder",
+      "title": "Lose It"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13453,6 +13461,11 @@
       "uri": "spotify:track:4KlL5Bwlm4yHYxr0B2rHci",
       "artist": "Tom Odell",
       "title": "Heal"
+    },
+    "oh wonder|||lose it": {
+      "uri": "spotify:track:2QgNcjwEn0vGmTommfszQd",
+      "artist": "Oh Wonder",
+      "title": "Lose It"
     }
   },
   "__pending_library_likes": {},
@@ -13514,5 +13527,6 @@
   "__match_v35__absynthe minded|||heaven knows": "spotify:track:7sONKBwdIl3XUBzpZTpKQ9",
   "__match_v35__matt berninger & rosanne cash|||who loves the sun": "spotify:track:12LBW8mA4LOKnURnzCKrvo",
   "__match_v35__david kushner|||hero": "spotify:track:3boMR8d6f8NA8OYsiSRMkH",
-  "__match_v35__tom odell|||heal": "spotify:track:4KlL5Bwlm4yHYxr0B2rHci"
+  "__match_v35__tom odell|||heal": "spotify:track:4KlL5Bwlm4yHYxr0B2rHci",
+  "__match_v35__oh wonder|||lose it": "spotify:track:2QgNcjwEn0vGmTommfszQd"
 }
