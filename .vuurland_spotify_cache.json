@@ -2557,6 +2557,7 @@
     "nathaniel rateliff|||tommy's song",
     "nathaniel rateliff|||tommy’s song",
     "nature|||pretend feat nature",
+    "nectar woode|||rivers end",
     "neil young & crazy horse|||my my, hey hey (out of the blue) - live; 2016 remaster",
     "neil young|||crazy horse|||my my, hey hey (out of the blue) - live; 2016 remaster",
     "neil young|||harvest moon",
@@ -5863,6 +5864,7 @@
     "spotify:track:4i17ViZoevssgUvRifo0V5",
     "spotify:track:4i4ArYpqtsA3MJ1k0o2dxq",
     "spotify:track:4iMvFFQwzEaoI5xzZE0W2y",
+    "spotify:track:4iU6dFUo07jr6jBuwaUUk8",
     "spotify:track:4jGfNIAPEJNpHoGm4r5znR",
     "spotify:track:4jLv3tDBu8ww2R07DvL12s",
     "spotify:track:4jaWgF0XRhjp8NI0q4UQSa",
@@ -7769,6 +7771,7 @@
     "GBARL2200385",
     "GBARL2200386",
     "GBARL2500113",
+    "GBARL2600502",
     "GBAXQ1533903",
     "GBAYC1801670",
     "GBAYC1902043",
@@ -12543,13 +12546,14 @@
     "spotify:track:3zJ5RDG0bLQAV2rntFgUtb": "GBUM71902961",
     "spotify:track:6C7S3LAPokFppY2ttt6VSi": "BEKE52400076",
     "spotify:track:15MeoWrsBkJNF6rF6XCKYg": "GBAHT1200263",
-    "spotify:track:2WOpBtXX02RS4UCzBholDq": "IEABD1400007"
+    "spotify:track:2WOpBtXX02RS4UCzBholDq": "IEABD1400007",
+    "spotify:track:4iU6dFUo07jr6jBuwaUUk8": "GBARL2600502"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 2805,
+  "__vuurland_active_playlist_count": 2806,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -12661,7 +12665,7 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793413596.1022549
+    "vuurland": 1793413605.6277468
   },
   "__v180_big_sonic_fresh_start": true,
   "__v95_live_fifo_initialized": true,
@@ -12990,8 +12994,8 @@
   "__last_radio_key_vuurland": "nectar woode|||rivers end",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 93,
-  "__v150_next_spotify_round_at": 1793413598.1915317,
-  "__v146_spotify_budget_slot": 1793413097.282399,
+  "__v150_next_spotify_round_at": 1793413725.6278396,
+  "__v146_spotify_budget_slot": 1793413605.6668463,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -13275,6 +13279,10 @@
     "damien rice|||i don't want to change you": {
       "artist": "Damien Rice",
       "title": "I Don't Want to Change You"
+    },
+    "nectar woode|||rivers end": {
+      "artist": "Nectar Woode",
+      "title": "Rivers End"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13627,6 +13635,11 @@
       "uri": "spotify:track:2WOpBtXX02RS4UCzBholDq",
       "artist": "Damien Rice",
       "title": "I Don't Want to Change You"
+    },
+    "nectar woode|||rivers end": {
+      "uri": "spotify:track:4iU6dFUo07jr6jBuwaUUk8",
+      "artist": "Nectar Woode",
+      "title": "Rivers End"
     }
   },
   "__pending_library_likes": {},
@@ -13700,5 +13713,6 @@
   "__match_v35__michael kiwanuka|||you ain't the problem": "spotify:track:3zJ5RDG0bLQAV2rntFgUtb",
   "__match_v35__dressed like boys|||healing": "spotify:track:6C7S3LAPokFppY2ttt6VSi",
   "__match_v35__lianne la havas|||hey that's no way to say goodbye": "spotify:track:15MeoWrsBkJNF6rF6XCKYg",
-  "__match_v35__damien rice|||i don't want to change you": "spotify:track:2WOpBtXX02RS4UCzBholDq"
+  "__match_v35__damien rice|||i don't want to change you": "spotify:track:2WOpBtXX02RS4UCzBholDq",
+  "__match_v35__nectar woode|||rivers end": "spotify:track:4iU6dFUo07jr6jBuwaUUk8"
 }
