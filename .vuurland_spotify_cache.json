@@ -2744,6 +2744,7 @@
     "neil young|||crazy horse|||my my, hey hey (out of the blue) - live; 2016 remaster",
     "neil young|||harvest moon",
     "neil young|||heart of gold",
+    "neil young|||helpless",
     "neil young|||my my hey hey out of the blue - live; 2016 remaster",
     "neil young|||my my, hey hey (out of the blue) - live; 2016 remaster",
     "neko case|||furnace room lullaby",
@@ -5653,6 +5654,7 @@
     "spotify:track:2xqACDfEkef0HzyjfzNfQb",
     "spotify:track:2xvaAfj3UwqdVBUT7Y4scx",
     "spotify:track:2xvlhh8v0iXjPUZQ0QWghu",
+    "spotify:track:2y3Ek8naO0FJgNaddG12TU",
     "spotify:track:2yPk75TgsIQyQU2NKepVwo",
     "spotify:track:2yQOEYYRgdBAiQtJfjVYUu",
     "spotify:track:2yVMOxU7zgXDVKjhTKDAuo",
@@ -10404,6 +10406,7 @@
     "USRE19600085",
     "USRE19800776",
     "USRE19900182",
+    "USRE19900419",
     "USRE19900694",
     "USRE19901573",
     "USRH10450825",
@@ -13780,13 +13783,14 @@
     "spotify:track:01XWIaKttZMeZcf9pP3udB": "USVR91059704",
     "spotify:track:1T25fLZrzuMp8Ve8ZQPE01": "QZS7J2516081",
     "spotify:track:1iWzGgaXWw98L85CxDqFEw": "DEE022301100",
-    "spotify:track:4XqUtpkr6NEXI5px3j9I8I": "USSUB2467507"
+    "spotify:track:4XqUtpkr6NEXI5px3j9I8I": "USSUB2467507",
+    "spotify:track:2y3Ek8naO0FJgNaddG12TU": "USRE19900419"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3122,
+  "__vuurland_active_playlist_count": 3123,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -14362,10 +14366,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793487594.403306,
-    "mellow_mix": 1793487594.4072578,
-    "big_sonic_heaven": 1793487594.4105566,
-    "dkfm_edge": 1793487594.4149,
+    "vuurland": 1793487605.6523688,
+    "mellow_mix": 1793487605.6562312,
+    "big_sonic_heaven": 1793487605.6594806,
+    "dkfm_edge": 1793487605.6637566,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -16053,9 +16057,9 @@
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "nick mulvey|||cucurucu",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 762,
-  "__v150_next_spotify_round_at": 1793487594.9938383,
-  "__v146_spotify_budget_slot": 1793487475.1324186,
+  "__v116_fifo_next_sequence": 763,
+  "__v150_next_spotify_round_at": 1793487725.7395573,
+  "__v146_spotify_budget_slot": 1793487605.911854,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -17563,6 +17567,10 @@
     "frankie cosmos|||vanity": {
       "artist": "Frankie Cosmos",
       "title": "Vanity"
+    },
+    "neil young|||helpless": {
+      "artist": "Neil Young",
+      "title": "Helpless"
     }
   },
   "__v82_confirmed_catalog": {
@@ -19445,6 +19453,11 @@
       "uri": "spotify:track:4XqUtpkr6NEXI5px3j9I8I",
       "artist": "Frankie Cosmos",
       "title": "Vanity"
+    },
+    "neil young|||helpless": {
+      "uri": "spotify:track:2y3Ek8naO0FJgNaddG12TU",
+      "artist": "Neil Young",
+      "title": "Helpless"
     }
   },
   "__pending_library_likes": {},
@@ -24226,6 +24239,7 @@
       "natalie merchant|||giving up everything",
       "nation of language|||tougher than the rest",
       "neil halstead|||two stones in my pocket",
+      "neil young|||helpless",
       "neko case|||furnace room lullaby",
       "new german cinema|||water drops",
       "newdad|||sickly sweet",
@@ -24404,6 +24418,7 @@
       "spotify:track:2mUl2MNzIO6BHCrI1QdEcj",
       "spotify:track:2njacMNMduDpk2Rhg06sp3",
       "spotify:track:2rslQV48gNv3r9pPrQFPW1",
+      "spotify:track:2y3Ek8naO0FJgNaddG12TU",
       "spotify:track:2zSfeFl0jPKWi5DbiTY6xO",
       "spotify:track:2zbhHh1FpFELv8R6vDriyV",
       "spotify:track:33YHdYVqAZvUGm78P4AfsB",
@@ -24700,6 +24715,7 @@
       "USRC11802773",
       "USRE10100003",
       "USRE17900004",
+      "USRE19900419",
       "USRO22607154",
       "USRXL1000128",
       "USSM10008157",
@@ -24925,7 +24941,8 @@
       "spotify:track:01XWIaKttZMeZcf9pP3udB": "USVR91059704",
       "spotify:track:1T25fLZrzuMp8Ve8ZQPE01": "QZS7J2516081",
       "spotify:track:1iWzGgaXWw98L85CxDqFEw": "DEE022301100",
-      "spotify:track:4XqUtpkr6NEXI5px3j9I8I": "USSUB2467507"
+      "spotify:track:4XqUtpkr6NEXI5px3j9I8I": "USSUB2467507",
+      "spotify:track:2y3Ek8naO0FJgNaddG12TU": "USRE19900419"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -61150,9 +61167,10 @@
     "band of horses|||detlef schrempf",
     "jonsi & alex|||atlas song",
     "fugazi|||the kill",
-    "carrera|||that time of the year"
+    "carrera|||that time of the year",
+    "russian circles|||memorial feat chelsea wolfe"
   ],
-  "__duyster_last_emission_v1": 1793487543.3256695,
+  "__duyster_last_emission_v1": 1793487605.6657052,
   "__match_v35__nation of language|||tougher than the rest": "spotify:track:7t0MtBzJwoYBkdyeFDlzYS",
   "__match_v35__future islands|||peach": "spotify:track:2njacMNMduDpk2Rhg06sp3",
   "__not_found_v35__school girl complex|||summer evening and you": 1793478231,
@@ -61218,5 +61236,6 @@
   "__match_v35__noel gallagher|||don't look back in anger": "spotify:track:1T25fLZrzuMp8Ve8ZQPE01",
   "__match_v35__meltway|||disarray": "spotify:track:1iWzGgaXWw98L85CxDqFEw",
   "__not_found_v35__stillfilms|||fader": 1793487355,
-  "__match_v35__frankie cosmos|||vanity": "spotify:track:4XqUtpkr6NEXI5px3j9I8I"
+  "__match_v35__frankie cosmos|||vanity": "spotify:track:4XqUtpkr6NEXI5px3j9I8I",
+  "__match_v35__neil young|||helpless": "spotify:track:2y3Ek8naO0FJgNaddG12TU"
 }
