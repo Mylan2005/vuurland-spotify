@@ -996,6 +996,7 @@
     "coco|||moodrings",
     "coco|||omen",
     "coco|||precious things",
+    "cocteau twins & harold budd|||sea swallow me",
     "cocteau twins|||bluebeard",
     "cold gawd|||malibu beach house",
     "cold morning colors|||floating",
@@ -7686,6 +7687,7 @@
     "spotify:track:7v0S4G9weInU5QuFOhnhUv",
     "spotify:track:7vCuaxRIKElwgjSAo5REkw",
     "spotify:track:7vE8x4aU44SaoKxH1rQP3s",
+    "spotify:track:7vPHiwgCOAjSBRjAirbMvS",
     "spotify:track:7vXq8qmfaXFh8D1ihjjbLx",
     "spotify:track:7veb9zQVDfXiXFl3WZbcXK",
     "spotify:track:7vgPcT0kQIeDQJaDWNIqyV",
@@ -8559,6 +8561,7 @@
     "GBAFL2600230",
     "GBAFL8400013",
     "GBAFL8500084",
+    "GBAFL8600048",
     "GBAFL9000042",
     "GBAFL9200176",
     "GBAFL9500045",
@@ -14062,13 +14065,14 @@
     "spotify:track:14oBbpDP6YbwdugLOlOLBz": "AUBEC2431179",
     "spotify:track:0YfOnJWqmAKaUvEL1QcNop": "USA176420220",
     "spotify:track:5Jk1IbL395q0Pf30nQspus": "QZTAY2401428",
-    "spotify:track:7EN0AF7fQUg6dn4wF758G2": "FR2T01100006"
+    "spotify:track:7EN0AF7fQUg6dn4wF758G2": "FR2T01100006",
+    "spotify:track:7vPHiwgCOAjSBRjAirbMvS": "GBAFL8600048"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3192,
+  "__vuurland_active_playlist_count": 3193,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -14644,10 +14648,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793497188.2332,
-    "mellow_mix": 1793497188.23815,
-    "big_sonic_heaven": 1793497188.2420251,
-    "dkfm_edge": 1793497188.2470205,
+    "vuurland": 1793497199.366586,
+    "mellow_mix": 1793497199.3716836,
+    "big_sonic_heaven": 1793497199.3755183,
+    "dkfm_edge": 1793497199.3804495,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -16498,9 +16502,9 @@
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "midlake|||acts of man",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 999,
-  "__v150_next_spotify_round_at": 1793497188.4549606,
-  "__v146_spotify_budget_slot": 1793497068.6120722,
+  "__v116_fifo_next_sequence": 1000,
+  "__v150_next_spotify_round_at": 1793497319.4594877,
+  "__v146_spotify_budget_slot": 1793497199.6159267,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -18288,6 +18292,10 @@
     "nicolas jaar|||colomb": {
       "artist": "Nicolas Jaar",
       "title": "Colomb"
+    },
+    "cocteau twins & harold budd|||sea swallow me": {
+      "artist": "Cocteau Twins, Harold Budd",
+      "title": "Sea, Swallow Me"
     }
   },
   "__v82_confirmed_catalog": {
@@ -20520,6 +20528,11 @@
       "uri": "spotify:track:7EN0AF7fQUg6dn4wF758G2",
       "artist": "Nicolas Jaar",
       "title": "Colomb"
+    },
+    "cocteau twins & harold budd|||sea swallow me": {
+      "uri": "spotify:track:7vPHiwgCOAjSBRjAirbMvS",
+      "artist": "Cocteau Twins, Harold Budd",
+      "title": "Sea, Swallow Me"
     }
   },
   "__pending_library_likes": {},
@@ -25237,6 +25250,7 @@
       "childish gambino|||feels like summer",
       "chlorine|||find you",
       "clay and kelsy|||three little birds",
+      "cocteau twins & harold budd|||sea swallow me",
       "cocteau twins|||bluebeard",
       "cold gawd|||malibu beach house",
       "cold morning colors|||floating",
@@ -25740,6 +25754,7 @@
       "spotify:track:7t0MtBzJwoYBkdyeFDlzYS",
       "spotify:track:7uu9polupqTfWHLVPeSsV3",
       "spotify:track:7uukdB2tB0p3l8X6FZLQVr",
+      "spotify:track:7vPHiwgCOAjSBRjAirbMvS",
       "spotify:track:7vXq8qmfaXFh8D1ihjjbLx",
       "spotify:track:7xLBuvmpq4jm0Nz8rZTGd1",
       "spotify:track:7xxXTXs9GqdX6iBLS8gBud"
@@ -25785,6 +25800,7 @@
       "GBAFL2300258",
       "GBAFL8400013",
       "GBAFL8500084",
+      "GBAFL8600048",
       "GBAFL9000042",
       "GBAFL9200176",
       "GBAFL9500045",
@@ -26282,7 +26298,8 @@
       "spotify:track:14oBbpDP6YbwdugLOlOLBz": "AUBEC2431179",
       "spotify:track:0YfOnJWqmAKaUvEL1QcNop": "USA176420220",
       "spotify:track:5Jk1IbL395q0Pf30nQspus": "QZTAY2401428",
-      "spotify:track:7EN0AF7fQUg6dn4wF758G2": "FR2T01100006"
+      "spotify:track:7EN0AF7fQUg6dn4wF758G2": "FR2T01100006",
+      "spotify:track:7vPHiwgCOAjSBRjAirbMvS": "GBAFL8600048"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -62614,9 +62631,10 @@
     "kaki king|||bone chaos in the castle",
     "curbside lambsear|||uneasy",
     "the dead texan|||the struggle",
-    "the bv's|||taking pictures of taking pictures"
+    "the bv's|||taking pictures of taking pictures",
+    "electrelane|||bells"
   ],
-  "__duyster_last_emission_v1": 1793497136.1600592,
+  "__duyster_last_emission_v1": 1793497199.3830242,
   "__match_v35__nation of language|||tougher than the rest": "spotify:track:7t0MtBzJwoYBkdyeFDlzYS",
   "__match_v35__future islands|||peach": "spotify:track:2njacMNMduDpk2Rhg06sp3",
   "__not_found_v35__school girl complex|||summer evening and you": 1793478231,
@@ -62754,5 +62772,6 @@
   "__match_v35__lucidbloom|||signals in the skies": "spotify:track:14oBbpDP6YbwdugLOlOLBz",
   "__match_v35__sam cooke|||a change is gonna come": "spotify:track:0YfOnJWqmAKaUvEL1QcNop",
   "__match_v35__cold morning colors|||floating": "spotify:track:5Jk1IbL395q0Pf30nQspus",
-  "__match_v35__nicolas jaar|||colomb": "spotify:track:7EN0AF7fQUg6dn4wF758G2"
+  "__match_v35__nicolas jaar|||colomb": "spotify:track:7EN0AF7fQUg6dn4wF758G2",
+  "__match_v35__cocteau twins & harold budd|||sea swallow me": "spotify:track:7vPHiwgCOAjSBRjAirbMvS"
 }
