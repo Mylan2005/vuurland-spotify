@@ -6769,103 +6769,6 @@ def dkfm_vuurland_filter(tracks, station):
     return kept
 
 
-def _duyster_cleanup_round(cache):
-    """Remove at most one verified Duyster-only Spotify item per 120 seconds.
-
-    Candidate provenance comes from the durable Duyster emission register,
-    never merely from the broader archive. RadioBox observations override it.
-    Scan playlists incrementally before making any destructive change.
-    """
-    now = time.time()
-    pending_unlikes = cache.get("__duyster_pending_unlikes_v1", [])
-    if isinstance(pending_unlikes, list) and pending_unlikes:
-        uri = pending_unlikes[0]
-        spotify_request("DELETE", "/me/library", params={"uris": uri})
-        pending_unlikes.pop(0)
-        cache["__duyster_pending_unlikes_v1"] = pending_unlikes
-        save_cache(cache)
-        print("💔 Eerder verwijderde Duyster-track alsnog ontlikt.")
-        return
-    if now < float(cache.get("__duyster_cleanup_next_at", 0) or 0):
-        return
-    emitted = set(cache.get("__duyster_used_v1", []) or [])
-    discovered = cache.get("__v47_radio_discovered", {})
-    radio_keys = set()
-    if isinstance(discovered, dict):
-        for source in ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge"):
-            radio_keys.update(discovered.get(source, []) or [])
-    # Other radio entries still in FIFO are protected too.
-    protected = radio_keys
-    candidates = emitted - protected
-    if not candidates:
-        print("🧹 Duyster: geen veilige verwijderkandidaten; Spotify blijft gepauzeerd.")
-        return
-    volumes = dict(cache.get("__vuurland_volume_playlists", {}) or {})
-    volumes.setdefault("1", PLAYLIST_ID)
-    ids = [pid for pid in volumes.values() if isinstance(pid, str) and pid]
-    ids = list(dict.fromkeys(ids))
-    stage = cache.get("__duyster_cleanup_scan_v1")
-    if not isinstance(stage, dict) or stage.get("ids") != ids:
-        stage = {"ids": ids, "index": 0, "offset": 0, "matches": []}
-    # First build a complete snapshot, one page per round.
-    if stage["index"] < len(ids):
-        pid = ids[stage["index"]]
-        data = spotify_request("GET", f"/playlists/{pid}/items",
-                               params={"limit": 50, "offset": stage["offset"]})
-        entries = data.get("items") or []
-        for entry in entries:
-            track = entry.get("item") or {}
-            if not isinstance(track, dict):
-                continue
-            uri = track.get("uri")
-            title = track.get("name", "")
-            artists = track.get("artists") or []
-            artist = ", ".join(a.get("name", "") for a in artists if isinstance(a, dict))
-            key = _v47_key(artist, title)
-            if uri and key in candidates:
-                stage["matches"].append({"playlist_id": pid, "uri": uri, "key": key,
-                                         "artist": artist, "title": title})
-        stage["offset"] += len(entries)
-        if len(entries) < 50:
-            stage["index"] += 1
-            stage["offset"] = 0
-        cache["__duyster_cleanup_scan_v1"] = stage
-        save_cache(cache)
-        print(f"🔎 Duyster opruimscan: volume {stage['index']}/{len(ids)}; "
-              f"{len(stage['matches'])} kandidaten.")
-        return
-    matches = stage["matches"]
-    if not matches:
-        cache["__duyster_cleanup_finished_v1"] = True
-        save_cache(cache)
-        print("✅ Duyster-opruimscan afgerond; geen Duyster-only playlistnummers meer.")
-        return
-    # Recheck protection at removal time; Spotify URI is taken from playlist,
-    # not guessed from search results.
-    item = matches[0]
-    if item["key"] in protected:
-        stage["matches"].pop(0)
-        save_cache(cache)
-        return
-    spotify_request("DELETE", f"/playlists/{item['playlist_id']}/items",
-                    json={"items": [{"uri": item["uri"]}]})
-    # The user confirmed all Duyster-only likes were created by this sync.
-    # Persist a pending unlike so a transient API failure cannot be forgotten.
-    pending = cache.setdefault("__duyster_pending_unlikes_v1", [])
-    if item["uri"] not in pending:
-        pending.append(item["uri"])
-    stage["matches"].pop(0)
-    cache["__duyster_cleanup_next_at"] = now + 120
-    cache["__duyster_cleanup_scan_v1"] = stage
-    save_cache(cache)
-    print(f"🧹 Duyster verwijderd uit Spotify: {item['artist']} — {item['title']}")
-    spotify_request("DELETE", "/me/library", params={"uris": item["uri"]})
-    pending.remove(item["uri"])
-    cache["__duyster_pending_unlikes_v1"] = pending
-    save_cache(cache)
-    print("💔 Duyster-only nummer ontlikt.")
-
-
 def sync():
     # Tijdelijke veilige stop: geen radio-/Spotify-aanvragen of state-wijzigingen.
     # Laat playlists, likes, wachtrijen en caches intact tot de nieuwe bronnen gekozen zijn.
@@ -7241,18 +7144,6 @@ def sync():
         cache["__v181_vuurland_two_missing_recovered"] = True
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
-
-    # Safety hold: no new Spotify additions until historical Duyster playlist
-    # removals and safe, provenance-verified unlikes have been completed.
-    # RadioBox collection above remains active and its FIFO is persisted.
-    atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
-    save_cache(cache)
-    try:
-        _duyster_cleanup_round(cache)
-    except Exception as exc:
-        print(f"⚠️ Duyster-opruiming tijdelijk gepauzeerd: {type(exc).__name__}: {exc}")
-    print("⏸️ RadioBox FIFO blijft verzamelen; Spotify-toevoegingen wachten op Duyster-opruiming.")
-    return
 
     _v116_new = v116_stamp_fifo(live_queue, cache)
     if _v116_new:
