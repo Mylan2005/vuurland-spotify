@@ -1021,6 +1021,7 @@
     "coldplay|||amsterdam",
     "coldplay|||don't panic",
     "coldplay|||everyday life",
+    "coldplay|||for you",
     "coldplay|||god put a smile upon your face",
     "coldplay|||green eyes",
     "coldplay|||politik",
@@ -7382,6 +7383,7 @@
     "spotify:track:6gKljhavSkonhQ42gey01y",
     "spotify:track:6gf9RW0DKG5GUZJcCMGSje",
     "spotify:track:6hCtOkWhJALTOr7cVaALly",
+    "spotify:track:6hQ1OH4kWqkjxpZQt0rNwr",
     "spotify:track:6ho6tr7oqJ4mNOBCxn9Mut",
     "spotify:track:6hp729YavhhHeH62B2QH6J",
     "spotify:track:6hx56UpTxacCNBHR2iDOwN",
@@ -8801,6 +8803,7 @@
     "GBAYC1902043",
     "GBAYC2002639",
     "GBAYE0000046",
+    "GBAYE0000082",
     "GBAYE0000560",
     "GBAYE0000566",
     "GBAYE0000568",
@@ -14365,13 +14368,14 @@
     "spotify:track:3C0kO7Bc51DEcJMep1deQg": "GBAYE2200700",
     "spotify:track:7GvkHsAcykrRyfwjc7k88n": "DEX262500028",
     "spotify:track:6RFHe7TTUMD3Rt8Rw9Xjre": "USCGJ2447167",
-    "spotify:track:3i20L0m43NLToHqoHEsCMn": "GBDRC0001702"
+    "spotify:track:3i20L0m43NLToHqoHEsCMn": "GBDRC0001702",
+    "spotify:track:6hQ1OH4kWqkjxpZQt0rNwr": "GBAYE0000082"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3267,
+  "__vuurland_active_playlist_count": 3268,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -14947,10 +14951,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793507495.459925,
-    "mellow_mix": 1793507495.4666526,
-    "big_sonic_heaven": 1793507495.4720213,
-    "dkfm_edge": 1793507495.4783337,
+    "vuurland": 1793507507.395243,
+    "mellow_mix": 1793507507.4018612,
+    "big_sonic_heaven": 1793507507.4071074,
+    "dkfm_edge": 1793507507.4133966,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -16954,8 +16958,8 @@
   "__last_radio_key_vuurland": "noah kahan|||porch light",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1245,
-  "__v150_next_spotify_round_at": 1793507505.4973156,
-  "__v146_spotify_budget_slot": 1793507385.7321093,
+  "__v150_next_spotify_round_at": 1793507627.4651344,
+  "__v146_spotify_budget_slot": 1793507507.6970217,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -19043,6 +19047,10 @@
     "rothko|||breatharian": {
       "artist": "Rothko",
       "title": "Breatharian"
+    },
+    "coldplay|||for you": {
+      "artist": "Coldplay",
+      "title": "For You"
     }
   },
   "__v82_confirmed_catalog": {
@@ -21650,6 +21658,11 @@
       "uri": "spotify:track:3i20L0m43NLToHqoHEsCMn",
       "artist": "Rothko",
       "title": "Breatharian"
+    },
+    "coldplay|||for you": {
+      "uri": "spotify:track:6hQ1OH4kWqkjxpZQt0rNwr",
+      "artist": "Coldplay",
+      "title": "For You"
     }
   },
   "__pending_library_likes": {},
@@ -26386,6 +26399,7 @@
       "cocteau twins|||bluebeard",
       "cold gawd|||malibu beach house",
       "cold morning colors|||floating",
+      "coldplay|||for you",
       "coldplay|||trouble",
       "collective soul|||forgiveness",
       "collective soul|||reunion",
@@ -26974,6 +26988,7 @@
       "spotify:track:6dwCn6DV1Fbw46BC7VDZqp",
       "spotify:track:6f02TFRypQBf0wkJNMJHe9",
       "spotify:track:6hCtOkWhJALTOr7cVaALly",
+      "spotify:track:6hQ1OH4kWqkjxpZQt0rNwr",
       "spotify:track:6i2iYHBo2L7rtZF0eVpgwS",
       "spotify:track:6iayjmizOWgu48ddaPCGJS",
       "spotify:track:6iiBXYp2IqbNUadeUmbowU",
@@ -27106,6 +27121,7 @@
       "GBARK9200053",
       "GBARL0800259",
       "GBARL0801200",
+      "GBAYE0000082",
       "GBAYE0000560",
       "GBAYE0601696",
       "GBAYE2200700",
@@ -27715,7 +27731,8 @@
       "spotify:track:3C0kO7Bc51DEcJMep1deQg": "GBAYE2200700",
       "spotify:track:7GvkHsAcykrRyfwjc7k88n": "DEX262500028",
       "spotify:track:6RFHe7TTUMD3Rt8Rw9Xjre": "USCGJ2447167",
-      "spotify:track:3i20L0m43NLToHqoHEsCMn": "GBDRC0001702"
+      "spotify:track:3i20L0m43NLToHqoHEsCMn": "GBDRC0001702",
+      "spotify:track:6hQ1OH4kWqkjxpZQt0rNwr": "GBAYE0000082"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -64389,5 +64406,6 @@
   "__match_v35__gabriels|||angels & queens": "spotify:track:3C0kO7Bc51DEcJMep1deQg",
   "__match_v35__will samson|||i will sing again soon": "spotify:track:7GvkHsAcykrRyfwjc7k88n",
   "__match_v35__magic shoppe|||have you seen bella?": "spotify:track:6RFHe7TTUMD3Rt8Rw9Xjre",
-  "__match_v35__rothko|||breatharian": "spotify:track:3i20L0m43NLToHqoHEsCMn"
+  "__match_v35__rothko|||breatharian": "spotify:track:3i20L0m43NLToHqoHEsCMn",
+  "__match_v35__coldplay|||for you": "spotify:track:6hQ1OH4kWqkjxpZQt0rNwr"
 }
