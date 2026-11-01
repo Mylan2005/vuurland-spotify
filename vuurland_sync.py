@@ -90,6 +90,7 @@ ARTIST_ALIASES = {
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
+INDIE617_SOURCE_URL = "https://onlineradiobox.com/us/indie617/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
 INDIE_SELECT_SOURCE_URL = "https://onlineradiobox.com/de/indieselect/playlist/?lang=nl"
@@ -102,7 +103,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")  # Vaste drie bronnen; DKFM en Duyster uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "indie617")  # Vier actieve bronnen; oude drie blijven behouden.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1315,6 +1316,33 @@ def get_big_sonic_heaven_tracks():
         "Big Sonic Heaven Radio",
         {"big sonic heaven radio"},
     )
+
+
+def get_indie617_tracks():
+    # Stationjingles, promos en programma-aankondigingen filteren op afzender.
+    # Geen algemene muziekwoorden filteren: echte songs behouden.
+    station_prefixes = (
+        "indie617",
+        "we are indie617",
+        "the free-4-all",
+        "this is free-4-all",
+        "you're listening to the free-4-all",
+        "you’re listening to the free-4-all",
+        "the oedipus project",
+    )
+    tracks = get_radiobox_tracks(INDIE617_SOURCE_URL, "indie617")
+    cleaned = []
+    removed = 0
+    for artist, title in tracks:
+        name = artist.casefold().strip()
+        if any(name == prefix or name.startswith(prefix + " ") or
+               name.startswith(prefix + " |") for prefix in station_prefixes):
+            removed += 1
+            continue
+        cleaned.append((artist, title))
+    if removed:
+        print(f"⏭️ indie617: {removed} jingles/promos/programma-aankondigingen overgeslagen.")
+    return cleaned
 
 
 def get_radio_britannia_tracks():
@@ -6800,6 +6828,7 @@ def sync():
         "mellow_mix": ("Radio Paradise Mellow Mix", get_mellow_mix_tracks, "__last_radio_key_mellow_mix"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
+        "indie617": ("indie617", get_indie617_tracks, "__last_radio_key_indie617"),
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
         "duyster": ("Duyster archief", lambda: [], "__last_radio_key_duyster"),
     }
