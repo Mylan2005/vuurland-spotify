@@ -3938,6 +3938,7 @@
     "the flynts|||mystic dreams",
     "the folk implosion|||pearl",
     "the frames|||lay me down",
+    "the frames|||what happens when the heart just stops",
     "the gaslight anthem|||blue jeans & white t-shirts",
     "the gaslight anthem|||here's lookin at you kid",
     "the gaslight anthem|||here's lookin at you, kid",
@@ -4714,6 +4715,7 @@
     "spotify:track:0S2pDnQzdCmDxHKOIh5taS",
     "spotify:track:0S7VAArTofybY5c2YY8JMT",
     "spotify:track:0SB7Ew45h690xWhmWvWixm",
+    "spotify:track:0SDmBzT73OgRFVOzHu2xo1",
     "spotify:track:0SK4eSlC1oyOkY7jG7EmmG",
     "spotify:track:0SP2eFIWDUhg3WyLvGz8tg",
     "spotify:track:0SVPZec5mMyqxWCUi3xdmI",
@@ -9349,6 +9351,7 @@
     "IEABD1400004",
     "IEABD1400007",
     "IEABQ0100002",
+    "IEABQ0100003",
     "IEABQ1200012",
     "IEACJ1800137",
     "IEACJ2300335",
@@ -14066,13 +14069,14 @@
     "spotify:track:0YfOnJWqmAKaUvEL1QcNop": "USA176420220",
     "spotify:track:5Jk1IbL395q0Pf30nQspus": "QZTAY2401428",
     "spotify:track:7EN0AF7fQUg6dn4wF758G2": "FR2T01100006",
-    "spotify:track:7vPHiwgCOAjSBRjAirbMvS": "GBAFL8600048"
+    "spotify:track:7vPHiwgCOAjSBRjAirbMvS": "GBAFL8600048",
+    "spotify:track:0SDmBzT73OgRFVOzHu2xo1": "IEABQ0100003"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3193,
+  "__vuurland_active_playlist_count": 3194,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -14648,10 +14652,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793497308.29798,
-    "mellow_mix": 1793497308.302929,
-    "big_sonic_heaven": 1793497308.4776692,
-    "dkfm_edge": 1793497308.4826562,
+    "vuurland": 1793497319.6617508,
+    "mellow_mix": 1793497319.6667938,
+    "big_sonic_heaven": 1793497319.6705935,
+    "dkfm_edge": 1793497319.6754477,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -16506,8 +16510,8 @@
   "__last_radio_key_vuurland": "midlake|||acts of man",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1004,
-  "__v150_next_spotify_round_at": 1793497319.4594877,
-  "__v146_spotify_budget_slot": 1793497199.6159267,
+  "__v150_next_spotify_round_at": 1793497439.7145185,
+  "__v146_spotify_budget_slot": 1793497319.8733363,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -18299,6 +18303,10 @@
     "cocteau twins & harold budd|||sea swallow me": {
       "artist": "Cocteau Twins, Harold Budd",
       "title": "Sea, Swallow Me"
+    },
+    "the frames|||what happens when the heart just stops": {
+      "artist": "The Frames",
+      "title": "What Happens When The Heart Just Stops"
     }
   },
   "__v82_confirmed_catalog": {
@@ -20536,6 +20544,11 @@
       "uri": "spotify:track:7vPHiwgCOAjSBRjAirbMvS",
       "artist": "Cocteau Twins, Harold Budd",
       "title": "Sea, Swallow Me"
+    },
+    "the frames|||what happens when the heart just stops": {
+      "uri": "spotify:track:0SDmBzT73OgRFVOzHu2xo1",
+      "artist": "The Frames",
+      "title": "What Happens When The Heart Just Stops"
     }
   },
   "__pending_library_likes": {},
@@ -25447,6 +25460,7 @@
       "the flaming lips|||waitin for a superman",
       "the folk implosion|||pearl",
       "the frames|||lay me down",
+      "the frames|||what happens when the heart just stops",
       "the jesus & mary chain|||cut dead",
       "the joy formidable|||cut your face",
       "the knife|||neverland",
@@ -25509,6 +25523,7 @@
       "spotify:track:0QnPiUCn6lCctOJx7iWjtC",
       "spotify:track:0R8P9KfGJCDULmlEoBagcO",
       "spotify:track:0S7VAArTofybY5c2YY8JMT",
+      "spotify:track:0SDmBzT73OgRFVOzHu2xo1",
       "spotify:track:0Sg9bWEaPtDO2JE7qwcMvy",
       "spotify:track:0Thy6vjWg2jjOKJ0x023Xn",
       "spotify:track:0Vd8cDLuYwNNtCi7OmgoRD",
@@ -25862,6 +25877,7 @@
       "GX5MY2148486",
       "GX5MY2486345",
       "IEABQ0100002",
+      "IEABQ0100003",
       "JP92J2600925",
       "JPB672404538",
       "JPV752308045",
@@ -26302,7 +26318,8 @@
       "spotify:track:0YfOnJWqmAKaUvEL1QcNop": "USA176420220",
       "spotify:track:5Jk1IbL395q0Pf30nQspus": "QZTAY2401428",
       "spotify:track:7EN0AF7fQUg6dn4wF758G2": "FR2T01100006",
-      "spotify:track:7vPHiwgCOAjSBRjAirbMvS": "GBAFL8600048"
+      "spotify:track:7vPHiwgCOAjSBRjAirbMvS": "GBAFL8600048",
+      "spotify:track:0SDmBzT73OgRFVOzHu2xo1": "IEABQ0100003"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -62777,5 +62794,6 @@
   "__match_v35__sam cooke|||a change is gonna come": "spotify:track:0YfOnJWqmAKaUvEL1QcNop",
   "__match_v35__cold morning colors|||floating": "spotify:track:5Jk1IbL395q0Pf30nQspus",
   "__match_v35__nicolas jaar|||colomb": "spotify:track:7EN0AF7fQUg6dn4wF758G2",
-  "__match_v35__cocteau twins & harold budd|||sea swallow me": "spotify:track:7vPHiwgCOAjSBRjAirbMvS"
+  "__match_v35__cocteau twins & harold budd|||sea swallow me": "spotify:track:7vPHiwgCOAjSBRjAirbMvS",
+  "__match_v35__the frames|||what happens when the heart just stops": "spotify:track:0SDmBzT73OgRFVOzHu2xo1"
 }
