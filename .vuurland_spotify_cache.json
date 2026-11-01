@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793542309.2747471,
+  "__v150_next_spotify_round_at": 1793542435.4667273,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -321,9 +321,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793542306.0140276,
-    "mellow_mix": 1793542306.0157585,
-    "big_sonic_heaven": 1793542306.0172038
+    "vuurland": 1793542315.4621212,
+    "mellow_mix": 1793542315.4638436,
+    "big_sonic_heaven": 1793542315.4652565
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -763,8 +763,8 @@
   "__last_radio_key_big_sonic_heaven": "crystal canyon|||belt of orion",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 153,
-  "__v146_spotify_budget_slot": 1793542189.3008106,
-  "__vuurland_active_playlist_count": 2777,
+  "__v146_spotify_budget_slot": 1793542315.4941032,
+  "__vuurland_active_playlist_count": 2778,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793539654,
@@ -4338,6 +4338,7 @@
     "the cinematic orchestra|||patrick watson|||to build a home",
     "the cinematic orchestra|||to build a home",
     "the cure|||breathe",
+    "the cure|||pictures of you",
     "the favors & finneas & ashe|||home sweet home",
     "the favors|||finneas|||ashe|||home sweet home",
     "the favors|||home sweet home",
@@ -6105,6 +6106,7 @@
     "spotify:track:3NeCNBe7PobBtvF7j8WoVa",
     "spotify:track:3NhEHxzfLEzvlYPK9hgmPR",
     "spotify:track:3NhJyuxuWg9dEX0A88HkiS",
+    "spotify:track:3NkEYwgX2UWPL01gfJ9l95",
     "spotify:track:3NpeqhzTU37SFnYaEQfKa1",
     "spotify:track:3NyNhCNfk1r1fC03T4VSDE",
     "spotify:track:3O090PYVo1do7s3PMCoVoz",
@@ -8449,6 +8451,7 @@
     "GBAJH0200054",
     "GBAJH0401579",
     "GBAJH1000593",
+    "GBAKW8901034",
     "GBALB0300029",
     "GBAQT9400066",
     "GBAQT9500046",
@@ -13197,7 +13200,8 @@
     "spotify:track:2Jw8q8gBpvFpMIxDKst2IU": "QM6MZ1880087",
     "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq": "GBAYE2200285",
     "spotify:track:1QLuJqkt0fObDTJvR1k0md": "QMFME2644775",
-    "spotify:track:3BntzKsnLf2pc0dsvE3Zav": "USWB12403749"
+    "spotify:track:3BntzKsnLf2pc0dsvE3Zav": "USWB12403749",
+    "spotify:track:3NkEYwgX2UWPL01gfJ9l95": "GBAKW8901034"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793541809,
@@ -13376,6 +13380,10 @@
     "teddy swims|||bad dreams": {
       "artist": "Teddy Swims",
       "title": "Bad Dreams"
+    },
+    "the cure|||pictures of you": {
+      "artist": "The Cure",
+      "title": "Pictures Of You"
     }
   },
   "__v82_confirmed_catalog": {
@@ -13593,6 +13601,11 @@
       "uri": "spotify:track:3BntzKsnLf2pc0dsvE3Zav",
       "artist": "Teddy Swims",
       "title": "Bad Dreams"
+    },
+    "the cure|||pictures of you": {
+      "uri": "spotify:track:3NkEYwgX2UWPL01gfJ9l95",
+      "artist": "The Cure",
+      "title": "Pictures Of You"
     }
   },
   "__pending_library_likes": {},
@@ -13648,5 +13661,6 @@
   "__match_v35__uniforms|||don't wake up": "spotify:track:2Jw8q8gBpvFpMIxDKst2IU",
   "__match_v35__gabriels|||one and only": "spotify:track:2zfaXvRq0DtBzJjQ0YFUqq",
   "__match_v35__the secret french postcards|||shame": "spotify:track:1QLuJqkt0fObDTJvR1k0md",
-  "__match_v35__teddy swims|||bad dreams": "spotify:track:3BntzKsnLf2pc0dsvE3Zav"
+  "__match_v35__teddy swims|||bad dreams": "spotify:track:3BntzKsnLf2pc0dsvE3Zav",
+  "__match_v35__the cure|||pictures of you": "spotify:track:3NkEYwgX2UWPL01gfJ9l95"
 }
