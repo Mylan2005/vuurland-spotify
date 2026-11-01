@@ -21,8 +21,8 @@ assert '"tracks": get_dreampop_radio_tracks()' not in body
 assert '"big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks,' in body
 assert '"radio_britannia": ("Radio Britannia", get_radio_britannia_tracks,' in body
 assert '"duyster": ("Duyster archief", lambda: [],' in body
-assert "duyster_archive.run(cache, live_queue, duyster_known, _v47_key)" in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge", "duyster")' in source
+assert "duyster_archive.run(cache, live_queue, duyster_known, _v47_key)" not in body
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge")' in source
 assert '"soma_digitalis": ("SomaFM Digitalis", get_soma_digitalis_tracks,' not in body
 assert '"soma_folkfwd": ("SomaFM Folk Forward", get_soma_folkfwd_tracks,' not in body
 assert '"soma_lush": ("SomaFM Lush", get_soma_lush_tracks,' not in body
@@ -37,7 +37,7 @@ assert 'v140_is_unwanted_language_title(title, artist)' in body
 assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' not in body
 assert 'big_sonic_destination(artist) == "review"' not in body
 assert '__big_sonic_review_scan_complete' not in body
-print("✅ Vier originele radiobronnen plus Duyster-archief actief; overige bronnen uit FIFO, Duitse zangblokkering behouden.")
+print("✅ Vier radiobronnen actief, Duyster-import uitgeschakeld; overige filters behouden.")
 
 assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
 
