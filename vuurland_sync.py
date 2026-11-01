@@ -7145,6 +7145,14 @@ def sync():
         atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         save_cache(cache)
 
+    # Safety hold: no new Spotify additions until historical Duyster playlist
+    # removals and safe, provenance-verified unlikes have been completed.
+    # RadioBox collection above remains active and its FIFO is persisted.
+    atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+    save_cache(cache)
+    print("⏸️ Spotify-toevoegingen gepauzeerd tot Duyster-opruiming is bevestigd; RadioBox FIFO blijft groeien.")
+    return
+
     _v116_new = v116_stamp_fifo(live_queue, cache)
     if _v116_new:
         print(f"📥 v116: {_v116_new} queue-item(s) een vaste FIFO-positie gegeven.")
