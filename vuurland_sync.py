@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ()  # Alle radiobronnen uitgeschakeld op verzoek; Spotify en bestaande state behouden.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")  # Vaste drie bronnen; DKFM en Duyster uit.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6856,6 +6856,33 @@ def sync():
 
     seen = load_seen()
     cache = load_cache()
+    # Nieuwe start november 2026: bewaar Spotify playlist-volume-ID's en API
+    # cooldowns, maar vergeet oude radioplays, FIFO en oude playlistinventaris.
+    # De bestaande Spotify-playlists en likes worden NOOIT verwijderd.
+    reset_token = "2026-11-01-three-radio-fresh-start"
+    if cache.get("__three_radio_reset_token") != reset_token:
+        live_queue.clear()
+        atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+        save_seen(set())
+        seen.clear()
+        preserved = {k: v for k, v in cache.items() if (
+            k in ("__vuurland_volume_playlists", "__spotify_api_blocked_until",
+                  "__spotify_search_blocked_until", "__spotify_server_error_until",
+                  "__v150_next_spotify_round_at")
+        )}
+        cache.clear()
+        cache.update(preserved)
+        cache["__three_radio_reset_token"] = reset_token
+        cache["__v69_radio_only_fresh_start"] = False
+        cache["__v69_bootstrap_complete"] = True
+        cache["__v172_live_only_reset"] = "2026-10-29-live-only"
+        cache["__v173_radio_reset"] = "2026-10-29-four-live"
+        cache["__v160_vuurland_history_restored"] = "vuurland-history-after-manual-rebuild-2026-10-28"
+        cache["__v167_four_histories_restored"] = "four-radio-histories-after-fresh-playlist-scan-2026-10-28"
+        cache["__v159_rebuild_scanned"] = None
+        cache["__v165_existing_playlist_imported"] = None
+        save_cache(cache)
+        print("🆕 Drie bronnen vanaf nul: oude FIFO/cache gewist; Spotify-playlist wordt volledig opnieuw ingelezen.")
     # DKFM Edge bij eerste activering nulmeten, zodat oude RadioBox-historiek
     # niet in één keer de bestaande FIFO vult. Alle andere state blijft intact.
     if not cache.get("__v186_dkfm_edge_four_source_baseline"):
