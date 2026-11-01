@@ -6777,6 +6777,15 @@ def _duyster_cleanup_round(cache):
     Scan playlists incrementally before making any destructive change.
     """
     now = time.time()
+    pending_unlikes = cache.get("__duyster_pending_unlikes_v1", [])
+    if isinstance(pending_unlikes, list) and pending_unlikes:
+        uri = pending_unlikes[0]
+        spotify_request("DELETE", "/me/library", params={"uris": uri})
+        pending_unlikes.pop(0)
+        cache["__duyster_pending_unlikes_v1"] = pending_unlikes
+        save_cache(cache)
+        print("💔 Eerder verwijderde Duyster-track alsnog ontlikt.")
+        return
     if now < float(cache.get("__duyster_cleanup_next_at", 0) or 0):
         return
     emitted = set(cache.get("__duyster_used_v1", []) or [])
