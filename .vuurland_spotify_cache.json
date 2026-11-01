@@ -266,6 +266,7 @@
     "ao|||sofrimento",
     "aphex twin|||iz-us",
     "apparat|||caronte",
+    "apparat|||light on",
     "appi|||unsweetened",
     "apre|||everybody loves you",
     "arcade fire & david byrne|||speaking in tongues (feat. david byrne)",
@@ -6360,6 +6361,7 @@
     "spotify:track:4B82JGSf7TrxqvA1QXsY1y",
     "spotify:track:4BB1mHt61GqLdAOiMqqOX0",
     "spotify:track:4BUDJShvKNRbrgylxri5tI",
+    "spotify:track:4BgOntJ8di7vivtXt8yFej",
     "spotify:track:4Bxvw6HTZ84nphqBsrIk5t",
     "spotify:track:4C2aiAVTTVyZbCQZst5Xu1",
     "spotify:track:4C7WQtCroS5Qyc2IQiVn15",
@@ -9186,6 +9188,7 @@
     "GBNYZ1100196",
     "GBPVV2003236",
     "GBPVV2400015",
+    "GBR8R1100664",
     "GBR8R1800755",
     "GBRBE2310609",
     "GBRKQ2316311",
@@ -14313,13 +14316,14 @@
     "spotify:track:2kKRif52HNWL4Tn5ueeNgt": "DEX260202701",
     "spotify:track:51t2SmIN6OHykGVznqFoU0": "GBWZD2013608",
     "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2": "USMRG0728511",
-    "spotify:track:63brgJhrcNFW8ncUhM1mhG": "GBN9Y1100054"
+    "spotify:track:63brgJhrcNFW8ncUhM1mhG": "GBN9Y1100054",
+    "spotify:track:4BgOntJ8di7vivtXt8yFej": "GBR8R1100664"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3254,
+  "__vuurland_active_playlist_count": 3255,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -14895,10 +14899,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793505872.2742527,
-    "mellow_mix": 1793505872.2799203,
-    "big_sonic_heaven": 1793505872.2843907,
-    "dkfm_edge": 1793505872.2898407,
+    "vuurland": 1793505883.4817746,
+    "mellow_mix": 1793505883.4875543,
+    "big_sonic_heaven": 1793505883.4920797,
+    "dkfm_edge": 1793505883.497638,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -16880,8 +16884,8 @@
   "__last_radio_key_vuurland": "sam de nef|||mother",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1208,
-  "__v150_next_spotify_round_at": 1793505882.9756668,
-  "__v146_spotify_budget_slot": 1793505763.1452775,
+  "__v150_next_spotify_round_at": 1793506003.5388033,
+  "__v146_spotify_budget_slot": 1793505883.7124286,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -18917,6 +18921,10 @@
     "pink floyd|||if": {
       "artist": "Pink Floyd",
       "title": "If"
+    },
+    "apparat|||light on": {
+      "artist": "Apparat",
+      "title": "LightOn"
     }
   },
   "__v82_confirmed_catalog": {
@@ -21459,6 +21467,11 @@
       "uri": "spotify:track:63brgJhrcNFW8ncUhM1mhG",
       "artist": "Pink Floyd",
       "title": "If"
+    },
+    "apparat|||light on": {
+      "uri": "spotify:track:4BgOntJ8di7vivtXt8yFej",
+      "artist": "Apparat",
+      "title": "LightOn"
     }
   },
   "__pending_library_likes": {},
@@ -26148,6 +26161,7 @@
       "animal ghosts|||everything feat japanese heart software",
       "animal ghosts|||wonder",
       "aphex twin|||iz-us",
+      "apparat|||light on",
       "appi|||unsweetened",
       "arcade fire|||ocean of noise",
       "arches|||hate",
@@ -26660,6 +26674,7 @@
       "spotify:track:48wvfkGuiM5x1S7ZPSOIGd",
       "spotify:track:491X3ItuRt75S0EMn5dRMX",
       "spotify:track:49Gg8LJl72YfyshSj4dVhz",
+      "spotify:track:4BgOntJ8di7vivtXt8yFej",
       "spotify:track:4Cg0paoTgxlo2LC85HKaab",
       "spotify:track:4CsawqJLJl2WIfQgHSj0nH",
       "spotify:track:4Fpu9HViylfPzKVkBRdwSy",
@@ -26920,6 +26935,7 @@
       "GBN9Y1100054",
       "GBNYZ0900126",
       "GBNYZ1100196",
+      "GBR8R1100664",
       "GBRKQ2316311",
       "GBTZZ2200018",
       "GBUM70600345",
@@ -27472,7 +27488,8 @@
       "spotify:track:2kKRif52HNWL4Tn5ueeNgt": "DEX260202701",
       "spotify:track:51t2SmIN6OHykGVznqFoU0": "GBWZD2013608",
       "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2": "USMRG0728511",
-      "spotify:track:63brgJhrcNFW8ncUhM1mhG": "GBN9Y1100054"
+      "spotify:track:63brgJhrcNFW8ncUhM1mhG": "GBN9Y1100054",
+      "spotify:track:4BgOntJ8di7vivtXt8yFej": "GBR8R1100664"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -64118,5 +64135,6 @@
   "__match_v35__nils frahm|||ode - our own roof": "spotify:track:51t2SmIN6OHykGVznqFoU0",
   "__not_found_v35__cat power|||come on in my kitchen": 1793505502,
   "__match_v35__arcade fire|||ocean of noise": "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2",
-  "__match_v35__pink floyd|||if": "spotify:track:63brgJhrcNFW8ncUhM1mhG"
+  "__match_v35__pink floyd|||if": "spotify:track:63brgJhrcNFW8ncUhM1mhG",
+  "__match_v35__apparat|||light on": "spotify:track:4BgOntJ8di7vivtXt8yFej"
 }
