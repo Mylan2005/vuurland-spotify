@@ -682,6 +682,7 @@
     "blush|||still in love",
     "bob dylan|||a hard rain's a-gonna fall",
     "bob dylan|||girl from the north country",
+    "bob dylan|||sad eyed lady of the lowlands",
     "bob dylan|||visions of johanna",
     "bobbi lu|||pass through time",
     "bodywash|||sunspots",
@@ -6700,6 +6701,7 @@
     "spotify:track:4jLv3tDBu8ww2R07DvL12s",
     "spotify:track:4jaWgF0XRhjp8NI0q4UQSa",
     "spotify:track:4jdNbCXGGciAOLwAShbJ9Z",
+    "spotify:track:4jdtLLyEL7wY0TlCdMKhxq",
     "spotify:track:4jrlNVzdotW3tpcaVqVnuv",
     "spotify:track:4jvCXYZwM8pR1p0vvK7PtW",
     "spotify:track:4k8OtAEGQeeFSjGrGwUis7",
@@ -11033,6 +11035,7 @@
     "USSM19916753",
     "USSM19919473",
     "USSM19921960",
+    "USSM19921971",
     "USSM19922898",
     "USSUB0310899",
     "USSUB0311671",
@@ -14563,13 +14566,14 @@
     "spotify:track:7kbU1ezWOaeREc2kgvlS3J": "QM24S2605532",
     "spotify:track:5kga6B7F3ynoZIwPO7bzw8": "USHM90772218",
     "spotify:track:5v5YogMDWvuFLJtFl8rS2q": "QMDA61457876",
-    "spotify:track:0HgTYw2jY3sz8rYG0RpI3f": "USSM10004743"
+    "spotify:track:0HgTYw2jY3sz8rYG0RpI3f": "USSM10004743",
+    "spotify:track:4jdtLLyEL7wY0TlCdMKhxq": "USSM19921971"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3316,
+  "__vuurland_active_playlist_count": 3317,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -15145,10 +15149,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793516042.4540777,
-    "mellow_mix": 1793516042.4614782,
-    "big_sonic_heaven": 1793516042.4674265,
-    "dkfm_edge": 1793516042.5918968,
+    "vuurland": 1793516055.3972542,
+    "mellow_mix": 1793516055.4044847,
+    "big_sonic_heaven": 1793516055.4103649,
+    "dkfm_edge": 1793516055.4173832,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -17302,8 +17306,8 @@
   "__last_radio_key_vuurland": "eefje de visser|||bitterzoet",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1429,
-  "__v150_next_spotify_round_at": 1793516052.515823,
-  "__v146_spotify_budget_slot": 1793515932.767191,
+  "__v150_next_spotify_round_at": 1793516175.470341,
+  "__v146_spotify_budget_slot": 1793516055.7222354,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -19587,6 +19591,10 @@
     "modest mouse|||alone down there": {
       "artist": "Modest Mouse",
       "title": "Alone Down There"
+    },
+    "bob dylan|||sad eyed lady of the lowlands": {
+      "artist": "Bob Dylan",
+      "title": "Sad-Eyed Lady of the Lowlands"
     }
   },
   "__v82_confirmed_catalog": {
@@ -22439,6 +22447,11 @@
       "uri": "spotify:track:0HgTYw2jY3sz8rYG0RpI3f",
       "artist": "Modest Mouse",
       "title": "Alone Down There"
+    },
+    "bob dylan|||sad eyed lady of the lowlands": {
+      "uri": "spotify:track:4jdtLLyEL7wY0TlCdMKhxq",
+      "artist": "Bob Dylan",
+      "title": "Sad-Eyed Lady of the Lowlands"
     }
   },
   "__pending_library_likes": {},
@@ -27159,6 +27172,7 @@
       "bleach lab|||nothing left to lose",
       "blonde redhead|||the dress",
       "blush|||still in love",
+      "bob dylan|||sad eyed lady of the lowlands",
       "bob dylan|||visions of johanna",
       "bodywash|||sunspots",
       "bon iver|||skinny love",
@@ -27765,6 +27779,7 @@
       "spotify:track:4gNhWF7BcTzNJwcSTdZ6NI",
       "spotify:track:4iCjh6ybA5uiLSIAlcrFuV",
       "spotify:track:4j73dvPguYZ1OYhUW6EL17",
+      "spotify:track:4jdtLLyEL7wY0TlCdMKhxq",
       "spotify:track:4jrlNVzdotW3tpcaVqVnuv",
       "spotify:track:4jvCXYZwM8pR1p0vvK7PtW",
       "spotify:track:4kJ0V9jYljXTK9sWcLFzYZ",
@@ -28273,6 +28288,7 @@
       "USSM16700114",
       "USSM19916010",
       "USSM19921960",
+      "USSM19921971",
       "USSUB0310899",
       "USSUB0980504",
       "USSUB1192801",
@@ -28702,7 +28718,8 @@
       "spotify:track:7kbU1ezWOaeREc2kgvlS3J": "QM24S2605532",
       "spotify:track:5kga6B7F3ynoZIwPO7bzw8": "USHM90772218",
       "spotify:track:5v5YogMDWvuFLJtFl8rS2q": "QMDA61457876",
-      "spotify:track:0HgTYw2jY3sz8rYG0RpI3f": "USSM10004743"
+      "spotify:track:0HgTYw2jY3sz8rYG0RpI3f": "USSM10004743",
+      "spotify:track:4jdtLLyEL7wY0TlCdMKhxq": "USSM19921971"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -65519,5 +65536,6 @@
   "__not_found_v35__wolf colonel|||agave's lament": 1793515444,
   "__match_v35__ministry|||every day is halloween acoustic": "spotify:track:5v5YogMDWvuFLJtFl8rS2q",
   "__not_found_v35__the lapse|||basilico basilica": 1793515689,
-  "__match_v35__modest mouse|||alone down there": "spotify:track:0HgTYw2jY3sz8rYG0RpI3f"
+  "__match_v35__modest mouse|||alone down there": "spotify:track:0HgTYw2jY3sz8rYG0RpI3f",
+  "__match_v35__bob dylan|||sad eyed lady of the lowlands": "spotify:track:4jdtLLyEL7wY0TlCdMKhxq"
 }
