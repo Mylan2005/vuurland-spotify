@@ -10,8 +10,8 @@
   "__v173_radio_reset": "2026-10-29-four-live",
   "__v160_vuurland_history_restored": "vuurland-history-after-manual-rebuild-2026-10-28",
   "__v167_four_histories_restored": "four-radio-histories-after-fresh-playlist-scan-2026-10-28",
-  "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
-  "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
+  "__v159_rebuild_scanned": null,
+  "__v165_existing_playlist_imported": null,
   "__v96_radio_snapshots": {
     "vuurland": [
       "damien jurado|||south",
@@ -116,6 +116,7 @@
       "neomi|||skipping stone"
     ],
     "mellow_mix": [
+      "the cranberries|||when you're gone",
       "dire straits|||portobello belle",
       "van morrison|||precious time",
       "vince guaraldi|||charlie brown theme",
@@ -214,8 +215,7 @@
       "andrea bejar|||delicately",
       "the ocean blue|||cerulean",
       "allison russell|||nightflyer",
-      "mumford & sons|||awake my soul",
-      "mazzy star|||all your sisters"
+      "mumford & sons|||awake my soul"
     ],
     "big_sonic_heaven": [
       "art school girlfriend|||almost transparent",
@@ -321,9 +321,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793549819.3744268,
-    "mellow_mix": 1793549819.3764257,
-    "big_sonic_heaven": 1793549819.3781433
+    "vuurland": 1793549885.1765597,
+    "mellow_mix": 1793549885.17871,
+    "big_sonic_heaven": 1793549885.1802688
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -667,6 +667,7 @@
       "the beatles|||dear prudence",
       "the cactus blossoms|||hey baby",
       "the church|||to be in your eyes",
+      "the cranberries|||when you're gone",
       "the cure|||pictures of you",
       "the derek trucks band|||this sky",
       "the durutti column|||sargasso sea w/ caoilfhionn rose",
@@ -901,10 +902,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "damien jurado|||south",
-  "__last_radio_key_mellow_mix": "dire straits|||portobello belle",
+  "__last_radio_key_mellow_mix": "the cranberries|||when you're gone",
   "__last_radio_key_big_sonic_heaven": "art school girlfriend|||almost transparent",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 230,
+  "__v116_fifo_next_sequence": 231,
   "__v146_spotify_budget_slot": 1793549819.4115374,
   "__vuurland_active_playlist_count": 2825,
   "__vuurland_active_volume": 1,
@@ -13535,7 +13536,7 @@
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793549309,
-  "__playlist_isrc_cache_ready": true,
+  "__playlist_isrc_cache_ready": false,
   "__playlist_cache_time": 1793535981,
   "__match_v35__keren ann|||jardin d'hiver": "spotify:track:45gpJxviKRBsQo1lDZ03Xf",
   "__v80_confirmed_spellings": {
@@ -14475,5 +14476,6 @@
   "__match_v35__home video|||the smoke": "spotify:track:4jd1VymK8NiKkXJNXTDbxw",
   "__match_v35__suki waterhouse|||on this love": "spotify:track:4HrJu1oEafqA6vLMWDJUQn",
   "__match_v35__violet oscillation|||veil": "spotify:track:5KCHGlHmQMhZyWoIlwktIr",
-  "__match_v35__k d lang|||so it shall be": "spotify:track:1ej1LOEjEmvEtXg6IbWlWN"
+  "__match_v35__k d lang|||so it shall be": "spotify:track:1ej1LOEjEmvEtXg6IbWlWN",
+  "__v185_manual_import_scan": "2026-11-01-bsh-manual-import-full-scan"
 }
