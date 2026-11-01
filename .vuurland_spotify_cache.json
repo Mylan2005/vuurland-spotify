@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "balthazar|||then what",
       "patrick watson|||love songs for robots",
       "billie marten|||this is how we move",
       "ritual|||josephine",
@@ -112,10 +113,10 @@
       "admiral freebee|||digital blues",
       "suki waterhouse|||on this love",
       "charles bradley|||you put the flame on it",
-      "eddie vedder|||society",
-      "yonderboi|||were you thinking of me?"
+      "eddie vedder|||society"
     ],
     "mellow_mix": [
+      "elton john|||love song",
       "tyler ramsey|||in the willows",
       "rosanne cash|||the sunken lands",
       "lord huron|||when the night is over",
@@ -214,8 +215,7 @@
       "neil young|||the old laughing lady",
       "skott|||rule the world",
       "antonio vivaldi|||the 4 seasons - summer - allegro non molto",
-      "emmylou harris|||wrecking ball",
-      "joni mitchell|||passion play when all the slaves are free"
+      "emmylou harris|||wrecking ball"
     ],
     "big_sonic_heaven": [
       "the church|||rapture",
@@ -321,9 +321,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793559891.4772146,
-    "mellow_mix": 1793559891.4794621,
-    "big_sonic_heaven": 1793559891.4813993
+    "vuurland": 1793559933.1399968,
+    "mellow_mix": 1793559933.223769,
+    "big_sonic_heaven": 1793559933.2257817
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -340,6 +340,7 @@
       "arlo parks|||hope",
       "balthazar|||bunker",
       "balthazar|||hourglass",
+      "balthazar|||then what",
       "beach fossils|||may 1st",
       "bear's den|||above the clouds of pompeii",
       "bear's den|||agape",
@@ -600,6 +601,7 @@
       "elbow|||new york morning",
       "ella fitzgerald|||i've got you under my skin",
       "elton john|||amoreena",
+      "elton john|||love song",
       "elton john|||tiny dancer",
       "emmylou harris|||wrecking ball",
       "ennio morricone|||ricordi tanti fiori",
@@ -1012,11 +1014,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "patrick watson|||love songs for robots",
-  "__last_radio_key_mellow_mix": "tyler ramsey|||in the willows",
+  "__last_radio_key_vuurland": "balthazar|||then what",
+  "__last_radio_key_mellow_mix": "elton john|||love song",
   "__last_radio_key_big_sonic_heaven": "the church|||rapture",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 346,
+  "__v116_fifo_next_sequence": 348,
   "__v146_spotify_budget_slot": 1793559825.6163416,
   "__vuurland_active_playlist_count": 3712,
   "__vuurland_active_volume": 1,
