@@ -166,6 +166,19 @@ def save_cache(cache):
         if disk_until > now and disk_until > caller_until:
             cache[key] = disk_until
     atomic_save_json(CACHE_FILE, cache, indent=2, ensure_ascii=False)
+    # Klein, onafhankelijk voortgangsbestand; geen Spotify- of radiostate wijzigen.
+    stage = cache.get("__v166_playlist_scan")
+    complete = (cache.get("__v159_rebuild_scanned") == "vuurland-live-only-rescan-v172-2026-10-29"
+                and cache.get("__v165_existing_playlist_imported") == "vuurland-live-only-import-v172-2026-10-29")
+    total = int((stage or {}).get("expected_total", 0) or cache.get("__vuurland_active_playlist_count", 0) or 0)
+    scanned = int((stage or {}).get("offset", 0) or 0)
+    status = "bezig" if isinstance(stage, dict) else ("voltooid" if complete else "wachten")
+    if complete and not isinstance(stage, dict):
+        scanned = total
+    atomic_save_json(os.path.join(DATA_DIR, "spotify_scan_status.json"), {
+        "status": status, "ingelezen": scanned, "totaal": total,
+        "bijgewerkt_op": int(time.time()),
+    }, indent=2, ensure_ascii=False)
 
 
 def load_seen():
