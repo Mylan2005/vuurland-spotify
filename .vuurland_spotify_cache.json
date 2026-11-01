@@ -4385,6 +4385,7 @@
     "touching grace|||hope",
     "traveling wilburys|||handle with care",
     "trentemøller|||terrified",
+    "tricky|||overcome",
     "triple j|||reckless - triple j like a version",
     "triple j|||sailor song - triple j like a version",
     "turin brakes|||rome",
@@ -5025,6 +5026,7 @@
     "spotify:track:0t0tjmV33ODNJvKfUKQ0WC",
     "spotify:track:0tRVzLVwLYZmEEwyMz24xE",
     "spotify:track:0tWYPYPkGIjgt7FdzvXe5w",
+    "spotify:track:0tYEsmdrsv5Fi3UOn58bou",
     "spotify:track:0tbQ08FI6iX6IKS9EgSsC8",
     "spotify:track:0tfMRaG4ZzpYpc9ByIifrS",
     "spotify:track:0tjwh4bdd2aPghiVBDJKdE",
@@ -8843,6 +8845,7 @@
     "GBAJH9900036",
     "GBAJH9900041",
     "GBAKW0100330",
+    "GBANY9500009",
     "GBAQT9400066",
     "GBAQT9500046",
     "GBARK9200053",
@@ -14478,13 +14481,14 @@
     "spotify:track:3KAVzeryCaLQmObj47OgjJ": "DEX261111104",
     "spotify:track:2qrF52hJRxRNgz4YBAyCqV": "QMBZ92288124",
     "spotify:track:4v8K5BloGiZorsps4vYfqC": "QZK6K2217523",
-    "spotify:track:4ppgGo9xuOMTooRCqWMUgb": "DEY170118003"
+    "spotify:track:4ppgGo9xuOMTooRCqWMUgb": "DEY170118003",
+    "spotify:track:0tYEsmdrsv5Fi3UOn58bou": "GBANY9500009"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3295,
+  "__vuurland_active_playlist_count": 3296,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -15060,10 +15064,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793511522.6151161,
-    "mellow_mix": 1793511522.6236055,
-    "big_sonic_heaven": 1793511522.6291597,
-    "dkfm_edge": 1793511522.6358016,
+    "vuurland": 1793511535.3237376,
+    "mellow_mix": 1793511535.3324077,
+    "big_sonic_heaven": 1793511535.3381696,
+    "dkfm_edge": 1793511535.345151,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -17138,8 +17142,8 @@
   "__last_radio_key_vuurland": "lana del rey|||fuck it i love you",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1331,
-  "__v150_next_spotify_round_at": 1793511532.51479,
-  "__v146_spotify_budget_slot": 1793511412.7505484,
+  "__v150_next_spotify_round_at": 1793511655.3995953,
+  "__v146_spotify_budget_slot": 1793511535.6456761,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -19339,6 +19343,10 @@
     "mouse on mars|||presence": {
       "artist": "Mouse On Mars",
       "title": "Presence"
+    },
+    "tricky|||overcome": {
+      "artist": "Tricky, Martina Topley-Bird",
+      "title": "Overcome"
     }
   },
   "__v82_confirmed_catalog": {
@@ -22086,6 +22094,11 @@
       "uri": "spotify:track:4ppgGo9xuOMTooRCqWMUgb",
       "artist": "Mouse On Mars",
       "title": "Presence"
+    },
+    "tricky|||overcome": {
+      "uri": "spotify:track:0tYEsmdrsv5Fi3UOn58bou",
+      "artist": "Tricky, Martina Topley-Bird",
+      "title": "Overcome"
     }
   },
   "__pending_library_likes": {},
@@ -27126,6 +27139,7 @@
       "tori amos|||honey",
       "traveling wilburys|||handle with care",
       "trentemøller|||terrified",
+      "tricky|||overcome",
       "turin brakes|||rome",
       "twen|||seastar",
       "ultra bloom|||signals",
@@ -27201,6 +27215,7 @@
       "spotify:track:0s5BMQdvag1LRB6Y1SF6WA",
       "spotify:track:0t0tjmV33ODNJvKfUKQ0WC",
       "spotify:track:0tWYPYPkGIjgt7FdzvXe5w",
+      "spotify:track:0tYEsmdrsv5Fi3UOn58bou",
       "spotify:track:0tfMRaG4ZzpYpc9ByIifrS",
       "spotify:track:0tjwh4bdd2aPghiVBDJKdE",
       "spotify:track:0vXHR6qF9isLTtALHkdp6x",
@@ -27604,6 +27619,7 @@
       "GBAJH0602654",
       "GBAJH9900041",
       "GBAKW0100330",
+      "GBANY9500009",
       "GBARK9200053",
       "GBARL0800259",
       "GBARL0801200",
@@ -28264,7 +28280,8 @@
       "spotify:track:3KAVzeryCaLQmObj47OgjJ": "DEX261111104",
       "spotify:track:2qrF52hJRxRNgz4YBAyCqV": "QMBZ92288124",
       "spotify:track:4v8K5BloGiZorsps4vYfqC": "QZK6K2217523",
-      "spotify:track:4ppgGo9xuOMTooRCqWMUgb": "DEY170118003"
+      "spotify:track:4ppgGo9xuOMTooRCqWMUgb": "DEY170118003",
+      "spotify:track:0tYEsmdrsv5Fi3UOn58bou": "GBANY9500009"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -65000,5 +65017,6 @@
   "__match_v35__orcas|||carrion": "spotify:track:3KAVzeryCaLQmObj47OgjJ",
   "__match_v35__timesbold|||don't want to live": "spotify:track:2qrF52hJRxRNgz4YBAyCqV",
   "__match_v35__styrofoam|||hard to find": "spotify:track:4v8K5BloGiZorsps4vYfqC",
-  "__match_v35__mouse on mars|||presence": "spotify:track:4ppgGo9xuOMTooRCqWMUgb"
+  "__match_v35__mouse on mars|||presence": "spotify:track:4ppgGo9xuOMTooRCqWMUgb",
+  "__match_v35__tricky|||overcome": "spotify:track:0tYEsmdrsv5Fi3UOn58bou"
 }
