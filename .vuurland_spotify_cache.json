@@ -3284,6 +3284,7 @@
     "pigeonhed|||the full sentence",
     "pinegrove|||intrepid",
     "pinegrove|||old friends",
+    "pink floyd|||if",
     "pink floyd|||wish you were here",
     "pitou|||angel",
     "pj harvey & thom yorke|||this mess we're in",
@@ -7094,6 +7095,7 @@
     "spotify:track:63UbSUn8llR4OUHQ5Cqh2e",
     "spotify:track:63V1zBOx4IP2Z91EOHYNtc",
     "spotify:track:63bLd77FlCaPIzD46kXJfA",
+    "spotify:track:63brgJhrcNFW8ncUhM1mhG",
     "spotify:track:63gk2AZacanF0mUg2TLfd7",
     "spotify:track:63gll6vcJRkW7ZeBsvT8wq",
     "spotify:track:63i8rEP5gnpHwRF3ieyzxp",
@@ -9177,6 +9179,7 @@
     "GBMVH1100040",
     "GBMVH1100060",
     "GBMVH2100610",
+    "GBN9Y1100054",
     "GBN9Y1600024",
     "GBNTT0600131",
     "GBNYZ0900126",
@@ -14309,13 +14312,14 @@
     "spotify:track:0vXHR6qF9isLTtALHkdp6x": "QZWDE2398519",
     "spotify:track:2kKRif52HNWL4Tn5ueeNgt": "DEX260202701",
     "spotify:track:51t2SmIN6OHykGVznqFoU0": "GBWZD2013608",
-    "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2": "USMRG0728511"
+    "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2": "USMRG0728511",
+    "spotify:track:63brgJhrcNFW8ncUhM1mhG": "GBN9Y1100054"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3253,
+  "__vuurland_active_playlist_count": 3254,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -14528,6 +14532,7 @@
       "bob dylan|||sad eyed lady of the lowlands"
     ],
     "big_sonic_heaven": [
+      "the innocence mission|||this thread is a green street",
       "the chameleons|||intrigue in tangiers",
       "ssaann|||echo",
       "acrylics|||sunset peach",
@@ -14626,8 +14631,7 @@
       "cocteau twins & harold budd|||sea swallow me",
       "primal scream|||come together 7\" version",
       "erasure|||piano song",
-      "desire|||under your spell",
-      "bat for lashes|||horse & i"
+      "desire|||under your spell"
     ],
     "dkfm_edge": [
       "our girl|||relief",
@@ -14891,10 +14895,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793505751.501664,
-    "mellow_mix": 1793505751.5973005,
-    "big_sonic_heaven": 1793505751.6019235,
-    "dkfm_edge": 1793505751.6075547,
+    "vuurland": 1793505762.7689176,
+    "mellow_mix": 1793505762.7746212,
+    "big_sonic_heaven": 1793505762.8912337,
+    "dkfm_edge": 1793505762.8967423,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -16071,6 +16075,7 @@
       "the haunted youth|||hurt",
       "the high violets|||chinese letter",
       "the high violets|||how i love everything about you",
+      "the innocence mission|||this thread is a green street",
       "the jesus & mary chain|||cut dead",
       "the knife|||forest families",
       "the knife|||neverland",
@@ -16874,9 +16879,9 @@
   "__v49_confirmed_links_released": true,
   "__last_radio_key_vuurland": "sam de nef|||mother",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1205,
-  "__v150_next_spotify_round_at": 1793505751.880107,
-  "__v146_spotify_budget_slot": 1793505632.0506542,
+  "__v116_fifo_next_sequence": 1207,
+  "__v150_next_spotify_round_at": 1793505882.9756668,
+  "__v146_spotify_budget_slot": 1793505763.1452775,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -18908,6 +18913,10 @@
     "arcade fire|||ocean of noise": {
       "artist": "Arcade Fire",
       "title": "Ocean of Noise"
+    },
+    "pink floyd|||if": {
+      "artist": "Pink Floyd",
+      "title": "If"
     }
   },
   "__v82_confirmed_catalog": {
@@ -21445,6 +21454,11 @@
       "uri": "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2",
       "artist": "Arcade Fire",
       "title": "Ocean of Noise"
+    },
+    "pink floyd|||if": {
+      "uri": "spotify:track:63brgJhrcNFW8ncUhM1mhG",
+      "artist": "Pink Floyd",
+      "title": "If"
     }
   },
   "__pending_library_likes": {},
@@ -21619,7 +21633,7 @@
   "__match_v35__marc cohn|||ghost train": "spotify:track:11iF8F9cOBgxbxVWU7bRjt",
   "__match_v35__billie eilish|||lunch": "spotify:track:629DixmZGHc7ILtEntuiWE",
   "__v185_big_sonic_three_source_baseline": true,
-  "__last_radio_key_big_sonic_heaven": "the chameleons|||intrigue in tangiers",
+  "__last_radio_key_big_sonic_heaven": "the innocence mission|||this thread is a green street",
   "__match_v35__oscar isaac|||green green rocky road": "spotify:track:1r8BiPbyYhKaWEXOjMEip4",
   "__match_v35__phoebe bridgers|||sidelines": "spotify:track:4SKvKJaqkRl1bUZWEqTYzl",
   "__match_v35__loreena mckennitt|||night ride across the caucasus live": "spotify:track:2uunFBdOKuDKSuoAq1HQ3z",
@@ -26341,6 +26355,7 @@
       "phoebe green|||love song",
       "phoebe green|||love song feat gizmo varillas",
       "pigeonhed|||the full sentence",
+      "pink floyd|||if",
       "plant cell|||summer on route 134",
       "poison girl friend|||hardly ever smile without you",
       "postiljonen|||atlantis",
@@ -26713,6 +26728,7 @@
       "spotify:track:62S62F7p3A7qOjkbApWe5i",
       "spotify:track:62xgZndm9gNlh8fJEfio6F",
       "spotify:track:63U9G71yjhem5xirnZ89Cb",
+      "spotify:track:63brgJhrcNFW8ncUhM1mhG",
       "spotify:track:63gll6vcJRkW7ZeBsvT8wq",
       "spotify:track:65SwobxDwUigYvd91PIAuF",
       "spotify:track:660BgltPy63FqgZxqPGuQ6",
@@ -26901,6 +26917,7 @@
       "GBLMA0102502",
       "GBLMA2313303",
       "GBLVT0700001",
+      "GBN9Y1100054",
       "GBNYZ0900126",
       "GBNYZ1100196",
       "GBRKQ2316311",
@@ -27454,7 +27471,8 @@
       "spotify:track:0vXHR6qF9isLTtALHkdp6x": "QZWDE2398519",
       "spotify:track:2kKRif52HNWL4Tn5ueeNgt": "DEX260202701",
       "spotify:track:51t2SmIN6OHykGVznqFoU0": "GBWZD2013608",
-      "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2": "USMRG0728511"
+      "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2": "USMRG0728511",
+      "spotify:track:63brgJhrcNFW8ncUhM1mhG": "GBN9Y1100054"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -63879,9 +63897,10 @@
     "lucas schreel|||iraurbe",
     "elias|||can you feel the fear",
     "65daysofstatic|||gorecki",
-    "sonic youth|||superstar"
+    "sonic youth|||superstar",
+    "antony and the johnsons|||the spirit was gone"
   ],
-  "__duyster_last_emission_v1": 1793505700.13882,
+  "__duyster_last_emission_v1": 1793505762.8999856,
   "__match_v35__nation of language|||tougher than the rest": "spotify:track:7t0MtBzJwoYBkdyeFDlzYS",
   "__match_v35__future islands|||peach": "spotify:track:2njacMNMduDpk2Rhg06sp3",
   "__not_found_v35__school girl complex|||summer evening and you": 1793478231,
@@ -64097,5 +64116,6 @@
   "__match_v35__manual|||midnight is where the day begins": "spotify:track:2kKRif52HNWL4Tn5ueeNgt",
   "__match_v35__nils frahm|||ode - our own roof": "spotify:track:51t2SmIN6OHykGVznqFoU0",
   "__not_found_v35__cat power|||come on in my kitchen": 1793505502,
-  "__match_v35__arcade fire|||ocean of noise": "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2"
+  "__match_v35__arcade fire|||ocean of noise": "spotify:track:1ocL0Mdp2NKggF7kG3Qdm2",
+  "__match_v35__pink floyd|||if": "spotify:track:63brgJhrcNFW8ncUhM1mhG"
 }
