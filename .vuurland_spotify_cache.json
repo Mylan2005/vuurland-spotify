@@ -3592,6 +3592,7 @@
     "silversun pickups|||lazy eye",
     "simon & garfunkel|||i am a rock",
     "sioen|||no conspiracy at all",
+    "siouxsie & the banshees|||halloween",
     "siouxsie & the banshees|||lullaby",
     "siv jakobsen & ane brun|||sun, moon, stars",
     "siv jakobsen|||ane brun|||sun, moon, stars",
@@ -6065,6 +6066,7 @@
     "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV",
     "spotify:track:3lCsMkhuQAGh7agSOQtvyH",
     "spotify:track:3lG6OtGDsYAOALxEmubQQm",
+    "spotify:track:3lM9UdOYvDIs5PSY8aBEl2",
     "spotify:track:3lQPBzcMsqmNldx9AgIhSt",
     "spotify:track:3ldQn5GUmDqs0L4z4GORI6",
     "spotify:track:3mKYZ2aWLyKjTmpBKPoePs",
@@ -8879,6 +8881,7 @@
     "GBENL2504392",
     "GBENL2604640",
     "GBENL2604722",
+    "GBF068125080",
     "GBF068500990",
     "GBF071700950",
     "GBF080100262",
@@ -14006,13 +14009,14 @@
     "spotify:track:0QnPiUCn6lCctOJx7iWjtC": "USAT20101890",
     "spotify:track:5Q9BVQOEHNMq0QGuUfZTkQ": "GBAFL9600069",
     "spotify:track:4Cg0paoTgxlo2LC85HKaab": "GBAAN7200019",
-    "spotify:track:6pkzfcZI7PsbC4nrMsfuIH": "UKFGV2300167"
+    "spotify:track:6pkzfcZI7PsbC4nrMsfuIH": "UKFGV2300167",
+    "spotify:track:3lM9UdOYvDIs5PSY8aBEl2": "GBF068125080"
   },
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793385766,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__vuurland_active_playlist_count": 3178,
+  "__vuurland_active_playlist_count": 3179,
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
@@ -14588,10 +14592,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793495307.927925,
-    "mellow_mix": 1793495308.038309,
-    "big_sonic_heaven": 1793495308.0421212,
-    "dkfm_edge": 1793495308.0469794,
+    "vuurland": 1793495319.2505834,
+    "mellow_mix": 1793495319.2555768,
+    "big_sonic_heaven": 1793495319.2593505,
+    "dkfm_edge": 1793495319.2641945,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -16415,8 +16419,8 @@
   "__last_radio_key_vuurland": "balthazar|||fifteen floors",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 954,
-  "__v150_next_spotify_round_at": 1793495318.9031208,
-  "__v146_spotify_budget_slot": 1793495199.0550182,
+  "__v150_next_spotify_round_at": 1793495439.3031926,
+  "__v146_spotify_budget_slot": 1793495319.4564457,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -18148,6 +18152,10 @@
     "the fauns|||shake your hair": {
       "artist": "The Fauns",
       "title": "Shake Your Hair"
+    },
+    "siouxsie & the banshees|||halloween": {
+      "artist": "Siouxsie and the Banshees",
+      "title": "Halloween"
     }
   },
   "__v82_confirmed_catalog": {
@@ -20310,6 +20318,11 @@
       "uri": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
       "artist": "The Fauns",
       "title": "Shake Your Hair"
+    },
+    "siouxsie & the banshees|||halloween": {
+      "uri": "spotify:track:3lM9UdOYvDIs5PSY8aBEl2",
+      "artist": "Siouxsie and the Banshees",
+      "title": "Halloween"
     }
   },
   "__pending_library_likes": {},
@@ -25171,6 +25184,7 @@
       "sierra ferrell|||trying to love you",
       "sigur ros|||ekki mukk",
       "sioen|||no conspiracy at all",
+      "siouxsie & the banshees|||halloween",
       "siouxsie & the banshees|||lullaby",
       "skeever|||autopilot",
       "slackwax|||close to my fire",
@@ -25375,6 +25389,7 @@
       "spotify:track:3iBgrkexCzVuPy4O9vx7Mf",
       "spotify:track:3kQDykkw9HVowlm3HxTcuR",
       "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV",
+      "spotify:track:3lM9UdOYvDIs5PSY8aBEl2",
       "spotify:track:3pEaMNSae9o6xPGXvrvJ6q",
       "spotify:track:3qoTatPGzvNIF5ldjh9TB8",
       "spotify:track:3ufd3sHwMInffvsOuoSYNA",
@@ -25575,6 +25590,7 @@
       "GBCRL1100079",
       "GBCVZ2400264",
       "GBEFS0100028",
+      "GBF068125080",
       "GBF068500990",
       "GBGLM0700065",
       "GBK3W2302568",
@@ -26016,7 +26032,8 @@
       "spotify:track:0QnPiUCn6lCctOJx7iWjtC": "USAT20101890",
       "spotify:track:5Q9BVQOEHNMq0QGuUfZTkQ": "GBAFL9600069",
       "spotify:track:4Cg0paoTgxlo2LC85HKaab": "GBAAN7200019",
-      "spotify:track:6pkzfcZI7PsbC4nrMsfuIH": "UKFGV2300167"
+      "spotify:track:6pkzfcZI7PsbC4nrMsfuIH": "UKFGV2300167",
+      "spotify:track:3lM9UdOYvDIs5PSY8aBEl2": "GBF068125080"
     }
   },
   "__match_v35__the barr brothers|||beggar in the morning": "spotify:track:7pCF5qq2HYbPTXXglBdqaO",
@@ -62453,5 +62470,6 @@
   "__match_v35__collective soul|||forgiveness": "spotify:track:0QnPiUCn6lCctOJx7iWjtC",
   "__match_v35__lush|||500 shake baby shake": "spotify:track:5Q9BVQOEHNMq0QGuUfZTkQ",
   "__match_v35__nick drake|||which will": "spotify:track:4Cg0paoTgxlo2LC85HKaab",
-  "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH"
+  "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
+  "__match_v35__siouxsie & the banshees|||halloween": "spotify:track:3lM9UdOYvDIs5PSY8aBEl2"
 }
