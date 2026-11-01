@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge", "duyster")  # Vier live radiozenders + Duyster-archief.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "dkfm_edge")  # Alleen vier live radiozenders; Duyster uitgeschakeld.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -7113,19 +7113,14 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
-    # Duyster is een historisch archief, geen 24/7-zender. De bounded
-    # import is onafhankelijk van de vier live RadioBox-metingen.
-    # Slechts één willekeurige archieftitel per minuut (na volledige scan).
-    try:
-        import duyster_archive
-        duyster_known = set(seen) | set(cache.get("__playlist_keys", []))
-        duyster_known.update(
-            _v47_key(x.get("artist", ""), x.get("title", ""))
-            for x in live_queue if isinstance(x, dict)
-        )
-        duyster_archive.run(cache, live_queue, duyster_known, _v47_key)
-    except Exception as exc:
-        print(f"⚠️ Duyster-archief tijdelijk overgeslagen: {type(exc).__name__}: {exc}")
+    # Duyster permanently disabled at user's request. Purge only Duyster items;
+    # the four live RadioBox sources continue to feed the FIFO.
+    _before_duyster_purge = len(live_queue)
+    live_queue = [item for item in live_queue if not (
+        isinstance(item, dict) and item.get("source") == "duyster")]
+    if len(live_queue) != _before_duyster_purge:
+        print(f"🧹 Duyster uit FIFO: {_before_duyster_purge - len(live_queue)} items verwijderd.")
+    atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
 
     # v181: herstel uitsluitend twee bewezen ontbrekende Vuurland-plays.
     # Geen volledige historie-import; FIFO, cache en 120s-tempo blijven intact.
