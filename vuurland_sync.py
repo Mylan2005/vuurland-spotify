@@ -6883,6 +6883,19 @@ def sync():
         cache["__v165_existing_playlist_imported"] = None
         save_cache(cache)
         print("🆕 Drie bronnen vanaf nul: oude FIFO/cache gewist; Spotify-playlist wordt volledig opnieuw ingelezen.")
+    # v185: eenmalige, blokkerende Spotify-herscan na handmatige BSH-import.
+    # Behoud FIFO, radiogeheugen, Spotify-playlist en alle likes.
+    # Zolang de scan niet volledig klaar is, geen nieuwe Spotify-toevoegingen.
+    v185_token = "2026-11-01-bsh-manual-import-full-scan"
+    if cache.get("__v185_manual_import_scan") != v185_token:
+        cache["__v185_manual_import_scan"] = v185_token
+        cache["__v159_rebuild_scanned"] = None
+        cache["__v165_existing_playlist_imported"] = None
+        cache["__playlist_isrc_cache_ready"] = False
+        cache.pop("__v166_playlist_scan", None)
+        cache.pop("__v177_playlist_delta", None)
+        save_cache(cache)
+        print("📋 v185: volledige Spotify-herscan gestart vóór nieuwe FIFO-toevoegingen.")
     # DKFM Edge bij eerste activering nulmeten, zodat oude RadioBox-historiek
     # niet in één keer de bestaande FIFO vult. Alle andere state blijft intact.
     if not cache.get("__v186_dkfm_edge_four_source_baseline"):
