@@ -15141,10 +15141,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793515675.7159646,
-    "mellow_mix": 1793515675.8656812,
-    "big_sonic_heaven": 1793515675.8717358,
-    "dkfm_edge": 1793515675.8788495,
+    "vuurland": 1793515688.4780047,
+    "mellow_mix": 1793515688.4853294,
+    "big_sonic_heaven": 1793515688.4912248,
+    "dkfm_edge": 1793515688.4982529,
     "soma_digitalis": 1793465294.41644,
     "soma_folkfwd": 1793466328.7411785,
     "soma_lush": 1793465100.5323584,
@@ -17294,8 +17294,8 @@
   "__last_radio_key_vuurland": "eefje de visser|||bitterzoet",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1422,
-  "__v150_next_spotify_round_at": 1793515686.2452824,
-  "__v146_spotify_budget_slot": 1793515566.4927793,
+  "__v150_next_spotify_round_at": 1793515808.550882,
+  "__v146_spotify_budget_slot": 1793515688.800832,
   "__v159_rebuild_scanned": "vuurland-live-only-rescan-v172-2026-10-29",
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
@@ -65407,6 +65407,12 @@
       "title": "Agave's Lament",
       "failed_at": 1793515444,
       "matching_version": 34
+    },
+    "the lapse|||basilico basilica": {
+      "artist": "The Lapse",
+      "title": "Basilico Basilica",
+      "failed_at": 1793515689,
+      "matching_version": 34
     }
   },
   "__match_v35__depeche mode|||black celebration": "spotify:track:6Ufh0H4emPePwyjusICVKb",
@@ -65487,5 +65493,6 @@
   "__match_v35__horse vision|||goblin's head": "spotify:track:7kbU1ezWOaeREc2kgvlS3J",
   "__match_v35__iron & wine|||trapeze swinger": "spotify:track:5kga6B7F3ynoZIwPO7bzw8",
   "__not_found_v35__wolf colonel|||agave's lament": 1793515444,
-  "__match_v35__ministry|||every day is halloween acoustic": "spotify:track:5v5YogMDWvuFLJtFl8rS2q"
+  "__match_v35__ministry|||every day is halloween acoustic": "spotify:track:5v5YogMDWvuFLJtFl8rS2q",
+  "__not_found_v35__the lapse|||basilico basilica": 1793515689
 }
