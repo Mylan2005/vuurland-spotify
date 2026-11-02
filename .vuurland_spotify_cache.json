@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793655154.609528,
+  "__v150_next_spotify_round_at": 1793655276.3437376,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -521,11 +521,11 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793655144.0205486,
-    "mellow_mix": 1793655144.024917,
-    "big_sonic_heaven": 1793655144.0271451,
-    "radio_x_chilled": 1793655144.0312386,
-    "dreampop_radio": 1793655144.0348973
+    "vuurland": 1793655156.323285,
+    "mellow_mix": 1793655156.3276877,
+    "big_sonic_heaven": 1793655156.3300054,
+    "radio_x_chilled": 1793655156.334135,
+    "dreampop_radio": 1793655156.3377874
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2650,8 +2650,8 @@
   "__last_radio_key_big_sonic_heaven": "she's green|||empty house",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1135,
-  "__v146_spotify_budget_slot": 1793655034.7920482,
-  "__vuurland_active_playlist_count": 4192,
+  "__v146_spotify_budget_slot": 1793655156.5299404,
+  "__vuurland_active_playlist_count": 4193,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793654791,
@@ -8237,6 +8237,7 @@
     "toothpaste|||hazlewood",
     "tora|||mother forgot",
     "tori amos|||general joy",
+    "tori amos|||rattlesnakes",
     "torres|||sugar in the tank",
     "torres|||sylvia",
     "toshki|||birds",
@@ -9863,6 +9864,7 @@
     "spotify:track:2MYidPOz5NHAtKUySTzbwx",
     "spotify:track:2MnwEZniGPiDXSeMQYqvJM",
     "spotify:track:2N16QiEd8CZoEApMGj95wo",
+    "spotify:track:2N6Rx3WzHG20fcxKhGZMI9",
     "spotify:track:2NM2xz1511l5r6BfHjHFh7",
     "spotify:track:2NWh2vCtpwqy4Xa7e0iFz9",
     "spotify:track:2NXJ4psTcjJmPytwmdnqIj",
@@ -15953,6 +15955,7 @@
     "USAT20001177",
     "USAT20001805",
     "USAT20001812",
+    "USAT20105493",
     "USAT20180654",
     "USAT20504676",
     "USAT20504677",
@@ -20996,7 +20999,8 @@
     "spotify:track:2e8gktYGD4HMutygVA9VQT": "CAGOO2571089",
     "spotify:track:23ZOiEUix1FsthnLfpWXqj": "USA027300220",
     "spotify:track:4tldGgVS1sF0HA0VzUcKK8": "GBARL2401858",
-    "spotify:track:7anJBerQqBKIbbKvLf9eAq": "GBAFL8400057"
+    "spotify:track:7anJBerQqBKIbbKvLf9eAq": "GBAFL8400057",
+    "spotify:track:2N6Rx3WzHG20fcxKhGZMI9": "USAT20105493"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793654791,
@@ -23087,6 +23091,10 @@
     "cocteau twins|||ivo": {
       "artist": "Cocteau Twins",
       "title": "Ivo"
+    },
+    "tori amos|||rattlesnakes": {
+      "artist": "Tori Amos",
+      "title": "Rattlesnakes"
     }
   },
   "__v82_confirmed_catalog": {
@@ -25694,6 +25702,11 @@
       "uri": "spotify:track:7anJBerQqBKIbbKvLf9eAq",
       "artist": "Cocteau Twins",
       "title": "Ivo"
+    },
+    "tori amos|||rattlesnakes": {
+      "uri": "spotify:track:2N6Rx3WzHG20fcxKhGZMI9",
+      "artist": "Tori Amos",
+      "title": "Rattlesnakes"
     }
   },
   "__pending_library_likes": {},
@@ -36323,6 +36336,7 @@
       "tom smith|||life is for living",
       "tom waits|||the heart of saturday night",
       "tori amos|||general joy",
+      "tori amos|||rattlesnakes",
       "tracey thorn|||here it comes again",
       "tracy chapman|||new beginning",
       "tracy chapman|||talkin' bout a revolution",
@@ -36485,6 +36499,7 @@
       "spotify:track:2KO4mjygg9JgMkvbuXdwhh",
       "spotify:track:2Kgnj7OQEdaiFIayFmplKC",
       "spotify:track:2MNzPyTIfPsxdLX90bXrYt",
+      "spotify:track:2N6Rx3WzHG20fcxKhGZMI9",
       "spotify:track:2NM2xz1511l5r6BfHjHFh7",
       "spotify:track:2REeTHmiO6kbkNTwkolGwC",
       "spotify:track:2TvFN6hUwhTAJ5AHgu8oT8",
@@ -37024,6 +37039,7 @@
       "USAT20000088",
       "USAT20001805",
       "USAT20001812",
+      "USAT20105493",
       "USAT20180654",
       "USAT21300891",
       "USAT21502122",
@@ -37581,7 +37597,8 @@
       "spotify:track:2e8gktYGD4HMutygVA9VQT": "CAGOO2571089",
       "spotify:track:23ZOiEUix1FsthnLfpWXqj": "USA027300220",
       "spotify:track:4tldGgVS1sF0HA0VzUcKK8": "GBARL2401858",
-      "spotify:track:7anJBerQqBKIbbKvLf9eAq": "GBAFL8400057"
+      "spotify:track:7anJBerQqBKIbbKvLf9eAq": "GBAFL8400057",
+      "spotify:track:2N6Rx3WzHG20fcxKhGZMI9": "USAT20105493"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -38022,5 +38039,6 @@
   "__not_found_v35__the chieftains|||chieftains largo": 1793654669,
   "__match_v35__joy crookes feat kano|||mathematics": "spotify:track:4tldGgVS1sF0HA0VzUcKK8",
   "__not_found_v35__madeleine peyroux|||california raining": 1793654913,
-  "__match_v35__cocteau twins|||ivo": "spotify:track:7anJBerQqBKIbbKvLf9eAq"
+  "__match_v35__cocteau twins|||ivo": "spotify:track:7anJBerQqBKIbbKvLf9eAq",
+  "__match_v35__tori amos|||rattlesnakes": "spotify:track:2N6Rx3WzHG20fcxKhGZMI9"
 }
