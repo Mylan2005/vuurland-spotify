@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793621451.079877,
+  "__v150_next_spotify_round_at": 1793621577.224327,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -276,9 +276,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793621447.924256,
-    "mellow_mix": 1793621447.9254303,
-    "big_sonic_heaven": 1793621447.926168
+    "vuurland": 1793621457.2197719,
+    "mellow_mix": 1793621457.2208722,
+    "big_sonic_heaven": 1793621457.2215512
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1645,8 +1645,8 @@
   "__last_radio_key_big_sonic_heaven": "the church|||have you been here before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 771,
-  "__v146_spotify_budget_slot": 1793621331.1662292,
-  "__vuurland_active_playlist_count": 3949,
+  "__v146_spotify_budget_slot": 1793621457.302998,
+  "__vuurland_active_playlist_count": 3950,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793617910,
@@ -3530,6 +3530,8 @@
     "geese|||i see myself",
     "gene|||sleep well tonight",
     "george fitzgerald|||frieda",
+    "george harrison|||here comes the sun",
+    "george harrison|||here comes the sun live",
     "george martin|||a horse with no name",
     "geppetto & the whales|||how we got here",
     "gergana dimitrova & lisa gerrard|||dropping into a dream",
@@ -7727,6 +7729,7 @@
     "spotify:track:0gYL5yGWejRbIgRXMZaNoX",
     "spotify:track:0gZQ4BdbiHMb6WGntdmorw",
     "spotify:track:0gdvhxCUpnvevJP91k7lHj",
+    "spotify:track:0geH4NzZEGceys274LEkgT",
     "spotify:track:0gffHnqikqMloBsK7KnTBP",
     "spotify:track:0goEaYw1cI7ubi2YO2WMFJ",
     "spotify:track:0guJkx5xJRqTC8zYkKHJ9B",
@@ -12787,6 +12790,7 @@
     "GBCYF0700001",
     "GBDCA9900067",
     "GBDCA9900068",
+    "GBDCE0500012",
     "GBDCG0000084",
     "GBDCG0100165",
     "GBDCG0400006",
@@ -19121,7 +19125,8 @@
     "spotify:track:7tG29bRpjrD3jMpUBvQ66N": "UKRNU2100686",
     "spotify:track:7MNAi4I7teNgzuVMe0HPZg": "GBUM71606075",
     "spotify:track:5kyOrdbOsgWgYrqn7mo2j2": "USUR30300033",
-    "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4": "USRE19901539"
+    "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4": "USRE19901539",
+    "spotify:track:0geH4NzZEGceys274LEkgT": "GBDCE0500012"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793621078,
@@ -20352,6 +20357,10 @@
     "little village|||do you want my job": {
       "artist": "Little Village",
       "title": "Do You Want My Job"
+    },
+    "george harrison|||here comes the sun live": {
+      "artist": "George Harrison",
+      "title": "Here Comes The Sun - Live"
     }
   },
   "__v82_confirmed_catalog": {
@@ -21884,6 +21893,11 @@
       "uri": "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4",
       "artist": "Little Village",
       "title": "Do You Want My Job"
+    },
+    "george harrison|||here comes the sun live": {
+      "uri": "spotify:track:0geH4NzZEGceys274LEkgT",
+      "artist": "George Harrison",
+      "title": "Here Comes The Sun - Live"
     }
   },
   "__pending_library_likes": {},
@@ -28991,6 +29005,8 @@
       "fever ray|||triangle walks",
       "fleetwood mac|||walk a thin line",
       "gabriel rios|||gold",
+      "george harrison|||here comes the sun",
+      "george harrison|||here comes the sun live",
       "girl in red|||october passed me by",
       "glen hansard|||you will become",
       "gloria de oliveira|||cranes in flight",
@@ -29155,6 +29171,7 @@
       "spotify:track:0XqAamXqWaurtX9rTDGCFQ",
       "spotify:track:0YMFcrMtBowDdD5bPz0cgy",
       "spotify:track:0a2orhhrZrrvA0zLjsM2rT",
+      "spotify:track:0geH4NzZEGceys274LEkgT",
       "spotify:track:0goEaYw1cI7ubi2YO2WMFJ",
       "spotify:track:0hTs3BREfc0wbbayso6thA",
       "spotify:track:0moxhN2RGnKsZgH91N6z0O",
@@ -29388,6 +29405,7 @@
       "GBCJN7200008",
       "GBCNR8500022",
       "GBCYF0700001",
+      "GBDCE0500012",
       "GBDLY1900021",
       "GBDNH2400005",
       "GBENL1401243",
@@ -29717,7 +29735,8 @@
       "spotify:track:7tG29bRpjrD3jMpUBvQ66N": "UKRNU2100686",
       "spotify:track:7MNAi4I7teNgzuVMe0HPZg": "GBUM71606075",
       "spotify:track:5kyOrdbOsgWgYrqn7mo2j2": "USUR30300033",
-      "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4": "USRE19901539"
+      "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4": "USRE19901539",
+      "spotify:track:0geH4NzZEGceys274LEkgT": "GBDCE0500012"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -29923,5 +29942,6 @@
   "__match_v35__the telescopes|||vanishing lines": "spotify:track:7tG29bRpjrD3jMpUBvQ66N",
   "__match_v35__elbow|||magnificent she says": "spotify:track:7MNAi4I7teNgzuVMe0HPZg",
   "__match_v35__ivy|||this is the day": "spotify:track:5kyOrdbOsgWgYrqn7mo2j2",
-  "__match_v35__little village|||do you want my job": "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4"
+  "__match_v35__little village|||do you want my job": "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4",
+  "__match_v35__george harrison|||here comes the sun live": "spotify:track:0geH4NzZEGceys274LEkgT"
 }
