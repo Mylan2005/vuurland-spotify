@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793618791.271431,
+  "__v150_next_spotify_round_at": 1793618917.7032044,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -254,9 +254,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793618788.2189271,
-    "mellow_mix": 1793618788.2198887,
-    "big_sonic_heaven": 1793618788.2205985
+    "vuurland": 1793618797.6988847,
+    "mellow_mix": 1793618797.6998255,
+    "big_sonic_heaven": 1793618797.7005062
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1603,8 +1603,8 @@
   "__last_radio_key_big_sonic_heaven": "the church|||have you been here before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 755,
-  "__v146_spotify_budget_slot": 1793618671.3471584,
-  "__vuurland_active_playlist_count": 3928,
+  "__v146_spotify_budget_slot": 1793618797.7775745,
+  "__vuurland_active_playlist_count": 3929,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793617910,
@@ -2492,6 +2492,7 @@
     "boy & bear|||where does life begin",
     "boy & bear|||wicked game",
     "boy harsher|||bleed",
+    "boy harsher|||coming home",
     "boy harsher|||ice pick (walk away)",
     "boy harsher|||ice pick walk away",
     "boy harsher|||pray 4 me",
@@ -8758,6 +8759,7 @@
     "spotify:track:2qz7KoWTLGuWuIfwqZmk4y",
     "spotify:track:2rSeieGOj4JunH1Pj2BqmA",
     "spotify:track:2s0FJXPiCMV5xOM3u8hN4K",
+    "spotify:track:2s0QiiRfaEMg7VBMhDB4DZ",
     "spotify:track:2s2dSgs95qE85C3EKyU9L1",
     "spotify:track:2s7pyee9w04uQy3cNKzey9",
     "spotify:track:2sH8YOG7N9X1MTZBpBbdBr",
@@ -14305,6 +14307,7 @@
     "USAT22601319",
     "USAT22604527",
     "USAT22604607",
+    "USAT22605003",
     "USAT22605004",
     "USAT22605006",
     "USAT22605008",
@@ -18995,7 +18998,8 @@
     "spotify:track:43niiTshfUdTN32wHykv7h": "NLF057490003",
     "spotify:track:7CEqPwq3wV1tAZGIxGxKSO": "BED651700001",
     "spotify:track:3RHlA2G06WWfa5gHdRk4Vh": "QM6N22011263",
-    "spotify:track:0I2ELF6uHlL4ABu9aFiou7": "USAT20001805"
+    "spotify:track:0I2ELF6uHlL4ABu9aFiou7": "USAT20001805",
+    "spotify:track:2s0QiiRfaEMg7VBMhDB4DZ": "USAT22605003"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793618544,
@@ -20142,6 +20146,10 @@
     "dr john|||right place wrong time": {
       "artist": "Dr. John",
       "title": "Right Place Wrong Time"
+    },
+    "boy harsher|||coming home": {
+      "artist": "Boy Harsher",
+      "title": "Coming Home"
     }
   },
   "__v82_confirmed_catalog": {
@@ -21569,6 +21577,11 @@
       "uri": "spotify:track:0I2ELF6uHlL4ABu9aFiou7",
       "artist": "Dr. John",
       "title": "Right Place Wrong Time"
+    },
+    "boy harsher|||coming home": {
+      "uri": "spotify:track:2s0QiiRfaEMg7VBMhDB4DZ",
+      "artist": "Boy Harsher",
+      "title": "Coming Home"
     }
   },
   "__pending_library_likes": {},
@@ -28628,6 +28641,7 @@
       "bear's den|||spiders",
       "beck|||everybody's gotta learn sometime",
       "beck|||ride lonesome",
+      "boy harsher|||coming home",
       "bryan ferry|||slave to love",
       "buddy guy|||feels like rain w/ bonnie raitt",
       "camille camille|||in a song",
@@ -28864,6 +28878,7 @@
       "spotify:track:2dlwYojKAq61PIiT47dZpd",
       "spotify:track:2f6HEJZ2JObIQGZOpzoa4o",
       "spotify:track:2hiZdO06HjAB82mY4JxgAy",
+      "spotify:track:2s0QiiRfaEMg7VBMhDB4DZ",
       "spotify:track:2sNrO5tZejCXGzuAQYbzvT",
       "spotify:track:2t17Hx0oopVsunzztM8IqT",
       "spotify:track:2tT6mzIeQG2tAFIMTwR6DV",
@@ -29080,6 +29095,7 @@
       "USAT10000010",
       "USAT20001805",
       "USAT22400849",
+      "USAT22605003",
       "USC4R1402480",
       "USC4R2556041",
       "USC4R2668103",
@@ -29318,7 +29334,8 @@
       "spotify:track:43niiTshfUdTN32wHykv7h": "NLF057490003",
       "spotify:track:7CEqPwq3wV1tAZGIxGxKSO": "BED651700001",
       "spotify:track:3RHlA2G06WWfa5gHdRk4Vh": "QM6N22011263",
-      "spotify:track:0I2ELF6uHlL4ABu9aFiou7": "USAT20001805"
+      "spotify:track:0I2ELF6uHlL4ABu9aFiou7": "USAT20001805",
+      "spotify:track:2s0QiiRfaEMg7VBMhDB4DZ": "USAT22605003"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -29503,5 +29520,6 @@
   "__match_v35__j j cale|||cajun moon": "spotify:track:43niiTshfUdTN32wHykv7h",
   "__match_v35__portland|||pouring rain": "spotify:track:7CEqPwq3wV1tAZGIxGxKSO",
   "__match_v35__mt wolf|||tayrona feat wilsen": "spotify:track:3RHlA2G06WWfa5gHdRk4Vh",
-  "__match_v35__dr john|||right place wrong time": "spotify:track:0I2ELF6uHlL4ABu9aFiou7"
+  "__match_v35__dr john|||right place wrong time": "spotify:track:0I2ELF6uHlL4ABu9aFiou7",
+  "__match_v35__boy harsher|||coming home": "spotify:track:2s0QiiRfaEMg7VBMhDB4DZ"
 }
