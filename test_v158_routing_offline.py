@@ -1,4 +1,4 @@
-"""Regression: four live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
+"""Regression: five live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
 import ast
 from pathlib import Path
 
@@ -22,7 +22,8 @@ assert '"big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_trac
 assert '"radio_britannia": ("Radio Britannia", get_radio_britannia_tracks,' in body
 assert '"duyster": ("Duyster archief", lambda: [],' in body
 assert "duyster_archive.run(cache, live_queue, duyster_known, _v47_key)" not in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled")' in source
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio")' in source
+assert '"dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks,' in body
 assert '"soma_digitalis": ("SomaFM Digitalis", get_soma_digitalis_tracks,' not in body
 assert '"soma_folkfwd": ("SomaFM Folk Forward", get_soma_folkfwd_tracks,' not in body
 assert '"soma_lush": ("SomaFM Lush", get_soma_lush_tracks,' not in body
@@ -38,7 +39,7 @@ assert 'add_tracks(BIG_SONIC_REVIEW_PLAYLIST_ID, [uri])' not in body
 assert 'big_sonic_destination(artist) == "review"' not in body
 assert '__big_sonic_review_scan_complete' not in body
 assert '"radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks,' in body
-print("✅ Vier radiobronnen actief, inclusief Radio X Chilled; DKFM en Duyster uitgeschakeld.")
+print("✅ Vijf radiobronnen actief, inclusief Radio X Chilled en Dreampop; DKFM en Duyster uitgeschakeld.")
 
 assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
 
