@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793600289.5975518,
+  "__v150_next_spotify_round_at": 1793600418.0109687,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -80,9 +80,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793600287.7606378,
-    "mellow_mix": 1793600287.761018,
-    "big_sonic_heaven": 1793600287.7613184
+    "vuurland": 1793600298.0054922,
+    "mellow_mix": 1793600298.0058515,
+    "big_sonic_heaven": 1793600298.0062091
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1198,8 +1198,8 @@
   "__last_radio_key_big_sonic_heaven": "cocteau twins|||ivo",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 626,
-  "__v146_spotify_budget_slot": 1793600169.7193048,
-  "__vuurland_active_playlist_count": 3790,
+  "__v146_spotify_budget_slot": 1793600298.139667,
+  "__vuurland_active_playlist_count": 3791,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793599528,
@@ -5509,6 +5509,7 @@
     "sinead o'connor|||drink before the war",
     "sinead o'connor|||feel so different",
     "sinead o'connor|||feel so different - 2009 remaster",
+    "sinead o'connor|||i am stretched on your grave",
     "sinead o'connor|||jerusalem",
     "sinead o'connor|||silent night - long version",
     "sinead o'connor|||success has made a failure of our home",
@@ -7991,6 +7992,7 @@
     "spotify:track:2V5vmvIwxqVizuaYJgrmlE",
     "spotify:track:2VEGXUFnAYdYRiUPHpg3YZ",
     "spotify:track:2VGDntFPvgvqSiUf9ITEfW",
+    "spotify:track:2VQUtkqHTXKY5rm81PZEtk",
     "spotify:track:2VYnlKxB8jpbCeLUjQsebc",
     "spotify:track:2VoP7RSj2WSLIF5gm8E13g",
     "spotify:track:2Vok36DwEeWz67DbWA8Gg1",
@@ -11722,6 +11724,7 @@
     "GBAYK8700021",
     "GBAYK8700072",
     "GBAYK8700074",
+    "GBAYK9000074",
     "GBAYK9200047",
     "GBAZJ0600006",
     "GBAZP0700003",
@@ -18098,7 +18101,8 @@
     "spotify:track:60OdLDvZpHe4kVDYwNtYh9": "GBCJN7200008",
     "spotify:track:1oar8gdDX5yHWzVstAHDav": "NLF057890045",
     "spotify:track:23bwujVYKeGdbcLd2LQxVo": "GBKZV2000121",
-    "spotify:track:41hT6idTUfXX5Dmv32TXpO": "USWWW0124879"
+    "spotify:track:41hT6idTUfXX5Dmv32TXpO": "USWWW0124879",
+    "spotify:track:2VQUtkqHTXKY5rm81PZEtk": "GBAYK9000074"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793600170,
@@ -18761,6 +18765,10 @@
     "third world|||feel a little better": {
       "artist": "Third World",
       "title": "Feel A Little Better"
+    },
+    "sinead o'connor|||i am stretched on your grave": {
+      "artist": "Sinéad O'Connor",
+      "title": "I Am Stretched on Your Grave"
     }
   },
   "__v82_confirmed_catalog": {
@@ -19583,6 +19591,11 @@
       "uri": "spotify:track:41hT6idTUfXX5Dmv32TXpO",
       "artist": "Third World",
       "title": "Feel A Little Better"
+    },
+    "sinead o'connor|||i am stretched on your grave": {
+      "uri": "spotify:track:2VQUtkqHTXKY5rm81PZEtk",
+      "artist": "Sinéad O'Connor",
+      "title": "I Am Stretched on Your Grave"
     }
   },
   "__pending_library_likes": {},
@@ -25065,6 +25078,7 @@
       "samantha fish|||hello stranger",
       "sevens|||upstate",
       "sigur ros|||inni mer syngur vitleysingur",
+      "sinead o'connor|||i am stretched on your grave",
       "sly & the family stone|||if you want me to stay",
       "soft boy|||gen z",
       "softcult|||haunt you still",
@@ -25100,6 +25114,7 @@
       "spotify:track:2BydLQAh7CUIFvSEqAMc4x",
       "spotify:track:2FzybfU6VOkywhpZEER8tW",
       "spotify:track:2Kgnj7OQEdaiFIayFmplKC",
+      "spotify:track:2VQUtkqHTXKY5rm81PZEtk",
       "spotify:track:2t17Hx0oopVsunzztM8IqT",
       "spotify:track:30qJ6PTq5GiaXx0NkcRYwT",
       "spotify:track:3S4XWfwRrDdmObOUpdiCTZ",
@@ -25149,6 +25164,7 @@
       "GBAFL8500062",
       "GBALB0300004",
       "GBAYE2200067",
+      "GBAYK9000074",
       "GBBBM0002178",
       "GBCJN7200008",
       "GBJCP0900421",
@@ -25238,7 +25254,8 @@
       "spotify:track:60OdLDvZpHe4kVDYwNtYh9": "GBCJN7200008",
       "spotify:track:1oar8gdDX5yHWzVstAHDav": "NLF057890045",
       "spotify:track:23bwujVYKeGdbcLd2LQxVo": "GBKZV2000121",
-      "spotify:track:41hT6idTUfXX5Dmv32TXpO": "USWWW0124879"
+      "spotify:track:41hT6idTUfXX5Dmv32TXpO": "USWWW0124879",
+      "spotify:track:2VQUtkqHTXKY5rm81PZEtk": "GBAYK9000074"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -25294,5 +25311,6 @@
   "__match_v35__eric clapton|||promises": "spotify:track:1oar8gdDX5yHWzVstAHDav",
   "__match_v35__arlo parks|||hope": "spotify:track:23bwujVYKeGdbcLd2LQxVo",
   "__match_v35__third world|||feel a little better": "spotify:track:41hT6idTUfXX5Dmv32TXpO",
-  "__not_found_v35__the giraffe told me in my dream|||strolling": 1793600170
+  "__not_found_v35__the giraffe told me in my dream|||strolling": 1793600170,
+  "__match_v35__sinead o'connor|||i am stretched on your grave": "spotify:track:2VQUtkqHTXKY5rm81PZEtk"
 }
