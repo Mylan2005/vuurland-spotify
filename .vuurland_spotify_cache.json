@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793619676.5128002,
+  "__v150_next_spotify_round_at": 1793619803.2316108,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -262,9 +262,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793619673.5316386,
-    "mellow_mix": 1793619673.5326254,
-    "big_sonic_heaven": 1793619673.5332873
+    "vuurland": 1793619683.2271996,
+    "mellow_mix": 1793619683.2281675,
+    "big_sonic_heaven": 1793619683.2288296
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1618,8 +1618,8 @@
   "__last_radio_key_big_sonic_heaven": "the church|||have you been here before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 762,
-  "__v146_spotify_budget_slot": 1793619556.586352,
-  "__vuurland_active_playlist_count": 3935,
+  "__v146_spotify_budget_slot": 1793619683.3066041,
+  "__vuurland_active_playlist_count": 3936,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793617910,
@@ -5979,6 +5979,7 @@
     "sherman|||the longest time",
     "sherman|||wasteland",
     "sherman|||you were in for more",
+    "sheryl crow|||home",
     "shikraah|||o manvasiya",
     "ships in the night|||lost times",
     "shoestrings|||forgive you",
@@ -7589,6 +7590,7 @@
     "spotify:track:0V62AlQ6Lqy6xPK1sZTLD5",
     "spotify:track:0VEjM4LYuOxPCtrtKuwbuq",
     "spotify:track:0VIB2vqud3GqlpBMuTIchV",
+    "spotify:track:0VLxlACQp8DrbhLQ8QbFG3",
     "spotify:track:0VNzEY1G4GLqcNx5qaaTl6",
     "spotify:track:0VPpOH6jB9zcxhd4cRKSf0",
     "spotify:track:0VRH3HlWhJS02lxHClmcrP",
@@ -14286,6 +14288,7 @@
     "USAM19500504",
     "USAM19500634",
     "USAM19500635",
+    "USAM19604363",
     "USANG1913495",
     "USANG2287180",
     "USANQ1500501",
@@ -19038,7 +19041,8 @@
     "spotify:track:0sLNt0jqb8caoiTz4vbpMd": "AUUIK1700002",
     "spotify:track:3gwfEBrFpzEFCZMjw7mqxA": "USSM11904160",
     "spotify:track:0RT3to8HyDrjW2duPLpZFT": "GBARL0800262",
-    "spotify:track:5RsfvV4oSchEPH6t93C1lR": "GBAYK7100004"
+    "spotify:track:5RsfvV4oSchEPH6t93C1lR": "GBAYK7100004",
+    "spotify:track:0VLxlACQp8DrbhLQ8QbFG3": "USAM19604363"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793619177,
@@ -20213,6 +20217,10 @@
     "jethro tull|||mother goose": {
       "artist": "Jethro Tull",
       "title": "Mother Goose"
+    },
+    "sheryl crow|||home": {
+      "artist": "Sheryl Crow",
+      "title": "Home"
     }
   },
   "__v82_confirmed_catalog": {
@@ -21675,6 +21683,11 @@
       "uri": "spotify:track:5RsfvV4oSchEPH6t93C1lR",
       "artist": "Jethro Tull",
       "title": "Mother Goose"
+    },
+    "sheryl crow|||home": {
+      "uri": "spotify:track:0VLxlACQp8DrbhLQ8QbFG3",
+      "artist": "Sheryl Crow",
+      "title": "Home"
     }
   },
   "__pending_library_likes": {},
@@ -28863,6 +28876,7 @@
       "seatemples|||wine and rockets",
       "sevens|||upstate",
       "shawn colvin|||diamond in the rough",
+      "sheryl crow|||home",
       "sigur ros|||inni mer syngur vitleysingur",
       "sinead o'connor|||i am stretched on your grave",
       "sly & the family stone|||if you want me to stay",
@@ -28928,6 +28942,7 @@
       "spotify:track:0S9VaY7rUwpk5VVF4vxy3q",
       "spotify:track:0SeQJcugNMpUfPpEk4QA6r",
       "spotify:track:0TUPxOcJc4R3PbWo8QwC3m",
+      "spotify:track:0VLxlACQp8DrbhLQ8QbFG3",
       "spotify:track:0XqAamXqWaurtX9rTDGCFQ",
       "spotify:track:0YMFcrMtBowDdD5bPz0cgy",
       "spotify:track:0a2orhhrZrrvA0zLjsM2rT",
@@ -29201,6 +29216,7 @@
       "USA4D0111106",
       "USA6W1025212",
       "USAD49900671",
+      "USAM19604363",
       "USAR19900244",
       "USAT10000010",
       "USAT20001805",
@@ -29452,7 +29468,8 @@
       "spotify:track:0sLNt0jqb8caoiTz4vbpMd": "AUUIK1700002",
       "spotify:track:3gwfEBrFpzEFCZMjw7mqxA": "USSM11904160",
       "spotify:track:0RT3to8HyDrjW2duPLpZFT": "GBARL0800262",
-      "spotify:track:5RsfvV4oSchEPH6t93C1lR": "GBAYK7100004"
+      "spotify:track:5RsfvV4oSchEPH6t93C1lR": "GBAYK7100004",
+      "spotify:track:0VLxlACQp8DrbhLQ8QbFG3": "USAM19604363"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -29644,5 +29661,6 @@
   "__match_v35__stella donnelly|||boys will be boys": "spotify:track:0sLNt0jqb8caoiTz4vbpMd",
   "__match_v35__leon bridges|||that was yesterday": "spotify:track:3gwfEBrFpzEFCZMjw7mqxA",
   "__match_v35__my bloody valentine|||swallow": "spotify:track:0RT3to8HyDrjW2duPLpZFT",
-  "__match_v35__jethro tull|||mother goose": "spotify:track:5RsfvV4oSchEPH6t93C1lR"
+  "__match_v35__jethro tull|||mother goose": "spotify:track:5RsfvV4oSchEPH6t93C1lR",
+  "__match_v35__sheryl crow|||home": "spotify:track:0VLxlACQp8DrbhLQ8QbFG3"
 }
