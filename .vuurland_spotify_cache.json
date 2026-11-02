@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793626776.0499809,
+  "__v150_next_spotify_round_at": 1793626902.738036,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -288,9 +288,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793626773.1217043,
-    "mellow_mix": 1793626773.1231644,
-    "big_sonic_heaven": 1793626773.1238816
+    "vuurland": 1793626782.7329223,
+    "mellow_mix": 1793626782.7343788,
+    "big_sonic_heaven": 1793626782.735108
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1706,7 +1706,7 @@
   "__last_radio_key_big_sonic_heaven": "the church|||have you been here before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 803,
-  "__v146_spotify_budget_slot": 1793626656.1293998,
+  "__v146_spotify_budget_slot": 1793626782.8817503,
   "__vuurland_active_playlist_count": 3998,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -20702,6 +20702,10 @@
     "cocteau twins|||dials": {
       "artist": "Cocteau Twins",
       "title": "Dials"
+    },
+    "the paper kites|||bloom": {
+      "artist": "The Paper Kites",
+      "title": "Bloom - Bonus Track"
     }
   },
   "__v82_confirmed_catalog": {
@@ -22414,6 +22418,11 @@
       "uri": "spotify:track:6tFsQdxXonSpi8MZCCHhtP",
       "artist": "Cocteau Twins",
       "title": "Dials"
+    },
+    "the paper kites|||bloom": {
+      "uri": "spotify:track:1HMQmOWrkieKYWlFsjUP3D",
+      "artist": "The Paper Kites",
+      "title": "Bloom - Bonus Track"
     }
   },
   "__pending_library_likes": {},
@@ -31700,5 +31709,6 @@
   "__match_v35__noah kahan|||doors": "spotify:track:3iU2qsthCTo5EeTE03l3Si",
   "__match_v35__the beatles|||hey jude": "spotify:track:1eT2CjXwFXNx6oY5ydvzKU",
   "__not_found_v35__the band|||atlantic city": 1793626530,
-  "__match_v35__cocteau twins|||dials": "spotify:track:6tFsQdxXonSpi8MZCCHhtP"
+  "__match_v35__cocteau twins|||dials": "spotify:track:6tFsQdxXonSpi8MZCCHhtP",
+  "__match_v35__the paper kites|||bloom": "spotify:track:1HMQmOWrkieKYWlFsjUP3D"
 }
