@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793646528.5521388,
+  "__v150_next_spotify_round_at": 1793646657.6805022,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -287,6 +287,7 @@
       "fleeting colours|||autumn"
     ],
     "radio_x_chilled": [
+      "kings of leon|||arizona",
       "ben howard|||keep your head up",
       "bat for lashes|||daniel",
       "pearl jam|||even flow live mtv unplugged",
@@ -385,8 +386,7 @@
       "mumford & sons|||timshel",
       "ben howard|||the fear",
       "radiohead|||karma police",
-      "empire of the sun|||walking on a dream",
-      "ocean colour scene|||the day we caught the train acoustic"
+      "empire of the sun|||walking on a dream"
     ],
     "dreampop_radio": [
       "coldplay|||brothers and sisters",
@@ -492,11 +492,11 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793646518.63885,
-    "mellow_mix": 1793646518.64265,
-    "big_sonic_heaven": 1793646518.6439579,
-    "radio_x_chilled": 1793646518.6475914,
-    "dreampop_radio": 1793646525.2317245
+    "vuurland": 1793646537.5086706,
+    "mellow_mix": 1793646537.5125089,
+    "big_sonic_heaven": 1793646537.5138228,
+    "radio_x_chilled": 1793646537.6715097,
+    "dreampop_radio": 1793646537.674786
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2057,6 +2057,7 @@
       "jungle|||cherry",
       "kaiser chiefs|||love's not a competition but i'm winning",
       "keane|||everybody's changing",
+      "kings of leon|||arizona",
       "kings of leon|||closer",
       "kings of leon|||knocked up",
       "kings of leon|||manhattan",
@@ -2451,9 +2452,9 @@
   "__last_radio_key_mellow_mix": "tanya donelly|||moonbeam monkey",
   "__last_radio_key_big_sonic_heaven": "glazyhaze|||nirvana",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1011,
-  "__v146_spotify_budget_slot": 1793646408.716115,
-  "__vuurland_active_playlist_count": 4126,
+  "__v116_fifo_next_sequence": 1012,
+  "__v146_spotify_budget_slot": 1793646537.8484464,
+  "__vuurland_active_playlist_count": 4127,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793643705,
@@ -6743,6 +6744,7 @@
     "royksopp|||i don't know what i can save you from - royksopp remix",
     "royksopp|||what else is there?",
     "ruby waters|||6 feet under",
+    "ruby waters|||quantum physics",
     "ruth radelet|||underground",
     "ry x & agents of time|||your love - agents of time remix",
     "ry x & hermanos gutierrez|||you (feat. hermanos gutiérrez)",
@@ -11223,6 +11225,7 @@
     "spotify:track:5Yc2SVCeXXcDdALmmXIslb",
     "spotify:track:5YdXj6Pz4GJ24oOz2xbGPp",
     "spotify:track:5YxuIY357q54PgoUO3Ot7v",
+    "spotify:track:5ZEq9YuBdFgwAnYmjafWu3",
     "spotify:track:5ZP8LfM7TezqoxF9yp6VzX",
     "spotify:track:5ZSYEtLHBxWMU3jrcE6fjV",
     "spotify:track:5ZkLm20XMu4r1KCYaCgx61",
@@ -15193,6 +15196,7 @@
     "TCAEI1934930",
     "TCAEK1930075",
     "TCAER2029011",
+    "TCAES2040725",
     "TCAEX2078422",
     "TCAFC2055623",
     "TCAFK2199916",
@@ -20563,7 +20567,8 @@
     "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5": "USSM10028168",
     "spotify:track:6tZF1isUvYNQviZjSlVPmr": "NLF058290003",
     "spotify:track:2uRVPeQbsEpRQD0DKr1WTo": "USSM17500646",
-    "spotify:track:4MKO1xltVSQlMMZUfOMEA1": "GBCEN1300610"
+    "spotify:track:4MKO1xltVSQlMMZUfOMEA1": "GBCEN1300610",
+    "spotify:track:5ZEq9YuBdFgwAnYmjafWu3": "TCAES2040725"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793646040,
@@ -22422,6 +22427,10 @@
     "london grammar|||nightcall": {
       "artist": "London Grammar",
       "title": "Nightcall"
+    },
+    "ruby waters|||quantum physics": {
+      "artist": "Ruby Waters",
+      "title": "Quantum Physics"
     }
   },
   "__v82_confirmed_catalog": {
@@ -24739,6 +24748,11 @@
       "uri": "spotify:track:4MKO1xltVSQlMMZUfOMEA1",
       "artist": "London Grammar",
       "title": "Nightcall"
+    },
+    "ruby waters|||quantum physics": {
+      "uri": "spotify:track:5ZEq9YuBdFgwAnYmjafWu3",
+      "artist": "Ruby Waters",
+      "title": "Quantum Physics"
     }
   },
   "__pending_library_likes": {},
@@ -33652,6 +33666,7 @@
       "romy|||loud places",
       "rosanne cash|||the sunken lands",
       "roxy music|||end of the line",
+      "ruby waters|||quantum physics",
       "sade|||the sweetest gift",
       "samantha fish|||hello stranger",
       "santana|||flor d'luna moonflower",
@@ -34008,6 +34023,7 @@
       "spotify:track:5RsfvV4oSchEPH6t93C1lR",
       "spotify:track:5T8Czk2nF3VExTwXccFyor",
       "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
+      "spotify:track:5ZEq9YuBdFgwAnYmjafWu3",
       "spotify:track:5bbgiWfaHG6Vruyg3OWQuU",
       "spotify:track:5dcaGHixWGqinFqb9RJdhi",
       "spotify:track:5eHnZbx4uEBUDy7n0Kcmjx",
@@ -34307,6 +34323,7 @@
       "SEWKN1100101",
       "TCAAS1050357",
       "TCABK1200710",
+      "TCAES2040725",
       "TCAGN2235671",
       "TCAJY2584296",
       "TCAKA2515366",
@@ -34816,7 +34833,8 @@
       "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5": "USSM10028168",
       "spotify:track:6tZF1isUvYNQviZjSlVPmr": "NLF058290003",
       "spotify:track:2uRVPeQbsEpRQD0DKr1WTo": "USSM17500646",
-      "spotify:track:4MKO1xltVSQlMMZUfOMEA1": "GBCEN1300610"
+      "spotify:track:4MKO1xltVSQlMMZUfOMEA1": "GBCEN1300610",
+      "spotify:track:5ZEq9YuBdFgwAnYmjafWu3": "TCAES2040725"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -35087,7 +35105,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "ben howard|||keep your head up",
+  "__last_radio_key_radio_x_chilled": "kings of leon|||arizona",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -35195,5 +35213,6 @@
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
-  "__match_v35__london grammar|||nightcall": "spotify:track:4MKO1xltVSQlMMZUfOMEA1"
+  "__match_v35__london grammar|||nightcall": "spotify:track:4MKO1xltVSQlMMZUfOMEA1",
+  "__match_v35__ruby waters|||quantum physics": "spotify:track:5ZEq9YuBdFgwAnYmjafWu3"
 }
