@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793616131.4374807,
+  "__v150_next_spotify_round_at": 1793616257.3150518,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -229,9 +229,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793616128.0037704,
-    "mellow_mix": 1793616128.0045054,
-    "big_sonic_heaven": 1793616128.0051835
+    "vuurland": 1793616137.3107736,
+    "mellow_mix": 1793616137.3114972,
+    "big_sonic_heaven": 1793616137.3121588
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1537,6 +1537,12 @@
       "title": "The Place of Eternal Spring",
       "source": "big_sonic_heaven",
       "failed_at": 1793615068
+    },
+    "the church|||rapture": {
+      "artist": "The Church",
+      "title": "Rapture",
+      "source": "big_sonic_heaven",
+      "failed_at": 1793616137
     }
   },
   "__v51_radio_unmatched": {},
@@ -1549,7 +1555,7 @@
   "__last_radio_key_big_sonic_heaven": "the church|||have you been here before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 737,
-  "__v146_spotify_budget_slot": 1793616011.5164123,
+  "__v146_spotify_budget_slot": 1793616137.388458,
   "__vuurland_active_playlist_count": 3904,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -21283,7 +21289,7 @@
     "the church|||have you been here before": 3,
     "the church|||i want it": 3,
     "the church|||the place of eternal spring": 3,
-    "the church|||rapture": 2
+    "the church|||rapture": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -21306,7 +21312,8 @@
     "the church|||winter": 1,
     "the church|||have you been here before": 1,
     "the church|||i want it": 1,
-    "the church|||the place of eternal spring": 1
+    "the church|||the place of eternal spring": 1,
+    "the church|||rapture": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -28576,5 +28583,6 @@
   "__match_v35__ciska ciska|||angel": "spotify:track:0XqAamXqWaurtX9rTDGCFQ",
   "__match_v35__neil finn|||driving me mad": "spotify:track:55WlzuFGqmbRY7sd3mHMcs",
   "__match_v35__ride|||i came to see the wreck": "spotify:track:0Ayhn6iaTVD5uoMQfaYkWe",
-  "__match_v35__jose gonzalez|||hand on your heart": "spotify:track:6ogUb1G2wMalz2Ur16a28F"
+  "__match_v35__jose gonzalez|||hand on your heart": "spotify:track:6ogUb1G2wMalz2Ur16a28F",
+  "__not_found_v35__the church|||rapture": 1793616137
 }
