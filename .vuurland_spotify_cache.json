@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793650978.2235818,
+  "__v150_next_spotify_round_at": 1793651100.2456846,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -509,11 +509,11 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793650967.5648365,
-    "mellow_mix": 1793650967.5690222,
-    "big_sonic_heaven": 1793650967.7280357,
-    "radio_x_chilled": 1793650967.731954,
-    "dreampop_radio": 1793650967.7354028
+    "vuurland": 1793650980.2266157,
+    "mellow_mix": 1793650980.230686,
+    "big_sonic_heaven": 1793650980.2325006,
+    "radio_x_chilled": 1793650980.236374,
+    "dreampop_radio": 1793650980.2397783
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2548,8 +2548,8 @@
   "__last_radio_key_big_sonic_heaven": "even as we speak|||unknown",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1078,
-  "__v146_spotify_budget_slot": 1793650858.3989062,
-  "__vuurland_active_playlist_count": 4160,
+  "__v146_spotify_budget_slot": 1793650980.4227839,
+  "__vuurland_active_playlist_count": 4161,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793647400,
@@ -6508,6 +6508,7 @@
     "patrick watson|||uh oh",
     "patrick watson|||we fly for the ones we love",
     "patty griffin|||what you are",
+    "patty larkin|||good thing",
     "paul mccartney|||blackbird",
     "paul mccartney|||blackbird - live",
     "paul simon|||50 ways to leave your lover",
@@ -9359,6 +9360,7 @@
     "spotify:track:1fznK5Q8hy9S71Ery9zoY6",
     "spotify:track:1g0xyCMUBKUaMDCk00Hhmk",
     "spotify:track:1gKOR0YfjB6bVc7A0huZBl",
+    "spotify:track:1gLtAfef6KQwWG28NlvKKq",
     "spotify:track:1gQOnWynwP1cPFNIh5D8sR",
     "spotify:track:1gXEKJBTx2sLhY3AWkG6tu",
     "spotify:track:1gbvCuQHPTgU7sgWCbqtVV",
@@ -16585,6 +16587,7 @@
     "USUR30300033",
     "USUS12000003",
     "USUS12000189",
+    "USVG29984357",
     "USVI20200351",
     "USVI21100139",
     "USVI21200760",
@@ -20791,7 +20794,8 @@
     "spotify:track:1QQUZeG6qa90sPHIAuHbgj": "USAM18704270",
     "spotify:track:21BxZ4jL908jasBK4t1HqU": "GBF069290001",
     "spotify:track:0CfBBkkJzHXx8tQjdfNkgH": "USSUB0986401",
-    "spotify:track:59lQwJcWbr9x3OvTvW5NNX": "US38Y1935006"
+    "spotify:track:59lQwJcWbr9x3OvTvW5NNX": "US38Y1935006",
+    "spotify:track:1gLtAfef6KQwWG28NlvKKq": "USVG29984357"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793650489,
@@ -22782,6 +22786,10 @@
     "bon iver|||u man like": {
       "artist": "Bon Iver",
       "title": "U (Man Like)"
+    },
+    "patty larkin|||good thing": {
+      "artist": "Patty Larkin",
+      "title": "Good Thing"
     }
   },
   "__v82_confirmed_catalog": {
@@ -25264,6 +25272,11 @@
       "uri": "spotify:track:59lQwJcWbr9x3OvTvW5NNX",
       "artist": "Bon Iver",
       "title": "U (Man Like)"
+    },
+    "patty larkin|||good thing": {
+      "uri": "spotify:track:1gLtAfef6KQwWG28NlvKKq",
+      "artist": "Patty Larkin",
+      "title": "Good Thing"
     }
   },
   "__pending_library_likes": {},
@@ -34711,6 +34724,7 @@
       "otom|||you lost me",
       "over the rhine|||trouble",
       "patty griffin|||what you are",
+      "patty larkin|||good thing",
       "paul simon|||was a sunny day",
       "pearl jam|||elderly woman behind the counter in a small town",
       "perpetual void|||tree house",
@@ -34940,6 +34954,7 @@
       "spotify:track:1eT2CjXwFXNx6oY5ydvzKU",
       "spotify:track:1f94GhohgeVq9SNwyFI691",
       "spotify:track:1fznK5Q8hy9S71Ery9zoY6",
+      "spotify:track:1gLtAfef6KQwWG28NlvKKq",
       "spotify:track:1gXEKJBTx2sLhY3AWkG6tu",
       "spotify:track:1gqk2dawfdLdn4XamF27cx",
       "spotify:track:1i6AKXriagrBMkC1yuPOPr",
@@ -35609,6 +35624,7 @@
       "USUM72512347",
       "USUM72600182",
       "USUR30300033",
+      "USVG29984357",
       "USVI20200351",
       "USVI21100139",
       "USVI21200760",
@@ -36010,7 +36026,8 @@
       "spotify:track:1QQUZeG6qa90sPHIAuHbgj": "USAM18704270",
       "spotify:track:21BxZ4jL908jasBK4t1HqU": "GBF069290001",
       "spotify:track:0CfBBkkJzHXx8tQjdfNkgH": "USSUB0986401",
-      "spotify:track:59lQwJcWbr9x3OvTvW5NNX": "US38Y1935006"
+      "spotify:track:59lQwJcWbr9x3OvTvW5NNX": "US38Y1935006",
+      "spotify:track:1gLtAfef6KQwWG28NlvKKq": "USVG29984357"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -36423,5 +36440,6 @@
   "__match_v35__john hiatt|||have a little faith in me": "spotify:track:1QQUZeG6qa90sPHIAuHbgj",
   "__match_v35__the cure|||open": "spotify:track:21BxZ4jL908jasBK4t1HqU",
   "__match_v35__avi buffalo|||what's in it for?": "spotify:track:0CfBBkkJzHXx8tQjdfNkgH",
-  "__match_v35__bon iver|||u man like": "spotify:track:59lQwJcWbr9x3OvTvW5NNX"
+  "__match_v35__bon iver|||u man like": "spotify:track:59lQwJcWbr9x3OvTvW5NNX",
+  "__match_v35__patty larkin|||good thing": "spotify:track:1gLtAfef6KQwWG28NlvKKq"
 }
