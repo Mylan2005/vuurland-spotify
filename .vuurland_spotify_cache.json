@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793646282.4056172,
+  "__v150_next_spotify_round_at": 1793646405.2969513,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -491,11 +491,11 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793646272.5754917,
-    "mellow_mix": 1793646272.5792336,
-    "big_sonic_heaven": 1793646272.5805445,
-    "radio_x_chilled": 1793646272.5840566,
-    "dreampop_radio": 1793646272.587219
+    "vuurland": 1793646285.2800386,
+    "mellow_mix": 1793646285.2837896,
+    "big_sonic_heaven": 1793646285.2850704,
+    "radio_x_chilled": 1793646285.2885752,
+    "dreampop_radio": 1793646285.2917845
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2449,8 +2449,8 @@
   "__last_radio_key_big_sonic_heaven": "&tilly|||clearest blue",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 969,
-  "__v146_spotify_budget_slot": 1793646162.5673454,
-  "__vuurland_active_playlist_count": 4124,
+  "__v146_spotify_budget_slot": 1793646285.4598105,
+  "__vuurland_active_playlist_count": 4125,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793643705,
@@ -8223,6 +8223,7 @@
     "will church|||treasure",
     "will samson|||saola",
     "will samson|||untold",
+    "willie nelson|||blue eyes crying in the rain",
     "willy mason|||no room for doubt feat willy mason",
     "wilsen|||final",
     "wilsen|||fuse",
@@ -9876,6 +9877,7 @@
     "spotify:track:2u9iBS6KFPz7CPenzUpXsm",
     "spotify:track:2uQ4px5SPONsgcUpulywIQ",
     "spotify:track:2uQjLT4Y17Ljuv6tBvpG9v",
+    "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
     "spotify:track:2ubUxHP2XzxO2WmcF1dJCo",
     "spotify:track:2umTklGNx0IiiTFFVNZNlC",
     "spotify:track:2vScOYL2g7842auB9YO6At",
@@ -16219,6 +16221,7 @@
     "USSM16700357",
     "USSM16900182",
     "USSM17200461",
+    "USSM17500646",
     "USSM17700373",
     "USSM18400411",
     "USSM18700367",
@@ -20552,7 +20555,8 @@
     "spotify:track:7l5nkTZpoD93OkynN0gcon": "USCA29300475",
     "spotify:track:32boHBQveR0MPyILldmayx": "CAT247900171",
     "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5": "USSM10028168",
-    "spotify:track:6tZF1isUvYNQviZjSlVPmr": "NLF058290003"
+    "spotify:track:6tZF1isUvYNQviZjSlVPmr": "NLF058290003",
+    "spotify:track:2uRVPeQbsEpRQD0DKr1WTo": "USSM17500646"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793646040,
@@ -22403,6 +22407,10 @@
     "j j cale|||city girls": {
       "artist": "J.J. Cale",
       "title": "City Girls"
+    },
+    "willie nelson|||blue eyes crying in the rain": {
+      "artist": "Willie Nelson",
+      "title": "Blue Eyes Crying In the Rain"
     }
   },
   "__v82_confirmed_catalog": {
@@ -24710,6 +24718,11 @@
       "uri": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
       "artist": "J.J. Cale",
       "title": "City Girls"
+    },
+    "willie nelson|||blue eyes crying in the rain": {
+      "uri": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
+      "artist": "Willie Nelson",
+      "title": "Blue Eyes Crying In the Rain"
     }
   },
   "__pending_library_likes": {},
@@ -33723,6 +33736,7 @@
       "wednesday|||elderberry wine",
       "when in rome|||the promise",
       "wilco|||kamera",
+      "willie nelson|||blue eyes crying in the rain",
       "wilsen|||fuse",
       "xavier rudd|||stuck",
       "youth valley|||ocean dream",
@@ -33865,6 +33879,7 @@
       "spotify:track:2tT6mzIeQG2tAFIMTwR6DV",
       "spotify:track:2tfc81XZfVReM0kYQqv7o3",
       "spotify:track:2u2TiCLF3tLU0QgcVoCFr2",
+      "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
       "spotify:track:2yqfRB0Di52Vhcy0rDLgT0",
       "spotify:track:2yzdTEQ7tImw7LvgwKcWVO",
       "spotify:track:30BarLQM6SA6zs8wFEsiCj",
@@ -34391,6 +34406,7 @@
       "USSM12209546",
       "USSM12602963",
       "USSM16900182",
+      "USSM17500646",
       "USSM18700367",
       "USSM19703470",
       "USSM19801650",
@@ -34779,7 +34795,8 @@
       "spotify:track:7l5nkTZpoD93OkynN0gcon": "USCA29300475",
       "spotify:track:32boHBQveR0MPyILldmayx": "CAT247900171",
       "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5": "USSM10028168",
-      "spotify:track:6tZF1isUvYNQviZjSlVPmr": "NLF058290003"
+      "spotify:track:6tZF1isUvYNQviZjSlVPmr": "NLF058290003",
+      "spotify:track:2uRVPeQbsEpRQD0DKr1WTo": "USSM17500646"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -35156,5 +35173,6 @@
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
   "__last_radio_key_dreampop_radio": "morphine|||in spite of me",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
-  "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr"
+  "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
+  "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo"
 }
