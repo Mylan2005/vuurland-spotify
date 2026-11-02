@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven")  # Vaste drie bronnen; DKFM en Duyster uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled")  # Vier live bronnen; DKFM en Duyster uit.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6800,6 +6800,7 @@ def sync():
         "mellow_mix": ("Radio Paradise Mellow Mix", get_mellow_mix_tracks, "__last_radio_key_mellow_mix"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
+        "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
         "duyster": ("Duyster archief", lambda: [], "__last_radio_key_duyster"),
     }
@@ -6909,6 +6910,13 @@ def sync():
         cache.pop("__v177_playlist_delta", None)
         save_cache(cache)
         print("📋 v185: volledige Spotify-herscan gestart vóór nieuwe FIFO-toevoegingen.")
+    # Radio X Chilled opnieuw live activeren met een verse nulmeting.
+    # Behoud bestaande FIFO, playlistinventaris, likes en Spotify-cooldowns.
+    if not cache.get("__radio_x_chilled_reactivated_20261102"):
+        cache.setdefault("__v96_radio_snapshots", {}).pop("radio_x_chilled", None)
+        cache.setdefault("__v174_radio_snapshot_times", {}).pop("radio_x_chilled", None)
+        cache["__radio_x_chilled_reactivated_20261102"] = True
+        save_cache(cache)
     # DKFM Edge bij eerste activering nulmeten, zodat oude RadioBox-historiek
     # niet in één keer de bestaande FIFO vult. Alle andere state blijft intact.
     if not cache.get("__v186_dkfm_edge_four_source_baseline"):
@@ -8373,7 +8381,7 @@ def sync():
         # Radiomissers na vijf echte, mislukte zoekacties niet meer zoeken.
         # Geen blokkering van bestaande positieve Spotify-matches.
         radio_source = item.get('source', 'duyster')
-        if (radio_source in ('vuurland', 'mellow_mix', 'big_sonic_heaven')
+        if (radio_source in RADIO_SOURCE_ORDER
                 and match_cache_key not in cache
                 and v51_radio_failed_count(cache, artist, title) >= RADIO_FAILED_SEARCH_LIMIT):
             v51_radio_park(cache, artist, title, radio_source,
@@ -8482,7 +8490,7 @@ def sync():
         if uri is None:
 
             failed_source = item.get('source', 'duyster')
-            if failed_source in ('vuurland', 'mellow_mix', 'big_sonic_heaven'):
+            if failed_source in RADIO_SOURCE_ORDER:
                 key = v51_radio_failure_key(artist, title)
                 counts = cache.setdefault('__v51_radio_failed_searches', {})
                 count = int(counts.get(key, 0) or 0) + 1
