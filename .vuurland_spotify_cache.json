@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "tom misch|||old man",
+      "sam amidon|||maggie",
       "angus & julia stone|||karaoke bar",
       "aldous harding|||the barrel",
       "midlake|||roscoe",
@@ -111,9 +113,7 @@
       "beach house|||ppp",
       "royel otis|||sofa king",
       "sam fender|||i'm always on stage",
-      "sufjan stevens|||love yourself",
-      "the shins|||simple song",
-      "ben howard|||rookery"
+      "sufjan stevens|||love yourself"
     ],
     "mellow_mix": [
       "liz cooper & the stampede|||the night",
@@ -393,10 +393,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793643447.1417484,
-    "mellow_mix": 1793643447.1436677,
-    "big_sonic_heaven": 1793643447.1443858,
-    "radio_x_chilled": 1793643447.1461742
+    "vuurland": 1793643513.8879433,
+    "mellow_mix": 1793643513.889893,
+    "big_sonic_heaven": 1793643513.890618,
+    "radio_x_chilled": 1793643513.892402
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -777,6 +777,7 @@
       "ry x feat hermanos gutierrez|||you",
       "ry x|||let you go",
       "s10|||de diepte",
+      "sam amidon|||maggie",
       "sam fender|||i'm always on stage",
       "sam fender|||seventeen going under",
       "sam fender|||wild grey ocean",
@@ -879,6 +880,7 @@
       "tiny ruins|||bird in the thyme",
       "tiny ruins|||me at the museum you in the wintergardens",
       "tom misch & loyle carner|||colourblind",
+      "tom misch|||old man",
       "tom odell|||best day of my life",
       "tom odell|||don't let me go",
       "tom odell|||heal",
@@ -2144,11 +2146,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "angus & julia stone|||karaoke bar",
+  "__last_radio_key_vuurland": "tom misch|||old man",
   "__last_radio_key_mellow_mix": "liz cooper & the stampede|||the night",
   "__last_radio_key_big_sonic_heaven": "dead can dance|||rakim live",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 938,
+  "__v116_fifo_next_sequence": 939,
   "__v146_spotify_budget_slot": 1793643447.2332518,
   "__vuurland_active_playlist_count": 4111,
   "__vuurland_active_volume": 1,
