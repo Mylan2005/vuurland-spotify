@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793647026.603004,
+  "__v150_next_spotify_round_at": 1793647149.202868,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "ex:re|||romance",
       "elis floreen|||panther",
       "charles bradley|||changes",
       "berre|||how beautiful this life is",
@@ -112,8 +113,7 @@
       "tamino|||tummy",
       "porcelain id|||adam coming home",
       "the war on drugs|||nothing to find",
-      "elbow|||open arms",
-      "feist|||hiding out in the open"
+      "elbow|||open arms"
     ],
     "mellow_mix": [
       "tom waits|||long way home",
@@ -495,11 +495,11 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793647015.930105,
-    "mellow_mix": 1793647015.933904,
-    "big_sonic_heaven": 1793647015.9353025,
-    "radio_x_chilled": 1793647015.9389377,
-    "dreampop_radio": 1793647016.098549
+    "vuurland": 1793647029.1702318,
+    "mellow_mix": 1793647029.1740441,
+    "big_sonic_heaven": 1793647029.1754482,
+    "radio_x_chilled": 1793647029.1790316,
+    "dreampop_radio": 1793647029.1822684
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -664,6 +664,7 @@
       "emma hessels|||always lost",
       "eskobar & heather nova|||someone",
       "ethel cain|||fuck me eyes",
+      "ex:re|||romance",
       "father john misty|||goodbye mr blue",
       "faye webster|||after the first kiss",
       "faye webster|||jonny",
@@ -2459,13 +2460,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "elis floreen|||panther",
+  "__last_radio_key_vuurland": "ex:re|||romance",
   "__last_radio_key_mellow_mix": "tom waits|||long way home",
   "__last_radio_key_big_sonic_heaven": "93millionmilesfromthesun|||slowdive",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1019,
-  "__v146_spotify_budget_slot": 1793646906.7770727,
-  "__vuurland_active_playlist_count": 4130,
+  "__v146_spotify_budget_slot": 1793647029.3724277,
+  "__vuurland_active_playlist_count": 4131,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793643705,
@@ -2798,6 +2799,7 @@
     "arcade fire|||speaking in tongues",
     "arcade fire|||speaking in tongues (feat. david byrne)",
     "arcade fire|||speaking in tongues feat david byrne",
+    "arcade fire|||the suburbs",
     "arcade fire|||wake up",
     "arctic monkeys|||sculptures of anything goes",
     "arctic monkeys|||there'd better be a mirrorball",
@@ -9668,6 +9670,7 @@
     "spotify:track:2U8ZTar6KpiLKYfWnN8OI5",
     "spotify:track:2ULTiHf6StaL4Hbyarfr2h",
     "spotify:track:2UP48BF3kMqnWCxKEoiA7A",
+    "spotify:track:2UWdUez9MB9yzL7Y81Mcip",
     "spotify:track:2V3qDs1IT8oQ5bd8eqKDMa",
     "spotify:track:2V423gFpb4yyokfl2KdevA",
     "spotify:track:2V5vmvIwxqVizuaYJgrmlE",
@@ -14247,6 +14250,7 @@
     "GBUM70909078",
     "GBUM70909096",
     "GBUM71003568",
+    "GBUM71018417",
     "GBUM71021637",
     "GBUM71027453",
     "GBUM71027775",
@@ -20591,7 +20595,8 @@
     "spotify:track:5ZEq9YuBdFgwAnYmjafWu3": "TCAES2040725",
     "spotify:track:1wHJ3n8ERZljmfGXc1PRbe": "USAT20000088",
     "spotify:track:3BU1YruNRetS73hIWNLrkF": "GBENL2504392",
-    "spotify:track:1qTSam8EPNBj5NgaROlMI8": "BEW011300033"
+    "spotify:track:1qTSam8EPNBj5NgaROlMI8": "BEW011300033",
+    "spotify:track:2UWdUez9MB9yzL7Y81Mcip": "GBUM71018417"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793646661,
@@ -22466,6 +22471,10 @@
     "novastar|||light up my life": {
       "artist": "Novastar",
       "title": "Light up My Life"
+    },
+    "arcade fire|||the suburbs": {
+      "artist": "Arcade Fire",
+      "title": "The Suburbs"
     }
   },
   "__v82_confirmed_catalog": {
@@ -24803,6 +24812,11 @@
       "uri": "spotify:track:1qTSam8EPNBj5NgaROlMI8",
       "artist": "Novastar",
       "title": "Light up My Life"
+    },
+    "arcade fire|||the suburbs": {
+      "uri": "spotify:track:2UWdUez9MB9yzL7Y81Mcip",
+      "artist": "Arcade Fire",
+      "title": "The Suburbs"
     }
   },
   "__pending_library_likes": {},
@@ -33474,6 +33488,7 @@
       "anna ternheim|||solitary move",
       "antonio carlos jobim|||corcovado",
       "arcade fire|||no cars go",
+      "arcade fire|||the suburbs",
       "arlo parks|||hope",
       "arlo parks|||hurt",
       "aurora|||the flood",
@@ -33947,6 +33962,7 @@
       "spotify:track:2REeTHmiO6kbkNTwkolGwC",
       "spotify:track:2TvFN6hUwhTAJ5AHgu8oT8",
       "spotify:track:2ULTiHf6StaL4Hbyarfr2h",
+      "spotify:track:2UWdUez9MB9yzL7Y81Mcip",
       "spotify:track:2VQUtkqHTXKY5rm81PZEtk",
       "spotify:track:2XIr0KTybGQsC1SFfeaZhI",
       "spotify:track:2a2MbiJN2skOxohykOVcss",
@@ -34311,6 +34327,7 @@
       "GBKZV2000121",
       "GBLTP0600002",
       "GBUM70709789",
+      "GBUM71018417",
       "GBUM71027453",
       "GBUM71105040",
       "GBUM71105897",
@@ -34896,7 +34913,8 @@
       "spotify:track:5ZEq9YuBdFgwAnYmjafWu3": "TCAES2040725",
       "spotify:track:1wHJ3n8ERZljmfGXc1PRbe": "USAT20000088",
       "spotify:track:3BU1YruNRetS73hIWNLrkF": "GBENL2504392",
-      "spotify:track:1qTSam8EPNBj5NgaROlMI8": "BEW011300033"
+      "spotify:track:1qTSam8EPNBj5NgaROlMI8": "BEW011300033",
+      "spotify:track:2UWdUez9MB9yzL7Y81Mcip": "GBUM71018417"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -35279,5 +35297,6 @@
   "__match_v35__ruby waters|||quantum physics": "spotify:track:5ZEq9YuBdFgwAnYmjafWu3",
   "__match_v35__crosby stills & nash|||just a song before i go": "spotify:track:1wHJ3n8ERZljmfGXc1PRbe",
   "__match_v35__tom smith|||life is for living": "spotify:track:3BU1YruNRetS73hIWNLrkF",
-  "__match_v35__novastar|||light up my life": "spotify:track:1qTSam8EPNBj5NgaROlMI8"
+  "__match_v35__novastar|||light up my life": "spotify:track:1qTSam8EPNBj5NgaROlMI8",
+  "__match_v35__arcade fire|||the suburbs": "spotify:track:2UWdUez9MB9yzL7Y81Mcip"
 }
