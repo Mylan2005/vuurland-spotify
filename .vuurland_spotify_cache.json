@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793653064.9851458,
+  "__v150_next_spotify_round_at": 1793653187.3577237,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the marias|||back to me",
       "sault|||wildfires",
       "lana del rey|||young & beautiful",
       "suki waterhouse|||good looking",
@@ -112,8 +113,7 @@
       "kings of leon|||my whole world",
       "lana del rey|||chemtrails over the country club",
       "florence the machine|||never let me go",
-      "noah kahan|||porch light",
-      "novastar|||velvet blue sky"
+      "noah kahan|||porch light"
     ],
     "mellow_mix": [
       "fran healy|||sing me to sleep w/ neko case",
@@ -514,11 +514,11 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793653054.9269972,
-    "mellow_mix": 1793653054.9313812,
-    "big_sonic_heaven": 1793653054.9333575,
-    "radio_x_chilled": 1793653054.9374235,
-    "dreampop_radio": 1793653054.9408667
+    "vuurland": 1793653067.3382523,
+    "mellow_mix": 1793653067.342576,
+    "big_sonic_heaven": 1793653067.3445516,
+    "radio_x_chilled": 1793653067.3484654,
+    "dreampop_radio": 1793653067.3519585
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1007,6 +1007,7 @@
       "the lumineers|||ho hey",
       "the lumineers|||ophelia",
       "the lumineers|||salt and the sea",
+      "the marias|||back to me",
       "the marias|||sienna",
       "the middle east|||blood",
       "the national|||anyone's ghost",
@@ -2585,13 +2586,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "sault|||wildfires",
+  "__last_radio_key_vuurland": "the marias|||back to me",
   "__last_radio_key_mellow_mix": "fran healy|||sing me to sleep w/ neko case",
   "__last_radio_key_big_sonic_heaven": "actors|||left on read",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1107,
-  "__v146_spotify_budget_slot": 1793652945.166292,
-  "__vuurland_active_playlist_count": 4180,
+  "__v116_fifo_next_sequence": 1108,
+  "__v146_spotify_budget_slot": 1793653067.5405164,
+  "__vuurland_active_playlist_count": 4181,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793651104,
@@ -2699,6 +2700,7 @@
     "adam wiltzie|||the slow descent has begun",
     "adele|||i drink wine",
     "adele|||someone like you",
+    "adele|||turning tables",
     "adem|||melody day - four tet remix",
     "admiral freebee|||digital blues",
     "admiral freebee|||faithful to the night - 2 meter session",
@@ -9943,6 +9945,7 @@
     "spotify:track:2dono2Koz7DEvGwxUsmMLq",
     "spotify:track:2drzc5eWV0okNKvmc3h2wM",
     "spotify:track:2dtRAYfkYze247YhuCvfZl",
+    "spotify:track:2eF2x1BkgilhaZ2AipRY8j",
     "spotify:track:2ePXRuapzETR7sZy2taClK",
     "spotify:track:2eU0ZprX3kfI9ZWqTCoAI1",
     "spotify:track:2eVofaQRJvddSUBfcub7Gz",
@@ -13971,6 +13974,7 @@
     "GBBKS0900202",
     "GBBKS0900203",
     "GBBKS0900322",
+    "GBBKS1000346",
     "GBBKS1000351",
     "GBBKS1200085",
     "GBBKS1200086",
@@ -20897,7 +20901,8 @@
     "spotify:track:0UC6CJgTFCikxLJZMNw8Xu": "CH4931000020",
     "spotify:track:2VuPf7Il5qhx7WHArc9WAs": "GBAMB9500020",
     "spotify:track:1Bx9I2NyzUpTfmpAQ4BSsR": "QMNAQ1200001",
-    "spotify:track:2ljhzkNo7xQx7mfakkqTLC": "GBAFL9000322"
+    "spotify:track:2ljhzkNo7xQx7mfakkqTLC": "GBAFL9000322",
+    "spotify:track:2eF2x1BkgilhaZ2AipRY8j": "GBBKS1000346"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793652945,
@@ -22952,6 +22957,10 @@
     "dead can dance|||the host of seraphim": {
       "artist": "Dead Can Dance",
       "title": "The Host of Seraphim"
+    },
+    "adele|||turning tables": {
+      "artist": "Adele",
+      "title": "Turning Tables"
     }
   },
   "__v82_confirmed_catalog": {
@@ -25514,6 +25523,11 @@
       "uri": "spotify:track:2ljhzkNo7xQx7mfakkqTLC",
       "artist": "Dead Can Dance",
       "title": "The Host of Seraphim"
+    },
+    "adele|||turning tables": {
+      "uri": "spotify:track:2eF2x1BkgilhaZ2AipRY8j",
+      "artist": "Adele",
+      "title": "Turning Tables"
     }
   },
   "__pending_library_likes": {},
@@ -35236,6 +35250,7 @@
       "acrylics|||tortoise shell shades",
       "adele|||i drink wine",
       "adele|||someone like you",
+      "adele|||turning tables",
       "air formation|||finding gravity",
       "air|||playground love",
       "al di meola|||african night",
@@ -35787,6 +35802,7 @@
       "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4",
       "spotify:track:2dk5HQv2V6hEVeGGlPvCFA",
       "spotify:track:2dlwYojKAq61PIiT47dZpd",
+      "spotify:track:2eF2x1BkgilhaZ2AipRY8j",
       "spotify:track:2ehWLU4NMVSx2NeSej8Wv7",
       "spotify:track:2f6HEJZ2JObIQGZOpzoa4o",
       "spotify:track:2grwAOEFS0Z6eLAysVimSn",
@@ -36153,6 +36169,7 @@
       "GBAZA2092001",
       "GBBBM0002171",
       "GBBBM0002178",
+      "GBBKS1000346",
       "GBBKS1000351",
       "GBBLK0500165",
       "GBBRP1994701",
@@ -36847,7 +36864,8 @@
       "spotify:track:0UC6CJgTFCikxLJZMNw8Xu": "CH4931000020",
       "spotify:track:2VuPf7Il5qhx7WHArc9WAs": "GBAMB9500020",
       "spotify:track:1Bx9I2NyzUpTfmpAQ4BSsR": "QMNAQ1200001",
-      "spotify:track:2ljhzkNo7xQx7mfakkqTLC": "GBAFL9000322"
+      "spotify:track:2ljhzkNo7xQx7mfakkqTLC": "GBAFL9000322",
+      "spotify:track:2eF2x1BkgilhaZ2AipRY8j": "GBBKS1000346"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -37276,5 +37294,6 @@
   "__match_v35__sophie hunger|||le vent nous portera": "spotify:track:0UC6CJgTFCikxLJZMNw8Xu",
   "__match_v35__elton john|||where to now st peter": "spotify:track:2VuPf7Il5qhx7WHArc9WAs",
   "__match_v35__the stray birds|||dream in blue": "spotify:track:1Bx9I2NyzUpTfmpAQ4BSsR",
-  "__match_v35__dead can dance|||the host of seraphim": "spotify:track:2ljhzkNo7xQx7mfakkqTLC"
+  "__match_v35__dead can dance|||the host of seraphim": "spotify:track:2ljhzkNo7xQx7mfakkqTLC",
+  "__match_v35__adele|||turning tables": "spotify:track:2eF2x1BkgilhaZ2AipRY8j"
 }
