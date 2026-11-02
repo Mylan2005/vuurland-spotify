@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio")  # Vijf live bronnen; DKFM en Duyster uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select")  # Zes live bronnen.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1331,7 +1331,14 @@ def get_radio_x_chilled_tracks():
 
 
 def get_indie_select_tracks():
-    return get_radiobox_tracks(INDIE_SELECT_SOURCE_URL, "Indie Select")
+    raw = get_radiobox_tracks(INDIE_SELECT_SOURCE_URL, "Indie Select")
+    clean = []
+    for artist, title in raw:
+        if indie_select_blocks_german(artist, title):
+            print(f"⏭️ Indie Select: Duitstalig nummer geblokkeerd: {artist} — {title}")
+            continue
+        clean.append((artist, title))
+    return clean
 
 
 def get_championship_vinyl_tracks():
@@ -1447,6 +1454,8 @@ V119_GERMAN_TITLES = frozenset({
     "mama schickt mich", "begrab mein herz",
     "die transsylvanische verwandte ist da", "auch ein guter sommer",
     "jonny du lump", "lied vom ende des kapitalismus",
+    "frohe weihnachten armut", "die nacht war kurz ich stehe fruh auf",
+    "wohnen auf inseln", "die leute und ich",
     "die große sporadische", "das ende der beschwerde",
     "keine bewegung", "die toten auf dem rücksitz",
 })
@@ -1858,10 +1867,48 @@ def v108_artist_country_decision(artist, cache):
     return decision
 
 
+
+# Duitse zang kan niet volledig uit enkel de songtitel bepaald worden.
+# Blokkeer specifiek herkende Duits(talig)e Indie Select-nummers en
+# grammaticaal herkenbare Duitse titels. Engelse songs van Duitse bands blijven.
+INDIE_SELECT_GERMAN_TRACKS = frozenset({
+    ("viktoriapark", "frohe weihnachten armut"),
+    ("viktoriapark", "auch ein guter sommer"),
+    ("viktoriapark", "wir waren jung und wir brauchten das geld"),
+    ("peter licht", "die transsylvanische verwandte ist da"),
+    ("thees uhlmann", "die nacht war kurz ich stehe fruh auf"),
+    ("thees uhlmann", "die toten auf dem rucksitz"),
+    ("die wilde jagd", "der elektrische reiter"),
+    ("die zimmermanner", "die grosse sporadische"),
+    ("freizeit98", "wohnen auf inseln"),
+    ("betterov", "die leute und ich"),
+    ("grossstadtgefluster", "weil das morgen noch so ist"),
+    ("grossstadtgefluster", "ich muss gar nix"),
+    ("1 futurologischer congress", "neuer morgen"),
+})
+
+
+def indie_select_blocks_german(artist, title):
+    import unicodedata
+
+    def clean(value):
+        value = unicodedata.normalize("NFKD", str(value or "").casefold())
+        value = "".join(ch for ch in value if not unicodedata.combining(ch))
+        return " ".join(re.sub(r"[^a-z0-9]+", " ", value.replace("ß", "ss")).split())
+
+    a, t = clean(artist), clean(title)
+    if (a, t) in INDIE_SELECT_GERMAN_TRACKS:
+        return True
+    return (is_confirmed_german_vocal(artist, title)
+            or v119_is_german_title(title)
+            or v143_unwanted_title(title)
+            or v150_is_unwanted_language(artist, title))
+
+
 # v110: bekende fout in artiestentag van Indie Select.
 # Alleen exact "M8310" (niet andere M83-achtige artiestennamen).
 def v110_correct_radio_artist(artist, source):
-    if str(source).strip().casefold() == "indie_select" and str(artist).strip().casefold() == "m8310":
+    if str(source).strip().casefold() == "indie_select" and str(artist).strip().casefold() in ("m831", "m8310"):
         return "M83"
     return artist
 
@@ -6153,7 +6200,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                 reason = "herhaling binnen deze bronmeting"
             else:
                 seen_this_scan.add(key)
-                if is_confirmed_german_vocal(artist, title):
+                if sid == "indie_select" and indie_select_blocks_german(artist, title):
+                    reason = "Indie Select: Duitstalig geblokkeerd"
+                elif is_confirmed_german_vocal(artist, title):
                     reason = "bevestigde Duitse zang"
                 elif is_interview_fragment(title):
                     reason = "interviewfragment"
@@ -6802,6 +6851,7 @@ def sync():
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
         "dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks, "__last_radio_key_dreampop_radio"),
+        "indie_select": ("Indie Select", get_indie_select_tracks, "__last_radio_key_indie_select"),
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
         "duyster": ("Duyster archief", lambda: [], "__last_radio_key_duyster"),
     }
@@ -7268,7 +7318,8 @@ def sync():
     live_queue = [x for x in live_queue if isinstance(x, dict) and
                   x.get("source") in RADIO_SOURCE_ORDER and
                   not v140_is_unwanted_language_title(x.get("title", ""), x.get("artist", "")) and
-                  not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", ""))]
+                  not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", "")) and
+                  not (x.get("source") == "indie_select" and indie_select_blocks_german(x.get("artist", ""), x.get("title", "")))]
     _v119_removed = _v119_before - len(live_queue)
     if _v119_removed:
         print(f"🧹 v119: {_v119_removed} Duitstalige titel(s)/bevestigde Duitse zang uit live queue verwijderd.")
@@ -8026,6 +8077,14 @@ def sync():
             item["artist"] = artist
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
+
+        # Slotfilter, ook voor items die eerder in de wachtrij stonden.
+        if item.get("source") == "indie_select" and indie_select_blocks_german(artist, title):
+            print(f"⛔ Indie Select Duitstalig: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
 
         # v131: extra veiligheidscontrole vóór iedere Spotify-zoekactie/toevoeging.
         if v131_block_nonlatin_east_asian(artist, title):
