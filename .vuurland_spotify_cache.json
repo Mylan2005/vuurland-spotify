@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793633797.7609842,
+  "__v150_next_spotify_round_at": 1793633925.2890408,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -390,10 +390,10 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793633795.2954495,
-    "mellow_mix": 1793633795.2971158,
-    "big_sonic_heaven": 1793633795.2978053,
-    "radio_x_chilled": 1793633795.2993119
+    "vuurland": 1793633805.2826276,
+    "mellow_mix": 1793633805.2842252,
+    "big_sonic_heaven": 1793633805.2848978,
+    "radio_x_chilled": 1793633805.2863379
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2005,8 +2005,8 @@
   "__last_radio_key_big_sonic_heaven": "the church|||have you been here before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 854,
-  "__v146_spotify_budget_slot": 1793633677.8436642,
-  "__vuurland_active_playlist_count": 4051,
+  "__v146_spotify_budget_slot": 1793633805.3667772,
+  "__vuurland_active_playlist_count": 4052,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793632643,
@@ -3529,6 +3529,7 @@
     "doves|||the sulphur man",
     "dr horsehead|||stay",
     "dr john|||right place wrong time",
+    "dr john|||such a night",
     "drab majesty & rachel goswell|||vanity",
     "drab majesty|||rachel goswell|||vanity",
     "drab majesty|||vanity",
@@ -9526,6 +9527,7 @@
     "spotify:track:3GUZ2LxQVacVPnpU9CObk4",
     "spotify:track:3GZvy4B0ZzMjoDezkiDekS",
     "spotify:track:3GcEspgxeLqAB9NpNqixau",
+    "spotify:track:3GppcLIGlSlvujXgR0pPRt",
     "spotify:track:3Gw53PiYdvBviAHwTk59bW",
     "spotify:track:3H60URdntoG9QPBCKSRwY3",
     "spotify:track:3HBcQ5GenzAlBhCIgDGL3x",
@@ -14943,6 +14945,7 @@
     "USAT10000010",
     "USAT20001177",
     "USAT20001805",
+    "USAT20001812",
     "USAT20180654",
     "USAT20504676",
     "USAT20504677",
@@ -19811,7 +19814,8 @@
     "spotify:track:0SSe50nPGx3dHj6N9r2ABX": "DEH841501078",
     "spotify:track:0y1QJc3SJVPKJ1OvFmFqe6": "USAT21502122",
     "spotify:track:4PNnWE1uvHilPQqrfbRnh3": "USWB19903493",
-    "spotify:track:66JasMyzrYGv2JN756AmJj": "QZMEM2184709"
+    "spotify:track:66JasMyzrYGv2JN756AmJj": "QZMEM2184709",
+    "spotify:track:3GppcLIGlSlvujXgR0pPRt": "USAT20001812"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793633421,
@@ -21370,6 +21374,10 @@
     "the false dawns|||uh!": {
       "artist": "The False Dawns",
       "title": "Uh"
+    },
+    "dr john|||such a night": {
+      "artist": "Dr. John",
+      "title": "Such a Night"
     }
   },
   "__v82_confirmed_catalog": {
@@ -23312,6 +23320,11 @@
       "uri": "spotify:track:66JasMyzrYGv2JN756AmJj",
       "artist": "The False Dawns",
       "title": "Uh"
+    },
+    "dr john|||such a night": {
+      "uri": "spotify:track:3GppcLIGlSlvujXgR0pPRt",
+      "artist": "Dr. John",
+      "title": "Such a Night"
     }
   },
   "__pending_library_likes": {},
@@ -32018,6 +32031,7 @@
       "dire straits|||portobello belle",
       "doc watson & david grisman|||summertime",
       "dr john|||right place wrong time",
+      "dr john|||such a night",
       "dressed like boys|||healing",
       "edmund november|||cold street light",
       "eels|||mistakes of my youth",
@@ -32370,6 +32384,7 @@
       "spotify:track:3BvTGi6GKRUQhIZEDCf9iU",
       "spotify:track:3EXrtClWmgsM7dw75Mw2M1",
       "spotify:track:3G69vJMWsX6ZohTykad2AU",
+      "spotify:track:3GppcLIGlSlvujXgR0pPRt",
       "spotify:track:3JLrri1xSCui3bzITDJbkk",
       "spotify:track:3JnQn7ZLRjxY8vqDLt25GI",
       "spotify:track:3KdNyeEZPSND2Eii1O2lNf",
@@ -32692,6 +32707,7 @@
       "USAR19900244",
       "USAT10000010",
       "USAT20001805",
+      "USAT20001812",
       "USAT20180654",
       "USAT21300891",
       "USAT21502122",
@@ -33074,7 +33090,8 @@
       "spotify:track:0SSe50nPGx3dHj6N9r2ABX": "DEH841501078",
       "spotify:track:0y1QJc3SJVPKJ1OvFmFqe6": "USAT21502122",
       "spotify:track:4PNnWE1uvHilPQqrfbRnh3": "USWB19903493",
-      "spotify:track:66JasMyzrYGv2JN756AmJj": "QZMEM2184709"
+      "spotify:track:66JasMyzrYGv2JN756AmJj": "QZMEM2184709",
+      "spotify:track:3GppcLIGlSlvujXgR0pPRt": "USAT20001812"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -33371,5 +33388,6 @@
   "__match_v35__tanita tikaram|||the way you move": "spotify:track:0SSe50nPGx3dHj6N9r2ABX",
   "__match_v35__kaleo|||way down we go": "spotify:track:0y1QJc3SJVPKJ1OvFmFqe6",
   "__match_v35__rickie lee jones|||young blood": "spotify:track:4PNnWE1uvHilPQqrfbRnh3",
-  "__match_v35__the false dawns|||uh!": "spotify:track:66JasMyzrYGv2JN756AmJj"
+  "__match_v35__the false dawns|||uh!": "spotify:track:66JasMyzrYGv2JN756AmJj",
+  "__match_v35__dr john|||such a night": "spotify:track:3GppcLIGlSlvujXgR0pPRt"
 }
