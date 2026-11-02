@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793654910.4923542,
+  "__v150_next_spotify_round_at": 1793655032.4885113,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -521,11 +521,11 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793654900.399961,
-    "mellow_mix": 1793654900.4043324,
-    "big_sonic_heaven": 1793654900.4065735,
-    "radio_x_chilled": 1793654900.4106774,
-    "dreampop_radio": 1793654900.4142904
+    "vuurland": 1793654912.468342,
+    "mellow_mix": 1793654912.4727857,
+    "big_sonic_heaven": 1793654912.4750357,
+    "radio_x_chilled": 1793654912.4791276,
+    "dreampop_radio": 1793654912.4827292
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2630,6 +2630,12 @@
       "title": "Chieftains Largo",
       "source": "mellow_mix",
       "failed_at": 1793654669
+    },
+    "madeleine peyroux|||california raining": {
+      "artist": "Madeleine Peyroux",
+      "title": "California Raining",
+      "source": "mellow_mix",
+      "failed_at": 1793654913
     }
   },
   "__v51_radio_unmatched": {},
@@ -2642,7 +2648,7 @@
   "__last_radio_key_big_sonic_heaven": "she's green|||empty house",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1132,
-  "__v146_spotify_budget_slot": 1793654790.6758814,
+  "__v146_spotify_budget_slot": 1793654912.673883,
   "__vuurland_active_playlist_count": 4191,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -25702,7 +25708,7 @@
     "phoebe bridgers & maggie rogers|||iris": 3,
     "ozean|||streets of chrome": 3,
     "the chieftains|||chieftains largo": 3,
-    "madeleine peyroux|||california raining": 2
+    "madeleine peyroux|||california raining": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -25738,7 +25744,8 @@
     "gypsy tailwind|||way to here": 1,
     "phoebe bridgers & maggie rogers|||iris": 1,
     "ozean|||streets of chrome": 1,
-    "the chieftains|||chieftains largo": 1
+    "the chieftains|||chieftains largo": 1,
+    "madeleine peyroux|||california raining": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -37994,5 +38001,6 @@
   "__match_v35__lucy la dusk|||angel milk tears with troche": "spotify:track:2e8gktYGD4HMutygVA9VQT",
   "__match_v35__gregg allman|||midnight rider": "spotify:track:23ZOiEUix1FsthnLfpWXqj",
   "__not_found_v35__the chieftains|||chieftains largo": 1793654669,
-  "__match_v35__joy crookes feat kano|||mathematics": "spotify:track:4tldGgVS1sF0HA0VzUcKK8"
+  "__match_v35__joy crookes feat kano|||mathematics": "spotify:track:4tldGgVS1sF0HA0VzUcKK8",
+  "__not_found_v35__madeleine peyroux|||california raining": 1793654913
 }
