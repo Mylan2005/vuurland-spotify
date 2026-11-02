@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793629826.9798367,
+  "__v150_next_spotify_round_at": 1793629954.9787781,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "novastar|||velvet blue sky",
       "nick cave & the bad seeds|||bright horses",
       "uche yara|||as i left the room",
       "julia jacklin|||someday triple j like a version",
@@ -112,8 +113,7 @@
       "benjamin clementine|||delighted",
       "ciska ciska|||angel",
       "london grammar|||kind of man",
-      "the lumineers|||ho hey",
-      "the antler king|||swing448"
+      "the lumineers|||ho hey"
     ],
     "mellow_mix": [
       "greg brown|||laughing river",
@@ -288,9 +288,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793629824.3085964,
-    "mellow_mix": 1793629824.3101566,
-    "big_sonic_heaven": 1793629824.3108695
+    "vuurland": 1793629834.9739482,
+    "mellow_mix": 1793629834.9754002,
+    "big_sonic_heaven": 1793629834.9760735
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -594,6 +594,7 @@
       "novastar|||light up my life",
       "novastar|||mars needs woman",
       "novastar|||mars needs woman re-imagined",
+      "novastar|||velvet blue sky",
       "oh wonder|||ultralife",
       "oh wonder|||without you",
       "old sea brigade|||cigarette",
@@ -1710,6 +1711,12 @@
       "title": "Atlantic City",
       "source": "mellow_mix",
       "failed_at": 1793626530
+    },
+    "curve|||frozen": {
+      "artist": "Curve",
+      "title": "Frozen",
+      "source": "big_sonic_heaven",
+      "failed_at": 1793629835
     }
   },
   "__v51_radio_unmatched": {},
@@ -1717,12 +1724,12 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "nick cave & the bad seeds|||bright horses",
+  "__last_radio_key_vuurland": "novastar|||velvet blue sky",
   "__last_radio_key_mellow_mix": "greg brown|||laughing river",
   "__last_radio_key_big_sonic_heaven": "the church|||have you been here before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 821,
-  "__v146_spotify_budget_slot": 1793629707.0569508,
+  "__v146_spotify_budget_slot": 1793629835.0628386,
   "__vuurland_active_playlist_count": 4024,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -22714,7 +22721,7 @@
     "the church|||rapture": 3,
     "dead can dance|||nada": 3,
     "the band|||atlantic city": 3,
-    "curve|||frozen": 2
+    "curve|||frozen": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -22740,7 +22747,8 @@
     "the church|||the place of eternal spring": 1,
     "the church|||rapture": 1,
     "dead can dance|||nada": 1,
-    "the band|||atlantic city": 1
+    "the band|||atlantic city": 1,
+    "curve|||frozen": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -32611,5 +32619,6 @@
   "__match_v35__lanterns on the lake|||the realist": "spotify:track:6lQY8VSTUyrskGFaFdic8f",
   "__match_v35__leon russell|||magic mirror": "spotify:track:7zZS4CKz848H1f3LwDzcPR",
   "__match_v35__encarta 98|||destello": "spotify:track:7rJ7asJXxE17G0btH1g0Fj",
-  "__match_v35__olivia dean|||dive": "spotify:track:36vmaZyO0iAE6FZ7287fg2"
+  "__match_v35__olivia dean|||dive": "spotify:track:36vmaZyO0iAE6FZ7287fg2",
+  "__not_found_v35__curve|||frozen": 1793629835
 }
