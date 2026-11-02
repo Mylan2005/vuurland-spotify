@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793600161.585301,
+  "__v150_next_spotify_round_at": 1793600289.5975518,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -76,9 +76,9 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793600159.6825063,
-    "mellow_mix": 1793600159.68284,
-    "big_sonic_heaven": 1793600159.6831565
+    "vuurland": 1793600169.5921614,
+    "mellow_mix": 1793600169.5924945,
+    "big_sonic_heaven": 1793600169.5927749
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1172,6 +1172,12 @@
       "title": "Mon Amour Sauvage",
       "source": "big_sonic_heaven",
       "failed_at": 1793562994
+    },
+    "the giraffe told me in my dream|||strolling": {
+      "artist": "The Giraffe Told Me In My Dream",
+      "title": "Strolling",
+      "source": "big_sonic_heaven",
+      "failed_at": 1793600170
     }
   },
   "__v51_radio_unmatched": {},
@@ -1184,7 +1190,7 @@
   "__last_radio_key_big_sonic_heaven": "school of seven bells|||i l u",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 623,
-  "__v146_spotify_budget_slot": 1793600041.7085106,
+  "__v146_spotify_budget_slot": 1793600169.7193048,
   "__vuurland_active_playlist_count": 3790,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -18087,7 +18093,7 @@
     "spotify:track:41hT6idTUfXX5Dmv32TXpO": "USWWW0124879"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793599528,
+  "__v184_head_checked_at": 1793600170,
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793559322,
   "__match_v35__keren ann|||jardin d'hiver": "spotify:track:45gpJxviKRBsQo1lDZ03Xf",
@@ -19578,7 +19584,7 @@
     "shoreline stories|||happiness": 3,
     "novastar|||can't stand losing you": 3,
     "dead can dance|||mon amour sauvage": 3,
-    "the giraffe told me in my dream|||strolling": 2
+    "the giraffe told me in my dream|||strolling": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -19594,7 +19600,8 @@
     "hazy mountains|||all gone away": 1,
     "shoreline stories|||happiness": 1,
     "novastar|||can't stand losing you": 1,
-    "dead can dance|||mon amour sauvage": 1
+    "dead can dance|||mon amour sauvage": 1,
+    "the giraffe told me in my dream|||strolling": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -25278,5 +25285,6 @@
   "__match_v35__the rolling stones|||sweet black angel": "spotify:track:60OdLDvZpHe4kVDYwNtYh9",
   "__match_v35__eric clapton|||promises": "spotify:track:1oar8gdDX5yHWzVstAHDav",
   "__match_v35__arlo parks|||hope": "spotify:track:23bwujVYKeGdbcLd2LQxVo",
-  "__match_v35__third world|||feel a little better": "spotify:track:41hT6idTUfXX5Dmv32TXpO"
+  "__match_v35__third world|||feel a little better": "spotify:track:41hT6idTUfXX5Dmv32TXpO",
+  "__not_found_v35__the giraffe told me in my dream|||strolling": 1793600170
 }
