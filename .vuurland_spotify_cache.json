@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sons of the east|||into the sun",
       "selah sue|||fade away",
       "the weather station|||tried to tell you",
       "ethel cain|||fuck me eyes",
@@ -112,10 +113,10 @@
       "suki waterhouse|||back in love",
       "kurt vile|||zoom 97",
       "bear's den|||auld wives",
-      "arlo parks|||black dog",
-      "laufey|||goddess"
+      "arlo parks|||black dog"
     ],
     "mellow_mix": [
+      "sons of the east|||you might think",
       "joni mitchell|||you turn me on i'm a radio",
       "kate miller-heidke|||the tiger inside will eat the child",
       "bunny wailer|||dream land",
@@ -214,8 +215,7 @@
       "badly drawn boy|||the shining",
       "shawn colvin|||baker street",
       "cigarettes after sex|||k",
-      "sleeping at last|||venus",
-      "peter gabriel|||come talk to me"
+      "sleeping at last|||venus"
     ],
     "big_sonic_heaven": [
       "felt|||primitive painters",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793746673.3468351,
-    "mellow_mix": 1793746673.3515055,
-    "big_sonic_heaven": 1793746673.3550622,
-    "radio_x_chilled": 1793746673.3589942,
-    "dreampop_radio": 1793746673.3625665,
-    "indie_select": 1793746673.3662865
+    "vuurland": 1793746712.6196244,
+    "mellow_mix": 1793746712.624155,
+    "big_sonic_heaven": 1793746712.627677,
+    "radio_x_chilled": 1793746712.631598,
+    "dreampop_radio": 1793746712.6351178,
+    "indie_select": 1793746712.6387548
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1223,6 +1223,7 @@
       "sohn|||riverbank",
       "sohn|||the wheel",
       "solange|||cranes in the sky",
+      "sons of the east|||into the sun",
       "sophia|||oh my love",
       "spinvis|||bagagedrager",
       "spinvis|||voor ik vergeet",
@@ -4548,11 +4549,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "selah sue|||fade away",
-  "__last_radio_key_mellow_mix": "joni mitchell|||you turn me on i'm a radio",
+  "__last_radio_key_vuurland": "sons of the east|||into the sun",
+  "__last_radio_key_mellow_mix": "sons of the east|||you might think",
   "__last_radio_key_big_sonic_heaven": "felt|||primitive painters",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2511,
+  "__v116_fifo_next_sequence": 2512,
   "__v146_spotify_budget_slot": 1793746603.385833,
   "__vuurland_active_playlist_count": 4753,
   "__vuurland_active_volume": 1,
