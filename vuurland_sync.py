@@ -1013,7 +1013,9 @@ def v145_fetch_radiobox_response(source_url, source_name):
             response.raise_for_status()
             return response
         except (requests.exceptions.ConnectionError,
-                requests.exceptions.Timeout) as error:
+                requests.exceptions.Timeout,
+                requests.exceptions.ChunkedEncodingError,
+                requests.exceptions.ContentDecodingError) as error:
             temporary_error = error
         except requests.exceptions.HTTPError as error:
             status = getattr(getattr(error, "response", None), "status_code", None)
