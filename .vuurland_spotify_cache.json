@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793705899.956981,
+  "__v150_next_spotify_round_at": 1793706022.3329508,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -335,12 +335,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793705889.5485387,
-    "mellow_mix": 1793705889.5497634,
-    "big_sonic_heaven": 1793705889.5505798,
-    "radio_x_chilled": 1793705889.5515394,
-    "dreampop_radio": 1793705889.5524118,
-    "indie_select": 1793705889.5532405
+    "vuurland": 1793705902.3181093,
+    "mellow_mix": 1793705902.319259,
+    "big_sonic_heaven": 1793705902.3200905,
+    "radio_x_chilled": 1793705902.3210645,
+    "dreampop_radio": 1793705902.3219025,
+    "indie_select": 1793705902.3227098
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3551,6 +3551,12 @@
       "title": "One Foot",
       "source": "dreampop_radio",
       "failed_at": 1793705413
+    },
+    "hollow coves|||heatwave": {
+      "artist": "Hollow Coves",
+      "title": "Heatwave",
+      "source": "dreampop_radio",
+      "failed_at": 1793705903
     }
   },
   "__v51_radio_unmatched": {
@@ -3588,7 +3594,7 @@
   "__last_radio_key_big_sonic_heaven": "lucy la dusk|||snow heart",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1918,
-  "__v146_spotify_budget_slot": 1793705780.223967,
+  "__v146_spotify_budget_slot": 1793705902.6015916,
   "__vuurland_active_playlist_count": 4539,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -31203,7 +31209,7 @@
     "simon & garfunkel|||for emily wherever i may find her live": 3,
     "mint julep|||all that we'll ever be": 3,
     "the mynabirds|||one foot": 3,
-    "hollow coves|||heatwave": 2
+    "hollow coves|||heatwave": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -31247,7 +31253,8 @@
     "phosphene|||wire": 1,
     "simon & garfunkel|||for emily wherever i may find her live": 1,
     "mint julep|||all that we'll ever be": 1,
-    "the mynabirds|||one foot": 1
+    "the mynabirds|||one foot": 1,
+    "hollow coves|||heatwave": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -45274,5 +45281,6 @@
   "__not_found_v35__the mynabirds|||one foot": 1793705413,
   "__match_v35__ciaran lavery|||shame": "spotify:track:1d39v4V4DmrrLiFX4DKHBv",
   "__match_v35__bat for lashes|||in your bed": "spotify:track:1RZ4IJCTl3HtdREkOvcujX",
-  "__match_v35__snakadaktal|||the sun ii": "spotify:track:2zMzS9juW8RWYc7tNOX673"
+  "__match_v35__snakadaktal|||the sun ii": "spotify:track:2zMzS9juW8RWYc7tNOX673",
+  "__not_found_v35__hollow coves|||heatwave": 1793705903
 }
