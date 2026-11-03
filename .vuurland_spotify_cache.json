@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793710263.2307246,
+  "__v150_next_spotify_round_at": 1793710385.9649906,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -116,6 +116,7 @@
       "lamb|||gabriel"
     ],
     "mellow_mix": [
+      "goo goo dolls|||iris",
       "hania rani|||oltre terra",
       "jose gonzalez|||teardrop",
       "spirit|||clear",
@@ -214,8 +215,7 @@
       "zachary richard|||come on sheila",
       "hamilton leithauser|||the silent orchestra",
       "black rebel motorcycle club|||lullaby",
-      "steely dan|||only a fool would say that",
-      "john martyn|||he's got all the whiskey"
+      "steely dan|||only a fool would say that"
     ],
     "big_sonic_heaven": [
       "ringo deathstarr|||cotton candy clouds",
@@ -306,6 +306,7 @@
       "bathe alone|||blue days"
     ],
     "radio_x_chilled": [
+      "smashing pumpkins|||1979",
       "lana del rey|||say yes to heaven",
       "faith no more|||easy",
       "embrace|||gravity",
@@ -404,8 +405,7 @@
       "blur|||beetlebum",
       "radiohead|||karma police",
       "foals|||london thunder",
-      "red hot chili peppers|||snow hey oh",
-      "the cure|||lullaby"
+      "red hot chili peppers|||snow hey oh"
     ],
     "dreampop_radio": [
       "owls of the swamp|||shelter",
@@ -595,12 +595,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793710253.6107647,
-    "mellow_mix": 1793710253.6134932,
-    "big_sonic_heaven": 1793710253.615499,
-    "radio_x_chilled": 1793710253.617914,
-    "dreampop_radio": 1793710253.6199858,
-    "indie_select": 1793710253.6219978
+    "vuurland": 1793710265.7831194,
+    "mellow_mix": 1793710265.9462726,
+    "big_sonic_heaven": 1793710265.948273,
+    "radio_x_chilled": 1793710265.9507759,
+    "dreampop_radio": 1793710265.9528496,
+    "indie_select": 1793710265.9548957
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1508,6 +1508,7 @@
       "gomez|||hamoa beach",
       "gone gone beyond|||back to zero w/ dirtwire",
       "gone gone beyond|||by the sea",
+      "goo goo dolls|||iris",
       "goo goo dolls|||name",
       "govi|||andalusian nights",
       "grant green|||django",
@@ -3944,12 +3945,12 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "courtney barnett & waxahatchee|||site unseen",
-  "__last_radio_key_mellow_mix": "hania rani|||oltre terra",
+  "__last_radio_key_mellow_mix": "goo goo dolls|||iris",
   "__last_radio_key_big_sonic_heaven": "ringo deathstarr|||cotton candy clouds",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1986,
-  "__v146_spotify_budget_slot": 1793710143.504554,
-  "__vuurland_active_playlist_count": 4565,
+  "__v116_fifo_next_sequence": 1987,
+  "__v146_spotify_budget_slot": 1793710266.239872,
+  "__vuurland_active_playlist_count": 4566,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793710144,
@@ -7287,6 +7288,7 @@
     "lyenn|||until we blend",
     "lyle lovett|||friend of the devil",
     "m ward|||chinese translation",
+    "m ward|||color of water",
     "m83 & felsmann tiley|||solitude - felsmann + tiley reinterpretation",
     "m83|||blister sunrise",
     "m83|||feeding time",
@@ -11170,6 +11172,7 @@
     "spotify:track:1W5XugQJGhnSATMI5n002M",
     "spotify:track:1WBSFlSLyOZnSa8fj7a5yC",
     "spotify:track:1WHoY2uSPpewqUm80q4d68",
+    "spotify:track:1WNM7dOZMZXNAuUvRfT4Gh",
     "spotify:track:1WaaXqtoYdhr580anvmpgu",
     "spotify:track:1Wm5RExsdlZdOiAlm8o13E",
     "spotify:track:1WmU3Ub6nCef9OSRjeZONV",
@@ -16648,6 +16651,7 @@
     "GBKPL1136232",
     "GBKPL1136234",
     "GBKPL1267633",
+    "GBKPL1366040",
     "GBKPL1514511",
     "GBKPL1516808",
     "GBKPL1668265",
@@ -23801,7 +23805,8 @@
     "spotify:track:08DO757dzPTgeHSwOQvnIS": "GBBND0200938",
     "spotify:track:4c59d5TKSNupw3GgimdMRm": "USQE91200146",
     "spotify:track:6grFWYpLQul3nAHjzzPKT8": "USRE12200588",
-    "spotify:track:2oJALOcFN4wKTz6hgNp3WE": "CAMI90900001"
+    "spotify:track:2oJALOcFN4wKTz6hgNp3WE": "CAMI90900001",
+    "spotify:track:1WNM7dOZMZXNAuUvRfT4Gh": "GBKPL1366040"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793709776,
@@ -27392,6 +27397,10 @@
     "dan mangan|||road regrets": {
       "artist": "Dan Mangan",
       "title": "Road Regrets"
+    },
+    "m ward|||color of water": {
+      "artist": "M. Ward",
+      "title": "Color of Water"
     }
   },
   "__v82_confirmed_catalog": {
@@ -31874,6 +31883,11 @@
       "uri": "spotify:track:2oJALOcFN4wKTz6hgNp3WE",
       "artist": "Dan Mangan",
       "title": "Road Regrets"
+    },
+    "m ward|||color of water": {
+      "uri": "spotify:track:1WNM7dOZMZXNAuUvRfT4Gh",
+      "artist": "M. Ward",
+      "title": "Color of Water"
     }
   },
   "__pending_library_likes": {},
@@ -42542,6 +42556,7 @@
       "lydia kitto|||all day all night",
       "lyle lovett|||friend of the devil",
       "m ward|||chinese translation",
+      "m ward|||color of water",
       "m83|||run into flowers",
       "madeleine peyroux|||blue alert",
       "maggie rogers|||never going home",
@@ -43093,6 +43108,7 @@
       "spotify:track:1SWT9qq77WlczarmGmZnky",
       "spotify:track:1TIeyzNHCY6yR3V6PPX3zZ",
       "spotify:track:1Tr8W3vJZoUPUxel4oBZVl",
+      "spotify:track:1WNM7dOZMZXNAuUvRfT4Gh",
       "spotify:track:1XwbJNPOcLuSRTQNR9zz4r",
       "spotify:track:1ZGBiA60P6FNYDDw0QwWEz",
       "spotify:track:1ZX0jrGs3SuBdQZbZatIUJ",
@@ -44008,6 +44024,7 @@
       "GBKEE0800077",
       "GBKEE1000094",
       "GBKPL1267633",
+      "GBKPL1366040",
       "GBKZV1900097",
       "GBKZV2000087",
       "GBKZV2000120",
@@ -45288,7 +45305,8 @@
       "spotify:track:08DO757dzPTgeHSwOQvnIS": "GBBND0200938",
       "spotify:track:4c59d5TKSNupw3GgimdMRm": "USQE91200146",
       "spotify:track:6grFWYpLQul3nAHjzzPKT8": "USRE12200588",
-      "spotify:track:2oJALOcFN4wKTz6hgNp3WE": "CAMI90900001"
+      "spotify:track:2oJALOcFN4wKTz6hgNp3WE": "CAMI90900001",
+      "spotify:track:1WNM7dOZMZXNAuUvRfT4Gh": "GBKPL1366040"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -45559,7 +45577,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "lana del rey|||say yes to heaven",
+  "__last_radio_key_radio_x_chilled": "smashing pumpkins|||1979",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -46122,5 +46140,6 @@
   "__match_v35__feeder|||just the way i'm feeling": "spotify:track:08DO757dzPTgeHSwOQvnIS",
   "__match_v35__joshua radin|||underwater": "spotify:track:4c59d5TKSNupw3GgimdMRm",
   "__match_v35__neil young|||old man": "spotify:track:6grFWYpLQul3nAHjzzPKT8",
-  "__match_v35__dan mangan|||road regrets": "spotify:track:2oJALOcFN4wKTz6hgNp3WE"
+  "__match_v35__dan mangan|||road regrets": "spotify:track:2oJALOcFN4wKTz6hgNp3WE",
+  "__match_v35__m ward|||color of water": "spotify:track:1WNM7dOZMZXNAuUvRfT4Gh"
 }
