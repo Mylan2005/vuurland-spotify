@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793747817.9171972,
+  "__v150_next_spotify_round_at": 1793747938.4836621,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793747806.7414954,
-    "mellow_mix": 1793747806.7464964,
-    "big_sonic_heaven": 1793747806.7500837,
-    "radio_x_chilled": 1793747806.754001,
-    "dreampop_radio": 1793747806.7574792,
-    "indie_select": 1793747806.8866358
+    "vuurland": 1793747818.4542162,
+    "mellow_mix": 1793747818.4592137,
+    "big_sonic_heaven": 1793747818.4627585,
+    "radio_x_chilled": 1793747818.4667249,
+    "dreampop_radio": 1793747818.4702258,
+    "indie_select": 1793747818.473911
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4409,12 +4409,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "roberta flack|||the first time ever i saw your": {
-      "artist": "Roberta Flack",
-      "title": "The First Time Ever I Saw Your",
-      "source": "mellow_mix",
-      "failed_at": 1793661364
-    },
     "coldshoes andrew marrah|||formation": {
       "artist": "coldshoes, andrew marrah",
       "title": "Formation",
@@ -4574,9 +4568,9 @@
   "__last_radio_key_mellow_mix": "sierra ferrell|||whispering waltz",
   "__last_radio_key_big_sonic_heaven": "boy harsher|||coming home",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2527,
-  "__v146_spotify_budget_slot": 1793747698.1928375,
-  "__vuurland_active_playlist_count": 4760,
+  "__v116_fifo_next_sequence": 2528,
+  "__v146_spotify_budget_slot": 1793747818.8208396,
+  "__vuurland_active_playlist_count": 4761,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793745261,
@@ -5417,6 +5411,7 @@
     "bleachers|||modern girl",
     "bleachers|||sideways",
     "bleachers|||you and forever",
+    "blind faith|||can't find my way home",
     "blind melon|||no rain",
     "blind pilot|||3 rounds and a sound",
     "blind pilot|||the story i heard",
@@ -11712,6 +11707,7 @@
     "spotify:track:0zZaWHxGaAuSqs5k8UJOvm",
     "spotify:track:0za4yuB3UmITV2L9QMwlV0",
     "spotify:track:0zeRsscPdy6177ENtSRdqj",
+    "spotify:track:107K6xieSp2ihzoA2vTv2q",
     "spotify:track:10AQo2SdV1WMKxuF7XuMqu",
     "spotify:track:10DdThCoROsMPrKprE1XWq",
     "spotify:track:10GYIFEnI8GpRxTvTVtcPl",
@@ -18252,6 +18248,7 @@
     "NLD322000030",
     "NLD322300043",
     "NLD322400027",
+    "NLF056990018",
     "NLF057290006",
     "NLF057290009",
     "NLF057490003",
@@ -25183,10 +25180,11 @@
     "spotify:track:21msrMn96q6AqXJKz4QMLF": "GBCEJ1501050",
     "spotify:track:7HJmJYQqBq2tn7RleFlun5": "USDW10110510",
     "spotify:track:448X4iq0yaKRScWLNxR7gj": "USCGJ1123686",
-    "spotify:track:6aBn7uWltfjfNvovhybRat": "DEX260707603"
+    "spotify:track:6aBn7uWltfjfNvovhybRat": "DEX260707603",
+    "spotify:track:107K6xieSp2ihzoA2vTv2q": "NLF056990018"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793747210,
+  "__v184_head_checked_at": 1793747819,
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793559322,
   "__match_v35__keren ann|||jardin d'hiver": "spotify:track:45gpJxviKRBsQo1lDZ03Xf",
@@ -29526,6 +29524,10 @@
     "seabear|||libraries": {
       "artist": "Seabear",
       "title": "Libraries"
+    },
+    "blind faith|||can't find my way home": {
+      "artist": "Blind Faith",
+      "title": "Can't Find My Way Home"
     }
   },
   "__v82_confirmed_catalog": {
@@ -34948,6 +34950,11 @@
       "uri": "spotify:track:6aBn7uWltfjfNvovhybRat",
       "artist": "Seabear",
       "title": "Libraries"
+    },
+    "blind faith|||can't find my way home": {
+      "uri": "spotify:track:107K6xieSp2ihzoA2vTv2q",
+      "artist": "Blind Faith",
+      "title": "Can't Find My Way Home"
     }
   },
   "__pending_library_likes": {},
@@ -46340,6 +46347,7 @@
       "black pumas|||more than a love song",
       "black rebel motorcycle club|||fault line",
       "blankenberge|||look around",
+      "blind faith|||can't find my way home",
       "blind melon|||no rain",
       "blink-182|||i miss you",
       "bloc party|||so here we are",
@@ -47386,6 +47394,7 @@
       "spotify:track:0yU5K8BVb8N1UTHk2POblO",
       "spotify:track:0yac0FPhLRH9i9lOng3f81",
       "spotify:track:0yrE6eXUdnO0grf1X5qpHG",
+      "spotify:track:107K6xieSp2ihzoA2vTv2q",
       "spotify:track:10GYIFEnI8GpRxTvTVtcPl",
       "spotify:track:10LamTvntLLVvcNSgVBk0g",
       "spotify:track:10uxlzuPGekUTay2ZpZ4pR",
@@ -48678,6 +48687,7 @@
       "NL7DA2600035",
       "NL9QK2500004",
       "NLC242100121",
+      "NLF056990018",
       "NLF057290006",
       "NLF057290009",
       "NLF057490003",
@@ -50173,7 +50183,8 @@
       "spotify:track:21msrMn96q6AqXJKz4QMLF": "GBCEJ1501050",
       "spotify:track:7HJmJYQqBq2tn7RleFlun5": "USDW10110510",
       "spotify:track:448X4iq0yaKRScWLNxR7gj": "USCGJ1123686",
-      "spotify:track:6aBn7uWltfjfNvovhybRat": "DEX260707603"
+      "spotify:track:6aBn7uWltfjfNvovhybRat": "DEX260707603",
+      "spotify:track:107K6xieSp2ihzoA2vTv2q": "NLF056990018"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -51209,5 +51220,6 @@
   "__match_v35__jimmy eat world|||the middle acoustic": "spotify:track:7HJmJYQqBq2tn7RleFlun5",
   "__match_v35__craig cardiff|||dirty old town": "spotify:track:448X4iq0yaKRScWLNxR7gj",
   "__not_found_v35__hartfield|||girl like you": 1793747576,
-  "__match_v35__seabear|||libraries": "spotify:track:6aBn7uWltfjfNvovhybRat"
+  "__match_v35__seabear|||libraries": "spotify:track:6aBn7uWltfjfNvovhybRat",
+  "__match_v35__blind faith|||can't find my way home": "spotify:track:107K6xieSp2ihzoA2vTv2q"
 }
