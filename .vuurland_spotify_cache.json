@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793695449.0300002,
+  "__v150_next_spotify_round_at": 1793695570.8295245,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -82,12 +82,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793695438.655843,
-    "mellow_mix": 1793695438.656202,
-    "big_sonic_heaven": 1793695438.6564674,
-    "radio_x_chilled": 1793695438.6567326,
-    "dreampop_radio": 1793695438.6569526,
-    "indie_select": 1793695438.657169
+    "vuurland": 1793695450.8193548,
+    "mellow_mix": 1793695450.8197236,
+    "big_sonic_heaven": 1793695450.8199809,
+    "radio_x_chilled": 1793695450.8201983,
+    "dreampop_radio": 1793695450.8203928,
+    "indie_select": 1793695450.820595
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3155,11 +3155,11 @@
   "__last_radio_key_big_sonic_heaven": "count the clock|||here comes the end",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1752,
-  "__v146_spotify_budget_slot": 1793695329.2847486,
-  "__vuurland_active_playlist_count": 4469,
+  "__v146_spotify_budget_slot": 1793695451.0784109,
+  "__vuurland_active_playlist_count": 4470,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v164_playlist_count_checked_at": 1793691752,
+  "__v164_playlist_count_checked_at": 1793695451,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -7358,6 +7358,7 @@
     "peter gabriel|||love can heal - bright-side mix",
     "peter gabriel|||mercy street",
     "peter gabriel|||mercy street - 2012 remaster",
+    "peter gabriel|||secret world",
     "peter gabriel|||solsbury hill",
     "peter gabriel|||washing of the water",
     "peter murphy|||all night long",
@@ -9760,6 +9761,7 @@
     "spotify:track:0d7Gjq2qwvcaoXpeLWFtnf",
     "spotify:track:0dH2RN4L2T51L9I1IksXqq",
     "spotify:track:0dLFlKIw6up52Aftqd88Mx",
+    "spotify:track:0dM9zgB7JSMEwmBGfkspkw",
     "spotify:track:0dMGq0YUOik1rMZicB96Qa",
     "spotify:track:0dupI7MHvlSXuIHH2YXWHC",
     "spotify:track:0e8vSOY64eTGsrgLGsUWRc",
@@ -15430,6 +15432,7 @@
     "GBCNR8500022",
     "GBCPB0900635",
     "GBCPB0900725",
+    "GBCPB0900729",
     "GBCPB1200867",
     "GBCPB1200871",
     "GBCPB2301973",
@@ -22620,7 +22623,8 @@
     "spotify:track:1x72hk5EAzkkC0CDZnHJ9M": "USSM10019757",
     "spotify:track:1AdYZ6X00nXmO613Y7GJOl": "USMC10346123",
     "spotify:track:1cDQku650Uev3TnRGdlbE5": "USUG12310188",
-    "spotify:track:3h5zik31hTTat9jmpCZZNC": "USVI29500052"
+    "spotify:track:3h5zik31hTTat9jmpCZZNC": "USVI29500052",
+    "spotify:track:0dM9zgB7JSMEwmBGfkspkw": "GBCPB0900729"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793694963,
@@ -25827,6 +25831,10 @@
     "smashing pumpkins|||1979": {
       "artist": "The Smashing Pumpkins",
       "title": "1979"
+    },
+    "peter gabriel|||secret world": {
+      "artist": "Peter Gabriel",
+      "title": "Secret World"
     }
   },
   "__v82_confirmed_catalog": {
@@ -29829,6 +29837,11 @@
       "uri": "spotify:track:3h5zik31hTTat9jmpCZZNC",
       "artist": "The Smashing Pumpkins",
       "title": "1979"
+    },
+    "peter gabriel|||secret world": {
+      "uri": "spotify:track:0dM9zgB7JSMEwmBGfkspkw",
+      "artist": "Peter Gabriel",
+      "title": "Secret World"
     }
   },
   "__pending_library_likes": {},
@@ -40528,6 +40541,7 @@
       "pearl jam|||elderly woman behind the counter in a small town",
       "pearl jam|||wreckage",
       "perpetual void|||tree house",
+      "peter gabriel|||secret world",
       "peter gabriel|||washing of the water",
       "peter murphy|||strange kind of love",
       "phoebe bridgers|||day after tomorrow",
@@ -40841,6 +40855,7 @@
       "spotify:track:0YduWa9JbXmpneq0Mmr6la",
       "spotify:track:0a2orhhrZrrvA0zLjsM2rT",
       "spotify:track:0aOH62uqDzuvCvN2jdVtZs",
+      "spotify:track:0dM9zgB7JSMEwmBGfkspkw",
       "spotify:track:0fherZXak87KhVRxpIEAVc",
       "spotify:track:0geH4NzZEGceys274LEkgT",
       "spotify:track:0goEaYw1cI7ubi2YO2WMFJ",
@@ -41687,6 +41702,7 @@
       "GBCJN7200008",
       "GBCNR8500022",
       "GBCPB0900725",
+      "GBCPB0900729",
       "GBCYF0700001",
       "GBDCE0500012",
       "GBDCG0000102",
@@ -42843,7 +42859,8 @@
       "spotify:track:1x72hk5EAzkkC0CDZnHJ9M": "USSM10019757",
       "spotify:track:1AdYZ6X00nXmO613Y7GJOl": "USMC10346123",
       "spotify:track:1cDQku650Uev3TnRGdlbE5": "USUG12310188",
-      "spotify:track:3h5zik31hTTat9jmpCZZNC": "USVI29500052"
+      "spotify:track:3h5zik31hTTat9jmpCZZNC": "USVI29500052",
+      "spotify:track:0dM9zgB7JSMEwmBGfkspkw": "GBCPB0900729"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -43572,5 +43589,6 @@
   "__match_v35__train|||mississippi": "spotify:track:1x72hk5EAzkkC0CDZnHJ9M",
   "__match_v35__blink-182|||i miss you": "spotify:track:1AdYZ6X00nXmO613Y7GJOl",
   "__match_v35__maggie rogers|||never going home": "spotify:track:1cDQku650Uev3TnRGdlbE5",
-  "__match_v35__smashing pumpkins|||1979": "spotify:track:3h5zik31hTTat9jmpCZZNC"
+  "__match_v35__smashing pumpkins|||1979": "spotify:track:3h5zik31hTTat9jmpCZZNC",
+  "__match_v35__peter gabriel|||secret world": "spotify:track:0dM9zgB7JSMEwmBGfkspkw"
 }
