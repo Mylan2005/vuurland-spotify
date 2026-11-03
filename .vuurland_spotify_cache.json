@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793716743.8401058,
+  "__v150_next_spotify_round_at": 1793716866.101653,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793716733.8229437,
-    "mellow_mix": 1793716733.8261397,
-    "big_sonic_heaven": 1793716733.8287454,
-    "radio_x_chilled": 1793716734.008629,
-    "dreampop_radio": 1793716734.0112429,
-    "indie_select": 1793716734.0138535
+    "vuurland": 1793716746.0770614,
+    "mellow_mix": 1793716746.0802357,
+    "big_sonic_heaven": 1793716746.0828793,
+    "radio_x_chilled": 1793716746.0857453,
+    "dreampop_radio": 1793716746.0884254,
+    "indie_select": 1793716746.091062
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4113,8 +4113,8 @@
   "__last_radio_key_big_sonic_heaven": "gergana dimitrova & lisa gerrard|||sun and moon",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2096,
-  "__v146_spotify_budget_slot": 1793716624.122555,
-  "__vuurland_active_playlist_count": 4603,
+  "__v146_spotify_budget_slot": 1793716746.3912053,
+  "__vuurland_active_playlist_count": 4604,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793713805,
@@ -6764,6 +6764,7 @@
     "john parish|||aldous harding|||three hours",
     "john parish|||three hours",
     "johnny cash|||hurt",
+    "johnny cash|||solitary man",
     "johnny cash|||the man comes around",
     "johnny flynn|||wandering aengus",
     "johnny jewel|||tell me",
@@ -12573,6 +12574,7 @@
     "spotify:track:3UI5D0ZdnFHnWtkRpOg4lx",
     "spotify:track:3UKXzE60ORJuNU94FavRFS",
     "spotify:track:3ULNutykxzl4Wu8kNKRNxB",
+    "spotify:track:3UMXhDBYe7eIXUe2HLUn0v",
     "spotify:track:3UmkIngd1BF3q0GCgI29ci",
     "spotify:track:3UvemGiV71t6UCJEvkqkUX",
     "spotify:track:3V4I1nXFt2OEOnZEgnPGiV",
@@ -19203,6 +19205,7 @@
     "USSM10013407",
     "USSM10013410",
     "USSM10014408",
+    "USSM10014899",
     "USSM10019757",
     "USSM10020383",
     "USSM10022971",
@@ -24120,7 +24123,8 @@
     "spotify:track:5Cj8w9tHgG2ROo559duyTj": "USEE19800025",
     "spotify:track:0gXy0ckVCKonW73ir98DPN": "USBN20100532",
     "spotify:track:28Tj1Gc80CcgI3zElL3rgf": "GBAYF9000014",
-    "spotify:track:51UT60Tshjq9RqSVi51jri": "CA0RZ1100073"
+    "spotify:track:51UT60Tshjq9RqSVi51jri": "CA0RZ1100073",
+    "spotify:track:3UMXhDBYe7eIXUe2HLUn0v": "USSM10014899"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793716502,
@@ -27863,6 +27867,10 @@
     "the barr brothers|||old mythologies": {
       "artist": "The Barr Brothers",
       "title": "Old Mythologies"
+    },
+    "johnny cash|||solitary man": {
+      "artist": "Johnny Cash",
+      "title": "Solitary Man"
     }
   },
   "__v82_confirmed_catalog": {
@@ -32535,6 +32543,11 @@
       "uri": "spotify:track:51UT60Tshjq9RqSVi51jri",
       "artist": "The Barr Brothers",
       "title": "Old Mythologies"
+    },
+    "johnny cash|||solitary man": {
+      "uri": "spotify:track:3UMXhDBYe7eIXUe2HLUn0v",
+      "artist": "Johnny Cash",
+      "title": "Solitary Man"
     }
   },
   "__pending_library_likes": {},
@@ -43142,6 +43155,7 @@
       "john martyn|||may you never",
       "john martyn|||solid air",
       "johnny cash|||hurt",
+      "johnny cash|||solitary man",
       "johnny cash|||the man comes around",
       "jonas david|||weak bones",
       "jonathan coulton|||now i am an arsonist w/ suzanne vega",
@@ -44032,6 +44046,7 @@
       "spotify:track:3TtYzuu4lDLFS8UAEtLqdf",
       "spotify:track:3UI5D0ZdnFHnWtkRpOg4lx",
       "spotify:track:3UKXzE60ORJuNU94FavRFS",
+      "spotify:track:3UMXhDBYe7eIXUe2HLUn0v",
       "spotify:track:3WfnpB1e49F0gN18aaPw8Y",
       "spotify:track:3Zux11namsFgz7LIGeNuLU",
       "spotify:track:3aGqwI8kF0VkHFUBPzz7bl",
@@ -45172,6 +45187,7 @@
       "USSM10011921",
       "USSM10012978",
       "USSM10014408",
+      "USSM10014899",
       "USSM10019757",
       "USSM10020383",
       "USSM10022972",
@@ -46110,7 +46126,8 @@
       "spotify:track:5Cj8w9tHgG2ROo559duyTj": "USEE19800025",
       "spotify:track:0gXy0ckVCKonW73ir98DPN": "USBN20100532",
       "spotify:track:28Tj1Gc80CcgI3zElL3rgf": "GBAYF9000014",
-      "spotify:track:51UT60Tshjq9RqSVi51jri": "CA0RZ1100073"
+      "spotify:track:51UT60Tshjq9RqSVi51jri": "CA0RZ1100073",
+      "spotify:track:3UMXhDBYe7eIXUe2HLUn0v": "USSM10014899"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -46986,5 +47003,6 @@
   "__match_v35__natalie merchant|||break your heart": "spotify:track:5Cj8w9tHgG2ROo559duyTj",
   "__match_v35__norah jones|||turn me on": "spotify:track:0gXy0ckVCKonW73ir98DPN",
   "__match_v35__blur|||she's so high": "spotify:track:28Tj1Gc80CcgI3zElL3rgf",
-  "__match_v35__the barr brothers|||old mythologies": "spotify:track:51UT60Tshjq9RqSVi51jri"
+  "__match_v35__the barr brothers|||old mythologies": "spotify:track:51UT60Tshjq9RqSVi51jri",
+  "__match_v35__johnny cash|||solitary man": "spotify:track:3UMXhDBYe7eIXUe2HLUn0v"
 }
