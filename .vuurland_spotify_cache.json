@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793668598.7001424,
+  "__v150_next_spotify_round_at": 1793668729.2413294,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "gregory alan isakov|||liars",
       "whitney|||giving up",
       "cigarettes after sex|||twizzler",
       "boygenius|||we're in love",
@@ -112,8 +113,7 @@
       "pale grey|||lucie",
       "phoebe bridgers|||scott street",
       "merci mercy|||into you",
-      "kurt vile|||zoom 97",
-      "ry x feat olafur arnalds|||oceans"
+      "kurt vile|||zoom 97"
     ],
     "mellow_mix": [
       "fleetwood mac|||woman of 1000 years",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793668598.0483685,
-    "mellow_mix": 1793668598.0517757,
-    "big_sonic_heaven": 1793668598.0535026,
-    "radio_x_chilled": 1793668598.1458056,
-    "dreampop_radio": 1793668598.148079,
-    "indie_select": 1793668598.150578
+    "vuurland": 1793668609.22464,
+    "mellow_mix": 1793668609.2279701,
+    "big_sonic_heaven": 1793668609.2297485,
+    "radio_x_chilled": 1793668609.232555,
+    "dreampop_radio": 1793668609.234816,
+    "indie_select": 1793668609.2373083
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -847,6 +847,7 @@
       "girl in red|||we fell in love in october",
       "good neighbours|||home",
       "gregory alan isakov|||big black car",
+      "gregory alan isakov|||liars",
       "grentperez|||folding chairs on the moon",
       "grian chatten|||last time every time forever",
       "half moon run|||call me in the afternoon",
@@ -3237,13 +3238,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "whitney|||giving up",
+  "__last_radio_key_vuurland": "gregory alan isakov|||liars",
   "__last_radio_key_mellow_mix": "fleetwood mac|||woman of 1000 years",
   "__last_radio_key_big_sonic_heaven": "wishy|||little while",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 1337,
-  "__v146_spotify_budget_slot": 1793668478.808139,
-  "__vuurland_active_playlist_count": 4285,
+  "__v146_spotify_budget_slot": 1793668609.346094,
+  "__vuurland_active_playlist_count": 4286,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793665999,
@@ -3981,6 +3982,7 @@
     "black box revelation|||blown away",
     "black lilys|||blood ties",
     "black pumas|||more than a love song",
+    "black rebel motorcycle club|||fault line",
     "black sea dahu|||in case i fall for you",
     "black sea dahu|||le temps se fuit",
     "black sea dahu|||le temps se fuit - acoustic in lille",
@@ -10246,6 +10248,7 @@
     "spotify:track:1leMmYw98725djni7wSYhq",
     "spotify:track:1leiq8wmky55xA9OdlOHjM",
     "spotify:track:1lsITIBuXbG6e6LJqWZqM1",
+    "spotify:track:1mLlfRGoI7a6qbvyH0Bh2A",
     "spotify:track:1mc2tXHHFTc9Q7ZDZoZJ6C",
     "spotify:track:1meqtp0qs0qIGo83C9KJzo",
     "spotify:track:1mnkfWCLIN3QSfbasz9aDR",
@@ -17336,6 +17339,7 @@
     "USRC10200368",
     "USRC10301011",
     "USRC10401027",
+    "USRC10502970",
     "USRC10600335",
     "USRC10600336",
     "USRC10600340",
@@ -21964,7 +21968,8 @@
     "spotify:track:5XSU59wtE5CRCAEyHmmGy4": "GBUM71604433",
     "spotify:track:4Sz61x2L4mYmtw47NBrzfC": "QM7282410446",
     "spotify:track:7CEV9VwA8XO9wwxTXgYKvY": "USSM10903395",
-    "spotify:track:1Cm7r3vn8AdY9ZUXgsTtKS": "USSM10023420"
+    "spotify:track:1Cm7r3vn8AdY9ZUXgsTtKS": "USSM10023420",
+    "spotify:track:1mLlfRGoI7a6qbvyH0Bh2A": "USRC10502970"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793668479,
@@ -24431,6 +24436,10 @@
     "toad the wet sprocket|||nightingale song": {
       "artist": "Toad The Wet Sprocket",
       "title": "Nightingale Song"
+    },
+    "black rebel motorcycle club|||fault line": {
+      "artist": "Black Rebel Motorcycle Club",
+      "title": "Fault Line"
     }
   },
   "__v82_confirmed_catalog": {
@@ -27508,6 +27517,11 @@
       "uri": "spotify:track:1Cm7r3vn8AdY9ZUXgsTtKS",
       "artist": "Toad The Wet Sprocket",
       "title": "Nightingale Song"
+    },
+    "black rebel motorcycle club|||fault line": {
+      "uri": "spotify:track:1mLlfRGoI7a6qbvyH0Bh2A",
+      "artist": "Black Rebel Motorcycle Club",
+      "title": "Fault Line"
     }
   },
   "__pending_library_likes": {},
@@ -37789,6 +37803,7 @@
       "beth orton|||pass in time",
       "bilbao|||slow it down w/ thala",
       "black pumas|||more than a love song",
+      "black rebel motorcycle club|||fault line",
       "blankenberge|||look around",
       "bob dylan|||simple twist of fate",
       "bob marley & the wailers|||keep on moving",
@@ -38387,6 +38402,7 @@
       "spotify:track:1jkfrF2VhWifJ9khlYF2Hw",
       "spotify:track:1jy7SkRcmBCTcv4ZMtwz29",
       "spotify:track:1k3OFG2G7ExX8B4Dwl73rR",
+      "spotify:track:1mLlfRGoI7a6qbvyH0Bh2A",
       "spotify:track:1nDtnU7xMA8w1kawRajcvP",
       "spotify:track:1oar8gdDX5yHWzVstAHDav",
       "spotify:track:1pLVYNckfIffppiM8CYsTS",
@@ -39181,6 +39197,7 @@
       "USQX91501488",
       "USRC10200368",
       "USRC10301011",
+      "USRC10502970",
       "USRC10600336",
       "USRC10600340",
       "USRC12102920",
@@ -39779,7 +39796,8 @@
       "spotify:track:5XSU59wtE5CRCAEyHmmGy4": "GBUM71604433",
       "spotify:track:4Sz61x2L4mYmtw47NBrzfC": "QM7282410446",
       "spotify:track:7CEV9VwA8XO9wwxTXgYKvY": "USSM10903395",
-      "spotify:track:1Cm7r3vn8AdY9ZUXgsTtKS": "USSM10023420"
+      "spotify:track:1Cm7r3vn8AdY9ZUXgsTtKS": "USSM10023420",
+      "spotify:track:1mLlfRGoI7a6qbvyH0Bh2A": "USRC10502970"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -40320,5 +40338,6 @@
   "__match_v35__florence the machine|||stand by me": "spotify:track:5XSU59wtE5CRCAEyHmmGy4",
   "__match_v35__wasia project|||somebody come through": "spotify:track:4Sz61x2L4mYmtw47NBrzfC",
   "__match_v35__the avett brothers|||i and love and you": "spotify:track:7CEV9VwA8XO9wwxTXgYKvY",
-  "__match_v35__toad the wet sprocket|||nightingale song": "spotify:track:1Cm7r3vn8AdY9ZUXgsTtKS"
+  "__match_v35__toad the wet sprocket|||nightingale song": "spotify:track:1Cm7r3vn8AdY9ZUXgsTtKS",
+  "__match_v35__black rebel motorcycle club|||fault line": "spotify:track:1mLlfRGoI7a6qbvyH0Bh2A"
 }
