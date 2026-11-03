@@ -5802,14 +5802,6 @@
     "_v116_fifo_seq": 1998
   },
   {
-    "artist": "Josh Rouse",
-    "title": "Streetlights",
-    "source": "dreampop_radio",
-    "_v116_fifo_seq": 1026,
-    "_v34_search_variant": 1,
-    "_v34_retry_at": 1793711720
-  },
-  {
     "artist": "David Crosby",
     "title": "Tamalpais High (at About 3)",
     "source": "mellow_mix",
@@ -5862,5 +5854,13 @@
     "title": "High and Dry",
     "source": "radio_x_chilled",
     "_v116_fifo_seq": 2007
+  },
+  {
+    "artist": "Josh Rouse",
+    "title": "Streetlights",
+    "source": "dreampop_radio",
+    "_v116_fifo_seq": 1026,
+    "_v34_search_variant": 2,
+    "_v34_retry_at": 1793712331
   }
 ]
