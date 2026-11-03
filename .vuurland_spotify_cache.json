@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793727035.5297747,
+  "__v150_next_spotify_round_at": 1793727168.8071566,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "wasia project|||somebody come through",
       "m83|||wait",
       "oakn|||lovesick",
       "celeste|||little runaway",
@@ -112,8 +113,7 @@
       "gabriel rios|||police sounds",
       "tyler ballgame|||matter of taste",
       "hermanos gutierrez|||canto andino",
-      "khruangbin|||hold me up thank you",
-      "novastar|||lost & blown away"
+      "khruangbin|||hold me up thank you"
     ],
     "mellow_mix": [
       "efterklang|||getting reminders feat beirut",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793727027.781863,
-    "mellow_mix": 1793727027.9635334,
-    "big_sonic_heaven": 1793727027.966771,
-    "radio_x_chilled": 1793727027.970253,
-    "dreampop_radio": 1793727027.973491,
-    "indie_select": 1793727027.976768
+    "vuurland": 1793727048.778936,
+    "mellow_mix": 1793727048.7828074,
+    "big_sonic_heaven": 1793727048.7860372,
+    "radio_x_chilled": 1793727048.7895684,
+    "dreampop_radio": 1793727048.792748,
+    "indie_select": 1793727048.796028
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4091,12 +4091,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "meshell ndegeocello|||with god on our side w/ bill callahan chris thile": {
-      "artist": "Meshell Ndegeocello",
-      "title": "With God On Our Side (w/ Bill Callahan, Chris Thile)",
-      "source": "mellow_mix",
-      "failed_at": 1793640616
-    },
     "gypsy tailwind|||way to here": {
       "artist": "Gypsy Tailwind",
       "title": "Way To Here",
@@ -4288,13 +4282,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "m83|||wait",
+  "__last_radio_key_vuurland": "wasia project|||somebody come through",
   "__last_radio_key_mellow_mix": "efterklang|||getting reminders feat beirut",
   "__last_radio_key_big_sonic_heaven": "nation of language|||inept apollo",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2245,
-  "__v146_spotify_budget_slot": 1793726915.8348832,
-  "__vuurland_active_playlist_count": 4676,
+  "__v116_fifo_next_sequence": 2246,
+  "__v146_spotify_budget_slot": 1793727049.192052,
+  "__vuurland_active_playlist_count": 4677,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793724900,
@@ -4867,6 +4861,7 @@
     "bel canto|||prince of insecuria",
     "bel canto|||unicorn",
     "bela fleck|||big country",
+    "belle and sebastian|||beautiful",
     "belly|||feed the tree",
     "belly|||gepetto",
     "ben bridwell|||luther",
@@ -14590,6 +14585,7 @@
     "spotify:track:6WjWaFu6YADsMKqjmZE2g0",
     "spotify:track:6WuBtCCjG0T2irgaeBkPDu",
     "spotify:track:6Wuv7MrhesuDsuGv8vcrOd",
+    "spotify:track:6X2MtsbwP7Q60SwevkgWXY",
     "spotify:track:6X96Fw2STnKocw9r3qVots",
     "spotify:track:6XDFFeinPXgy3auyC7huoC",
     "spotify:track:6XFvsdR5sHHNy5dOcbz545",
@@ -16942,6 +16938,7 @@
     "GBBTF9700092",
     "GBCAD1700161",
     "GBCAD2301223",
+    "GBCAX0503709",
     "GBCCS0201263",
     "GBCDN9600003",
     "GBCDN9600017",
@@ -24562,7 +24559,8 @@
     "spotify:track:1YcvBlD38brgqcnVPBXvkt": "GBCVZ0802433",
     "spotify:track:5WMA8AmXGff8wo450I3Ecn": "GBUM72307330",
     "spotify:track:3nnG7AM9QopHVPEuLX3Khk": "USUM71405265",
-    "spotify:track:7ogLDY3Gbn2sDyMD4Hnw9c": "GBUM71100548"
+    "spotify:track:7ogLDY3Gbn2sDyMD4Hnw9c": "GBUM71100548",
+    "spotify:track:6X2MtsbwP7Q60SwevkgWXY": "GBCAX0503709"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793726784,
@@ -28565,6 +28563,10 @@
     "the head and the heart|||lost in my mind": {
       "artist": "The Head And The Heart",
       "title": "Lost In My Mind"
+    },
+    "belle and sebastian|||beautiful": {
+      "artist": "Belle and Sebastian",
+      "title": "Beautiful"
     }
   },
   "__v82_confirmed_catalog": {
@@ -33562,6 +33564,11 @@
       "uri": "spotify:track:7ogLDY3Gbn2sDyMD4Hnw9c",
       "artist": "The Head And The Heart",
       "title": "Lost In My Mind"
+    },
+    "belle and sebastian|||beautiful": {
+      "uri": "spotify:track:6X2MtsbwP7Q60SwevkgWXY",
+      "artist": "Belle and Sebastian",
+      "title": "Beautiful"
     }
   },
   "__pending_library_likes": {},
@@ -44927,6 +44934,7 @@
       "beck|||stormbringer",
       "beck|||the golden age",
       "bela fleck|||big country",
+      "belle and sebastian|||beautiful",
       "ben harper|||not fire not ice",
       "ben harper|||not fire not ice live",
       "ben harper|||she's only happy in the sun",
@@ -46540,6 +46548,7 @@
       "spotify:track:6WQpyoib9ilRgDz72d9ETc",
       "spotify:track:6WjWaFu6YADsMKqjmZE2g0",
       "spotify:track:6WuBtCCjG0T2irgaeBkPDu",
+      "spotify:track:6X2MtsbwP7Q60SwevkgWXY",
       "spotify:track:6XK6Zw6JkFsHXzAcMWNiIr",
       "spotify:track:6ZGRjG9vr6HDhlBypaXbQH",
       "spotify:track:6ZVVax9sMTB6HPKu36eYZs",
@@ -46950,6 +46959,7 @@
       "GBBRP2501663",
       "GBBTF0200131",
       "GBBTF9200071",
+      "GBCAX0503709",
       "GBCDN9600017",
       "GBCEJ1501010",
       "GBCEL0900448",
@@ -48446,7 +48456,8 @@
       "spotify:track:1YcvBlD38brgqcnVPBXvkt": "GBCVZ0802433",
       "spotify:track:5WMA8AmXGff8wo450I3Ecn": "GBUM72307330",
       "spotify:track:3nnG7AM9QopHVPEuLX3Khk": "USUM71405265",
-      "spotify:track:7ogLDY3Gbn2sDyMD4Hnw9c": "GBUM71100548"
+      "spotify:track:7ogLDY3Gbn2sDyMD4Hnw9c": "GBUM71100548",
+      "spotify:track:6X2MtsbwP7Q60SwevkgWXY": "GBCAX0503709"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -49395,5 +49406,6 @@
   "__match_v35__emiliana torrini|||fireheads": "spotify:track:1YcvBlD38brgqcnVPBXvkt",
   "__match_v35__holly humberstone|||dive": "spotify:track:5WMA8AmXGff8wo450I3Ecn",
   "__match_v35__james bay|||let it go": "spotify:track:3nnG7AM9QopHVPEuLX3Khk",
-  "__match_v35__the head and the heart|||lost in my mind": "spotify:track:7ogLDY3Gbn2sDyMD4Hnw9c"
+  "__match_v35__the head and the heart|||lost in my mind": "spotify:track:7ogLDY3Gbn2sDyMD4Hnw9c",
+  "__match_v35__belle and sebastian|||beautiful": "spotify:track:6X2MtsbwP7Q60SwevkgWXY"
 }
