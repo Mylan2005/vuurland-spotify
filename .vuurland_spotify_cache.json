@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793707627.7900474,
+  "__v150_next_spotify_round_at": 1793707750.3112326,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -201,6 +201,7 @@
       "fleeting colours|||autumn"
     ],
     "radio_x_chilled": [
+      "the cure|||lovesong",
       "athlete|||you got the style",
       "asgeir|||heart shaped box",
       "the kooks|||naive live for radio x",
@@ -264,6 +265,7 @@
       "foo fighters|||next year"
     ],
     "dreampop_radio": [
+      "tennis|||long boat pass",
       "the cranberries|||linger",
       "samantha crain|||churchill",
       "kristofer astrom|||for you",
@@ -377,12 +379,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793707617.6772664,
-    "mellow_mix": 1793707617.6786308,
-    "big_sonic_heaven": 1793707617.6795561,
-    "radio_x_chilled": 1793707617.6806874,
-    "dreampop_radio": 1793707617.6815815,
-    "indie_select": 1793707617.682513
+    "vuurland": 1793707629.970241,
+    "mellow_mix": 1793707629.971692,
+    "big_sonic_heaven": 1793707629.9727125,
+    "radio_x_chilled": 1793707630.135451,
+    "dreampop_radio": 1793707630.299871,
+    "indie_select": 1793707630.3009017
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2735,6 +2737,7 @@
       "the cure|||close to me",
       "the cure|||friday i'm in love acoustic",
       "the cure|||just like heaven acoustic",
+      "the cure|||lovesong",
       "the cure|||lovesong acoustic",
       "the cure|||lullaby",
       "the cure|||pictures of you",
@@ -3033,6 +3036,7 @@
       "tame impala|||feels like we only go backwards",
       "temples|||the guesser",
       "tennis|||cape dory",
+      "tennis|||long boat pass",
       "tennis|||my better self",
       "the barr brothers|||even the darkness has arms",
       "the blanks|||hey ya!",
@@ -3660,9 +3664,9 @@
   "__last_radio_key_mellow_mix": "doc & merle watson|||windy and warm",
   "__last_radio_key_big_sonic_heaven": "hazy mountains|||all gone away",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1942,
-  "__v146_spotify_budget_slot": 1793707508.0600972,
-  "__vuurland_active_playlist_count": 4549,
+  "__v116_fifo_next_sequence": 1944,
+  "__v146_spotify_budget_slot": 1793707630.5865686,
+  "__vuurland_active_playlist_count": 4550,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793706523,
@@ -5336,6 +5340,7 @@
     "dylan gers|||noah yorke|||red skies",
     "dylan gers|||red skies",
     "dylan leblanc|||coyote",
+    "dylan mondegreen|||come with me to albuquerque",
     "dystate|||two fish in a tank",
     "eagles|||take it easy",
     "eagles|||take it easy - 2013 remaster",
@@ -14159,6 +14164,7 @@
     "spotify:track:7H0UxIN751StFi2tznmHlg",
     "spotify:track:7H0ya83CMmgFcOhw0UB6ow",
     "spotify:track:7H3ojI1BsVy0dEJENqMt1k",
+    "spotify:track:7H7Kb6Kodlignk13VFRjpx",
     "spotify:track:7H7NyZ3G075GqPx2evsfeb",
     "spotify:track:7HdyKsr1RXenJRtMKcyQ3K",
     "spotify:track:7HilLn7wds2U0jUJGBBVXw",
@@ -16871,6 +16877,7 @@
     "NLX5D2500003",
     "NLY9M2200006",
     "NLY9M2600001",
+    "NOCNZ0805030",
     "NOCTN1420040",
     "NOCTN1903010",
     "NOHDD5801010",
@@ -23449,7 +23456,8 @@
     "spotify:track:449mKDXwGZmsUIhhnmMAsv": "GBAYE1101168",
     "spotify:track:2ck13qfgRZ1msyEJlDqzvk": "USWB19600577",
     "spotify:track:2OgIDrZa5SB8xseH1P9oE4": "USTBD1500007",
-    "spotify:track:1zf4QpodbiIfdj8xkc8VY0": "USUG11400479"
+    "spotify:track:1zf4QpodbiIfdj8xkc8VY0": "USUG11400479",
+    "spotify:track:7H7Kb6Kodlignk13VFRjpx": "NOCNZ0805030"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793707263,
@@ -26972,6 +26980,10 @@
     "ryan adams|||am i safe": {
       "artist": "Ryan Adams",
       "title": "Am I Safe"
+    },
+    "dylan mondegreen|||come with me to albuquerque": {
+      "artist": "Dylan Mondegreen",
+      "title": "(Come With Me To) Albuquerque"
     }
   },
   "__v82_confirmed_catalog": {
@@ -31369,6 +31381,11 @@
       "uri": "spotify:track:1zf4QpodbiIfdj8xkc8VY0",
       "artist": "Ryan Adams",
       "title": "Am I Safe"
+    },
+    "dylan mondegreen|||come with me to albuquerque": {
+      "uri": "spotify:track:7H7Kb6Kodlignk13VFRjpx",
+      "artist": "Dylan Mondegreen",
+      "title": "(Come With Me To) Albuquerque"
     }
   },
   "__pending_library_likes": {},
@@ -41802,6 +41819,7 @@
       "dr john|||such a night",
       "dressed like boys|||healing",
       "dressed like boys|||nando",
+      "dylan mondegreen|||come with me to albuquerque",
       "eastmountainsouth|||show me the river",
       "easy star all-stars|||let down w/ toots & the maytals",
       "edmund november|||cold street light",
@@ -43137,6 +43155,7 @@
       "spotify:track:7EDrSW40rkvj1O1l2pAcbJ",
       "spotify:track:7FDHI71Z3IInsEKuUn7Df8",
       "spotify:track:7H3ojI1BsVy0dEJENqMt1k",
+      "spotify:track:7H7Kb6Kodlignk13VFRjpx",
       "spotify:track:7IUVnMCrNDYX5zG8Vq86o6",
       "spotify:track:7Ipw32rwmsEhbf5IBQGmAI",
       "spotify:track:7JhL7dj72jXJAH9tJse8yS",
@@ -43537,6 +43556,7 @@
       "NLP762500261",
       "NLRD52133574",
       "NLV8M1700002",
+      "NOCNZ0805030",
       "NZCP11400002",
       "NZUM71200031",
       "NZUM72500008",
@@ -44716,7 +44736,8 @@
       "spotify:track:449mKDXwGZmsUIhhnmMAsv": "GBAYE1101168",
       "spotify:track:2ck13qfgRZ1msyEJlDqzvk": "USWB19600577",
       "spotify:track:2OgIDrZa5SB8xseH1P9oE4": "USTBD1500007",
-      "spotify:track:1zf4QpodbiIfdj8xkc8VY0": "USUG11400479"
+      "spotify:track:1zf4QpodbiIfdj8xkc8VY0": "USUG11400479",
+      "spotify:track:7H7Kb6Kodlignk13VFRjpx": "NOCNZ0805030"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -44987,7 +45008,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "athlete|||you got the style",
+  "__last_radio_key_radio_x_chilled": "the cure|||lovesong",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -45091,7 +45112,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the cranberries|||linger",
+  "__last_radio_key_dreampop_radio": "tennis|||long boat pass",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -45531,5 +45552,6 @@
   "__match_v35__morning parade|||running down the aisle": "spotify:track:449mKDXwGZmsUIhhnmMAsv",
   "__match_v35__paula cole|||where have all the cowboys gone?": "spotify:track:2ck13qfgRZ1msyEJlDqzvk",
   "__match_v35__other lives|||2 pyramids": "spotify:track:2OgIDrZa5SB8xseH1P9oE4",
-  "__match_v35__ryan adams|||am i safe": "spotify:track:1zf4QpodbiIfdj8xkc8VY0"
+  "__match_v35__ryan adams|||am i safe": "spotify:track:1zf4QpodbiIfdj8xkc8VY0",
+  "__match_v35__dylan mondegreen|||come with me to albuquerque": "spotify:track:7H7Kb6Kodlignk13VFRjpx"
 }
