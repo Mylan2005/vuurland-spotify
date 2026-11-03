@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793729190.1715915,
+  "__v150_next_spotify_round_at": 1793729319.5280857,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "khruangbin|||people everywhere still alive",
       "lana del rey|||take me home country roads",
       "big thief|||love in mine",
       "milan w|||days in my arms",
@@ -112,8 +113,7 @@
       "jan verstraeten|||goodbye world",
       "emma hessels|||always lost",
       "childish gambino|||feels like summer",
-      "sufjan stevens|||mystery of love",
-      "king hannah|||davey says"
+      "sufjan stevens|||mystery of love"
     ],
     "mellow_mix": [
       "bob marley|||is this love",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793729165.1355014,
-    "mellow_mix": 1793729165.139512,
-    "big_sonic_heaven": 1793729165.3241413,
-    "radio_x_chilled": 1793729165.3278239,
-    "dreampop_radio": 1793729165.3311934,
-    "indie_select": 1793729165.3346236
+    "vuurland": 1793729199.4991698,
+    "mellow_mix": 1793729199.5031552,
+    "big_sonic_heaven": 1793729199.5065038,
+    "radio_x_chilled": 1793729199.510114,
+    "dreampop_radio": 1793729199.513398,
+    "indie_select": 1793729199.5167854
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4320,13 +4320,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "lana del rey|||take me home country roads",
+  "__last_radio_key_vuurland": "khruangbin|||people everywhere still alive",
   "__last_radio_key_mellow_mix": "bob marley|||is this love",
   "__last_radio_key_big_sonic_heaven": "miki berenyi trio|||doldrum days",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2279,
-  "__v146_spotify_budget_slot": 1793729070.4818184,
-  "__vuurland_active_playlist_count": 4691,
+  "__v146_spotify_budget_slot": 1793729199.8343892,
+  "__vuurland_active_playlist_count": 4692,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793728517,
@@ -8809,6 +8809,7 @@
     "r e m|||talk about the passion",
     "rabino|||rat king",
     "rachel baiman|||cycles",
+    "rachel chinouriri|||little house",
     "rachel goswell|||vanity",
     "rachel morris|||cowboy",
     "rachel sermanni|||the fog",
@@ -11126,6 +11127,7 @@
     "spotify:track:0YOMohOG3vq1sEIYGktSuF",
     "spotify:track:0YRtfpXOOzcEashqtNqBO2",
     "spotify:track:0YZzt5PD7o4pS0wNzV6bNT",
+    "spotify:track:0YaTSLfaoaJescHqbfDYv5",
     "spotify:track:0YdIIMb2MHuxoUudkAY9gS",
     "spotify:track:0YduWa9JbXmpneq0Mmr6la",
     "spotify:track:0YiS8KDtKiShQze8GJI6jU",
@@ -16789,6 +16791,7 @@
     "GBAYE2202594",
     "GBAYE2300534",
     "GBAYE2400943",
+    "GBAYE2501122",
     "GBAYE7800544",
     "GBAYE8000334",
     "GBAYE8100053",
@@ -24654,7 +24657,8 @@
     "spotify:track:6xOG1RAxBsMoybVfzNuFEM": "GBAKW0400770",
     "spotify:track:34BOvF5VkEFZyNd7umIGwu": "DEAK81000006",
     "spotify:track:7FgjfoVQ6Wn1Nm53N5Upn8": "NLF057290009",
-    "spotify:track:6qbf6D0RVE0caHmnudUgNE": "USTC10782255"
+    "spotify:track:6qbf6D0RVE0caHmnudUgNE": "USTC10782255",
+    "spotify:track:0YaTSLfaoaJescHqbfDYv5": "GBAYE2501122"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793728799,
@@ -28721,6 +28725,10 @@
     "william fitzsimmons|||it's not true": {
       "artist": "William Fitzsimmons",
       "title": "It's Not True"
+    },
+    "rachel chinouriri|||little house": {
+      "artist": "Rachel Chinouriri",
+      "title": "Little House"
     }
   },
   "__v82_confirmed_catalog": {
@@ -33798,6 +33806,11 @@
       "uri": "spotify:track:6qbf6D0RVE0caHmnudUgNE",
       "artist": "William Fitzsimmons",
       "title": "It's Not True"
+    },
+    "rachel chinouriri|||little house": {
+      "uri": "spotify:track:0YaTSLfaoaJescHqbfDYv5",
+      "artist": "Rachel Chinouriri",
+      "title": "Little House"
     }
   },
   "__pending_library_likes": {},
@@ -45728,6 +45741,7 @@
       "r e m|||losing my religion",
       "r e m|||new test leper",
       "r e m|||talk about the passion",
+      "rachel chinouriri|||little house",
       "rachel sermanni|||the fog",
       "radiohead|||fake plastic trees",
       "randy newman|||baltimore",
@@ -46110,6 +46124,7 @@
       "spotify:track:0Wl42CUb1phIU9O2aR1wXI",
       "spotify:track:0XqAamXqWaurtX9rTDGCFQ",
       "spotify:track:0YMFcrMtBowDdD5bPz0cgy",
+      "spotify:track:0YaTSLfaoaJescHqbfDYv5",
       "spotify:track:0YduWa9JbXmpneq0Mmr6la",
       "spotify:track:0YiS8KDtKiShQze8GJI6jU",
       "spotify:track:0Yw8XI8wOfLa5rTJdX7wVK",
@@ -47179,6 +47194,7 @@
       "GBAYE2202594",
       "GBAYE2300534",
       "GBAYE2400943",
+      "GBAYE2501122",
       "GBAYE9201033",
       "GBAYE9400056",
       "GBAYF9000014",
@@ -48742,7 +48758,8 @@
       "spotify:track:6xOG1RAxBsMoybVfzNuFEM": "GBAKW0400770",
       "spotify:track:34BOvF5VkEFZyNd7umIGwu": "DEAK81000006",
       "spotify:track:7FgjfoVQ6Wn1Nm53N5Upn8": "NLF057290009",
-      "spotify:track:6qbf6D0RVE0caHmnudUgNE": "USTC10782255"
+      "spotify:track:6qbf6D0RVE0caHmnudUgNE": "USTC10782255",
+      "spotify:track:0YaTSLfaoaJescHqbfDYv5": "GBAYE2501122"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -49707,5 +49724,6 @@
   "__match_v35__stephen fretwell|||run": "spotify:track:6xOG1RAxBsMoybVfzNuFEM",
   "__match_v35__tim neuhaus|||blankets": "spotify:track:34BOvF5VkEFZyNd7umIGwu",
   "__match_v35__j j cale|||crazy mama": "spotify:track:7FgjfoVQ6Wn1Nm53N5Upn8",
-  "__match_v35__william fitzsimmons|||it's not true": "spotify:track:6qbf6D0RVE0caHmnudUgNE"
+  "__match_v35__william fitzsimmons|||it's not true": "spotify:track:6qbf6D0RVE0caHmnudUgNE",
+  "__match_v35__rachel chinouriri|||little house": "spotify:track:0YaTSLfaoaJescHqbfDYv5"
 }
