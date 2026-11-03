@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793664651.2928042,
+  "__v150_next_spotify_round_at": 1793664773.6576583,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "elis floreen|||panther",
       "zach bryan|||pink skies",
       "balthazar|||then what",
       "khruangbin|||pon pon",
@@ -91,7 +92,6 @@
       "benson boone|||beautiful things",
       "local natives|||dark days",
       "ex:re|||romance",
-      "elis floreen|||panther",
       "charles bradley|||changes",
       "berre|||how beautiful this life is",
       "warpaint|||common blue",
@@ -320,6 +320,7 @@
       "m83|||run into flowers"
     ],
     "radio_x_chilled": [
+      "stornoway|||zorbing",
       "arctic monkeys|||mardy bum",
       "radiohead|||let down",
       "hozier|||eat your young",
@@ -418,8 +419,7 @@
       "stereophonics|||traffic",
       "the national|||fake empire",
       "paolo nutini|||candy",
-      "lana del rey|||say yes to heaven",
-      "blur|||to the end"
+      "lana del rey|||say yes to heaven"
     ],
     "dreampop_radio": [
       "josh ritter|||joy to you baby",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793664640.8527012,
-    "mellow_mix": 1793664640.9714222,
-    "big_sonic_heaven": 1793664640.9737525,
-    "radio_x_chilled": 1793664640.9773858,
-    "dreampop_radio": 1793664640.9805393,
-    "indie_select": 1793664640.983948
+    "vuurland": 1793664653.520631,
+    "mellow_mix": 1793664653.5254562,
+    "big_sonic_heaven": 1793664653.5277789,
+    "radio_x_chilled": 1793664653.6451874,
+    "dreampop_radio": 1793664653.648506,
+    "indie_select": 1793664653.6520905
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2498,6 +2498,7 @@
       "stereophonics|||i wanna get lost with you acoustic",
       "stereophonics|||maybe tomorrow",
       "stereophonics|||traffic",
+      "stornoway|||zorbing",
       "tame impala|||the less i know the better",
       "the avalanches|||since i left you",
       "the beatles|||come together",
@@ -3129,13 +3130,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "zach bryan|||pink skies",
+  "__last_radio_key_vuurland": "elis floreen|||panther",
   "__last_radio_key_mellow_mix": "turin brakes|||mirror",
   "__last_radio_key_big_sonic_heaven": "love spirals downwards|||city moon",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1261,
-  "__v146_spotify_budget_slot": 1793664531.4513836,
-  "__vuurland_active_playlist_count": 4259,
+  "__v116_fifo_next_sequence": 1262,
+  "__v146_spotify_budget_slot": 1793664653.9091132,
+  "__vuurland_active_playlist_count": 4260,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793662326,
@@ -6544,6 +6545,7 @@
     "michael kiwanuka|||cold little heart - radio edit",
     "michael kiwanuka|||final days - bonobo remix",
     "michael kiwanuka|||follow your dreams",
+    "michael kiwanuka|||hero",
     "michael kiwanuka|||light",
     "michael kiwanuka|||love & hate",
     "michael kiwanuka|||one and only",
@@ -10541,6 +10543,7 @@
     "spotify:track:2XmElimJJTpdRG3CWxlUOx",
     "spotify:track:2Xn7NadvZ56D0B2D7x2CSL",
     "spotify:track:2Xv7F2lPQX7Gg9qm7p52a7",
+    "spotify:track:2Y61ZvCuuLOhdkgl1B9ekh",
     "spotify:track:2Y6olVRdJEmhxJQXeGaCXR",
     "spotify:track:2Y6yBb2KctOmsxRSS8ZaKY",
     "spotify:track:2YVSb6r4NySKqdwI353kRk",
@@ -15299,6 +15302,7 @@
     "GBUM71901016",
     "GBUM71901106",
     "GBUM71902971",
+    "GBUM71903002",
     "GBUM71903150",
     "GBUM71903510",
     "GBUM71903648",
@@ -21751,7 +21755,8 @@
     "spotify:track:643ZkbfQ7PbEo2cWFojZKw": "BEA032000195",
     "spotify:track:1q1l9qgvNZZKoBJtG03q1P": "GBF080201255",
     "spotify:track:1ypHPEcSM1PGscmhPpR5UU": "QM6N22218972",
-    "spotify:track:68jU8rPQuQufjrIoUdS3vS": "FR86W0300280"
+    "spotify:track:68jU8rPQuQufjrIoUdS3vS": "FR86W0300280",
+    "spotify:track:2Y61ZvCuuLOhdkgl1B9ekh": "GBUM71903002"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793664164,
@@ -24114,6 +24119,10 @@
     "m83|||run into flowers": {
       "artist": "M83",
       "title": "Run Into Flowers"
+    },
+    "michael kiwanuka|||hero": {
+      "artist": "Michael Kiwanuka",
+      "title": "Hero"
     }
   },
   "__v82_confirmed_catalog": {
@@ -27061,6 +27070,11 @@
       "uri": "spotify:track:68jU8rPQuQufjrIoUdS3vS",
       "artist": "M83",
       "title": "Run Into Flowers"
+    },
+    "michael kiwanuka|||hero": {
+      "uri": "spotify:track:2Y61ZvCuuLOhdkgl1B9ekh",
+      "artist": "Michael Kiwanuka",
+      "title": "Hero"
     }
   },
   "__pending_library_likes": {},
@@ -37570,6 +37584,7 @@
       "men i trust|||carried away",
       "mich gerber|||haboob",
       "michael kiwanuka|||beautiful life",
+      "michael kiwanuka|||hero",
       "mike oldfield|||muse",
       "miles davis|||blue in green",
       "mind cinema|||monkeys",
@@ -37957,6 +37972,7 @@
       "spotify:track:2VuPf7Il5qhx7WHArc9WAs",
       "spotify:track:2Vyj8Vwg2Y9rK2rNtAyrAZ",
       "spotify:track:2XIr0KTybGQsC1SFfeaZhI",
+      "spotify:track:2Y61ZvCuuLOhdkgl1B9ekh",
       "spotify:track:2a2MbiJN2skOxohykOVcss",
       "spotify:track:2aB0Oj7KhDVw4SAq9qrFL4",
       "spotify:track:2dk5HQv2V6hEVeGGlPvCFA",
@@ -38451,6 +38467,7 @@
       "GBUM71606075",
       "GBUM71700980",
       "GBUM71705929",
+      "GBUM71903002",
       "GBUM71904248",
       "GBUM71905972",
       "GBUM72002056",
@@ -39223,7 +39240,8 @@
       "spotify:track:643ZkbfQ7PbEo2cWFojZKw": "BEA032000195",
       "spotify:track:1q1l9qgvNZZKoBJtG03q1P": "GBF080201255",
       "spotify:track:1ypHPEcSM1PGscmhPpR5UU": "QM6N22218972",
-      "spotify:track:68jU8rPQuQufjrIoUdS3vS": "FR86W0300280"
+      "spotify:track:68jU8rPQuQufjrIoUdS3vS": "FR86W0300280",
+      "spotify:track:2Y61ZvCuuLOhdkgl1B9ekh": "GBUM71903002"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -39494,7 +39512,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "arctic monkeys|||mardy bum",
+  "__last_radio_key_radio_x_chilled": "stornoway|||zorbing",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -39736,5 +39754,6 @@
   "__match_v35__lennert coorevits & pieter van dessel|||albatros": "spotify:track:643ZkbfQ7PbEo2cWFojZKw",
   "__match_v35__mark knopfler|||hill farmer's blues": "spotify:track:1q1l9qgvNZZKoBJtG03q1P",
   "__match_v35__aukai|||azure": "spotify:track:1ypHPEcSM1PGscmhPpR5UU",
-  "__match_v35__m83|||run into flowers": "spotify:track:68jU8rPQuQufjrIoUdS3vS"
+  "__match_v35__m83|||run into flowers": "spotify:track:68jU8rPQuQufjrIoUdS3vS",
+  "__match_v35__michael kiwanuka|||hero": "spotify:track:2Y61ZvCuuLOhdkgl1B9ekh"
 }
