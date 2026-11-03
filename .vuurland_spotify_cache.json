@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793747451.374824,
+  "__v150_next_spotify_round_at": 1793747573.517307,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793747441.2846055,
-    "mellow_mix": 1793747441.426298,
-    "big_sonic_heaven": 1793747441.4298286,
-    "radio_x_chilled": 1793747441.575437,
-    "dreampop_radio": 1793747441.5789688,
-    "indie_select": 1793747441.5825865
+    "vuurland": 1793747453.4876285,
+    "mellow_mix": 1793747453.4926584,
+    "big_sonic_heaven": 1793747453.4961848,
+    "radio_x_chilled": 1793747453.5001311,
+    "dreampop_radio": 1793747453.503654,
+    "indie_select": 1793747453.5074186
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4566,8 +4566,8 @@
   "__last_radio_key_big_sonic_heaven": "air formation|||cold morning",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2524,
-  "__v146_spotify_budget_slot": 1793747331.645841,
-  "__vuurland_active_playlist_count": 4758,
+  "__v146_spotify_budget_slot": 1793747453.7802732,
+  "__vuurland_active_playlist_count": 4759,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793745261,
@@ -5933,6 +5933,7 @@
     "cowboy junkies|||black eyed man",
     "cowboy junkies|||brand new world",
     "cowboy junkies|||something more besides you",
+    "craig cardiff|||dirty old town",
     "cranes|||come this far",
     "cranes|||everywhere",
     "cranes|||far from the city",
@@ -13562,6 +13563,7 @@
     "spotify:track:43niiTshfUdTN32wHykv7h",
     "spotify:track:440guCzsWXGK62SHKL7chG",
     "spotify:track:442vojce8QY34Fy0OfIDtr",
+    "spotify:track:448X4iq0yaKRScWLNxR7gj",
     "spotify:track:448t63bYlXVmM04NzeWoxG",
     "spotify:track:449mKDXwGZmsUIhhnmMAsv",
     "spotify:track:44BbFFYkWgAulbZCxrXBE9",
@@ -19554,6 +19556,7 @@
     "USCGJ0988301",
     "USCGJ0988303",
     "USCGJ0988308",
+    "USCGJ1123686",
     "USCGJ1396460",
     "USCGJ1631336",
     "USCN39400033",
@@ -25166,7 +25169,8 @@
     "spotify:track:1hS3RXEQbXtWgYpot2Ay07": "USNO12300236",
     "spotify:track:12I6qdz5BIZfH6ei2LS2Jo": "QM6N22655873",
     "spotify:track:21msrMn96q6AqXJKz4QMLF": "GBCEJ1501050",
-    "spotify:track:7HJmJYQqBq2tn7RleFlun5": "USDW10110510"
+    "spotify:track:7HJmJYQqBq2tn7RleFlun5": "USDW10110510",
+    "spotify:track:448X4iq0yaKRScWLNxR7gj": "USCGJ1123686"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793747210,
@@ -29501,6 +29505,10 @@
     "jimmy eat world|||the middle acoustic": {
       "artist": "Jimmy Eat World",
       "title": "The Middle - Acoustic Version"
+    },
+    "craig cardiff|||dirty old town": {
+      "artist": "Craig Cardiff",
+      "title": "Dirty Old Town"
     }
   },
   "__v82_confirmed_catalog": {
@@ -34913,6 +34921,11 @@
       "uri": "spotify:track:7HJmJYQqBq2tn7RleFlun5",
       "artist": "Jimmy Eat World",
       "title": "The Middle - Acoustic Version"
+    },
+    "craig cardiff|||dirty old town": {
+      "uri": "spotify:track:448X4iq0yaKRScWLNxR7gj",
+      "artist": "Craig Cardiff",
+      "title": "Dirty Old Town"
     }
   },
   "__pending_library_likes": {},
@@ -46387,6 +46400,7 @@
       "cowboy junkies|||black eyed man",
       "cowboy junkies|||brand new world",
       "cowboy junkies|||something more besides you",
+      "craig cardiff|||dirty old town",
       "creedence clearwater revival|||who'll stop the rain",
       "crosby & nash|||lay me down",
       "crosby stills & nash|||just a song before i go",
@@ -47745,6 +47759,7 @@
       "spotify:track:41HivVqNww7KRZ39tklgu5",
       "spotify:track:41hT6idTUfXX5Dmv32TXpO",
       "spotify:track:43niiTshfUdTN32wHykv7h",
+      "spotify:track:448X4iq0yaKRScWLNxR7gj",
       "spotify:track:449mKDXwGZmsUIhhnmMAsv",
       "spotify:track:44l9jekDLu4l9wxOexskLa",
       "spotify:track:44pVgu4qtIu479fBuJNKyd",
@@ -48866,6 +48881,7 @@
       "USCA29600104",
       "USCA29600652",
       "USCGH1259748",
+      "USCGJ1123686",
       "USCGJ1396460",
       "USCO90336503",
       "USCO91767802",
@@ -50129,7 +50145,8 @@
       "spotify:track:1hS3RXEQbXtWgYpot2Ay07": "USNO12300236",
       "spotify:track:12I6qdz5BIZfH6ei2LS2Jo": "QM6N22655873",
       "spotify:track:21msrMn96q6AqXJKz4QMLF": "GBCEJ1501050",
-      "spotify:track:7HJmJYQqBq2tn7RleFlun5": "USDW10110510"
+      "spotify:track:7HJmJYQqBq2tn7RleFlun5": "USDW10110510",
+      "spotify:track:448X4iq0yaKRScWLNxR7gj": "USCGJ1123686"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -51162,5 +51179,6 @@
   "__match_v35__hurray for the riff raff|||alibi": "spotify:track:1hS3RXEQbXtWgYpot2Ay07",
   "__match_v35__a shoreline dream|||bleed & reject": "spotify:track:12I6qdz5BIZfH6ei2LS2Jo",
   "__match_v35__richard ashcroft|||they don't own me": "spotify:track:21msrMn96q6AqXJKz4QMLF",
-  "__match_v35__jimmy eat world|||the middle acoustic": "spotify:track:7HJmJYQqBq2tn7RleFlun5"
+  "__match_v35__jimmy eat world|||the middle acoustic": "spotify:track:7HJmJYQqBq2tn7RleFlun5",
+  "__match_v35__craig cardiff|||dirty old town": "spotify:track:448X4iq0yaKRScWLNxR7gj"
 }
