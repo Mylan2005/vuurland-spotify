@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793675821.2998936,
+  "__v150_next_spotify_round_at": 1793675952.5026238,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -116,6 +116,7 @@
       "lana del rey|||young & beautiful"
     ],
     "mellow_mix": [
+      "brian eno|||spinning away",
       "eric clapton|||please be with me",
       "sarah mclachlan|||angel live",
       "norah jones|||that's the way that the world goes round w/ richard julian",
@@ -214,8 +215,7 @@
       "fran healy|||sing me to sleep w/ neko case",
       "first aid kit|||stay gold",
       "roo panes|||nightjar and the nightingale",
-      "the wailin' jennys|||beautiful dawn",
-      "caroline spence|||i know you know me w/ matt berninger"
+      "the wailin' jennys|||beautiful dawn"
     ],
     "big_sonic_heaven": [
       "the cure|||like cockatoos",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793675820.8317468,
-    "mellow_mix": 1793675820.8355198,
-    "big_sonic_heaven": 1793675820.8374658,
-    "radio_x_chilled": 1793675820.8404841,
-    "dreampop_radio": 1793675820.8428566,
-    "indie_select": 1793675820.8458405
+    "vuurland": 1793675832.3894749,
+    "mellow_mix": 1793675832.4869733,
+    "big_sonic_heaven": 1793675832.4890997,
+    "radio_x_chilled": 1793675832.4923413,
+    "dreampop_radio": 1793675832.4948664,
+    "indie_select": 1793675832.4979944
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1308,6 +1308,7 @@
       "boygenius|||the parting glass",
       "brett dennen|||ain't no reason",
       "brett dennen|||see the world",
+      "brian eno|||spinning away",
       "bruce cockburn|||creation dream",
       "bruce cockburn|||last night of the world",
       "bruce cockburn|||southland of the heart",
@@ -3367,12 +3368,12 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "black pumas|||more than a love song",
-  "__last_radio_key_mellow_mix": "eric clapton|||please be with me",
+  "__last_radio_key_mellow_mix": "brian eno|||spinning away",
   "__last_radio_key_big_sonic_heaven": "the cure|||like cockatoos",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1459,
-  "__v146_spotify_budget_slot": 1793675701.4148974,
-  "__vuurland_active_playlist_count": 4338,
+  "__v116_fifo_next_sequence": 1460,
+  "__v146_spotify_budget_slot": 1793675832.6272337,
+  "__vuurland_active_playlist_count": 4339,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793673238,
@@ -5777,6 +5778,7 @@
     "jack van cleaf|||zach bryan|||rattlesnake (feat. zach bryan)",
     "jack van cleaf|||áine greene",
     "jackie wilson|||your love keeps lifting me higher & higher",
+    "jackson browne|||for everyman",
     "jacob alon|||fairy in a bottle",
     "jacob david|||now and then",
     "jacob lusk|||when it's cold i'd like to die - moby's remix 7",
@@ -13302,6 +13304,7 @@
     "spotify:track:70YTBH8vOGJNMhy6186yFm",
     "spotify:track:70ZuQywnmOpqcIiEnUA5yV",
     "spotify:track:70evTHsBFgs1AKhC5URcCz",
+    "spotify:track:70f23gQJEKE6kPRGWzOOa0",
     "spotify:track:70jK4YYMql3lJFBUK6l8QT",
     "spotify:track:70jRl5rCNsOJSr8lqtc23y",
     "spotify:track:70pMYbJ7XDBrorkWofxya5",
@@ -17055,6 +17058,7 @@
     "USAR19900244",
     "USAR19900870",
     "USARR1300011",
+    "USAS10100010",
     "USAT10000010",
     "USAT20000088",
     "USAT20001177",
@@ -22307,7 +22311,8 @@
     "spotify:track:2QZMOZaXCN7GQjr3qKWAwA": "USUG12300473",
     "spotify:track:1GesNsTlkObVELwieVdwnu": "CAO371364909",
     "spotify:track:6NSlOEEtWlqvEFrjQsry77": "CAN110501047",
-    "spotify:track:2XbGCUjNjQgJPMO1QbMp5a": "CAN111900369"
+    "spotify:track:2XbGCUjNjQgJPMO1QbMp5a": "CAN111900369",
+    "spotify:track:70f23gQJEKE6kPRGWzOOa0": "USAS10100010"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793675572,
@@ -24990,6 +24995,10 @@
     "garrett kato|||holding on to you": {
       "artist": "Garrett Kato",
       "title": "Holding on to You"
+    },
+    "jackson browne|||for everyman": {
+      "artist": "Jackson Browne",
+      "title": "For Everyman"
     }
   },
   "__v82_confirmed_catalog": {
@@ -28337,6 +28346,11 @@
       "uri": "spotify:track:2XbGCUjNjQgJPMO1QbMp5a",
       "artist": "Garrett Kato",
       "title": "Holding on to You"
+    },
+    "jackson browne|||for everyman": {
+      "uri": "spotify:track:70f23gQJEKE6kPRGWzOOa0",
+      "artist": "Jackson Browne",
+      "title": "For Everyman"
     }
   },
   "__pending_library_likes": {},
@@ -38787,6 +38801,7 @@
       "j j cale|||city girls",
       "jack johnson|||the horizon has been defeated",
       "jackie wilson|||your love keeps lifting me higher & higher",
+      "jackson browne|||for everyman",
       "jahrund|||delirium",
       "james mcmurtry|||walk between the raindrops",
       "james vincent mcmorrow|||stay cool",
@@ -39662,6 +39677,7 @@
       "spotify:track:6wf7Yu7cxBSPrRlWeSeK0Q",
       "spotify:track:6yVIVzLwV2L6Uxc12AOO3K",
       "spotify:track:6zZzBsbPNpTtwlkFSXLwnf",
+      "spotify:track:70f23gQJEKE6kPRGWzOOa0",
       "spotify:track:723ni4TVpWHblfaQQJoMNX",
       "spotify:track:73H3Vjx7PtC6ntVr3F1rRU",
       "spotify:track:74B2wQWuE3dTb4B0OXqqaf",
@@ -40057,6 +40073,7 @@
       "USAR10600414",
       "USAR19900244",
       "USARR1300011",
+      "USAS10100010",
       "USAT10000010",
       "USAT20000088",
       "USAT20001805",
@@ -40822,7 +40839,8 @@
       "spotify:track:2QZMOZaXCN7GQjr3qKWAwA": "USUG12300473",
       "spotify:track:1GesNsTlkObVELwieVdwnu": "CAO371364909",
       "spotify:track:6NSlOEEtWlqvEFrjQsry77": "CAN110501047",
-      "spotify:track:2XbGCUjNjQgJPMO1QbMp5a": "CAN111900369"
+      "spotify:track:2XbGCUjNjQgJPMO1QbMp5a": "CAN111900369",
+      "spotify:track:70f23gQJEKE6kPRGWzOOa0": "USAS10100010"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -41417,5 +41435,6 @@
   "__match_v35__chris stapleton|||higher": "spotify:track:2QZMOZaXCN7GQjr3qKWAwA",
   "__match_v35__the wailin' jennys|||long time traveller": "spotify:track:1GesNsTlkObVELwieVdwnu",
   "__match_v35__the weepies|||world spins madly on": "spotify:track:6NSlOEEtWlqvEFrjQsry77",
-  "__match_v35__garrett kato|||holding on to you": "spotify:track:2XbGCUjNjQgJPMO1QbMp5a"
+  "__match_v35__garrett kato|||holding on to you": "spotify:track:2XbGCUjNjQgJPMO1QbMp5a",
+  "__match_v35__jackson browne|||for everyman": "spotify:track:70f23gQJEKE6kPRGWzOOa0"
 }
