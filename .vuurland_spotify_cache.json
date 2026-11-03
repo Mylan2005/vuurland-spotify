@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "camille camille|||in a song",
+      "faye webster|||after the first kiss",
       "palace|||bleach",
       "syml|||carry no thing",
       "trixie whitley|||salt",
@@ -111,9 +113,7 @@
       "tucker zimmerman feat big thief twain & iji|||burial at sea",
       "junip|||line of fire",
       "balthazar|||blood like wine",
-      "fleet foxes|||your protector",
-      "beirut|||postcards from italy",
-      "maya hawke|||bring home my man"
+      "fleet foxes|||your protector"
     ],
     "mellow_mix": [
       "the moody blues|||tuesday afternoon",
@@ -320,6 +320,7 @@
       "she's green|||paper thin"
     ],
     "radio_x_chilled": [
+      "paul weller|||broken stones",
       "turin brakes|||feeling oblivion",
       "nothing but thieves|||sorry acoustic",
       "massive attack|||teardrop",
@@ -418,8 +419,7 @@
       "the wombats|||let's dance to joy division live acoustic for radio x",
       "arlo parks|||eugene",
       "michael kiwanuka|||cold little heart",
-      "nothing but thieves|||overcome stripped",
-      "lana del rey|||summertime sadness"
+      "nothing but thieves|||overcome stripped"
     ],
     "dreampop_radio": [
       "incan abraham|||springhouse",
@@ -524,6 +524,7 @@
       "the smiths|||unloveable"
     ],
     "indie_select": [
+      "stakka bo|||softroom",
       "tv on the radio|||family tree",
       "james yuill|||on your own",
       "fontaines d c|||starburster",
@@ -622,17 +623,16 @@
       "electric president|||safe and sound",
       "kindest lines|||hazy haze",
       "hyper nova|||with you",
-      "death cab for cutie|||near/far",
-      "hot chip|||flutes"
+      "death cab for cutie|||near/far"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793719818.6217833,
-    "mellow_mix": 1793719818.6251712,
-    "big_sonic_heaven": 1793719818.6279283,
-    "radio_x_chilled": 1793719818.6310058,
-    "dreampop_radio": 1793719818.6338508,
-    "indie_select": 1793719818.6366208
+    "vuurland": 1793719887.8466823,
+    "mellow_mix": 1793719887.8499913,
+    "big_sonic_heaven": 1793719887.8527563,
+    "radio_x_chilled": 1793719887.8558187,
+    "dreampop_radio": 1793719887.8586547,
+    "indie_select": 1793719888.0253346
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3829,6 +3829,7 @@
       "spear of destiny|||never take me alive",
       "spoon|||hot thoughts",
       "spoon|||sugar babies",
+      "stakka bo|||softroom",
       "stars benjamin gibbard|||snowy owl benjamin gibbard remix",
       "stars|||a thread cut with a carving knife",
       "stars|||elevator love letter",
@@ -4171,11 +4172,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "palace|||bleach",
+  "__last_radio_key_vuurland": "camille camille|||in a song",
   "__last_radio_key_mellow_mix": "the moody blues|||tuesday afternoon",
   "__last_radio_key_big_sonic_heaven": "mint julep|||next life",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2143,
+  "__v116_fifo_next_sequence": 2144,
   "__v146_spotify_budget_slot": 1793719818.9383857,
   "__vuurland_active_playlist_count": 4622,
   "__vuurland_active_volume": 1,
@@ -47264,7 +47265,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "turin brakes|||feeling oblivion",
+  "__last_radio_key_radio_x_chilled": "paul weller|||broken stones",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -47487,7 +47488,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "tv on the radio|||family tree",
+  "__last_radio_key_indie_select": "stakka bo|||softroom",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
