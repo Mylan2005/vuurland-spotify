@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793700489.2846608,
+  "__v150_next_spotify_round_at": 1793700612.5987444,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -84,6 +84,7 @@
       "leon russell|||sweet emily"
     ],
     "big_sonic_heaven": [
+      "big thief|||incomprehensible",
       "encarta 98|||destello",
       "bragolin|||tar with salt foam",
       "joy division|||twenty four hours",
@@ -144,6 +145,7 @@
       "foo fighters|||next year"
     ],
     "dreampop_radio": [
+      "sea air|||should i care",
       "amber arcades|||fading lines",
       "maria taylor|||if only",
       "cass mccombs|||medusa's outhouse",
@@ -205,12 +207,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793700479.1338112,
-    "mellow_mix": 1793700479.1344848,
-    "big_sonic_heaven": 1793700479.134986,
-    "radio_x_chilled": 1793700479.135487,
-    "dreampop_radio": 1793700479.1359527,
-    "indie_select": 1793700479.1364
+    "vuurland": 1793700492.4221802,
+    "mellow_mix": 1793700492.422886,
+    "big_sonic_heaven": 1793700492.4233894,
+    "radio_x_chilled": 1793700492.4239166,
+    "dreampop_radio": 1793700492.5889874,
+    "indie_select": 1793700492.5894594
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1713,6 +1715,7 @@
       "beach house|||devil's pool",
       "bel canto|||prince of insecuria",
       "beth gibbons & war child records|||sunday morning",
+      "big thief|||incomprehensible",
       "bjork|||new world",
       "bjork|||pagan poetry",
       "blankenberge|||disappear",
@@ -2750,6 +2753,7 @@
       "sara watkins|||take up your spade",
       "say lou lou|||better in the dark",
       "scott matthews|||place to be",
+      "sea air|||should i care",
       "sea wolf|||old friend",
       "sea wolf|||you're a wolf",
       "seabear|||libraries",
@@ -3364,11 +3368,11 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "edmund november|||cold street light",
   "__last_radio_key_mellow_mix": "sophie zelmani|||so long",
-  "__last_radio_key_big_sonic_heaven": "encarta 98|||destello",
+  "__last_radio_key_big_sonic_heaven": "big thief|||incomprehensible",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 1837,
-  "__v146_spotify_budget_slot": 1793700369.5470335,
-  "__vuurland_active_playlist_count": 4504,
+  "__v116_fifo_next_sequence": 1838,
+  "__v146_spotify_budget_slot": 1793700492.8520024,
+  "__vuurland_active_playlist_count": 4505,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793699137,
@@ -7483,6 +7487,7 @@
     "palace|||ohio",
     "palace|||son",
     "palace|||when everything was lost",
+    "pale grey|||lucie",
     "pale saints|||a thousand stars burst open",
     "pale saints|||a thousand stars burst open - 2023 remaster",
     "pale saints|||fine friend",
@@ -12643,6 +12648,7 @@
     "spotify:track:5H5fiZ0h9ndRn1IDqYyKRw",
     "spotify:track:5H6Jp0syB5yEPk7SWYdlmk",
     "spotify:track:5HEZhnkQji5flKrjCnUnZM",
+    "spotify:track:5HVpoNaZx9teIEKPlG0bhw",
     "spotify:track:5HWmxKCAAD7DIHvv7Z24KP",
     "spotify:track:5HXLLBAf7cwiN6ycus4Azo",
     "spotify:track:5HaTv6nHDSVO1LqjwoP7RA",
@@ -14208,6 +14214,7 @@
     "BE2JF2000038",
     "BE2JF2000049",
     "BE4LM2200001",
+    "BE5HY2600014",
     "BE5IT2600002",
     "BE5JW2000007",
     "BE6F58900490",
@@ -22975,10 +22982,11 @@
     "spotify:track:2A2oeTeh4Xntp97S5PkS8e": "QT9XH2672276",
     "spotify:track:4xiyq1iRdsxuU1BPUJ490Z": "GBALB8500007",
     "spotify:track:3dZa4cqfnAOm154H601RbY": "USWH18401010",
-    "spotify:track:3Zux11namsFgz7LIGeNuLU": "AULI02247500"
+    "spotify:track:3Zux11namsFgz7LIGeNuLU": "AULI02247500",
+    "spotify:track:5HVpoNaZx9teIEKPlG0bhw": "BE5HY2600014"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793699878,
+  "__v184_head_checked_at": 1793700493,
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793559322,
   "__match_v35__keren ann|||jardin d'hiver": "spotify:track:45gpJxviKRBsQo1lDZ03Xf",
@@ -26318,6 +26326,10 @@
     "merci mercy|||into you": {
       "artist": "merci, mercy",
       "title": "Into You"
+    },
+    "pale grey|||lucie": {
+      "artist": "Pale Grey",
+      "title": "Lucie"
     }
   },
   "__v82_confirmed_catalog": {
@@ -30490,6 +30502,11 @@
       "uri": "spotify:track:3Zux11namsFgz7LIGeNuLU",
       "artist": "merci, mercy",
       "title": "Into You"
+    },
+    "pale grey|||lucie": {
+      "uri": "spotify:track:5HVpoNaZx9teIEKPlG0bhw",
+      "artist": "Pale Grey",
+      "title": "Lucie"
     }
   },
   "__pending_library_likes": {},
@@ -41205,6 +41222,7 @@
       "otom|||you lost me",
       "our native daughters|||i knew i could fly",
       "over the rhine|||trouble",
+      "pale grey|||lucie",
       "pale saints|||half-life remembered",
       "pale saints|||throwing back the apple",
       "patty griffin|||heavenly day",
@@ -41980,6 +41998,7 @@
       "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
       "spotify:track:5GfRnNZuyHJ2SqitaU3MrC",
       "spotify:track:5H6Jp0syB5yEPk7SWYdlmk",
+      "spotify:track:5HVpoNaZx9teIEKPlG0bhw",
       "spotify:track:5HeMe8KVeC4jdcLlUwU5PD",
       "spotify:track:5I6gBia5fPMCqy3ry4WJ4l",
       "spotify:track:5Io8lC51Ox5Wv9jwPdlcjT",
@@ -42221,6 +42240,7 @@
       "AUWB01500002",
       "BE2IO2400001",
       "BE4LM2200001",
+      "BE5HY2600014",
       "BE7HE2300001",
       "BE9GL2400001",
       "BE9JT2000001",
@@ -43649,7 +43669,8 @@
       "spotify:track:2A2oeTeh4Xntp97S5PkS8e": "QT9XH2672276",
       "spotify:track:4xiyq1iRdsxuU1BPUJ490Z": "GBALB8500007",
       "spotify:track:3dZa4cqfnAOm154H601RbY": "USWH18401010",
-      "spotify:track:3Zux11namsFgz7LIGeNuLU": "AULI02247500"
+      "spotify:track:3Zux11namsFgz7LIGeNuLU": "AULI02247500",
+      "spotify:track:5HVpoNaZx9teIEKPlG0bhw": "BE5HY2600014"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -44024,7 +44045,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "amber arcades|||fading lines",
+  "__last_radio_key_dreampop_radio": "sea air|||should i care",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -44416,5 +44437,6 @@
   "__match_v35__prepare my glider|||change": "spotify:track:2A2oeTeh4Xntp97S5PkS8e",
   "__match_v35__the cure|||close to me": "spotify:track:4xiyq1iRdsxuU1BPUJ490Z",
   "__match_v35__michael hedges|||aerial boundaries": "spotify:track:3dZa4cqfnAOm154H601RbY",
-  "__match_v35__merci mercy|||into you": "spotify:track:3Zux11namsFgz7LIGeNuLU"
+  "__match_v35__merci mercy|||into you": "spotify:track:3Zux11namsFgz7LIGeNuLU",
+  "__match_v35__pale grey|||lucie": "spotify:track:5HVpoNaZx9teIEKPlG0bhw"
 }
