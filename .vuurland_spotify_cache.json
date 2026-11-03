@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793742904.302544,
+  "__v150_next_spotify_round_at": 1793743030.5756898,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793742894.9430807,
-    "mellow_mix": 1793742894.947376,
-    "big_sonic_heaven": 1793742894.950607,
-    "radio_x_chilled": 1793742894.9541798,
-    "dreampop_radio": 1793742894.9574504,
-    "indie_select": 1793742894.9608107
+    "vuurland": 1793742910.547007,
+    "mellow_mix": 1793742910.5515032,
+    "big_sonic_heaven": 1793742910.5548882,
+    "radio_x_chilled": 1793742910.5586011,
+    "dreampop_radio": 1793742910.5619826,
+    "indie_select": 1793742910.5654192
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4344,12 +4344,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "longingsky|||stay feat tyscha wagemans": {
-      "artist": "LongingSky",
-      "title": "Stay (feat. Tyscha Wagemans)",
-      "source": "big_sonic_heaven",
-      "failed_at": 1793656507
-    },
     "roberta flack|||the first time ever i saw your": {
       "artist": "Roberta Flack",
       "title": "The First Time Ever I Saw Your",
@@ -4509,9 +4503,9 @@
   "__last_radio_key_mellow_mix": "neko case|||wild creatures",
   "__last_radio_key_big_sonic_heaven": "delerium|||into the light with diamanda galas",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2465,
-  "__v146_spotify_budget_slot": 1793742784.5663736,
-  "__vuurland_active_playlist_count": 4723,
+  "__v116_fifo_next_sequence": 2466,
+  "__v146_spotify_budget_slot": 1793742910.9316456,
+  "__vuurland_active_playlist_count": 4724,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793741571,
@@ -7328,6 +7322,7 @@
     "joy division|||heart and soul - 2007 remaster",
     "joy division|||twenty four hours - 2020 digital master",
     "joy oladokun|||changes",
+    "joyful forfeit|||here or anywhere",
     "julee cruise|||falling",
     "julee cruise|||floating",
     "julee cruise|||rockin' back inside my heart",
@@ -13873,6 +13868,7 @@
     "spotify:track:4mfIg901UwYBXtRTMTuZmz",
     "spotify:track:4mtCqH9YsVeYiIHzRSjXAZ",
     "spotify:track:4mtRuEDlwvtnsge8Owi22c",
+    "spotify:track:4n12UmLhVLoJGmqoyDXKT0",
     "spotify:track:4n3sg0OnRfVZxkWefPMfVF",
     "spotify:track:4n891jBZgtsfEHzdzX9zLW",
     "spotify:track:4nBWCJLx6CjopFUyuLJkvf",
@@ -18501,6 +18497,7 @@
     "QZHN92593387",
     "QZHNA2345359",
     "QZHNA2458521",
+    "QZHNA2593180",
     "QZHNB2232625",
     "QZHNB2498888",
     "QZHZ51977234",
@@ -24967,10 +24964,11 @@
     "spotify:track:3WBapTZ46XatGmeRwoZj3C": "USBCJ0681006",
     "spotify:track:7dIh8FF0EzYKS8STv3v4F4": "USRW39900007",
     "spotify:track:4fOdHTwDnY9jmgrQUvcr7a": "AUCI11109101",
-    "spotify:track:7iQmjnDXYngWGsbjVnDc1U": "USCGJ1396460"
+    "spotify:track:7iQmjnDXYngWGsbjVnDc1U": "USCGJ1396460",
+    "spotify:track:4n12UmLhVLoJGmqoyDXKT0": "QZHNA2593180"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793742257,
+  "__v184_head_checked_at": 1793742911,
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793559322,
   "__match_v35__keren ann|||jardin d'hiver": "spotify:track:45gpJxviKRBsQo1lDZ03Xf",
@@ -29162,6 +29160,10 @@
     "gregory alan isakov|||amsterdam": {
       "artist": "Gregory Alan Isakov",
       "title": "Amsterdam"
+    },
+    "joyful forfeit|||here or anywhere": {
+      "artist": "Joyful Forfeit",
+      "title": "Here Or Anywhere"
     }
   },
   "__v82_confirmed_catalog": {
@@ -34399,6 +34401,11 @@
       "uri": "spotify:track:7iQmjnDXYngWGsbjVnDc1U",
       "artist": "Gregory Alan Isakov",
       "title": "Amsterdam"
+    },
+    "joyful forfeit|||here or anywhere": {
+      "uri": "spotify:track:4n12UmLhVLoJGmqoyDXKT0",
+      "artist": "Joyful Forfeit",
+      "title": "Here Or Anywhere"
     }
   },
   "__pending_library_likes": {},
@@ -46120,6 +46127,7 @@
       "joy crookes feat kano|||mathematics",
       "joy crookes|||mathematics",
       "joy oladokun|||changes",
+      "joyful forfeit|||here or anywhere",
       "julia jacklin|||someday triple j like a version",
       "junip|||always",
       "junius meyvant|||carry on with me",
@@ -47265,6 +47273,7 @@
       "spotify:track:4lIYjf9rjhRYduh8BKGWyZ",
       "spotify:track:4mGlpATRkO70i5yWH3Nue1",
       "spotify:track:4mtRuEDlwvtnsge8Owi22c",
+      "spotify:track:4n12UmLhVLoJGmqoyDXKT0",
       "spotify:track:4nBWCJLx6CjopFUyuLJkvf",
       "spotify:track:4noT8N0XtDBA5ri5dt9hRu",
       "spotify:track:4oYfMQ6NDGHq0GcbICqsDw",
@@ -48093,6 +48102,7 @@
       "QZDA72388140",
       "QZES61904098",
       "QZFYY2413942",
+      "QZHNA2593180",
       "QZK6K2078974",
       "QZMEM2184709",
       "QZNWS2523852",
@@ -49471,7 +49481,8 @@
       "spotify:track:3WBapTZ46XatGmeRwoZj3C": "USBCJ0681006",
       "spotify:track:7dIh8FF0EzYKS8STv3v4F4": "USRW39900007",
       "spotify:track:4fOdHTwDnY9jmgrQUvcr7a": "AUCI11109101",
-      "spotify:track:7iQmjnDXYngWGsbjVnDc1U": "USCGJ1396460"
+      "spotify:track:7iQmjnDXYngWGsbjVnDc1U": "USCGJ1396460",
+      "spotify:track:4n12UmLhVLoJGmqoyDXKT0": "QZHNA2593180"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -50469,5 +50480,6 @@
   "__match_v35__home video|||gas tank": "spotify:track:3WBapTZ46XatGmeRwoZj3C",
   "__match_v35__foo fighters|||aurora": "spotify:track:7dIh8FF0EzYKS8STv3v4F4",
   "__match_v35__the twerps|||dreamin": "spotify:track:4fOdHTwDnY9jmgrQUvcr7a",
-  "__match_v35__gregory alan isakov|||amsterdam": "spotify:track:7iQmjnDXYngWGsbjVnDc1U"
+  "__match_v35__gregory alan isakov|||amsterdam": "spotify:track:7iQmjnDXYngWGsbjVnDc1U",
+  "__match_v35__joyful forfeit|||here or anywhere": "spotify:track:4n12UmLhVLoJGmqoyDXKT0"
 }
