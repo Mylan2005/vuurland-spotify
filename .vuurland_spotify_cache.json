@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793724771.7901871,
+  "__v150_next_spotify_round_at": 1793724895.476029,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "suki waterhouse|||back in love",
       "kurt vile|||zoom 97",
       "bear's den|||auld wives",
       "arlo parks|||black dog",
@@ -112,8 +113,7 @@
       "the haunted youth|||wake up",
       "local natives|||dark days",
       "the shins|||simple song",
-      "ben howard|||old pine",
-      "elis floreen|||panther"
+      "ben howard|||old pine"
     ],
     "mellow_mix": [
       "patty griffin|||mother of god",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793724762.2595243,
-    "mellow_mix": 1793724762.4418766,
-    "big_sonic_heaven": 1793724762.44498,
-    "radio_x_chilled": 1793724762.4483209,
-    "dreampop_radio": 1793724762.4513762,
-    "indie_select": 1793724762.4545195
+    "vuurland": 1793724775.4483538,
+    "mellow_mix": 1793724775.4520588,
+    "big_sonic_heaven": 1793724775.4551425,
+    "radio_x_chilled": 1793724775.4585738,
+    "dreampop_radio": 1793724775.461657,
+    "indie_select": 1793724775.4648716
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1205,6 +1205,7 @@
       "sufjan stevens|||so you are tired",
       "sufjan stevens|||sugar",
       "sufjan stevens|||to be alone with you",
+      "suki waterhouse|||back in love",
       "suki waterhouse|||dream woman",
       "suki waterhouse|||good looking",
       "suki waterhouse|||my fun",
@@ -4257,13 +4258,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "kurt vile|||zoom 97",
+  "__last_radio_key_vuurland": "suki waterhouse|||back in love",
   "__last_radio_key_mellow_mix": "patty griffin|||mother of god",
   "__last_radio_key_big_sonic_heaven": "ride|||vapour trail",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2205,
-  "__v146_spotify_budget_slot": 1793724652.0874293,
-  "__vuurland_active_playlist_count": 4658,
+  "__v116_fifo_next_sequence": 2206,
+  "__v146_spotify_budget_slot": 1793724775.7761967,
+  "__vuurland_active_playlist_count": 4659,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793721177,
@@ -4449,6 +4450,7 @@
     "allah-las|||catamaran",
     "allah-las|||polar onion",
     "allah-las|||raspberry jam",
+    "allison russell|||nightflyer",
     "alt-j|||breezeblocks",
     "alt-j|||dissolve me",
     "alt-j|||get better",
@@ -14319,6 +14321,7 @@
     "spotify:track:6BnY5XawSsp3dpjQ3FtqjT",
     "spotify:track:6BntW4hQkc6Ukh7Q4MAVjh",
     "spotify:track:6BuZx0fRbkrFrHAz8rjSfS",
+    "spotify:track:6BxDMOnim3Ut7nQaOj01DJ",
     "spotify:track:6C0pdA6oQnB32opzNCR4iR",
     "spotify:track:6C3BSaNqyPzzbxjluqjnin",
     "spotify:track:6C4uHRNk3Oe2VyJjKHzUNU",
@@ -18920,6 +18923,7 @@
     "USC4R2007365",
     "USC4R2007366",
     "USC4R2007808",
+    "USC4R2007971",
     "USC4R2105271",
     "USC4R2107144",
     "USC4R2107148",
@@ -24458,7 +24462,8 @@
     "spotify:track:0Yw8XI8wOfLa5rTJdX7wVK": "USAM16900387",
     "spotify:track:2Vfq2pdTFh5qM8XDJ1kiiG": "USEZ62426403",
     "spotify:track:6TJTzEVtYciiZzPoywIQ3G": "GBVHB2100010",
-    "spotify:track:3D51exFWVFjtQUSkwu12Zg": "USSUB1291004"
+    "spotify:track:3D51exFWVFjtQUSkwu12Zg": "USSUB1291004",
+    "spotify:track:6BxDMOnim3Ut7nQaOj01DJ": "USC4R2007971"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793724283,
@@ -28393,6 +28398,10 @@
     "the helio sequence|||the measure": {
       "artist": "The Helio Sequence",
       "title": "The Measure"
+    },
+    "allison russell|||nightflyer": {
+      "artist": "Allison Russell",
+      "title": "Nightflyer"
     }
   },
   "__v82_confirmed_catalog": {
@@ -33305,6 +33314,11 @@
       "uri": "spotify:track:3D51exFWVFjtQUSkwu12Zg",
       "artist": "The Helio Sequence",
       "title": "The Measure"
+    },
+    "allison russell|||nightflyer": {
+      "uri": "spotify:track:6BxDMOnim3Ut7nQaOj01DJ",
+      "artist": "Allison Russell",
+      "title": "Nightflyer"
     }
   },
   "__pending_library_likes": {},
@@ -44631,6 +44645,7 @@
       "aldous harding feat h hawkline|||venus in the zinnia",
       "aldous harding|||venus in the zinnia",
       "alex g|||afterlife",
+      "allison russell|||nightflyer",
       "alysha brilla|||centre",
       "ane brun|||make you feel my love",
       "angelique kidjo|||salala w/ peter gabriel",
@@ -46210,6 +46225,7 @@
       "spotify:track:69MyxFlOm2ennzuE2FqeM1",
       "spotify:track:6AAg8xwJkN4EWVUkd6zSBI",
       "spotify:track:6At2I2Dkw4674fN3j9lk2H",
+      "spotify:track:6BxDMOnim3Ut7nQaOj01DJ",
       "spotify:track:6C3BSaNqyPzzbxjluqjnin",
       "spotify:track:6C7S3LAPokFppY2ttt6VSi",
       "spotify:track:6Cume4afdQJnWFFpVPRds1",
@@ -46966,6 +46982,7 @@
       "USC4R0817634",
       "USC4R1402480",
       "USC4R1605373",
+      "USC4R2007971",
       "USC4R2556041",
       "USC4R2668103",
       "USC4R2668108",
@@ -48116,7 +48133,8 @@
       "spotify:track:0Yw8XI8wOfLa5rTJdX7wVK": "USAM16900387",
       "spotify:track:2Vfq2pdTFh5qM8XDJ1kiiG": "USEZ62426403",
       "spotify:track:6TJTzEVtYciiZzPoywIQ3G": "GBVHB2100010",
-      "spotify:track:3D51exFWVFjtQUSkwu12Zg": "USSUB1291004"
+      "spotify:track:3D51exFWVFjtQUSkwu12Zg": "USSUB1291004",
+      "spotify:track:6BxDMOnim3Ut7nQaOj01DJ": "USC4R2007971"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -49047,5 +49065,6 @@
   "__match_v35__joe cocker|||darling be home soon": "spotify:track:0Yw8XI8wOfLa5rTJdX7wVK",
   "__match_v35__peel dream magazine|||oblast": "spotify:track:2Vfq2pdTFh5qM8XDJ1kiiG",
   "__match_v35__tom rosenthal|||little joys": "spotify:track:6TJTzEVtYciiZzPoywIQ3G",
-  "__match_v35__the helio sequence|||the measure": "spotify:track:3D51exFWVFjtQUSkwu12Zg"
+  "__match_v35__the helio sequence|||the measure": "spotify:track:3D51exFWVFjtQUSkwu12Zg",
+  "__match_v35__allison russell|||nightflyer": "spotify:track:6BxDMOnim3Ut7nQaOj01DJ"
 }
