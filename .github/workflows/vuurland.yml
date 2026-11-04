@@ -2,8 +2,8 @@ name: Vuurland Spotify Sync
 
 on:
   workflow_dispatch:
-
-# NOODSTOP 2026-11-04: geen automatische planning; ook handmatige starts voeren niets uit.
+  schedule:
+    - cron: "17 */6 * * *"
 
 permissions:
   contents: write
@@ -15,7 +15,6 @@ concurrency:
 
 jobs:
   sync:
-    if: ${{ false }}  # Pauze tot gebruiker nieuwe opzet heeft gekozen.
     runs-on: ubuntu-24.04
     timeout-minutes: 355
 
