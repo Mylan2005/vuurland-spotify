@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "deus|||eternal woman",
       "portland|||champain",
       "wet leg|||obvious",
       "mac demarco|||blue boy",
@@ -112,10 +113,10 @@
       "tom misch & loyle carner|||colourblind",
       "paolo nutini|||let me down easy",
       "mooneye|||black river",
-      "justin vernon|||hazelton",
-      "absynthe minded|||envoi"
+      "justin vernon|||hazelton"
     ],
     "mellow_mix": [
+      "tom sanderson|||asranda",
       "neil young|||dont let it bring you down",
       "greg brown|||dream cafe",
       "neil halstead|||seasons",
@@ -214,8 +215,7 @@
       "gary jules|||mad world",
       "iron & wine and calexico|||dark eyes",
       "chris stapleton|||the fire",
-      "the ocean blue|||cerulean",
-      "field report|||home leave the lights on"
+      "the ocean blue|||cerulean"
     ],
     "big_sonic_heaven": [
       "sugarcubes|||sick for toys",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793805261.1263077,
-    "mellow_mix": 1793805261.1298206,
-    "big_sonic_heaven": 1793805261.1327436,
-    "radio_x_chilled": 1793805261.1359131,
-    "dreampop_radio": 1793805261.138637,
-    "indie_select": 1793805261.1416016
+    "vuurland": 1793805332.768498,
+    "mellow_mix": 1793805332.7721956,
+    "big_sonic_heaven": 1793805332.7751276,
+    "radio_x_chilled": 1793805332.778333,
+    "dreampop_radio": 1793805332.7810786,
+    "indie_select": 1793805332.7840827
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -854,6 +854,7 @@
       "dermot kennedy|||turnstile",
       "deus|||1989",
       "deus|||7 days 7 weeks",
+      "deus|||eternal woman",
       "deus|||keep you close",
       "deus|||nothing really ends",
       "deus|||smokers reflect",
@@ -5345,11 +5346,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "portland|||champain",
-  "__last_radio_key_mellow_mix": "neil young|||dont let it bring you down",
+  "__last_radio_key_vuurland": "deus|||eternal woman",
+  "__last_radio_key_mellow_mix": "tom sanderson|||asranda",
   "__last_radio_key_big_sonic_heaven": "sugarcubes|||sick for toys",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3182,
+  "__v116_fifo_next_sequence": 3183,
   "__v146_spotify_budget_slot": 1793805261.569405,
   "__vuurland_active_playlist_count": 5134,
   "__vuurland_active_volume": 1,
