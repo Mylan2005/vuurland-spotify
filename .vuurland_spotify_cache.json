@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793786919.1950228,
+  "__v150_next_spotify_round_at": 1793787046.035474,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -299,12 +299,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793786909.724148,
-    "mellow_mix": 1793786909.7251072,
-    "big_sonic_heaven": 1793786909.725782,
-    "radio_x_chilled": 1793786909.7264996,
-    "dreampop_radio": 1793786909.727202,
-    "indie_select": 1793786909.9008863
+    "vuurland": 1793786926.0179293,
+    "mellow_mix": 1793786926.0189261,
+    "big_sonic_heaven": 1793786926.019621,
+    "radio_x_chilled": 1793786926.0203538,
+    "dreampop_radio": 1793786926.0210683,
+    "indie_select": 1793786926.0218446
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4812,7 +4812,7 @@
   "__last_radio_key_big_sonic_heaven": "the giraffe told me in my dream|||before",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2979,
-  "__v146_spotify_budget_slot": 1793786799.5365396,
+  "__v146_spotify_budget_slot": 1793786926.386954,
   "__vuurland_active_playlist_count": 5032,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -31963,6 +31963,10 @@
     "portishead|||it's a fire": {
       "artist": "Portishead",
       "title": "It's A Fire"
+    },
+    "tokyo shoegazer|||new dawn": {
+      "artist": "東京酒吐座(Tokyo Shoegazer)",
+      "title": "New Dawn"
     }
   },
   "__v82_confirmed_catalog": {
@@ -38755,6 +38759,11 @@
       "uri": "spotify:track:6JHGaBhtCbfEtOh5ea7fLI",
       "artist": "Portishead",
       "title": "It's A Fire"
+    },
+    "tokyo shoegazer|||new dawn": {
+      "uri": "spotify:track:0F8wEa2sHgpUBZtyX2q2FO",
+      "artist": "東京酒吐座(Tokyo Shoegazer)",
+      "title": "New Dawn"
     }
   },
   "__pending_library_likes": {},
@@ -56430,5 +56439,6 @@
   "__match_v35__foo fighters|||home": "spotify:track:2fDVMNQmFuMORDD3dP7GkN",
   "__match_v35__iskander moon|||ghosts": "spotify:track:56HSYkyFlm3RoUNUKcIF1T",
   "__match_v35__the stone roses|||this is the one": "spotify:track:4eWBpAvWBGBvEwW7RRO1FR",
-  "__match_v35__portishead|||it's a fire": "spotify:track:6JHGaBhtCbfEtOh5ea7fLI"
+  "__match_v35__portishead|||it's a fire": "spotify:track:6JHGaBhtCbfEtOh5ea7fLI",
+  "__match_v35__tokyo shoegazer|||new dawn": "spotify:track:0F8wEa2sHgpUBZtyX2q2FO"
 }
