@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793820764.721472,
+  "__v150_next_spotify_round_at": 1793820885.489077,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -218,6 +218,7 @@
       "ludovico einaudi|||experience"
     ],
     "big_sonic_heaven": [
+      "she's green|||bleed",
       "the jesus & mary chain|||darklands",
       "puppy teeth|||melatonin",
       "babehoven|||get better",
@@ -316,8 +317,7 @@
       "plastic milk|||sticky halo",
       "unkle feat ian brown|||be there",
       "blankenberge|||now you know",
-      "glimmer|||someday sunshine",
-      "seasurfer|||echo"
+      "glimmer|||someday sunshine"
     ],
     "radio_x_chilled": [
       "zero 7|||destiny",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793820753.812986,
-    "mellow_mix": 1793820753.8180933,
-    "big_sonic_heaven": 1793820753.8224053,
-    "radio_x_chilled": 1793820753.827044,
-    "dreampop_radio": 1793820753.8310506,
-    "indie_select": 1793820753.8353586
+    "vuurland": 1793820765.4530048,
+    "mellow_mix": 1793820765.4576004,
+    "big_sonic_heaven": 1793820765.4613843,
+    "radio_x_chilled": 1793820765.4654658,
+    "dreampop_radio": 1793820765.4689336,
+    "indie_select": 1793820765.4727278
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3301,6 +3301,7 @@
       "secret shine|||drift away",
       "sgo|||dismiss everything sweet nauseas",
       "she shone|||slivered kisses feat danella hocevar",
+      "she's green|||bleed",
       "she's green|||dear ivy",
       "she's green|||empty house",
       "she's green|||lakes",
@@ -5573,11 +5574,11 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "greentea peng|||look to him",
   "__last_radio_key_mellow_mix": "son volt|||tear stained eye",
-  "__last_radio_key_big_sonic_heaven": "the jesus & mary chain|||darklands",
+  "__last_radio_key_big_sonic_heaven": "she's green|||bleed",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3343,
-  "__v146_spotify_budget_slot": 1793820645.2082043,
-  "__vuurland_active_playlist_count": 5222,
+  "__v146_spotify_budget_slot": 1793820765.9127944,
+  "__vuurland_active_playlist_count": 5223,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793819068,
@@ -5894,6 +5895,7 @@
     "angus & julia stone|||the start",
     "angus & julia stone|||yellow brick road",
     "anibal kerpel|||apertura",
+    "anna calvi|||don't beat the girl out of my boy live for radio x",
     "anna leone|||all that i ever did",
     "anna leone|||remember",
     "anna maehl|||carolyn",
@@ -13681,6 +13683,7 @@
     "spotify:track:1e0dFIlrgHaD5a2ud2AXEQ",
     "spotify:track:1eN42Q7IWRzRBq8eW2Y2TE",
     "spotify:track:1eOMqCzmXUG3lORc3PzPqo",
+    "spotify:track:1eQN2B11BU0sIqBGAGnwsH",
     "spotify:track:1eRyJZwEo3ewJq4hDzFhXO",
     "spotify:track:1eT2CjXwFXNx6oY5ydvzKU",
     "spotify:track:1eTGxIbMRzDaoijqsTbwEg",
@@ -19570,6 +19573,7 @@
     "GBCEL1600455",
     "GBCEL1600492",
     "GBCEL1700519",
+    "GBCEL1800051",
     "GBCEL1800113",
     "GBCEL1800202",
     "GBCEL1800215",
@@ -28055,7 +28059,8 @@
     "spotify:track:19DGoJIuutY9D9esT3ifOx": "USATO0800039",
     "spotify:track:6wcTKJxrKWKpsfqwwl0VQf": "GB5KW1401174",
     "spotify:track:1PhG8YjgpijG9Jt0V4UpMd": "GBUM72600408",
-    "spotify:track:5YMTKk4qv5zkwIQQNCMhCW": "USJ3D1100014"
+    "spotify:track:5YMTKk4qv5zkwIQQNCMhCW": "USJ3D1100014",
+    "spotify:track:1eQN2B11BU0sIqBGAGnwsH": "GBCEL1800051"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793820524,
@@ -34274,6 +34279,10 @@
     "kindest lines|||hazy haze": {
       "artist": "Kindest Lines",
       "title": "Hazy Haze"
+    },
+    "anna calvi|||don't beat the girl out of my boy live for radio x": {
+      "artist": "Anna Calvi",
+      "title": "Don’t Beat the Girl out of My Boy"
     }
   },
   "__v82_confirmed_catalog": {
@@ -42041,6 +42050,11 @@
       "uri": "spotify:track:5YMTKk4qv5zkwIQQNCMhCW",
       "artist": "Kindest Lines",
       "title": "Hazy Haze"
+    },
+    "anna calvi|||don't beat the girl out of my boy live for radio x": {
+      "uri": "spotify:track:1eQN2B11BU0sIqBGAGnwsH",
+      "artist": "Anna Calvi",
+      "title": "Don’t Beat the Girl out of My Boy"
     }
   },
   "__pending_library_likes": {},
@@ -53938,6 +53952,7 @@
       "alysha brilla|||centre",
       "ane brun|||make you feel my love",
       "angelique kidjo|||salala w/ peter gabriel",
+      "anna calvi|||don't beat the girl out of my boy live for radio x",
       "anna ternheim|||lovers dream",
       "anna ternheim|||solitary move",
       "annie lennox|||waiting in vain",
@@ -55697,6 +55712,7 @@
       "spotify:track:1dZxI6OuzwJ283y3gOU1Kq",
       "spotify:track:1dxqk42KIlMyrSawZ5YjBE",
       "spotify:track:1eN42Q7IWRzRBq8eW2Y2TE",
+      "spotify:track:1eQN2B11BU0sIqBGAGnwsH",
       "spotify:track:1eT2CjXwFXNx6oY5ydvzKU",
       "spotify:track:1f94GhohgeVq9SNwyFI691",
       "spotify:track:1fHodIvqzNeO7ccrhreMDj",
@@ -57310,6 +57326,7 @@
       "GBCEL1200601",
       "GBCEL1300362",
       "GBCEL1400004",
+      "GBCEL1800051",
       "GBCEL1800113",
       "GBCEL2100652",
       "GBCEL2400503",
@@ -59686,7 +59703,8 @@
       "spotify:track:19DGoJIuutY9D9esT3ifOx": "USATO0800039",
       "spotify:track:6wcTKJxrKWKpsfqwwl0VQf": "GB5KW1401174",
       "spotify:track:1PhG8YjgpijG9Jt0V4UpMd": "GBUM72600408",
-      "spotify:track:5YMTKk4qv5zkwIQQNCMhCW": "USJ3D1100014"
+      "spotify:track:5YMTKk4qv5zkwIQQNCMhCW": "USJ3D1100014",
+      "spotify:track:1eQN2B11BU0sIqBGAGnwsH": "GBCEL1800051"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -61218,5 +61236,6 @@
   "__not_found_v35__акульи слезы shark's tears|||дождь | rain": 1793820038,
   "__match_v35__jonathan jeremiah|||wild fire": "spotify:track:6wcTKJxrKWKpsfqwwl0VQf",
   "__match_v35__the beatles|||michelle": "spotify:track:1PhG8YjgpijG9Jt0V4UpMd",
-  "__match_v35__kindest lines|||hazy haze": "spotify:track:5YMTKk4qv5zkwIQQNCMhCW"
+  "__match_v35__kindest lines|||hazy haze": "spotify:track:5YMTKk4qv5zkwIQQNCMhCW",
+  "__match_v35__anna calvi|||don't beat the girl out of my boy live for radio x": "spotify:track:1eQN2B11BU0sIqBGAGnwsH"
 }
