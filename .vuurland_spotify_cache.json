@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793794271.9610007,
+  "__v150_next_spotify_round_at": 1793794395.9431996,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -98,6 +98,7 @@
       "london grammar|||wasting my young years"
     ],
     "mellow_mix": [
+      "equation|||hard underground",
       "allison russell|||nightflyer",
       "stevie ray vaughan and double trouble|||life by the drop",
       "chrissie hynde|||i shall be released",
@@ -473,12 +474,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793794262.5156531,
-    "mellow_mix": 1793794262.5172818,
-    "big_sonic_heaven": 1793794262.518552,
-    "radio_x_chilled": 1793794262.5199773,
-    "dreampop_radio": 1793794262.5212247,
-    "indie_select": 1793794262.691151
+    "vuurland": 1793794275.9220624,
+    "mellow_mix": 1793794275.9237473,
+    "big_sonic_heaven": 1793794275.9250612,
+    "radio_x_chilled": 1793794275.926483,
+    "dreampop_radio": 1793794275.9277697,
+    "indie_select": 1793794275.929214
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4861,12 +4862,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "young man|||unfair": {
-      "artist": "Young Man",
-      "title": "Unfair",
-      "source": "dreampop_radio",
-      "failed_at": 1793707753
-    },
     "stephen duffy & the lilac time|||so far away": {
       "artist": "Stephen Duffy & The Lilac Time",
       "title": "So Far Away",
@@ -5059,12 +5054,12 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "angus & julia stone|||karaoke bar",
-  "__last_radio_key_mellow_mix": "allison russell|||nightflyer",
+  "__last_radio_key_mellow_mix": "equation|||hard underground",
   "__last_radio_key_big_sonic_heaven": "blonde redhead|||23",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3055,
-  "__v146_spotify_budget_slot": 1793794152.3145306,
-  "__vuurland_active_playlist_count": 5080,
+  "__v116_fifo_next_sequence": 3056,
+  "__v146_spotify_budget_slot": 1793794276.3897786,
+  "__vuurland_active_playlist_count": 5081,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793793050,
@@ -6470,6 +6465,7 @@
     "coldplay|||green eyes",
     "coldplay|||in my place",
     "coldplay|||politik",
+    "coldplay|||see you soon",
     "coldplay|||shiver",
     "coldplay|||sparks",
     "coldplay|||spies",
@@ -13150,6 +13146,7 @@
     "spotify:track:1uBUgPtcd2EWKZ78FRijVb",
     "spotify:track:1uC1hNK4sjF0jomr3F13Ox",
     "spotify:track:1uJKkC2V6jATojfumZCuAb",
+    "spotify:track:1uKzAldJYlwje9HstlwTie",
     "spotify:track:1ubJkE9q1un1hIHbDfJ8Tg",
     "spotify:track:1ucMK2I0178UhL9zswLuFw",
     "spotify:track:1ujxjsoNvh4XgS2fUNwkZ2",
@@ -18451,6 +18448,7 @@
     "GBAYE9701611",
     "GBAYE9701948",
     "GBAYE9900131",
+    "GBAYE9901818",
     "GBAYF9000014",
     "GBAYF9400007",
     "GBAYK0100117",
@@ -26971,7 +26969,8 @@
     "spotify:track:4DHAPBFCJ6Y5xYwaaCEFqT": "GBUM71107982",
     "spotify:track:61z5SXtNpp6DZAV9BTSd9M": "GBJBH1600008",
     "spotify:track:04CwADpo37TwnwqQLskoo5": "GBBKS1300090",
-    "spotify:track:4eUwAWsrcnkcZaUbH0Bpe6": "USA4D2135803"
+    "spotify:track:4eUwAWsrcnkcZaUbH0Bpe6": "USA4D2135803",
+    "spotify:track:1uKzAldJYlwje9HstlwTie": "GBAYE9901818"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793793786,
@@ -32610,6 +32609,10 @@
     "my morning jacket|||hopefully live": {
       "artist": "My Morning Jacket",
       "title": "Hopefully - Live on KVRX"
+    },
+    "coldplay|||see you soon": {
+      "artist": "Coldplay",
+      "title": "See You Soon"
     }
   },
   "__v82_confirmed_catalog": {
@@ -39652,6 +39655,11 @@
       "uri": "spotify:track:4eUwAWsrcnkcZaUbH0Bpe6",
       "artist": "My Morning Jacket",
       "title": "Hopefully - Live on KVRX"
+    },
+    "coldplay|||see you soon": {
+      "uri": "spotify:track:1uKzAldJYlwje9HstlwTie",
+      "artist": "Coldplay",
+      "title": "See You Soon"
     }
   },
   "__pending_library_likes": {},
@@ -51201,6 +51209,7 @@
       "coldplay|||day 'n' nite",
       "coldplay|||fix you",
       "coldplay|||in my place",
+      "coldplay|||see you soon",
       "coldplay|||the scientist",
       "coldplay|||yellow",
       "colin hay|||overkill",
@@ -52650,6 +52659,7 @@
       "spotify:track:1tvsz3jbrWFk0pmlTckhRh",
       "spotify:track:1u42hFacJ1Bs8H9GX2O8z3",
       "spotify:track:1uJKkC2V6jATojfumZCuAb",
+      "spotify:track:1uKzAldJYlwje9HstlwTie",
       "spotify:track:1ukD03eJFnwjczPA3UCiFz",
       "spotify:track:1utci4nIz4VWM9GMJDlc5V",
       "spotify:track:1v1oIWf2Xgh54kIWuKsDf6",
@@ -53978,6 +53988,7 @@
       "GBAYE9400061",
       "GBAYE9701374",
       "GBAYE9900131",
+      "GBAYE9901818",
       "GBAYF9000014",
       "GBAYF9400007",
       "GBAYK0100117",
@@ -56203,7 +56214,8 @@
       "spotify:track:4DHAPBFCJ6Y5xYwaaCEFqT": "GBUM71107982",
       "spotify:track:61z5SXtNpp6DZAV9BTSd9M": "GBJBH1600008",
       "spotify:track:04CwADpo37TwnwqQLskoo5": "GBBKS1300090",
-      "spotify:track:4eUwAWsrcnkcZaUbH0Bpe6": "USA4D2135803"
+      "spotify:track:4eUwAWsrcnkcZaUbH0Bpe6": "USA4D2135803",
+      "spotify:track:1uKzAldJYlwje9HstlwTie": "GBAYE9901818"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -57576,5 +57588,6 @@
   "__match_v35__florence the machine|||shake it out acoustic": "spotify:track:4DHAPBFCJ6Y5xYwaaCEFqT",
   "__match_v35__sophia|||you say it's alright": "spotify:track:61z5SXtNpp6DZAV9BTSd9M",
   "__match_v35__king krule|||border line": "spotify:track:04CwADpo37TwnwqQLskoo5",
-  "__match_v35__my morning jacket|||hopefully live": "spotify:track:4eUwAWsrcnkcZaUbH0Bpe6"
+  "__match_v35__my morning jacket|||hopefully live": "spotify:track:4eUwAWsrcnkcZaUbH0Bpe6",
+  "__match_v35__coldplay|||see you soon": "spotify:track:1uKzAldJYlwje9HstlwTie"
 }
