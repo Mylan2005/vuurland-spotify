@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793813876.9152331,
+  "__v150_next_spotify_round_at": 1793814011.6823485,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "het zesde metaal|||ploegsteert",
+      "j bernardt|||taxi",
       "dressed like boys|||healing",
       "the middle east|||blood",
       "family of the year|||hero",
@@ -111,11 +113,10 @@
       "arcade fire|||age of anxiety ii",
       "london grammar|||hey now",
       "men i trust|||sugar",
-      "still corners|||static",
-      "elis floreen|||panther",
-      "the golden dregs|||american airlines"
+      "still corners|||static"
     ],
     "mellow_mix": [
+      "james taylor|||copperline",
       "aukai|||slow sun w/ richard houghten",
       "sinead o'connor|||dancing lessons",
       "jill barber|||legacy",
@@ -214,10 +215,10 @@
       "the decemberists|||the wrong year",
       "hermanos gutierrez|||hold on to the light w/ jack johnson",
       "pink floyd|||wish you were here",
-      "the kinks|||celluloid heroes",
-      "cowboy junkies|||sweet jane live"
+      "the kinks|||celluloid heroes"
     ],
     "big_sonic_heaven": [
+      "cocteau twins|||shallow then halo",
       "karen peris|||superhero",
       "tricky|||out of place feat marta",
       "the cure|||disintegration",
@@ -316,10 +317,10 @@
       "cocteau twins|||alice",
       "the giraffe told me in my dream|||before",
       "snowcuffs|||in blue",
-      "lush|||etheriel",
-      "nonsense rats|||dead end generation"
+      "lush|||etheriel"
     ],
     "radio_x_chilled": [
+      "keane|||somewhere only we know",
       "the cure|||pictures of you",
       "alabama shakes|||be mine",
       "florence the machine|||shake it out acoustic",
@@ -418,10 +419,10 @@
       "oasis|||let there be love",
       "the sundays|||here's where the story ends",
       "the cure|||friday i'm in love acoustic",
-      "local natives|||ceilings",
-      "red hot chili peppers|||road trippin'"
+      "local natives|||ceilings"
     ],
     "dreampop_radio": [
+      "washed out|||eyes be closed",
       "pieta brown|||remember the sun",
       "heather nova|||heart and shoulder",
       "lemonheads|||ride with me",
@@ -520,8 +521,7 @@
       "moddi|||house by the sea",
       "tame impala|||love/paranoia",
       "ryan sheridan|||all and more",
-      "nik freitas|||sun down",
-      "azure ray|||signs in the leaves"
+      "nik freitas|||sun down"
     ],
     "indie_select": [
       "october drift|||blame the young",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793813756.8813221,
-    "mellow_mix": 1793813756.8854353,
-    "big_sonic_heaven": 1793813756.8888052,
-    "radio_x_chilled": 1793813756.892495,
-    "dreampop_radio": 1793813756.8956285,
-    "indie_select": 1793813756.899252
+    "vuurland": 1793813891.2652872,
+    "mellow_mix": 1793813891.4559133,
+    "big_sonic_heaven": 1793813891.6557093,
+    "radio_x_chilled": 1793813891.6595206,
+    "dreampop_radio": 1793813891.6627765,
+    "indie_select": 1793813891.6662893
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1945,6 +1945,7 @@
       "jake shimabukuro|||let's dance",
       "james mcmurtry|||off and running",
       "james mcmurtry|||walk between the raindrops",
+      "james taylor|||copperline",
       "james vincent mcmorrow|||breaking hearts",
       "james vincent mcmorrow|||stay cool",
       "james vincent mcmorrow|||this old dark machine",
@@ -2853,6 +2854,7 @@
       "cocteau twins|||ribbed and veined",
       "cocteau twins|||road river and rail",
       "cocteau twins|||seekers who are lovers",
+      "cocteau twins|||shallow then halo",
       "cocteau twins|||sultitan itan",
       "cocteau twins|||wax and wane",
       "cold cave|||godstar psychic tv cover",
@@ -5383,6 +5385,12 @@
       "title": "Love vs. Reason",
       "source": "indie_select",
       "failed_at": 1793813492
+    },
+    "decemberists the|||the engine driver": {
+      "artist": "Decemberists, The",
+      "title": "The Engine Driver",
+      "source": "dreampop_radio",
+      "failed_at": 1793813892
     }
   },
   "__v51_radio_unmatched": {
@@ -5439,12 +5447,12 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "dressed like boys|||healing",
-  "__last_radio_key_mellow_mix": "aukai|||slow sun w/ richard houghten",
-  "__last_radio_key_big_sonic_heaven": "karen peris|||superhero",
+  "__last_radio_key_vuurland": "het zesde metaal|||ploegsteert",
+  "__last_radio_key_mellow_mix": "james taylor|||copperline",
+  "__last_radio_key_big_sonic_heaven": "cocteau twins|||shallow then halo",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3270,
-  "__v146_spotify_budget_slot": 1793813757.3357296,
+  "__v116_fifo_next_sequence": 3272,
+  "__v146_spotify_budget_slot": 1793813892.1059747,
   "__vuurland_active_playlist_count": 5187,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -41525,7 +41533,7 @@
     "bran van 3000|||love cliche alt version": 3,
     "dog is dead|||talent show": 3,
     "tusq|||love vs reason": 3,
-    "decemberists the|||the engine driver": 2,
+    "decemberists the|||the engine driver": 3,
     "bear mccreary|||battlestar galactica": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -41604,7 +41612,8 @@
     "herbert & momoko|||babystar": 1,
     "bran van 3000|||love cliche alt version": 1,
     "dog is dead|||talent show": 1,
-    "tusq|||love vs reason": 1
+    "tusq|||love vs reason": 1,
+    "decemberists the|||the engine driver": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -59219,7 +59228,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the cure|||pictures of you",
+  "__last_radio_key_radio_x_chilled": "keane|||somewhere only we know",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -59323,7 +59332,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "pieta brown|||remember the sun",
+  "__last_radio_key_dreampop_radio": "washed out|||eyes be closed",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -60439,5 +60448,6 @@
   "__match_v35__it's a beautiful day|||white bird": "spotify:track:7rsx0k34FzPYZCaaSczM3r",
   "__match_v35__washed out|||haunt": "spotify:track:4cmFzqYP3yoA2nognUVZmB",
   "__not_found_v35__tusq|||love vs reason": 1793813492,
-  "__match_v35__bjork|||new world": "spotify:track:2jUYg9usDopRe5GaicS8gn"
+  "__match_v35__bjork|||new world": "spotify:track:2jUYg9usDopRe5GaicS8gn",
+  "__not_found_v35__decemberists the|||the engine driver": 1793813892
 }
