@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793755585.295579,
+  "__v150_next_spotify_round_at": 1793755706.5043635,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -320,6 +320,7 @@
       "art school girlfriend|||the field"
     ],
     "radio_x_chilled": [
+      "blur|||the narcissist",
       "the coral|||jacqueline",
       "i monster|||daydream in blue",
       "oasis|||wonderwall unplugged",
@@ -418,8 +419,7 @@
       "inhaler|||if you're gonna break my heart",
       "biffy clyro|||machines mtv unplugged live at roundhouse london",
       "lana del rey|||video games",
-      "moby|||why does my heart feel so bad",
-      "plain white t's|||hey there delilah"
+      "moby|||why does my heart feel so bad"
     ],
     "dreampop_radio": [
       "still parade|||fields",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793755574.879372,
-    "mellow_mix": 1793755574.8849773,
-    "big_sonic_heaven": 1793755574.8889353,
-    "radio_x_chilled": 1793755574.8942997,
-    "dreampop_radio": 1793755574.8981202,
-    "indie_select": 1793755574.9023213
+    "vuurland": 1793755586.3427138,
+    "mellow_mix": 1793755586.3484519,
+    "big_sonic_heaven": 1793755586.352402,
+    "radio_x_chilled": 1793755586.4862864,
+    "dreampop_radio": 1793755586.4900746,
+    "indie_select": 1793755586.4942832
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3120,6 +3120,7 @@
       "blur|||end of a century",
       "blur|||she's so high",
       "blur|||tender",
+      "blur|||the narcissist",
       "blur|||the universal",
       "blur|||this is a low",
       "blur|||to the end",
@@ -4673,9 +4674,9 @@
   "__last_radio_key_mellow_mix": "patrick watson|||gordon in the willows",
   "__last_radio_key_big_sonic_heaven": "the bellwether syndicate|||translucent",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2616,
-  "__v146_spotify_budget_slot": 1793755465.569449,
-  "__vuurland_active_playlist_count": 4815,
+  "__v116_fifo_next_sequence": 2617,
+  "__v146_spotify_budget_slot": 1793755586.7833326,
+  "__vuurland_active_playlist_count": 4816,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793752558,
@@ -9984,6 +9985,7 @@
     "sufjan stevens|||redford for yia-yia and pappou",
     "sufjan stevens|||should have known better",
     "sufjan stevens|||so you are tired",
+    "sufjan stevens|||sugar",
     "sufjan stevens|||the hidden river of my life",
     "sufjan stevens|||the only thing",
     "sufjan stevens|||to be alone with you",
@@ -15969,6 +15971,7 @@
     "spotify:track:7v4meBoPwoPmzkrJLBV4d9",
     "spotify:track:7vCuaxRIKElwgjSAo5REkw",
     "spotify:track:7vE8x4aU44SaoKxH1rQP3s",
+    "spotify:track:7vKAFo5ONRMjXXAMw3tREX",
     "spotify:track:7veb9zQVDfXiXFl3WZbcXK",
     "spotify:track:7vptmeNwSEVkcwDdqk7UQO",
     "spotify:track:7vqGtCfX1PKbK34Hf0qByp",
@@ -19470,6 +19473,7 @@
     "US64G1813803",
     "US64G1813807",
     "US64G1937601",
+    "US64G2015013",
     "US64G2038101",
     "US64G2114301",
     "US64G2114305",
@@ -25503,7 +25507,8 @@
     "spotify:track:4j6LAJgpb4DgfRIt3RftzC": "CAN112000309",
     "spotify:track:1WETgXqmJ2NaziQhtav0pK": "USSM10901008",
     "spotify:track:0rEHwbZKXeDLGRVaUOBPoG": "GBAHS0700474",
-    "spotify:track:42cxPm9jgbaxIVN77XA1m6": "GBAYE9900131"
+    "spotify:track:42cxPm9jgbaxIVN77XA1m6": "GBAYE9900131",
+    "spotify:track:7vKAFo5ONRMjXXAMw3tREX": "US64G2015013"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793755102,
@@ -30066,6 +30071,10 @@
     "blur|||tender": {
       "artist": "Blur",
       "title": "Tender"
+    },
+    "sufjan stevens|||sugar": {
+      "artist": "Sufjan Stevens",
+      "title": "Sugar"
     }
   },
   "__v82_confirmed_catalog": {
@@ -35763,6 +35772,11 @@
       "uri": "spotify:track:42cxPm9jgbaxIVN77XA1m6",
       "artist": "Blur",
       "title": "Tender"
+    },
+    "sufjan stevens|||sugar": {
+      "uri": "spotify:track:7vKAFo5ONRMjXXAMw3tREX",
+      "artist": "Sufjan Stevens",
+      "title": "Sugar"
     }
   },
   "__pending_library_likes": {},
@@ -47901,6 +47915,7 @@
       "stornoway|||zorbing",
       "sufjan stevens|||death with dignity",
       "sufjan stevens|||love yourself",
+      "sufjan stevens|||sugar",
       "sugarcubes|||birthday",
       "suki waterhouse|||good looking",
       "suki waterhouse|||my fun",
@@ -49157,6 +49172,7 @@
       "spotify:track:7tG29bRpjrD3jMpUBvQ66N",
       "spotify:track:7v2BNFETruGI84ACGJSdGb",
       "spotify:track:7v4meBoPwoPmzkrJLBV4d9",
+      "spotify:track:7vKAFo5ONRMjXXAMw3tREX",
       "spotify:track:7vqGtCfX1PKbK34Hf0qByp",
       "spotify:track:7vwahM7s1Bu5833dv8mPIG",
       "spotify:track:7wDnYoJL80f7KRuk3KZlZ6",
@@ -49788,6 +49804,7 @@
       "US58B0500807",
       "US64G1509901",
       "US64G1937601",
+      "US64G2015013",
       "US6DR0000100",
       "US7QT2500038",
       "US8571000060",
@@ -51215,7 +51232,8 @@
       "spotify:track:4j6LAJgpb4DgfRIt3RftzC": "CAN112000309",
       "spotify:track:1WETgXqmJ2NaziQhtav0pK": "USSM10901008",
       "spotify:track:0rEHwbZKXeDLGRVaUOBPoG": "GBAHS0700474",
-      "spotify:track:42cxPm9jgbaxIVN77XA1m6": "GBAYE9900131"
+      "spotify:track:42cxPm9jgbaxIVN77XA1m6": "GBAYE9900131",
+      "spotify:track:7vKAFo5ONRMjXXAMw3tREX": "US64G2015013"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -51486,7 +51504,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the coral|||jacqueline",
+  "__last_radio_key_radio_x_chilled": "blur|||the narcissist",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -52309,5 +52327,6 @@
   "__match_v35__william fitzsimmons|||no promises": "spotify:track:4j6LAJgpb4DgfRIt3RftzC",
   "__match_v35__passion pit|||moth's wings": "spotify:track:1WETgXqmJ2NaziQhtav0pK",
   "__match_v35__hard-fi|||television": "spotify:track:0rEHwbZKXeDLGRVaUOBPoG",
-  "__match_v35__blur|||tender": "spotify:track:42cxPm9jgbaxIVN77XA1m6"
+  "__match_v35__blur|||tender": "spotify:track:42cxPm9jgbaxIVN77XA1m6",
+  "__match_v35__sufjan stevens|||sugar": "spotify:track:7vKAFo5ONRMjXXAMw3tREX"
 }
