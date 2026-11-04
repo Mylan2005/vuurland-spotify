@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793807083.494522,
+  "__v150_next_spotify_round_at": 1793807204.8294833,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -218,6 +218,7 @@
       "the spinners|||i'll be around"
     ],
     "big_sonic_heaven": [
+      "tears run rings|||waiting for the end",
       "autoregulate|||double sky",
       "actors|||ctrl",
       "cocteau twins|||ribbed and veined",
@@ -316,8 +317,7 @@
       "home video|||the smoke",
       "the smiths|||reel around the fountain",
       "the secret french postcards|||blush",
-      "maquillage|||are you safe?",
-      "stereolab|||cloud land"
+      "maquillage|||are you safe?"
     ],
     "radio_x_chilled": [
       "the war on drugs|||i don't want to live here anymore",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793807072.8453112,
-    "mellow_mix": 1793807072.8488996,
-    "big_sonic_heaven": 1793807072.8518877,
-    "radio_x_chilled": 1793807072.855171,
-    "dreampop_radio": 1793807072.8579879,
-    "indie_select": 1793807073.100548
+    "vuurland": 1793807084.593424,
+    "mellow_mix": 1793807084.597009,
+    "big_sonic_heaven": 1793807084.8044698,
+    "radio_x_chilled": 1793807084.8078103,
+    "dreampop_radio": 1793807084.8106146,
+    "indie_select": 1793807084.813722
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3287,6 +3287,7 @@
       "t g shand|||seats",
       "t g shand|||the deadpan break",
       "tears for fears|||memories fade",
+      "tears run rings|||waiting for the end",
       "the aloof|||all i want is you",
       "the autumns|||the garden ends",
       "the awakening|||until the dawn",
@@ -5366,11 +5367,11 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "sohn|||rennen",
   "__last_radio_key_mellow_mix": "neko case|||the next time you say forever",
-  "__last_radio_key_big_sonic_heaven": "autoregulate|||double sky",
+  "__last_radio_key_big_sonic_heaven": "tears run rings|||waiting for the end",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3201,
-  "__v146_spotify_budget_slot": 1793806963.8953044,
-  "__vuurland_active_playlist_count": 5146,
+  "__v116_fifo_next_sequence": 3202,
+  "__v146_spotify_budget_slot": 1793807085.2388117,
+  "__vuurland_active_playlist_count": 5147,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793804411,
@@ -11808,6 +11809,7 @@
     "tinariwen|||tiwayyen",
     "tinariwen|||tiwàyyen",
     "tindersticks|||always a stranger",
+    "tindersticks|||just a dog",
     "tindersticks|||what are you fighting for?",
     "tiny ruins|||bird in the thyme",
     "tiny ruins|||me at the museum you in the wintergardens",
@@ -14381,6 +14383,7 @@
     "spotify:track:38Hfx2SfnlQxXWXWbGZXAq",
     "spotify:track:38KHfmKiOSEaYWbeFLwst6",
     "spotify:track:38PTaSqKcn1NKafQRdXSby",
+    "spotify:track:38PkBiC8PJg3wBOspMTgVq",
     "spotify:track:38Zs2b75JPNB2tS7O7JQnS",
     "spotify:track:38dqcD5Xm0f1qDhg6R29Tj",
     "spotify:track:38iQKroYgAbruNrA8kYMuK",
@@ -18930,6 +18933,7 @@
     "GBAYK9400063",
     "GBAZA2092001",
     "GBAZJ0600006",
+    "GBAZP0300021",
     "GBAZP0700003",
     "GBAZP0700007",
     "GBAZP0700008",
@@ -27541,7 +27545,8 @@
     "spotify:track:0cXm3QqepHVzXKdm73sqkl": "GBAYE9600120",
     "spotify:track:0GMe0UKs0YDq5OHGnrEu22": "GBCEL1400004",
     "spotify:track:3aqyvj5jSNkzkAjEuv0V1G": "GBAFL8300070",
-    "spotify:track:2CmpsQsr261u00UtTX3WO3": "UK32S2222311"
+    "spotify:track:2CmpsQsr261u00UtTX3WO3": "UK32S2222311",
+    "spotify:track:38PkBiC8PJg3wBOspMTgVq": "GBAZP0300021"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793806843,
@@ -33448,6 +33453,10 @@
     "maximo park|||drinking martinis": {
       "artist": "Maximo Park",
       "title": "Drinking Martinis"
+    },
+    "tindersticks|||just a dog": {
+      "artist": "Tindersticks",
+      "title": "Just A Dog"
     }
   },
   "__v82_confirmed_catalog": {
@@ -40825,6 +40834,11 @@
       "uri": "spotify:track:2CmpsQsr261u00UtTX3WO3",
       "artist": "Maximo Park",
       "title": "Drinking Martinis"
+    },
+    "tindersticks|||just a dog": {
+      "uri": "spotify:track:38PkBiC8PJg3wBOspMTgVq",
+      "artist": "Tindersticks",
+      "title": "Just A Dog"
     }
   },
   "__pending_library_likes": {},
@@ -53965,6 +53979,7 @@
       "tim buckley|||happy time",
       "tim buckley|||morning glory",
       "tim neuhaus|||blankets",
+      "tindersticks|||just a dog",
       "toad the wet sprocket|||nightingale song",
       "todd hannigan|||thicker than water",
       "tokyo shoegazer|||missing",
@@ -54655,6 +54670,7 @@
       "spotify:track:37pShAS4iuRXJeRAa9k6xw",
       "spotify:track:385DxV3uLG88GaCUsyCyrX",
       "spotify:track:38Hfx2SfnlQxXWXWbGZXAq",
+      "spotify:track:38PkBiC8PJg3wBOspMTgVq",
       "spotify:track:38iQKroYgAbruNrA8kYMuK",
       "spotify:track:38nbfowGG8bDTe03xkIZQF",
       "spotify:track:39Bd345OWEhRNyfayhp9gv",
@@ -55824,6 +55840,7 @@
       "GBAYK9000074",
       "GBAYK9400063",
       "GBAZA2092001",
+      "GBAZP0300021",
       "GBAZP0700008",
       "GBAZP0700048",
       "GBAZP2500245",
@@ -58148,7 +58165,8 @@
       "spotify:track:0cXm3QqepHVzXKdm73sqkl": "GBAYE9600120",
       "spotify:track:0GMe0UKs0YDq5OHGnrEu22": "GBCEL1400004",
       "spotify:track:3aqyvj5jSNkzkAjEuv0V1G": "GBAFL8300070",
-      "spotify:track:2CmpsQsr261u00UtTX3WO3": "UK32S2222311"
+      "spotify:track:2CmpsQsr261u00UtTX3WO3": "UK32S2222311",
+      "spotify:track:38PkBiC8PJg3wBOspMTgVq": "GBAZP0300021"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -59594,5 +59612,6 @@
   "__match_v35__hamilton leithauser|||the silent orchestra": "spotify:track:0GMe0UKs0YDq5OHGnrEu22",
   "__match_v35__tallest man on earth|||sagres": "spotify:track:7dSWLUHVb5t8EVkOJ5lgRp",
   "__match_v35__cocteau twins|||from the flagstones": "spotify:track:3aqyvj5jSNkzkAjEuv0V1G",
-  "__match_v35__maximo park|||drinking martinis": "spotify:track:2CmpsQsr261u00UtTX3WO3"
+  "__match_v35__maximo park|||drinking martinis": "spotify:track:2CmpsQsr261u00UtTX3WO3",
+  "__match_v35__tindersticks|||just a dog": "spotify:track:38PkBiC8PJg3wBOspMTgVq"
 }
