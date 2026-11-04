@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793756069.8835635,
+  "__v150_next_spotify_round_at": 1793756191.644785,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793756059.4685302,
-    "mellow_mix": 1793756059.4739304,
-    "big_sonic_heaven": 1793756059.4778295,
-    "radio_x_chilled": 1793756059.4825199,
-    "dreampop_radio": 1793756059.6234431,
-    "indie_select": 1793756059.627969
+    "vuurland": 1793756071.6121826,
+    "mellow_mix": 1793756071.6178722,
+    "big_sonic_heaven": 1793756071.621734,
+    "radio_x_chilled": 1793756071.6263888,
+    "dreampop_radio": 1793756071.6301115,
+    "indie_select": 1793756071.6345534
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4685,8 +4685,8 @@
   "__last_radio_key_big_sonic_heaven": "hatchie|||carousel",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2624,
-  "__v146_spotify_budget_slot": 1793755950.1903737,
-  "__vuurland_active_playlist_count": 4818,
+  "__v146_spotify_budget_slot": 1793756071.918707,
+  "__vuurland_active_playlist_count": 4819,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793752558,
@@ -8649,6 +8649,7 @@
     "nick cave & warren ellis|||carnage",
     "nick cave & warren ellis|||shattered ground",
     "nick cave & warren ellis|||waiting for you - live at the sydney opera house",
+    "nick cave and the bad seeds|||abattoir blues",
     "nick cave|||carnage",
     "nick cave|||shattered ground",
     "nick cave|||waiting for you",
@@ -15074,6 +15075,7 @@
     "spotify:track:6Gh6lzW6QeiXkFSfsvNS0b",
     "spotify:track:6GlYe4WViloOfVhVvoFLSn",
     "spotify:track:6GvAM8oyVApQHGMgpBt8yl",
+    "spotify:track:6H0SL71MhyfV8zUEFtREYH",
     "spotify:track:6H6epZrWk5V52YGtGv1kIF",
     "spotify:track:6HBNGrp119jJwbklsGOuUh",
     "spotify:track:6HO2zHiURg661Lh8RrWhEv",
@@ -17304,6 +17306,7 @@
     "GBAJH0200054",
     "GBAJH0401031",
     "GBAJH0401108",
+    "GBAJH0401569",
     "GBAJH0401579",
     "GBAJH0501800",
     "GBAJH0503430",
@@ -25526,7 +25529,8 @@
     "spotify:track:42cxPm9jgbaxIVN77XA1m6": "GBAYE9900131",
     "spotify:track:7vKAFo5ONRMjXXAMw3tREX": "US64G2015013",
     "spotify:track:3geRffSf6eAruhg23RkpKV": "USWB19901545",
-    "spotify:track:16DaiwmPaXD61lPCtZJmZv": "GBCPB0900721"
+    "spotify:track:16DaiwmPaXD61lPCtZJmZv": "GBCPB0900721",
+    "spotify:track:6H0SL71MhyfV8zUEFtREYH": "GBAJH0401569"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793755708,
@@ -30101,6 +30105,10 @@
     "peter gabriel|||love to be loved": {
       "artist": "Peter Gabriel",
       "title": "Love To Be Loved"
+    },
+    "nick cave and the bad seeds|||abattoir blues": {
+      "artist": "Nick Cave & The Bad Seeds",
+      "title": "Abattoir Blues"
     }
   },
   "__v82_confirmed_catalog": {
@@ -35813,6 +35821,11 @@
       "uri": "spotify:track:16DaiwmPaXD61lPCtZJmZv",
       "artist": "Peter Gabriel",
       "title": "Love To Be Loved"
+    },
+    "nick cave and the bad seeds|||abattoir blues": {
+      "uri": "spotify:track:6H0SL71MhyfV8zUEFtREYH",
+      "artist": "Nick Cave & The Bad Seeds",
+      "title": "Abattoir Blues"
     }
   },
   "__pending_library_likes": {},
@@ -47749,6 +47762,7 @@
       "new order|||guilty partner",
       "new order|||i'll stay with you",
       "new order|||procession",
+      "nick cave and the bad seeds|||abattoir blues",
       "nick drake|||northern sky",
       "nickel creek|||tomorrow is a long time",
       "nicola hitchcock|||you will feel like this",
@@ -49022,6 +49036,7 @@
       "spotify:track:6FpKzkGiwcrZGW5bzDQPHF",
       "spotify:track:6GGtHZgBycCgGBUhZo81xe",
       "spotify:track:6GXOriLcYRb1ZcIvoIK90y",
+      "spotify:track:6H0SL71MhyfV8zUEFtREYH",
       "spotify:track:6H6epZrWk5V52YGtGv1kIF",
       "spotify:track:6HwVmEL610Sd9QtZ96Ysmr",
       "spotify:track:6I8ZqfyXu9mmQOLwCdf1nh",
@@ -49443,6 +49458,7 @@
       "GBAJE6500001",
       "GBAJH0200046",
       "GBAJH0401031",
+      "GBAJH0401569",
       "GBAJH0503430",
       "GBAJH0600232",
       "GBAJH9900047",
@@ -51278,7 +51294,8 @@
       "spotify:track:42cxPm9jgbaxIVN77XA1m6": "GBAYE9900131",
       "spotify:track:7vKAFo5ONRMjXXAMw3tREX": "US64G2015013",
       "spotify:track:3geRffSf6eAruhg23RkpKV": "USWB19901545",
-      "spotify:track:16DaiwmPaXD61lPCtZJmZv": "GBCPB0900721"
+      "spotify:track:16DaiwmPaXD61lPCtZJmZv": "GBCPB0900721",
+      "spotify:track:6H0SL71MhyfV8zUEFtREYH": "GBAJH0401569"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -52375,5 +52392,6 @@
   "__match_v35__blur|||tender": "spotify:track:42cxPm9jgbaxIVN77XA1m6",
   "__match_v35__sufjan stevens|||sugar": "spotify:track:7vKAFo5ONRMjXXAMw3tREX",
   "__match_v35__r e m|||drive": "spotify:track:3geRffSf6eAruhg23RkpKV",
-  "__match_v35__peter gabriel|||love to be loved": "spotify:track:16DaiwmPaXD61lPCtZJmZv"
+  "__match_v35__peter gabriel|||love to be loved": "spotify:track:16DaiwmPaXD61lPCtZJmZv",
+  "__match_v35__nick cave and the bad seeds|||abattoir blues": "spotify:track:6H0SL71MhyfV8zUEFtREYH"
 }
