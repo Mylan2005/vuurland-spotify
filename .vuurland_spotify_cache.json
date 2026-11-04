@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793759463.3602188,
+  "__v150_next_spotify_round_at": 1793759584.6054971,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793759452.9972098,
-    "mellow_mix": 1793759453.0032065,
-    "big_sonic_heaven": 1793759453.0071683,
-    "radio_x_chilled": 1793759453.0119495,
-    "dreampop_radio": 1793759453.0157297,
-    "indie_select": 1793759453.0203083
+    "vuurland": 1793759464.5713465,
+    "mellow_mix": 1793759464.5775223,
+    "big_sonic_heaven": 1793759464.5816555,
+    "radio_x_chilled": 1793759464.5866377,
+    "dreampop_radio": 1793759464.590552,
+    "indie_select": 1793759464.5953093
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4741,8 +4741,8 @@
   "__last_radio_key_big_sonic_heaven": "diiv|||dare me",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2661,
-  "__v146_spotify_budget_slot": 1793759343.640748,
-  "__vuurland_active_playlist_count": 4841,
+  "__v146_spotify_budget_slot": 1793759464.8849552,
+  "__vuurland_active_playlist_count": 4842,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793756194,
@@ -5169,6 +5169,7 @@
     "astronauts|||everything's a system, everything's a sign",
     "astronauts|||skydive",
     "athlete|||el salvador",
+    "athlete|||tourist",
     "atmos bloom|||everything",
     "atmos bloom|||it's enough",
     "attic ocean|||aurora",
@@ -12991,6 +12992,7 @@
     "spotify:track:2drzc5eWV0okNKvmc3h2wM",
     "spotify:track:2dtRAYfkYze247YhuCvfZl",
     "spotify:track:2e8gktYGD4HMutygVA9VQT",
+    "spotify:track:2eBdMrG6jgYNa1u2j6Bkf3",
     "spotify:track:2eF2x1BkgilhaZ2AipRY8j",
     "spotify:track:2ePXRuapzETR7sZy2taClK",
     "spotify:track:2eU0ZprX3kfI9ZWqTCoAI1",
@@ -17529,6 +17531,7 @@
     "GBAYE0200776",
     "GBAYE0200779",
     "GBAYE0202036",
+    "GBAYE0402034",
     "GBAYE0500605",
     "GBAYE0500606",
     "GBAYE0501082",
@@ -25674,7 +25677,8 @@
     "spotify:track:4cLXtwCLbUMirboOv5Gj90": "GBJRZ2000007",
     "spotify:track:7wLzlhL0tb3GhPhnIz7IpQ": "USSM10006002",
     "spotify:track:5PBevk4g842BAltE7ZCKpE": "USBQU2300013",
-    "spotify:track:1tvsz3jbrWFk0pmlTckhRh": "GBAYE0001533"
+    "spotify:track:1tvsz3jbrWFk0pmlTckhRh": "GBAYE0001533",
+    "spotify:track:2eBdMrG6jgYNa1u2j6Bkf3": "GBAYE0402034"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793759344,
@@ -30341,6 +30345,10 @@
     "neil finn|||last to know": {
       "artist": "Neil Finn",
       "title": "Last to Know"
+    },
+    "athlete|||tourist": {
+      "artist": "Athlete",
+      "title": "Tourist"
     }
   },
   "__v82_confirmed_catalog": {
@@ -36168,6 +36176,11 @@
       "uri": "spotify:track:1tvsz3jbrWFk0pmlTckhRh",
       "artist": "Neil Finn",
       "title": "Last to Know"
+    },
+    "athlete|||tourist": {
+      "uri": "spotify:track:2eBdMrG6jgYNa1u2j6Bkf3",
+      "artist": "Athlete",
+      "title": "Tourist"
     }
   },
   "__pending_library_likes": {},
@@ -47532,6 +47545,7 @@
       "arlo parks|||hurt",
       "arlo parks|||too good",
       "athlete|||el salvador",
+      "athlete|||tourist",
       "audrey hobert|||wet hair",
       "aukai|||azure",
       "aurora|||the flood",
@@ -48940,6 +48954,7 @@
       "spotify:track:2dk5HQv2V6hEVeGGlPvCFA",
       "spotify:track:2dlwYojKAq61PIiT47dZpd",
       "spotify:track:2e8gktYGD4HMutygVA9VQT",
+      "spotify:track:2eBdMrG6jgYNa1u2j6Bkf3",
       "spotify:track:2eF2x1BkgilhaZ2AipRY8j",
       "spotify:track:2ehWLU4NMVSx2NeSej8Wv7",
       "spotify:track:2f6HEJZ2JObIQGZOpzoa4o",
@@ -49892,6 +49907,7 @@
       "GBAYE0200606",
       "GBAYE0200772",
       "GBAYE0202036",
+      "GBAYE0402034",
       "GBAYE0500605",
       "GBAYE0501082",
       "GBAYE0601555",
@@ -51728,7 +51744,8 @@
       "spotify:track:4cLXtwCLbUMirboOv5Gj90": "GBJRZ2000007",
       "spotify:track:7wLzlhL0tb3GhPhnIz7IpQ": "USSM10006002",
       "spotify:track:5PBevk4g842BAltE7ZCKpE": "USBQU2300013",
-      "spotify:track:1tvsz3jbrWFk0pmlTckhRh": "GBAYE0001533"
+      "spotify:track:1tvsz3jbrWFk0pmlTckhRh": "GBAYE0001533",
+      "spotify:track:2eBdMrG6jgYNa1u2j6Bkf3": "GBAYE0402034"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -52850,5 +52867,6 @@
   "__match_v35__ringo deathstarr|||heaven obscured": "spotify:track:4cLXtwCLbUMirboOv5Gj90",
   "__match_v35__bob dylan|||most of the time": "spotify:track:7wLzlhL0tb3GhPhnIz7IpQ",
   "__match_v35__grian chatten|||fairlies": "spotify:track:5PBevk4g842BAltE7ZCKpE",
-  "__match_v35__neil finn|||last to know": "spotify:track:1tvsz3jbrWFk0pmlTckhRh"
+  "__match_v35__neil finn|||last to know": "spotify:track:1tvsz3jbrWFk0pmlTckhRh",
+  "__match_v35__athlete|||tourist": "spotify:track:2eBdMrG6jgYNa1u2j6Bkf3"
 }
