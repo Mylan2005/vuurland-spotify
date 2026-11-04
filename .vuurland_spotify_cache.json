@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793806110.2434323,
+  "__v150_next_spotify_round_at": 1793806232.2819014,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793806099.771109,
-    "mellow_mix": 1793806099.774702,
-    "big_sonic_heaven": 1793806099.7776985,
-    "radio_x_chilled": 1793806099.7809792,
-    "dreampop_radio": 1793806099.7837722,
-    "indie_select": 1793806099.7868025
+    "vuurland": 1793806112.2508826,
+    "mellow_mix": 1793806112.2543526,
+    "big_sonic_heaven": 1793806112.257264,
+    "radio_x_chilled": 1793806112.2604277,
+    "dreampop_radio": 1793806112.2631664,
+    "indie_select": 1793806112.2662027
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5360,8 +5360,8 @@
   "__last_radio_key_big_sonic_heaven": "cloakroom|||a force at play",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3190,
-  "__v146_spotify_budget_slot": 1793805990.7585344,
-  "__vuurland_active_playlist_count": 5139,
+  "__v146_spotify_budget_slot": 1793806112.687468,
+  "__vuurland_active_playlist_count": 5140,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793804411,
@@ -10547,6 +10547,7 @@
     "seasurfer|||elena alice fossi|||john fryer|||blue days - john fryer mix",
     "seasurfer|||killing tears of joy - john fryer mix",
     "seasurfer|||killing tears of joy - john fryer mix feat elena alice fossi",
+    "seasurfer|||venusberg",
     "seatemples|||wine and rockets",
     "sebastian maschat & erlend øye|||only just begun",
     "sebastian plano|||purples",
@@ -14635,6 +14636,7 @@
     "spotify:track:3VtlSKbs0IjVeeRV4otHNT",
     "spotify:track:3W3YujdUH1jG96gLdAjD9I",
     "spotify:track:3W7KHojYGgYaoX9ogKO9hU",
+    "spotify:track:3W80C6AKNlNwg3bdHExu9Y",
     "spotify:track:3WBapTZ46XatGmeRwoZj3C",
     "spotify:track:3WGsYiBXmaT8XyY4Fmry2v",
     "spotify:track:3WMj8moIAXJhHsyLaqIIHI",
@@ -18039,6 +18041,7 @@
     "DEUT31600008",
     "DEUV42200023",
     "DEUV42200074",
+    "DEVF42000129",
     "DEVF42000132",
     "DEVF42000133",
     "DEVF42203470",
@@ -27504,7 +27507,8 @@
     "spotify:track:47yj9q9W3uorUUJY0LrcKx": "GBBPF9700061",
     "spotify:track:5YSRjutLHNdiDsuwsVKBMw": "FR6V80309805",
     "spotify:track:7GVvj4zJNVuBJSl6StEfn5": "USMC17347183",
-    "spotify:track:63OQupATfueTdZMWTxW03A": "GBAYE9701368"
+    "spotify:track:63OQupATfueTdZMWTxW03A": "GBAYE9701368",
+    "spotify:track:3W80C6AKNlNwg3bdHExu9Y": "DEVF42000129"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793805625,
@@ -33379,6 +33383,10 @@
     "radiohead|||karma police": {
       "artist": "Radiohead",
       "title": "Karma Police"
+    },
+    "seasurfer|||venusberg": {
+      "artist": "Seasurfer",
+      "title": "Venusberg"
     }
   },
   "__v82_confirmed_catalog": {
@@ -40716,6 +40724,11 @@
       "uri": "spotify:track:63OQupATfueTdZMWTxW03A",
       "artist": "Radiohead",
       "title": "Karma Police"
+    },
+    "seasurfer|||venusberg": {
+      "uri": "spotify:track:3W80C6AKNlNwg3bdHExu9Y",
+      "artist": "Seasurfer",
+      "title": "Venusberg"
     }
   },
   "__pending_library_likes": {},
@@ -53571,6 +53584,7 @@
       "seabear|||libraries",
       "seasurfer|||killing tears of joy - john fryer mix",
       "seasurfer|||killing tears of joy - john fryer mix feat elena alice fossi",
+      "seasurfer|||venusberg",
       "seatemples|||wine and rockets",
       "selah sue|||summertime",
       "semisonic|||secret smile",
@@ -54599,6 +54613,7 @@
       "spotify:track:3UMXhDBYe7eIXUe2HLUn0v",
       "spotify:track:3UxRmH0uOcUBRRAuzpZcCg",
       "spotify:track:3V0ak0F8fLXmp3hYAEQKZH",
+      "spotify:track:3W80C6AKNlNwg3bdHExu9Y",
       "spotify:track:3WBapTZ46XatGmeRwoZj3C",
       "spotify:track:3WQPkfcwepZwtoUokjm0la",
       "spotify:track:3WfnpB1e49F0gN18aaPw8Y",
@@ -55458,6 +55473,7 @@
       "DEU161302644",
       "DEUM71100023",
       "DEUT31600008",
+      "DEVF42000129",
       "DEVF42000133",
       "DEVF42203470",
       "DEVF42203471",
@@ -58011,7 +58027,8 @@
       "spotify:track:47yj9q9W3uorUUJY0LrcKx": "GBBPF9700061",
       "spotify:track:5YSRjutLHNdiDsuwsVKBMw": "FR6V80309805",
       "spotify:track:7GVvj4zJNVuBJSl6StEfn5": "USMC17347183",
-      "spotify:track:63OQupATfueTdZMWTxW03A": "GBAYE9701368"
+      "spotify:track:63OQupATfueTdZMWTxW03A": "GBAYE9701368",
+      "spotify:track:3W80C6AKNlNwg3bdHExu9Y": "DEVF42000129"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -59449,5 +59466,6 @@
   "__match_v35__john martyn|||he's got all the whiskey": "spotify:track:47yj9q9W3uorUUJY0LrcKx",
   "__match_v35__girls in hawaii|||found in the ground": "spotify:track:5YSRjutLHNdiDsuwsVKBMw",
   "__match_v35__steely dan|||only a fool would say that": "spotify:track:7GVvj4zJNVuBJSl6StEfn5",
-  "__match_v35__radiohead|||karma police": "spotify:track:63OQupATfueTdZMWTxW03A"
+  "__match_v35__radiohead|||karma police": "spotify:track:63OQupATfueTdZMWTxW03A",
+  "__match_v35__seasurfer|||venusberg": "spotify:track:3W80C6AKNlNwg3bdHExu9Y"
 }
