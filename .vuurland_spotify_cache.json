@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793792309.996222,
+  "__v150_next_spotify_round_at": 1793792432.761066,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -356,6 +356,7 @@
       "the smiths|||unloveable"
     ],
     "indie_select": [
+      "the national|||runaway",
       "the wombats|||emoticons",
       "bear in heaven|||demon",
       "glasvegas|||if",
@@ -424,12 +425,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793792299.8687212,
-    "mellow_mix": 1793792300.026104,
-    "big_sonic_heaven": 1793792300.027243,
-    "radio_x_chilled": 1793792300.028482,
-    "dreampop_radio": 1793792300.0295892,
-    "indie_select": 1793792300.0307655
+    "vuurland": 1793792312.7409868,
+    "mellow_mix": 1793792312.7424655,
+    "big_sonic_heaven": 1793792312.7435646,
+    "radio_x_chilled": 1793792312.744799,
+    "dreampop_radio": 1793792312.7459242,
+    "indie_select": 1793792312.7472913
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4637,6 +4638,7 @@
       "the national|||exile vilify from the game portal 2",
       "the national|||fake empire",
       "the national|||graceless",
+      "the national|||runaway",
       "the national|||terrible love",
       "the national|||you were a kindness",
       "the notwist|||7-hour-drive",
@@ -4789,12 +4791,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "hollow coves|||heatwave": {
-      "artist": "Hollow Coves",
-      "title": "Heatwave",
-      "source": "dreampop_radio",
-      "failed_at": 1793705903
-    },
     "young man|||unfair": {
       "artist": "Young Man",
       "title": "Unfair",
@@ -4996,9 +4992,9 @@
   "__last_radio_key_mellow_mix": "taj mahal|||corinna",
   "__last_radio_key_big_sonic_heaven": "depeche mode & war child records|||universal soldier",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3036,
-  "__v146_spotify_budget_slot": 1793792190.3469937,
-  "__vuurland_active_playlist_count": 5065,
+  "__v116_fifo_next_sequence": 3037,
+  "__v146_spotify_budget_slot": 1793792313.2088041,
+  "__vuurland_active_playlist_count": 5066,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793789416,
@@ -9557,6 +9553,7 @@
     "paul spencer denman|||champagne charlie",
     "paul spencer denman|||hollywood",
     "paul spencer denman|||setting yourself up for love",
+    "paul weller|||broken stones",
     "paul weller|||you do something to me",
     "paul winter|||icarus",
     "paula cole|||where have all the cowboys gone?",
@@ -14669,6 +14666,7 @@
     "spotify:track:4MaTOuX0QlD6Tla2ig7X80",
     "spotify:track:4MfVzLDvwcaAAtYhRfPx8v",
     "spotify:track:4MiX7j4kYbWZlGOimqFvtE",
+    "spotify:track:4MoA4ktCpt7w59Wnk0V38H",
     "spotify:track:4MxHAB3fHQ8oI2jRXSLQ9p",
     "spotify:track:4MxzL8jmOxjconLzZGAs9z",
     "spotify:track:4MzySNjSdv9ZegSD13IVNV",
@@ -18252,6 +18250,7 @@
     "GBAQT9400064",
     "GBAQT9400066",
     "GBAQT9500046",
+    "GBAQT9500050",
     "GBARA9700034",
     "GBARA9700059",
     "GBARL0300528",
@@ -26843,7 +26842,8 @@
     "spotify:track:3roye2IJK1EWshYzqtbFHs": "GBAZP0700008",
     "spotify:track:4dyTKZwSAQaUPbkObgH7wW": "USTC30739458",
     "spotify:track:43Tr0Eot71fKdTkoJnGmG5": "USMRG1758404",
-    "spotify:track:0WH39BFVGotzXe3torfzvK": "GBCEL2100652"
+    "spotify:track:0WH39BFVGotzXe3torfzvK": "GBCEL2100652",
+    "spotify:track:4MoA4ktCpt7w59Wnk0V38H": "GBAQT9500050"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793791946,
@@ -32418,6 +32418,10 @@
     "beth gibbons|||floating on a moment": {
       "artist": "Beth Gibbons",
       "title": "Floating On A Moment"
+    },
+    "paul weller|||broken stones": {
+      "artist": "Paul Weller",
+      "title": "Broken Stones"
     }
   },
   "__v82_confirmed_catalog": {
@@ -39380,6 +39384,11 @@
       "uri": "spotify:track:0WH39BFVGotzXe3torfzvK",
       "artist": "Beth Gibbons",
       "title": "Floating On A Moment"
+    },
+    "paul weller|||broken stones": {
+      "uri": "spotify:track:4MoA4ktCpt7w59Wnk0V38H",
+      "artist": "Paul Weller",
+      "title": "Broken Stones"
     }
   },
   "__pending_library_likes": {},
@@ -51552,6 +51561,7 @@
       "paul simon|||loves me like a rock",
       "paul simon|||under african skies",
       "paul simon|||was a sunny day",
+      "paul weller|||broken stones",
       "paul winter|||icarus",
       "paula cole|||where have all the cowboys gone?",
       "pearl jam|||elderly woman behind the counter in a small town",
@@ -52774,6 +52784,7 @@
       "spotify:track:4MNYmTlgIA82YZorRH0HH9",
       "spotify:track:4MXCpUjTFXgbmANvLzdVVl",
       "spotify:track:4MiX7j4kYbWZlGOimqFvtE",
+      "spotify:track:4MoA4ktCpt7w59Wnk0V38H",
       "spotify:track:4MxHAB3fHQ8oI2jRXSLQ9p",
       "spotify:track:4NFWlQheNU7XvGkV653Y1N",
       "spotify:track:4OTdFcuAndBtoPJTsBIyQi",
@@ -53627,6 +53638,7 @@
       "GBANY9600096",
       "GBAQT9400058",
       "GBAQT9400064",
+      "GBAQT9500050",
       "GBARL0800262",
       "GBARL0901622",
       "GBARL1202014",
@@ -55869,7 +55881,8 @@
       "spotify:track:3roye2IJK1EWshYzqtbFHs": "GBAZP0700008",
       "spotify:track:4dyTKZwSAQaUPbkObgH7wW": "USTC30739458",
       "spotify:track:43Tr0Eot71fKdTkoJnGmG5": "USMRG1758404",
-      "spotify:track:0WH39BFVGotzXe3torfzvK": "GBCEL2100652"
+      "spotify:track:0WH39BFVGotzXe3torfzvK": "GBCEL2100652",
+      "spotify:track:4MoA4ktCpt7w59Wnk0V38H": "GBAQT9500050"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -56363,7 +56376,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the wombats|||emoticons",
+  "__last_radio_key_indie_select": "the national|||runaway",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -57226,5 +57239,6 @@
   "__match_v35__the national|||slow show": "spotify:track:3roye2IJK1EWshYzqtbFHs",
   "__match_v35__panda riot|||marker": "spotify:track:4dyTKZwSAQaUPbkObgH7wW",
   "__match_v35__allison crutchfield|||dean's room": "spotify:track:43Tr0Eot71fKdTkoJnGmG5",
-  "__match_v35__beth gibbons|||floating on a moment": "spotify:track:0WH39BFVGotzXe3torfzvK"
+  "__match_v35__beth gibbons|||floating on a moment": "spotify:track:0WH39BFVGotzXe3torfzvK",
+  "__match_v35__paul weller|||broken stones": "spotify:track:4MoA4ktCpt7w59Wnk0V38H"
 }
