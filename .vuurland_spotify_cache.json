@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793753888.3973458,
+  "__v150_next_spotify_round_at": 1793754009.4724915,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "men i trust|||carried away",
       "taylor swift feat bon iver|||exile",
       "sylvie kreusch|||hocus pocus",
       "the haunted youth|||wake up",
@@ -112,8 +113,7 @@
       "jamie woon|||shoulda",
       "dope lemon|||miami baby",
       "thomas azier|||year in a spiral",
-      "tamino|||crocodile",
-      "the war on drugs feat lucius|||i don't live here anymore"
+      "tamino|||crocodile"
     ],
     "mellow_mix": [
       "olivia rodrigo|||the book of love",
@@ -218,6 +218,7 @@
       "bob marley|||is this love"
     ],
     "big_sonic_heaven": [
+      "the knife|||the captain",
       "kristin hersh|||dark eyed junco",
       "cubzoa|||buckle up",
       "slowdive|||dagger",
@@ -316,8 +317,7 @@
       "moaning|||say something",
       "tricky|||because i don't know feat mitch sanders",
       "nation of language|||inept apollo",
-      "the verve|||sonnet",
-      "autour de lucie|||rouge invisible"
+      "the verve|||sonnet"
     ],
     "radio_x_chilled": [
       "catfish & the bottlemen|||kathleen acoustic",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793753878.1159165,
-    "mellow_mix": 1793753878.1210527,
-    "big_sonic_heaven": 1793753878.1248329,
-    "radio_x_chilled": 1793753878.1294138,
-    "dreampop_radio": 1793753878.1330752,
-    "indie_select": 1793753878.1371863
+    "vuurland": 1793753889.3130908,
+    "mellow_mix": 1793753889.3184185,
+    "big_sonic_heaven": 1793753889.450559,
+    "radio_x_chilled": 1793753889.4551175,
+    "dreampop_radio": 1793753889.4587467,
+    "indie_select": 1793753889.4626591
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2957,6 +2957,7 @@
       "the julies|||love is a treason",
       "the julies|||neon afterlife",
       "the julies|||teenage sadness feat memory stitches",
+      "the knife|||the captain",
       "the know|||143",
       "the know|||ncjc",
       "the know|||you",
@@ -4484,12 +4485,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "phosphene|||wire": {
-      "artist": "Phosphene",
-      "title": "Wire",
-      "source": "big_sonic_heaven",
-      "failed_at": 1793667466
-    },
     "simon & garfunkel|||for emily wherever i may find her live": {
       "artist": "Simon & Garfunkel",
       "title": "For Emily, Wherever I May Find Her (live)",
@@ -4651,13 +4646,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "taylor swift feat bon iver|||exile",
+  "__last_radio_key_vuurland": "men i trust|||carried away",
   "__last_radio_key_mellow_mix": "olivia rodrigo|||the book of love",
-  "__last_radio_key_big_sonic_heaven": "kristin hersh|||dark eyed junco",
+  "__last_radio_key_big_sonic_heaven": "the knife|||the captain",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 2594,
-  "__v146_spotify_budget_slot": 1793753768.6681957,
-  "__vuurland_active_playlist_count": 4801,
+  "__v116_fifo_next_sequence": 2596,
+  "__v146_spotify_budget_slot": 1793753889.8179321,
+  "__vuurland_active_playlist_count": 4802,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793752558,
@@ -8500,6 +8495,7 @@
     "mumford & sons|||conversation with my son (gangsters & angels)",
     "mumford & sons|||conversation with my son gangsters & angels",
     "mumford & sons|||i gave you all",
+    "mumford & sons|||lover of the light",
     "mumford & sons|||prizefighter",
     "mumford & sons|||thistle & weeds - recorded live at vrt/studio brussels",
     "mumford & sons|||white blank page",
@@ -15512,6 +15508,7 @@
     "spotify:track:758wEKVqfYopJIHYWdLVd4",
     "spotify:track:75Bc1mWdIfftfh2qCYpNxA",
     "spotify:track:75GyGLjB9yFLTVltUlDVKI",
+    "spotify:track:75HNSUVRXliIPSl0lIKl5F",
     "spotify:track:75JFxkI2RXiU7L9VXzMkle",
     "spotify:track:75JvmbqaE2BFD7oQon0NSb",
     "spotify:track:75Zy9VqBPciUEWJsE2SmSy",
@@ -18080,6 +18077,7 @@
     "GBUM71111621",
     "GBUM71200556",
     "GBUM71203509",
+    "GBUM71204772",
     "GBUM71205639",
     "GBUM71205660",
     "GBUM71205878",
@@ -25429,10 +25427,11 @@
     "spotify:track:4FgU62Hzx0KzJPHTQ7MRR5": "SEVUM1200112",
     "spotify:track:6MpyaUgutthEieLdLtMmVr": "GBCRL1100367",
     "spotify:track:5cfHy1VZ3SefVyhQvf6CYP": "GBCVZ1303281",
-    "spotify:track:6FpKzkGiwcrZGW5bzDQPHF": "USAT21003494"
+    "spotify:track:6FpKzkGiwcrZGW5bzDQPHF": "USAT21003494",
+    "spotify:track:75HNSUVRXliIPSl0lIKl5F": "GBUM71204772"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793753286,
+  "__v184_head_checked_at": 1793753890,
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793559322,
   "__match_v35__keren ann|||jardin d'hiver": "spotify:track:45gpJxviKRBsQo1lDZ03Xf",
@@ -29936,6 +29935,10 @@
     "the lonely forest|||coyote": {
       "artist": "The Lonely Forest",
       "title": "Coyote"
+    },
+    "mumford & sons|||lover of the light": {
+      "artist": "Mumford & Sons",
+      "title": "Lover of the Light"
     }
   },
   "__v82_confirmed_catalog": {
@@ -35563,6 +35566,11 @@
       "uri": "spotify:track:6FpKzkGiwcrZGW5bzDQPHF",
       "artist": "The Lonely Forest",
       "title": "Coyote"
+    },
+    "mumford & sons|||lover of the light": {
+      "uri": "spotify:track:75HNSUVRXliIPSl0lIKl5F",
+      "artist": "Mumford & Sons",
+      "title": "Lover of the Light"
     }
   },
   "__pending_library_likes": {},
@@ -47467,6 +47475,7 @@
       "mrcy|||man",
       "mt wolf|||tayrona",
       "mt wolf|||tayrona feat wilsen",
+      "mumford & sons|||lover of the light",
       "my bloody valentine|||swallow",
       "my morning jacket|||bermuda highway",
       "my morning jacket|||golden",
@@ -48846,6 +48855,7 @@
       "spotify:track:74B2wQWuE3dTb4B0OXqqaf",
       "spotify:track:74hfaAIdILyhGnoLewqHBQ",
       "spotify:track:75Bc1mWdIfftfh2qCYpNxA",
+      "spotify:track:75HNSUVRXliIPSl0lIKl5F",
       "spotify:track:75JFxkI2RXiU7L9VXzMkle",
       "spotify:track:75JvmbqaE2BFD7oQon0NSb",
       "spotify:track:779d9J67lU0cqZCBQ1MF1j",
@@ -49351,6 +49361,7 @@
       "GBUM71110209",
       "GBUM71111621",
       "GBUM71203509",
+      "GBUM71204772",
       "GBUM71404099",
       "GBUM71504053",
       "GBUM71504099",
@@ -50959,7 +50970,8 @@
       "spotify:track:4FgU62Hzx0KzJPHTQ7MRR5": "SEVUM1200112",
       "spotify:track:6MpyaUgutthEieLdLtMmVr": "GBCRL1100367",
       "spotify:track:5cfHy1VZ3SefVyhQvf6CYP": "GBCVZ1303281",
-      "spotify:track:6FpKzkGiwcrZGW5bzDQPHF": "USAT21003494"
+      "spotify:track:6FpKzkGiwcrZGW5bzDQPHF": "USAT21003494",
+      "spotify:track:75HNSUVRXliIPSl0lIKl5F": "GBUM71204772"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -52039,5 +52051,6 @@
   "__match_v35__shout out louds|||destroy": "spotify:track:4FgU62Hzx0KzJPHTQ7MRR5",
   "__match_v35__new order|||i'll stay with you": "spotify:track:6MpyaUgutthEieLdLtMmVr",
   "__match_v35__palma violets|||best of friends": "spotify:track:5cfHy1VZ3SefVyhQvf6CYP",
-  "__match_v35__the lonely forest|||coyote": "spotify:track:6FpKzkGiwcrZGW5bzDQPHF"
+  "__match_v35__the lonely forest|||coyote": "spotify:track:6FpKzkGiwcrZGW5bzDQPHF",
+  "__match_v35__mumford & sons|||lover of the light": "spotify:track:75HNSUVRXliIPSl0lIKl5F"
 }
