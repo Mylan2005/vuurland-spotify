@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793754735.6483552,
+  "__v150_next_spotify_round_at": 1793754856.5960963,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793754724.7338068,
-    "mellow_mix": 1793754724.8907042,
-    "big_sonic_heaven": 1793754724.8944976,
-    "radio_x_chilled": 1793754724.898978,
-    "dreampop_radio": 1793754724.9025493,
-    "indie_select": 1793754724.9064622
+    "vuurland": 1793754736.5645792,
+    "mellow_mix": 1793754736.5700266,
+    "big_sonic_heaven": 1793754736.5738342,
+    "radio_x_chilled": 1793754736.5783908,
+    "dreampop_radio": 1793754736.5820692,
+    "indie_select": 1793754736.5860994
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4662,8 +4662,8 @@
   "__last_radio_key_big_sonic_heaven": "home video|||the smoke",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2608,
-  "__v146_spotify_budget_slot": 1793754615.9188683,
-  "__vuurland_active_playlist_count": 4808,
+  "__v146_spotify_budget_slot": 1793754736.8689938,
+  "__vuurland_active_playlist_count": 4809,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793752558,
@@ -8344,6 +8344,7 @@
     "message to bears & will samson|||saola",
     "message to bears|||saola",
     "message to bears|||will samson|||saola",
+    "metric|||sick muse",
     "metronomy|||everything goes my way",
     "metronomy|||the bay",
     "metronomy|||the look",
@@ -13042,6 +13043,7 @@
     "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
     "spotify:track:2ubUxHP2XzxO2WmcF1dJCo",
     "spotify:track:2umTklGNx0IiiTFFVNZNlC",
+    "spotify:track:2uxLjFYEoQ7xsqfMPuwTQ9",
     "spotify:track:2vScOYL2g7842auB9YO6At",
     "spotify:track:2vy6F2C23RxlGJvbdA7NTq",
     "spotify:track:2wGwNMirSo326drCxmx42v",
@@ -16509,6 +16511,7 @@
     "CAQ110410503",
     "CAQ110410704",
     "CAR129200190",
+    "CARB70901902",
     "CASA71137567",
     "CAT241000217",
     "CAT247900171",
@@ -25463,7 +25466,8 @@
     "spotify:track:6SdAztAqklk1zAmUHhU4N7": "USRC11100043",
     "spotify:track:3V0ak0F8fLXmp3hYAEQKZH": "USSM11202626",
     "spotify:track:6K5waU14PdvY4fatne8kyq": "GBBKS0900317",
-    "spotify:track:4cSxNmx0URoaU1mRtZuHHO": "AULI00505470"
+    "spotify:track:4cSxNmx0URoaU1mRtZuHHO": "AULI00505470",
+    "spotify:track:2uxLjFYEoQ7xsqfMPuwTQ9": "CARB70901902"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793754495,
@@ -29998,6 +30002,10 @@
     "youth group|||shadowland": {
       "artist": "Youth Group",
       "title": "Shadowland"
+    },
+    "metric|||sick muse": {
+      "artist": "Metric",
+      "title": "Sick Muse"
     }
   },
   "__v82_confirmed_catalog": {
@@ -35660,6 +35668,11 @@
       "uri": "spotify:track:4cSxNmx0URoaU1mRtZuHHO",
       "artist": "Youth Group",
       "title": "Shadowland"
+    },
+    "metric|||sick muse": {
+      "uri": "spotify:track:2uxLjFYEoQ7xsqfMPuwTQ9",
+      "artist": "Metric",
+      "title": "Sick Muse"
     }
   },
   "__pending_library_likes": {},
@@ -47537,6 +47550,7 @@
       "men i trust|||carried away",
       "merci mercy|||into you",
       "meskerem mees|||joe",
+      "metric|||sick muse",
       "mgmt|||electric feel",
       "mich gerber|||haboob",
       "michael hedges|||aerial boundaries",
@@ -48424,6 +48438,7 @@
       "spotify:track:2u2TiCLF3tLU0QgcVoCFr2",
       "spotify:track:2uNZSqnOg41y055uqNbFkN",
       "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
+      "spotify:track:2uxLjFYEoQ7xsqfMPuwTQ9",
       "spotify:track:2vy6F2C23RxlGJvbdA7NTq",
       "spotify:track:2x5azqktaHxXvWXBUxtX5C",
       "spotify:track:2yOiPtgy4dLqdQvzIWWAZW",
@@ -49139,6 +49154,7 @@
       "CAQ110410503",
       "CAQ110410704",
       "CAR129200190",
+      "CARB70901902",
       "CAT241000217",
       "CAT247900171",
       "CAT247900176",
@@ -51084,7 +51100,8 @@
       "spotify:track:6SdAztAqklk1zAmUHhU4N7": "USRC11100043",
       "spotify:track:3V0ak0F8fLXmp3hYAEQKZH": "USSM11202626",
       "spotify:track:6K5waU14PdvY4fatne8kyq": "GBBKS0900317",
-      "spotify:track:4cSxNmx0URoaU1mRtZuHHO": "AULI00505470"
+      "spotify:track:4cSxNmx0URoaU1mRtZuHHO": "AULI00505470",
+      "spotify:track:2uxLjFYEoQ7xsqfMPuwTQ9": "CARB70901902"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -52171,5 +52188,6 @@
   "__match_v35__the strokes|||taken for a fool": "spotify:track:6SdAztAqklk1zAmUHhU4N7",
   "__match_v35__passion pit|||love is greed": "spotify:track:3V0ak0F8fLXmp3hYAEQKZH",
   "__match_v35__vampire weekend|||white sky": "spotify:track:6K5waU14PdvY4fatne8kyq",
-  "__match_v35__youth group|||shadowland": "spotify:track:4cSxNmx0URoaU1mRtZuHHO"
+  "__match_v35__youth group|||shadowland": "spotify:track:4cSxNmx0URoaU1mRtZuHHO",
+  "__match_v35__metric|||sick muse": "spotify:track:2uxLjFYEoQ7xsqfMPuwTQ9"
 }
