@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793798454.3840063,
+  "__v150_next_spotify_round_at": 1793798578.5736618,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -574,12 +574,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793798444.7433188,
-    "mellow_mix": 1793798444.745579,
-    "big_sonic_heaven": 1793798444.7473702,
-    "radio_x_chilled": 1793798444.7493138,
-    "dreampop_radio": 1793798444.750978,
-    "indie_select": 1793798444.9264474
+    "vuurland": 1793798458.5501866,
+    "mellow_mix": 1793798458.5524235,
+    "big_sonic_heaven": 1793798458.5541883,
+    "radio_x_chilled": 1793798458.5561352,
+    "dreampop_radio": 1793798458.5577939,
+    "indie_select": 1793798458.5597095
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5229,8 +5229,8 @@
   "__last_radio_key_big_sonic_heaven": "zabriskie|||stone temple",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3108,
-  "__v146_spotify_budget_slot": 1793798334.743215,
-  "__vuurland_active_playlist_count": 5105,
+  "__v146_spotify_budget_slot": 1793798458.9342353,
+  "__vuurland_active_playlist_count": 5106,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793796735,
@@ -11116,6 +11116,7 @@
     "the cure|||untitled",
     "the cure|||untitled - 2010 remaster",
     "the damned|||grimly fiendish",
+    "the decemberists|||a beginning song",
     "the decemberists|||carolina low",
     "the decemberists|||the crane wife 3",
     "the derek trucks band|||this sky",
@@ -12138,6 +12139,7 @@
     "spotify:track:022k1qYIMWV20yW7tjiBv5",
     "spotify:track:0240T0gP9w6xEgIciBrfVF",
     "spotify:track:026wpXkLAjImiWOzzcJBHj",
+    "spotify:track:02Bd8WXqxchkQFBRwo9XKG",
     "spotify:track:02DPSOj7dXlKBbKZ5BTSJj",
     "spotify:track:02KWhwsDjIX8ZXgBgK9kOP",
     "spotify:track:02VdHwnGhy5fTW2CTZkYsb",
@@ -22035,6 +22037,7 @@
     "USUM71405070",
     "USUM71405265",
     "USUM71415214",
+    "USUM71415220",
     "USUM71605849",
     "USUM71810639",
     "USUM71810947",
@@ -27240,7 +27243,8 @@
     "spotify:track:4ZsAfDIXltivHhnf3UrTHs": "GBAAW0202098",
     "spotify:track:0vTvkf24wkCG3DTKgoNnih": "GB77R1400028",
     "spotify:track:4xUDSGjehVdoEkaC62rsTL": "BEKE52500019",
-    "spotify:track:0aSO7isUeLhp7kGNVB9gTN": "QMYYE1100007"
+    "spotify:track:0aSO7isUeLhp7kGNVB9gTN": "QMYYE1100007",
+    "spotify:track:02Bd8WXqxchkQFBRwo9XKG": "USUM71415220"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793798089,
@@ -32979,6 +32983,10 @@
     "eastern conference champions|||offkilter": {
       "artist": "Eastern Conference Champions",
       "title": "Offkilter"
+    },
+    "the decemberists|||a beginning song": {
+      "artist": "The Decemberists",
+      "title": "A Beginning Song"
     }
   },
   "__v82_confirmed_catalog": {
@@ -40146,6 +40154,11 @@
       "uri": "spotify:track:0aSO7isUeLhp7kGNVB9gTN",
       "artist": "Eastern Conference Champions",
       "title": "Offkilter"
+    },
+    "the decemberists|||a beginning song": {
+      "uri": "spotify:track:02Bd8WXqxchkQFBRwo9XKG",
+      "artist": "The Decemberists",
+      "title": "A Beginning Song"
     }
   },
   "__pending_library_likes": {},
@@ -52626,6 +52639,7 @@
       "the cure|||open",
       "the cure|||to the sky",
       "the cure|||to wish impossible things",
+      "the decemberists|||a beginning song",
       "the decemberists|||carolina low",
       "the decemberists|||the crane wife 3",
       "the donnis trio|||tip of the tongue",
@@ -52863,6 +52877,7 @@
       "spotify:track:01K4zKU104LyJ8gMb7227B",
       "spotify:track:01uctxky5IDj8UQvdmcLIv",
       "spotify:track:026wpXkLAjImiWOzzcJBHj",
+      "spotify:track:02Bd8WXqxchkQFBRwo9XKG",
       "spotify:track:032kwZ9kg4yIaIPBOOIwlm",
       "spotify:track:042IWvSH6Hl3zL9texLQyM",
       "spotify:track:047MDCRIyB2TM7RaR1Yywu",
@@ -55429,6 +55444,7 @@
       "USUM71405070",
       "USUM71405265",
       "USUM71415214",
+      "USUM71415220",
       "USUM71605849",
       "USUM72217181",
       "USUM72307484",
@@ -56806,7 +56822,8 @@
       "spotify:track:4ZsAfDIXltivHhnf3UrTHs": "GBAAW0202098",
       "spotify:track:0vTvkf24wkCG3DTKgoNnih": "GB77R1400028",
       "spotify:track:4xUDSGjehVdoEkaC62rsTL": "BEKE52500019",
-      "spotify:track:0aSO7isUeLhp7kGNVB9gTN": "QMYYE1100007"
+      "spotify:track:0aSO7isUeLhp7kGNVB9gTN": "QMYYE1100007",
+      "spotify:track:02Bd8WXqxchkQFBRwo9XKG": "USUM71415220"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -58207,5 +58224,6 @@
   "__match_v35__george harrison|||isn't it a pity": "spotify:track:0vTvkf24wkCG3DTKgoNnih",
   "__not_found_v35__акульи слезы shark's tears|||бардак | mess": 1793798090,
   "__match_v35__ciska ciska|||biotope": "spotify:track:4xUDSGjehVdoEkaC62rsTL",
-  "__match_v35__eastern conference champions|||offkilter": "spotify:track:0aSO7isUeLhp7kGNVB9gTN"
+  "__match_v35__eastern conference champions|||offkilter": "spotify:track:0aSO7isUeLhp7kGNVB9gTN",
+  "__match_v35__the decemberists|||a beginning song": "spotify:track:02Bd8WXqxchkQFBRwo9XKG"
 }
