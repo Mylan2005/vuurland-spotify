@@ -6834,6 +6834,12 @@ def dkfm_vuurland_filter(tracks, station):
 
 
 def sync():
+    # NOODSTOP 2026-11-04: geen Spotify- of radiowerk en geen state-wijzigingen.
+    # Exitcode 86 laat ook een al lopende lange GitHub Actions-job stoppen
+    # zodra die bij de volgende ronde de nieuwste code van main ophaalt.
+    print("⏸️ Vuurland gepauzeerd op verzoek: geen nieuwe nummers, geen likes en geen state-aanpassingen.")
+    raise SystemExit(86)
+
     # Tijdelijke veilige stop: geen radio-/Spotify-aanvragen of state-wijzigingen.
     # Laat playlists, likes, wachtrijen en caches intact tot de nieuwe bronnen gekozen zijn.
     if not RADIO_SOURCE_ORDER:
