@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793754252.4002714,
+  "__v150_next_spotify_round_at": 1793754373.39242,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793754241.799756,
-    "mellow_mix": 1793754241.9602754,
-    "big_sonic_heaven": 1793754241.964173,
-    "radio_x_chilled": 1793754241.9687397,
-    "dreampop_radio": 1793754241.9724267,
-    "indie_select": 1793754241.9763823
+    "vuurland": 1793754253.3608768,
+    "mellow_mix": 1793754253.3663921,
+    "big_sonic_heaven": 1793754253.3702474,
+    "radio_x_chilled": 1793754253.374814,
+    "dreampop_radio": 1793754253.3785233,
+    "indie_select": 1793754253.3825552
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4654,8 +4654,8 @@
   "__last_radio_key_big_sonic_heaven": "the knife|||the captain",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 2599,
-  "__v146_spotify_budget_slot": 1793754132.671168,
-  "__vuurland_active_playlist_count": 4804,
+  "__v146_spotify_budget_slot": 1793754253.66758,
+  "__vuurland_active_playlist_count": 4805,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793752558,
@@ -10574,6 +10574,7 @@
     "the stranglers|||golden brown",
     "the stray birds|||dream in blue",
     "the streets|||dry your eyes",
+    "the strokes|||taken for a fool",
     "the sugarcubes|||coldsweat",
     "the sugarcubes|||delicious demon",
     "the sugarcubes|||deus",
@@ -15132,6 +15133,7 @@
     "spotify:track:6SRbUAMpKHSRAJ6XpZERJy",
     "spotify:track:6SWcMCO8k07ptNCxf3Vmij",
     "spotify:track:6SXy02aTZU3ysoGUixYCz0",
+    "spotify:track:6SdAztAqklk1zAmUHhU4N7",
     "spotify:track:6SmqbW0YnStyALTOQmPt8a",
     "spotify:track:6Sqg4nl7GHgAI8YA7eDrRA",
     "spotify:track:6T10XPeC9X5xEaD6tMcK6M",
@@ -20220,6 +20222,7 @@
     "USRC11000683",
     "USRC11000689",
     "USRC11000691",
+    "USRC11100043",
     "USRC11803680",
     "USRC11902238",
     "USRC12002678",
@@ -25439,7 +25442,8 @@
     "spotify:track:6FpKzkGiwcrZGW5bzDQPHF": "USAT21003494",
     "spotify:track:75HNSUVRXliIPSl0lIKl5F": "GBUM71204772",
     "spotify:track:0cAcMeVSCLDtCk9Oubgb41": "USJMZ1200057",
-    "spotify:track:5dYOZd1oZCdsldO7JQMdDx": "GBAHT1200724"
+    "spotify:track:5dYOZd1oZCdsldO7JQMdDx": "GBAHT1200724",
+    "spotify:track:6SdAztAqklk1zAmUHhU4N7": "USRC11100043"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793753890,
@@ -29958,6 +29962,10 @@
     "foals|||bad habit": {
       "artist": "Foals",
       "title": "Bad Habit"
+    },
+    "the strokes|||taken for a fool": {
+      "artist": "The Strokes",
+      "title": "Taken for a Fool"
     }
   },
   "__v82_confirmed_catalog": {
@@ -35600,6 +35608,11 @@
       "uri": "spotify:track:5dYOZd1oZCdsldO7JQMdDx",
       "artist": "Foals",
       "title": "Bad Habit"
+    },
+    "the strokes|||taken for a fool": {
+      "uri": "spotify:track:6SdAztAqklk1zAmUHhU4N7",
+      "artist": "The Strokes",
+      "title": "Taken for a Fool"
     }
   },
   "__pending_library_likes": {},
@@ -47857,6 +47870,7 @@
       "the stone roses|||shoot you down",
       "the stray birds|||dream in blue",
       "the streets|||dry your eyes",
+      "the strokes|||taken for a fool",
       "the sundays|||i feel",
       "the swell season|||low rising",
       "the telescopes|||vanishing lines",
@@ -48805,6 +48819,7 @@
       "spotify:track:6RKMuX0B1redBPXI7BW1nb",
       "spotify:track:6RZXoNtHnqKVqafp697FjK",
       "spotify:track:6SXy02aTZU3ysoGUixYCz0",
+      "spotify:track:6SdAztAqklk1zAmUHhU4N7",
       "spotify:track:6T10XPeC9X5xEaD6tMcK6M",
       "spotify:track:6TJTzEVtYciiZzPoywIQ3G",
       "spotify:track:6Tc6yNMsztFOG3qmxRZqEj",
@@ -49814,6 +49829,7 @@
       "USRC10700006",
       "USRC10700009",
       "USRC11000407",
+      "USRC11100043",
       "USRC12102920",
       "USRC12401214",
       "USRC12500402",
@@ -51008,7 +51024,8 @@
       "spotify:track:6FpKzkGiwcrZGW5bzDQPHF": "USAT21003494",
       "spotify:track:75HNSUVRXliIPSl0lIKl5F": "GBUM71204772",
       "spotify:track:0cAcMeVSCLDtCk9Oubgb41": "USJMZ1200057",
-      "spotify:track:5dYOZd1oZCdsldO7JQMdDx": "GBAHT1200724"
+      "spotify:track:5dYOZd1oZCdsldO7JQMdDx": "GBAHT1200724",
+      "spotify:track:6SdAztAqklk1zAmUHhU4N7": "USRC11100043"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -52091,5 +52108,6 @@
   "__match_v35__the lonely forest|||coyote": "spotify:track:6FpKzkGiwcrZGW5bzDQPHF",
   "__match_v35__mumford & sons|||lover of the light": "spotify:track:75HNSUVRXliIPSl0lIKl5F",
   "__match_v35__bloc party|||day four": "spotify:track:0cAcMeVSCLDtCk9Oubgb41",
-  "__match_v35__foals|||bad habit": "spotify:track:5dYOZd1oZCdsldO7JQMdDx"
+  "__match_v35__foals|||bad habit": "spotify:track:5dYOZd1oZCdsldO7JQMdDx",
+  "__match_v35__the strokes|||taken for a fool": "spotify:track:6SdAztAqklk1zAmUHhU4N7"
 }
