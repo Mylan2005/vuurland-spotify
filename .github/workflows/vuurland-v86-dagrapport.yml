@@ -1,12 +1,12 @@
 name: Vuurland dagelijks gezondheidsrapport
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '37 6 * * *'
+# Pauze 2026-11-04: ook het dagelijkse rapport niet meer automatisch uitvoeren.
 permissions:
   contents: read
 jobs:
   rapport:
+    if: ${{ false }}  # Gepauzeerd op verzoek.
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
