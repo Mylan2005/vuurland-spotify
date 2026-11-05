@@ -32,15 +32,29 @@ for artist, title in (
     ("Coldplay", "The Scientist"),
     ("Adele", "Someone Like You"),
     ("Billie Eilish", "Birds of a Feather"),
+    ("Kylie Minogue", "In My Arms"),
+    ("Sia", "Like a River Runs"),
+    ("Taylor Swift", "Cardigan"),
+    ("Ariana Grande", "We Can't Be Friends"),
+    ("The Weeknd", "Blinding Lights"),
+    ("Robyn", "Dancing On My Own"),
+    ("Coldplay", "My Universe"),
+    ("Coldplay", "Higher Power"),
+    ("Muse feat. Drake", "Supermassive Black Hole"),
+    ("The Weeknd & Kendrick Lamar", "Pray For Me"),
 ):
     assert dark_edge_reject_reason(artist, title) is None, (artist, title)
 
-# Nooit een onverwachte mainstream-, punk-, metal- of Roemeense artiest.
+# Gerichte EDM-/dance-, persoonlijke Dua Lipa-, punk-/metal- en taalblokkades.
 for artist, title in (
-    ("Kylie Minogue", "In My Arms"),
     ("Dua Lipa", "Levitating"),
-    ("Sia", "Like a River Runs"),
     ("Avicii", "Levels"),
+    ("David Guetta", "Titanium"),
+    ("Calvin Harris feat. Ellie Goulding", "Outside"),
+    ("Martin Garrix", "Animals"),
+    ("Tiësto", "The Business"),
+    ("Swedish House Mafia", "Don't You Worry Child"),
+    ("Alan Walker", "Faded"),
     ("The Offspring", "Self Esteem"),
     ("Metallica", "Enter Sandman"),
     ("Faith No More", "Motherfucker"),
@@ -48,10 +62,9 @@ for artist, title in (
     ("Robin and the Backstabbers", "Sat Dupa Sat"),
     ("Tati Falco", "Selva y mar"),
     ("Travka", "Distante"),
-    ("Muse feat. Drake", "Supermassive Black Hole"),
+    ("Muse feat. Avicii", "Supermassive Black Hole"),
     ("Kleerup & Robyn", "With Every Heartbeat"),
-    ("Coldplay", "My Universe"),
-    ("The Weeknd & Kendrick Lamar", "Pray For Me"),
+    ("Coldplay", "A Sky Full of Stars"),
     ("Eyedrops", "Culori Uitate"),
     ("Cred Ca Sunt Extraterestru", "Floare de maidan"),
 ):
@@ -72,7 +85,11 @@ for artist, title in (
 
 assert "muse" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "nothing but thieves" not in DARK_EDGE_BLOCKED_ARTISTS
-assert "kylie minogue" in DARK_EDGE_BLOCKED_ARTISTS
+assert "kylie minogue" not in DARK_EDGE_BLOCKED_ARTISTS
+assert "sia" not in DARK_EDGE_BLOCKED_ARTISTS
+assert "taylor swift" not in DARK_EDGE_BLOCKED_ARTISTS
+assert "avicii" in DARK_EDGE_BLOCKED_ARTISTS
+assert "calvin harris" in DARK_EDGE_BLOCKED_ARTISTS
 assert "dua lipa" in DARK_EDGE_BLOCKED_ARTISTS
 assert "adele" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "billie eilish" not in DARK_EDGE_BLOCKED_ARTISTS
@@ -89,6 +106,9 @@ ns = {
     "get_radiobox_tracks": lambda *args: [
         ("Muse", "Supermassive Black Hole"),
         ("Kylie Minogue", "In My Arms"),
+        ("Sia", "Like a River Runs"),
+        ("Avicii", "Levels"),
+        ("Dua Lipa", "Levitating"),
         ("Alexandru Andries", "Cea mai frumoasa zi"),
         ("Nothing But Thieves", "Real Love Song"),
         ("Muse", "Nu mai vreau"),
@@ -102,6 +122,8 @@ for name in ("dark_edge_track_allowed", "get_dark_edge_tracks"):
                  "<" + name + ">", "exec"), ns)
 assert ns["get_dark_edge_tracks"]() == [
     ("Muse", "Supermassive Black Hole"),
+    ("Kylie Minogue", "In My Arms"),
+    ("Sia", "Like a River Runs"),
     ("Nothing But Thieves", "Real Love Song"),
     ("Spinvis", "Ik wil alleen maar zwemmen"),
     ("New Indie Band", "Endless Reverie"),
@@ -122,5 +144,5 @@ assert 'sid == "dark_edge" and not dark_edge_track_allowed(artist, title)' in co
 assert '__dark_edge_strict_baseline_20261105' in sync_text
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 assert "max_additions_per_round = 1" in source
-print("✅ Dark Edge: 8 bronnen, geen artiestallowlist, pop-/metal-/punk-afwijzingen, NL toegestaan, queue- en Spotify-gates.")
+print("✅ Dark Edge: 8 bronnen; pop toegestaan, dance/EDM en Dua Lipa geblokkeerd; NL/EN en queue-/Spotify-gates behouden.")
 print("ℹ️ Genre en taal kunnen niet altijd uit RadioBox-metadata worden vastgesteld; dit is een risicofilter.")

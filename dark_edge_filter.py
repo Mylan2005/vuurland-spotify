@@ -1,8 +1,9 @@
 """Conservatieve Dark Edge Radio-filter: geen externe APIs of Spotify-aanvragen.
 
 Er is GEEN lijst meer met toegelaten artiesten: nieuwe indie-acts worden
-niet afgewezen omdat ze onbekend zijn. Wel weigeren we duidelijk ongewenste
-pop-, punk- en metalartiesten en herkenbare anderstalige titels.
+niet afgewezen omdat ze onbekend zijn. Popartiesten zijn op zichzelf
+toegestaan: alleen expliciet ongewenste artiesten, dance-/EDM-acts,
+punk/metal en herkenbare anderstalige titels worden geweerd.
 Nederlands en Engels mogen. Genre en gezongen taal zijn met alleen
 RadioBox-metadata niet waterdicht vast te stellen.
 """
@@ -10,35 +11,38 @@ RadioBox-metadata niet waterdicht vast te stellen.
 import re
 import unicodedata
 
-# Dit is uitsluitend een AFWIJSLIJST voor bekende, duidelijk niet-gewenste
-# pop-/dance-/punk-/metalacts. Nieuwe indie- en alternative-artiesten krijgen
-# normaal toegang zonder voorafgaande individuele goedkeuring.
-# Bij twijfel over een act niet automatisch op basis van naam of land blokkeren.
+# Geen algemene popblokkade: Adele, Billie Eilish, Sia, Kylie Minogue,
+# Taylor Swift enz. mogen via Dark Edge als hun nummers elders door de
+# bestaande matcher en taalcontroles geraken. De gebruiker beoordeelt
+# incidenteel minder passende popsongs zelf.
+# Gerichte blokkade van dance-/EDM-acts (zoals Avicii), een persoonlijke
+# uitzondering voor Dua Lipa, en bekende punk-/metalbands.
+# Exacte artiestnamen en expliciete featurings, geen fuzzy artiestmatching.
 DARK_EDGE_BLOCKED_ARTISTS = frozenset({
-    # Commerciele hitpop, urbanpop en dance uit o.a. RadioBox-historie.
-    "ariana grande", "avicii", "bebe rexha", "beyonce",
-    "black eyed peas", "bruno mars", "calvin harris", "camila cabello",
-    "charlie puth", "david guetta", "doja cat", "drake", "dua lipa",
-    "ed sheeran", "ellie goulding", "james blunt", "jason derulo",
-    "justin bieber", "katy perry", "kendrick lamar", "kleerup",
-    "kylie minogue", "lady gaga", "lily allen", "major lazer",
-    "maroon 5", "miley cyrus", "nicki minaj", "one direction",
-    "rihanna", "robin thicke", "robyn", "sam smith", "selena gomez",
-    "sia", "taylor swift", "the weeknd", "the chainsmokers",
-    "tom odell", "usher", "zara larsson",
-    # Punk, nu-metal en expliciet ongewenste stevige bands.
-    "blink-182", "bring me the horizon", "faith no more", "fall out boy", "five finger death punch",
-    "green day", "limp bizkit", "linkin park", "metallica", "megadeth",
-    "papa roach", "pantera", "rammstein", "slipknot", "sum 41",
-    "system of a down", "the offspring", "volbeat",
+    # Persoonlijke uitsluiting.
+    "dua lipa",
+    # Dance, EDM en mainstream festival-/club-DJ's.
+    "afrojack", "alan walker", "alesso", "armin van buuren",
+    "avicii", "axwell", "calvin harris", "david guetta",
+    "deadmau5", "diplo", "dj snake", "don diablo", "fisher",
+    "galantis", "hardwell", "ingrosso", "kleerup", "kygo",
+    "lost frequencies", "major lazer", "marshmello",
+    "martin garrix", "meduza", "robin schulz", "sigala",
+    "skrillex", "steve aoki", "swedish house mafia",
+    "the chainsmokers", "tiesto", "zedd",
+    # Punk, nu-metal en zware rock die niet bij de playlist passen.
+    "blink-182", "bring me the horizon", "faith no more",
+    "fall out boy", "five finger death punch", "green day",
+    "limp bizkit", "linkin park", "metallica", "megadeth",
+    "papa roach", "pantera", "rammstein", "slipknot",
+    "sum 41", "system of a down", "the offspring", "volbeat",
 })
 
-# Specifieke bekende mainstream-popsongs van verder gemengde rockbands
-# kunnen worden uitgesloten zonder hun hele oeuvre te blokkeren.
+# Enkel expliciet ongewenste nummers uitsluiten, niet het hele
+# (mogelijk popgerichte) oeuvre van een artiest. Avicii's productie
+# bij 'A Sky Full of Stars' is een uitgesproken dance/EDM-uitzondering.
 DARK_EDGE_BLOCKED_RECORDINGS = frozenset({
     ("coldplay", "a sky full of stars"),
-    ("coldplay", "my universe"),
-    ("coldplay", "higher power"),
     ("travka", "distante"),  # Bevestigde anderstalige titel uit de radiogeschiedenis.
 })
 
@@ -91,7 +95,7 @@ def dark_edge_reject_reason(artist, title):
     if a in DARK_EDGE_BLOCKED_ARTISTS or any(
         name.strip() in DARK_EDGE_BLOCKED_ARTISTS for name in credited
     ):
-        return "expliciet ongewenste pop-, punk- of metalartiest"
+        return "geblokkeerde dance-/EDM-, punk-/metalartiest of persoonlijke uitzondering"
     if (a, t) in DARK_EDGE_BLOCKED_RECORDINGS:
         return "expliciet uitgesloten opname"
     # Geen Griekse/Cyrillische/Arabische/CJK-tekens in titels.
