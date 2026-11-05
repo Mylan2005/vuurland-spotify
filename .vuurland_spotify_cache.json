@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793880911.2953753,
+  "__v150_next_spotify_round_at": 1793881036.279613,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -620,17 +620,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793880902.1009293,
-    "mellow_mix": 1793880902.1024911,
-    "big_sonic_heaven": 1793880902.103643,
-    "radio_x_chilled": 1793880902.1048634,
-    "dreampop_radio": 1793880902.1059966,
-    "indie_select": 1793880902.1072607,
-    "dkfm_edge": 1793880902.3017905,
+    "vuurland": 1793880916.2507842,
+    "mellow_mix": 1793880916.2523801,
+    "big_sonic_heaven": 1793880916.2534971,
+    "radio_x_chilled": 1793880916.254701,
+    "dreampop_radio": 1793880916.255782,
+    "indie_select": 1793880916.2570148,
+    "dkfm_edge": 1793880916.2582433,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793880902.5228822
+    "dark_edge": 1793880916.2595162
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6439,6 +6439,12 @@
       "title": "Bright Stars Burning",
       "source": "dreampop_radio",
       "failed_at": 1793867236
+    },
+    "dear euphoria|||falling behind": {
+      "artist": "Dear Euphoria",
+      "title": "Falling behind",
+      "source": "dreampop_radio",
+      "failed_at": 1793880917
     }
   },
   "__v51_radio_unmatched": {
@@ -6580,7 +6586,7 @@
   "__last_radio_key_big_sonic_heaven": "ideal host|||dust collector",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 4019,
-  "__v146_spotify_budget_slot": 1793880791.7835126,
+  "__v146_spotify_budget_slot": 1793880916.773866,
   "__vuurland_active_playlist_count": 5571,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -47551,7 +47557,7 @@
     "posies the|||last crawl": 3,
     "farao|||forces": 3,
     "hey marseilles|||bright stars burning": 3,
-    "dear euphoria|||falling behind": 2
+    "dear euphoria|||falling behind": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -47654,7 +47660,8 @@
     "equation|||hard underground": 1,
     "posies the|||last crawl": 1,
     "farao|||forces": 1,
-    "hey marseilles|||bright stars burning": 1
+    "hey marseilles|||bright stars burning": 1,
+    "dear euphoria|||falling behind": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -68395,5 +68402,6 @@
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
-  "__match_v35__uniforms|||semana satan": "spotify:track:0pTFGLZAHPhGUVqu7IExr7"
+  "__match_v35__uniforms|||semana satan": "spotify:track:0pTFGLZAHPhGUVqu7IExr7",
+  "__not_found_v35__dear euphoria|||falling behind": 1793880917
 }
