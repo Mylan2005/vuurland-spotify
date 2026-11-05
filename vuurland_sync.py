@@ -102,7 +102,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select")  # Zes live bronnen.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic")  # Negen live bronnen.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -6859,6 +6859,8 @@ def sync():
         "dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks, "__last_radio_key_dreampop_radio"),
         "indie_select": ("Indie Select", get_indie_select_tracks, "__last_radio_key_indie_select"),
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
+        "dkfm_shoegaze": ("DKFM Shoegaze Radio", get_dkfm_shoegaze_tracks, "__last_radio_key_dkfm_shoegaze"),
+        "dkfm_classic": ("DKFM Classic", get_dkfm_classic_tracks, "__last_radio_key_dkfm_classic"),
         "duyster": ("Duyster archief", lambda: [], "__last_radio_key_duyster"),
     }
     radio_sources = [
@@ -6981,6 +6983,15 @@ def sync():
         cache.setdefault("__v174_radio_snapshot_times", {}).pop("dkfm_edge", None)
         cache.setdefault("__v47_radio_discovered", {}).pop("dkfm_edge", None)
         cache["__v186_dkfm_edge_four_source_baseline"] = True
+        save_cache(cache)
+    # DKFM-reactivatie 2026-11-05: voor alle drie een verse nulmeting,
+    # zonder oude uitzendingen ineens aan de FIFO toe te voegen.
+    # Bestaande FIFO, historische Spotify-cache en likes intact laten.
+    if not cache.get("__v187_dkfm_three_reactivated_20261105"):
+        for dkfm_sid in ("dkfm_edge", "dkfm_shoegaze", "dkfm_classic"):
+            cache.setdefault("__v96_radio_snapshots", {}).pop(dkfm_sid, None)
+            cache.setdefault("__v174_radio_snapshot_times", {}).pop(dkfm_sid, None)
+        cache["__v187_dkfm_three_reactivated_20261105"] = True
         save_cache(cache)
     # Bij heractivering van Big Sonic Heaven eerst een verse nulmeting doen.
     # Laat bestaande FIFO, andere radiobronnen, playlist-cache en cooldowns intact.
