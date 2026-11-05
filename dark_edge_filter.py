@@ -27,7 +27,7 @@ DARK_EDGE_BLOCKED_ARTISTS = frozenset({
     "sia", "taylor swift", "the weeknd", "the chainsmokers",
     "tom odell", "usher", "zara larsson",
     # Punk, nu-metal en expliciet ongewenste stevige bands.
-    "blink-182", "bring me the horizon", "fall out boy", "five finger death punch",
+    "blink-182", "bring me the horizon", "faith no more", "fall out boy", "five finger death punch",
     "green day", "limp bizkit", "linkin park", "metallica", "megadeth",
     "papa roach", "pantera", "rammstein", "slipknot", "sum 41",
     "system of a down", "the offspring", "volbeat",
