@@ -16,7 +16,7 @@ import unicodedata
 # Bij twijfel over een act niet automatisch op basis van naam of land blokkeren.
 DARK_EDGE_BLOCKED_ARTISTS = frozenset({
     # Commerciele hitpop, urbanpop en dance uit o.a. RadioBox-historie.
-    "ariana grande", "avicii", "bebe rexha", "beyonce", "billie eilish",
+    "ariana grande", "avicii", "bebe rexha", "beyonce",
     "black eyed peas", "bruno mars", "calvin harris", "camila cabello",
     "charlie puth", "david guetta", "doja cat", "drake", "dua lipa",
     "ed sheeran", "ellie goulding", "james blunt", "jason derulo",
