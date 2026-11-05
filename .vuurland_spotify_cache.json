@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793870190.2008512,
+  "__v150_next_spotify_round_at": 1793870310.7977245,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -51,6 +51,7 @@
       "froukje|||we hebben de tijd"
     ],
     "mellow_mix": [
+      "sons of the east|||hold on",
       "spirit|||clear",
       "ben harper|||morning yearning",
       "the byrds|||all i really want to do",
@@ -85,6 +86,7 @@
       "the amazing rhythm aces|||dancing the night away"
     ],
     "big_sonic_heaven": [
+      "акульи слезы shark's tears|||бардак | mess",
       "the sundays|||love",
       "washed out|||running away",
       "encarta 98|||destello",
@@ -219,12 +221,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793870179.1269863,
-    "mellow_mix": 1793870179.1275187,
-    "big_sonic_heaven": 1793870179.1279056,
-    "radio_x_chilled": 1793870179.1282263,
-    "dreampop_radio": 1793870179.1285207,
-    "indie_select": 1793870179.2625344
+    "vuurland": 1793870190.6320214,
+    "mellow_mix": 1793870190.632572,
+    "big_sonic_heaven": 1793870190.7865975,
+    "radio_x_chilled": 1793870190.787098,
+    "dreampop_radio": 1793870190.7875395,
+    "indie_select": 1793870190.7880924
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5816,15 +5818,15 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "alt-j|||taro",
-  "__last_radio_key_mellow_mix": "spirit|||clear",
-  "__last_radio_key_big_sonic_heaven": "the sundays|||love",
+  "__last_radio_key_mellow_mix": "sons of the east|||hold on",
+  "__last_radio_key_big_sonic_heaven": "акульи слезы shark's tears|||бардак | mess",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3855,
-  "__v146_spotify_budget_slot": 1793870070.4524581,
-  "__vuurland_active_playlist_count": 5551,
+  "__v146_spotify_budget_slot": 1793870191.0557418,
+  "__vuurland_active_playlist_count": 5552,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v164_playlist_count_checked_at": 1793866506,
+  "__v164_playlist_count_checked_at": 1793870191,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -7068,6 +7070,7 @@
     "cat power|||stay",
     "cat power|||the greatest",
     "cat stevens|||father & son",
+    "cat stevens|||katmandu",
     "cat stevens|||moonshadow",
     "cate le bon & st vincent|||always the same (feat. st. vincent)",
     "cate le bon|||always the same",
@@ -13183,6 +13186,7 @@
     "spotify:track:02DNqgAg5jtr5BoaB8zmSC",
     "spotify:track:02DPSOj7dXlKBbKZ5BTSJj",
     "spotify:track:02KWhwsDjIX8ZXgBgK9kOP",
+    "spotify:track:02SItk7vCciMvQnbbkvQ7c",
     "spotify:track:02VdHwnGhy5fTW2CTZkYsb",
     "spotify:track:02lEk0PDwOaNLJe1trgkLu",
     "spotify:track:02oTzljg1obF5QWLu6tr3X",
@@ -21219,6 +21223,7 @@
     "GBUM71905250",
     "GBUM71905452",
     "GBUM71905725",
+    "GBUM71905959",
     "GBUM71905971",
     "GBUM71905972",
     "GBUM71906495",
@@ -29592,7 +29597,8 @@
     "spotify:track:214Cj6UAEJvq9rocjbXqK1": "GBUM71104658",
     "spotify:track:6vXmCs7pQtDAJGsEHnXkuR": "US58B0803001",
     "spotify:track:71J2rawCGulCAyTMtNY3Ej": "GBAFL1900405",
-    "spotify:track:5KChTqWwve2Z5JUE9AxJd9": "USUG12505425"
+    "spotify:track:5KChTqWwve2Z5JUE9AxJd9": "USUG12505425",
+    "spotify:track:02SItk7vCciMvQnbbkvQ7c": "GBUM71905959"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -37103,6 +37109,10 @@
     "kacey musgraves|||if the world burns down": {
       "artist": "Kacey Musgraves",
       "title": "If The World Burns Down"
+    },
+    "cat stevens|||katmandu": {
+      "artist": "Yusuf / Cat Stevens",
+      "title": "Katmandu"
     }
   },
   "__v82_confirmed_catalog": {
@@ -46485,6 +46495,11 @@
       "uri": "spotify:track:5KChTqWwve2Z5JUE9AxJd9",
       "artist": "Kacey Musgraves",
       "title": "If The World Burns Down"
+    },
+    "cat stevens|||katmandu": {
+      "uri": "spotify:track:02SItk7vCciMvQnbbkvQ7c",
+      "artist": "Yusuf / Cat Stevens",
+      "title": "Katmandu"
     }
   },
   "__pending_library_likes": {},
@@ -58626,6 +58641,7 @@
       "cat power|||breathless",
       "cat power|||stay",
       "cat stevens|||father & son",
+      "cat stevens|||katmandu",
       "cat stevens|||moonshadow",
       "catfish & the bottlemen|||kathleen",
       "catfish & the bottlemen|||kathleen acoustic",
@@ -60211,6 +60227,7 @@
       "spotify:track:026wpXkLAjImiWOzzcJBHj",
       "spotify:track:02Bd8WXqxchkQFBRwo9XKG",
       "spotify:track:02DNqgAg5jtr5BoaB8zmSC",
+      "spotify:track:02SItk7vCciMvQnbbkvQ7c",
       "spotify:track:02lEk0PDwOaNLJe1trgkLu",
       "spotify:track:02oTzljg1obF5QWLu6tr3X",
       "spotify:track:032kwZ9kg4yIaIPBOOIwlm",
@@ -62763,6 +62780,7 @@
       "GBUM71903002",
       "GBUM71903148",
       "GBUM71904248",
+      "GBUM71905959",
       "GBUM71905972",
       "GBUM71906495",
       "GBUM72000458",
@@ -65460,7 +65478,8 @@
       "spotify:track:214Cj6UAEJvq9rocjbXqK1": "GBUM71104658",
       "spotify:track:6vXmCs7pQtDAJGsEHnXkuR": "US58B0803001",
       "spotify:track:71J2rawCGulCAyTMtNY3Ej": "GBAFL1900405",
-      "spotify:track:5KChTqWwve2Z5JUE9AxJd9": "USUG12505425"
+      "spotify:track:5KChTqWwve2Z5JUE9AxJd9": "USUG12505425",
+      "spotify:track:02SItk7vCciMvQnbbkvQ7c": "GBUM71905959"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -67334,5 +67353,6 @@
   "__match_v35__bombay bicycle club|||how can you swallow so much sleep": "spotify:track:214Cj6UAEJvq9rocjbXqK1",
   "__match_v35__nik freitas|||sun down": "spotify:track:6vXmCs7pQtDAJGsEHnXkuR",
   "__match_v35__grimes|||delete forever": "spotify:track:71J2rawCGulCAyTMtNY3Ej",
-  "__match_v35__kacey musgraves|||if the world burns down": "spotify:track:5KChTqWwve2Z5JUE9AxJd9"
+  "__match_v35__kacey musgraves|||if the world burns down": "spotify:track:5KChTqWwve2Z5JUE9AxJd9",
+  "__match_v35__cat stevens|||katmandu": "spotify:track:02SItk7vCciMvQnbbkvQ7c"
 }
