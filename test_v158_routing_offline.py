@@ -1,4 +1,4 @@
-"""Regression: ten live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
+"""Regression: eight live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
 import ast
 from pathlib import Path
 
@@ -22,7 +22,7 @@ assert '"big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_trac
 assert '"radio_britannia": ("Radio Britannia", get_radio_britannia_tracks,' in body
 assert '"duyster": ("Duyster archief", lambda: [],' in body
 assert "duyster_archive.run(cache, live_queue, duyster_known, _v47_key)" not in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic", "radio_x_main")' in source
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge")' in source
 assert '"dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks,' in body
 assert '"indie_select": ("Indie Select", get_indie_select_tracks,' in body
 assert 'if item.get("source") == "indie_select" and indie_select_blocks_german(artist, title):' in body
@@ -48,7 +48,7 @@ assert '"radio_x_main": ("Radio X", get_radio_x_main_tracks,' in body
 assert '__v188_radio_x_main_baseline_20261105' in body
 assert 'RADIO_X_MAIN_ALLOWED_ARTISTS' in source
 assert 'RADIO_X_MAIN_SOURCE_URL' in source
-print("✅ Tien radiobronnen actief, inclusief Radio X en alle drie DKFM-zenders; Duyster uitgeschakeld.")
+print("✅ Acht bronnen actief: Dark Edge toegevoegd, Radio X main en twee DKFM-bronnen uit; Duyster uitgeschakeld.")
 
 assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
 
