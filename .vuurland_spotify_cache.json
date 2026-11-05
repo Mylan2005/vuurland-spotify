@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793857886.9530098,
+  "__v150_next_spotify_round_at": 1793858009.6905353,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -524,6 +524,7 @@
       "tomte|||du bist den ganzen weg gerannt"
     ],
     "indie_select": [
+      "younghearts|||this love",
       "the phenomenal handclap band|||15 to 20",
       "slow show|||strangers now",
       "the kills|||future starts slow",
@@ -622,17 +623,16 @@
       "the xx|||night time",
       "the album leaf|||stretched home",
       "the notwist|||pick up the phone",
-      "the xx|||intro",
-      "apparat|||bad kingdom lulu's version"
+      "the xx|||intro"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793857876.7988124,
-    "mellow_mix": 1793857876.8051405,
-    "big_sonic_heaven": 1793857876.9529366,
-    "radio_x_chilled": 1793857876.9579933,
-    "dreampop_radio": 1793857876.962041,
-    "indie_select": 1793857876.9666533
+    "vuurland": 1793857889.5114768,
+    "mellow_mix": 1793857889.517621,
+    "big_sonic_heaven": 1793857889.522353,
+    "radio_x_chilled": 1793857889.5272748,
+    "dreampop_radio": 1793857889.5312014,
+    "indie_select": 1793857889.6780682
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5747,6 +5747,7 @@
       "xtc|||love at first sight",
       "yeah yeah yeahs|||cheated hearts",
       "yeasayer|||o n e",
+      "younghearts|||this love",
       "youth group|||shadowland",
       "zeck|||more",
       "zoot woman|||just a friend of mine"
@@ -5937,6 +5938,12 @@
       "title": "Clear",
       "source": "mellow_mix",
       "failed_at": 1793856175
+    },
+    "owls of the swamp|||shelter": {
+      "artist": "Owls of the Swamp",
+      "title": "Shelter",
+      "source": "dreampop_radio",
+      "failed_at": 1793857891
     }
   },
   "__v51_radio_unmatched": {
@@ -6053,8 +6060,8 @@
   "__last_radio_key_mellow_mix": "jackson browne|||doctor my eyes",
   "__last_radio_key_big_sonic_heaven": "washed out|||waking up",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3741,
-  "__v146_spotify_budget_slot": 1793857767.3157804,
+  "__v116_fifo_next_sequence": 3742,
+  "__v146_spotify_budget_slot": 1793857890.5333042,
   "__vuurland_active_playlist_count": 5461,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -45752,7 +45759,7 @@
     "the canon logic|||avenue of criminals album version": 3,
     "lcd soundsystem|||losing my edge - lcd soundsystem": 3,
     "spirit|||clear": 3,
-    "owls of the swamp|||shelter": 2,
+    "owls of the swamp|||shelter": 3,
     "keeley|||the glitter and the glue tipler remix": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -45850,7 +45857,8 @@
     "no ceremony///|||awayfromhere feat james vincent mcmorrow": 1,
     "the canon logic|||avenue of criminals album version": 1,
     "lcd soundsystem|||losing my edge - lcd soundsystem": 1,
-    "spirit|||clear": 1
+    "spirit|||clear": 1,
+    "owls of the swamp|||shelter": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -64793,7 +64801,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the phenomenal handclap band|||15 to 20",
+  "__last_radio_key_indie_select": "younghearts|||this love",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -66086,5 +66094,6 @@
   "__match_v35__goo goo dolls|||iris": "spotify:track:6Qyc6fS4DsZjB2mRW9DsQs",
   "__match_v35__ryan sheridan|||all and more": "spotify:track:1d1bZNFm47wivtcJMLXt85",
   "__match_v35__janis ian|||at seventeen": "spotify:track:11pLh1SQkrbEPWUc1c7mEY",
-  "__match_v35__john mayer|||your body is a wonderland": "spotify:track:7vFv0yFGMJW3qVXbAd9BK9"
+  "__match_v35__john mayer|||your body is a wonderland": "spotify:track:7vFv0yFGMJW3qVXbAd9BK9",
+  "__not_found_v35__owls of the swamp|||shelter": 1793857891
 }
