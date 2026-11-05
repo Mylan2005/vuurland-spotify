@@ -1392,8 +1392,9 @@ def dark_edge_track_allowed(artist, title):
 
 
 def get_dark_edge_tracks():
-    # Geen vaste artiestentoelatingslijst; gerichte afwijzingen voor
-    # bekende pop/metal/punk en anderstalige (niet-NL/EN) titels.
+    # Pop mag; geen vaste artiestentoelatingslijst. Alleen gerichte
+    # dance/EDM- en punk/metal-uitsluitingen, Dua Lipa en andere talen
+    # dan NL/EN blokkeren waar de titel voldoende bewijs biedt.
     # Geen extra Spotify-/AI-API-calls.
     # De zenderjingle blijft ook uit de RadioBox-resultaten.
     raw = get_radiobox_tracks(
@@ -6250,7 +6251,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
             if sid == "dark_edge" and not dark_edge_track_allowed(artist, title):
-                reason = "Dark Edge: ongewenste pop/punk/metal of anderstalige titel"
+                reason = "Dark Edge: dance/EDM, Dua Lipa, punk/metal of anderstalige titel"
             elif key in seen_this_scan:
                 reason = "herhaling binnen deze bronmeting"
             else:
