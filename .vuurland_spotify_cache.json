@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793911539.4686627,
+  "__v150_next_spotify_round_at": 1793911662.502937,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793911529.7474916,
-    "mellow_mix": 1793911529.8806403,
-    "big_sonic_heaven": 1793911529.8828177,
-    "radio_x_chilled": 1793911529.8851643,
-    "dreampop_radio": 1793911529.887297,
-    "indie_select": 1793911529.8895807,
-    "dkfm_edge": 1793911529.8918774,
+    "vuurland": 1793911542.4707425,
+    "mellow_mix": 1793911542.4735322,
+    "big_sonic_heaven": 1793911542.4758697,
+    "radio_x_chilled": 1793911542.478355,
+    "dreampop_radio": 1793911542.4805949,
+    "indie_select": 1793911542.48306,
+    "dkfm_edge": 1793911542.485436,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793911529.8943093
+    "dark_edge": 1793911542.4879754
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7335,6 +7335,12 @@
       "title": "Don't Wanna Know 'bout Evil",
       "source": "mellow_mix",
       "failed_at": 1793909703
+    },
+    "oscar lopez|||bolero amor": {
+      "artist": "Oscar Lopez",
+      "title": "Bolero Amor",
+      "source": "mellow_mix",
+      "failed_at": 1793911543
     }
   },
   "__v51_radio_unmatched": {
@@ -7524,7 +7530,7 @@
   "__last_radio_key_big_sonic_heaven": "pete international airport|||tic tac feat rachel goswell",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 4553,
-  "__v146_spotify_budget_slot": 1793911419.8080456,
+  "__v146_spotify_budget_slot": 1793911542.8471496,
   "__vuurland_active_playlist_count": 5772,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -50290,7 +50296,7 @@
     "mandolin orange|||mandolin orange / daylight": 3,
     "editors|||editors - the back room - 05 - all sparks": 3,
     "beth orton|||don't wanna know 'bout evil": 3,
-    "oscar lopez|||bolero amor": 2
+    "oscar lopez|||bolero amor": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -50403,7 +50409,8 @@
     "robin guthrie|||under two blue stars": 1,
     "mandolin orange|||mandolin orange / daylight": 1,
     "editors|||editors - the back room - 05 - all sparks": 1,
-    "beth orton|||don't wanna know 'bout evil": 1
+    "beth orton|||don't wanna know 'bout evil": 1,
+    "oscar lopez|||bolero amor": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -72170,5 +72177,6 @@
   "__match_v35__r missing|||supermuted": "spotify:track:7EBIuW6eFsrDyllMk4PLmS",
   "__match_v35__turin brakes|||goodbye": "spotify:track:0yxUeQ6cFPR2gjrlN73zvj",
   "__match_v35__michael kiwanuka|||i'll get along": "spotify:track:2QIvd2Uow99gv5kBBbtf3y",
-  "__match_v35__shed seven|||chasing rainbows": "spotify:track:4IFC2bM8SquqQYOu9tiQ8C"
+  "__match_v35__shed seven|||chasing rainbows": "spotify:track:4IFC2bM8SquqQYOu9tiQ8C",
+  "__not_found_v35__oscar lopez|||bolero amor": 1793911543
 }
