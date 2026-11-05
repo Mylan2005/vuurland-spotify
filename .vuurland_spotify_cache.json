@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793906524.1763608,
+  "__v150_next_spotify_round_at": 1793906646.460519,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -821,6 +821,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "andy shauf|||the worst in you",
       "suede|||everything will flow",
       "the magic gang|||somebody like you",
       "saint raymond|||right way round",
@@ -919,22 +920,21 @@
       "jakob|||all your love",
       "bad sounds|||i feel",
       "charlie winston|||tongue tied",
-      "the lumineers|||ho hey",
-      "sam smith|||money on my mind"
+      "the lumineers|||ho hey"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793906514.3105285,
-    "mellow_mix": 1793906514.3131351,
-    "big_sonic_heaven": 1793906514.3152564,
-    "radio_x_chilled": 1793906514.3174777,
-    "dreampop_radio": 1793906514.3195693,
-    "indie_select": 1793906514.3217688,
-    "dkfm_edge": 1793906514.3239818,
+    "vuurland": 1793906526.3038628,
+    "mellow_mix": 1793906526.3064318,
+    "big_sonic_heaven": 1793906526.3085396,
+    "radio_x_chilled": 1793906526.3107615,
+    "dreampop_radio": 1793906526.312829,
+    "indie_select": 1793906526.3149838,
+    "dkfm_edge": 1793906526.317144,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793906514.326344
+    "dark_edge": 1793906526.447571
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6864,6 +6864,7 @@
       "alternosfera|||singuratate",
       "ana coman|||contratimp",
       "anders|||i wish you were mine",
+      "andy shauf|||the worst in you",
       "angus & julia stone|||wherever you are",
       "apparat|||dawan",
       "aquilo|||silhouette",
@@ -7078,12 +7079,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "акульи слезы shark's tears|||дождь | rain": {
-      "artist": "акульи слёзы (shark's tears)",
-      "title": "дождь | rain",
-      "source": "big_sonic_heaven",
-      "failed_at": 1793820038
-    },
     "hyper nova|||with you": {
       "artist": "Hyper Nova",
       "title": "With You",
@@ -7239,6 +7234,12 @@
       "title": "Under Two Blue Stars",
       "source": "big_sonic_heaven",
       "failed_at": 1793905053
+    },
+    "mandolin orange|||mandolin orange / daylight": {
+      "artist": "Mandolin Orange",
+      "title": "Mandolin Orange / Daylight",
+      "source": "dreampop_radio",
+      "failed_at": 1793906527
     }
   },
   "__v51_radio_unmatched": {
@@ -7419,8 +7420,8 @@
   "__last_radio_key_mellow_mix": "supertramp|||give a little bit",
   "__last_radio_key_big_sonic_heaven": "della zyr|||following her to no particular sunrise",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 4473,
-  "__v146_spotify_budget_slot": 1793906404.5093918,
+  "__v116_fifo_next_sequence": 4475,
+  "__v146_spotify_budget_slot": 1793906526.8747346,
   "__vuurland_active_playlist_count": 5743,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -50067,7 +50068,7 @@
     "cosmonaut|||say what you want - cosmonaut": 3,
     "tiesto feat kele okereke|||it's not the things you say - tiesto feat kele okereke": 3,
     "robin guthrie|||under two blue stars": 3,
-    "mandolin orange|||mandolin orange / daylight": 2
+    "mandolin orange|||mandolin orange / daylight": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -50177,7 +50178,8 @@
     "polar|||bipolar dream": 1,
     "cosmonaut|||say what you want - cosmonaut": 1,
     "tiesto feat kele okereke|||it's not the things you say - tiesto feat kele okereke": 1,
-    "robin guthrie|||under two blue stars": 1
+    "robin guthrie|||under two blue stars": 1,
+    "mandolin orange|||mandolin orange / daylight": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -71611,7 +71613,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "suede|||everything will flow",
+  "__last_radio_key_dark_edge": "andy shauf|||the worst in you",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -71796,5 +71798,6 @@
   "__match_v35__al green|||take me to the river": "spotify:track:62r1CS9zL1FL5Ilb7hLX7n",
   "__match_v35__bat for lashes|||joe's dream": "spotify:track:3PHcqdBuTzTXKry2c5PcCM",
   "__match_v35__cocteau twins|||a kissed out red floatboat": "spotify:track:4QsKqWO5pmbiuavCT1HNPn",
-  "__match_v35__the sisters of mercy|||heartland": "spotify:track:41YXZ3medfYHpNpjTXrmAm"
+  "__match_v35__the sisters of mercy|||heartland": "spotify:track:41YXZ3medfYHpNpjTXrmAm",
+  "__not_found_v35__mandolin orange|||mandolin orange / daylight": 1793906527
 }
