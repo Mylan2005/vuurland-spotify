@@ -3,6 +3,7 @@
 Geen netwerk-/Spotify-aanvragen, geen toestandwijzigingen.
 """
 import ast
+import re
 from pathlib import Path
 
 from dark_edge_filter import dark_edge_reject_reason, DARK_EDGE_BLOCKED_ARTISTS
@@ -100,8 +101,9 @@ assert dark_edge_reject_reason("Unknown Indie Artist", "Mijn hart") is None
 # Test echte intakeroute met gesimuleerde RadioBox-resultaten.
 ns = {
     "dark_edge_reject_reason": dark_edge_reject_reason,
-    "v140_is_unwanted_language_title": lambda title, artist: title == "global-language-block",
-    "v131_block_nonlatin_east_asian": lambda artist, title: False,
+    "re": re,
+    "v140_is_unwanted_language_title": lambda title, artist: title in {"global-language-block", "Ich liebe dich", "Nu mai vreau"},
+    "v131_block_nonlatin_east_asian": lambda artist, title: title == "Привет",
     "DARK_EDGE_SOURCE_URL": "https://example.invalid/",
     "get_radiobox_tracks": lambda *args: [
         ("Muse", "Supermassive Black Hole"),
@@ -115,9 +117,13 @@ ns = {
         ("Spinvis", "Ik wil alleen maar zwemmen"),
         ("New Indie Band", "Endless Reverie"),
         ("Muse", "global-language-block"),
+        ("Sigur Rós", "Ich liebe dich"),
+        ("Ólafur Arnalds", "Nu mai vreau"),
+        ("Cocteau Twins", "Привет"),
+        ("Sigur Rós feat. Avicii", "Nu mai vreau"),
     ],
 }
-for name in ("dark_edge_track_allowed", "get_dark_edge_tracks"):
+for name in ("v190_is_language_exempt_artist", "dark_edge_track_allowed", "get_dark_edge_tracks"):
     exec(compile(ast.Module(body=[functions[name]], type_ignores=[]),
                  "<" + name + ">", "exec"), ns)
 assert ns["get_dark_edge_tracks"]() == [
@@ -127,12 +133,21 @@ assert ns["get_dark_edge_tracks"]() == [
     ("Nothing But Thieves", "Real Love Song"),
     ("Spinvis", "Ik wil alleen maar zwemmen"),
     ("New Indie Band", "Endless Reverie"),
+    ("Sigur Rós", "Ich liebe dich"),
+    ("Ólafur Arnalds", "Nu mai vreau"),
+    ("Cocteau Twins", "Привет"),
 ]
 
 order = next(node.value for node in tree.body
              if isinstance(node, ast.Assign)
              and any(isinstance(t, ast.Name) and t.id == "RADIO_SOURCE_ORDER"
                      for t in node.targets))
+assert ns["v190_is_language_exempt_artist"]("Sigur Ros")
+assert ns["v190_is_language_exempt_artist"]("Olafur Arnalds")
+assert ns["v190_is_language_exempt_artist"]("Cocteau Twins feat Harold Budd")
+assert not ns["v190_is_language_exempt_artist"]("Sigur Ros Tribute")
+assert not ns["v190_is_language_exempt_artist"]("Avicii feat Sigur Ros")
+assert not ns["dark_edge_track_allowed"]("Sigur Rós feat. Avicii", "Nu mai vreau")
 assert len(ast.literal_eval(order)) == 8
 assert ast.literal_eval(order)[-1] == "dark_edge"
 sync_text = ast.get_source_segment(source, functions["sync"])
