@@ -39,6 +39,7 @@ DARK_EDGE_BLOCKED_RECORDINGS = frozenset({
     ("coldplay", "a sky full of stars"),
     ("coldplay", "my universe"),
     ("coldplay", "higher power"),
+    ("travka", "distante"),  # Bevestigde anderstalige titel uit de radiogeschiedenis.
 })
 
 # Alleen duidelijke meertalige zinsdelen, niet korte ambigue woorden als
@@ -63,11 +64,13 @@ _NON_ENGLISH_PHRASES = (
     r"\b(?:te\s+quiero|no\s+te|yo\s+(?:soy|quiero|tengo)|mi\s+corazon|sin\s+ti|la\s+vida|el\s+amor|me\s+gusta|buenas\s+noches)\b",
     r"\b(?:selva\s+y\s+mar|para\s+ti|por\s+que)\b",
     # Italiaans/Portugees
-    r"\b(?:ti\s+amo|io\s+(?:sono|voglio)|senza\s+te|per\s+sempre|il\s+mio|la\s+mia|eu\s+(?:sou|quero)|nao\s+(?:sei|quero)|meu\s+amor|voce\s+e)\b",
+    r"\b(?:ti\s+(?:amo|voglio)|io\s+(?:sono|voglio)|senza\s+te|per\s+sempre|il\s+mio|la\s+mia|eu\s+(?:sou|quero)|nao\s+(?:sei|quero)|meu\s+amor|voce\s+e)\b",
 )
 
 def _key(value):
-    return " ".join(unicodedata.normalize("NFKC", str(value or "")).casefold().split())
+    value = unicodedata.normalize("NFKD", str(value or "").casefold())
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    return " ".join(value.split())
 
 
 def dark_edge_reject_reason(artist, title):
