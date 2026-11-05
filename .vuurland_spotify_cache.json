@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793885925.4094856,
+  "__v150_next_spotify_round_at": 1793886051.3402631,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -785,17 +785,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793885916.7081335,
-    "mellow_mix": 1793885916.7103117,
-    "big_sonic_heaven": 1793885916.7118464,
-    "radio_x_chilled": 1793885916.7136528,
-    "dreampop_radio": 1793885916.7152905,
-    "indie_select": 1793885916.717084,
-    "dkfm_edge": 1793885916.7188313,
+    "vuurland": 1793885931.3036828,
+    "mellow_mix": 1793885931.3059633,
+    "big_sonic_heaven": 1793885931.3077095,
+    "radio_x_chilled": 1793885931.3096724,
+    "dreampop_radio": 1793885931.3114512,
+    "indie_select": 1793885931.313372,
+    "dkfm_edge": 1793885931.3151953,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793885916.720805
+    "dark_edge": 1793885931.317328
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6849,8 +6849,8 @@
   "__last_radio_key_big_sonic_heaven": "deary|||baby's breath",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 4119,
-  "__v146_spotify_budget_slot": 1793885805.908585,
-  "__vuurland_active_playlist_count": 5603,
+  "__v146_spotify_budget_slot": 1793885931.8589675,
+  "__vuurland_active_playlist_count": 5604,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793883922,
@@ -9170,6 +9170,7 @@
     "fontaines d c|||oh such a spring",
     "fontaines d c|||one",
     "fontaines d c|||rosalia|||where is gone?",
+    "fontaines d c|||starburster",
     "fontaines d c|||where is gone?",
     "foo fighters|||aurora",
     "foo fighters|||big me",
@@ -14351,6 +14352,7 @@
     "spotify:track:09kKoIXQgBJMY3nGQN4IMB",
     "spotify:track:09m3bHw8IuxFJMfbj4JCEJ",
     "spotify:track:09pw6KgtHmleKtlE3u9JoH",
+    "spotify:track:09ttHg3ZNVgDlYBZa1ZBw0",
     "spotify:track:09tv20euln883gMT36Agpr",
     "spotify:track:09uY5LeSXSPKKH4LxI7byG",
     "spotify:track:09wgaiTbBRtfvDYLvKjIZm",
@@ -21548,6 +21550,7 @@
     "GBBKS2300198",
     "GBBKS2300199",
     "GBBKS2300345",
+    "GBBKS2400079",
     "GBBKS2400191",
     "GBBKS2400372",
     "GBBKS2600150",
@@ -30817,7 +30820,8 @@
     "spotify:track:1vqU5iA5DqkDmEO4YyKOZD": "USVG21203053",
     "spotify:track:3KR8duF1o4j2Mob4CD6agO": "FRY029800015",
     "spotify:track:6ZihpHx7gL4ZfM8T92VCUq": "GBDCA1101897",
-    "spotify:track:5H7PvgENZHanmlrJyolIzK": "QMAN91400003"
+    "spotify:track:5H7PvgENZHanmlrJyolIzK": "QMAN91400003",
+    "spotify:track:09ttHg3ZNVgDlYBZa1ZBw0": "GBBKS2400079"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -38524,6 +38528,10 @@
     "sea wolf|||bergamot morning": {
       "artist": "Sea Wolf",
       "title": "Bergamot Morning"
+    },
+    "fontaines d c|||starburster": {
+      "artist": "Fontaines D.C.",
+      "title": "Starburster"
     }
   },
   "__v82_confirmed_catalog": {
@@ -48151,6 +48159,11 @@
       "uri": "spotify:track:5H7PvgENZHanmlrJyolIzK",
       "artist": "Sea Wolf",
       "title": "Bergamot Morning"
+    },
+    "fontaines d c|||starburster": {
+      "uri": "spotify:track:09ttHg3ZNVgDlYBZa1ZBw0",
+      "artist": "Fontaines D.C.",
+      "title": "Starburster"
     }
   },
   "__pending_library_likes": {},
@@ -60600,6 +60613,7 @@
       "foals|||birch tree",
       "foals|||london thunder",
       "fontaines d c|||one",
+      "fontaines d c|||starburster",
       "foo fighters|||aurora",
       "foo fighters|||big me",
       "foo fighters|||home",
@@ -61962,6 +61976,7 @@
       "spotify:track:096O9QxDBQ1xPIyLskGwbq",
       "spotify:track:09dYenMs0WXWh0pAAtd9Zd",
       "spotify:track:09m3bHw8IuxFJMfbj4JCEJ",
+      "spotify:track:09ttHg3ZNVgDlYBZa1ZBw0",
       "spotify:track:0A8wBeyIeHxulPkhyCtJQz",
       "spotify:track:0AV4GhGeGCVJphsMTxDWdE",
       "spotify:track:0AjcdGri5vhJsmZnduCEqd",
@@ -64281,6 +64296,7 @@
       "GBBKS1300090",
       "GBBKS2300158",
       "GBBKS2300345",
+      "GBBKS2400079",
       "GBBKS9900093",
       "GBBLK0000231",
       "GBBLK0100001",
@@ -67327,7 +67343,8 @@
       "spotify:track:1vqU5iA5DqkDmEO4YyKOZD": "USVG21203053",
       "spotify:track:3KR8duF1o4j2Mob4CD6agO": "FRY029800015",
       "spotify:track:6ZihpHx7gL4ZfM8T92VCUq": "GBDCA1101897",
-      "spotify:track:5H7PvgENZHanmlrJyolIzK": "QMAN91400003"
+      "spotify:track:5H7PvgENZHanmlrJyolIzK": "QMAN91400003",
+      "spotify:track:09ttHg3ZNVgDlYBZa1ZBw0": "GBBKS2400079"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -69260,5 +69277,6 @@
   "__match_v35__rene aubry|||la grande cascade": "spotify:track:3KR8duF1o4j2Mob4CD6agO",
   "__match_v35__we were promised jetpacks|||act on impulse": "spotify:track:6ZihpHx7gL4ZfM8T92VCUq",
   "__match_v35__xymox|||imagination": "spotify:track:6YVKkyrX3PkBcr5AaxrCWw",
-  "__match_v35__sea wolf|||bergamot morning": "spotify:track:5H7PvgENZHanmlrJyolIzK"
+  "__match_v35__sea wolf|||bergamot morning": "spotify:track:5H7PvgENZHanmlrJyolIzK",
+  "__match_v35__fontaines d c|||starburster": "spotify:track:09ttHg3ZNVgDlYBZa1ZBw0"
 }
