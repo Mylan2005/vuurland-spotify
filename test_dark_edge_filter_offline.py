@@ -104,6 +104,7 @@ ns = {
     "re": re,
     "v140_is_unwanted_language_title": lambda title, artist: title in {"global-language-block", "Ich liebe dich", "Nu mai vreau"},
     "v131_block_nonlatin_east_asian": lambda artist, title: title == "Привет",
+    "v191_is_german_vocal_risk": lambda artist, title: title == "Ich liebe dich",
     "DARK_EDGE_SOURCE_URL": "https://example.invalid/",
     "get_radiobox_tracks": lambda *args: [
         ("Muse", "Supermassive Black Hole"),
@@ -118,6 +119,7 @@ ns = {
         ("New Indie Band", "Endless Reverie"),
         ("Muse", "global-language-block"),
         ("Sigur Rós", "Ich liebe dich"),
+        ("Sigur Rós", "Inní mér syngur vitleysingur"),
         ("Ólafur Arnalds", "Nu mai vreau"),
         ("Cocteau Twins", "Привет"),
         ("Sigur Rós feat. Avicii", "Nu mai vreau"),
@@ -133,7 +135,7 @@ assert ns["get_dark_edge_tracks"]() == [
     ("Nothing But Thieves", "Real Love Song"),
     ("Spinvis", "Ik wil alleen maar zwemmen"),
     ("New Indie Band", "Endless Reverie"),
-    ("Sigur Rós", "Ich liebe dich"),
+    ("Sigur Rós", "Inní mér syngur vitleysingur"),
     ("Ólafur Arnalds", "Nu mai vreau"),
     ("Cocteau Twins", "Привет"),
 ]
@@ -148,6 +150,8 @@ assert ns["v190_is_language_exempt_artist"]("Cocteau Twins feat Harold Budd")
 assert not ns["v190_is_language_exempt_artist"]("Sigur Ros Tribute")
 assert not ns["v190_is_language_exempt_artist"]("Avicii feat Sigur Ros")
 assert not ns["dark_edge_track_allowed"]("Sigur Rós feat. Avicii", "Nu mai vreau")
+assert not ns["dark_edge_track_allowed"]("Sigur Rós", "Ich liebe dich")
+assert ns["dark_edge_track_allowed"]("Sigur Rós", "Inní mér syngur vitleysingur")
 assert len(ast.literal_eval(order)) == 8
 assert ast.literal_eval(order)[-1] == "dark_edge"
 sync_text = ast.get_source_segment(source, functions["sync"])
