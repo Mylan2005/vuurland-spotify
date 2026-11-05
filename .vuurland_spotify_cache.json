@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793869433.661205,
+  "__v150_next_spotify_round_at": 1793869554.461692,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -200,12 +200,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793869423.006047,
-    "mellow_mix": 1793869423.0065634,
-    "big_sonic_heaven": 1793869423.0069458,
-    "radio_x_chilled": 1793869423.0072346,
-    "dreampop_radio": 1793869423.0075057,
-    "indie_select": 1793869423.1236782
+    "vuurland": 1793869434.44963,
+    "mellow_mix": 1793869434.4501677,
+    "big_sonic_heaven": 1793869434.4505508,
+    "radio_x_chilled": 1793869434.4508486,
+    "dreampop_radio": 1793869434.4511452,
+    "indie_select": 1793869434.4515033
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5791,8 +5791,8 @@
   "__last_radio_key_big_sonic_heaven": "poster paints|||falling hard",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3847,
-  "__v146_spotify_budget_slot": 1793869313.910188,
-  "__vuurland_active_playlist_count": 5545,
+  "__v146_spotify_budget_slot": 1793869434.7386105,
+  "__vuurland_active_playlist_count": 5546,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793866506,
@@ -8486,6 +8486,7 @@
     "hooverphonic|||visions - single edit",
     "horse jumper of love|||wink",
     "hot chip|||boy from school",
+    "hot chip|||let me be him",
     "hot tuna|||water song",
     "howie day|||ghost",
     "howling & ry x & frank wiedemann|||need you now",
@@ -15605,6 +15606,7 @@
     "spotify:track:3RndHxmIeOlcqihe5bV3gq",
     "spotify:track:3Rxu8A0orjklJIZBwoUdXv",
     "spotify:track:3S23i5RFRFmJ1UFPTtQflz",
+    "spotify:track:3S2yXjoQE9kfI4bVbihzgV",
     "spotify:track:3S4XWfwRrDdmObOUpdiCTZ",
     "spotify:track:3S5WknhKi4wlpSouDHkxVQ",
     "spotify:track:3S76pQqxHy8DwXiZiKFDrf",
@@ -20530,6 +20532,7 @@
     "GBCEL1100045",
     "GBCEL1100202",
     "GBCEL1100366",
+    "GBCEL1200076",
     "GBCEL1200427",
     "GBCEL1200590",
     "GBCEL1200601",
@@ -29539,7 +29542,8 @@
     "spotify:track:7hbMolAsnzDv06KeI6HP0y": "GBAYE1201982",
     "spotify:track:1nJntmdlEvCfQar5fDveCu": "GBENL1200706",
     "spotify:track:654PpUBZaNdKDDosxsWCv3": "QZ4TK1600002",
-    "spotify:track:0wgVGxY1qk4jJp0tOA6XSF": "GBUM71201996"
+    "spotify:track:0wgVGxY1qk4jJp0tOA6XSF": "GBUM71201996",
+    "spotify:track:3S2yXjoQE9kfI4bVbihzgV": "GBCEL1200076"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -37026,6 +37030,10 @@
     "stealing sheep|||the garden": {
       "artist": "Stealing Sheep",
       "title": "The Garden"
+    },
+    "hot chip|||let me be him": {
+      "artist": "Hot Chip",
+      "title": "Let Me Be Him"
     }
   },
   "__v82_confirmed_catalog": {
@@ -46378,6 +46386,11 @@
       "uri": "spotify:track:0wgVGxY1qk4jJp0tOA6XSF",
       "artist": "Stealing Sheep",
       "title": "The Garden"
+    },
+    "hot chip|||let me be him": {
+      "uri": "spotify:track:3S2yXjoQE9kfI4bVbihzgV",
+      "artist": "Hot Chip",
+      "title": "Let Me Be Him"
     }
   },
   "__pending_library_likes": {},
@@ -58886,6 +58899,7 @@
       "holmes|||wake up",
       "home video|||gas tank",
       "hooverphonic|||eden",
+      "hot chip|||let me be him",
       "hot tuna|||water song",
       "howie day|||ghost",
       "hozier|||cherry wine",
@@ -60885,6 +60899,7 @@
       "spotify:track:3Pqw2qx1kE0CqcL7HX7BD6",
       "spotify:track:3QQp605HhNi3W72eizNtxZ",
       "spotify:track:3RHlA2G06WWfa5gHdRk4Vh",
+      "spotify:track:3S2yXjoQE9kfI4bVbihzgV",
       "spotify:track:3S4XWfwRrDdmObOUpdiCTZ",
       "spotify:track:3S9GXIDpz07SsoaAIsqsHm",
       "spotify:track:3SHzRIR00wB6SE8m31nWQb",
@@ -62439,6 +62454,7 @@
       "GBCEL1001067",
       "GBCEL1100045",
       "GBCEL1100202",
+      "GBCEL1200076",
       "GBCEL1200601",
       "GBCEL1300362",
       "GBCEL1400004",
@@ -65329,7 +65345,8 @@
       "spotify:track:7hbMolAsnzDv06KeI6HP0y": "GBAYE1201982",
       "spotify:track:1nJntmdlEvCfQar5fDveCu": "GBENL1200706",
       "spotify:track:654PpUBZaNdKDDosxsWCv3": "QZ4TK1600002",
-      "spotify:track:0wgVGxY1qk4jJp0tOA6XSF": "GBUM71201996"
+      "spotify:track:0wgVGxY1qk4jJp0tOA6XSF": "GBUM71201996",
+      "spotify:track:3S2yXjoQE9kfI4bVbihzgV": "GBCEL1200076"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -67197,5 +67214,6 @@
   "__match_v35__gabrielle aplin|||please don't say you love me": "spotify:track:7hbMolAsnzDv06KeI6HP0y",
   "__match_v35__andy burrows|||hometown": "spotify:track:1nJntmdlEvCfQar5fDveCu",
   "__match_v35__joshua radin|||high and low": "spotify:track:654PpUBZaNdKDDosxsWCv3",
-  "__match_v35__stealing sheep|||the garden": "spotify:track:0wgVGxY1qk4jJp0tOA6XSF"
+  "__match_v35__stealing sheep|||the garden": "spotify:track:0wgVGxY1qk4jJp0tOA6XSF",
+  "__match_v35__hot chip|||let me be him": "spotify:track:3S2yXjoQE9kfI4bVbihzgV"
 }
