@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793860336.275292,
+  "__v150_next_spotify_round_at": 1793860458.6433358,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "spinvis|||bagagedrager",
       "philemon|||how do you do",
       "matt berninger & rosanne cash|||who loves the sun",
       "warpaint|||champion",
@@ -112,8 +113,7 @@
       "jjerome87|||track and field",
       "phosphorescent|||wolves",
       "the lumineers|||ophelia",
-      "tiny ruins|||me at the museum you in the wintergardens",
-      "isaac roux|||lost in some dream"
+      "tiny ruins|||me at the museum you in the wintergardens"
     ],
     "mellow_mix": [
       "sade|||bring me home",
@@ -320,6 +320,7 @@
       "echo & the bunnymen|||brussels is haunted"
     ],
     "radio_x_chilled": [
+      "liam gallagher|||for what it's worth",
       "bat for lashes|||daniel",
       "foo fighters|||everlong acoustic",
       "blink-182|||i miss you",
@@ -418,8 +419,7 @@
       "djo|||end of beginning",
       "the cranberries|||dreams acoustic",
       "jet|||look what you've done",
-      "blur|||to the end",
-      "villagers|||everything i am is yours"
+      "blur|||to the end"
     ],
     "dreampop_radio": [
       "ben kweller|||in other words",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793860325.9322512,
-    "mellow_mix": 1793860325.938804,
-    "big_sonic_heaven": 1793860325.943772,
-    "radio_x_chilled": 1793860325.9489295,
-    "dreampop_radio": 1793860325.9535182,
-    "indie_select": 1793860325.9583685
+    "vuurland": 1793860338.6040356,
+    "mellow_mix": 1793860338.610428,
+    "big_sonic_heaven": 1793860338.615352,
+    "radio_x_chilled": 1793860338.6204364,
+    "dreampop_radio": 1793860338.6248875,
+    "indie_select": 1793860338.629649
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6086,13 +6086,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "philemon|||how do you do",
+  "__last_radio_key_vuurland": "spinvis|||bagagedrager",
   "__last_radio_key_mellow_mix": "sade|||bring me home",
   "__last_radio_key_big_sonic_heaven": "q-burns abstract message|||jennifer thermal mix 1",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3764,
-  "__v146_spotify_budget_slot": 1793860216.676193,
-  "__vuurland_active_playlist_count": 5477,
+  "__v146_spotify_budget_slot": 1793860339.0180175,
+  "__vuurland_active_playlist_count": 5478,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793859236,
@@ -8339,6 +8339,7 @@
     "flipturn|||sunlight (reimagined)",
     "flipturn|||sunlight reimagined",
     "flipturn|||susto|||if it is (reimagined)",
+    "florence and the machine|||shake it out",
     "florence the machine|||cosmic love",
     "florence the machine|||free",
     "florence the machine|||free acoustic",
@@ -18220,6 +18221,7 @@
     "spotify:track:71eaEJZlSLRtRryOWTiWPZ",
     "spotify:track:71hPJJ106daQSnIY34YCg5",
     "spotify:track:71hY002AVvyrs4GgggPPiB",
+    "spotify:track:71iSmEeF0qRVyULABxP75P",
     "spotify:track:71o2pLB6Xu62uVjqpwmiS9",
     "spotify:track:71uKhKG95ZmDOyEFs6WNGV",
     "spotify:track:71uRF0349OhPJCkXYCfLks",
@@ -21214,6 +21216,7 @@
     "GBUM71106371",
     "GBUM71106457",
     "GBUM71106463",
+    "GBUM71107355",
     "GBUM71107580",
     "GBUM71107982",
     "GBUM71109654",
@@ -29599,7 +29602,8 @@
     "spotify:track:1nWVAHy6btrYETxjJSon5Z": "QMXQJ1508902",
     "spotify:track:3ixakEDKsbg5K52jMpB8ip": "GBLEZ0500001",
     "spotify:track:5jJ69cMDMC0aeWPjZo6VP2": "USSM11409701",
-    "spotify:track:2a1iMaoWQ5MnvLFBDv4qkf": "GBAYE9400055"
+    "spotify:track:2a1iMaoWQ5MnvLFBDv4qkf": "GBAYE9400055",
+    "spotify:track:71iSmEeF0qRVyULABxP75P": "GBUM71107355"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793860095,
@@ -36850,6 +36854,10 @@
     "radiohead|||high and dry": {
       "artist": "Radiohead",
       "title": "High and Dry"
+    },
+    "florence and the machine|||shake it out": {
+      "artist": "Florence + The Machine",
+      "title": "Shake It Out"
     }
   },
   "__v82_confirmed_catalog": {
@@ -45907,6 +45915,11 @@
       "uri": "spotify:track:2a1iMaoWQ5MnvLFBDv4qkf",
       "artist": "Radiohead",
       "title": "High and Dry"
+    },
+    "florence and the machine|||shake it out": {
+      "uri": "spotify:track:71iSmEeF0qRVyULABxP75P",
+      "artist": "Florence + The Machine",
+      "title": "Shake It Out"
     }
   },
   "__pending_library_likes": {},
@@ -58286,6 +58299,7 @@
       "fleetwood mac|||sometimes",
       "fleetwood mac|||walk a thin line",
       "fleetwood mac|||woman of 1000 years",
+      "florence and the machine|||shake it out",
       "florence the machine|||cosmic love",
       "florence the machine|||free",
       "florence the machine|||free acoustic",
@@ -61069,6 +61083,7 @@
       "spotify:track:70RBZls9wV3dHKe0Il6mEZ",
       "spotify:track:70f23gQJEKE6kPRGWzOOa0",
       "spotify:track:70wcWw5mdlri2oh6RjNUFO",
+      "spotify:track:71iSmEeF0qRVyULABxP75P",
       "spotify:track:71o2pLB6Xu62uVjqpwmiS9",
       "spotify:track:723ni4TVpWHblfaQQJoMNX",
       "spotify:track:725QAOexNLmGZiFMN7U8pF",
@@ -61972,6 +61987,7 @@
       "GBUM71105040",
       "GBUM71105897",
       "GBUM71106457",
+      "GBUM71107355",
       "GBUM71107580",
       "GBUM71107982",
       "GBUM71110209",
@@ -64610,7 +64626,8 @@
       "spotify:track:1nWVAHy6btrYETxjJSon5Z": "QMXQJ1508902",
       "spotify:track:3ixakEDKsbg5K52jMpB8ip": "GBLEZ0500001",
       "spotify:track:5jJ69cMDMC0aeWPjZo6VP2": "USSM11409701",
-      "spotify:track:2a1iMaoWQ5MnvLFBDv4qkf": "GBAYE9400055"
+      "spotify:track:2a1iMaoWQ5MnvLFBDv4qkf": "GBAYE9400055",
+      "spotify:track:71iSmEeF0qRVyULABxP75P": "GBUM71107355"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -64881,7 +64898,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "bat for lashes|||daniel",
+  "__last_radio_key_radio_x_chilled": "liam gallagher|||for what it's worth",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -66415,5 +66432,6 @@
   "__match_v35__dick diver|||year in pictures": "spotify:track:1nWVAHy6btrYETxjJSon5Z",
   "__match_v35__boy on a dolphin|||nouwe o n'mazei": "spotify:track:3ixakEDKsbg5K52jMpB8ip",
   "__match_v35__modest mouse|||lampshades on fire": "spotify:track:5jJ69cMDMC0aeWPjZo6VP2",
-  "__match_v35__radiohead|||high and dry": "spotify:track:2a1iMaoWQ5MnvLFBDv4qkf"
+  "__match_v35__radiohead|||high and dry": "spotify:track:2a1iMaoWQ5MnvLFBDv4qkf",
+  "__match_v35__florence and the machine|||shake it out": "spotify:track:71iSmEeF0qRVyULABxP75P"
 }
