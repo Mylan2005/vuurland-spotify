@@ -149,6 +149,7 @@ jobs:
             python3 test_v85_offline.py
             python3 test_v86_offline.py
             python3 test_v158_routing_offline.py
+            python3 test_dark_edge_filter_offline.py
             python3 test_v159_playlist_rebuild_offline.py
             python3 test_v160_requeue_offline.py
             python3 test_v171_fresh_radio_seen_offline.py

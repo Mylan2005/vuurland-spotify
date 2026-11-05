@@ -14,6 +14,7 @@ import webbrowser
 
 import requests
 from bs4 import BeautifulSoup
+from dark_edge_filter import dark_edge_reject_reason
 
 # =========================
 # INSTELLINGEN
@@ -103,7 +104,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge")  # Zeven live bronnen; Radio X, DKFM Shoegaze en DKFM Classic uitgeschakeld.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge")  # Acht live bronnen; Radio X, DKFM Shoegaze en DKFM Classic blijven uit.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1383,14 +1384,27 @@ def get_championship_vinyl_tracks():
     return get_radiobox_tracks(CHAMPIONSHIP_VINYL_SOURCE_URL, "Championship Vinyl")
 
 
+def dark_edge_track_allowed(artist, title):
+    # Een bestaande 7-bronnenregel wordt NIET gewijzigd; alleen Dark Edge.
+    return (dark_edge_reject_reason(artist, title) is None
+            and not v140_is_unwanted_language_title(title, artist)
+            and not v131_block_nonlatin_east_asian(artist, title))
+
+
 def get_dark_edge_tracks():
-    # RadioBox toont deze identieke zenderjingle honderden keren.
-    # Zonder program_labels zou de matcher hem zien als artiest - titel.
-    return get_radiobox_tracks(
+    # Alleen goedgekeurde alternatieve artiesten; geen pop/metal/punk,
+    # geen duidelijk anderstalige titels; geen extra Spotify-/AI-API-calls.
+    # De zenderjingle blijft ook uit de RadioBox-resultaten.
+    raw = get_radiobox_tracks(
         DARK_EDGE_SOURCE_URL,
         "Dark Edge Radio",
         {"dark edge radio - soft alternative/indie music"},
     )
+    approved = [(artist, title) for artist, title in raw
+                if dark_edge_track_allowed(artist, title)]
+    print(f"🛡️ Dark Edge: {len(approved)}/{len(raw)} conservatief toegelaten "
+          f"(overige nummers NIET in wachtrij).")
+    return approved
 
 
 def get_dreampop_radio_tracks():
@@ -6234,7 +6248,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         reasons = {}
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
-            if key in seen_this_scan:
+            if sid == "dark_edge" and not dark_edge_track_allowed(artist, title):
+                reason = "Dark Edge: alleen gecontroleerde indie/Engelse titels"
+            elif key in seen_this_scan:
                 reason = "herhaling binnen deze bronmeting"
             else:
                 seen_this_scan.add(key)
@@ -6892,6 +6908,7 @@ def sync():
         "dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks, "__last_radio_key_dreampop_radio"),
         "indie_select": ("Indie Select", get_indie_select_tracks, "__last_radio_key_indie_select"),
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
+        "dark_edge": ("Dark Edge Radio", get_dark_edge_tracks, "__last_radio_key_dark_edge"),
         "dkfm_shoegaze": ("DKFM Shoegaze Radio", get_dkfm_shoegaze_tracks, "__last_radio_key_dkfm_shoegaze"),
         "dkfm_classic": ("DKFM Classic", get_dkfm_classic_tracks, "__last_radio_key_dkfm_classic"),
         "duyster": ("Duyster archief", lambda: [], "__last_radio_key_duyster"),
@@ -6939,6 +6956,8 @@ def sync():
     live_queue = [item for item in live_queue if (
         isinstance(item, dict)
         and str(item.get("source") or "vuurland").strip() in RADIO_SOURCE_ORDER
+        and (item.get("source") != "dark_edge" or dark_edge_track_allowed(
+            item.get("artist", ""), item.get("title", "")))
     )]
     if len(live_queue) != before_source_filter:
         removed_count = before_source_filter - len(live_queue)
@@ -7032,6 +7051,14 @@ def sync():
             cache.setdefault("__v96_radio_snapshots", {}).pop(dkfm_sid, None)
             cache.setdefault("__v174_radio_snapshot_times", {}).pop(dkfm_sid, None)
         cache["__v187_dkfm_three_reactivated_20261105"] = True
+        save_cache(cache)
+    # Nieuwe bron alleen vanaf de eerste live meting, nooit oude historie.
+    # Alleen Dark Edge snapshots opschonen; playlist, likes, FIFO en andere
+    # radiobronnen blijven intact.
+    if not cache.get("__dark_edge_strict_baseline_20261105"):
+        cache.setdefault("__v96_radio_snapshots", {}).pop("dark_edge", None)
+        cache.setdefault("__v174_radio_snapshot_times", {}).pop("dark_edge", None)
+        cache["__dark_edge_strict_baseline_20261105"] = True
         save_cache(cache)
     # Bij heractivering van Big Sonic Heaven eerst een verse nulmeting doen.
     # Laat bestaande FIFO, andere radiobronnen, playlist-cache en cooldowns intact.
@@ -8143,6 +8170,15 @@ def sync():
             item["artist"] = artist
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
+
+        # Tweede Dark Edge-controle direct vóór mogelijke Spotify-actie,
+        # ook voor herstelde/in het verleden opgeslagen queue-items.
+        if item.get("source") == "dark_edge" and not dark_edge_track_allowed(artist, title):
+            print(f"⛔ Dark Edge-filter: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
 
         # Slotfilter, ook voor items die eerder in de wachtrij stonden.
         if item.get("source") == "indie_select" and indie_select_blocks_german(artist, title):
