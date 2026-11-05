@@ -2,6 +2,11 @@ name: Vuurland Spotify Sync
 
 on:
   workflow_dispatch:
+  # Eén herstart bij een wijziging van de workflow; state-commits starten niets.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vuurland.yml'
   schedule:
     - cron: "17 */6 * * *"
 
