@@ -62,9 +62,7 @@ _NON_ENGLISH_PHRASES = (
 
 # Opnames met een vreemde taal kunnen ook een Engelse titel hebben.
 # Exacte bekende uitzonderingen zijn steeds expliciet te blokkeren.
-DARK_EDGE_BLOCKED_RECORDINGS = frozenset({
-    ("muse", "prague"),  # Geen taalclaim: conservatieve uitsluiting van een buitenbeentje.
-})
+DARK_EDGE_BLOCKED_RECORDINGS = frozenset()  # Alleen bevestigde, specifiek ongewenste opnames toevoegen.
 
 
 def _key(value):
