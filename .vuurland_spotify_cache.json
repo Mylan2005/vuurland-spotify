@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793843445.9806387,
+  "__v150_next_spotify_round_at": 1793843569.9859984,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -320,6 +320,7 @@
       "basement revolver|||circles"
     ],
     "radio_x_chilled": [
+      "radiohead|||no surprises",
       "nirvana|||dumb unplugged in new york",
       "future islands|||a dream of you and me",
       "badly drawn boy|||the shining",
@@ -418,10 +419,10 @@
       "liam gallagher|||i've all i need",
       "jack johnson|||good people",
       "kings of leon|||pyro",
-      "wolf alice|||the sofa",
-      "elliott smith|||son of sam"
+      "wolf alice|||the sofa"
     ],
     "dreampop_radio": [
+      "feist|||one evening",
       "matthew and the atlas|||on a midnight street - acoustic version",
       "charlie simpson|||cemetery",
       "tim neuhaus|||blankets",
@@ -520,8 +521,7 @@
       "johnny cash|||hurt",
       "george ezra|||barcelona",
       "the slow show|||bloodline",
-      "the head and the heart|||let's be still",
-      "anna ternheim|||ghost of a man"
+      "the head and the heart|||let's be still"
     ],
     "indie_select": [
       "kindest lines|||hazy haze",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793843436.3776302,
-    "mellow_mix": 1793843436.3839033,
-    "big_sonic_heaven": 1793843436.3883939,
-    "radio_x_chilled": 1793843436.3931324,
-    "dreampop_radio": 1793843436.3974051,
-    "indie_select": 1793843436.401701
+    "vuurland": 1793843449.9452837,
+    "mellow_mix": 1793843449.95152,
+    "big_sonic_heaven": 1793843449.9560263,
+    "radio_x_chilled": 1793843449.9608288,
+    "dreampop_radio": 1793843449.965188,
+    "indie_select": 1793843449.9695349
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5604,12 +5604,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "noel gallagher|||whatever live at the lowry": {
-      "artist": "Noel Gallagher",
-      "title": "Whatever (Live At The Lowry)",
-      "source": "radio_x_chilled",
-      "failed_at": 1793757041
-    },
     "the danish national symphony orchestra|||the good the bad and the ugly": {
       "artist": "The Danish National Symphony Orchestra",
       "title": "The Good, The Bad And The Ugly",
@@ -5899,9 +5893,9 @@
   "__last_radio_key_mellow_mix": "beth orton|||pass in time",
   "__last_radio_key_big_sonic_heaven": "moon cowboy and krissy vanderwoude|||mercy",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3593,
-  "__v146_spotify_budget_slot": 1793843326.4276931,
-  "__vuurland_active_playlist_count": 5373,
+  "__v116_fifo_next_sequence": 3594,
+  "__v146_spotify_budget_slot": 1793843450.5472238,
+  "__vuurland_active_playlist_count": 5374,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793840967,
@@ -11476,6 +11470,7 @@
     "sneaker pimps|||6 underground",
     "sneaker pimps|||6 underground nellee hooper edit",
     "snocaps|||wasteland",
+    "snow patrol|||don't give in",
     "snow patrol|||run",
     "snowcuffs|||burst",
     "snowcuffs|||sunless",
@@ -17810,6 +17805,7 @@
     "spotify:track:6zsD8Gf45jjViGarbyPaAy",
     "spotify:track:6zv0lTlnSWeYdjCDIYPAeL",
     "spotify:track:708YrgAtZ7EThpokcTWCng",
+    "spotify:track:70F5cNOc2mvAtV03yRKwId",
     "spotify:track:70RBZls9wV3dHKe0Il6mEZ",
     "spotify:track:70XrivdqpnfIHTjdkIdRHO",
     "spotify:track:70YTBH8vOGJNMhy6186yFm",
@@ -20828,6 +20824,7 @@
     "GBUM71701774",
     "GBUM71701863",
     "GBUM71701947",
+    "GBUM71703794",
     "GBUM71705929",
     "GBUM71800086",
     "GBUM71800589",
@@ -28987,10 +28984,11 @@
     "spotify:track:2zkvMGghZGLiQ8eUtLOqCi": "US78L1919412",
     "spotify:track:3qhlB30KknSejmIvZZLjOD": "GBKPL2205058",
     "spotify:track:3uHpPWsNDTpbbqedCRoaQU": "USSM19900349",
-    "spotify:track:725QAOexNLmGZiFMN7U8pF": "USGF19972706"
+    "spotify:track:725QAOexNLmGZiFMN7U8pF": "USGF19972706",
+    "spotify:track:70F5cNOc2mvAtV03yRKwId": "GBUM71703794"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
-  "__v184_head_checked_at": 1793842829,
+  "__v184_head_checked_at": 1793843451,
   "__playlist_isrc_cache_ready": true,
   "__playlist_cache_time": 1793559322,
   "__match_v35__keren ann|||jardin d'hiver": "spotify:track:45gpJxviKRBsQo1lDZ03Xf",
@@ -35818,6 +35816,10 @@
     "nirvana|||dumb unplugged in new york": {
       "artist": "Nirvana",
       "title": "Dumb - Live"
+    },
+    "snow patrol|||don't give in": {
+      "artist": "Snow Patrol",
+      "title": "Don't Give In"
     }
   },
   "__v82_confirmed_catalog": {
@@ -44350,6 +44352,11 @@
       "uri": "spotify:track:725QAOexNLmGZiFMN7U8pF",
       "artist": "Nirvana",
       "title": "Dumb - Live"
+    },
+    "snow patrol|||don't give in": {
+      "uri": "spotify:track:70F5cNOc2mvAtV03yRKwId",
+      "artist": "Snow Patrol",
+      "title": "Don't Give In"
     }
   },
   "__pending_library_likes": {},
@@ -57445,6 +57452,7 @@
       "snakadaktal|||the sun ii",
       "sneaker pimps|||6 underground nellee hooper edit",
       "snocaps|||wasteland",
+      "snow patrol|||don't give in",
       "snow patrol|||run",
       "snowcuffs|||sunless",
       "snuggle|||woman lake",
@@ -59291,6 +59299,7 @@
       "spotify:track:6zP2bIJWqFZtJ8dtxeDzcp",
       "spotify:track:6zZzBsbPNpTtwlkFSXLwnf",
       "spotify:track:6zsD8Gf45jjViGarbyPaAy",
+      "spotify:track:70F5cNOc2mvAtV03yRKwId",
       "spotify:track:70RBZls9wV3dHKe0Il6mEZ",
       "spotify:track:70f23gQJEKE6kPRGWzOOa0",
       "spotify:track:70wcWw5mdlri2oh6RjNUFO",
@@ -60160,6 +60169,7 @@
       "GBUM71700591",
       "GBUM71700980",
       "GBUM71701947",
+      "GBUM71703794",
       "GBUM71705929",
       "GBUM71800589",
       "GBUM71900490",
@@ -62615,7 +62625,8 @@
       "spotify:track:2zkvMGghZGLiQ8eUtLOqCi": "US78L1919412",
       "spotify:track:3qhlB30KknSejmIvZZLjOD": "GBKPL2205058",
       "spotify:track:3uHpPWsNDTpbbqedCRoaQU": "USSM19900349",
-      "spotify:track:725QAOexNLmGZiFMN7U8pF": "USGF19972706"
+      "spotify:track:725QAOexNLmGZiFMN7U8pF": "USGF19972706",
+      "spotify:track:70F5cNOc2mvAtV03yRKwId": "GBUM71703794"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -62886,7 +62897,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "nirvana|||dumb unplugged in new york",
+  "__last_radio_key_radio_x_chilled": "radiohead|||no surprises",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -62990,7 +63001,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "matthew and the atlas|||on a midnight street - acoustic version",
+  "__last_radio_key_dreampop_radio": "feist|||one evening",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -64306,5 +64317,6 @@
   "__match_v35__mint julep|||iteration": "spotify:track:2zkvMGghZGLiQ8eUtLOqCi",
   "__match_v35__djo|||end of beginning": "spotify:track:3qhlB30KknSejmIvZZLjOD",
   "__match_v35__bob dylan|||tonight i'll be staying here with you": "spotify:track:3uHpPWsNDTpbbqedCRoaQU",
-  "__match_v35__nirvana|||dumb unplugged in new york": "spotify:track:725QAOexNLmGZiFMN7U8pF"
+  "__match_v35__nirvana|||dumb unplugged in new york": "spotify:track:725QAOexNLmGZiFMN7U8pF",
+  "__match_v35__snow patrol|||don't give in": "spotify:track:70F5cNOc2mvAtV03yRKwId"
 }
