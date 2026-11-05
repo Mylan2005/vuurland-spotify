@@ -40,6 +40,8 @@ jobs:
           python test_v156_matcher_offline.py
           python test_v157_spaced_titles_offline.py
           python test_v158_routing_offline.py
+          python test_dark_edge_filter_offline.py
+          python test_v190_language_exempt_artists_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
           for v in 77 78 79 80 81 82; do
