@@ -720,6 +720,10 @@ def get_playlist():
 
 # === VUURLAND AUTO VOLUMES v1 ===
 VOLUME_LIMIT = 10000
+# User preference: manual playlist deduplication via JMPerez Spotify Dedup.
+# Never rebuild the automatic inventory from Spotify: removed songs must remain
+# blocked by the historical cache, even after days or a runner restart.
+AUTOMATIC_PLAYLIST_INVENTORY_ENABLED = False
 VOLUME_NAME_PREFIX = "🔥 Vol "
 VOLUME_EXACT_COUNT_GUARD = 10
 PENDING_LIBRARY_LIKE_RETRY_SECONDS = 3600
@@ -7401,7 +7405,8 @@ def sync():
     MAX_SEARCHES_PER_RUN = 1  # v66: één gedeelde Spotify Search per 120 seconden
     NOT_FOUND_COOLDOWN_SECONDS = 86400  # 24 uur
 
-    v129_restore_volume_dedupe(cache, active_volume_number)
+    if AUTOMATIC_PLAYLIST_INVENTORY_ENABLED:
+        v129_restore_volume_dedupe(cache, active_volume_number)
     # ---------------------------------
     # SPOTIFY PLAYLIST CACHE
     # ---------------------------------
@@ -7430,6 +7435,14 @@ def sync():
         "__playlist_cache_time",
         0
     )
+
+    # v185: gebruiker beheert playlist en dubbels handmatig met JMPerez.
+    # Volledige scans blijven uit; de historische cache mag NOOIT door een
+    # kortere actuele playlist vervangen worden (anders keren verwijderde
+    # nummers terug). Bewaar URI, ISRC en artiest/titel ook na verwijdering.
+    if not playlist_isrc_cache_ready:
+        print('🛑 Geen betrouwbare historische playlist-cache: geen automatische import of Spotify-toevoegingen.')
+        return
 
     # v163: grote playlists niet dagelijks volledig herlezen.
     # De dagelijkse scan veroorzaakte honderden Spotify GET-verzoeken en 429.
@@ -7504,7 +7517,7 @@ def sync():
         or time.time() - float(cache.get("__v184_head_checked_at", 0) or 0) >= 600
         or playlist_count_changed
     )
-    if head_due:
+    if head_due and AUTOMATIC_PLAYLIST_INVENTORY_ENABLED:
         head = spotify_request(
             "GET", f"/playlists/{playlist_id}/items",
             params={"limit": 50, "offset": 0},
@@ -7544,7 +7557,7 @@ def sync():
         and cache.get("__v159_rebuild_scanned") == V159_REBUILD_TOKEN
         and cache.get("__v165_existing_playlist_imported") == EXISTING_PLAYLIST_IMPORT_TOKEN
     )
-    if delta_allowed:
+    if delta_allowed and AUTOMATIC_PLAYLIST_INVENTORY_ENABLED:
         delta_offset = int(delta.get("offset", 0))
         delta_target = int(delta.get("target", 0))
         if delta_offset < delta_target:
@@ -7607,7 +7620,7 @@ def sync():
         or cache.get("__v159_rebuild_scanned") != V159_REBUILD_TOKEN
         or cache.get("__v165_existing_playlist_imported") != EXISTING_PLAYLIST_IMPORT_TOKEN
         or playlist_count_changed
-    ):
+    ) and AUTOMATIC_PLAYLIST_INVENTORY_ENABLED:
 
         print(
             "📋 Spotify-playlist cache vernieuwen..."
@@ -7923,8 +7936,8 @@ def sync():
     else:
 
         print(
-            f"💾 Playlist-cache gebruikt: "
-            f"{len(playlist_keys)} bestaande nummers."
+            f"💾 Historische playlist-cache behouden (geen volledige Spotify-scan): "
+            f"{len(playlist_keys)} bekende nummers."
         )
 
     # Liked Songs hoeft niet volledig gescand te worden voor playlist-dedupe.
