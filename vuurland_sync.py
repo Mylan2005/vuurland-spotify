@@ -92,6 +92,7 @@ MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlis
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
+RADIO_X_MAIN_SOURCE_URL = "https://onlineradiobox.com/uk/radiox/playlist/?lang=nl"
 INDIE_SELECT_SOURCE_URL = "https://onlineradiobox.com/de/indieselect/playlist/?lang=nl"
 CHAMPIONSHIP_VINYL_SOURCE_URL = "https://onlineradiobox.com/de/championshipvinyl/playlist/?lang=nl"
 DARK_EDGE_SOURCE_URL = "https://onlineradiobox.com/ro/darkedge/playlist/?lang=nl"
@@ -102,7 +103,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic")  # Negen live bronnen.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic", "radio_x_main")  # Tien live bronnen.
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -1334,6 +1335,37 @@ def get_radio_britannia_tracks():
 
 def get_radio_x_chilled_tracks():
     return get_radiobox_tracks(RADIO_X_CHILLED_SOURCE_URL, "Radio X Chilled")
+
+
+# Radio X (hoofdstation): gerichte donkere/emotionele alternative rock.
+# Geen algemene rock-/metalfeed: alleen deze artiesten mogen via deze
+# tiende bron aan de wachtrij toegevoegd worden. Andere bronnen ongewijzigd.
+RADIO_X_MAIN_ALLOWED_ARTISTS = frozenset({
+    "muse", "nothing but thieves", "placebo", "editors", "interpol",
+    "radiohead", "the cure", "wolf alice", "foals", "bloc party",
+    "fontaines d.c.", "fontaines dc", "the national", "royal blood",
+    "the killers", "the twilight sad", "manic street preachers",
+    "snow patrol", "the cranberries", "the verve", "doves",
+    "elbow", "the xx", "the smashing pumpkins", "the last dinner party",
+    "suede", "white lies", "the horrors", "arcade fire",
+    "biffy clyro", "the strokes", "queens of the stone age",
+})
+
+
+def get_radio_x_main_tracks():
+    raw = get_radiobox_tracks(RADIO_X_MAIN_SOURCE_URL, "Radio X")
+    selected = []
+    for artist, title in raw:
+        if normalize_match(artist) not in RADIO_X_MAIN_ALLOWED_ARTISTS:
+            continue
+        if (is_confirmed_german_vocal(artist, title)
+                or v119_is_german_title(title)
+                or v143_unwanted_title(title)
+                or v150_is_unwanted_language(artist, title)):
+            continue
+        selected.append((artist, title))
+    print(f"🎸 Radio X: {len(selected)}/{len(raw)} passende alternative nummers geselecteerd.")
+    return selected
 
 
 def get_indie_select_tracks():
@@ -6147,7 +6179,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
             if sid in RADIO_SOURCE_ORDER:
                 arrivals = []
                 print(f"🕒 {source['name']}: live-nulmeting; bestaande RadioBox-historiek niet ingehaald.")
-            elif sid in ("radio_x_chilled", "indie_select", "championship_vinyl", "dark_edge",
+            elif sid in ("radio_x_chilled", "radio_x_main", "indie_select", "championship_vinyl", "dark_edge",
                        "dreampop_radio", "radio_indie_alternative", "dkfm_edge", "dkfm_shoegaze", "dkfm_classic"):
                 # Nieuwe bronnen: eerste meting is uitsluitend een nulmeting.
                 arrivals = []
@@ -6856,6 +6888,7 @@ def sync():
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
+        "radio_x_main": ("Radio X", get_radio_x_main_tracks, "__last_radio_key_radio_x_main"),
         "dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks, "__last_radio_key_dreampop_radio"),
         "indie_select": ("Indie Select", get_indie_select_tracks, "__last_radio_key_indie_select"),
         "dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks, "__last_radio_key_dkfm_edge"),
@@ -6983,6 +7016,13 @@ def sync():
         cache.setdefault("__v174_radio_snapshot_times", {}).pop("dkfm_edge", None)
         cache.setdefault("__v47_radio_discovered", {}).pop("dkfm_edge", None)
         cache["__v186_dkfm_edge_four_source_baseline"] = True
+        save_cache(cache)
+    # Radio X-hoofdstation: nieuwe bron start met een actuele nulmeting,
+    # zonder eerdere 7 dagen radiogeschiedenis in de FIFO in te halen.
+    if not cache.get("__v188_radio_x_main_baseline_20261105"):
+        cache.setdefault("__v96_radio_snapshots", {}).pop("radio_x_main", None)
+        cache.setdefault("__v174_radio_snapshot_times", {}).pop("radio_x_main", None)
+        cache["__v188_radio_x_main_baseline_20261105"] = True
         save_cache(cache)
     # DKFM-reactivatie 2026-11-05: voor alle drie een verse nulmeting,
     # zonder oude uitzendingen ineens aan de FIFO toe te voegen.
