@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793838351.284588,
+  "__v150_next_spotify_round_at": 1793838476.0862288,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793838342.61814,
-    "mellow_mix": 1793838342.6242442,
-    "big_sonic_heaven": 1793838342.6283739,
-    "radio_x_chilled": 1793838342.6329162,
-    "dreampop_radio": 1793838342.6370919,
-    "indie_select": 1793838342.6411834
+    "vuurland": 1793838356.0461287,
+    "mellow_mix": 1793838356.052209,
+    "big_sonic_heaven": 1793838356.0564475,
+    "radio_x_chilled": 1793838356.0610352,
+    "dreampop_radio": 1793838356.065201,
+    "indie_select": 1793838356.0692992
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5825,8 +5825,8 @@
   "__last_radio_key_big_sonic_heaven": "talulah gosh|||talulah gosh radio version",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3543,
-  "__v146_spotify_budget_slot": 1793838231.837805,
-  "__vuurland_active_playlist_count": 5342,
+  "__v146_spotify_budget_slot": 1793838356.5246303,
+  "__vuurland_active_playlist_count": 5343,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793837362,
@@ -9157,6 +9157,7 @@
     "kurt vile|||dust bunnies",
     "kurt vile|||hey like a child",
     "kurt vile|||i'm an outlaw",
+    "kurt vile|||kidding around",
     "kurt vile|||loading zones",
     "kurt vile|||lost my head there",
     "kurt vile|||nannuflay",
@@ -15372,6 +15373,7 @@
     "spotify:track:3Sc6iEqaoP6QdUimHUxify",
     "spotify:track:3SgnLyAj9Q7b7vYgzvsHCw",
     "spotify:track:3Sj5edbCZ1q6Ko9fgow0An",
+    "spotify:track:3Sok70w3gJWhzwit0T1olM",
     "spotify:track:3SwNusKqjBvfZJisONYMud",
     "spotify:track:3Sy6wgTNEp6vSgLs4EyXAf",
     "spotify:track:3SzoVeS9Eaxt6dmfXF0fPo",
@@ -22854,6 +22856,7 @@
     "USMTD1506587",
     "USMTD1506588",
     "USMTD1506592",
+    "USMTD1506595",
     "USMTD1506596",
     "USMTD1811731",
     "USMTD1811825",
@@ -28787,7 +28790,8 @@
     "spotify:track:6xM8oBy40nK1rOd8WmoOPx": "GBAHS0600528",
     "spotify:track:0uzCAVAvBw9cbdd1GRJcQK": "GBUM71900490",
     "spotify:track:6sOfNmXsPjI0qi6nNsd6uT": "USBQU2200070",
-    "spotify:track:5CR7m8oSYzQLjlo9CDgWi9": "USPR37308018"
+    "spotify:track:5CR7m8oSYzQLjlo9CDgWi9": "USPR37308018",
+    "spotify:track:3Sok70w3gJWhzwit0T1olM": "USMTD1506595"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793837860,
@@ -35490,6 +35494,10 @@
     "gregg allman|||queen of hearts": {
       "artist": "Gregg Allman",
       "title": "Queen Of Hearts"
+    },
+    "kurt vile|||kidding around": {
+      "artist": "Kurt Vile",
+      "title": "Kidding Around"
     }
   },
   "__v82_confirmed_catalog": {
@@ -43862,6 +43870,11 @@
       "uri": "spotify:track:5CR7m8oSYzQLjlo9CDgWi9",
       "artist": "Gregg Allman",
       "title": "Queen Of Hearts"
+    },
+    "kurt vile|||kidding around": {
+      "uri": "spotify:track:3Sok70w3gJWhzwit0T1olM",
+      "artist": "Kurt Vile",
+      "title": "Kidding Around"
     }
   },
   "__pending_library_likes": {},
@@ -56450,6 +56463,7 @@
       "koop|||come to me w/ yukimi nagano",
       "kristofer astrom|||for you",
       "kruger brothers|||up 18 north",
+      "kurt vile|||kidding around",
       "kurt vile|||snowflakes are dancing",
       "l'aupaire|||uptown diva",
       "la sera|||never come around",
@@ -58066,6 +58080,7 @@
       "spotify:track:3SHzRIR00wB6SE8m31nWQb",
       "spotify:track:3SVUu19sxc8CpsHOK2j9aB",
       "spotify:track:3SWpH05o2ow3GZkhd6EsMZ",
+      "spotify:track:3Sok70w3gJWhzwit0T1olM",
       "spotify:track:3T9EETNk44IbyUDxjFU43M",
       "spotify:track:3Tgv4rvWBVwnbmUTlJwzk0",
       "spotify:track:3TtYzuu4lDLFS8UAEtLqdf",
@@ -60161,6 +60176,7 @@
       "USMTD0879303",
       "USMTD0987308",
       "USMTD1303445",
+      "USMTD1506595",
       "USMTD1811731",
       "USMV20100234",
       "USMV20500116",
@@ -61999,7 +62015,8 @@
       "spotify:track:6xM8oBy40nK1rOd8WmoOPx": "GBAHS0600528",
       "spotify:track:0uzCAVAvBw9cbdd1GRJcQK": "GBUM71900490",
       "spotify:track:6sOfNmXsPjI0qi6nNsd6uT": "USBQU2200070",
-      "spotify:track:5CR7m8oSYzQLjlo9CDgWi9": "USPR37308018"
+      "spotify:track:5CR7m8oSYzQLjlo9CDgWi9": "USPR37308018",
+      "spotify:track:3Sok70w3gJWhzwit0T1olM": "USMTD1506595"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -63657,5 +63674,6 @@
   "__match_v35__paolo nutini|||last request": "spotify:track:6xM8oBy40nK1rOd8WmoOPx",
   "__match_v35__whenyoung|||a labour of love": "spotify:track:0uzCAVAvBw9cbdd1GRJcQK",
   "__match_v35__fontaines d c|||one": "spotify:track:6sOfNmXsPjI0qi6nNsd6uT",
-  "__match_v35__gregg allman|||queen of hearts": "spotify:track:5CR7m8oSYzQLjlo9CDgWi9"
+  "__match_v35__gregg allman|||queen of hearts": "spotify:track:5CR7m8oSYzQLjlo9CDgWi9",
+  "__match_v35__kurt vile|||kidding around": "spotify:track:3Sok70w3gJWhzwit0T1olM"
 }
