@@ -173,10 +173,17 @@ def save_cache(cache):
     complete = (cache.get("__v159_rebuild_scanned") == "vuurland-live-only-rescan-v172-2026-10-29"
                 and cache.get("__v165_existing_playlist_imported") == "vuurland-live-only-import-v172-2026-10-29")
     total = int((stage or {}).get("expected_total", 0) or cache.get("__vuurland_active_playlist_count", 0) or 0)
-    scanned = int((stage or {}).get("offset", 0) or 0)
-    status = "bezig" if isinstance(stage, dict) else ("voltooid" if complete else "wachten")
-    if complete and not isinstance(stage, dict):
-        scanned = total
+    # v189: Bij uitgeschakelde automatische inventaris is een oude v166-stage
+    # alleen een historisch overblijfsel. Toon nooit ten onrechte "bezig".
+    # Niets aan cache, wachtrij, Spotify-playlist of likes wijzigen.
+    if not AUTOMATIC_PLAYLIST_INVENTORY_ENABLED:
+        status = "uitgeschakeld"
+        scanned = 0
+    else:
+        scanned = int((stage or {}).get("offset", 0) or 0)
+        status = "bezig" if isinstance(stage, dict) else ("voltooid" if complete else "wachten")
+        if complete and not isinstance(stage, dict):
+            scanned = total
     atomic_save_json(os.path.join(DATA_DIR, "spotify_scan_status.json"), {
         "status": status, "ingelezen": scanned, "totaal": total,
         "bijgewerkt_op": int(time.time()),
