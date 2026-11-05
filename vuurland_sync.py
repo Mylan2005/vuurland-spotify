@@ -8367,11 +8367,14 @@ def sync():
             ),
         }
 
+        # Een exacte historische artiest/titel-key blijft altijd uitgesloten,
+        # zelfs voor de uitzonderingen die normaal een precieze URI-match vragen.
+        # Zo komt een bewust verwijderd, eerder gekend nummer niet terug.
         if (
-            not force_exact_uri_check
-            and (
-                cache_key in playlist_keys
-                or radio_matches_playlist(
+            cache_key in playlist_keys
+            or (
+                not force_exact_uri_check
+                and radio_matches_playlist(
                     artist,
                     title,
                     playlist_keys
