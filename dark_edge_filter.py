@@ -1,43 +1,51 @@
 """Conservatieve Dark Edge Radio-filter: geen externe APIs of Spotify-aanvragen.
 
-Dit is een TOELATINGSLIJST voor hoofdzakelijk Engelstalige indie-/alternatieve
-artiesten, geen automatische herkenning van gezongen taal. Een Engelse titel
-bewijst niet dat de tekst Engels is. Onbekende artiesten vallen af.
+Er is GEEN lijst meer met toegelaten artiesten: nieuwe indie-acts worden
+niet afgewezen omdat ze onbekend zijn. Wel weigeren we duidelijk ongewenste
+pop-, punk- en metalartiesten en herkenbare anderstalige titels.
+Nederlands en Engels mogen. Genre en gezongen taal zijn met alleen
+RadioBox-metadata niet waterdicht vast te stellen.
 """
 
 import re
 import unicodedata
 
-# Alleen expliciete artiestidentiteiten; GEEN fuzzy of substring match.
-# Bewust geen algemene pop-, metal-, punk- of meertalige artiesten.
-DARK_EDGE_APPROVED_ARTISTS = frozenset({
-    "alt-j", "arcade fire", "arctic monkeys",
-    "austra", "band of horses", "beach house", "beck", "ben howard",
-    "bloc party", "blur", "bombay bicycle club", "cage the elephant",
-    "cigarettes after sex", "death cab for cutie", "depeche mode",
-    "diiv", "doves", "elbow", "editors", "eels", "father john misty",
-    "fink", "florence + the machine", "florence and the machine",
-    "foals", "fontaines d.c.", "fontaines dc", "future islands",
-    "garbage", "glass animals", "goth babe", "grizzly bear",
-    "hooverphonic", "interpol", "jake bugg", "joy division",
-    "kasabian", "keane", "kings of leon", "london grammar", "low",
-    "m83", "massive attack", "mgmt", "muse", "new order",
-    "nothing but thieves", "oasis", "of monsters and men",
-    "phoebe bridgers", "pj harvey", "placebo", "portishead",
-    "pulp", "radiohead", "r.e.m.", "royal blood", "silversun pickups",
-    "slowdive", "snow patrol", "sonic youth", "spoon", "suede",
-    "tame impala", "the black keys", "the cure", "the killers",
-    "the kooks", "the national", "the neighbourhood",
-    "the smashing pumpkins", "the strokes", "the verve",
-    "the war on drugs", "the xx", "tori amos", "two door cinema club",
-    "vampire weekend", "white lies", "wolf alice",
-    "yard act", "young the giant",
+# Dit is uitsluitend een AFWIJSLIJST voor bekende, duidelijk niet-gewenste
+# pop-/dance-/punk-/metalacts. Nieuwe indie- en alternative-artiesten krijgen
+# normaal toegang zonder voorafgaande individuele goedkeuring.
+# Bij twijfel over een act niet automatisch op basis van naam of land blokkeren.
+DARK_EDGE_BLOCKED_ARTISTS = frozenset({
+    # Commerciele hitpop, urbanpop en dance uit o.a. RadioBox-historie.
+    "ariana grande", "avicii", "bebe rexha", "beyonce", "billie eilish",
+    "black eyed peas", "bruno mars", "calvin harris", "camila cabello",
+    "charlie puth", "david guetta", "doja cat", "drake", "dua lipa",
+    "ed sheeran", "ellie goulding", "james blunt", "jason derulo",
+    "justin bieber", "katy perry", "kendrick lamar", "kleerup",
+    "kylie minogue", "lady gaga", "lily allen", "major lazer",
+    "maroon 5", "miley cyrus", "nicki minaj", "one direction",
+    "rihanna", "robin thicke", "robyn", "sam smith", "selena gomez",
+    "sia", "taylor swift", "the weeknd", "the chainsmokers",
+    "tom odell", "usher", "zara larsson",
+    # Punk, nu-metal en expliciet ongewenste stevige bands.
+    "blink-182", "bring me the horizon", "fall out boy", "five finger death punch",
+    "green day", "limp bizkit", "linkin park", "metallica", "megadeth",
+    "papa roach", "pantera", "rammstein", "slipknot", "sum 41",
+    "system of a down", "the offspring", "volbeat",
+})
+
+# Specifieke bekende mainstream-popsongs van verder gemengde rockbands
+# kunnen worden uitgesloten zonder hun hele oeuvre te blokkeren.
+DARK_EDGE_BLOCKED_RECORDINGS = frozenset({
+    ("coldplay", "a sky full of stars"),
+    ("coldplay", "my universe"),
+    ("coldplay", "higher power"),
 })
 
 # Alleen duidelijke meertalige zinsdelen, niet korte ambigue woorden als
 # "no", "in", "la" of "die". Deze lijst is extra controle, geen taalbewijs.
 _NON_ENGLISH_PHRASES = (
-    # Roemeens
+    # Roemeens (ook enkele onderscheidende losse woorden/frasen)
+    r"\b(?:culori\s+uitate|floare\s+de\s+maidan|povestea|iubirea|iubesc|dragostea|noaptea|sufletul|pastreaza|dezorientat|zilele|ploile|vantul)\b",
     r"\b(?:cea|cel)\s+mai\b",
     r"\b(?:nu|sa)\s+(?:mai|stiu|vreau|pot|plec|pleci|iubesc|iubesti)\b",
     r"\b(?:te|ma)\s+(?:iubesc|iubesti|astept|doare)\b",
@@ -56,14 +64,7 @@ _NON_ENGLISH_PHRASES = (
     r"\b(?:selva\s+y\s+mar|para\s+ti|por\s+que)\b",
     # Italiaans/Portugees
     r"\b(?:ti\s+amo|io\s+(?:sono|voglio)|senza\s+te|per\s+sempre|il\s+mio|la\s+mia|eu\s+(?:sou|quero)|nao\s+(?:sei|quero)|meu\s+amor|voce\s+e)\b",
-    # Nederlands
-    r"\b(?:ik\s+(?:ben|wil|hou|weet)|jij\s+(?:bent|weet)|mijn\s+(?:hart|liefde|leven)|zonder\s+jou|met\s+jou|voor\s+altijd)\b",
 )
-
-# Opnames met een vreemde taal kunnen ook een Engelse titel hebben.
-# Exacte bekende uitzonderingen zijn steeds expliciet te blokkeren.
-DARK_EDGE_BLOCKED_RECORDINGS = frozenset()  # Alleen bevestigde, specifiek ongewenste opnames toevoegen.
-
 
 def _key(value):
     return " ".join(unicodedata.normalize("NFKC", str(value or "")).casefold().split())
@@ -73,16 +74,21 @@ def dark_edge_reject_reason(artist, title):
     """None = door de voorlopige bronfilter; anders de afwijsreden.
 
     De bestaande globale matcher, taal-, regio- en duplicaatchecks blijven
-    daarnaast verplicht. Ook een toegelaten track is niet gegarandeerd Engels
-    gezongen: RadioBox en Spotify geven geen verifieerbare zangtaalmetadata.
+    daarnaast verplicht. Nederlands én Engels zijn toegestaan. De toegelaten
+    track is niet bewezen Engels/Nederlands gezongen; zulke metadata ontbreken.
     """
     a = _key(artist)
     raw = str(title or "").strip()
     t = _key(raw)
     if not a or not t:
         return "lege artiest/titel"
-    if a not in DARK_EDGE_APPROVED_ARTISTS:
-        return "artiest niet op de conservatieve indie-toelatingslijst"
+    # Exacte artiest en expliciet gecrediteerde gasten; GEEN substring-ban
+    # (bv. 'sia' mag nooit een deel van een andere artiestnaam raken).
+    credited = re.split(r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*", a)
+    if a in DARK_EDGE_BLOCKED_ARTISTS or any(
+        name.strip() in DARK_EDGE_BLOCKED_ARTISTS for name in credited
+    ):
+        return "expliciet ongewenste pop-, punk- of metalartiest"
     if (a, t) in DARK_EDGE_BLOCKED_RECORDINGS:
         return "expliciet uitgesloten opname"
     # Geen Griekse/Cyrillische/Arabische/CJK-tekens in titels.
