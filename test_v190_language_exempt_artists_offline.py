@@ -23,10 +23,11 @@ ns = {
     "v150_is_unwanted_language": lambda artist, title: True,
     "v148_block_confirmed_romanian": lambda artist, title: False,
     "v143_unwanted_title": lambda title: True,
-    "v119_is_german_title": lambda title: True,
+    "v119_is_german_title": lambda title: title == "Ich liebe dich",
 }
 for name in (
     "v190_is_language_exempt_artist",
+    "v191_is_german_vocal_risk",
     "v140_is_unwanted_language_title",
     "v131_block_nonlatin_east_asian",
     "indie_select_blocks_german",
@@ -48,11 +49,16 @@ preferred = (
 )
 for artist in preferred:
     assert ns["v190_is_language_exempt_artist"](artist), artist
-    assert not ns["v140_is_unwanted_language_title"]("Ich liebe dich", artist), artist
-    assert not ns["indie_select_blocks_german"](artist, "Ich liebe dich"), artist
+    assert not ns["v140_is_unwanted_language_title"]("Blóðberg", artist), artist
+    assert not ns["indie_select_blocks_german"](artist, "Blóðberg"), artist
     assert not ns["v131_block_nonlatin_east_asian"](artist, "夜"), artist
-    assert not ns["is_confirmed_german_vocal"](artist, "Ich liebe dich"), artist
-    assert ns["v106_language_decision"](artist, "Ich liebe dich") == "allow", artist
+    assert not ns["is_confirmed_german_vocal"](artist, "Blóðberg"), artist
+    assert ns["v106_language_decision"](artist, "Blóðberg") == "allow", artist
+    # Niemand, ook geen favoriet, krijgt toegang voor duidelijk Duits.
+    assert ns["v191_is_german_vocal_risk"](artist, "Ich liebe dich"), artist
+    assert ns["v140_is_unwanted_language_title"]("Ich liebe dich", artist), artist
+    assert ns["indie_select_blocks_german"](artist, "Ich liebe dich"), artist
+    assert ns["v106_language_decision"](artist, "Ich liebe dich") == "block", artist
 
 for artist in (
     "Muse",
@@ -67,10 +73,11 @@ for artist in (
     assert ns["indie_select_blocks_german"](artist, "Ich liebe dich"), artist
     assert ns["v131_block_nonlatin_east_asian"](artist, "夜"), artist
 
+assert ns["is_confirmed_german_vocal"]("Sigur Rós", "Ich liebe dich")
 assert ns["is_confirmed_german_vocal"]("Tomte", "Die Schönheit der Chance")
 assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge")' in src
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in src
 assert "max_additions_per_round = 1" in src
 assert 'item.get("source") == "dark_edge" and not dark_edge_track_allowed(artist, title)' in src
 assert "if v190_is_language_exempt_artist(artist):" in src
-print("✅ Sigur Rós, Ólafur Arnalds en Cocteau Twins mogen alle talen; geen Spotify-/dubbels-bypass.")
+print("✅ Sigur Rós, Ólafur Arnalds en Cocteau Twins welkom; Duitse zang blijft voor iedereen geblokkeerd.")
