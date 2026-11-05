@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793893086.288014,
+  "__v150_next_spotify_round_at": 1793893212.4993887,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -916,17 +916,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793893077.2454944,
-    "mellow_mix": 1793893077.248397,
-    "big_sonic_heaven": 1793893077.250678,
-    "radio_x_chilled": 1793893077.2532432,
-    "dreampop_radio": 1793893077.2556627,
-    "indie_select": 1793893077.2582061,
-    "dkfm_edge": 1793893077.4517577,
+    "vuurland": 1793893092.462033,
+    "mellow_mix": 1793893092.4649417,
+    "big_sonic_heaven": 1793893092.467202,
+    "radio_x_chilled": 1793893092.469731,
+    "dreampop_radio": 1793893092.4721866,
+    "indie_select": 1793893092.474681,
+    "dkfm_edge": 1793893092.4771583,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793893077.6535063
+    "dark_edge": 1793893092.479775
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6948,6 +6948,12 @@
       "title": "Ways of Looking",
       "source": "dreampop_radio",
       "failed_at": 1793886937
+    },
+    "polar|||bipolar dream": {
+      "artist": "Polar",
+      "title": "Bipolar Dream",
+      "source": "dreampop_radio",
+      "failed_at": 1793893094
     }
   },
   "__v51_radio_unmatched": {
@@ -7105,7 +7111,7 @@
   "__last_radio_key_big_sonic_heaven": "gergana dimitrova & lisa gerrard|||sun and moon",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 4238,
-  "__v146_spotify_budget_slot": 1793892966.8029537,
+  "__v146_spotify_budget_slot": 1793893093.010452,
   "__vuurland_active_playlist_count": 5652,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -49144,7 +49150,7 @@
     "dear euphoria|||falling behind": 3,
     "still parade|||hunter": 3,
     "the mynabirds|||ways of looking": 3,
-    "polar|||bipolar dream": 2,
+    "polar|||bipolar dream": 3,
     "cosmonaut|||say what you want - cosmonaut": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -49251,7 +49257,8 @@
     "hey marseilles|||bright stars burning": 1,
     "dear euphoria|||falling behind": 1,
     "still parade|||hunter": 1,
-    "the mynabirds|||ways of looking": 1
+    "the mynabirds|||ways of looking": 1,
+    "polar|||bipolar dream": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -70404,5 +70411,6 @@
   "__match_v35__shawn colvin|||baker street": "spotify:track:3vwkZIdkSdDJ6E9VkifVUc",
   "__match_v35__velveteen|||unanswered": "spotify:track:7u1ecSSEQUeveOJJON9doA",
   "__match_v35__kota the friend|||outside": "spotify:track:2i40wZkiPAGIFudrGH99nx",
-  "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0"
+  "__match_v35__hozier|||too sweet": "spotify:track:3HMY0r2BAdpasXMY8rseR0",
+  "__not_found_v35__polar|||bipolar dream": 1793893094
 }
