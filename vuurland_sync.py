@@ -1391,11 +1391,35 @@ def get_championship_vinyl_tracks():
     return get_radiobox_tracks(CHAMPIONSHIP_VINYL_SOURCE_URL, "Championship Vinyl")
 
 
+def v190_is_language_exempt_artist(artist):
+    """Geautoriseerde taaluitzonderingen, ongeacht gezongen taal of titel.
+
+    Alleen de exacte hoofdartiest (optioneel met gastartiesten), niet
+    substringmatches of een willekeurige gast op een ander nummer.
+    Dit omzeilt NOOIT Spotify-deduplicatie, quota of ongewenste DJ's.
+    """
+    import unicodedata
+    main_artist = re.split(
+        r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,|/)\s*",
+        str(artist or ""), maxsplit=1, flags=re.I,
+    )[0]
+    normalized = unicodedata.normalize("NFKD", main_artist.casefold())
+    normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    normalized = " ".join(re.sub(r"[^a-z0-9]+", " ", normalized).split())
+    return normalized in {"sigur ros", "olafur arnalds", "cocteau twins"}
+
+
 def dark_edge_track_allowed(artist, title):
-    # Een bestaande 7-bronnenregel wordt NIET gewijzigd; alleen Dark Edge.
-    return (dark_edge_reject_reason(artist, title) is None
-            and not v140_is_unwanted_language_title(title, artist)
-            and not v131_block_nonlatin_east_asian(artist, title))
+    # Taaluitzonderingen blijven toegestaan bij alle acht actieve bronnen.
+    # De Dark Edge dance-/punk-/metalblokkade blijft gelden.
+    language_exception = v190_is_language_exempt_artist(artist)
+    reason = dark_edge_reject_reason(artist, title)
+    return ((reason is None or
+             (language_exception and reason in
+              {"duidelijk anderstalige titel", "niet-Latijns schrift"}))
+            and (language_exception or
+                 (not v140_is_unwanted_language_title(title, artist)
+                  and not v131_block_nonlatin_east_asian(artist, title))))
 
 
 def get_dark_edge_tracks():
@@ -1659,6 +1683,8 @@ def v150_is_unwanted_language(artist, title):
 
 
 def v140_is_unwanted_language_title(title, artist=""):
+    if v190_is_language_exempt_artist(artist):
+        return False
     return v150_is_unwanted_language(artist, title) or (v148_block_confirmed_romanian(artist, title) or (v143_unwanted_title(title)))
 
 
@@ -1714,6 +1740,8 @@ GERMAN_VOCAL_SPOTIFY_IDS = frozenset({
 
 
 def is_confirmed_german_vocal(artist, title):
+    if v190_is_language_exempt_artist(artist):
+        return False
     return (" ".join(str(artist).casefold().split()),
             " ".join(str(title).casefold().split())) in GERMAN_VOCAL_RADIO_TRACKS
 
@@ -1727,6 +1755,9 @@ def is_blocked_german_spotify_uri(uri):
 def v106_language_decision(artist, title):
     import csv
     from pathlib import Path
+
+    if v190_is_language_exempt_artist(artist):
+        return "allow"
 
     key = (" ".join(str(artist).casefold().split()),
            " ".join(str(title).casefold().split()))
@@ -1950,6 +1981,8 @@ INDIE_SELECT_GERMAN_TRACKS = frozenset({
 
 
 def indie_select_blocks_german(artist, title):
+    if v190_is_language_exempt_artist(artist):
+        return False
     import unicodedata
 
     def clean(value):
@@ -6830,6 +6863,8 @@ def v116_stamp_fifo(live_queue, cache):
 
 # v131: expliciete gebruikersvoorkeur; alleen CJK-schrift herkennen, geen taalgok.
 def v131_block_nonlatin_east_asian(artist, title):
+    if v190_is_language_exempt_artist(artist):
+        return False
     import unicodedata
     # NFKC normalizes half-width/full-width compatibility characters.
     value = unicodedata.normalize("NFKC", str(artist or "") + " " + str(title or ""))
