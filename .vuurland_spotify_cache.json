@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793858376.5456448,
+  "__v150_next_spotify_round_at": 1793858499.239591,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "noel gallagher|||fade away live at the lowry"
     ],
     "dreampop_radio": [
+      "peter gallway|||i wish you everything",
       "coldplay|||green eyes",
       "red house painters|||around and around",
       "morphine|||in spite of me",
@@ -520,8 +521,7 @@
       "jurgen ufer|||weg nach haus",
       "blumfeld|||graue wolken",
       "gisbert zu knyphausen|||melancholie",
-      "olli schulz & der hund marie|||weil die zeit sich so beeilt",
-      "enno bunger|||heimlich"
+      "olli schulz & der hund marie|||weil die zeit sich so beeilt"
     ],
     "indie_select": [
       "the xx|||say something loving",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793858366.465341,
-    "mellow_mix": 1793858366.471734,
-    "big_sonic_heaven": 1793858366.476627,
-    "radio_x_chilled": 1793858366.4816732,
-    "dreampop_radio": 1793858366.4857109,
-    "indie_select": 1793858366.4905064
+    "vuurland": 1793858379.2022214,
+    "mellow_mix": 1793858379.2085416,
+    "big_sonic_heaven": 1793858379.2133667,
+    "radio_x_chilled": 1793858379.218336,
+    "dreampop_radio": 1793858379.2224264,
+    "indie_select": 1793858379.227114
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5949,6 +5949,12 @@
       "title": "Shelter",
       "source": "dreampop_radio",
       "failed_at": 1793857891
+    },
+    "keeley|||the glitter and the glue tipler remix": {
+      "artist": "KEELEY",
+      "title": "The Glitter and the Glue (Tipler Remix)",
+      "source": "indie_select",
+      "failed_at": 1793858380
     }
   },
   "__v51_radio_unmatched": {
@@ -6066,7 +6072,7 @@
   "__last_radio_key_big_sonic_heaven": "bathe alone|||once more",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 3746,
-  "__v146_spotify_budget_slot": 1793858256.9033868,
+  "__v146_spotify_budget_slot": 1793858379.5985165,
   "__vuurland_active_playlist_count": 5464,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -45804,7 +45810,7 @@
     "lcd soundsystem|||losing my edge - lcd soundsystem": 3,
     "spirit|||clear": 3,
     "owls of the swamp|||shelter": 3,
-    "keeley|||the glitter and the glue tipler remix": 2
+    "keeley|||the glitter and the glue tipler remix": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -45902,7 +45908,8 @@
     "the canon logic|||avenue of criminals album version": 1,
     "lcd soundsystem|||losing my edge - lcd soundsystem": 1,
     "spirit|||clear": 1,
-    "owls of the swamp|||shelter": 1
+    "owls of the swamp|||shelter": 1,
+    "keeley|||the glitter and the glue tipler remix": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -64738,7 +64745,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "coldplay|||green eyes",
+  "__last_radio_key_dreampop_radio": "peter gallway|||i wish you everything",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -66154,5 +66161,6 @@
   "__not_found_v35__owls of the swamp|||shelter": 1793857891,
   "__match_v35__the paper kites|||electric indigo": "spotify:track:1erXDiGCnmUQvG6DZRqpuM",
   "__match_v35__sierra ferrell|||in dreams": "spotify:track:0ewKJ6eM0Z761OissISTW7",
-  "__match_v35__gregory alan isakov|||dark dark dark": "spotify:track:6QAH2Ji6xjUOJDUoIq6gab"
+  "__match_v35__gregory alan isakov|||dark dark dark": "spotify:track:6QAH2Ji6xjUOJDUoIq6gab",
+  "__not_found_v35__keeley|||the glitter and the glue tipler remix": 1793858380
 }
