@@ -1392,8 +1392,9 @@ def dark_edge_track_allowed(artist, title):
 
 
 def get_dark_edge_tracks():
-    # Alleen goedgekeurde alternatieve artiesten; geen pop/metal/punk,
-    # geen duidelijk anderstalige titels; geen extra Spotify-/AI-API-calls.
+    # Geen vaste artiestentoelatingslijst; gerichte afwijzingen voor
+    # bekende pop/metal/punk en anderstalige (niet-NL/EN) titels.
+    # Geen extra Spotify-/AI-API-calls.
     # De zenderjingle blijft ook uit de RadioBox-resultaten.
     raw = get_radiobox_tracks(
         DARK_EDGE_SOURCE_URL,
@@ -6249,7 +6250,7 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
             if sid == "dark_edge" and not dark_edge_track_allowed(artist, title):
-                reason = "Dark Edge: alleen gecontroleerde indie/Engelse titels"
+                reason = "Dark Edge: ongewenste pop/punk/metal of anderstalige titel"
             elif key in seen_this_scan:
                 reason = "herhaling binnen deze bronmeting"
             else:
