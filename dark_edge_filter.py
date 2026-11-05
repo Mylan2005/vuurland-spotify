@@ -11,7 +11,7 @@ import unicodedata
 # Alleen expliciete artiestidentiteiten; GEEN fuzzy of substring match.
 # Bewust geen algemene pop-, metal-, punk- of meertalige artiesten.
 DARK_EDGE_APPROVED_ARTISTS = frozenset({
-    "a perfect circle", "alt-j", "arcade fire", "arctic monkeys",
+    "alt-j", "arcade fire", "arctic monkeys",
     "austra", "band of horses", "beach house", "beck", "ben howard",
     "bloc party", "blur", "bombay bicycle club", "cage the elephant",
     "cigarettes after sex", "death cab for cutie", "depeche mode",
