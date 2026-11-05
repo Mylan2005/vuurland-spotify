@@ -5,7 +5,7 @@ Geen netwerk-/Spotify-aanvragen, geen toestandwijzigingen.
 import ast
 from pathlib import Path
 
-from dark_edge_filter import dark_edge_reject_reason, DARK_EDGE_APPROVED_ARTISTS
+from dark_edge_filter import dark_edge_reject_reason, DARK_EDGE_BLOCKED_ARTISTS
 
 root = Path(__file__).resolve().parent
 source = (root / "vuurland_sync.py").read_text(encoding="utf-8")
@@ -14,6 +14,7 @@ functions = {node.name: node for node in tree.body
              if isinstance(node, ast.FunctionDef)}
 
 # Muse, Nothing But Thieves, The Neighbourhood, Tame Impala en Placebo.
+# Zowel gekende als nog onbekende indie-artiesten krijgen toegang.
 for artist, title in (
     ("MUSE", "Supermassive Black Hole"),
     ("Nothing But Thieves", "Real Love Song"),
@@ -25,6 +26,10 @@ for artist, title in (
     ("Radiohead", "Creep"),
     ("Slowdive", "Sugar for the Pill"),
     ("DIIV", "Doused"),
+    ("Spinvis", "Ik wil alleen maar zwemmen"),
+    ("Het Zesde Metaal", "Ploegsteert"),
+    ("Nieuw Indieproject", "New Atmospheric Song"),
+    ("Coldplay", "The Scientist"),
 ):
     assert dark_edge_reject_reason(artist, title) is None, (artist, title)
 
@@ -41,6 +46,11 @@ for artist, title in (
     ("Tati Falco", "Selva y mar"),
     ("Travka", "Distante"),
     ("Muse feat. Drake", "Supermassive Black Hole"),
+    ("Kleerup & Robyn", "With Every Heartbeat"),
+    ("Coldplay", "My Universe"),
+    ("The Weeknd & Kendrick Lamar", "Pray For Me"),
+    ("Eyedrops", "Culori Uitate"),
+    ("Cred Ca Sunt Extraterestru", "Floare de maidan"),
 ):
     assert dark_edge_reject_reason(artist, title), (artist, title)
 
@@ -52,14 +62,17 @@ for artist, title in (
     ("Placebo", "Je t'aime"),
     ("Radiohead", "No te vayas"),
     ("Editors", "Ti amo"),
-    ("Interpol", "Ik ben hier"),
+    ("Interpol", "Ti voglio"),
     ("Muse", "Привет"),
 ):
     assert dark_edge_reject_reason(artist, title), (artist, title)
 
-assert "muse" in DARK_EDGE_APPROVED_ARTISTS
-assert "nothing but thieves" in DARK_EDGE_APPROVED_ARTISTS
-assert "kylie minogue" not in DARK_EDGE_APPROVED_ARTISTS
+assert "muse" not in DARK_EDGE_BLOCKED_ARTISTS
+assert "nothing but thieves" not in DARK_EDGE_BLOCKED_ARTISTS
+assert "kylie minogue" in DARK_EDGE_BLOCKED_ARTISTS
+assert "the offspring" in DARK_EDGE_BLOCKED_ARTISTS
+assert dark_edge_reject_reason("Muse", "Ik ben hier") is None
+assert dark_edge_reject_reason("Unknown Indie Artist", "Mijn hart") is None
 
 # Test echte intakeroute met gesimuleerde RadioBox-resultaten.
 ns = {
@@ -73,6 +86,8 @@ ns = {
         ("Alexandru Andries", "Cea mai frumoasa zi"),
         ("Nothing But Thieves", "Real Love Song"),
         ("Muse", "Nu mai vreau"),
+        ("Spinvis", "Ik wil alleen maar zwemmen"),
+        ("New Indie Band", "Endless Reverie"),
         ("Muse", "global-language-block"),
     ],
 }
@@ -82,6 +97,8 @@ for name in ("dark_edge_track_allowed", "get_dark_edge_tracks"):
 assert ns["get_dark_edge_tracks"]() == [
     ("Muse", "Supermassive Black Hole"),
     ("Nothing But Thieves", "Real Love Song"),
+    ("Spinvis", "Ik wil alleen maar zwemmen"),
+    ("New Indie Band", "Endless Reverie"),
 ]
 
 order = next(node.value for node in tree.body
@@ -99,5 +116,5 @@ assert 'sid == "dark_edge" and not dark_edge_track_allowed(artist, title)' in co
 assert '__dark_edge_strict_baseline_20261105' in sync_text
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 assert "max_additions_per_round = 1" in source
-print("✅ Dark Edge: 8 bronnen, artiestallowlist, taalblokkade, queue-/Spotify-gates, nulmeting.")
-print("ℹ️ Metadata kan gezongen taal niet altijd aantonen; twijfelgevallen worden beperkt, niet bewezen.")
+print("✅ Dark Edge: 8 bronnen, geen artiestallowlist, pop-/metal-/punk-afwijzingen, NL toegestaan, queue- en Spotify-gates.")
+print("ℹ️ Genre en taal kunnen niet altijd uit RadioBox-metadata worden vastgesteld; dit is een risicofilter.")
