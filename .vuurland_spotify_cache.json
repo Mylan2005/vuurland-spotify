@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793885423.8744774,
+  "__v150_next_spotify_round_at": 1793885550.6804705,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -103,6 +103,7 @@
       "maggie rogers|||alaska"
     ],
     "mellow_mix": [
+      "willie wright|||nantucket island",
       "steve young|||silverlake",
       "the jayhawks|||all the right reasons",
       "the national|||slow show",
@@ -769,17 +770,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793885415.227659,
-    "mellow_mix": 1793885415.2296805,
-    "big_sonic_heaven": 1793885415.2311792,
-    "radio_x_chilled": 1793885415.232923,
-    "dreampop_radio": 1793885415.2345417,
-    "indie_select": 1793885415.236252,
-    "dkfm_edge": 1793885415.2379584,
+    "vuurland": 1793885430.4396942,
+    "mellow_mix": 1793885430.6507635,
+    "big_sonic_heaven": 1793885430.652311,
+    "radio_x_chilled": 1793885430.6540394,
+    "dreampop_radio": 1793885430.655655,
+    "indie_select": 1793885430.657372,
+    "dkfm_edge": 1793885430.6590903,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793885415.2398143
+    "dark_edge": 1793885430.6609638
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3150,6 +3151,7 @@
       "willie nelson|||angel flying too close to the ground",
       "willie nelson|||blue eyes crying in the rain",
       "willie nelson|||sitting in limbo",
+      "willie wright|||nantucket island",
       "winona oak|||horses",
       "wye oak|||every day like the last",
       "xavier rudd|||home",
@@ -6821,12 +6823,12 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "beck|||ride lonesome",
-  "__last_radio_key_mellow_mix": "steve young|||silverlake",
+  "__last_radio_key_mellow_mix": "willie wright|||nantucket island",
   "__last_radio_key_big_sonic_heaven": "tombstones in their eyes|||fall",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 4112,
-  "__v146_spotify_budget_slot": 1793885304.3757832,
-  "__vuurland_active_playlist_count": 5601,
+  "__v116_fifo_next_sequence": 4113,
+  "__v146_spotify_budget_slot": 1793885431.176149,
+  "__vuurland_active_playlist_count": 5602,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793883922,
@@ -13995,6 +13997,7 @@
     "waxahatchee|||thirteen",
     "waxahatchee|||you found me",
     "we had to leave|||small voices",
+    "we were promised jetpacks|||act on impulse",
     "we were promised jetpacks|||impossible",
     "wednesday|||elderberry wine",
     "weezer|||island in the sun",
@@ -18848,6 +18851,7 @@
     "spotify:track:6ZZPjYECelIeOGGf1OGiHs",
     "spotify:track:6ZcjTx0iLJSyuztsaTmxjO",
     "spotify:track:6ZdAsADC9LIICvsVRuGWbZ",
+    "spotify:track:6ZihpHx7gL4ZfM8T92VCUq",
     "spotify:track:6ZrwhNlrmg63J21UDdNcnH",
     "spotify:track:6ZygaqgtPkiahkiYJhYWhn",
     "spotify:track:6Zz846CtUmQGP5z4F7sccA",
@@ -21834,6 +21838,7 @@
     "GBCVZ2500156",
     "GBCVZ2500165",
     "GBCYF0700001",
+    "GBDCA1101897",
     "GBDCA1302374",
     "GBDCA1402816",
     "GBDCA9900067",
@@ -30785,7 +30790,8 @@
     "spotify:track:2obkeWSWz3tcFkcjA8RLX1": "AUAP11100006",
     "spotify:track:6BV7Pas1jXUe111twWNEwQ": "BEEZ72500010",
     "spotify:track:1vqU5iA5DqkDmEO4YyKOZD": "USVG21203053",
-    "spotify:track:3KR8duF1o4j2Mob4CD6agO": "FRY029800015"
+    "spotify:track:3KR8duF1o4j2Mob4CD6agO": "FRY029800015",
+    "spotify:track:6ZihpHx7gL4ZfM8T92VCUq": "GBDCA1101897"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -38480,6 +38486,10 @@
     "rene aubry|||la grande cascade": {
       "artist": "René Aubry",
       "title": "La grande cascade"
+    },
+    "we were promised jetpacks|||act on impulse": {
+      "artist": "We Were Promised Jetpacks",
+      "title": "Act on Impulse"
     }
   },
   "__v82_confirmed_catalog": {
@@ -48092,6 +48102,11 @@
       "uri": "spotify:track:3KR8duF1o4j2Mob4CD6agO",
       "artist": "René Aubry",
       "title": "La grande cascade"
+    },
+    "we were promised jetpacks|||act on impulse": {
+      "uri": "spotify:track:6ZihpHx7gL4ZfM8T92VCUq",
+      "artist": "We Were Promised Jetpacks",
+      "title": "Act on Impulse"
     }
   },
   "__pending_library_likes": {},
@@ -61811,6 +61826,7 @@
       "washed out|||time to walk away",
       "wasia project|||somebody come through",
       "we had to leave|||small voices",
+      "we were promised jetpacks|||act on impulse",
       "we were promised jetpacks|||impossible",
       "wednesday|||elderberry wine",
       "weezer|||island in the sun",
@@ -63366,6 +63382,7 @@
       "spotify:track:6YYU9JbeWnW4L5NY7hlLlw",
       "spotify:track:6ZGRjG9vr6HDhlBypaXbQH",
       "spotify:track:6ZVVax9sMTB6HPKu36eYZs",
+      "spotify:track:6ZihpHx7gL4ZfM8T92VCUq",
       "spotify:track:6ZygaqgtPkiahkiYJhYWhn",
       "spotify:track:6aBn7uWltfjfNvovhybRat",
       "spotify:track:6aE623nY6WVhgYH9VAFQRr",
@@ -64319,6 +64336,7 @@
       "GBCVZ0802433",
       "GBCVZ1303281",
       "GBCYF0700001",
+      "GBDCA1101897",
       "GBDCA1302374",
       "GBDCA1402816",
       "GBDCE0500012",
@@ -67259,7 +67277,8 @@
       "spotify:track:2obkeWSWz3tcFkcjA8RLX1": "AUAP11100006",
       "spotify:track:6BV7Pas1jXUe111twWNEwQ": "BEEZ72500010",
       "spotify:track:1vqU5iA5DqkDmEO4YyKOZD": "USVG21203053",
-      "spotify:track:3KR8duF1o4j2Mob4CD6agO": "FRY029800015"
+      "spotify:track:3KR8duF1o4j2Mob4CD6agO": "FRY029800015",
+      "spotify:track:6ZihpHx7gL4ZfM8T92VCUq": "GBDCA1101897"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -69189,5 +69208,6 @@
   "__match_v35__julia stone|||let's forget all the things that we say": "spotify:track:2obkeWSWz3tcFkcjA8RLX1",
   "__match_v35__iskander moon|||the city": "spotify:track:6BV7Pas1jXUe111twWNEwQ",
   "__match_v35__robert francis|||eighteen": "spotify:track:1vqU5iA5DqkDmEO4YyKOZD",
-  "__match_v35__rene aubry|||la grande cascade": "spotify:track:3KR8duF1o4j2Mob4CD6agO"
+  "__match_v35__rene aubry|||la grande cascade": "spotify:track:3KR8duF1o4j2Mob4CD6agO",
+  "__match_v35__we were promised jetpacks|||act on impulse": "spotify:track:6ZihpHx7gL4ZfM8T92VCUq"
 }
