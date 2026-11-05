@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793889692.1886792,
+  "__v150_next_spotify_round_at": 1793889818.8609352,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -401,6 +401,7 @@
       "the cure|||close to me"
     ],
     "dreampop_radio": [
+      "cowboy junkies|||sweet jane",
       "sharon van etten and glass ghost|||like a diamond",
       "allo darlin|||my heart is a drummer",
       "heidi happy|||other reasons",
@@ -887,17 +888,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793889683.8680277,
-    "mellow_mix": 1793889683.8707178,
-    "big_sonic_heaven": 1793889683.8726196,
-    "radio_x_chilled": 1793889683.8749294,
-    "dreampop_radio": 1793889683.8770328,
-    "indie_select": 1793889683.8792703,
-    "dkfm_edge": 1793889683.8815472,
+    "vuurland": 1793889698.6225255,
+    "mellow_mix": 1793889698.625104,
+    "big_sonic_heaven": 1793889698.6269372,
+    "radio_x_chilled": 1793889698.6292348,
+    "dreampop_radio": 1793889698.8345094,
+    "indie_select": 1793889698.836738,
+    "dkfm_edge": 1793889698.8390021,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793889683.8839183
+    "dark_edge": 1793889698.8413854
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4898,6 +4899,7 @@
       "coldplay|||green eyes",
       "coldplay|||magic",
       "concrete blonde|||mexican moon",
+      "cowboy junkies|||sweet jane",
       "craig cardiff|||dirty old town",
       "daft punk|||something about us",
       "damien jurado|||ohio filous remix",
@@ -7020,9 +7022,9 @@
   "__last_radio_key_mellow_mix": "bunny wailer|||dream land",
   "__last_radio_key_big_sonic_heaven": "scala|||slide",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 4181,
-  "__v146_spotify_budget_slot": 1793889572.6973302,
-  "__vuurland_active_playlist_count": 5631,
+  "__v116_fifo_next_sequence": 4182,
+  "__v146_spotify_budget_slot": 1793889699.3704832,
+  "__vuurland_active_playlist_count": 5632,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793887564,
@@ -11160,6 +11162,7 @@
     "message to bears & will samson|||saola",
     "message to bears|||saola",
     "message to bears|||will samson|||saola",
+    "metallica|||nothing else matters",
     "metric|||sick muse",
     "metronomy|||everything goes my way",
     "metronomy|||the bay",
@@ -18981,6 +18984,7 @@
     "spotify:track:6Q9LqCPQWCoNq8juRAku9T",
     "spotify:track:6Q9qYlUJgjoIJq8SmC6qLi",
     "spotify:track:6QAH2Ji6xjUOJDUoIq6gab",
+    "spotify:track:6QAsrXPnMSXIbV0yEJHlEX",
     "spotify:track:6QCiwykRSG8hSHlKS4RTnh",
     "spotify:track:6QHGZVV3uiOe9XcKYDToKZ",
     "spotify:track:6QIMK1TeQa3PQEVECoDD3b",
@@ -23186,6 +23190,7 @@
     "QMHG41850001",
     "QMHS81300102",
     "QMK5L1200004",
+    "QMKHM1900008",
     "QMKRW1900021",
     "QMKRW2300004",
     "QMM3X1505306",
@@ -31101,7 +31106,8 @@
     "spotify:track:3CU5Q0ipLGlZ73jJmuiXkl": "GBBRP0919409",
     "spotify:track:60l6nqsE50tmd9GrvU7Vqi": "GBHLW1804109",
     "spotify:track:43IYZ1zQpbXXWhGQEgjAjb": "GBAAN6900035",
-    "spotify:track:4dtDfhA3oLy3f99H76z1xa": "IEBWM0800010"
+    "spotify:track:4dtDfhA3oLy3f99H76z1xa": "IEBWM0800010",
+    "spotify:track:6QAsrXPnMSXIbV0yEJHlEX": "QMKHM1900008"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -38920,6 +38926,10 @@
     "lisa hannigan|||lille": {
       "artist": "Lisa Hannigan",
       "title": "Lille"
+    },
+    "metallica|||nothing else matters": {
+      "artist": "Metallica",
+      "title": "Nothing Else Matters - Remastered 2021"
     }
   },
   "__v82_confirmed_catalog": {
@@ -48687,6 +48697,11 @@
       "uri": "spotify:track:4dtDfhA3oLy3f99H76z1xa",
       "artist": "Lisa Hannigan",
       "title": "Lille"
+    },
+    "metallica|||nothing else matters": {
+      "uri": "spotify:track:6QAsrXPnMSXIbV0yEJHlEX",
+      "artist": "Metallica",
+      "title": "Nothing Else Matters - Remastered 2021"
     }
   },
   "__pending_library_likes": {},
@@ -61610,6 +61625,7 @@
       "men i trust|||carried away",
       "merci mercy|||into you",
       "meskerem mees|||joe",
+      "metallica|||nothing else matters",
       "metric|||sick muse",
       "mgmt|||electric feel",
       "mich gerber|||haboob",
@@ -63980,6 +63996,7 @@
       "spotify:track:6Q2Pf2YRnK6SMgwo1hT1ui",
       "spotify:track:6Q9LqCPQWCoNq8juRAku9T",
       "spotify:track:6QAH2Ji6xjUOJDUoIq6gab",
+      "spotify:track:6QAsrXPnMSXIbV0yEJHlEX",
       "spotify:track:6QIMK1TeQa3PQEVECoDD3b",
       "spotify:track:6QewNVIDKdSl8Y3ycuHIei",
       "spotify:track:6QhXQOpyYvbpdbyjgAqKdY",
@@ -65304,6 +65321,7 @@
       "QMFMF2431575",
       "QMFMG2336954",
       "QMHBS1500005",
+      "QMKHM1900008",
       "QMM3X1505306",
       "QMMZN2102257",
       "QMNAQ1200001",
@@ -67976,7 +67994,8 @@
       "spotify:track:3CU5Q0ipLGlZ73jJmuiXkl": "GBBRP0919409",
       "spotify:track:60l6nqsE50tmd9GrvU7Vqi": "GBHLW1804109",
       "spotify:track:43IYZ1zQpbXXWhGQEgjAjb": "GBAAN6900035",
-      "spotify:track:4dtDfhA3oLy3f99H76z1xa": "IEBWM0800010"
+      "spotify:track:4dtDfhA3oLy3f99H76z1xa": "IEBWM0800010",
+      "spotify:track:6QAsrXPnMSXIbV0yEJHlEX": "QMKHM1900008"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -68351,7 +68370,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "sharon van etten and glass ghost|||like a diamond",
+  "__last_radio_key_dreampop_radio": "cowboy junkies|||sweet jane",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -69938,5 +69957,6 @@
   "__match_v35__vetiver|||strictly rule": "spotify:track:3CU5Q0ipLGlZ73jJmuiXkl",
   "__match_v35__sleaford mods|||when you come up to me": "spotify:track:60l6nqsE50tmd9GrvU7Vqi",
   "__match_v35__fairport convention|||who knows where the time goes": "spotify:track:43IYZ1zQpbXXWhGQEgjAjb",
-  "__match_v35__lisa hannigan|||lille": "spotify:track:4dtDfhA3oLy3f99H76z1xa"
+  "__match_v35__lisa hannigan|||lille": "spotify:track:4dtDfhA3oLy3f99H76z1xa",
+  "__match_v35__metallica|||nothing else matters": "spotify:track:6QAsrXPnMSXIbV0yEJHlEX"
 }
