@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793903465.1858258,
+  "__v150_next_spotify_round_at": 1793903586.4794643,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "ciska ciska|||angel",
       "damien rice|||cannonball",
       "beirut|||nantes",
       "arcade fire|||neighborhood #1 tunnels",
@@ -112,8 +113,7 @@
       "japanese breakfast|||mega circuit",
       "spinvis|||icarus",
       "elis floreen|||panther",
-      "arcade fire|||speaking in tongues",
-      "sohn|||conrad"
+      "arcade fire|||speaking in tongues"
     ],
     "mellow_mix": [
       "jimmy cliff|||the harder they come",
@@ -626,6 +626,7 @@
       "mogwai|||ritchie sacramento"
     ],
     "dkfm_edge": [
+      "newdad|||where i go",
       "gifts for the earth|||downer",
       "the real sea|||sure thing",
       "stillfilms|||spiraling",
@@ -724,8 +725,7 @@
       "t a k e r|||taker - jackalope",
       "distressor|||haunt",
       "velvet|||purity feat old coke",
-      "new age healers|||all wrapped up",
-      "sinking gardens|||washed away"
+      "new age healers|||all wrapped up"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793903454.9624825,
-    "mellow_mix": 1793903454.9648523,
-    "big_sonic_heaven": 1793903454.9667678,
-    "radio_x_chilled": 1793903454.9688385,
-    "dreampop_radio": 1793903454.9707382,
-    "indie_select": 1793903454.972747,
-    "dkfm_edge": 1793903454.9747384,
+    "vuurland": 1793903466.3399634,
+    "mellow_mix": 1793903466.342431,
+    "big_sonic_heaven": 1793903466.344372,
+    "radio_x_chilled": 1793903466.3464587,
+    "dreampop_radio": 1793903466.3483856,
+    "indie_select": 1793903466.3504276,
+    "dkfm_edge": 1793903466.4650447,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793903455.1017816
+    "dark_edge": 1793903466.4672384
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6624,6 +6624,7 @@
       "new link|||dear diana",
       "newdad|||angel",
       "newdad|||nosebleed",
+      "newdad|||where i go",
       "newmoon|||still",
       "night tapes|||loner",
       "ocean daze|||give it time",
@@ -7347,13 +7348,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "damien rice|||cannonball",
+  "__last_radio_key_vuurland": "ciska ciska|||angel",
   "__last_radio_key_mellow_mix": "jimmy cliff|||the harder they come",
   "__last_radio_key_big_sonic_heaven": "fever dream|||glue",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 4409,
-  "__v146_spotify_budget_slot": 1793903345.5931838,
-  "__vuurland_active_playlist_count": 5724,
+  "__v116_fifo_next_sequence": 4410,
+  "__v146_spotify_budget_slot": 1793903466.7945962,
+  "__vuurland_active_playlist_count": 5725,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793902244,
@@ -11492,6 +11493,7 @@
     "max richter|||all human beings",
     "max richter|||kiki layne|||mari samuelsen|||robert ziegler|||all human beings",
     "maxence cyrin|||james: polynomial-c",
+    "maxence cyrin|||where is my mind",
     "maximilian hecker|||over",
     "maximo park|||books from boxes",
     "maximo park|||drinking martinis",
@@ -18315,6 +18317,7 @@
     "spotify:track:4j6LAJgpb4DgfRIt3RftzC",
     "spotify:track:4jGfNIAPEJNpHoGm4r5znR",
     "spotify:track:4jLv3tDBu8ww2R07DvL12s",
+    "spotify:track:4jNQkWhuzqrbqQuqanFFJ6",
     "spotify:track:4jaWgF0XRhjp8NI0q4UQSa",
     "spotify:track:4jd1VymK8NiKkXJNXTDbxw",
     "spotify:track:4jdNbCXGGciAOLwAShbJ9Z",
@@ -21317,6 +21320,7 @@
     "FR10S2565989",
     "FR10S2605244",
     "FR12Q2101142",
+    "FR13Z0900040",
     "FR26V1406632",
     "FR26V1406635",
     "FR2PY1503880",
@@ -31810,7 +31814,8 @@
     "spotify:track:0NBgmP6Yg5xZYsnIZ0pGdo": "GBAAP9500273",
     "spotify:track:1yexhSDARSLVvRCBU3wDAm": "USSM16600020",
     "spotify:track:2zKH8YUn6wyzSnHWFYMhJ8": "US38Y1424406",
-    "spotify:track:6IZdjnq4WWDuDKwyeynQit": "DEE869800098"
+    "spotify:track:6IZdjnq4WWDuDKwyeynQit": "DEE869800098",
+    "spotify:track:4jNQkWhuzqrbqQuqanFFJ6": "FR13Z0900040"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -62779,6 +62784,7 @@
       "matthew and the atlas|||on a midnight street - acoustic version",
       "mavis staples|||we got to have peace",
       "mavis staples|||you are not alone",
+      "maxence cyrin|||where is my mind",
       "maximilian hecker|||over",
       "maximo park|||books from boxes",
       "maximo park|||drinking martinis",
@@ -64908,6 +64914,7 @@
       "spotify:track:4heQ95yc7sYLORF7yLo7W7",
       "spotify:track:4hqyCisR1ZwLVOcYp7H2qp",
       "spotify:track:4j6LAJgpb4DgfRIt3RftzC",
+      "spotify:track:4jNQkWhuzqrbqQuqanFFJ6",
       "spotify:track:4jmLj7bALZTQoe93dT623W",
       "spotify:track:4jrlNVzdotW3tpcaVqVnuv",
       "spotify:track:4jvCXYZwM8pR1p0vvK7PtW",
@@ -65882,6 +65889,7 @@
       "FR0S01300001",
       "FR10S2542871",
       "FR12Q2101142",
+      "FR13Z0900040",
       "FR2PY1503880",
       "FR5E70101250",
       "FR6P11101290",
@@ -69492,7 +69500,8 @@
       "spotify:track:0NBgmP6Yg5xZYsnIZ0pGdo": "GBAAP9500273",
       "spotify:track:1yexhSDARSLVvRCBU3wDAm": "USSM16600020",
       "spotify:track:2zKH8YUn6wyzSnHWFYMhJ8": "US38Y1424406",
-      "spotify:track:6IZdjnq4WWDuDKwyeynQit": "DEE869800098"
+      "spotify:track:6IZdjnq4WWDuDKwyeynQit": "DEE869800098",
+      "spotify:track:4jNQkWhuzqrbqQuqanFFJ6": "FR13Z0900040"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -71372,7 +71381,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "gifts for the earth|||downer",
+  "__last_radio_key_dkfm_edge": "newdad|||where i go",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -71550,5 +71559,6 @@
   "__match_v35__joy division|||atmosphere": "spotify:track:0NBgmP6Yg5xZYsnIZ0pGdo",
   "__match_v35__the byrds|||my back pages": "spotify:track:1yexhSDARSLVvRCBU3wDAm",
   "__match_v35__angel olsen|||lights out": "spotify:track:2zKH8YUn6wyzSnHWFYMhJ8",
-  "__match_v35__lemonbabies|||so go ahead": "spotify:track:6IZdjnq4WWDuDKwyeynQit"
+  "__match_v35__lemonbabies|||so go ahead": "spotify:track:6IZdjnq4WWDuDKwyeynQit",
+  "__match_v35__maxence cyrin|||where is my mind": "spotify:track:4jNQkWhuzqrbqQuqanFFJ6"
 }
