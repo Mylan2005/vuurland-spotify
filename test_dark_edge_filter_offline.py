@@ -30,12 +30,15 @@ for artist, title in (
     ("Het Zesde Metaal", "Ploegsteert"),
     ("Nieuw Indieproject", "New Atmospheric Song"),
     ("Coldplay", "The Scientist"),
+    ("Adele", "Someone Like You"),
+    ("Billie Eilish", "Birds of a Feather"),
 ):
     assert dark_edge_reject_reason(artist, title) is None, (artist, title)
 
 # Nooit een onverwachte mainstream-, punk-, metal- of Roemeense artiest.
 for artist, title in (
     ("Kylie Minogue", "In My Arms"),
+    ("Dua Lipa", "Levitating"),
     ("Sia", "Like a River Runs"),
     ("Avicii", "Levels"),
     ("The Offspring", "Self Esteem"),
@@ -70,6 +73,9 @@ for artist, title in (
 assert "muse" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "nothing but thieves" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "kylie minogue" in DARK_EDGE_BLOCKED_ARTISTS
+assert "dua lipa" in DARK_EDGE_BLOCKED_ARTISTS
+assert "adele" not in DARK_EDGE_BLOCKED_ARTISTS
+assert "billie eilish" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "the offspring" in DARK_EDGE_BLOCKED_ARTISTS
 assert dark_edge_reject_reason("Muse", "Ik ben hier") is None
 assert dark_edge_reject_reason("Unknown Indie Artist", "Mijn hart") is None
