@@ -1409,9 +1409,33 @@ def v190_is_language_exempt_artist(artist):
     return normalized in {"sigur ros", "olafur arnalds", "cocteau twins"}
 
 
+def v191_is_german_vocal_risk(artist, title):
+    """Bevestigde Duitse zang of sterke Duitse titelsignalen.
+
+    RadioBox bevat geen betrouwbare metadata over daadwerkelijk gezongen taal.
+    Een Duitse titel is daarom een conservatief signaal (geen absoluut bewijs).
+    Ook favoriete artiesten krijgen GEEN vrijstelling voor Duitse zang.
+    """
+    import unicodedata
+    if is_confirmed_german_vocal(artist, title) or v119_is_german_title(title):
+        return True
+    normalized = unicodedata.normalize("NFKD", str(title or "").casefold())
+    normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    normalized = " ".join(re.sub(r"[^a-z0-9]+", " ", normalized.replace("ß", "ss")).split())
+    german_phrases = (
+        r"\b(?:ich|du|wir)\s+(?:liebe|vermisse|brauche|suche|habe|hab|bin|bist|mochte|will|kann|weiss|traume|denke|fuhle)\b",
+        r"\b(?:mein|meine|dein|deine)\s+(?:herz|leben|liebe|seele|welt|traum|augen)\b",
+        r"\b(?:ohne|gegen|fur|fuer)\s+(?:dich|mich|uns|euch)\b",
+        r"\b(?:nicht|kein|keine)\s+(?:mehr|allein|vergessen|zuruck|hier|da)\b",
+    )
+    return any(re.search(pattern, normalized) for pattern in german_phrases)
+
+
 def dark_edge_track_allowed(artist, title):
-    # Taaluitzonderingen blijven toegestaan bij alle acht actieve bronnen.
-    # De Dark Edge dance-/punk-/metalblokkade blijft gelden.
+    # Alle drie favoriete artiesten mogen door de niet-Duitse taalfilters,
+    # maar bevestigde Duitse zang / sterke Duitse titelsignalen NOOIT.
+    if v191_is_german_vocal_risk(artist, title):
+        return False
     language_exception = v190_is_language_exempt_artist(artist)
     reason = dark_edge_reject_reason(artist, title)
     return ((reason is None or
@@ -1683,6 +1707,8 @@ def v150_is_unwanted_language(artist, title):
 
 
 def v140_is_unwanted_language_title(title, artist=""):
+    if v191_is_german_vocal_risk(artist, title):
+        return True
     if v190_is_language_exempt_artist(artist):
         return False
     return v150_is_unwanted_language(artist, title) or (v148_block_confirmed_romanian(artist, title) or (v143_unwanted_title(title)))
@@ -1740,8 +1766,7 @@ GERMAN_VOCAL_SPOTIFY_IDS = frozenset({
 
 
 def is_confirmed_german_vocal(artist, title):
-    if v190_is_language_exempt_artist(artist):
-        return False
+    # Voor bevestigde Duitse zang geldt NOOIT een artiestuitzondering.
     return (" ".join(str(artist).casefold().split()),
             " ".join(str(title).casefold().split())) in GERMAN_VOCAL_RADIO_TRACKS
 
@@ -1756,6 +1781,8 @@ def v106_language_decision(artist, title):
     import csv
     from pathlib import Path
 
+    if v191_is_german_vocal_risk(artist, title):
+        return "block"
     if v190_is_language_exempt_artist(artist):
         return "allow"
 
@@ -1981,6 +2008,8 @@ INDIE_SELECT_GERMAN_TRACKS = frozenset({
 
 
 def indie_select_blocks_german(artist, title):
+    if v191_is_german_vocal_risk(artist, title):
+        return True
     if v190_is_language_exempt_artist(artist):
         return False
     import unicodedata
