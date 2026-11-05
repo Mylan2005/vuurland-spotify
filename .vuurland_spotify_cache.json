@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "girl in red|||too much",
+      "tom odell|||the end",
       "charlotte day wilson|||canopy",
       "wet leg|||obvious",
       "nick mulvey|||cucurucu",
@@ -111,9 +113,7 @@
       "phoebe bridgers|||garden song",
       "jjerome87|||track and field",
       "the slow show|||hey lover",
-      "grizzly bear|||two weeks",
-      "dressed like boys|||nando",
-      "wilco|||how to fight loneliness"
+      "grizzly bear|||two weeks"
     ],
     "mellow_mix": [
       "andreas vollenweider|||phases of the three moons",
@@ -524,6 +524,7 @@
       "kurt vile|||pretty pimpin"
     ],
     "indie_select": [
+      "voice of the beehive|||monsters & angels",
       "the chameleons|||nostalgia",
       "the notwist|||lineri",
       "moderat|||a new error",
@@ -622,8 +623,7 @@
       "the national|||sea of love",
       "royel otis|||moody",
       "the sundays|||i kicked a boy",
-      "the comsat angels|||under the influence",
-      "the killers|||shadowplay"
+      "the comsat angels|||under the influence"
     ],
     "dkfm_edge": [
       "wishy|||paradise",
@@ -821,6 +821,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "harpool|||mistakes",
       "phoria|||melatonin",
       "la femme|||le jardin",
       "roosevelt|||teardrops",
@@ -919,22 +920,21 @@
       "twenty one pilots|||heavydirtysoul",
       "tom odell|||go tell her now",
       "her|||we choose",
-      "gorillaz|||stylo",
-      "air|||how does it make you feel?"
+      "gorillaz|||stylo"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793920651.7190592,
-    "mellow_mix": 1793920651.7225993,
-    "big_sonic_heaven": 1793920651.7250364,
-    "radio_x_chilled": 1793920651.7276735,
-    "dreampop_radio": 1793920651.8452072,
-    "indie_select": 1793920651.8478842,
-    "dkfm_edge": 1793920651.959529,
+    "vuurland": 1793920691.1609828,
+    "mellow_mix": 1793920691.164261,
+    "big_sonic_heaven": 1793920691.16673,
+    "radio_x_chilled": 1793920691.1693726,
+    "dreampop_radio": 1793920691.1717975,
+    "indie_select": 1793920691.3043902,
+    "dkfm_edge": 1793920691.3072748,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793920651.962607
+    "dark_edge": 1793920691.416279
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1924,6 +1924,7 @@
       "tom odell|||best day of my life",
       "tom odell|||don't let me go",
       "tom odell|||heal",
+      "tom odell|||the end",
       "tom odell|||ugly",
       "tom odell|||when i close my eyes",
       "tom rosenthal|||its ok",
@@ -6633,6 +6634,7 @@
       "villagers|||that day",
       "voice of the beehive|||don't call me baby",
       "voice of the beehive|||i walk the earth",
+      "voice of the beehive|||monsters & angels",
       "wait to be seated||||john glenn",
       "wall of voodoo|||mexican radio",
       "warpaint|||undertow edit",
@@ -7147,6 +7149,7 @@
       "guts|||and the living is easy!!!",
       "haim|||los angeles",
       "hand habits|||4th of july",
+      "harpool|||mistakes",
       "herbie hancock|||cantaloupe island",
       "her|||we choose",
       "highschool jacob|||nobody but you",
@@ -7676,11 +7679,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "charlotte day wilson|||canopy",
+  "__last_radio_key_vuurland": "girl in red|||too much",
   "__last_radio_key_mellow_mix": "andreas vollenweider|||phases of the three moons",
   "__last_radio_key_big_sonic_heaven": "velveteen|||unanswered",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 4708,
+  "__v116_fifo_next_sequence": 4711,
   "__v146_spotify_budget_slot": 1793920582.1730607,
   "__vuurland_active_playlist_count": 5843,
   "__vuurland_active_volume": 1,
@@ -71289,7 +71292,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the chameleons|||nostalgia",
+  "__last_radio_key_indie_select": "voice of the beehive|||monsters & angels",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -72689,7 +72692,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "phoria|||melatonin",
+  "__last_radio_key_dark_edge": "harpool|||mistakes",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
