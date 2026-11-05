@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "portland|||pouring rain",
       "bear's den|||laurel wreath",
       "ethel cain|||fuck me eyes",
       "royel otis|||til the morning",
@@ -112,8 +113,7 @@
       "jose gonzalez|||against the dying of the light",
       "kurt vile|||zoom 97",
       "eefje de visser|||vlijmscherp",
-      "paolo nutini|||acid eyes",
-      "beck|||ride lonesome"
+      "paolo nutini|||acid eyes"
     ],
     "mellow_mix": [
       "dan mangan|||diminishing returns",
@@ -320,6 +320,7 @@
       "puppy teeth|||melatonin"
     ],
     "radio_x_chilled": [
+      "jimmy eat world|||hear you me",
       "blind melon|||no rain",
       "jimi hendrix|||the wind cries mary",
       "jungle|||cherry",
@@ -418,10 +419,10 @@
       "noel gallagher's high flying birds|||if i had a gun",
       "the shins|||new slang",
       "blink-182|||one more time",
-      "red hot chili peppers|||soul to squeeze",
-      "vance joy|||riptide"
+      "red hot chili peppers|||soul to squeeze"
     ],
     "dreampop_radio": [
+      "chorus grant|||o everyone",
       "nick drake|||pink moon",
       "torpus & the art directors|||the story's all the same",
       "lord huron|||lonesome dreams",
@@ -520,8 +521,7 @@
       "empire of the sun|||walking on a dream",
       "meiko|||leave the lights on krot remix",
       "the golden filter|||solid gold",
-      "yello feat heidi happy|||stay",
-      "electric youth|||tomorrow"
+      "yello feat heidi happy|||stay"
     ],
     "indie_select": [
       "the temper trap|||leaving the heartbreak hotel",
@@ -627,12 +627,12 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793847094.0493493,
-    "mellow_mix": 1793847094.0548766,
-    "big_sonic_heaven": 1793847094.0587451,
-    "radio_x_chilled": 1793847094.063177,
-    "dreampop_radio": 1793847094.0668201,
-    "indie_select": 1793847094.070543
+    "vuurland": 1793847165.1767402,
+    "mellow_mix": 1793847165.1823776,
+    "big_sonic_heaven": 1793847165.1862838,
+    "radio_x_chilled": 1793847165.3422852,
+    "dreampop_radio": 1793847165.3460734,
+    "indie_select": 1793847165.3498232
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5929,11 +5929,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "bear's den|||laurel wreath",
+  "__last_radio_key_vuurland": "portland|||pouring rain",
   "__last_radio_key_mellow_mix": "dan mangan|||diminishing returns",
   "__last_radio_key_big_sonic_heaven": "carly hann|||alone",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 3632,
+  "__v116_fifo_next_sequence": 3633,
   "__v146_spotify_budget_slot": 1793847094.4812312,
   "__vuurland_active_playlist_count": 5397,
   "__vuurland_active_volume": 1,
@@ -63335,7 +63335,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "blind melon|||no rain",
+  "__last_radio_key_radio_x_chilled": "jimmy eat world|||hear you me",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -63439,7 +63439,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "nick drake|||pink moon",
+  "__last_radio_key_dreampop_radio": "chorus grant|||o everyone",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
