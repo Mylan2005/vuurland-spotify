@@ -18,6 +18,7 @@ ns = {
         ("sigur rós", "ich liebe dich"),
         ("tomte", "die schönheit der chance"),
     },
+    "INDIE_SELECT_GERMAN_TRACKS": frozenset(),
     # Opzettelijk strenge stubs: gewone tracks zouden geweigerd worden.
     "v150_is_unwanted_language": lambda artist, title: True,
     "v148_block_confirmed_romanian": lambda artist, title: False,
