@@ -25,6 +25,7 @@ from v194_matcher_metadata import (
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
+from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
 from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
 
 # =========================
@@ -7488,6 +7489,18 @@ def sync():
         )
 
     v194_release_reports(
+        cache, live_queue, seen,
+        active_sources=RADIO_SOURCE_ORDER,
+        make_key=_v47_key,
+        in_playlist=radio_matches_playlist,
+        eligible=_v194_eligible,
+    )
+
+    # v203: geteste matcherwijzigingen geven alleen relevante ECHTE missers
+    # gefaseerd een nieuwe kans, ook zonder nieuwe radio-uitzending.
+    # Maximaal 1 track / 6 uur, achteraan FIFO; reguliere Spotify-validatie,
+    # uitsluitingen en 120s-budget blijven volledig verplicht.
+    v203_release_matcher_upgrade(
         cache, live_queue, seen,
         active_sources=RADIO_SOURCE_ORDER,
         make_key=_v47_key,

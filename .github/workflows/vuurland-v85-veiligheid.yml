@@ -7,6 +7,8 @@ on:
       - 'v194_matcher_metadata.py'
       - 'v200_verified_catalog_titles.py'
       - 'v202_auto_matcher_triage.py'
+      - 'v203_matcher_upgrade_requeue.py'
+      - 'test_v203_matcher_upgrade_requeue_offline.py'
       - 'test_v202_auto_matcher_triage_offline.py'
       - '.github/workflows/vuurland-v202-auto-matcher.yml'
       - 'test_v200_verified_catalog_titles_offline.py'
@@ -56,7 +58,7 @@ jobs:
 
       - name: Syntaxis en offline veiligheid
         run: |
-          python -m py_compile vuurland_sync.py duyster_archive_fifo.py duyster_weekly_update.py v194_matcher_metadata.py v200_verified_catalog_titles.py v194_report_requeue.py v195_radio_replay.py v196_matcher_insights.py test_v196_matcher_insights_offline.py v197_combine_matcher_reports.py test_v197_combine_matcher_reports_offline.py
+          python -m py_compile vuurland_sync.py duyster_archive_fifo.py duyster_weekly_update.py v194_matcher_metadata.py v200_verified_catalog_titles.py v203_matcher_upgrade_requeue.py v194_report_requeue.py v195_radio_replay.py v196_matcher_insights.py test_v196_matcher_insights_offline.py v197_combine_matcher_reports.py test_v197_combine_matcher_reports_offline.py
           python test_v85_offline.py
           python test_v86_offline.py
           python test_v155_offline.py
@@ -76,6 +78,7 @@ jobs:
           python test_v200_verified_catalog_titles_offline.py
           python test_v201_matcher_safety_offline.py
           python test_v202_auto_matcher_triage_offline.py
+          python test_v203_matcher_upgrade_requeue_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
