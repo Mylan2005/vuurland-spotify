@@ -1,6 +1,11 @@
 name: Vuurland dagelijkse herstelbare back-up
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vuurland-v205-lifetime-backup.yml'
+      - 'v205_lifetime_backup.py'
   schedule:
     - cron: '41 4 * * *'
 
