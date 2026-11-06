@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793980663.5670965,
+  "__v150_next_spotify_round_at": 1793980788.712585,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793980654.7012978,
-    "mellow_mix": 1793980654.704038,
-    "big_sonic_heaven": 1793980654.7062786,
-    "radio_x_chilled": 1793980654.7086449,
-    "dreampop_radio": 1793980654.7108467,
-    "indie_select": 1793980654.7131798,
-    "dkfm_edge": 1793980654.7155693,
+    "vuurland": 1793980668.6761255,
+    "mellow_mix": 1793980668.678845,
+    "big_sonic_heaven": 1793980668.6810975,
+    "radio_x_chilled": 1793980668.683415,
+    "dreampop_radio": 1793980668.6856282,
+    "indie_select": 1793980668.6880033,
+    "dkfm_edge": 1793980668.6903782,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793980654.7179308
+    "dark_edge": 1793980668.6927845
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -8679,6 +8679,12 @@
       "title": "In the",
       "source": "big_sonic_heaven",
       "failed_at": 1793979546
+    },
+    "diego|||dance": {
+      "artist": "Diego",
+      "title": "Dance",
+      "source": "indie_select",
+      "failed_at": 1793980670
     }
   },
   "__v51_radio_unmatched": {
@@ -8932,7 +8938,7 @@
   "__last_radio_key_big_sonic_heaven": "nonsense rats|||dead end generation",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 5624,
-  "__v146_spotify_budget_slot": 1793980544.1641803,
+  "__v146_spotify_budget_slot": 1793980669.5788453,
   "__vuurland_active_playlist_count": 6174,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -53365,7 +53371,7 @@
     "birkii|||holy war - birkii": 3,
     "aerial love feed|||someone": 3,
     "kate de rosset|||in the": 3,
-    "diego|||dance": 2
+    "diego|||dance": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -53522,7 +53528,8 @@
     "anna domino|||rhythm": 1,
     "birkii|||holy war - birkii": 1,
     "aerial love feed|||someone": 1,
-    "kate de rosset|||in the": 1
+    "kate de rosset|||in the": 1,
+    "diego|||dance": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -77360,5 +77367,6 @@
   "__match_v35__the youngbloods|||get together": "spotify:track:7CQXyFX44CXmnuq8Bi9Dyc",
   "__match_v35__leon bridges & khruangbin|||b-side": "spotify:track:2DccHqTquzubziHAPZRdct",
   "__match_v35__gregory alan isakov|||one day": "spotify:track:2qwn6mOjEXp6zt53iYIr3C",
-  "__match_v35__death cab for cutie|||no room in frame": "spotify:track:7DkTneByAopqOjXFG6XlZK"
+  "__match_v35__death cab for cutie|||no room in frame": "spotify:track:7DkTneByAopqOjXFG6XlZK",
+  "__not_found_v35__diego|||dance": 1793980670
 }
