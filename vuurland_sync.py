@@ -25,6 +25,7 @@ from v194_matcher_metadata import (
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
+from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
 
 # =========================
 # INSTELLINGEN
@@ -5177,8 +5178,21 @@ def find_spotify_track(
                 wanted_title_base_for_match, spotify_title_base
             )
         )
+        # v200: één gecontroleerde albumtitelcorrectie, uitsluitend met
+        # exact dezelfde volledige hoofdartiest en uitvoeringsversie.
+        # Bestaande remixen, covers en fuzzy matches worden niet versoepeld.
+        verified_catalog_variant = (
+            primary_artist_exact
+            and wanted_version == spotify_version
+            and v200_verified_catalog_title(
+                spotify_primary_artist,
+                wanted_title_base_for_match,
+                spotify_title_base,
+            )
+        )
         structural_title_match = (
-            truncated_title_match
+            verified_catalog_variant
+            or truncated_title_match
             or incomplete_last_word
             or wanted_identity == spotify_identity
             or wanted_base_identity == spotify_base_identity
