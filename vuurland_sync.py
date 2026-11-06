@@ -15,7 +15,15 @@ import webbrowser
 import requests
 from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
+from v194_matcher_metadata import (
+    canonical_artist as v194_canonical_artist,
+    artist_join_key as v194_artist_join_key,
+    canonical_title as v194_canonical_title,
+    normalize_explicit_version as v194_explicit_version,
+    clearly_truncated_final_word as v194_truncated_final_word,
+)
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
+from v194_report_requeue import release_report_retries as v194_release_reports
 
 # =========================
 # INSTELLINGEN
@@ -72,6 +80,10 @@ ARTIST_ALIASES = {
     "the pretenders": [
         "Pretenders",
     ],
+    # Echte, publiek bevestigde naamswijzigingen. Geen algemene fuzzy alias.
+    "santogold": ["Santigold"],
+    "dog is dead": ["D.I.D"],
+    "eob": ["Ed O'Brien"],
 
     "novastar piet goddaer": [
         "Novastar",
@@ -2426,6 +2438,19 @@ def find_spotify_track(
     if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
         print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
         return None
+
+    # v194: generieke en controleerbare RadioBox-metadata-correcties.
+    # De ORIGINELE item-/cache-key en bron blijven onveranderd. De schone
+    # artiest/titel dienen uitsluitend voor Spotify Search en kandidaatmatch.
+    _v194_corrected_artist = v194_canonical_artist(artist)
+    _v194_corrected_title = v194_explicit_version(
+        v194_canonical_title(artist, title)
+    )
+    if (_v194_corrected_artist, _v194_corrected_title) != (artist, title):
+        print(f"📝 v194: duidelijke metadata opgeschoond: "
+              f"{artist} — {title} → {_v194_corrected_artist} — {_v194_corrected_title}")
+        artist, title = _v194_corrected_artist, _v194_corrected_title
+
     # v147: uitsluitend de door de gebruiker bevestigde catalogusschrijfwijze.
     # De originele radio-key blijft behouden voor de v81 locator. Daarna
     # blijven Spotify artiest/titel/versie en alle overige guards verplicht.
@@ -2895,7 +2920,7 @@ def find_spotify_track(
         value = str(value or "").lower().strip()
         # Spotify kan een officiële bandcredit als "&" of "and" tonen.
         # Beide kanten van de gecontroleerde alias worden identiek behandeld.
-        value = re.sub(r"\s*&\s*", " and ", value)
+        value = re.sub(r"\s*(?:&|\+)\s*", " and ", value)
         value = re.sub(r"[^a-z0-9]+", " ", value)
         return " ".join(value.split())
 
@@ -4467,6 +4492,13 @@ def find_spotify_track(
             primary_wanted_artist
             == spotify_primary_compact
         )
+        # v194: & / + / 'and' zijn identieke expliciete verbindingswoorden
+        # tussen dezelfde VOLLEDIGE artiestnamen; nooit een prefix/substring.
+        if (not primary_artist_exact and
+                v194_artist_join_key(wanted_artists[0]) ==
+                v194_artist_join_key(spotify_primary_artist)):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
         # v52.5: intern koppelteken versus spatie in DEZELFDE volledige
         # hoofdartiest is een schrijfvariant, geen andere artiest.
         # Bijvoorbeeld "Warrington Runcorn" en "Warrington-Runcorn".
@@ -5133,8 +5165,20 @@ def find_spotify_track(
             and explicit_ellipsis_match(wanted_title_for_match, item.get("name", ""))
         )
 
+        # v194: een ECHT onafgewerkte radiofrase mag het laatste
+        # cataloguswoord missen. Alleen met exact dezelfde primaire artiest
+        # en identieke uitvoeringsversie. Bijvoorbeeld:
+        # Roberta Flack: 'The First Time Ever I Saw Your' -> '... Your Face'.
+        incomplete_last_word = (
+            primary_artist_exact
+            and wanted_version == spotify_version
+            and v194_truncated_final_word(
+                wanted_title_base_for_match, spotify_title_base
+            )
+        )
         structural_title_match = (
             truncated_title_match
+            or incomplete_last_word
             or wanted_identity == spotify_identity
             or wanted_base_identity == spotify_base_identity
             or optional_the_equivalent(
@@ -7383,6 +7427,27 @@ def sync():
         print(f"🆕 {added_to_live_queue} beschikbare RadioBox-titels in wachtrij.")
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
+
+    # v194: alleen tien bewezen metadata-false-negatives uit 12 rapporten
+    # eenmalig opnieuw testen. Bron uitsluitend uit bewaarde radiostate,
+    # geen extra Spotify-call, geen reset en bestaande queue-volgorde intact.
+    def _v194_eligible(artist, title):
+        return not (
+            is_interview_fragment(title)
+            or v191_is_german_vocal_risk(artist, title)
+            or v140_is_unwanted_language_title(title, artist)
+            or v131_block_nonlatin_east_asian(artist, title)
+            or is_confirmed_german_vocal(artist, title)
+            or v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS
+        )
+
+    v194_release_reports(
+        cache, live_queue, seen,
+        active_sources=RADIO_SOURCE_ORDER,
+        make_key=_v47_key,
+        in_playlist=radio_matches_playlist,
+        eligible=_v194_eligible,
+    )
 
     # v193: één Duyster-archiefnummer per 120 seconden (hoogstens) ACHTER
     # de bestaande live radio-items. Geen Spotify Search of playlist-scan.
