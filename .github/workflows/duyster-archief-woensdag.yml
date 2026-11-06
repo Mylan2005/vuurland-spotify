@@ -1,0 +1,85 @@
+name: Duyster archief elke woensdag bijwerken
+
+on:
+  schedule:
+    # België: 08:00 CET = 07:00 UTC, 08:00 CEST = 06:00 UTC.
+    # De tijdzonepoort hieronder kiest exact één van beide runs.
+    - cron: '0 6 * * 3'
+    - cron: '0 7 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: duyster-weekly-archive
+  cancel-in-progress: false
+
+jobs:
+  archief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Alleen woensdag 08:00 Belgische tijd (zomer- en winteruur)
+        id: belgian_time
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE_SPEC: ${{ github.event.schedule }}
+        run: |
+          python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import os
+
+          local = datetime.now(ZoneInfo("Europe/Brussels"))
+          offset = int(local.utcoffset().total_seconds() // 3600)
+          correct_cron = f"0 {8 - offset} * * 3"
+          execute = os.environ["EVENT_NAME"] == "workflow_dispatch" or (
+              local.weekday() == 2
+              and os.environ.get("SCHEDULE_SPEC") == correct_cron
+          )
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"should_run={'true' if execute else 'false'}\n")
+          print(f"Duyster-controle: {local.isoformat()}, "
+                f"cron={os.environ.get('SCHEDULE_SPEC')!r}, uitvoeren={execute}")
+          PY
+
+      - name: Benodigdheden voor alleen Duyster-website installeren
+        if: steps.belgian_time.outputs.should_run == 'true'
+        run: python -m pip install requests beautifulsoup4
+
+      - name: Nieuwe Duyster-aflevering(en) in archief opnemen
+        if: steps.belgian_time.outputs.should_run == 'true'
+        run: python duyster_weekly_update.py
+
+      - name: Alleen gewijzigde Duyster-archiefbestanden bewaren
+        if: steps.belgian_time.outputs.should_run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- duyster_archief_uniek.csv duyster_archief_import_state.json
+          if git diff --cached --quiet; then
+            echo "Geen nieuwe Duyster-afleveringen, niets te committen."
+            exit 0
+          fi
+          git commit -m "Import new Duyster playlist episodes into music archive"
+          # Spotify-sync mag intussen zijn state naar main committen.
+          # Herbaseer uitsluitend onze twee archiefbestanden; geen force-push.
+          for attempt in 1 2 3 4 5 6 7 8; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              echo "Duyster-archief veilig bijgewerkt."
+              exit 0
+            fi
+            echo "Main is intussen gewijzigd; opnieuw proberen."
+            sleep 4
+          done
+          echo "Kon archief door concurrerende commits niet publiceren; volgende run haalt in."
+          exit 1

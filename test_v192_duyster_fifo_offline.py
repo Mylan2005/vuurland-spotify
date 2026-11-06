@@ -11,7 +11,7 @@ from pathlib import Path
 from duyster_archive_fifo import (
     enqueue_one, DUYSTER_ENQUEUE_INTERVAL_SECONDS,
     DUYSTER_MAX_PENDING, DUYSTER_MAX_TOTAL_QUEUE,
-    _CURSOR, _NEXT, _SEED, _load_candidates,
+    _CURSOR, _NEXT, _SEED, _load_candidates, is_non_music_title,
 )
 from dark_edge_filter import dark_edge_reject_reason
 
@@ -146,8 +146,15 @@ assert len(recent) == 25
 assert all(row["pid"] == "833" and row["episode_date"] == "2026-10-26" for row in recent)
 with (ROOT / "duyster_archief_uniek.csv").open(encoding="utf-8", newline="") as handle:
     archive = list(csv.DictReader(handle))
-assert len(archive) == 8557, len(archive)
+assert len(archive) == 8308, len(archive)
 all_keys = {key(row["artist"], row["title"]) for row in archive}
+assert all(not is_non_music_title(row["title"]) for row in archive)
+for title in ("Interview", "Sessie", "Interview + Sessie",
+              "interview & sessie", " INTERVIEW ", "Interview  +   Sessie"):
+    assert is_non_music_title(title), title
+for title in ("Radio 1 Sessie", "Interview with the Vampire",
+              "A Sessie (Live)", "This Is An Interview"):
+    assert not is_non_music_title(title), title
 assert len(all_keys) == len(archive)
 assert all(key(row["artist"], row["title"]) in all_keys for row in recent)
 
@@ -166,5 +173,5 @@ assert "max_additions_per_round = 1" in source
 assert DUYSTER_ENQUEUE_INTERVAL_SECONDS == 120
 
 print("✅ Duyster-archief: blijvende shuffle tussen afleveringen, 120s-tempo en FIFO.")
-print("✅ Aflevering 833 blijft aanwezig: 25 nummers, 8557 unieke archiefnummers.")
+print("✅ Aflevering 833 blijft aanwezig: 25 nummers, 8308 muzieknummers na opschoning.")
 print("✅ Geen duplicaten, Duitse zang, EDM, queueverlies of extra Spotify-API-calls.")
