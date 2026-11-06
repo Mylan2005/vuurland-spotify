@@ -29,17 +29,27 @@ def artist_join_key(artist):
 
 
 def canonical_title(artist, title):
-    """Verwijder alleen exact de volledige herhaalde artiestnaam NA de titel.
+    """Remove an EXACT repeated full artist credit from the end of a song title.
 
-    'Birkii — Holy War - Birkii' -> 'Holy War'.
-    'Aerial Love Feed — Someone' blijft 'Someone' (niet 'Someone New').
+    Radio feeds may write 'Holy War - Birkii', 'A - B - Artist' or
+    'A—Artist'. Only a complete final credit matching the provided artist
+    can be removed. Never remove an unmatched guest, mix or version suffix.
+    Ordinary '-' must have spaces on BOTH sides to avoid splitting words.
     """
     raw = str(title or "").strip()
-    parts = re.fullmatch(r"(.+?)\s+[-–—]\s+(.+)", raw)
-    if parts and _words(parts.group(2)) == _words(artist) and parts.group(1).strip():
-        return parts.group(1).strip()
-    return raw
+    artist_words = _words(artist)
+    if not raw or not artist_words:
+        return raw
 
+    # Em/en dashes are unambiguous separators even without spaces; a normal
+    # hyphen only counts with surrounding whitespace.
+    separators = list(re.finditer(r"\\s+[-–—]\\s+|\\s*[–—]\\s*", raw))
+    for match in reversed(separators):
+        prefix = raw[:match.start()].strip()
+        suffix = raw[match.end():].strip()
+        if prefix and suffix and _words(suffix) == artist_words:
+            return prefix
+    return raw
 
 def normalize_explicit_version(title):
     """Eenzelfde label inkorten in bronmetadata mag zoekranking niet breken.
