@@ -37,7 +37,7 @@ with tempfile.TemporaryDirectory() as tmp:
     assert data["gelezen_bestanden"] == 2
     assert data["unieke_nummers"] == 3
     assert len(data["fouten"]) == 1
-    bjork = next(x for x in data["nummers"] if x["artiest"] == "Björk")
+    bjork = next(x for x in data["nummers"] if identity(x["artiest"], x["titel"]) == identity("Björk", "Jóga"))
     assert bjork["rapporten"] == 2 and bjork["meldingen"] == 2
     assert "Wrong live" in bjork["afgewezen_kandidaten"]
     assert "Geparkeerd" in bjork["statussen"]
