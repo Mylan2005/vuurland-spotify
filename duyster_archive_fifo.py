@@ -30,8 +30,8 @@ def is_non_music_title(title):
     Niet breder matchen: 'Radio 1 Sessie' in een echte songtitel blijft mogelijk.
     """
     return bool(re.fullmatch(
-        r"(?:interview|sessie|interview\\s*[+&]\\s*sessie)",
-        str(title or "").replace("\\u00a0", " ").strip(), re.IGNORECASE,
+        r"(?:interview|sessie|interview\s*[+&]\s*sessie)",
+        str(title or "").replace(chr(160), " ").strip(), re.IGNORECASE,
     ))
 
 
