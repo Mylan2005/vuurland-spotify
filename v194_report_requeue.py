@@ -83,6 +83,14 @@ def release_report_retries(cache, live_queue, seen, *, active_sources,
             no_source += 1
             continue
 
+        # Ook herkansingen respecteren de bestaande wachtrijremmen.
+        if len(live_queue) >= 3600:
+            continue
+        if (src == "duyster" and
+                sum(1 for candidate in live_queue if isinstance(candidate, dict)
+                    and candidate.get("source") == "duyster") >= 100):
+            continue
+
         live_queue.append({"artist": artist, "title": title, "source": src,
                            "_v34_search_variant": 0})
         indexed[key] = live_queue[-1]
