@@ -11,7 +11,7 @@ from pathlib import Path
 from duyster_archive_fifo import (
     enqueue_one, DUYSTER_ENQUEUE_INTERVAL_SECONDS,
     DUYSTER_MAX_PENDING, DUYSTER_MAX_TOTAL_QUEUE,
-    _CURSOR, _NEXT, _SEED, _load_candidates, is_non_music_title,
+    _CURSOR, _NEXT, _SEED, _load_candidates, is_non_music_title, canonical_duyster_title,
 )
 from dark_edge_filter import dark_edge_reject_reason
 
@@ -139,6 +139,32 @@ with tempfile.TemporaryDirectory() as tmp:
     assert enqueue_one({}, huge_queue, set(), now=base, **kwargs) is None
     assert len(huge_queue) == DUYSTER_MAX_TOTAL_QUEUE
 
+# Historische Radio 1-sessie wordt uitsluitend als studioversie beschouwd.
+# Ook dubbels tussen aflevering 833 en de hoofd-CSV krijgen slechts één key.
+with tempfile.TemporaryDirectory() as tmp:
+    write_csv(tmp, "duyster_aflevering_833.csv", [
+        ("Mogwai", "Richie Sacremento (Radio 1 Sessie)", 833, "2026-10-26"),
+        ("Recording Artist", "Radio 1 Sessie", 833, "2026-10-26"),
+        ("Emma Hessels", "Always Lost (Radio 1 Sessie)", 833, "2026-10-26"),
+    ], ("artist", "title", "pid", "episode_date"))
+    write_csv(tmp, "duyster_archief_uniek.csv", [
+        ("Mogwai", "Richie Sacremento", 810, 1),
+        ("Emma Hessels", "Always Lost", 812, 1),
+    ], ("artist", "title", "first_seen_pid", "seen_in"))
+    studio_candidates = _load_candidates(tmp, key)
+    assert [(a, t) for a, t, _ in studio_candidates] == [
+        ("Mogwai", "Richie Sacremento"), ("Emma Hessels", "Always Lost")
+    ], studio_candidates
+    queued = [{"artist": "Mogwai", "title": "Richie Sacremento",
+               "source": "big_sonic_heaven", "_v116_fifo_seq": 4}]
+    # Mogwai al in de queue: enkel Emma Hessels mag nieuw achteraan komen.
+    got = enqueue_one({_SEED: 37}, queued, set(), now=1000,
+                      data_dir=tmp, key_func=key,
+                      allowed=lambda artist, title: True,
+                      in_playlist=no_playlist_match)
+    assert got and (got["artist"], got["title"]) == ("Emma Hessels", "Always Lost"), got
+    assert len(queued) == 2 and queued[0]["_v116_fifo_seq"] == 4
+
 # De echte publicatie van 833 staat volledig en uniek in het archief.
 with (ROOT / "duyster_aflevering_833.csv").open(encoding="utf-8", newline="") as handle:
     recent = list(csv.DictReader(handle))
@@ -150,11 +176,17 @@ assert len(archive) == 8308, len(archive)
 all_keys = {key(row["artist"], row["title"]) for row in archive}
 assert all(not is_non_music_title(row["title"]) for row in archive)
 for title in ("Interview", "Sessie", "Interview + Sessie",
-              "interview & sessie", " INTERVIEW ", "Interview  +   Sessie"):
+              "interview & sessie", " INTERVIEW ", "Interview  +   Sessie",
+              "Radio 1 Sessie", " (Radio 1 Sessie) "):
     assert is_non_music_title(title), title
-for title in ("Radio 1 Sessie", "Interview with the Vampire",
-              "A Sessie (Live)", "This Is An Interview"):
+    assert canonical_duyster_title(title) is None
+for title in ("Interview with the Vampire", "A Sessie (Live)", "This Is An Interview"):
     assert not is_non_music_title(title), title
+assert canonical_duyster_title("Richie Sacremento (Radio 1 Sessie)") == "Richie Sacremento"
+assert canonical_duyster_title("Always Lost [radio 1 sessie]") == "Always Lost"
+assert canonical_duyster_title("Sunbeamer (Acoustic Studio Session)") == "Sunbeamer (Acoustic Studio Session)"
+assert any(row["artist"] == "Emma Hessels" and row["title"] == "Always Lost"
+           for row in archive)
 assert len(all_keys) == len(archive)
 assert all(key(row["artist"], row["title"]) in all_keys for row in recent)
 

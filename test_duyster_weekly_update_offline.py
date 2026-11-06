@@ -8,7 +8,7 @@ from urllib.parse import urlencode
 
 import requests
 
-from duyster_archive_fifo import is_non_music_title
+from duyster_archive_fifo import is_non_music_title, canonical_duyster_title
 from duyster_weekly_update import get_episode, update_archive, read_archive
 
 
@@ -40,7 +40,10 @@ playlist_834 = [
     ("Yet Another Guest", "Interview + Sessie"),
     ("New Artist", "Night and Morning"),
     ("Blanco White", "Mano a Mano"),
-    ("Recording Artist", "Radio 1 Sessie"),  # echte opname mag blijven
+    ("Recording Artist", "Radio 1 Sessie"),  # pure rubriek, geen muziek
+    ("Recording Artist", "Northern Lights (Radio 1 Sessie)"),  # studioversie
+    ("Mogwai", "Remurdered (Radio 1 Sessie)"),  # zelfde als gewone Remurdered
+    ("Mogwai", "Richie Sacremento (Radio 1 Sessie)"),  # echte titel, gewone versie
 ]
 
 def mock_get(url, **kwargs):
@@ -54,15 +57,26 @@ def mock_get(url, **kwargs):
 
 episode = get_episode(834, request_get=mock_get)
 assert episode and episode["pid"] == 834
-assert len(episode["songs"]) == 5
-assert episode["skipped_non_music"] == 3
-assert ("Recording Artist", "Radio 1 Sessie") in episode["songs"]
+assert len(episode["songs"]) == 6, episode["songs"]
+assert episode["skipped_non_music"] == 5
+assert ("Recording Artist", "Radio 1 Sessie") not in episode["songs"]
+assert ("Recording Artist", "Northern Lights") in episode["songs"]
+assert ("Mogwai", "Richie Sacremento") in episode["songs"]
+assert sum(1 for artist, title in episode["songs"] if (artist, title) == ("Mogwai", "Remurdered")) == 1
 assert get_episode(835, request_get=mock_get) is None
 assert get_episode(834, request_get=lambda *_args, **_kwargs:
                    Response(200, page(833, playlist_834))) is None
 for entry in ("Interview", "Sessie", "Interview + Sessie", "interview & sessie"):
     assert is_non_music_title(entry)
-assert not is_non_music_title("Radio 1 Sessie")
+assert is_non_music_title("Radio 1 Sessie")
+assert is_non_music_title("(Radio 1 Sessie)")
+assert canonical_duyster_title("Mogwai (Radio 1 Sessie)") == "Mogwai"
+assert canonical_duyster_title("Richie Sacremento (Radio 1 Sessie)") == "Richie Sacremento"
+assert canonical_duyster_title("Richie Sacremento [Radio 1 Sessie]") == "Richie Sacremento"
+assert canonical_duyster_title("Radio 1 Sessie") is None
+assert canonical_duyster_title("Interview (Radio 1 Sessie)") is None
+assert canonical_duyster_title("Northern Lights (Live)") == "Northern Lights (Live)"
+
 
 with tempfile.TemporaryDirectory() as tmp:
     archive = Path(tmp) / "duyster_archief_uniek.csv"
@@ -79,13 +93,16 @@ with tempfile.TemporaryDirectory() as tmp:
 
     assert update_archive(archive=archive, state_file=state_file, get_page=website) == 1
     rows, keys = read_archive(archive)
-    assert len(rows) == 5, rows
+    assert len(rows) == 6, rows
     assert rows[0]["seen_in"] == "11"
     assert rows[1]["seen_in"] == "14"
     assert rows[2]["title"] == "Night and Morning"
     assert all(not is_non_music_title(row["title"]) for row in rows)
     assert rows[2]["first_seen_pid"] == "834"
-    assert rows[4]["title"] == "Radio 1 Sessie"
+    assert rows[4]["title"] == "Northern Lights"
+    assert rows[5]["title"] == "Richie Sacremento"
+    assert "Radio 1 Sessie" not in {x["title"] for x in rows}
+
     assert state_file.read_text(encoding="utf-8").find('"next_pid": 835') >= 0
     before = archive.read_bytes()
     before_state = state_file.read_bytes()
@@ -113,10 +130,11 @@ with tempfile.TemporaryDirectory() as tmp:
                 "skipped_non_music": 1, "date": "09-11-2026"} if pid == 835 else None
     assert update_archive(archive=archive, state_file=state_file, get_page=next_week) == 1
     newrows, _ = read_archive(archive)
-    assert len(newrows) == 9
+    assert len(newrows) == 10
     assert next(x for x in newrows if x["title"] == "Night and Morning")["seen_in"] == "2"
     assert json.loads(state_file.read_text(encoding="utf-8"))["next_pid"] == 836
 
 print("✅ Duyster woensdag: episode 834/835 herkend, unieke tracks en seen_in bijgewerkt.")
-print("✅ Interview, Sessie, Interview + Sessie nooit in het archief; echte livesongs blijven.")
+print("✅ Interview, Sessie, Interview + Sessie en Radio 1 Sessie worden uitgesloten.")
+print("✅ 'Song (Radio 1 Sessie)' wordt alleen als gewone studiotitel verwerkt.")
 print("✅ Ongepubliceerde aflevering wijzigt geen CSV of cursor; geen Spotify API gebruikt.")

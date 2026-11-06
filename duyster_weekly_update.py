@@ -18,7 +18,7 @@ from urllib.parse import parse_qs, urljoin, urlsplit
 import requests
 from bs4 import BeautifulSoup
 
-from duyster_archive_fifo import is_non_music_title
+from duyster_archive_fifo import is_non_music_title, canonical_duyster_title
 
 ROOT = Path(__file__).resolve().parent
 ARCHIVE = ROOT / "duyster_archief_uniek.csv"
@@ -58,7 +58,8 @@ def parse_episode(html, pid):
         if not artist or not title or len(artist) > 150 or len(title) > 300:
             continue
         raw_count += 1
-        if is_non_music_title(title):
+        title = canonical_duyster_title(title)
+        if title is None:
             continue
         key = song_key(artist, title)
         if key in unique:
@@ -135,8 +136,11 @@ def update_archive(*, archive=ARCHIVE, state_file=STATE, get_page=get_episode):
 
     added, repeats, blocked = 0, 0, 0
     for episode in episodes:
-        for artist, title in episode["songs"]:
-            if is_non_music_title(title):
+        for artist, raw_title in episode["songs"]:
+            # Ook bij ingelezen/cached data altijd de originele songtitel
+            # gebruiken, nooit de Radio 1 Sessie-versie bewaren.
+            title = canonical_duyster_title(raw_title)
+            if title is None:
                 blocked += 1
                 continue
             key = song_key(artist, title)

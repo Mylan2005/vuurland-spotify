@@ -25,14 +25,32 @@ _SEED = "__v193_duyster_shuffle_seed"
 
 
 def is_non_music_title(title):
-    """Archiefplaatsaanduidingen zijn GEEN muzieknummers.
-
-    Niet breder matchen: 'Radio 1 Sessie' in een echte songtitel blijft mogelijk.
-    """
+    """Alleen zuivere rubriektitels zijn geen muziek, niet echte songnamen."""
+    value = str(title or "").replace(chr(160), " ").strip()
+    # De website zet soms een rubriek tussen haakjes.
+    if len(value) > 2 and value[0] + value[-1] in ("()", "[]"):
+        value = value[1:-1].strip()
     return bool(re.fullmatch(
-        r"(?:interview|sessie|interview\s*[+&]\s*sessie)",
-        str(title or "").replace(chr(160), " ").strip(), re.IGNORECASE,
+        r"(?:interview|sessie|interview\s*[+&]\s*sessie|radio\s*1\s*sessie)",
+        value, re.IGNORECASE,
     ))
+
+
+def canonical_duyster_title(title):
+    """Gebruik de gewone opnametitel als een Radio 1 Sessie-suffix staat vermeld.
+
+    Alleen een expliciete afsluitende '(Radio 1 Sessie)' of '[Radio 1 Sessie]'
+    verwijderen, niet 'Session' of 'Live' van andere artiesten/opnames.
+    Geef None terug voor rubrieken zonder echt muzieknummer.
+    """
+    value = str(title or "").replace(chr(160), " ").strip()
+    if not value or is_non_music_title(value):
+        return None
+    value = re.sub(
+        r"\s*[\[(]\s*radio\s*1\s*sessie\s*[\])]\s*$",
+        "", value, flags=re.IGNORECASE,
+    ).strip()
+    return value if value and not is_non_music_title(value) else None
 
 
 def _load_candidates(data_dir, key_func):
@@ -49,8 +67,8 @@ def _load_candidates(data_dir, key_func):
                 raise ValueError(f"Duyster-archief heeft geen artist/title-kolommen: {path}")
             for row in reader:
                 artist = str(row.get("artist") or "").strip()
-                title = str(row.get("title") or "").strip()
-                if not artist or not title or is_non_music_title(title):
+                title = canonical_duyster_title(row.get("title"))
+                if not artist or not title:
                     continue
                 key = key_func(artist, title)
                 if key not in used:
