@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793924511.2105641,
+  "__v150_next_spotify_round_at": 1793924635.1131175,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,7 +422,6 @@
       "dma's|||silver"
     ],
     "dreampop_radio": [
-      "the cranberries|||linger",
       "jenny lewis|||melt your heart",
       "bastian baker|||tattoo on my brain",
       "belle and sebastian|||beautiful",
@@ -521,7 +520,8 @@
       "explosions in the sky|||postcard from 1952",
       "sufjan stevens|||casimir pulaski day",
       "boy|||hit my heart",
-      "the phoenix foundation|||flock of hearts"
+      "the phoenix foundation|||flock of hearts",
+      "basia bulat|||someday soon"
     ],
     "indie_select": [
       "the mainstream|||liams's song",
@@ -626,7 +626,6 @@
       "frank black|||monkey gone to heaven"
     ],
     "dkfm_edge": [
-      "stubai|||voyager edit",
       "soft science|||stuck",
       "diffident daffodils|||missed chances",
       "affection to rent|||if we fall",
@@ -725,7 +724,8 @@
       "quiet houses|||what my heart is for",
       "glitterspitter|||end times",
       "shedfromthebody|||titania",
-      "share|||somewhere without language"
+      "share|||somewhere without language",
+      "theredone|||escape"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793924501.777808,
-    "mellow_mix": 1793924501.7843575,
-    "big_sonic_heaven": 1793924501.7888927,
-    "radio_x_chilled": 1793924502.014305,
-    "dreampop_radio": 1793924502.0190349,
-    "indie_select": 1793924502.023852,
-    "dkfm_edge": 1793924502.3724363,
+    "vuurland": 1793924515.0583751,
+    "mellow_mix": 1793924515.0645573,
+    "big_sonic_heaven": 1793924515.0688074,
+    "radio_x_chilled": 1793924515.0739124,
+    "dreampop_radio": 1793924515.0782607,
+    "indie_select": 1793924515.0828922,
+    "dkfm_edge": 1793924515.0883403,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793924502.378641
+    "dark_edge": 1793924515.0941358
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7785,8 +7785,8 @@
   "__last_radio_key_big_sonic_heaven": "&tilly|||clearest blue",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 4767,
-  "__v146_spotify_budget_slot": 1793924391.8415694,
-  "__vuurland_active_playlist_count": 5865,
+  "__v146_spotify_budget_slot": 1793924515.7039764,
+  "__vuurland_active_playlist_count": 5866,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793924269,
@@ -12158,6 +12158,8 @@
     "modest mouse|||lampshades on fire",
     "modest mouse|||little motel",
     "moev|||beautiful face",
+    "moev|||head down",
+    "moev|||head down extended mix",
     "moev|||no flash in the sky",
     "moev|||open mind",
     "moev|||sadistic years",
@@ -15468,6 +15470,7 @@
     "spotify:track:01vuMD0IeeHeQTSUk0f7iK",
     "spotify:track:022k1qYIMWV20yW7tjiBv5",
     "spotify:track:0240T0gP9w6xEgIciBrfVF",
+    "spotify:track:0265IyybvZuqWtX3MxKkvd",
     "spotify:track:026wpXkLAjImiWOzzcJBHj",
     "spotify:track:02Bd8WXqxchkQFBRwo9XKG",
     "spotify:track:02DNqgAg5jtr5BoaB8zmSC",
@@ -21684,6 +21687,7 @@
     "CAN110500653",
     "CAN110500654",
     "CAN110500659",
+    "CAN110500662",
     "CAN110500665",
     "CAN110500669",
     "CAN110501047",
@@ -32812,7 +32816,8 @@
     "spotify:track:3Br5ei0JKlRxLNc2IAqsOi": "GBAKW9800053",
     "spotify:track:4m3OS54KWywYhP7WD7z1cg": "USWB10107349",
     "spotify:track:5zf9XTxQnORHXxlvVDBxfB": "USME30901473",
-    "spotify:track:0AATuEhrQtGDevnhq9Nx2k": "GBAAA0201210"
+    "spotify:track:0AATuEhrQtGDevnhq9Nx2k": "GBAAA0201210",
+    "spotify:track:0265IyybvZuqWtX3MxKkvd": "CAN110500662"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -63919,6 +63924,8 @@
       "moby|||why does my heart feel so bad",
       "modest mouse|||lampshades on fire",
       "modest mouse|||little motel",
+      "moev|||head down",
+      "moev|||head down extended mix",
       "moev|||sadistic years",
       "moev|||sentencing",
       "monsters of folk|||dear god sincerely mof",
@@ -64896,6 +64903,7 @@
       "spotify:track:01AbB47Hm60LTIStyzMb2g",
       "spotify:track:01K4zKU104LyJ8gMb7227B",
       "spotify:track:01uctxky5IDj8UQvdmcLIv",
+      "spotify:track:0265IyybvZuqWtX3MxKkvd",
       "spotify:track:026wpXkLAjImiWOzzcJBHj",
       "spotify:track:02Bd8WXqxchkQFBRwo9XKG",
       "spotify:track:02DNqgAg5jtr5BoaB8zmSC",
@@ -67082,6 +67090,7 @@
       "CAN110100239",
       "CAN110400449",
       "CAN110500653",
+      "CAN110500662",
       "CAN110500665",
       "CAN110501047",
       "CAN110502130",
@@ -71078,7 +71087,8 @@
       "spotify:track:3Br5ei0JKlRxLNc2IAqsOi": "GBAKW9800053",
       "spotify:track:4m3OS54KWywYhP7WD7z1cg": "USWB10107349",
       "spotify:track:5zf9XTxQnORHXxlvVDBxfB": "USME30901473",
-      "spotify:track:0AATuEhrQtGDevnhq9Nx2k": "GBAAA0201210"
+      "spotify:track:0AATuEhrQtGDevnhq9Nx2k": "GBAAA0201210",
+      "spotify:track:0265IyybvZuqWtX3MxKkvd": "CAN110500662"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -71453,7 +71463,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the cranberries|||linger",
+  "__last_radio_key_dreampop_radio": "jenny lewis|||melt your heart",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -72958,7 +72968,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "stubai|||voyager edit",
+  "__last_radio_key_dkfm_edge": "soft science|||stuck",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -73286,5 +73296,6 @@
   "__match_v35__eagle-eye cherry|||permanent tears": "spotify:track:3Br5ei0JKlRxLNc2IAqsOi",
   "__match_v35__dream academy|||life in a northern town": "spotify:track:4m3OS54KWywYhP7WD7z1cg",
   "__match_v35__savoir adore|||we talk like machines": "spotify:track:5zf9XTxQnORHXxlvVDBxfB",
-  "__match_v35__placebo|||special needs": "spotify:track:0AATuEhrQtGDevnhq9Nx2k"
+  "__match_v35__placebo|||special needs": "spotify:track:0AATuEhrQtGDevnhq9Nx2k",
+  "__match_v35__moev|||head down extended mix": "spotify:track:0265IyybvZuqWtX3MxKkvd"
 }
