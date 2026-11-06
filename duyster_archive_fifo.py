@@ -10,6 +10,7 @@
 import csv
 import hashlib
 import os
+import re
 import random
 import secrets
 import time
@@ -21,6 +22,17 @@ _CURSOR = "__v192_duyster_archive_cursor"
 _NEXT = "__v192_duyster_next_enqueue_at"
 _SHAPE = "__v192_duyster_archive_shape"
 _SEED = "__v193_duyster_shuffle_seed"
+
+
+def is_non_music_title(title):
+    """Archiefplaatsaanduidingen zijn GEEN muzieknummers.
+
+    Niet breder matchen: 'Radio 1 Sessie' in een echte songtitel blijft mogelijk.
+    """
+    return bool(re.fullmatch(
+        r"(?:interview|sessie|interview\\s*[+&]\\s*sessie)",
+        str(title or "").replace("\\u00a0", " ").strip(), re.IGNORECASE,
+    ))
 
 
 def _load_candidates(data_dir, key_func):
@@ -38,7 +50,7 @@ def _load_candidates(data_dir, key_func):
             for row in reader:
                 artist = str(row.get("artist") or "").strip()
                 title = str(row.get("title") or "").strip()
-                if not artist or not title:
+                if not artist or not title or is_non_music_title(title):
                     continue
                 key = key_func(artist, title)
                 if key not in used:
