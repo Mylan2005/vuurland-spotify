@@ -23,6 +23,7 @@ from v194_matcher_metadata import (
     clearly_truncated_final_word as v194_truncated_final_word,
 )
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
+from v194_report_requeue import release_report_retries as v194_release_reports
 
 # =========================
 # INSTELLINGEN
@@ -7426,6 +7427,27 @@ def sync():
         print(f"🆕 {added_to_live_queue} beschikbare RadioBox-titels in wachtrij.")
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
+
+    # v194: alleen tien bewezen metadata-false-negatives uit 12 rapporten
+    # eenmalig opnieuw testen. Bron uitsluitend uit bewaarde radiostate,
+    # geen extra Spotify-call, geen reset en bestaande queue-volgorde intact.
+    def _v194_eligible(artist, title):
+        return not (
+            is_interview_fragment(title)
+            or v191_is_german_vocal_risk(artist, title)
+            or v140_is_unwanted_language_title(title, artist)
+            or v131_block_nonlatin_east_asian(artist, title)
+            or is_confirmed_german_vocal(artist, title)
+            or v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS
+        )
+
+    v194_release_reports(
+        cache, live_queue, seen,
+        active_sources=RADIO_SOURCE_ORDER,
+        make_key=_v47_key,
+        in_playlist=radio_matches_playlist,
+        eligible=_v194_eligible,
+    )
 
     # v193: één Duyster-archiefnummer per 120 seconden (hoogstens) ACHTER
     # de bestaande live radio-items. Geen Spotify Search of playlist-scan.
