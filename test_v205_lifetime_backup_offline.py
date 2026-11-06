@@ -109,6 +109,7 @@ with tempfile.TemporaryDirectory() as folder:
         raise AssertionError("Checksum-mismatched tar accepted")
 
     # Rebuild corrupted source with symlink: fail closed.
+    (src / "vuurland_live_queue.json").unlink()
     (src / "vuurland_live_queue.json").symlink_to(src / "private.env")
     try:
         create_snapshot(src, root / "symlink.tar.gz", commit=SHA)
