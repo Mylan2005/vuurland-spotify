@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793979540.2280202,
+  "__v150_next_spotify_round_at": 1793979664.6696196,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793979531.0427203,
-    "mellow_mix": 1793979531.04536,
-    "big_sonic_heaven": 1793979531.0475667,
-    "radio_x_chilled": 1793979531.0498085,
-    "dreampop_radio": 1793979531.0519783,
-    "indie_select": 1793979531.0543034,
-    "dkfm_edge": 1793979531.0566363,
+    "vuurland": 1793979544.6332333,
+    "mellow_mix": 1793979544.6359472,
+    "big_sonic_heaven": 1793979544.6381543,
+    "radio_x_chilled": 1793979544.6403902,
+    "dreampop_radio": 1793979544.6425726,
+    "indie_select": 1793979544.6448767,
+    "dkfm_edge": 1793979544.647215,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793979531.0589564
+    "dark_edge": 1793979544.6495578
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -8367,12 +8367,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "polar|||bipolar dream": {
-      "artist": "Polar",
-      "title": "Bipolar Dream",
-      "source": "dreampop_radio",
-      "failed_at": 1793893094
-    },
     "cosmonaut|||say what you want - cosmonaut": {
       "artist": "Cosmonaut",
       "title": "Say What You Want - Cosmonaut",
@@ -8666,6 +8660,12 @@
       "title": "Someone",
       "source": "big_sonic_heaven",
       "failed_at": 1793978670
+    },
+    "kate de rosset|||in the": {
+      "artist": "Kate de Rosset",
+      "title": "In the",
+      "source": "big_sonic_heaven",
+      "failed_at": 1793979546
     }
   },
   "__v51_radio_unmatched": {
@@ -8918,8 +8918,8 @@
   "__last_radio_key_mellow_mix": "dire straits|||romeo and juliet",
   "__last_radio_key_big_sonic_heaven": "meadowlake|||slow down",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 5604,
-  "__v146_spotify_budget_slot": 1793979420.8016443,
+  "__v116_fifo_next_sequence": 5605,
+  "__v146_spotify_budget_slot": 1793979545.4773958,
   "__vuurland_active_playlist_count": 6167,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -53323,7 +53323,7 @@
     "anna domino|||rhythm": 3,
     "birkii|||holy war - birkii": 3,
     "aerial love feed|||someone": 3,
-    "kate de rosset|||in the": 2,
+    "kate de rosset|||in the": 3,
     "diego|||dance": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -53480,7 +53480,8 @@
     "t h c with tek hed|||1963": 1,
     "anna domino|||rhythm": 1,
     "birkii|||holy war - birkii": 1,
-    "aerial love feed|||someone": 1
+    "aerial love feed|||someone": 1,
+    "kate de rosset|||in the": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -77282,5 +77283,6 @@
   "__match_v35__tom odell|||another love": "spotify:track:3JvKfv6T31zO0ini8iNItO",
   "__match_v35__fight like apes|||katmandu face it you're caviar i'm hotdogs": "spotify:track:0rRWGlWdCyKIWEJgLEe6Eb",
   "__match_v35__arlo parks|||softly": "spotify:track:3fpfQC77x3uwESSJ6VmUKM",
-  "__match_v35__me and my drummer|||phobia": "spotify:track:16AL4uDwewsOgppP5B9ulb"
+  "__match_v35__me and my drummer|||phobia": "spotify:track:16AL4uDwewsOgppP5B9ulb",
+  "__not_found_v35__kate de rosset|||in the": 1793979546
 }
