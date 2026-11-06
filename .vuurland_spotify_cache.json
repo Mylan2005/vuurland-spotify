@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793947211.2452478,
+  "__v150_next_spotify_round_at": 1793947334.6937864,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "junip|||line of fire",
       "beck|||ride lonesome",
       "wasia project|||somebody come through",
       "tamino|||you don't own me",
@@ -112,8 +113,7 @@
       "maya hawke|||bring home my man",
       "slowdive|||the slab",
       "spinvis|||voor ik vergeet",
-      "hermanos gutierrez|||canto andino",
-      "monsters of folk|||dear god sincerely mof"
+      "hermanos gutierrez|||canto andino"
     ],
     "mellow_mix": [
       "bon iver|||things behind things behind things",
@@ -821,6 +821,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "morcheeba|||otherwise",
       "snow patrol|||set the fire to the third bar",
       "polycool|||unlike you",
       "agnes obel|||riverside",
@@ -919,22 +920,21 @@
       "cake|||perhaps perhaps perhaps",
       "the little ones|||lovers who uncover",
       "jonathan bree|||you're so cool",
-      "goldfrapp feat dave gahan|||ocean",
-      "josef salvat|||hustler"
+      "goldfrapp feat dave gahan|||ocean"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793947201.4347825,
-    "mellow_mix": 1793947201.439265,
-    "big_sonic_heaven": 1793947201.4424443,
-    "radio_x_chilled": 1793947201.4458575,
-    "dreampop_radio": 1793947201.4489794,
-    "indie_select": 1793947201.4525192,
-    "dkfm_edge": 1793947201.456299,
+    "vuurland": 1793947214.5374274,
+    "mellow_mix": 1793947214.5418146,
+    "big_sonic_heaven": 1793947214.5449545,
+    "radio_x_chilled": 1793947214.548309,
+    "dreampop_radio": 1793947214.5513852,
+    "indie_select": 1793947214.554862,
+    "dkfm_edge": 1793947214.5585818,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793947201.4603257
+    "dark_edge": 1793947214.6799505
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7613,6 +7613,7 @@
       "miike snow|||cult logic",
       "miles kane|||rearrange",
       "milky chance paulina eisenberg|||unknown song",
+      "morcheeba|||otherwise",
       "morrissey|||jacky's only happy when she's up on the stage",
       "mt joy|||come with me",
       "mumford & sons|||devil in your eye",
@@ -8229,13 +8230,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "beck|||ride lonesome",
+  "__last_radio_key_vuurland": "junip|||line of fire",
   "__last_radio_key_mellow_mix": "bon iver|||things behind things behind things",
   "__last_radio_key_big_sonic_heaven": "throwing muses|||south coast",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 5110,
-  "__v146_spotify_budget_slot": 1793947091.6548302,
-  "__vuurland_active_playlist_count": 5988,
+  "__v116_fifo_next_sequence": 5111,
+  "__v146_spotify_budget_slot": 1793947215.107658,
+  "__vuurland_active_playlist_count": 5989,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1793946353,
@@ -10841,6 +10842,7 @@
     "gregory alan isakov|||powder",
     "gregory alan isakov|||sweet heat lightning",
     "gregory alan isakov|||sylvan esso|||fade into you",
+    "gregory alan isakov|||that moon song",
     "gregory alan isakov|||the stable song",
     "gregory alan isakov|||this empty northern hemisphere",
     "gregory alan isakov|||watchman",
@@ -18932,6 +18934,7 @@
     "spotify:track:3ldQn5GUmDqs0L4z4GORI6",
     "spotify:track:3lhedrzrxjiBmDfuoDnd78",
     "spotify:track:3ln2pZNYxgCSDuZxkPXg0w",
+    "spotify:track:3lw0CSMQ88LcN0ZMP6DlWi",
     "spotify:track:3m6Acyp5h4kwi3npmE9cxV",
     "spotify:track:3mHj3cBY3bKYuMb3z0lRVS",
     "spotify:track:3mKYZ2aWLyKjTmpBKPoePs",
@@ -26625,6 +26628,7 @@
     "USCGH2672359",
     "USCGJ0580279",
     "USCGJ0663939",
+    "USCGJ0988298",
     "USCGJ0988301",
     "USCGJ0988303",
     "USCGJ0988308",
@@ -33762,7 +33766,8 @@
     "spotify:track:6QJdX3JyO0ulQtJWaTmii7": "CAHFU2100040",
     "spotify:track:6684GUHy1jpyhJVzpz5OFr": "USMR10400295",
     "spotify:track:34tFidHrETMAjsiK87WVVW": "GBAKW8301002",
-    "spotify:track:0OnK7hI2uqkrQ2QvTuk0Tr": "GBAYK8200018"
+    "spotify:track:0OnK7hI2uqkrQ2QvTuk0Tr": "GBAYK8200018",
+    "spotify:track:3lw0CSMQ88LcN0ZMP6DlWi": "USCGJ0988298"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -64446,6 +64451,7 @@
       "gregor mcewan|||manners make the man",
       "gregory alan isakov|||amsterdam",
       "gregory alan isakov|||dark dark dark",
+      "gregory alan isakov|||that moon song",
       "grian chatten|||fairlies",
       "grimes|||delete forever",
       "grizzly bear|||deep sea diver",
@@ -67084,6 +67090,7 @@
       "spotify:track:3l3SbRkrK1aQ5Dk1h7vroV",
       "spotify:track:3lhedrzrxjiBmDfuoDnd78",
       "spotify:track:3ln2pZNYxgCSDuZxkPXg0w",
+      "spotify:track:3lw0CSMQ88LcN0ZMP6DlWi",
       "spotify:track:3mHj3cBY3bKYuMb3z0lRVS",
       "spotify:track:3mLxi4lo3JU4UofXLEeGvG",
       "spotify:track:3mnZ0JehmgDBzG0vHScCRH",
@@ -69776,6 +69783,7 @@
       "USCGH1259748",
       "USCGH2060318",
       "USCGJ0580279",
+      "USCGJ0988298",
       "USCGJ1123686",
       "USCGJ1396460",
       "USCGJ1631070",
@@ -72557,7 +72565,8 @@
       "spotify:track:6QJdX3JyO0ulQtJWaTmii7": "CAHFU2100040",
       "spotify:track:6684GUHy1jpyhJVzpz5OFr": "USMR10400295",
       "spotify:track:34tFidHrETMAjsiK87WVVW": "GBAKW8301002",
-      "spotify:track:0OnK7hI2uqkrQ2QvTuk0Tr": "GBAYK8200018"
+      "spotify:track:0OnK7hI2uqkrQ2QvTuk0Tr": "GBAYK8200018",
+      "spotify:track:3lw0CSMQ88LcN0ZMP6DlWi": "USCGJ0988298"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -74451,7 +74460,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "snow patrol|||set the fire to the third bar",
+  "__last_radio_key_dark_edge": "morcheeba|||otherwise",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -74905,5 +74914,6 @@
   "__match_v35__mary gauthier|||mercy now": "spotify:track:6684GUHy1jpyhJVzpz5OFr",
   "__match_v35__siouxsie & the banshees|||dear prudence": "spotify:track:34tFidHrETMAjsiK87WVVW",
   "__match_v35__james bay|||hold back the river acoustic for radio x": "spotify:track:1KZyVnyptQcPzkx7ELCnZC",
-  "__match_v35__midge ure|||no regrets": "spotify:track:0OnK7hI2uqkrQ2QvTuk0Tr"
+  "__match_v35__midge ure|||no regrets": "spotify:track:0OnK7hI2uqkrQ2QvTuk0Tr",
+  "__match_v35__gregory alan isakov|||that moon song": "spotify:track:3lw0CSMQ88LcN0ZMP6DlWi"
 }
