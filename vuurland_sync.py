@@ -15,6 +15,7 @@ import webbrowser
 import requests
 from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
+from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 
 # =========================
 # INSTELLINGEN
@@ -105,6 +106,8 @@ DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?l
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
 RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge")  # Acht live bronnen; Radio X, DKFM Shoegaze en DKFM Classic blijven uit.
+# Duyster is een archief, geen negende live radiofeed.
+FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
 CHECK_EVERY_SECONDS = 60  # 1 minuut; maximaal één Search en één toevoeging per ronde
 SPOTIFY_SEARCH_BLOCKED_UNTIL = 0
@@ -7022,13 +7025,12 @@ def sync():
     if not isinstance(live_queue, list):
         raise ValueError("Live queue is geen JSON-lijst; niet overschrijven")
 
-    # Alleen de vijf actieve bronnen blijven in de FIFO.
-    # Eenmalige Radio Indie Alternative-selectie gebruikt source="vuurland"
-    # en blijft daardoor behouden. Onbekende bronnen worden veilig uitgesloten.
+    # De acht livebronnen én het Duyster-archief mogen in deze FIFO blijven.
+    # Andere uitgeschakelde radiozenders blijven geweerd.
     before_source_filter = len(live_queue)
     live_queue = [item for item in live_queue if (
         isinstance(item, dict)
-        and str(item.get("source") or "vuurland").strip() in RADIO_SOURCE_ORDER
+        and str(item.get("source") or "vuurland").strip() in FIFO_SOURCE_ORDER
         and (item.get("source") != "dark_edge" or dark_edge_track_allowed(
             item.get("artist", ""), item.get("title", "")))
     )]
@@ -7382,14 +7384,37 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
-    # Duyster permanently disabled at user's request. Purge only Duyster items;
-    # the four live RadioBox sources continue to feed the FIFO.
-    _before_duyster_purge = len(live_queue)
-    live_queue = [item for item in live_queue if not (
-        isinstance(item, dict) and item.get("source") == "duyster")]
-    if len(live_queue) != _before_duyster_purge:
-        print(f"🧹 Duyster uit FIFO: {_before_duyster_purge - len(live_queue)} items verwijderd.")
+    # v192: één Duyster-archiefnummer per 120 seconden (hoogstens) ACHTER
+    # de bestaande live radio-items. Geen Spotify Search of playlist-scan.
+    # De aflevering 833 krijgt eerst een kans, daarna de rest van het archief.
+    def _duyster_song_allowed(artist, title):
+        if (is_interview_fragment(title)
+                or v191_is_german_vocal_risk(artist, title)
+                or v140_is_unwanted_language_title(title, artist)
+                or v131_block_nonlatin_east_asian(artist, title)
+                or is_confirmed_german_vocal(artist, title)
+                or v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS):
+            return False
+        reason = dark_edge_reject_reason(artist, title)
+        # Gerichte EDM-/punk-/metal- en persoonlijke uitsluitingen behouden.
+        # Geen extra Spaans verbod: atmosfeer boven het land van herkomst.
+        return reason not in (
+            "geblokkeerde dance-/EDM-, punk-/metalartiest of persoonlijke uitzondering",
+            "expliciet uitgesloten opname",
+        )
+
+    duyster_added = enqueue_duyster_archive_one(
+        cache, live_queue, seen, data_dir=DATA_DIR,
+        key_func=_v47_key,
+        allowed=_duyster_song_allowed,
+        in_playlist=radio_matches_playlist,
+    )
+    if duyster_added:
+        print("🎵 Duyster-archief toegevoegd aan de gewone Spotify-FIFO.")
+    # Bewaar archiefcursor en FIFO vóór elke Spotify-cooldown/early return.
+    v116_stamp_fifo(live_queue, cache)
     atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+    save_cache(cache)
 
     # v181: herstel uitsluitend twee bewezen ontbrekende Vuurland-plays.
     # Geen volledige historie-import; FIFO, cache en 120s-tempo blijven intact.
@@ -7473,7 +7498,7 @@ def sync():
         print(f"⏭️ v131: {_v131_before - len(live_queue)} CJK-titel(s)/artiest(en) uit FIFO geweerd.")
     _v119_before = len(live_queue)
     live_queue = [x for x in live_queue if isinstance(x, dict) and
-                  x.get("source") in RADIO_SOURCE_ORDER and
+                  x.get("source") in FIFO_SOURCE_ORDER and
                   not v140_is_unwanted_language_title(x.get("title", ""), x.get("artist", "")) and
                   not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", "")) and
                   not (x.get("source") == "indie_select" and indie_select_blocks_german(x.get("artist", ""), x.get("title", "")))]
@@ -8101,15 +8126,15 @@ def sync():
     # LIVE QUEUE VERWERKEN
     # ---------------------------------
 
-    duyster_confirmed_links = {}  # v69: Duyster volledig uitgeschakeld
+    duyster_confirmed_links = {}  # v192: Duyster via gewone veilige matcher; geen extra Spotify-calls
 
     # v120: gezamenlijke FIFO zonder bronbeurtrol.
     # Nieuwe nummers van alle vier radiobronnen sluiten aan in de FIFO.
     # De bestaande persistente _v116_fifo_seq blijft leidend.
     processed_item_ids = set()
     max_queue_items_per_round = 35
-    source_order = RADIO_SOURCE_ORDER
-    print(f"🔀 {len(RADIO_SOURCE_ORDER)} radiobronnen actief; één gezamenlijke FIFO.")
+    source_order = FIFO_SOURCE_ORDER
+    print(f"🔀 {len(RADIO_SOURCE_ORDER)} live radiobronnen + Duyster-archief; één gezamenlijke FIFO.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
