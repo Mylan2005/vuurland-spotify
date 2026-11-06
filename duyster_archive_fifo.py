@@ -2,12 +2,16 @@
 
 - Maximaal één archiefnummer per 120 seconden, ook na runnerherstarts.
 - Geen Spotify-/netwerkvragen en geen automatische playlistinventaris.
-- Aflevering 833 krijgt eerst een kans; daarna het historische archief.
+- Willekeurige, reproduceerbare volgorde uit alle Duyster-afleveringen.
+- Aflevering 833 staat in het archief maar krijgt geen oneerlijke voorrang.
 - Hoogstens 100 wachtende Duyster-nummers en max. 3600 FIFO-items.
 - Alle bestaande radio-items en hun volgorde blijven onaangeroerd.
 """
 import csv
+import hashlib
 import os
+import random
+import secrets
 import time
 
 DUYSTER_ENQUEUE_INTERVAL_SECONDS = 120
@@ -16,10 +20,11 @@ DUYSTER_MAX_TOTAL_QUEUE = 3600
 _CURSOR = "__v192_duyster_archive_cursor"
 _NEXT = "__v192_duyster_next_enqueue_at"
 _SHAPE = "__v192_duyster_archive_shape"
+_SEED = "__v193_duyster_shuffle_seed"
 
 
 def _load_candidates(data_dir, key_func):
-    """833 eerst, daarna het unieke archief; nooit een titel dubbel aanbieden."""
+    """Heel het archief inclusief aflevering 833, zonder dubbels."""
     paths = (
         (os.path.join(data_dir, "duyster_aflevering_833.csv"), ("artist", "title")),
         (os.path.join(data_dir, "duyster_archief_uniek.csv"), ("artist", "title")),
@@ -67,13 +72,26 @@ def enqueue_one(cache, live_queue, seen, *, data_dir, key_func,
         print(f"⏭️ Duyster: archief niet betrouwbaar leesbaar ({error}); FIFO intact.")
         return None
 
-    # Een toekomstige nieuwe aflevering mag niet achter een oude cursor blijven
-    # zitten. Een gewijzigde kandidatenlijst herstart een veilige, gededupliceerde
-    # doorloop zonder enige Spotify-calls.
-    shape = (len(candidates), candidates[0][2] if candidates else "")
-    if cache.get(_SHAPE) != list(shape):
-        cache[_SHAPE] = list(shape)
+    # v193: Eén blijvend willekeurig zaad, zodat een herstart niet telkens
+    # dezelfde nummers eerst kiest. De volgorde wordt onafhankelijk van de
+    # CSV-bestandsvolgorde bepaald (geen voordeel voor aflevering 833).
+    # De cursor doorloopt vervolgens elk uniek archiefnummer maximaal eenmaal.
+    raw_seed = cache.get(_SEED)
+    if type(raw_seed) is not int or raw_seed < 0:
+        raw_seed = secrets.randbits(64)
+        cache[_SEED] = raw_seed
+        # Vervang ook de oude opeenvolgende v192-cursor zonder queue-reset.
         cache[_CURSOR] = 0
+
+    candidates.sort(key=lambda entry: entry[2])
+    archive_fingerprint = hashlib.sha256(
+        "\n".join(entry[2] for entry in candidates).encode("utf-8")
+    ).hexdigest()
+    shape = ["v193-shuffle", archive_fingerprint]
+    if cache.get(_SHAPE) != shape:
+        cache[_SHAPE] = shape
+        cache[_CURSOR] = 0
+    random.Random(raw_seed).shuffle(candidates)
     try:
         start = max(0, min(len(candidates), int(cache.get(_CURSOR, 0) or 0)))
     except (TypeError, ValueError):
