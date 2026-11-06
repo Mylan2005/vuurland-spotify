@@ -43,6 +43,13 @@ for artist, title in (
     ("Coldplay", "Higher Power"),
     ("Muse feat. Drake", "Supermassive Black Hole"),
     ("The Weeknd & Kendrick Lamar", "Pray For Me"),
+    # Spaanse indie/folk is welkom; Duitse zang niet.
+    ("Blanco White", "Mano a Mano"),
+    ("Blanco White", "Una Noche Más"),
+    ("Blanco White", "El Búho"),
+    ("Dreamy Spanish Indie", "No te vayas"),
+    ("Tati Falco", "Selva y mar"),
+    ("Dreamy Spanish Indie", "Te quiero"),
 ):
     assert dark_edge_reject_reason(artist, title) is None, (artist, title)
 
@@ -61,7 +68,6 @@ for artist, title in (
     ("Faith No More", "Motherfucker"),
     ("Alexandru Andries", "Cea mai frumoasa zi"),
     ("Robin and the Backstabbers", "Sat Dupa Sat"),
-    ("Tati Falco", "Selva y mar"),
     ("Travka", "Distante"),
     ("Muse feat. Avicii", "Supermassive Black Hole"),
     ("Kleerup & Robyn", "With Every Heartbeat"),
@@ -77,7 +83,6 @@ for artist, title in (
     ("Muse", "Nu mai vreau"),
     ("Muse", "Ich liebe dich"),
     ("Placebo", "Je t'aime"),
-    ("Radiohead", "No te vayas"),
     ("Editors", "Ti amo"),
     ("Interpol", "Ti voglio"),
     ("Muse", "Привет"),
@@ -118,6 +123,8 @@ ns = {
         ("Spinvis", "Ik wil alleen maar zwemmen"),
         ("New Indie Band", "Endless Reverie"),
         ("Muse", "global-language-block"),
+        ("Blanco White", "Mano a Mano"),
+        ("Dreamy Spanish Indie", "No te vayas"),
         ("Sigur Rós", "Ich liebe dich"),
         ("Sigur Rós", "Inní mér syngur vitleysingur"),
         ("Ólafur Arnalds", "Nu mai vreau"),
@@ -135,6 +142,8 @@ assert ns["get_dark_edge_tracks"]() == [
     ("Nothing But Thieves", "Real Love Song"),
     ("Spinvis", "Ik wil alleen maar zwemmen"),
     ("New Indie Band", "Endless Reverie"),
+    ("Blanco White", "Mano a Mano"),
+    ("Dreamy Spanish Indie", "No te vayas"),
     ("Sigur Rós", "Inní mér syngur vitleysingur"),
     ("Ólafur Arnalds", "Nu mai vreau"),
     ("Cocteau Twins", "Привет"),
@@ -151,7 +160,10 @@ assert not ns["v190_is_language_exempt_artist"]("Sigur Ros Tribute")
 assert not ns["v190_is_language_exempt_artist"]("Avicii feat Sigur Ros")
 assert not ns["dark_edge_track_allowed"]("Sigur Rós feat. Avicii", "Nu mai vreau")
 assert not ns["dark_edge_track_allowed"]("Sigur Rós", "Ich liebe dich")
+assert not ns["dark_edge_track_allowed"]("Blanco White", "Ich liebe dich")
 assert ns["dark_edge_track_allowed"]("Sigur Rós", "Inní mér syngur vitleysingur")
+assert ns["dark_edge_track_allowed"]("Blanco White", "Mano a Mano")
+assert ns["dark_edge_track_allowed"]("Dreamy Spanish Indie", "No te vayas")
 assert len(ast.literal_eval(order)) == 8
 assert ast.literal_eval(order)[-1] == "dark_edge"
 sync_text = ast.get_source_segment(source, functions["sync"])
@@ -163,5 +175,5 @@ assert 'sid == "dark_edge" and not dark_edge_track_allowed(artist, title)' in co
 assert '__dark_edge_strict_baseline_20261105' in sync_text
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 assert "max_additions_per_round = 1" in source
-print("✅ Dark Edge: 8 bronnen; pop toegestaan, dance/EDM en Dua Lipa geblokkeerd; NL/EN en queue-/Spotify-gates behouden.")
+print("✅ Dark Edge: 8 bronnen; pop toegestaan, dance/EDM en Dua Lipa geblokkeerd; NL/EN/ES en queue-/Spotify-gates behouden.")
 print("ℹ️ Genre en taal kunnen niet altijd uit RadioBox-metadata worden vastgesteld; dit is een risicofilter.")
