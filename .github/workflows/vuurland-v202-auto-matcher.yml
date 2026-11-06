@@ -1,0 +1,82 @@
+name: Vuurland dagelijkse automatische matchertriage
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 7 * * *'
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+
+concurrency:
+  group: vuurland-matchertriage
+  cancel-in-progress: false
+
+jobs:
+  matchertriage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Haal recente matcher-rapporten op (zonder Spotify)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p auto_matcher/runs auto_matcher/output
+          # Artifact-retentie is beperkt; download alleen maximaal 60 recente
+          # afgeronde sync-runs, plus alle in GitHub bewaarde cache-missers.
+          gh run list --workflow vuurland.yml --limit 60 \
+            --json databaseId,status \
+            --jq '.[] | select(.status=="completed") | .databaseId' \
+            > auto_matcher/recent_runs.txt
+          while read -r run_id; do
+            if [ -n "$run_id" ]; then
+              mkdir -p "auto_matcher/runs/$run_id"
+              # Sommige runs hebben geen artifact of het is al verlopen.
+              gh run download "$run_id" \
+                --name vuurland_matcher_rapport \
+                --dir "auto_matcher/runs/$run_id" \
+                >/dev/null 2>&1 || true
+            fi
+          done < auto_matcher/recent_runs.txt
+          echo "Gedownloade rapporten: $(find auto_matcher/runs -name vuurland_matcher_rapport.json | wc -l)"
+
+      - name: Analyseer alle bewaarde missers en recente log-kandidaten
+        run: |
+          python v202_auto_matcher_triage.py \
+            --cache .vuurland_spotify_cache.json \
+            --reports-dir auto_matcher/runs \
+            --out-dir auto_matcher/output
+          cat auto_matcher/output/matcher_automatische_issue.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Bewaar volledige downloadbare analyse
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-automatische-matchertriage
+          path: auto_matcher/output/
+          retention-days: 30
+
+      - name: Werk één permanent GitHub-issue bij
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE='[matcher-bot] Automatische matcheranalyse'
+          ISSUE=$(gh issue list --state open --limit 100 \
+            --json number,title --jq '.[] | select(.title=="[matcher-bot] Automatische matcheranalyse") | .number' \
+            | head -n 1)
+          if [ -z "$ISSUE" ]; then
+            gh issue create --title "$TITLE" \
+              --body-file auto_matcher/output/matcher_automatische_issue.md
+          else
+            gh issue view "$ISSUE" --json body --jq '.body' > auto_matcher/previous_issue.md
+            if ! cmp -s auto_matcher/previous_issue.md auto_matcher/output/matcher_automatische_issue.md; then
+              gh issue edit "$ISSUE" --body-file auto_matcher/output/matcher_automatische_issue.md
+            else
+              echo "Geen gewijzigde matcherproblemen: bestaand issue behouden."
+            fi
+          fi
