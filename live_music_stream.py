@@ -12,6 +12,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 BRONNEN = {
+    'duyster': 'Duyster archief',
     'vuurland': 'Studio Brussel Vuurland',
     'mellow_mix': 'Radio Paradise Mellow Mix',
     'big_sonic_heaven': 'Big Sonic Heaven Radio',
