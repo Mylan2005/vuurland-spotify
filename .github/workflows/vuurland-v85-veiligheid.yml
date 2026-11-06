@@ -29,6 +29,9 @@ on:
       - 'test_v194_matcher_reports_offline.py'
       - 'test_v195_radio_replay_offline.py'
       - 'duyster_weekly_update.py'
+      - 'duyster_historische_audit.py'
+      - 'test_v206_duyster_historische_audit_offline.py'
+      - '.github/workflows/duyster-historische-audit.yml'
       - 'duyster_archive_fifo.py'
       - 'duyster_archief_uniek.csv'
       - 'test_duyster_weekly_update_offline.py'
@@ -87,6 +90,7 @@ jobs:
           python test_v204_spotify_dedup_offline.py
           python test_v205_lifetime_backup_offline.py
           python test_duyster_weekly_update_offline.py
+          python test_v206_duyster_historische_audit_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
           for v in 77 78 79 80 81 82; do
