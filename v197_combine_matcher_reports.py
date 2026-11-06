@@ -42,7 +42,21 @@ def aggregate(paths):
     merged = {}
     errors = []
     processed = 0
-    for path in sorted(set(Path(p) for p in paths)):
+    duplicate_exports = []
+    # Reports exported as both CSV and JSON in the SAME directory represent
+    # one run, so prefer JSON and do not inflate the per-report frequency.
+    unique_paths = sorted(set(Path(p) for p in paths))
+    exports = {}
+    for candidate in unique_paths:
+        if candidate.suffix.lower() not in (".csv", ".json"):
+            continue
+        group = (candidate.parent, candidate.stem.casefold())
+        previous = exports.get(group)
+        if previous is None or (previous.suffix.lower() == ".csv" and candidate.suffix.lower() == ".json"):
+            exports[group] = candidate
+    selected = sorted(exports.values())
+    duplicate_exports = [str(p) for p in unique_paths if p not in selected]
+    for path in selected:
         try:
             records = _records(path)
             if not all(isinstance(x, dict) for x in records):
@@ -94,7 +108,16 @@ def aggregate(paths):
             "afgewezen_kandidaten": "; ".join(sorted(entry["_candidates"])),
         })
     rows.sort(key=lambda x: (-x["rapporten"], x["artiest"].casefold(), x["titel"].casefold()))
-    return {"gelezen_bestanden": processed, "fouten": errors,
+    status_counts = Counter()
+    source_counts = Counter()
+    for row in rows:
+        for status in filter(None, row["statussen"].split("; ")):
+            status_counts[status] += 1
+        for source in filter(None, row["bronnen"].split("; ")):
+            source_counts[source] += 1
+    return {"gelezen_bestanden": processed, "dubbele_exports_overgeslagen": duplicate_exports,
+            "fouten": errors, "statusverdeling_unieke_nummers": dict(sorted(status_counts.items())),
+            "bronverdeling_unieke_nummers": dict(sorted(source_counts.items())),
             "unieke_nummers": len(rows), "nummers": rows,
             "betekenis": "Onderzoeksrapport: kandidaten zijn NIET goedgekeurd voor Spotify."}
 
@@ -103,9 +126,20 @@ def markdown(report):
     lines = [
         "# Vuurland v197 — gecombineerde matcher-rapporten", "",
         "Alleen-lezen overzicht; geen Spotify-queries, geen automatische matches.",
-        "Verschillende bestanden van dezelfde run kunnen dubbeltellen; gebruik bij voorkeur één formaat per run.",
+        "CSV en JSON met dezelfde naam in dezelfde map tellen als één export (JSON heeft voorrang).",
+        "Andere kopieën of runs met andere namen kunnen nog dubbeltellen.",
         "", f"**Gelezen rapporten:** {report['gelezen_bestanden']}",
-        f"**Unieke artiest/titel-combinaties:** {report['unieke_nummers']}", "",
+        f"**Unieke artiest/titel-combinaties:** {report['unieke_nummers']}",
+        f"**Overgeslagen dubbele exports:** {len(report['dubbele_exports_overgeslagen'])}", "",
+        "## Meest voorkomende statussen", "",
+    ]
+    for status, count in sorted(report["statusverdeling_unieke_nummers"].items(), key=lambda x: (-x[1], x[0])):
+        lines.append(f"- {status}: {count} unieke nummers")
+    lines += ["", "## Bronnen", ""]
+    for source, count in sorted(report["bronverdeling_unieke_nummers"].items(), key=lambda x: (-x[1], x[0])):
+        lines.append(f"- {source}: {count} unieke nummers")
+    lines += [
+        "",
         "| Rapporten | Artiest | Titel | Status |",
         "|---:|---|---|---|",
     ]
@@ -140,7 +174,7 @@ def main():
         writer = csv.DictWriter(handle, fieldnames=OUTPUT_FIELDS)
         writer.writeheader()
         writer.writerows(report["nummers"])
-    print(f"✅ {report['gelezen_bestanden']} rapporten verwerkt, {report['unieke_nummers']} unieke nummers, "
+    print(f"✅ {report['gelezen_bestanden']} rapporten verwerkt, {len(report['dubbele_exports_overgeslagen'])} dubbele exports overgeslagen, {report['unieke_nummers']} unieke nummers, "
           f"{len(report['fouten'])} overgeslagen bestanden. Geen Spotify-calls.")
 
 

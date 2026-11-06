@@ -9,6 +9,7 @@ on:
       - 'v196_matcher_insights.py'
       - 'v197_combine_matcher_reports.py'
       - 'test_v197_combine_matcher_reports_offline.py'
+      - 'test_v198_report_dedup_offline.py'
       - 'test_v196_matcher_insights_offline.py'
       - 'v194_report_requeue.py'
       - 'test_v194_matcher_reports_offline.py'
@@ -63,6 +64,7 @@ jobs:
           python test_v195_radio_replay_offline.py
           python test_v196_matcher_insights_offline.py
           python test_v197_combine_matcher_reports_offline.py
+          python test_v198_report_dedup_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
