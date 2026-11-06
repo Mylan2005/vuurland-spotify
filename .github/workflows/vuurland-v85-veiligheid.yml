@@ -9,6 +9,9 @@ on:
       - 'v202_auto_matcher_triage.py'
       - 'v203_matcher_upgrade_requeue.py'
       - 'v204_spotify_dedup_review.py'
+      - 'v205_lifetime_backup.py'
+      - 'test_v205_lifetime_backup_offline.py'
+      - '.github/workflows/vuurland-v205-lifetime-backup.yml'
       - 'test_v204_spotify_dedup_offline.py'
       - 'test_v203_matcher_upgrade_requeue_offline.py'
       - 'test_v202_auto_matcher_triage_offline.py'
@@ -82,6 +85,7 @@ jobs:
           python test_v202_auto_matcher_triage_offline.py
           python test_v203_matcher_upgrade_requeue_offline.py
           python test_v204_spotify_dedup_offline.py
+          python test_v205_lifetime_backup_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py

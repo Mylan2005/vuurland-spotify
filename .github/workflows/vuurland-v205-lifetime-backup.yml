@@ -1,0 +1,89 @@
+name: Vuurland dagelijkse herstelbare back-up
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vuurland-v205-lifetime-backup.yml'
+      - 'v205_lifetime_backup.py'
+  schedule:
+    - cron: '41 4 * * *'
+
+permissions:
+  contents: read
+  actions: read
+  id-token: write # uitsluitend voor geconfigureerde AWS OIDC back-upopslag
+
+concurrency:
+  group: vuurland-lifetime-backup
+  cancel-in-progress: false
+
+jobs:
+  koude-backup:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Lees volledige gepubliceerde main-state
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Maak gecontroleerde volledige state-back-up
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p backup-output
+          SHA="$(git rev-parse HEAD)"
+          UTC="$(date -u +%Y%m%dT%H%M%SZ)"
+          NAME="vuurland-$UTC-$SHA.tar.gz"
+          python v205_lifetime_backup.py create \
+            --data-dir . --output "backup-output/$NAME" --commit "$SHA"
+          python v205_lifetime_backup.py verify --archive "backup-output/$NAME"
+          python v205_lifetime_backup.py stage-restore \
+            --archive "backup-output/$NAME" --destination backup-output/restore-test
+          # Restore test is never the live repository and is not uploaded.
+          rm -rf backup-output/restore-test
+          echo "VUURLAND_BACKUP_FILENAME=$NAME" >> "$GITHUB_ENV"
+          echo "## Vuurland-back-up" >> "$GITHUB_STEP_SUMMARY"
+          echo "Back-up opnieuw gevalideerd; herstel naar nieuwe map getest." >> "$GITHUB_STEP_SUMMARY"
+          echo "Git commit: $SHA" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Downloadbare GitHub-herstelkopie (tijdelijk, niet offsite)
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-lifetime-backup
+          path: backup-output/*.tar.gz
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Meld wanneer onafhankelijke opslag niet is verbonden
+        if: ${{ vars.VUURLAND_BACKUP_S3_BUCKET == '' || vars.VUURLAND_BACKUP_AWS_ROLE_ARN == '' || vars.VUURLAND_BACKUP_AWS_REGION == '' }}
+        run: |
+          echo "⚠️ OFFSITE BACK-UP NIET ACTIEF: stel S3-bucket, AWS OIDC-rol en AWS-regio in." \
+            >> "$GITHUB_STEP_SUMMARY"
+          echo "De GitHub-artifactkopie bestaat wel, maar is GEEN onafhankelijke back-up."
+
+      - name: Meld aan op onafhankelijke AWS S3-back-upopslag (OIDC)
+        if: ${{ vars.VUURLAND_BACKUP_S3_BUCKET != '' && vars.VUURLAND_BACKUP_AWS_ROLE_ARN != '' && vars.VUURLAND_BACKUP_AWS_REGION != '' }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.VUURLAND_BACKUP_AWS_ROLE_ARN }}
+          aws-region: ${{ vars.VUURLAND_BACKUP_AWS_REGION }}
+
+      - name: Sla back-up onafhankelijk op buiten GitHub
+        if: ${{ vars.VUURLAND_BACKUP_S3_BUCKET != '' && vars.VUURLAND_BACKUP_AWS_ROLE_ARN != '' && vars.VUURLAND_BACKUP_AWS_REGION != '' }}
+        env:
+          BUCKET: ${{ vars.VUURLAND_BACKUP_S3_BUCKET }}
+        run: |
+          set -euo pipefail
+          # De bucket moet privé zijn; aanbevolen: versioning/Object Lock,
+          # bewaarbeleid en aparte credentials uitsluitend voor schrijven.
+          aws s3 cp --no-progress --sse AES256 \
+            "backup-output/$VUURLAND_BACKUP_FILENAME" \
+            "s3://$BUCKET/vuurland-lifetime/$VUURLAND_BACKUP_FILENAME"
+          echo "✅ Onafhankelijke S3-back-up succesvol opgeslagen." >> "$GITHUB_STEP_SUMMARY"
