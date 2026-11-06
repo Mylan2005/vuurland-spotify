@@ -7,6 +7,8 @@ on:
       - 'v194_matcher_metadata.py'
       - 'v195_radio_replay.py'
       - 'v196_matcher_insights.py'
+      - 'v197_combine_matcher_reports.py'
+      - 'test_v197_combine_matcher_reports_offline.py'
       - 'test_v196_matcher_insights_offline.py'
       - 'v194_report_requeue.py'
       - 'test_v194_matcher_reports_offline.py'
@@ -46,7 +48,7 @@ jobs:
 
       - name: Syntaxis en offline veiligheid
         run: |
-          python -m py_compile vuurland_sync.py duyster_archive_fifo.py duyster_weekly_update.py v194_matcher_metadata.py v194_report_requeue.py v195_radio_replay.py v196_matcher_insights.py test_v196_matcher_insights_offline.py
+          python -m py_compile vuurland_sync.py duyster_archive_fifo.py duyster_weekly_update.py v194_matcher_metadata.py v194_report_requeue.py v195_radio_replay.py v196_matcher_insights.py test_v196_matcher_insights_offline.py v197_combine_matcher_reports.py test_v197_combine_matcher_reports_offline.py
           python test_v85_offline.py
           python test_v86_offline.py
           python test_v155_offline.py
@@ -60,6 +62,7 @@ jobs:
           python test_v194_matcher_reports_offline.py
           python test_v195_radio_replay_offline.py
           python test_v196_matcher_insights_offline.py
+          python test_v197_combine_matcher_reports_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
