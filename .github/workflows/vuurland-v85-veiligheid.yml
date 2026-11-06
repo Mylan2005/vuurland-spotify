@@ -4,6 +4,11 @@ on:
     branches: [main]
     paths:
       - 'vuurland_sync.py'
+      - 'duyster_weekly_update.py'
+      - 'duyster_archive_fifo.py'
+      - 'duyster_archief_uniek.csv'
+      - 'test_duyster_weekly_update_offline.py'
+      - '.github/workflows/duyster-archief-woensdag.yml'
       - 'test_v*_offline.py'
       - 'v*_offline_test.py'
       - 'v79_offline_test.py'
@@ -32,7 +37,7 @@ jobs:
 
       - name: Syntaxis en offline veiligheid
         run: |
-          python -m py_compile vuurland_sync.py
+          python -m py_compile vuurland_sync.py duyster_archive_fifo.py duyster_weekly_update.py
           python test_v85_offline.py
           python test_v86_offline.py
           python test_v155_offline.py
@@ -43,6 +48,7 @@ jobs:
           python test_dark_edge_filter_offline.py
           python test_v190_language_exempt_artists_offline.py
           python test_v192_duyster_fifo_offline.py
+          python test_duyster_weekly_update_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
           for v in 77 78 79 80 81 82; do
