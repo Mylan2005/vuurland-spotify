@@ -5164,8 +5164,20 @@ def find_spotify_track(
             and explicit_ellipsis_match(wanted_title_for_match, item.get("name", ""))
         )
 
+        # v194: een ECHT onafgewerkte radiofrase mag het laatste
+        # cataloguswoord missen. Alleen met exact dezelfde primaire artiest
+        # en identieke uitvoeringsversie. Bijvoorbeeld:
+        # Roberta Flack: 'The First Time Ever I Saw Your' -> '... Your Face'.
+        incomplete_last_word = (
+            primary_artist_exact
+            and wanted_version == spotify_version
+            and v194_truncated_final_word(
+                wanted_title_base_for_match, spotify_title_base
+            )
+        )
         structural_title_match = (
             truncated_title_match
+            or incomplete_last_word
             or wanted_identity == spotify_identity
             or wanted_base_identity == spotify_base_identity
             or optional_the_equivalent(
