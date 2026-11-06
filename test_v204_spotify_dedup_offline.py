@@ -17,7 +17,7 @@ sample = [
     track("C", "Song", duration=200100, isrc="GBXYZ1234567"), # NOT safe to delete
     track("D", "Song - Live", duration=200100),
     track("E", "Song", artist="Other Band", duration=200100),
-    track("F", "Song", duration=202001),  # >= 2 seconds
+    track("F", "Song", duration=210000),  # >= 2 seconds from every other sample
     track("G", "Song", duration=200001),  # no ISRC, caution
     track("H", "Song (Remix)", duration=200002),
     {"track": None}, None, {"name": "No id", "artists": [{"name":"Band"}]},
