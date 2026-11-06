@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - 'vuurland_sync.py'
+      - 'v194_matcher_metadata.py'
+      - 'v194_report_requeue.py'
+      - 'test_v194_matcher_reports_offline.py'
       - 'duyster_weekly_update.py'
       - 'duyster_archive_fifo.py'
       - 'duyster_archief_uniek.csv'
@@ -37,7 +40,7 @@ jobs:
 
       - name: Syntaxis en offline veiligheid
         run: |
-          python -m py_compile vuurland_sync.py duyster_archive_fifo.py duyster_weekly_update.py
+          python -m py_compile vuurland_sync.py duyster_archive_fifo.py duyster_weekly_update.py v194_matcher_metadata.py v194_report_requeue.py
           python test_v85_offline.py
           python test_v86_offline.py
           python test_v155_offline.py
@@ -48,6 +51,7 @@ jobs:
           python test_dark_edge_filter_offline.py
           python test_v190_language_exempt_artists_offline.py
           python test_v192_duyster_fifo_offline.py
+          python test_v194_matcher_reports_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
