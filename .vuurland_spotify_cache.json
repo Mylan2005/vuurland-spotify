@@ -218,6 +218,7 @@
       "j j cale|||magnolia"
     ],
     "big_sonic_heaven": [
+      "sonic youth|||tunic song for karen",
       "trentemøller|||your love walks alone",
       "stars|||sad robot",
       "plastic milk|||wax tongue",
@@ -316,8 +317,7 @@
       "ninon|||leave on your light",
       "dream pop|||sound of your heart",
       "pale saints|||porpoise",
-      "stereolab|||cloud land",
-      "trentemøller|||in the gloaming"
+      "stereolab|||cloud land"
     ],
     "radio_x_chilled": [
       "arlo parks|||caroline",
@@ -422,6 +422,7 @@
       "elbow|||newborn"
     ],
     "dreampop_radio": [
+      "fleetwood mac|||everywhere",
       "roo panes|||tiger striped sky",
       "grand archives|||a setting sun",
       "neko case|||people got a lotta nerve",
@@ -520,8 +521,7 @@
       "the phoenix foundation|||flock of hearts",
       "the head and the heart|||another story",
       "elbow|||the loneliness of a tower crane driver",
-      "old man canyon|||phantoms and friends",
-      "the swell season|||low rising"
+      "old man canyon|||phantoms and friends"
     ],
     "indie_select": [
       "radio 4|||quit hiding",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793991149.6341457,
-    "mellow_mix": 1793991149.636567,
-    "big_sonic_heaven": 1793991149.6385212,
-    "radio_x_chilled": 1793991149.640578,
-    "dreampop_radio": 1793991149.6424425,
-    "indie_select": 1793991149.6444428,
-    "dkfm_edge": 1793991149.6465206,
+    "vuurland": 1793991219.9505847,
+    "mellow_mix": 1793991219.953018,
+    "big_sonic_heaven": 1793991219.955001,
+    "radio_x_chilled": 1793991219.9570336,
+    "dreampop_radio": 1793991219.9589171,
+    "indie_select": 1793991219.9609241,
+    "dkfm_edge": 1793991219.9630046,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793991149.6486158
+    "dark_edge": 1793991219.9650958
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4566,6 +4566,7 @@
       "softcult|||naive",
       "softcult|||one of a million",
       "softcult|||pill to swallow",
+      "sonic youth|||tunic song for karen",
       "soundpool|||the divides of march",
       "southpacific|||depths",
       "south|||paint the silence",
@@ -9118,9 +9119,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "billie eilish|||lunch",
   "__last_radio_key_mellow_mix": "kt tunstall|||turned a light on",
-  "__last_radio_key_big_sonic_heaven": "trentemøller|||your love walks alone",
+  "__last_radio_key_big_sonic_heaven": "sonic youth|||tunic song for karen",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 5795,
+  "__v116_fifo_next_sequence": 5796,
   "__v146_spotify_budget_slot": 1793991150.1861079,
   "__vuurland_active_playlist_count": 6251,
   "__vuurland_active_volume": 1,
@@ -75986,7 +75987,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "roo panes|||tiger striped sky",
+  "__last_radio_key_dreampop_radio": "fleetwood mac|||everywhere",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -78249,14 +78250,15 @@
   "__match_v35__lisa gerrard|||our kingdom came": "spotify:track:1jukAGE2lr6t7uFxwV0x7I",
   "__match_v35__fischerspooner|||all we are": "spotify:track:2smwOeYzbHCNEQZZu1vM7M",
   "__v192_duyster_archive_shape": [
-    8557,
-    "shearwater|||rooks"
+    "v193-shuffle",
+    "f6658b167ac6570889050822d142bfca5326c8ca6fddf78c480ae601c80f7966"
   ],
-  "__v192_duyster_archive_cursor": 5,
-  "__v192_duyster_next_enqueue_at": 1793991218.0435152,
+  "__v192_duyster_archive_cursor": 1,
+  "__v192_duyster_next_enqueue_at": 1793991339.9653742,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
   "__match_v35__explosions in the sky|||postcard from 1952": "spotify:track:5oaJMmBz8PUGemh24DJU04",
-  "__match_v35__team me|||with my hands covering both of my eyes i am too scared to have a look at you now": "spotify:track:70mBUgpPjlnOQWLZYoj9Ew"
+  "__match_v35__team me|||with my hands covering both of my eyes i am too scared to have a look at you now": "spotify:track:70mBUgpPjlnOQWLZYoj9Ew",
+  "__v193_duyster_shuffle_seed": 11651212209942641930
 }
