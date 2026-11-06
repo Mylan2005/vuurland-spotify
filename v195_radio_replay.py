@@ -28,15 +28,31 @@ def release_parked_replay(cache, key, artist, title, source, *, now=None):
     # infer a missing artist/title or invent a source from a report.
     if entry.get("artist") != artist or entry.get("title") != title:
         return False
-    if now < float(entry.get("failed_at", 0) or 0) + REPLAY_INTERVAL_SECONDS:
+    # Never replay an incomplete/invalid historical failure record as if it
+    # had been parked decades ago. Be conservative on corrupt timestamps.
+    def valid_timestamp(value):
+        try:
+            value = float(value)
+        except (TypeError, ValueError, OverflowError):
+            return None
+        return value if 0 < value <= now else None
+
+    failed_at = valid_timestamp(entry.get("failed_at"))
+    if failed_at is None or now - failed_at < REPLAY_INTERVAL_SECONDS:
         return False
     last_by_key = cache.get(_LAST_BY_KEY, {})
     if not isinstance(last_by_key, dict):
         return False
-    if now < float(last_by_key.get(key, 0) or 0) + REPLAY_INTERVAL_SECONDS:
-        return False
-    if now < float(cache.get(_LAST_GLOBAL, 0) or 0) + GLOBAL_INTERVAL_SECONDS:
-        return False
+    last = last_by_key.get(key)
+    if last is not None:
+        last = valid_timestamp(last)
+        if last is None or now - last < REPLAY_INTERVAL_SECONDS:
+            return False
+    last_global = cache.get(_LAST_GLOBAL)
+    if last_global is not None:
+        last_global = valid_timestamp(last_global)
+        if last_global is None or now - last_global < GLOBAL_INTERVAL_SECONDS:
+            return False
 
     # Release ONLY this key. No broad reset and no changes to queue order.
     parked.pop(key, None)
