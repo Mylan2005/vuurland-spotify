@@ -24,6 +24,7 @@ from v194_matcher_metadata import (
 )
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 from v194_report_requeue import release_report_retries as v194_release_reports
+from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 
 # =========================
 # INSTELLINGEN
@@ -6386,6 +6387,19 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
                     reason = "al eerder verwerkt (seen-geheugen)"
                 elif key in playlist_keys or radio_matches_playlist(artist, title, playlist_keys):
                     reason = "staat al in Spotify-playlist (cache)"
+                elif key in cache.get("__v51_radio_unmatched", {}):
+                    # v195: uitsluitend een ECHT nieuw waargenomen radio-play,
+                    # met bestaande filters en FIFO-/playlist-dedupe al toegepast.
+                    # Geparkeerde missers krijgen hoogstens 1 poging per 30 dagen,
+                    # en globaal maximaal 1 nieuwe release per 24 uur.
+                    if v195_release_parked_replay(cache, key, artist, title, sid):
+                        live_queue.append({"artist": artist, "title": title, "source": sid,
+                                           "_v34_search_variant": 0})
+                        known_queue.add(key)
+                        accepted += 1
+                        reason = f"v195 opnieuw uitgezonden: veilige FIFO-herkansing (positie {len(live_queue)})"
+                    else:
+                        reason = "geparkeerd: v195-herkansing nog niet toegestaan"
                 elif cache.get(f"__not_found_v{matching_version}__" + key) is not None:
                     reason = "bestaande niet-gevondenregistratie"
                 else:
