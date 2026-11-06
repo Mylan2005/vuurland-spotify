@@ -2393,10 +2393,21 @@ def v82_match_diagnosis(items, artist, title):
         text = unicodedata.normalize('NFKD', v80_unicode_search_text(text).casefold())
         return ''.join(ch for ch in text if ch.isalnum() and not unicodedata.combining(ch))
     wanted_artist, wanted_title = clean(artist), clean(title)
-    artist_hits = [x for x in playable if wanted_artist in
-                   [clean(a.get('name', '')) for a in x.get('artists', []) if isinstance(a, dict)]]
+    # v201: een door de bestaande matcher gekende VOLLEDIGE artiestcredit
+    # (bv. 'Decemberists, The') mag de rapportdiagnose niet misleiden.
+    wanted_credit = v194_artist_join_key(v194_canonical_artist(artist))
+    artist_hits = [
+        x for x in playable if any(
+            (wanted_artist and clean(a.get('name', '')) == wanted_artist)
+            or (wanted_credit and v194_artist_join_key(
+                v194_canonical_artist(a.get('name', ''))) == wanted_credit)
+            for a in x.get('artists', []) if isinstance(a, dict)
+        )
+    ]
     if not artist_hits:
         return 'artiestcredits_of_rangschikking'
+    if not wanted_title:
+        return 'onbruikbare_titelmetadata'
     if not any(clean(x.get('name', '')) == wanted_title for x in artist_hits):
         return 'titel_of_versie_verschilt'
     return 'veiligheidscontrole_of_ambiguiteit'
@@ -3857,6 +3868,9 @@ def find_spotify_track(
     def optional_the_equivalent(left, right):
         left_tokens = title_tokens_without_optional_the(left)
         right_tokens = title_tokens_without_optional_the(right)
+        # v201: lege/alleen-interpunctie titels zijn nooit een identiteit.
+        if not left_tokens or not right_tokens:
+            return False
         if left_tokens == right_tokens:
             return True
 
@@ -5194,8 +5208,9 @@ def find_spotify_track(
             verified_catalog_variant
             or truncated_title_match
             or incomplete_last_word
-            or wanted_identity == spotify_identity
-            or wanted_base_identity == spotify_base_identity
+            or (bool(wanted_identity) and wanted_identity == spotify_identity)
+            or (bool(wanted_base_identity)
+                and wanted_base_identity == spotify_base_identity)
             or optional_the_equivalent(
                 wanted_title_base_for_match,
                 spotify_title_base
@@ -5251,9 +5266,12 @@ def find_spotify_track(
         # v101: Britse/Amerikaanse schrijfwijze + eindinterpunctie.
         # Geen substring- of fuzzy-ontheffing: volledige kerntitel moet gelijk
         # zijn EN de hoofdartiest moet al exact gevalideerd zijn.
-        if (primary_artist_exact and
-                v101_safe_title_spelling(wanted_title_base_for_match)
-                == v101_safe_title_spelling(spotify_title_base)):
+        # v201: alleen gelijkwaardige, NIET-LEGE woorden zijn een match.
+        # Anders zouden '??' en '!!' na het strippen beide leeg zijn.
+        v201_spelling_left = v101_safe_title_spelling(wanted_title_base_for_match)
+        v201_spelling_right = v101_safe_title_spelling(spotify_title_base)
+        if (primary_artist_exact and v201_spelling_left
+                and v201_spelling_left == v201_spelling_right):
             structural_title_match = True
 
         # v51: klassieke catalogi draaien werknaam en deel om en noemen
