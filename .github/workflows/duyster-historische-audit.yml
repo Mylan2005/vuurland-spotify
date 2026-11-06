@@ -1,0 +1,97 @@
+name: Duyster volledige historische afleveringscontrole
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/duyster-historische-audit.yml'
+      - 'duyster_historische_audit.py'
+  schedule:
+    - cron: '23 2 * * *'
+
+permissions:
+  contents: write
+
+# Houd dezelfde exclusieve archiefslot als de wekelijkse import.
+concurrency:
+  group: duyster-weekly-archive
+  cancel-in-progress: false
+
+jobs:
+  alle-afleveringen-vergelijken:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Bronparser-afhankelijkheden
+        run: python -m pip install requests beautifulsoup4
+
+      - name: Vergelijk laatste afleveringen en historische batch
+        id: audit
+        shell: bash
+        run: |
+          set +e
+          python -u duyster_historische_audit.py --batch 60 --pause 1.2
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Bewaar herstelde nummers en exacte voortgang
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- duyster_archief_uniek.csv duyster_historische_audit_state.json
+          if git diff --cached --quiet; then
+            echo "Geen nieuwe brongegevens of voortgang."
+            exit 0
+          fi
+          git commit -m "Verify Duyster episode sources and recover missing music"
+          # Sync commits intussen zijn state naar main; nooit force push.
+          for attempt in 1 2 3 4 5 6 7 8; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              echo "✅ Duyster bronverificatie veilig gepubliceerd."
+              exit 0
+            fi
+            sleep 4
+          done
+          echo "❌ Duyster audit-state niet veilig gepusht; stop en probeer later."
+          exit 1
+
+      - name: Maak voortgang zichtbaar
+        if: always()
+        shell: bash
+        run: |
+          echo "## Duyster historische volledigheidscontrole" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f duyster_historische_audit_state.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          a=json.load(open("duyster_historische_audit_state.json",encoding="utf-8"))
+          print("Afleveringen bron-gecontroleerd (huidige audit):",len(a.get("verified_episodes",{})))
+          print("Historische cursor:",a.get("next_pid"))
+          print("Ontbrekende nummers hersteld (deze audit):",a.get("total_recovered"))
+          print("Volledig nagekeken:", "JA" if a.get("complete") else "NEE")
+          if a.get("last_error"):
+              print("Laatste blokkering:",a["last_error"])
+          PY
+          else
+            echo "Nog geen audit-voortgang geproduceerd." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Onvolledige of mislukte broncontrole is geen succes
+        if: always()
+        env:
+          AUDIT_CODE: ${{ steps.audit.outputs.exit_code }}
+        run: |
+          if [ "$AUDIT_CODE" != "0" ]; then
+            echo "❌ Duysterbron niet betrouwbaar gecontroleerd; cursor blijft bewaard."
+            exit 1
+          fi
