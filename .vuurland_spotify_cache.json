@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793978663.5547833,
+  "__v150_next_spotify_round_at": 1793978788.6003735,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -524,6 +524,7 @@
       "ryan adams|||wonderwall oasis cover"
     ],
     "indie_select": [
+      "slow show|||strangers now",
       "new order|||12-new order-vanishing point",
       "october drift|||blame the young",
       "the national|||walk it back",
@@ -622,8 +623,7 @@
       "the slow show|||sharp scratch",
       "death cab for cutie|||you've haunted me all my life",
       "smith & burrows|||the christmas song ft agnes obel",
-      "black box recorder|||the art of driving",
-      "the horrors|||more than life"
+      "black box recorder|||the art of driving"
     ],
     "dkfm_edge": [
       "ozurie|||pine",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793978654.743914,
-    "mellow_mix": 1793978654.7465425,
-    "big_sonic_heaven": 1793978654.7486978,
-    "radio_x_chilled": 1793978654.750924,
-    "dreampop_radio": 1793978654.7530503,
-    "indie_select": 1793978654.7552948,
-    "dkfm_edge": 1793978654.7575538,
+    "vuurland": 1793978668.564866,
+    "mellow_mix": 1793978668.5673974,
+    "big_sonic_heaven": 1793978668.5695312,
+    "radio_x_chilled": 1793978668.5716858,
+    "dreampop_radio": 1793978668.5737467,
+    "indie_select": 1793978668.576176,
+    "dkfm_edge": 1793978668.578397,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793978654.7597923
+    "dark_edge": 1793978668.5806103
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -8644,6 +8644,12 @@
       "title": "Holy War - Birkii",
       "source": "indie_select",
       "failed_at": 1793976178
+    },
+    "aerial love feed|||someone": {
+      "artist": "Aerial Love Feed",
+      "title": "Someone",
+      "source": "big_sonic_heaven",
+      "failed_at": 1793978670
     }
   },
   "__v51_radio_unmatched": {
@@ -8897,7 +8903,7 @@
   "__last_radio_key_big_sonic_heaven": "red house painters|||sundays & holidays",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 5590,
-  "__v146_spotify_budget_slot": 1793978544.3940234,
+  "__v146_spotify_budget_slot": 1793978669.244747,
   "__vuurland_active_playlist_count": 6163,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -53284,7 +53290,7 @@
     "t h c with tek hed|||1963": 3,
     "anna domino|||rhythm": 3,
     "birkii|||holy war - birkii": 3,
-    "aerial love feed|||someone": 2,
+    "aerial love feed|||someone": 3,
     "kate de rosset|||in the": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -53440,7 +53446,8 @@
     "gorillaz|||crystalised the xx cover": 1,
     "t h c with tek hed|||1963": 1,
     "anna domino|||rhythm": 1,
-    "birkii|||holy war - birkii": 1
+    "birkii|||holy war - birkii": 1,
+    "aerial love feed|||someone": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -75167,7 +75174,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "new order|||12-new order-vanishing point",
+  "__last_radio_key_indie_select": "slow show|||strangers now",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -77221,5 +77228,6 @@
   "__match_v35__travis|||follow the light": "spotify:track:5ot8tiAMaFCoPI7UjrZY4s",
   "__match_v35__cocteau twins|||pur": "spotify:track:6JA2PqUMfcgwz3OJNnW98P",
   "__match_v35__oberhofer|||landline": "spotify:track:0zh2fOAl8j0QWWtSxWVt9L",
-  "__match_v35__michael hedges|||rickover's dream": "spotify:track:3rbanyAxECNBbFFi2IM0S2"
+  "__match_v35__michael hedges|||rickover's dream": "spotify:track:3rbanyAxECNBbFFi2IM0S2",
+  "__not_found_v35__aerial love feed|||someone": 1793978670
 }
