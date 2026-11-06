@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793961307.3844266,
+  "__v150_next_spotify_round_at": 1793961429.4520462,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "noir desir|||le vent nous portera",
       "hozier|||cherry wine",
       "boy & bear|||southern sun",
       "james blake|||godspeed",
@@ -208,6 +209,7 @@
       "ryan adams|||wonderwall oasis cover"
     ],
     "indie_select": [
+      "stars|||wasted daylight",
       "nada surf|||blonde on blonde",
       "the members|||sound of the suburbs",
       "the canon logic|||avenue of criminals album version",
@@ -423,17 +425,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793961297.3337312,
-    "mellow_mix": 1793961297.334358,
-    "big_sonic_heaven": 1793961297.3348246,
-    "radio_x_chilled": 1793961297.335191,
-    "dreampop_radio": 1793961297.3355453,
-    "indie_select": 1793961297.3359962,
-    "dkfm_edge": 1793961297.3363461,
+    "vuurland": 1793961309.3261216,
+    "mellow_mix": 1793961309.3267388,
+    "big_sonic_heaven": 1793961309.3272192,
+    "radio_x_chilled": 1793961309.327559,
+    "dreampop_radio": 1793961309.3279324,
+    "indie_select": 1793961309.437644,
+    "dkfm_edge": 1793961309.4380512,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793961297.3366964
+    "dark_edge": 1793961309.4384189
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6143,6 +6145,7 @@
       "stars|||the light",
       "stars|||this changes everything",
       "stars|||turn it up",
+      "stars|||wasted daylight",
       "stars|||we called it love",
       "stereo mc's|||connected",
       "stereo mcs|||boy feat jamie cullum album",
@@ -7786,6 +7789,12 @@
       "title": "Lali Puna",
       "source": "indie_select",
       "failed_at": 1793958498
+    },
+    "the futureheads|||with every heartbeat": {
+      "artist": "The Futureheads",
+      "title": "With Every Heartbeat",
+      "source": "indie_select",
+      "failed_at": 1793961310
     }
   },
   "__v51_radio_unmatched": {
@@ -8034,12 +8043,12 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "hozier|||cherry wine",
+  "__last_radio_key_vuurland": "noir desir|||le vent nous portera",
   "__last_radio_key_mellow_mix": "eddie vedder|||rise",
   "__last_radio_key_big_sonic_heaven": "trentemøller|||in the gloaming",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 5320,
-  "__v146_spotify_budget_slot": 1793961187.7742372,
+  "__v116_fifo_next_sequence": 5321,
+  "__v146_spotify_budget_slot": 1793961309.835887,
   "__vuurland_active_playlist_count": 6067,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -52022,7 +52031,7 @@
     "shout out louds|||10 man on the moon": 3,
     "taj mahal|||african herbsman": 3,
     "together in electric dreams|||lali puna": 3,
-    "the futureheads|||with every heartbeat": 2
+    "the futureheads|||with every heartbeat": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -52164,7 +52173,8 @@
     "anni rossi|||inbetween days": 1,
     "shout out louds|||10 man on the moon": 1,
     "taj mahal|||african herbsman": 1,
-    "together in electric dreams|||lali puna": 1
+    "together in electric dreams|||lali puna": 1,
+    "the futureheads|||with every heartbeat": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -73501,7 +73511,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "nada surf|||blonde on blonde",
+  "__last_radio_key_indie_select": "stars|||wasted daylight",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -75444,5 +75454,6 @@
   "__match_v35__r e m|||try not to breathe": "spotify:track:0bPg0OA0ep90qVCYfymwO6",
   "__match_v35__the leisure society|||cars gary numan cover": "spotify:track:1HNI39bclLcyTdri6jmLGQ",
   "__match_v35__the byrds|||wasn't born to follow": "spotify:track:3Lk77QOBVywNAVSqOPcuw2",
-  "__match_v35__ahi|||human kind": "spotify:track:0y3eDdEgiTjzBloXyDhaZD"
+  "__match_v35__ahi|||human kind": "spotify:track:0y3eDdEgiTjzBloXyDhaZD",
+  "__not_found_v35__the futureheads|||with every heartbeat": 1793961310
 }
