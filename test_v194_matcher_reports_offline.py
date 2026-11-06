@@ -164,7 +164,7 @@ for fragment in (
     'v194_release_reports(',
     '"santogold": ["Santigold"]',
     '"dog is dead": ["D.I.D"]',
-    '"eob": ["Ed O\\'Brien"]',
+    "\"eob\": [\"Ed O'Brien\"]",
     'SPOTIFY_SEARCH_HTTP_LIMIT = 1',
     'max_additions_per_round = 1',
     'AUTOMATIC_PLAYLIST_INVENTORY_ENABLED = False',
