@@ -3,9 +3,9 @@
 Er is GEEN lijst meer met toegelaten artiesten: nieuwe indie-acts worden
 niet afgewezen omdat ze onbekend zijn. Popartiesten zijn op zichzelf
 toegestaan: alleen expliciet ongewenste artiesten, dance-/EDM-acts,
-punk/metal en herkenbare anderstalige titels worden geweerd.
-Nederlands en Engels mogen. Genre en gezongen taal zijn met alleen
-RadioBox-metadata niet waterdicht vast te stellen.
+punk/metal en herkenbare ongewenste taal/titels worden geweerd.
+Nederlands, Engels en Spaans mogen (bv. sfeervolle indie zoals Blanco White).
+Genre en gezongen taal zijn met alleen RadioBox-metadata niet waterdicht vast te stellen.
 """
 
 import re
@@ -64,9 +64,8 @@ _NON_ENGLISH_PHRASES = (
     # Frans
     r"\b(?:je|tu|nous|vous)\s+(?:suis|veux|sais|sommes|aime|t\s+aime|es|etes)\b",
     r"\b(?:c\s+est|j\s+ai|l\s+amour|mon\s+coeur|sans\s+toi|pour\s+toi|avec\s+toi|au\s+revoir)\b",
-    # Spaans
-    r"\b(?:te\s+quiero|no\s+te|yo\s+(?:soy|quiero|tengo)|mi\s+corazon|sin\s+ti|la\s+vida|el\s+amor|me\s+gusta|buenas\s+noches)\b",
-    r"\b(?:selva\s+y\s+mar|para\s+ti|por\s+que)\b",
+    # Spaans wordt niet meer geweerd: o.a. Blanco White, Spaanse indie/folk.
+    # Duitse zang blijft wél uitgesloten door de bestaande beschermingschecks.
     # Italiaans/Portugees
     r"\b(?:ti\s+(?:amo|voglio)|io\s+(?:sono|voglio)|senza\s+te|per\s+sempre|il\s+mio|la\s+mia|eu\s+(?:sou|quero)|nao\s+(?:sei|quero)|meu\s+amor|voce\s+e)\b",
 )
@@ -81,8 +80,8 @@ def dark_edge_reject_reason(artist, title):
     """None = door de voorlopige bronfilter; anders de afwijsreden.
 
     De bestaande globale matcher, taal-, regio- en duplicaatchecks blijven
-    daarnaast verplicht. Nederlands én Engels zijn toegestaan. De toegelaten
-    track is niet bewezen Engels/Nederlands gezongen; zulke metadata ontbreken.
+    daarnaast verplicht. Nederlands, Engels én Spaans zijn toegestaan.
+    De werkelijk gezongen taal blijkt niet betrouwbaar uit RadioBox-metadata.
     """
     a = _key(artist)
     raw = str(title or "").strip()
