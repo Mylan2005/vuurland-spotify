@@ -6,6 +6,9 @@ on:
       - 'vuurland_sync.py'
       - 'v194_matcher_metadata.py'
       - 'v200_verified_catalog_titles.py'
+      - 'v202_auto_matcher_triage.py'
+      - 'test_v202_auto_matcher_triage_offline.py'
+      - '.github/workflows/vuurland-v202-auto-matcher.yml'
       - 'test_v200_verified_catalog_titles_offline.py'
       - 'test_v201_matcher_safety_offline.py'
       - 'v195_radio_replay.py'
@@ -72,6 +75,7 @@ jobs:
           python test_v199_exact_radio_title_offline.py
           python test_v200_verified_catalog_titles_offline.py
           python test_v201_matcher_safety_offline.py
+          python test_v202_auto_matcher_triage_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v159_playlist_rebuild_offline.py
           python test_v160_requeue_offline.py
