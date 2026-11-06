@@ -1,0 +1,24 @@
+name: Vuurland v196 matcherinzichten (alleen lezen)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-matcherinzichten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Maak historische matcherinzichten
+        run: python v196_matcher_insights.py --data-dir . --out-dir matcher_inzichten
+      - name: Downloadbaar rapport
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v196-matcherinzichten
+          path: |
+            matcher_inzichten/vuurland_v196_matcherinzichten.json
+            matcher_inzichten/vuurland_v196_matcherinzichten.md
+          retention-days: 30
