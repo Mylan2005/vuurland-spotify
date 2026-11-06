@@ -7384,9 +7384,10 @@ def sync():
     else:
         print("ℹ️ Geen nieuwe, nog niet gescande RadioBox-titels.")
 
-    # v192: één Duyster-archiefnummer per 120 seconden (hoogstens) ACHTER
+    # v193: één Duyster-archiefnummer per 120 seconden (hoogstens) ACHTER
     # de bestaande live radio-items. Geen Spotify Search of playlist-scan.
-    # De aflevering 833 krijgt eerst een kans, daarna de rest van het archief.
+    # Willekeurige, herstartbestendige selectie uit alle archiefafleveringen,
+    # inclusief aflevering 833. De bestaande FIFO blijft strikt intact.
     def _duyster_song_allowed(artist, title):
         if (is_interview_fragment(title)
                 or v191_is_german_vocal_risk(artist, title)
