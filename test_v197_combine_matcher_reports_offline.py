@@ -41,7 +41,7 @@ with tempfile.TemporaryDirectory() as tmp:
     assert bjork["rapporten"] == 2 and bjork["meldingen"] == 2
     assert "Wrong live" in bjork["afgewezen_kandidaten"]
     assert "Geparkeerd" in bjork["statussen"]
-    assert "niet" not in markdown(data).lower().split("geen spotify-queries")[0] or True
+    assert "geen automatische matches" in markdown(data).lower()
     assert any(x["titel"] == "Song (Live)" for x in data["nummers"])
     assert any(x["titel"] == "Song" for x in data["nummers"])
     assert all("spotify_uri" not in x for x in data["nummers"])
