@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1793963344.2136312,
+  "__v150_next_spotify_round_at": 1793963468.9909503,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -608,17 +608,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1793963335.1956615,
-    "mellow_mix": 1793963335.196898,
-    "big_sonic_heaven": 1793963335.1978853,
-    "radio_x_chilled": 1793963335.1987681,
-    "dreampop_radio": 1793963335.1996875,
-    "indie_select": 1793963335.2006981,
-    "dkfm_edge": 1793963335.564156,
+    "vuurland": 1793963348.961056,
+    "mellow_mix": 1793963348.962301,
+    "big_sonic_heaven": 1793963348.9632928,
+    "radio_x_chilled": 1793963348.964187,
+    "dreampop_radio": 1793963348.9651175,
+    "indie_select": 1793963348.9661825,
+    "dkfm_edge": 1793963348.967194,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1793963335.5651448
+    "dark_edge": 1793963348.9681585
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -8017,6 +8017,12 @@
       "title": "Badlands (Live from Sirius XM)",
       "source": "indie_select",
       "failed_at": 1793962976
+    },
+    "the antlers|||vcr the xx cover": {
+      "artist": "The Antlers",
+      "title": "VCR (The xx cover)",
+      "source": "indie_select",
+      "failed_at": 1793963350
     }
   },
   "__v51_radio_unmatched": {
@@ -8270,7 +8276,7 @@
   "__last_radio_key_big_sonic_heaven": "cocteau twins|||athol-brose",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 5349,
-  "__v146_spotify_budget_slot": 1793963225.1189735,
+  "__v146_spotify_budget_slot": 1793963349.6639206,
   "__vuurland_active_playlist_count": 6077,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -52296,7 +52302,7 @@
     "together in electric dreams|||lali puna": 3,
     "the futureheads|||with every heartbeat": 3,
     "the joy formidable|||badlands live from sirius xm": 3,
-    "the antlers|||vcr the xx cover": 2
+    "the antlers|||vcr the xx cover": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -52440,7 +52446,8 @@
     "taj mahal|||african herbsman": 1,
     "together in electric dreams|||lali puna": 1,
     "the futureheads|||with every heartbeat": 1,
-    "the joy formidable|||badlands live from sirius xm": 1
+    "the joy formidable|||badlands live from sirius xm": 1,
+    "the antlers|||vcr the xx cover": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -75773,5 +75780,6 @@
   "__match_v35__marlon williams|||dark child": "spotify:track:7wGqKldCrQev6HEtUxilME",
   "__not_found_v35__the joy formidable|||badlands live from sirius xm": 1793962976,
   "__match_v35__brett dennen|||the one who loves you the most": "spotify:track:2HY6R29JCYhq7mhSH3qIGy",
-  "__match_v35__daniel norgren|||i waited for you": "spotify:track:2wXD5gtf36FXnrbwnq9aYf"
+  "__match_v35__daniel norgren|||i waited for you": "spotify:track:2wXD5gtf36FXnrbwnq9aYf",
+  "__not_found_v35__the antlers|||vcr the xx cover": 1793963350
 }
