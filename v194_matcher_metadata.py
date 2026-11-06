@@ -43,7 +43,7 @@ def canonical_title(artist, title):
 
     # Em/en dashes are unambiguous separators even without spaces; a normal
     # hyphen only counts with surrounding whitespace.
-    separators = list(re.finditer(r"\\s+[-–—]\\s+|\\s*[–—]\\s*", raw))
+    separators = list(re.finditer(r"\s+[-–—]\s+|\s*[–—]\s*", raw))
     for match in reversed(separators):
         prefix = raw[:match.start()].strip()
         suffix = raw[match.end():].strip()
