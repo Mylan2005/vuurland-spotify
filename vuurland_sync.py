@@ -1448,8 +1448,8 @@ def dark_edge_track_allowed(artist, title):
 
 def get_dark_edge_tracks():
     # Pop mag; geen vaste artiestentoelatingslijst. Alleen gerichte
-    # dance/EDM- en punk/metal-uitsluitingen, Dua Lipa en andere talen
-    # dan NL/EN blokkeren waar de titel voldoende bewijs biedt.
+    # dance/EDM- en punk/metal-uitsluitingen, Dua Lipa en ongewenste
+    # taal (o.a. Duits en bevestigd Roemeens). Spaanse indie mag door.
     # Geen extra Spotify-/AI-API-calls.
     # De zenderjingle blijft ook uit de RadioBox-resultaten.
     raw = get_radiobox_tracks(
