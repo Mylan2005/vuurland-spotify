@@ -15,6 +15,13 @@ import webbrowser
 import requests
 from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
+from v194_matcher_metadata import (
+    canonical_artist as v194_canonical_artist,
+    artist_join_key as v194_artist_join_key,
+    canonical_title as v194_canonical_title,
+    normalize_explicit_version as v194_explicit_version,
+    clearly_truncated_final_word as v194_truncated_final_word,
+)
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 
 # =========================
@@ -72,6 +79,10 @@ ARTIST_ALIASES = {
     "the pretenders": [
         "Pretenders",
     ],
+    # Echte, publiek bevestigde naamswijzigingen. Geen algemene fuzzy alias.
+    "santogold": ["Santigold"],
+    "dog is dead": ["D.I.D"],
+    "eob": ["Ed O'Brien"],
 
     "novastar piet goddaer": [
         "Novastar",
@@ -2426,6 +2437,19 @@ def find_spotify_track(
     if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
         print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
         return None
+
+    # v194: generieke en controleerbare RadioBox-metadata-correcties.
+    # De ORIGINELE item-/cache-key en bron blijven onveranderd. De schone
+    # artiest/titel dienen uitsluitend voor Spotify Search en kandidaatmatch.
+    _v194_corrected_artist = v194_canonical_artist(artist)
+    _v194_corrected_title = v194_explicit_version(
+        v194_canonical_title(artist, title)
+    )
+    if (_v194_corrected_artist, _v194_corrected_title) != (artist, title):
+        print(f"📝 v194: duidelijke metadata opgeschoond: "
+              f"{artist} — {title} → {_v194_corrected_artist} — {_v194_corrected_title}")
+        artist, title = _v194_corrected_artist, _v194_corrected_title
+
     # v147: uitsluitend de door de gebruiker bevestigde catalogusschrijfwijze.
     # De originele radio-key blijft behouden voor de v81 locator. Daarna
     # blijven Spotify artiest/titel/versie en alle overige guards verplicht.
@@ -2895,7 +2919,7 @@ def find_spotify_track(
         value = str(value or "").lower().strip()
         # Spotify kan een officiële bandcredit als "&" of "and" tonen.
         # Beide kanten van de gecontroleerde alias worden identiek behandeld.
-        value = re.sub(r"\s*&\s*", " and ", value)
+        value = re.sub(r"\s*(?:&|\+)\s*", " and ", value)
         value = re.sub(r"[^a-z0-9]+", " ", value)
         return " ".join(value.split())
 
@@ -4467,6 +4491,13 @@ def find_spotify_track(
             primary_wanted_artist
             == spotify_primary_compact
         )
+        # v194: & / + / 'and' zijn identieke expliciete verbindingswoorden
+        # tussen dezelfde VOLLEDIGE artiestnamen; nooit een prefix/substring.
+        if (not primary_artist_exact and
+                v194_artist_join_key(wanted_artists[0]) ==
+                v194_artist_join_key(spotify_primary_artist)):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
         # v52.5: intern koppelteken versus spatie in DEZELFDE volledige
         # hoofdartiest is een schrijfvariant, geen andere artiest.
         # Bijvoorbeeld "Warrington Runcorn" en "Warrington-Runcorn".
