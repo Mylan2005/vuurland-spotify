@@ -5,12 +5,13 @@ Geen netwerk, Spotify, statewijzigingen in de repository of externe pakketten.
 import ast
 import csv
 import os
+import random
 import tempfile
 from pathlib import Path
 from duyster_archive_fifo import (
     enqueue_one, DUYSTER_ENQUEUE_INTERVAL_SECONDS,
     DUYSTER_MAX_PENDING, DUYSTER_MAX_TOTAL_QUEUE,
-    _CURSOR, _NEXT,
+    _CURSOR, _NEXT, _SEED, _load_candidates,
 )
 from dark_edge_filter import dark_edge_reject_reason
 
@@ -56,43 +57,77 @@ with tempfile.TemporaryDirectory() as tmp:
         ("Ólafur Arnalds", "Ljósið", 401, 2),
     ], ("artist", "title", "first_seen_pid", "seen_in"))
 
-    cache = {"__playlist_keys": []}
+    seed = 77  # Vast zaad maakt de test reproduceerbaar.
+    cache = {"__playlist_keys": [], _SEED: seed}
     queue = [{"artist": "Editors", "title": "No Sound But the Wind", "source": "vuurland", "_v116_fifo_seq": 99}]
     original = dict(queue[0])
     base = 1000
     kwargs = dict(data_dir=tmp, key_func=key, allowed=allowed,
                   in_playlist=no_playlist_match)
-    first = enqueue_one(cache, queue, set(), now=base, **kwargs)
-    assert first == {"artist": "Sigur Rós", "title": "Von", "source": "duyster"}, first
-    assert queue[0] == original
-    assert len(queue) == 2
-    assert cache[_NEXT] == base + 120
-    assert enqueue_one(cache, queue, set(), now=base + 119, **kwargs) is None
-    assert len(queue) == 2
-    second = enqueue_one(cache, queue, set(), now=base + 120, **kwargs)
-    assert second and second["artist"] == "Mogwai"
-    assert queue[0] == original and len(queue) == 3
-    third = enqueue_one(cache, queue, set(), now=base + 240, **kwargs)
-    assert third and third["artist"] == "Blanco White"
-    # De twee expliciet geweerde nummers mogen nooit door de achterdeur.
-    fourth = enqueue_one(cache, queue, set(), now=base + 360, **kwargs)
-    assert fourth and fourth["artist"] == "Cocteau Twins", fourth
-    fifth = enqueue_one(cache, queue, set(), now=base + 480, **kwargs)
-    assert fifth and fifth["artist"] == "Ólafur Arnalds"
+
+    all_candidates = _load_candidates(tmp, key)
+    all_candidates.sort(key=lambda entry: entry[2])
+    random.Random(seed).shuffle(all_candidates)
+    expected = [(a, t) for a, t, _ in all_candidates if allowed(a, t)]
+    assert len(expected) == 5, expected
+    # Aflevering 833 levert 3 geschikte nummers en oudere afleveringen 2.
+    assert {a for a, _ in expected} == {
+        "Sigur Rós", "Mogwai", "Blanco White", "Cocteau Twins",
+        "Ólafur Arnalds",
+    }
+
+    actual = []
+    for idx in range(len(expected)):
+        now = base + idx * 120
+        if idx == 1:
+            assert enqueue_one(cache, queue, set(), now=now-1, **kwargs) is None
+        result = enqueue_one(cache, queue, set(), now=now, **kwargs)
+        assert result is not None
+        actual.append((result["artist"], result["title"]))
+        assert actual == expected[:idx + 1], (actual, expected)
+        assert queue[0] == original
+        assert cache[_NEXT] == now + 120
+        assert cache[_SEED] == seed
     assert enqueue_one(cache, queue, set(), now=base + 600, **kwargs) is None
     assert len(queue) == 6
     assert all(x.get("source") == "duyster" for x in queue[1:])
     assert len({key(x["artist"], x["title"]) for x in queue}) == len(queue)
+    assert all(x["artist"] not in ("Tomte", "Avicii") for x in queue)
 
-    # Na een restart blijft de 120s-rem behouden, geen dubbele injectie.
-    assert enqueue_one(cache, queue, set(), now=base + 601, **kwargs) is None
+    # Na een restart blijft de 120s-rem en de volledige shuffle-cursor bewaard.
+    restored_cache = dict(cache)
+    assert enqueue_one(restored_cache, queue, set(), now=base + 601, **kwargs) is None
+    assert restored_cache[_SEED] == seed
+    assert restored_cache[_CURSOR] == cache[_CURSOR]
 
-    # Bestaande playlist, seen en queued items worden niet opnieuw ingepland.
-    cache2 = {"__playlist_keys": [key("Sigur Rós", "Von")]}
+    # Eerder gelikete, geziene en al gequeue-de nummers overslaan.
+    cache2 = {"__playlist_keys": [key("Sigur Rós", "Von")], _SEED: seed}
     queue2 = [{"artist": "Mogwai", "title": "Remurdered", "source": "big_sonic_heaven"}]
-    other = enqueue_one(cache2, queue2, {key("Blanco White", "Mano a Mano")},
-                        now=base, **kwargs)
-    assert other and other["artist"] == "Cocteau Twins", other
+    seen2 = {key("Blanco White", "Mano a Mano")}
+    remaining = [(a, t) for a, t in expected if
+                 key(a, t) not in seen2 and
+                 key(a, t) not in cache2["__playlist_keys"] and
+                 not (a == "Mogwai" and t == "Remurdered")]
+    other = enqueue_one(cache2, queue2, seen2, now=base, **kwargs)
+    assert other and (other["artist"], other["title"]) == remaining[0], other
+
+    # Nieuwe uitzending: fingerprint wijzigt, cursor start opnieuw, maar reeds
+    # queue-de artiesten worden niet opnieuw aangeboden.
+    write_csv(tmp, "duyster_aflevering_833.csv", [
+        ("Sigur Rós", "Von", "833", "2026-10-26"),
+        ("Mogwai", "Remurdered", "833", "2026-10-26"),
+        ("Blanco White", "Mano a Mano", "833", "2026-10-26"),
+        ("Tomte", "Ich liebe dich", "833", "2026-10-26"),
+        ("Avicii", "Levels", "833", "2026-10-26"),
+        ("Midwife", "God Is a Cop", "834", "2026-11-02"),
+    ], ("artist", "title", "pid", "episode_date"))
+    new = enqueue_one(cache, queue, set(), now=base + 720, **kwargs)
+    assert new and new["artist"] == "Midwife", new
+
+    # Een oude v192 volgcursor wordt bij de overstap eenmalig gewist.
+    old_cache = {"__playlist_keys": [], _CURSOR: 3}
+    item = enqueue_one(old_cache, [], set(), now=base, **kwargs)
+    assert item and old_cache[_SEED] >= 0 and old_cache[_CURSOR] > 0
 
     # FIFO remmen als er al veel Duyster-nummers wachten.
     full_duyster = [{"artist": "X", "title": str(i), "source": "duyster"}
@@ -130,5 +165,6 @@ assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 assert "max_additions_per_round = 1" in source
 assert DUYSTER_ENQUEUE_INTERVAL_SECONDS == 120
 
-print("✅ Duyster-aflevering 833: 25 tracks, 8557 unieke archiefnummers; 120s-persistent FIFO.")
-print("✅ Geen duplicaten, Duitse zang, EDM, oude queueverlies of extra Spotify-API-calls.")
+print("✅ Duyster-archief: blijvende shuffle tussen afleveringen, 120s-tempo en FIFO.")
+print("✅ Aflevering 833 blijft aanwezig: 25 nummers, 8557 unieke archiefnummers.")
+print("✅ Geen duplicaten, Duitse zang, EDM, queueverlies of extra Spotify-API-calls.")
