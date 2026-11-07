@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794025205.1168761,
+  "__v150_next_spotify_round_at": 1794025332.2920978,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "polica|||dark star",
       "nick cave & warren ellis|||carnage",
       "matt berninger & rosanne cash|||who loves the sun",
       "jessie ware|||night light",
@@ -112,8 +113,7 @@
       "jungle|||keep me satisfied",
       "tash sultana|||notion",
       "rex orange county feat benny sings|||loving is easy",
-      "deus|||keep you close",
-      "kids with buns|||waiting room"
+      "deus|||keep you close"
     ],
     "mellow_mix": [
       "luka bloom|||exploring the blue",
@@ -524,6 +524,7 @@
       "the paper kites|||featherstone"
     ],
     "indie_select": [
+      "trophy wife|||bruxism",
       "telekinesis|||set a course",
       "delphic|||of the young",
       "kakkmaddafakka|||galapagos",
@@ -622,8 +623,7 @@
       "luomo|||love you all",
       "dintod|||patron of the young",
       "windmill|||big boom pocket remix",
-      "trentemoller|||mcklaren",
-      "stay|||eyes feat no ceremony///"
+      "trentemoller|||mcklaren"
     ],
     "dkfm_edge": [
       "muted color|||nowhere i am",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794025197.265151,
-    "mellow_mix": 1794025197.2722886,
-    "big_sonic_heaven": 1794025197.2771802,
-    "radio_x_chilled": 1794025197.2826927,
-    "dreampop_radio": 1794025197.2868528,
-    "indie_select": 1794025197.2923741,
-    "dkfm_edge": 1794025197.5213099,
+    "vuurland": 1794025211.8644881,
+    "mellow_mix": 1794025211.8712506,
+    "big_sonic_heaven": 1794025211.876178,
+    "radio_x_chilled": 1794025211.8817976,
+    "dreampop_radio": 1794025211.8859825,
+    "indie_select": 1794025212.0996778,
+    "dkfm_edge": 1794025212.105809,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794025197.5277443
+    "dark_edge": 1794025212.1122367
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7416,6 +7416,7 @@
       "tricky|||we don't die",
       "trixie whitley|||closer",
       "trixie whitley|||high wire",
+      "trophy wife|||bruxism",
       "trophy wife|||glue",
       "trophy wife|||seven waves",
       "tusq|||love vs reason",
@@ -9336,6 +9337,12 @@
       "title": "Eleusis",
       "source": "big_sonic_heaven",
       "failed_at": 1794023054
+    },
+    "tricky & gravediggaz|||hell is round the corner": {
+      "artist": "Tricky & Gravediggaz",
+      "title": "Hell Is Round the Corner",
+      "source": "big_sonic_heaven",
+      "failed_at": 1794025214
     }
   },
   "__v51_radio_unmatched": {
@@ -9632,12 +9639,12 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "nick cave & warren ellis|||carnage",
+  "__last_radio_key_vuurland": "polica|||dark star",
   "__last_radio_key_mellow_mix": "luka bloom|||exploring the blue",
   "__last_radio_key_big_sonic_heaven": "&tilly|||life that can't be shared",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 6413,
-  "__v146_spotify_budget_slot": 1794025086.1042068,
+  "__v116_fifo_next_sequence": 6415,
+  "__v146_spotify_budget_slot": 1794025213.1291897,
   "__vuurland_active_playlist_count": 6468,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -55255,7 +55262,7 @@
     "natalie imbruglia|||leave me alone portishead mix": 3,
     "plusminus|||jumping the tracks": 3,
     "dead can dance|||eleusis": 3,
-    "tricky & gravediggaz|||hell is round the corner": 2
+    "tricky & gravediggaz|||hell is round the corner": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -55415,7 +55422,8 @@
     "unkle feat ian brown|||be there": 1,
     "natalie imbruglia|||leave me alone portishead mix": 1,
     "plusminus|||jumping the tracks": 1,
-    "dead can dance|||eleusis": 1
+    "dead can dance|||eleusis": 1,
+    "tricky & gravediggaz|||hell is round the corner": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -78366,7 +78374,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "telekinesis|||set a course",
+  "__last_radio_key_indie_select": "trophy wife|||bruxism",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -80763,5 +80771,6 @@
   "__match_v35__dictator|||almost famous": "spotify:track:0eg8CRxI9ZHwI8eYkLkCxO",
   "__match_v35__sasami & angie mcmahon|||honeycrash": "spotify:track:69lO7FaDflkguP24lLn5JR",
   "__match_v35__still corners|||summer nights": "spotify:track:2loYFZdyo4TZvmm3yhvEOi",
-  "__match_v35__we are knights|||tears - we are knights": "spotify:track:5vJOlHCFuVk6vf538ojg7k"
+  "__match_v35__we are knights|||tears - we are knights": "spotify:track:5vJOlHCFuVk6vf538ojg7k",
+  "__not_found_v35__tricky & gravediggaz|||hell is round the corner": 1794025214
 }
