@@ -142,7 +142,16 @@ def special_requested_version_is_safe(artist, title, spotify_title, spotify_albu
                     and re.search(r"\bacoustic\b", text)
                     and spotify_version in {"live", "acoustic"})
     if requested == ("natalie imbruglia", "leave me alone (portishead mix)"):
-        return bool(re.search(r"\bportishead\b", text)
-                    and re.search(r"\b(?:mix|remix)\b", text)
+        # Remix credit must occur in the actual TRACK title, not just in
+        # a compilation album name; no ordinary studio fallback.
+        candidate_title = str(spotify_title or "").casefold()
+        return bool(re.search(r"\bportishead\b", candidate_title)
+                    and re.search(r"\b(?:mix|remix)\b", candidate_title)
                     and spotify_version in {"mix", "remix"})
+    if requested == ("le boeuf brothers", "red velvet (yellow then blue remix)"):
+        # The original 2013 remix album explicitly labels this remix.
+        candidate_title = str(spotify_title or "").casefold()
+        return bool("yellow then blue" in candidate_title
+                    and re.search(r"\bremix\b", candidate_title)
+                    and spotify_version == "remix")
     return True
