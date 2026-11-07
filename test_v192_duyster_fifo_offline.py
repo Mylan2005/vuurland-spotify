@@ -172,7 +172,9 @@ assert len(recent) == 25
 assert all(row["pid"] == "833" and row["episode_date"] == "2026-10-26" for row in recent)
 with (ROOT / "duyster_archief_uniek.csv").open(encoding="utf-8", newline="") as handle:
     archive = list(csv.DictReader(handle))
-assert len(archive) == 8308, len(archive)
+# v207: historische broncontrole herstelt ontbrekende Duyster-nummers;
+# het archief mag daardoor groeien, zonder bestaande records te verliezen.
+assert len(archive) >= 8308, len(archive)
 all_keys = {key(row["artist"], row["title"]) for row in archive}
 assert all(not is_non_music_title(row["title"]) for row in archive)
 for title in ("Interview", "Sessie", "Interview + Sessie",
