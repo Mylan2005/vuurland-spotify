@@ -7,7 +7,10 @@ on:
       - '.github/workflows/duyster-historische-audit.yml'
       - 'duyster_historische_audit.py'
   schedule:
-    - cron: '23 2 * * *'
+    # Vier rustige broncontroles per dag; 60 pagina's per ronde.
+    # UTC: 02:23, 08:23, 14:23 en 20:23 (DST-onafhankelijk).
+    # Behoud de gedeelde lock met de woensdagimport.
+    - cron: '23 2,8,14,20 * * *'
 
 permissions:
   contents: write
