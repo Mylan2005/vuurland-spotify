@@ -8,6 +8,7 @@ import time
 
 from v194_matcher_metadata import canonical_artist, canonical_title
 from v200_verified_catalog_titles import verified_catalog_title
+from v208_explicit_artist_feature import verified_report_album_hint
 from v207_verified_matcher_metadata import (
     verified_artist_search_name,
     verified_balthazar_castle_version,
@@ -23,6 +24,8 @@ MATCHER_RETRY_RULES = (
     "v207_giraffe_chinese_full_artist",
     "v207_balthazar_castle_named_version",
     "v208_parenthesized_feature",
+    "v208_plusminus_exact_album_artist",
+    "v208_verified_album_query",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -66,6 +69,13 @@ def applicable_rules(artist, title):
     if (artist.strip().casefold() == "unkle (feat. ian brown)"
             and title.strip().casefold() == "be there"):
         hits.append("v208_parenthesized_feature")
+    # Eén gecontroleerde retry voor exact bevestigde song/album-metadata.
+    # Spotify moet nog steeds de VOLLEDIGE track veilig valideren.
+    if (artist.strip().casefold() == "plusminus"
+            and title.strip().casefold() in {"rewrite the story", "jumping the tracks"}):
+        hits.append("v208_plusminus_exact_album_artist")
+    if verified_report_album_hint(artist, title) and artist.strip().casefold() != "plusminus":
+        hits.append("v208_verified_album_query")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
