@@ -5229,7 +5229,8 @@ def find_spotify_track(
             )
         )
         structural_title_match = (
-            verified_catalog_variant
+            v207_exact_castle
+            or verified_catalog_variant
             or truncated_title_match
             or incomplete_last_word
             or (bool(wanted_identity) and wanted_identity == spotify_identity)
