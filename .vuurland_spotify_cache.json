@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "david kushner|||hero",
+      "kings of leon|||my whole world",
       "tamino|||dissolve",
       "celeste|||i can see the change",
       "noah kahan|||porch light",
@@ -111,9 +113,7 @@
       "phoebe bridgers|||motion sickness",
       "kevin morby|||javelin",
       "wet leg|||obvious",
-      "novastar|||mars needs woman re-imagined",
-      "jessie ware|||wildest moments",
-      "the japanese house|||boyhood"
+      "novastar|||mars needs woman re-imagined"
     ],
     "mellow_mix": [
       "nick drake|||clothes of sand",
@@ -626,6 +626,7 @@
       "delays|||in brilliant sunshine"
     ],
     "dkfm_edge": [
+      "precocious neophyte|||감기약 panpyrin",
       "ultranøia|||sparire",
       "atmos bloom|||sea legs",
       "stab|||quarter life crisis",
@@ -724,8 +725,7 @@
       "the fauns|||how lost",
       "kestrels|||lilys",
       "deary|||the moth",
-      "hazel saints|||over my head",
-      "sexores|||las aguas de los bordes de fuego"
+      "hazel saints|||over my head"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -821,6 +821,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "shook|||lullaby",
       "capybara|||neighbor crimes",
       "garbage|||no 1 crush",
       "shakey graves|||family and genus",
@@ -919,22 +920,21 @@
       "superpoze|||time travel",
       "twenty one pilots|||chlorine",
       "raf rundell|||monsterpiece",
-      "elbow|||empires",
-      "kishi bashi|||i am the antichrist to you"
+      "elbow|||empires"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794016121.2542143,
-    "mellow_mix": 1794016121.2595584,
-    "big_sonic_heaven": 1794016121.2630663,
-    "radio_x_chilled": 1794016121.2671962,
-    "dreampop_radio": 1794016121.2700195,
-    "indie_select": 1794016121.2737153,
-    "dkfm_edge": 1794016121.278125,
+    "vuurland": 1794016192.8578637,
+    "mellow_mix": 1794016192.863166,
+    "big_sonic_heaven": 1794016192.8666728,
+    "radio_x_chilled": 1794016192.8708534,
+    "dreampop_radio": 1794016192.8737137,
+    "indie_select": 1794016192.8773675,
+    "dkfm_edge": 1794016193.0723386,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794016121.2827187
+    "dark_edge": 1794016193.218603
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7907,6 +7907,7 @@
       "plant cell|||wind & wing arakawa river mix -bonus track",
       "plastic girl in closet|||can't stop my heart",
       "plastic girl in closet|||ramune river",
+      "precocious neophyte|||감기약 panpyrin",
       "precocious neophyte|||마음 maum",
       "precocious neophyte|||산 san",
       "precocious neophyte|||하루 haru",
@@ -8752,6 +8753,7 @@
       "sharon van etten & angel olsen|||like i used to",
       "sharon van etten|||jupiter 4",
       "shivaree|||goodnight moon",
+      "shook|||lullaby",
       "sia|||i go to sleep",
       "sia|||like a river runs",
       "silent strike feat em|||it's not safe to turn off your computer",
@@ -9489,11 +9491,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "tamino|||dissolve",
+  "__last_radio_key_vuurland": "david kushner|||hero",
   "__last_radio_key_mellow_mix": "nick drake|||clothes of sand",
   "__last_radio_key_big_sonic_heaven": "flower face|||bad dream",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 6276,
+  "__v116_fifo_next_sequence": 6278,
   "__v146_spotify_budget_slot": 1794016122.0576549,
   "__vuurland_active_playlist_count": 6419,
   "__vuurland_active_volume": 1,
@@ -79206,7 +79208,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "ultranøia|||sparire",
+  "__last_radio_key_dkfm_edge": "precocious neophyte|||감기약 panpyrin",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -79220,7 +79222,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "capybara|||neighbor crimes",
+  "__last_radio_key_dark_edge": "shook|||lullaby",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
