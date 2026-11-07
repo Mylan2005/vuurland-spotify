@@ -2468,6 +2468,7 @@ def find_spotify_track(
     # Alleen vormcorrectie; laat de bestaande artiest-/titel-/versietoets
     # intact. Originele v101-cache- en bronidentiteit zijn al vastgelegd.
     _v208_feature_artist = v208_artist_feature(artist)
+    _v208_had_explicit_parenthesized_guest = _v208_feature_artist != artist
     if _v208_feature_artist != artist:
         print(f"📝 v208: volledige featuring-credit behouden: {artist} → {_v208_feature_artist}")
         artist = _v208_feature_artist
@@ -5008,6 +5009,10 @@ def find_spotify_track(
             # match dan wanneer de volledige samenwerking aanwezig is.
             missing_feature_count = 0
         if missing_feature_count:
+            # v210: de nieuwe v208-haakjesfeat is een expliciet gevraagde
+            # volledige samenwerking, nooit een uitnodiging voor solo-fallback.
+            if _v208_had_explicit_parenthesized_guest:
+                continue
             if (not primary_artist_exact
                     or len(spotify_artists) != 1):
                 continue
@@ -5054,6 +5059,15 @@ def find_spotify_track(
         )
 
         spotify_version = spotify_candidate_version(item)
+
+        # v210: één bewezen bronspelfout met expliciet '(live)' mag
+        # NOOIT aan de gewone studioversie worden gekoppeld, ook als de
+        # algemene matchervoorkeur anders een fallback zou toestaan.
+        if (artist.strip().casefold() == "simon & garfunkel"
+                and title.strip().casefold()
+                    == "for emily, whenever i may find her (live)"
+                and spotify_version != "live"):
+            continue
 
         # v94: a radio title without an explicit live request must never
         # resolve to a bootleg concert recording (even as last-resort fallback).
