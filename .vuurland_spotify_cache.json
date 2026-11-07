@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794016984.1542168,
+  "__v150_next_spotify_round_at": 1794017195.6382143,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "alt-j|||left hand free",
       "delvis|||money",
       "radiohead|||pyramid song",
       "balthazar|||then what",
@@ -112,8 +113,7 @@
       "the national|||i need my girl",
       "mooneye feat meskerem mees|||bright lights",
       "bleachers|||you and forever",
-      "aurora|||the flood",
-      "phoebe bridgers|||motion sickness"
+      "aurora|||the flood"
     ],
     "mellow_mix": [
       "wild strawberries|||everyone's got the blues on sunday",
@@ -320,6 +320,7 @@
       "craig armstrong|||this love feat elizabeth fraser"
     ],
     "radio_x_chilled": [
+      "stereophonics|||maybe tomorrow",
       "the national|||sorrow",
       "the smiths|||there is a light that never goes out",
       "zero 7|||destiny",
@@ -418,10 +419,10 @@
       "pj harvey|||you said something",
       "foo fighters|||everlong acoustic",
       "coldplay|||warning sign",
-      "the killers|||everything will be alright",
-      "paul weller|||you do something to me"
+      "the killers|||everything will be alright"
     ],
     "dreampop_radio": [
+      "eels|||blinking lights for me",
       "ducktails|||killin' the vibe",
       "fink|||warm shadow",
       "sun kil moon|||lost verses",
@@ -520,8 +521,7 @@
       "gabrielle aplin|||please don't say you love me",
       "grizzly bear|||gun-shy",
       "me and my drummer|||so foreign",
-      "tobias jesso jr|||without you",
-      "bonnie prince billy|||goodbye dear old stepstone"
+      "tobias jesso jr|||without you"
     ],
     "indie_select": [
       "moderat|||intruder live",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794016935.0285888,
-    "mellow_mix": 1794016935.2404356,
-    "big_sonic_heaven": 1794016935.4266353,
-    "radio_x_chilled": 1794016935.4309475,
-    "dreampop_radio": 1794016935.4339063,
-    "indie_select": 1794016935.4378326,
-    "dkfm_edge": 1794016935.6115654,
+    "vuurland": 1794017075.4211862,
+    "mellow_mix": 1794017075.4279432,
+    "big_sonic_heaven": 1794017075.4325707,
+    "radio_x_chilled": 1794017075.437514,
+    "dreampop_radio": 1794017075.4413424,
+    "indie_select": 1794017075.4460921,
+    "dkfm_edge": 1794017075.4516568,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794016935.616557
+    "dark_edge": 1794017075.4573672
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -9503,13 +9503,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "delvis|||money",
+  "__last_radio_key_vuurland": "alt-j|||left hand free",
   "__last_radio_key_mellow_mix": "wild strawberries|||everyone's got the blues on sunday",
   "__last_radio_key_big_sonic_heaven": "the radio dept|||four months in the shade",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 6289,
-  "__v146_spotify_budget_slot": 1794016864.7836487,
-  "__vuurland_active_playlist_count": 6425,
+  "__v146_spotify_budget_slot": 1794017076.4601114,
+  "__vuurland_active_playlist_count": 6426,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794015998,
@@ -16818,6 +16818,7 @@
     "the raveonettes|||night comes out",
     "the raveonettes|||summer moon",
     "the raveonettes|||war in heaven",
+    "the raveonettes|||z-boys",
     "the re-stoned|||spheres",
     "the rifles|||numero uno",
     "the rifles|||shoot from the lip",
@@ -22842,6 +22843,7 @@
     "spotify:track:6Inu6Eb6OX4WNlk6kl3ZpG",
     "spotify:track:6Irt9GvjTLQQDDgb3vqU0y",
     "spotify:track:6Iwt82WxEbnwdsnICXKgTc",
+    "spotify:track:6J35rkMOr8ko4grx1JC5Gn",
     "spotify:track:6J9VkPveNBXDC7ybLPOrLJ",
     "spotify:track:6JA2PqUMfcgwz3OJNnW98P",
     "spotify:track:6JFgkChWvd79SvoxsAU57x",
@@ -27748,6 +27750,7 @@
     "QMHBS1500005",
     "QMHG41850001",
     "QMHS81300102",
+    "QMJW51400036",
     "QMK5L1200001",
     "QMK5L1200004",
     "QMKHM1900008",
@@ -36792,7 +36795,8 @@
     "spotify:track:1uEap95VIj54OPYOSUdMfg": "USBQU2500336",
     "spotify:track:2Vqi1Si1dQjMtAZ79UreqL": "GBAFL8400060",
     "spotify:track:2TsbF8oSUPBEp6QLbzqIXu": "BEP011500397",
-    "spotify:track:4d6ghonE8AIsbxdzC2Lk0j": "DEZC62594651"
+    "spotify:track:4d6ghonE8AIsbxdzC2Lk0j": "DEZC62594651",
+    "spotify:track:6J35rkMOr8ko4grx1JC5Gn": "QMJW51400036"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -69186,6 +69190,7 @@
       "the rapture|||children",
       "the raveonettes|||choke on love",
       "the raveonettes|||i wanna be adored",
+      "the raveonettes|||z-boys",
       "the rifles|||numero uno",
       "the rifles|||shoot from the lip",
       "the rolling stones|||angie",
@@ -71623,6 +71628,7 @@
       "spotify:track:6IBpFG2LU2udYofIuROp3w",
       "spotify:track:6IV809PIUNVekhBdzP1ng5",
       "spotify:track:6IZdjnq4WWDuDKwyeynQit",
+      "spotify:track:6J35rkMOr8ko4grx1JC5Gn",
       "spotify:track:6JA2PqUMfcgwz3OJNnW98P",
       "spotify:track:6JFgkChWvd79SvoxsAU57x",
       "spotify:track:6JHGaBhtCbfEtOh5ea7fLI",
@@ -73596,6 +73602,7 @@
       "QMFMG2336954",
       "QMGEB1401604",
       "QMHBS1500005",
+      "QMJW51400036",
       "QMK5L1200001",
       "QMKHM1900008",
       "QMM3X1505306",
@@ -77393,7 +77400,8 @@
       "spotify:track:1uEap95VIj54OPYOSUdMfg": "USBQU2500336",
       "spotify:track:2Vqi1Si1dQjMtAZ79UreqL": "GBAFL8400060",
       "spotify:track:2TsbF8oSUPBEp6QLbzqIXu": "BEP011500397",
-      "spotify:track:4d6ghonE8AIsbxdzC2Lk0j": "DEZC62594651"
+      "spotify:track:4d6ghonE8AIsbxdzC2Lk0j": "DEZC62594651",
+      "spotify:track:6J35rkMOr8ko4grx1JC5Gn": "QMJW51400036"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -77664,7 +77672,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the national|||sorrow",
+  "__last_radio_key_radio_x_chilled": "stereophonics|||maybe tomorrow",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -77768,7 +77776,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "ducktails|||killin' the vibe",
+  "__last_radio_key_dreampop_radio": "eels|||blinking lights for me",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -80233,5 +80241,6 @@
   "__match_v35__cigarettes after sex|||anna karenina": "spotify:track:1uEap95VIj54OPYOSUdMfg",
   "__match_v35__cocteau twins|||pandora for cindy": "spotify:track:2Vqi1Si1dQjMtAZ79UreqL",
   "__match_v35__roscoe|||fresh start": "spotify:track:2TsbF8oSUPBEp6QLbzqIXu",
-  "__match_v35__seasurfer|||echo": "spotify:track:4d6ghonE8AIsbxdzC2Lk0j"
+  "__match_v35__seasurfer|||echo": "spotify:track:4d6ghonE8AIsbxdzC2Lk0j",
+  "__match_v35__the raveonettes|||z-boys": "spotify:track:6J35rkMOr8ko4grx1JC5Gn"
 }
