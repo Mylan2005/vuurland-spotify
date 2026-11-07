@@ -8,6 +8,8 @@ on:
       - 'v200_verified_catalog_titles.py'
       - 'v207_verified_matcher_metadata.py'
       - 'v208_explicit_artist_feature.py'
+      - 'v209_verified_source_title.py'
+      - 'test_v209_verified_source_title_offline.py'
       - 'test_v208_explicit_artist_feature_offline.py'
       - 'test_v207_verified_matcher_metadata_offline.py'
       - 'v202_auto_matcher_triage.py'
@@ -95,6 +97,7 @@ jobs:
           python test_v205_lifetime_backup_offline.py
           python test_v207_verified_matcher_metadata_offline.py
           python test_v208_explicit_artist_feature_offline.py
+          python test_v209_verified_source_title_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v206_duyster_historische_audit_offline.py
           python test_v159_playlist_rebuild_offline.py
