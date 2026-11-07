@@ -29,6 +29,8 @@ from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_re
 from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
 from v211_report_search_rescue import (
     safer_album_query as v211_album_query,
+    unconfirmed_song_search as v211_unconfirmed_search,
+    special_requested_version_is_safe as v211_version_guard,
     confirmed_guest_credit as v211_guest_credit,
     mint_julep_catalog_search_title as v211_mint_search_title,
     mint_julep_same_single as v211_mint_same_single,
@@ -3353,7 +3355,8 @@ def find_spotify_track(
     # bevestigde album gebruiken als extra zoekfilter. Geen extra Spotify
     # Search en geen enkele omzeiling van de strenge kandidaatvalidatie.
     if search_variant == 0:
-        _v211_targeted_query = v211_album_query(artist, title)
+        _v211_targeted_query = (v211_album_query(artist, title)
+                                or v211_unconfirmed_search(artist, title))
         if _v211_targeted_query:
             query = _v211_targeted_query
 
@@ -5088,6 +5091,15 @@ def find_spotify_track(
         )
 
         spotify_version = spotify_candidate_version(item)
+
+        # v211: bij EXACT benoemde studio-/live-/remixwensen is een
+        # cataloguskandidaat pas veilig als ook de SPECIFIEKE versie klopt.
+        # 'Mr Brightside (Live Acoustic)' nooit een elektrisch live-item;
+        # 'Portishead Mix' nooit de gewone Natalie Imbruglia opname.
+        if not v211_version_guard(
+                artist, title, item.get('name', ''),
+                (item.get('album') or {}).get('name', ''), spotify_version):
+            continue
 
         # v210: één bewezen bronspelfout met expliciet '(live)' mag
         # NOOIT aan de gewone studioversie worden gekoppeld, ook als de
