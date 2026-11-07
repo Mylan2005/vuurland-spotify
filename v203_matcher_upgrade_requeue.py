@@ -8,6 +8,10 @@ import time
 
 from v194_matcher_metadata import canonical_artist, canonical_title
 from v200_verified_catalog_titles import verified_catalog_title
+from v207_verified_matcher_metadata import (
+    verified_artist_search_name,
+    verified_balthazar_castle_version,
+)
 
 # Update this registry *in the same tested PR* as any future matcher fix.
 # No general "retry everything whenever code changed" behavior.
@@ -15,6 +19,9 @@ MATCHER_RETRY_RULES = (
     "v199_exact_trailing_artist",
     "v200_tired_pony_verified_catalog_title",
     "v194_reversed_the_artist_credit",
+    "v207_fink_uk_exact_title",
+    "v207_giraffe_chinese_full_artist",
+    "v207_balthazar_castle_named_version",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -40,6 +47,19 @@ def applicable_rules(artist, title):
     # Correct only "Lastname, The" -> "The Lastname"; Spotify still verifies.
     if canonical_artist(artist) != artist.strip():
         hits.append("v194_reversed_the_artist_credit")
+    # De nieuwe regels gelden ALLEEN voor aantoonbaar dezelfde bronmetadata.
+    # Requeue betekent opnieuw laten VALIDEREN, niet automatisch accepteren.
+    if (artist.strip().casefold() == "fink (uk)"
+            and title.strip().casefold() == "looking too closely"
+            and verified_artist_search_name(artist, title) == "Fink"):
+        hits.append("v207_fink_uk_exact_title")
+    if (artist.strip().casefold() == "the giraffe told me in my dream"
+            and title.strip().casefold() == "before"
+            and verified_artist_search_name(artist, title) == "我夢見長頸鹿對我說"):
+        hits.append("v207_giraffe_chinese_full_artist")
+    if verified_balthazar_castle_version(
+            artist, title, "Balthazar", "On A Roll - Sand Castle Tapes"):
+        hits.append("v207_balthazar_castle_named_version")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
