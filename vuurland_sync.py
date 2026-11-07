@@ -27,6 +27,7 @@ from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
 from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
+from v209_verified_source_title import verified_emily_live_source_title as v209_emily_title
 from v208_explicit_artist_feature import (
     canonical_explicit_artist_feature as v208_artist_feature,
     verified_symbolic_plusminus as v208_plusminus_identity,
@@ -2470,6 +2471,13 @@ def find_spotify_track(
     if _v208_feature_artist != artist:
         print(f"📝 v208: volledige featuring-credit behouden: {artist} → {_v208_feature_artist}")
         artist = _v208_feature_artist
+
+    # v209: uitsluitend bewezen volledige radio-spelfout. Het expliciete
+    # '(live)' blijft onaangeroerd; studio/remix kan dit niet vervangen.
+    _v209_title = v209_emily_title(artist, title)
+    if _v209_title != title:
+        print(f"📝 v209: geverifieerde titelspelling, live blijft verplicht: {title} → {_v209_title}")
+        title = _v209_title
 
     # v194: generieke en controleerbare RadioBox-metadata-correcties.
     # De ORIGINELE item-/cache-key en bron blijven onveranderd. De schone

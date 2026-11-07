@@ -9,6 +9,7 @@ import time
 from v194_matcher_metadata import canonical_artist, canonical_title
 from v200_verified_catalog_titles import verified_catalog_title
 from v208_explicit_artist_feature import verified_report_album_hint
+from v209_verified_source_title import verified_emily_live_source_title
 from v207_verified_matcher_metadata import (
     verified_artist_search_name,
     verified_balthazar_castle_version,
@@ -26,6 +27,7 @@ MATCHER_RETRY_RULES = (
     "v208_parenthesized_feature",
     "v208_plusminus_exact_album_artist",
     "v208_verified_album_query",
+    "v209_emily_live_exact_source_spelling",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -76,6 +78,8 @@ def applicable_rules(artist, title):
         hits.append("v208_plusminus_exact_album_artist")
     if verified_report_album_hint(artist, title) and artist.strip().casefold() != "plusminus":
         hits.append("v208_verified_album_query")
+    if verified_emily_live_source_title(artist, title) != title.strip():
+        hits.append("v209_emily_live_exact_source_spelling")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
