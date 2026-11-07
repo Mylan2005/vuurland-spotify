@@ -1,25 +1,25 @@
 {
   "format": "v206-duyster-complete-episodes-v1",
-  "next_pid": 659,
+  "next_pid": 602,
   "target_last_pid": 833,
   "verified_episodes": {
     "833": {
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "c8cd44668fa9d94f16d9e600cfec64da46805997827e42a449a2156bf97fbedb",
-      "checked_at_utc": "2026-11-07T13:06:14.224089+00:00"
+      "checked_at_utc": "2026-11-07T18:50:32.713586+00:00"
     },
     "832": {
       "source_tracks": 24,
       "recovered": 0,
       "source_sha256": "60bc0e70f5f9b6a26829999270feea0fdd2d7da9d350db6e785d1ae3d28d56ad",
-      "checked_at_utc": "2026-11-07T13:06:15.781853+00:00"
+      "checked_at_utc": "2026-11-07T18:50:34.268019+00:00"
     },
     "831": {
       "source_tracks": 26,
       "recovered": 0,
       "source_sha256": "bd35ba9f7841f27f0718e2fd1f698c75de2b73101b540f9ecf0ba37c0905bc87",
-      "checked_at_utc": "2026-11-07T13:06:17.453523+00:00"
+      "checked_at_utc": "2026-11-07T18:50:35.830839+00:00"
     },
     "830": {
       "source_tracks": 24,
@@ -1046,11 +1046,353 @@
       "recovered": 0,
       "source_sha256": "72ca75b5d63cc06c939024ef0d97c3c855a7f74eb63b8004cea07fc80de5fab3",
       "checked_at_utc": "2026-11-07T13:07:46.281662+00:00"
+    },
+    "659": {
+      "source_tracks": 26,
+      "recovered": 0,
+      "source_sha256": "8b01009fbc606bece0f11028e9fe828abe9a12483d859f2adc6b348c59c39d2d",
+      "checked_at_utc": "2026-11-07T18:50:37.391842+00:00"
+    },
+    "658": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "8c037afec294d9e5af8af9329c3b2e3b8b8fd476701947a94f922165ab1d8791",
+      "checked_at_utc": "2026-11-07T18:50:38.958252+00:00"
+    },
+    "657": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "c8ab49d35990f2c48651b49f06a39d5159739ba4ef72294ff321d3f34ec37db1",
+      "checked_at_utc": "2026-11-07T18:50:40.523270+00:00"
+    },
+    "656": {
+      "source_tracks": 20,
+      "recovered": 0,
+      "source_sha256": "cef05db436e96f7cc4ce3aacfadf1acd10f90f5020d38bab5a632ac2a7d02f81",
+      "checked_at_utc": "2026-11-07T18:50:42.080107+00:00"
+    },
+    "655": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "47eb2e4eadc23ca5cfb62b80833c544b3539e15074d3c23c547bcf530722bf76",
+      "checked_at_utc": "2026-11-07T18:50:43.654705+00:00"
+    },
+    "654": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "88dd61012a3d551f827ad880d73d1ee203a777623f500c507cbcad4e7f5475a4",
+      "checked_at_utc": "2026-11-07T18:50:45.211520+00:00"
+    },
+    "653": {
+      "source_tracks": 25,
+      "recovered": 0,
+      "source_sha256": "c5a269337fd47d9f799c1c1a493e10f1ff11d2f31173a671c5cbab2e81d7ebcb",
+      "checked_at_utc": "2026-11-07T18:50:46.783205+00:00"
+    },
+    "652": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "ab75ecc0b2d72bc9caca4d9c901a9134116163a01dd1ed3843b638ce26d26f8b",
+      "checked_at_utc": "2026-11-07T18:50:48.350295+00:00"
+    },
+    "651": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "c2d07f0adebb150d2af7d914417d867996b0f168a88f662d80c548091b6d4622",
+      "checked_at_utc": "2026-11-07T18:50:49.932532+00:00"
+    },
+    "650": {
+      "source_tracks": 26,
+      "recovered": 0,
+      "source_sha256": "ff339c43c9d771cb69dcc208e3eb293e86c40f2b4e675eee41bfab41636bdc42",
+      "checked_at_utc": "2026-11-07T18:50:51.505390+00:00"
+    },
+    "649": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "aa62e9efd66d06f202f8b4765a04a7413e84427d10bea9ca301fb535a6e523cd",
+      "checked_at_utc": "2026-11-07T18:50:53.061861+00:00"
+    },
+    "648": {
+      "source_tracks": 26,
+      "recovered": 0,
+      "source_sha256": "55256e55c7dafc2a4bb24d98a0814ebb2edb22a217ca55e73073d7f421b1c986",
+      "checked_at_utc": "2026-11-07T18:50:54.613039+00:00"
+    },
+    "647": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "2c6832f00245da1cb356095ba2fd420fba42f853b15bb73e5e3eb133c9584892",
+      "checked_at_utc": "2026-11-07T18:50:56.170577+00:00"
+    },
+    "646": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "c1f498fd6de3722eb308771b9586590f34607565f70f8ed6631ae7fc3170124b",
+      "checked_at_utc": "2026-11-07T18:50:57.715314+00:00"
+    },
+    "645": {
+      "source_tracks": 26,
+      "recovered": 0,
+      "source_sha256": "aa6832ca7ff9d6ae9602fed515928785407d4f32d1cec76a2015d78f7a1ab93c",
+      "checked_at_utc": "2026-11-07T18:50:59.271015+00:00"
+    },
+    "644": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "21b01a12901f52cd531fdbc430bd3021242c80cd1d17312da2ad6c9a311f511f",
+      "checked_at_utc": "2026-11-07T18:51:00.818798+00:00"
+    },
+    "643": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "2539c82c89c2bfcfd37b74f97a187e69c1f4d7caf6de24c14a12251b4d9cb622",
+      "checked_at_utc": "2026-11-07T18:51:02.364811+00:00"
+    },
+    "642": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "4fafb53292a719915b2c91f8e5a28fb523ee2b52187bba8a61d42aa3f6134067",
+      "checked_at_utc": "2026-11-07T18:51:03.927543+00:00"
+    },
+    "641": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "3cf7d1a5de0d2bc0a689e249fd2a992cdde7570cd15e9d382562931fb1399943",
+      "checked_at_utc": "2026-11-07T18:51:05.482435+00:00"
+    },
+    "640": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "0ead5277cbb955f2af2676820d8710d69c8f7253a15854dc3a5495339d0a0785",
+      "checked_at_utc": "2026-11-07T18:51:07.036102+00:00"
+    },
+    "639": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "e44afadeaaa27ff9a4acefdf532f7122a88373c4ed9cc05bd302cf91c9104940",
+      "checked_at_utc": "2026-11-07T18:51:08.578107+00:00"
+    },
+    "638": {
+      "source_tracks": 25,
+      "recovered": 0,
+      "source_sha256": "46668875c1cc0d22e71c219eb18fbc131fd634a8277691570888edf0932f75ff",
+      "checked_at_utc": "2026-11-07T18:51:10.136264+00:00"
+    },
+    "637": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "6cb42f1479b784eda2bbdcadfaa9aafb978ece08c219e131f7caaa1aeaf16d24",
+      "checked_at_utc": "2026-11-07T18:51:11.699151+00:00"
+    },
+    "636": {
+      "source_tracks": 26,
+      "recovered": 0,
+      "source_sha256": "48e9604ae58da57606cae33ee26c55c0b18869a4a90ce9bb25ae386756f83700",
+      "checked_at_utc": "2026-11-07T18:51:13.258444+00:00"
+    },
+    "635": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "b7ed6ec4c4bcb446cc61bd07ab53afa2e0946a54072f1ad4b02f84645b2cb007",
+      "checked_at_utc": "2026-11-07T18:51:14.810566+00:00"
+    },
+    "634": {
+      "source_tracks": 26,
+      "recovered": 0,
+      "source_sha256": "30f160aae730cd289db39d615459f536847f873d7a1a0b7f7dcd570849d06ee3",
+      "checked_at_utc": "2026-11-07T18:51:16.378370+00:00"
+    },
+    "633": {
+      "source_tracks": 25,
+      "recovered": 0,
+      "source_sha256": "e66e6b34e238cb06ea40f3dfa8b3f58e2db1a665bfe7740763c1b24c0e2d47ca",
+      "checked_at_utc": "2026-11-07T18:51:17.953121+00:00"
+    },
+    "632": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "a3ced9f94941a228c30dceca84761c429a994eee4d120bfe7815bbdd4dccc542",
+      "checked_at_utc": "2026-11-07T18:51:19.498197+00:00"
+    },
+    "631": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "3483eecf5f2fe723c3757c7b6af74f6efb3dff233995df58513e67abec162c52",
+      "checked_at_utc": "2026-11-07T18:51:21.065876+00:00"
+    },
+    "630": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "8a386df53ad02163477fba458751a0b2e534cb8decc5e2c6ec6b270cd3837bbd",
+      "checked_at_utc": "2026-11-07T18:51:22.617253+00:00"
+    },
+    "629": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "41cd0c82ec053d0fd62d52ae69c5d81ae60a2a4ac88088be030ea0fd6eb46b0a",
+      "checked_at_utc": "2026-11-07T18:51:24.183123+00:00"
+    },
+    "628": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "e909fcf8b773a83fc1cf3d7937f1284c6fc837942c6ad379448f254700d5518f",
+      "checked_at_utc": "2026-11-07T18:51:25.728536+00:00"
+    },
+    "627": {
+      "source_tracks": 20,
+      "recovered": 0,
+      "source_sha256": "5a849bafc3a9823712d12ec1ea0d899f54094c6a590d9c57d7678080933d88a6",
+      "checked_at_utc": "2026-11-07T18:51:27.283611+00:00"
+    },
+    "626": {
+      "source_tracks": 25,
+      "recovered": 0,
+      "source_sha256": "ea138f6eaa67468562945cd5a0b036f2ccdec1ef8324513e7539588aae1338be",
+      "checked_at_utc": "2026-11-07T18:51:28.829990+00:00"
+    },
+    "625": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "9531b2b2ca71043c30928cad5518e525f3157f57605758440aa9608672204a60",
+      "checked_at_utc": "2026-11-07T18:51:30.387758+00:00"
+    },
+    "624": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "6b38eb5a37090aa2ec0af210a650b2462407af89518e5153d45386ead60534eb",
+      "checked_at_utc": "2026-11-07T18:51:31.948113+00:00"
+    },
+    "623": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "c422a19727c0c2df20095f45fa8c407a9e4a622a62a35d5900a859015fd29284",
+      "checked_at_utc": "2026-11-07T18:51:33.504525+00:00"
+    },
+    "622": {
+      "source_tracks": 25,
+      "recovered": 0,
+      "source_sha256": "cad117c402dd033fbe00141752ad4cad25dd96c2c63dadb9fa138486333b622b",
+      "checked_at_utc": "2026-11-07T18:51:35.049001+00:00"
+    },
+    "621": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "eff6752ca5626cabc992f2d5c9d4f68d974c501bbedab7c5cc79983412cbcab5",
+      "checked_at_utc": "2026-11-07T18:51:36.629031+00:00"
+    },
+    "620": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "c3d5027abf63d02517166b56d5c4051a5c3aae190d5ea55614edb8f6cd778e6c",
+      "checked_at_utc": "2026-11-07T18:51:38.209475+00:00"
+    },
+    "619": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "13d89363c0784850e9bf18008be9c71f8c97411a6cd34ea8d3e6fe93735f0e98",
+      "checked_at_utc": "2026-11-07T18:51:39.755446+00:00"
+    },
+    "618": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "f0e8aac7eb2496743571de5e4a210420cd606e5ab0c2eb12d8c4aa5f8a8ae845",
+      "checked_at_utc": "2026-11-07T18:51:41.298147+00:00"
+    },
+    "617": {
+      "source_tracks": 40,
+      "recovered": 0,
+      "source_sha256": "1796defee0aa541f4332ef3dfc7582ffa5b257b14816fb0464f11828f215ccfe",
+      "checked_at_utc": "2026-11-07T18:51:42.884275+00:00"
+    },
+    "616": {
+      "source_tracks": 32,
+      "recovered": 0,
+      "source_sha256": "6a280c774178a5703be982e57741c0bf97fb32e42c29c94aa4bb1e44a94a7c3b",
+      "checked_at_utc": "2026-11-07T18:51:44.439703+00:00"
+    },
+    "615": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "632e086e94585ddf46fa6d95373d43e74b894082f674f1e7554e3297b58abfc4",
+      "checked_at_utc": "2026-11-07T18:51:45.990572+00:00"
+    },
+    "614": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "fb8bb8d9de61da44d1e43d4d63533e9cd48e50b2b2dabec9ccece620ce211278",
+      "checked_at_utc": "2026-11-07T18:51:47.540654+00:00"
+    },
+    "613": {
+      "source_tracks": 21,
+      "recovered": 0,
+      "source_sha256": "d811ab80b7b84c4d59d82b2a61b0373abf175b779b15a8e3f643b021c3067b59",
+      "checked_at_utc": "2026-11-07T18:51:49.104191+00:00"
+    },
+    "612": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "ddbfae6f9aa7fb5890e151207b546fcd11dd5f49ece723130ff4a6ad788f3630",
+      "checked_at_utc": "2026-11-07T18:51:50.683668+00:00"
+    },
+    "611": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "ffb6355a57d6ab767d5673d77311d42c4bd2cfd03cff092c645f0abd61f5967b",
+      "checked_at_utc": "2026-11-07T18:51:52.224601+00:00"
+    },
+    "610": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "73d3c6676c63070bfc15fc8d27cae7057cf2a1372aa15e37c9f45fc125b13265",
+      "checked_at_utc": "2026-11-07T18:51:53.774209+00:00"
+    },
+    "609": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "331e84f3f47aa0b350361684cfd2d59701a7616ed6b812a74ac59ae80b1856b5",
+      "checked_at_utc": "2026-11-07T18:51:55.335042+00:00"
+    },
+    "608": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "5f5a051d1dfa44fb08f951f65f3000add38e2128a6cae918f3f564e03b2a7b1d",
+      "checked_at_utc": "2026-11-07T18:51:56.886541+00:00"
+    },
+    "607": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "86b9f5be8686c0a2fc3b0e4c3286209b4168542fe85a1241cda392f4fb39bbbb",
+      "checked_at_utc": "2026-11-07T18:51:58.434050+00:00"
+    },
+    "606": {
+      "source_tracks": 25,
+      "recovered": 0,
+      "source_sha256": "a338e8dafc2a110634c41dacd93bea1a042d2a2adb8c197d1377f1f448d9eedb",
+      "checked_at_utc": "2026-11-07T18:51:59.981090+00:00"
+    },
+    "605": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "ea5d33981d32aa2fd0af7b216a70029f3b9cf843af8f21bdc917bd1eba54a086",
+      "checked_at_utc": "2026-11-07T18:52:01.550310+00:00"
+    },
+    "604": {
+      "source_tracks": 21,
+      "recovered": 0,
+      "source_sha256": "06f6d665a6dd88cd6f5b1e145b21a028c04b4fc3357cb1bb6abcdd6b789be926",
+      "checked_at_utc": "2026-11-07T18:52:03.105674+00:00"
+    },
+    "603": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "36538b80a13fc5fd457acb3066a77b0ded35d10c7a01c1a853fb1ed4728f57a6",
+      "checked_at_utc": "2026-11-07T18:52:04.657728+00:00"
     }
   },
   "total_recovered": 8,
   "complete": false,
-  "last_checked_at_utc": "2026-11-07T13:07:46.281683+00:00",
+  "last_checked_at_utc": "2026-11-07T18:52:04.657744+00:00",
   "last_batch_verified": 60,
   "last_batch_recovered": 0,
   "last_error": null
