@@ -2492,6 +2492,7 @@ def find_spotify_track(
     # geïdentificeerd als Bobbi Lu. Behoud BEIDE verplichte artiestcredits.
     # Geen algemene naamswissing, geen titel- of versie-ontheffing.
     _v211_guest = v211_guest_credit(artist, title)
+    _v211_had_confirmed_guest = _v211_guest != artist
     if _v211_guest != artist:
         print(f"📝 v211: gecontroleerde volledige gastidentiteit: {artist} → {_v211_guest}")
         artist = _v211_guest
@@ -5043,7 +5044,7 @@ def find_spotify_track(
         if missing_feature_count:
             # v210: de nieuwe v208-haakjesfeat is een expliciet gevraagde
             # volledige samenwerking, nooit een uitnodiging voor solo-fallback.
-            if _v208_had_explicit_parenthesized_guest:
+            if _v208_had_explicit_parenthesized_guest or _v211_had_confirmed_guest:
                 continue
             if (not primary_artist_exact
                     or len(spotify_artists) != 1):
