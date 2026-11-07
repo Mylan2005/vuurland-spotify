@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794057195.1179774,
+  "__v150_next_spotify_round_at": 1794057320.1428156,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -218,6 +218,7 @@
       "the moody blues|||voices in the sky"
     ],
     "big_sonic_heaven": [
+      "humanist|||brother feat dave gahan",
       "fleeting colours|||autumn",
       "herbert & momoko|||babystar",
       "emma anderson|||clusters",
@@ -411,6 +412,7 @@
       "wolf alice|||the last man on earth"
     ],
     "dreampop_radio": [
+      "scott matthews|||place to be",
       "bon iver|||holocene",
       "other lives|||reconfiguration",
       "boy|||hotel",
@@ -509,8 +511,7 @@
       "bill callahan|||riding for the feeling",
       "tennis|||cape dory",
       "andrew bird|||oh no",
-      "cat power|||song to bobby",
-      "luca vasta|||wicked games"
+      "cat power|||song to bobby"
     ],
     "indie_select": [
       "we had to leave|||rain",
@@ -909,17 +910,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794057186.3233953,
-    "mellow_mix": 1794057186.3259158,
-    "big_sonic_heaven": 1794057186.3278308,
-    "radio_x_chilled": 1794057186.329872,
-    "dreampop_radio": 1794057186.3319035,
-    "indie_select": 1794057186.529529,
-    "dkfm_edge": 1794057186.5316234,
+    "vuurland": 1794057199.9152522,
+    "mellow_mix": 1794057199.9178317,
+    "big_sonic_heaven": 1794057199.9583848,
+    "radio_x_chilled": 1794057199.960406,
+    "dreampop_radio": 1794057199.9624493,
+    "indie_select": 1794057199.9645612,
+    "dkfm_edge": 1794057199.966749,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794057186.5337903
+    "dark_edge": 1794057199.9689384
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -10116,10 +10117,10 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "the flaming lips|||waitin for a superman",
   "__last_radio_key_mellow_mix": "the cardigans|||no sleep",
-  "__last_radio_key_big_sonic_heaven": "fleeting colours|||autumn",
+  "__last_radio_key_big_sonic_heaven": "humanist|||brother feat dave gahan",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 6905,
-  "__v146_spotify_budget_slot": 1794057075.8901484,
+  "__v146_spotify_budget_slot": 1794057200.904893,
   "__vuurland_active_playlist_count": 6677,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -38424,7 +38425,8 @@
     "spotify:track:7CCG7aIeTh3HRHfjz3SxQR": "NLC242100437",
     "spotify:track:15HFnp8Rb7jLt2Kyg49mHj": "USA6W1626006",
     "spotify:track:4Cy6hgJGkLsOD1S8x4ysFF": "US2J71104504",
-    "spotify:track:3P9Wzq8Xf4xIyBmL9iq44Y": "USSUB2357010"
+    "spotify:track:3P9Wzq8Xf4xIyBmL9iq44Y": "USSUB2357010",
+    "spotify:track:4FeYX8QKpNA1Nof6XLsMnv": "US38Y2446602"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -80443,7 +80445,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "bon iver|||holocene",
+  "__last_radio_key_dreampop_radio": "scott matthews|||place to be",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -83180,5 +83182,6 @@
   "__match_v35__kids with buns|||stubborn mind": "spotify:track:7CCG7aIeTh3HRHfjz3SxQR",
   "__match_v35__suzanne vega|||12 mortal men": "spotify:track:15HFnp8Rb7jLt2Kyg49mHj",
   "__match_v35__tycho|||dive": "spotify:track:4Cy6hgJGkLsOD1S8x4ysFF",
-  "__match_v35__the shins|||those to come": "spotify:track:3P9Wzq8Xf4xIyBmL9iq44Y"
+  "__match_v35__the shins|||those to come": "spotify:track:3P9Wzq8Xf4xIyBmL9iq44Y",
+  "__match_v35__bon iver|||speyside": "spotify:track:4FeYX8QKpNA1Nof6XLsMnv"
 }
