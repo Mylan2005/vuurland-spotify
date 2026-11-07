@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "tom odell|||heal",
       "novastar|||velvet blue sky",
       "meskerem mees|||the writer",
       "paolo nutini|||shine a light",
@@ -112,10 +113,10 @@
       "beirut|||santa fe",
       "hozier|||work song",
       "kurt vile|||zoom 97",
-      "alex g|||june guitar",
-      "real estate|||pink sky"
+      "alex g|||june guitar"
     ],
     "mellow_mix": [
+      "jon batiste|||fur elise - batiste",
       "pat metheny|||a map of the world",
       "michael kiwanuka|||the rest of me",
       "bob dylan|||most of the time",
@@ -214,10 +215,10 @@
       "the waterboys|||fisherman's blues",
       "greg brown|||just a bum",
       "hurray for the riff raff|||hawkmoon",
-      "shawn colvin|||this must be the place",
-      "jackson browne|||the long way around"
+      "shawn colvin|||this must be the place"
     ],
     "big_sonic_heaven": [
+      "ride|||essaouira",
       "fleeting colours|||autumn",
       "secret shine|||falling again",
       "new german cinema|||water drops",
@@ -316,8 +317,7 @@
       "&tilly|||glass castles",
       "lush|||breeze",
       "softcult|||haunt you still",
-      "the asteroid no 4|||hieroglyphics",
-      "the fauns|||how lost"
+      "the asteroid no 4|||hieroglyphics"
     ],
     "radio_x_chilled": [
       "vance joy|||riptide",
@@ -422,6 +422,7 @@
       "pearl jam|||jeremy live mtv unplugged"
     ],
     "dreampop_radio": [
+      "andrew bird|||oh no",
       "cat power|||song to bobby",
       "luca vasta|||wicked games",
       "sun kil moon|||carry me ohio",
@@ -520,8 +521,7 @@
       "primal scream|||gentle tuesday",
       "dream academy|||life in a northern town",
       "the cure|||lullaby",
-      "r e m|||so central rain i'm sorry",
-      "this mortal coil|||song to the siren"
+      "r e m|||so central rain i'm sorry"
     ],
     "indie_select": [
       "polica|||matty",
@@ -821,6 +821,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "hippo campus|||opportunistic",
       "mystery jets|||half in love with elizabeth",
       "black rivers|||voyager 1",
       "fishing in japan|||been thinking",
@@ -919,22 +920,21 @@
       "red hot chili peppers|||we turn red",
       "velosonics|||songs we used to like",
       "fun lovin' criminals|||i can't get with that",
-      "vanessa da mata|||nao me deixe so remix",
-      "audiobooks|||dance your life away"
+      "vanessa da mata|||nao me deixe so remix"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794031952.0730543,
-    "mellow_mix": 1794031952.0806334,
-    "big_sonic_heaven": 1794031952.086285,
-    "radio_x_chilled": 1794031952.0922022,
-    "dreampop_radio": 1794031952.0966172,
-    "indie_select": 1794031952.1026173,
-    "dkfm_edge": 1794031952.1092913,
+    "vuurland": 1794032025.4360511,
+    "mellow_mix": 1794032025.6868753,
+    "big_sonic_heaven": 1794032025.8914506,
+    "radio_x_chilled": 1794032025.897535,
+    "dreampop_radio": 1794032025.9021087,
+    "indie_select": 1794032025.9081917,
+    "dkfm_edge": 1794032025.9149113,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794031952.1163301
+    "dark_edge": 1794032026.1420577
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2804,6 +2804,7 @@
       "john prine|||all the best",
       "johnny cash|||the man comes around",
       "johnny nash|||i can see clearly now",
+      "jon batiste|||fur elise - batiste",
       "jon brion|||eternal sunshine of the spotless mind",
       "jon redfern|||i love the sun",
       "jonah kagen|||the roads",
@@ -4598,6 +4599,7 @@
       "red house painters|||sundays & holidays",
       "red house painters|||wop-a-din-din",
       "richard ashcroft|||a song for the lovers",
+      "ride|||essaouira",
       "ride|||i came to see the wreck",
       "ride|||kaleidoscope",
       "ride|||twisterella",
@@ -8695,6 +8697,7 @@
       "her|||a change is gonna come",
       "her|||we choose",
       "highschool jacob|||nobody but you",
+      "hippo campus|||opportunistic",
       "hong|||wake up",
       "honne|||forget me not ?",
       "hooverphonic|||eden",
@@ -9747,11 +9750,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "novastar|||velvet blue sky",
-  "__last_radio_key_mellow_mix": "pat metheny|||a map of the world",
-  "__last_radio_key_big_sonic_heaven": "fleeting colours|||autumn",
+  "__last_radio_key_vuurland": "tom odell|||heal",
+  "__last_radio_key_mellow_mix": "jon batiste|||fur elise - batiste",
+  "__last_radio_key_big_sonic_heaven": "ride|||essaouira",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 6506,
+  "__v116_fifo_next_sequence": 6509,
   "__v146_spotify_budget_slot": 1794031953.1332548,
   "__vuurland_active_playlist_count": 6511,
   "__vuurland_active_volume": 1,
@@ -78713,7 +78716,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "cat power|||song to bobby",
+  "__last_radio_key_dreampop_radio": "andrew bird|||oh no",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -80227,7 +80230,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "mystery jets|||half in love with elizabeth",
+  "__last_radio_key_dark_edge": "hippo campus|||opportunistic",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
