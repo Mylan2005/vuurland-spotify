@@ -122,7 +122,7 @@ _OTHER_SEARCHES = {
     ("natalie imbruglia", "leave me alone (portishead mix)"): 'track:"Leave Me Alone" "Natalie Imbruglia" Portishead',
     ("the killers", "mr brightside (live acoustic)"): 'track:"Mr Brightside" "The Killers" acoustic live',
     ("the voxx", "border"): 'track:"Border" "The Voxx"',
-    ("torpus & the art directors", "the story's all the same"): 'track:"The story's all the same" Torpus',
+    ("torpus & the art directors", "the story's all the same"): "track:\"The story's all the same\" Torpus",
 }
 
 
