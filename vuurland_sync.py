@@ -27,7 +27,11 @@ from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
 from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
-from v208_explicit_artist_feature import canonical_explicit_artist_feature as v208_artist_feature
+from v208_explicit_artist_feature import (
+    canonical_explicit_artist_feature as v208_artist_feature,
+    verified_symbolic_plusminus as v208_plusminus_identity,
+    verified_report_search_query as v208_report_query,
+)
 from v207_verified_matcher_metadata import (
     verified_artist_search_name as v207_artist_search_name,
     verified_artist_identity as v207_artist_identity,
@@ -3306,6 +3310,15 @@ def find_spotify_track(
     if search_variant == 1 and re.fullmatch(r"[A-Za-z](?: [A-Za-z]){5,15}", str(search_query_title)):
         query = f'{spotify_search_artist} "{search_query_title}"'
 
+    # v208: vier eerder gerapporteerde missers hebben VERIFIEERBAAR
+    # hetzelfde album op Spotify. Gebruik dat alleen als zoekhint,
+    # enkel op eerste poging, ZONDER een extra Spotify-request.
+    # De bestaande volledige kandidaatvalidatie blijft verplicht.
+    if search_variant == 0:
+        _v208_source_album_query = v208_report_query(artist, title)
+        if _v208_source_album_query:
+            query = _v208_source_album_query
+
     # v142d: eerste poging op Acoustic/Unplugged richten; bij geen match
     # probeert de bestaande retrylogica een bredere zoekopdracht later.
     v142_requested_acoustic = re.search(
@@ -4539,6 +4552,17 @@ def find_spotify_track(
         # De titel, versie, afspeelbaarheid en ambiguïteitsregels blijven intact.
         if (not primary_artist_exact and
                 v207_artist_identity(artist, spotify_primary_artist, title, item.get('name', ''))):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+        # v208: Spotify toont één geverifieerde band uitsluitend als '+/-'.
+        # Dit is alleen dezelfde artiest als de VOLLEDIGE songnaam,
+        # EN het originele album 'Jumping the Tracks' exact overeenkomen.
+        # Geen symbolen- of substringmatch buiten deze twee brontracks.
+        if (not primary_artist_exact and
+                len(spotify_artist_objects) == 1 and
+                v208_plusminus_identity(
+                    artist, title, spotify_artist_objects[0].get('name'),
+                    item.get('name'), (item.get('album') or {}).get('name'))):
             primary_artist_exact = True
             primary_artist_score = 1.0
         # v52.5: intern koppelteken versus spatie in DEZELFDE volledige
