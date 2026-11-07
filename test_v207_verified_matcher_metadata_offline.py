@@ -54,4 +54,12 @@ assert "if wanted_named_variant and spotify_named_variant != wanted_named_varian
 assert 'max_additions_per_round = 1' in sync
 assert '"market": "from_token"' in sync
 
+from v203_matcher_upgrade_requeue import applicable_rules
+assert "v207_fink_uk_exact_title" in applicable_rules("Fink (UK)", "Looking Too Closely")
+assert "v207_giraffe_chinese_full_artist" in applicable_rules("The Giraffe Told Me in My Dream", "Before")
+assert "v207_balthazar_castle_named_version" in applicable_rules("BALTHAZAR", "On a roll (Sand Castle Tapes version)")
+assert not any(x.startswith("v207_") for x in applicable_rules("Fink (UK)", "Looking Too Closely - Live"))
+assert not any(x.startswith("v207_") for x in applicable_rules("BALTHAZAR", "On A Roll"))
+assert not any(x.startswith("v207_") for x in applicable_rules("The Giraffe Told Me in My Dream", "After"))
+
 print("✅ v207: proven artist identity, exact catalog track, Sand Castle Tapes version and all safety gates.")
