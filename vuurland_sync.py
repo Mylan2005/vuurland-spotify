@@ -27,6 +27,11 @@ from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
 from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
+from v207_verified_matcher_metadata import (
+    verified_artist_search_name as v207_artist_search_name,
+    verified_artist_identity as v207_artist_identity,
+    verified_balthazar_castle_version as v207_castle_version,
+)
 
 # =========================
 # INSTELLINGEN
@@ -2957,6 +2962,10 @@ def find_spotify_track(
         else primary_search_artist
     )
 
+    # v207: uitsluitend VOLLEDIG geverifieerde artiestennaam-varianten
+    # voor de zoekhint; kandidaatcontrole blijft onafhankelijk verplicht.
+    spotify_search_artist = v207_artist_search_name(spotify_search_artist)
+
     # Zoek op de actuele Spotify-artiestnaam wanneer een
     # expliciete alias bekend is.
     #
@@ -4516,6 +4525,13 @@ def find_spotify_track(
                 v194_artist_join_key(spotify_primary_artist)):
             primary_artist_exact = True
             primary_artist_score = 1.0
+        # v207: externe bron bevestigt expliciet DEZELFDE volledige artiest-
+        # identiteit, alleen voor de exacte nummers uit de matcher-rapporten.
+        # De titel, versie, afspeelbaarheid en ambiguïteitsregels blijven intact.
+        if (not primary_artist_exact and
+                v207_artist_identity(artist, spotify_primary_artist, title)):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
         # v52.5: intern koppelteken versus spatie in DEZELFDE volledige
         # hoofdartiest is een schrijfvariant, geen andere artiest.
         # Bijvoorbeeld "Warrington Runcorn" en "Warrington-Runcorn".
@@ -5057,6 +5073,13 @@ def find_spotify_track(
         spotify_named_variant = named_variant_label(
             item.get("name", "")
         )
+
+        v207_exact_castle = v207_castle_version(
+            artist, title, spotify_primary_artist, item.get('name', '')
+        )
+        if v207_exact_castle:
+            spotify_named_variant = wanted_named_variant
+            spotify_version = wanted_version
 
         if (
             wanted_named_variant
