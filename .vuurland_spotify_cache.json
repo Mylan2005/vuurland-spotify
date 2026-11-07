@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794088289.954589,
+  "__v150_next_spotify_round_at": 1794088415.3823652,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794088280.6527643,
-    "mellow_mix": 1794088280.6566849,
-    "big_sonic_heaven": 1794088280.659934,
-    "radio_x_chilled": 1794088280.663429,
-    "dreampop_radio": 1794088280.6665437,
-    "indie_select": 1794088280.6699781,
-    "dkfm_edge": 1794088280.6736126,
+    "vuurland": 1794088294.9378474,
+    "mellow_mix": 1794088294.941674,
+    "big_sonic_heaven": 1794088294.9448445,
+    "radio_x_chilled": 1794088294.948201,
+    "dreampop_radio": 1794088294.9512534,
+    "indie_select": 1794088294.9545684,
+    "dkfm_edge": 1794088294.9581048,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794088280.6773827
+    "dark_edge": 1794088294.961799
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -10329,6 +10329,12 @@
       "title": "Stalingrad",
       "source": "indie_select",
       "failed_at": 1794085774
+    },
+    "k-x-p|||murder": {
+      "artist": "K-X-P",
+      "title": "Murder",
+      "source": "indie_select",
+      "failed_at": 1794088297
     }
   },
   "__v51_radio_unmatched": {
@@ -10702,7 +10708,7 @@
   "__last_radio_key_big_sonic_heaven": "bjork|||5 years",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 7343,
-  "__v146_spotify_budget_slot": 1794088170.6640964,
+  "__v146_spotify_budget_slot": 1794088296.1021638,
   "__vuurland_active_playlist_count": 6850,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -57901,7 +57907,7 @@
     "jurgen ufer|||weg nach haus": 3,
     "i|||moon": 3,
     "freebass|||stalingrad": 3,
-    "k-x-p|||murder": 2,
+    "k-x-p|||murder": 3,
     "cole lloyd|||backwoods": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -58090,7 +58096,8 @@
     "my brilliant beast|||fall away": 1,
     "jurgen ufer|||weg nach haus": 1,
     "i|||moon": 1,
-    "freebass|||stalingrad": 1
+    "freebass|||stalingrad": 1,
+    "k-x-p|||murder": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -85408,5 +85415,6 @@
   "__match_v35__great lake swimmers|||everything is moving so fast": "spotify:track:2kQPDO88LifmW8mDMwis6G",
   "__match_v35__talulah gosh|||talulah gosh radio version": "spotify:track:3bdE4oUH8n5gI3b8SmTDB3",
   "__match_v35__urlaub in polen|||the velvet blues ext version": "spotify:track:1fX2bFUFcyjmXtpEmVNGmI",
-  "__match_v35__the waifs|||lighthouse": "spotify:track:54aDjRpdM3EQUEkFolmsAP"
+  "__match_v35__the waifs|||lighthouse": "spotify:track:54aDjRpdM3EQUEkFolmsAP",
+  "__not_found_v35__k-x-p|||murder": 1794088297
 }
