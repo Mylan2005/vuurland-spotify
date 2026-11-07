@@ -20,24 +20,32 @@ _EXACT_ARTIST_EQUIVALENTS = {
 }
 
 
-def verified_artist_search_name(artist):
+def verified_artist_search_name(artist, title):
     """Only an exact complete source credit has an alternative search form."""
     raw = str(artist or "").strip()
-    return _EXACT_ARTIST_EQUIVALENTS.get(raw.casefold(), raw)
+    if raw.casefold() == "fink (uk)" and str(title or "").strip().casefold() == "looking too closely":
+        return "Fink"
+    if (raw.casefold() == "the giraffe told me in my dream"
+            and str(title or "").strip().casefold() == "before"):
+        return "我夢見長頸鹿對我說"
+    return raw
 
 
-def verified_artist_identity(source_artist, spotify_primary, source_title):
+def verified_artist_identity(source_artist, spotify_primary, source_title, spotify_title):
     """A narrowly source-verified name equivalence, not a substring bypass."""
     raw = str(source_artist or "").strip().casefold()
     candidate = str(spotify_primary or "").strip().casefold()
     requested = str(source_title or "").strip().casefold()
+    catalog_title = str(spotify_title or "").strip().casefold()
     expected = _EXACT_ARTIST_EQUIVALENTS.get(raw)
     if not expected or expected.casefold() != candidate:
         return False
     # Only report-verified original track contexts, not every future recording
     # of the same artist with a short or ambiguous title.
-    return (raw == "fink (uk)" and requested == "looking too closely") or (
+    return (raw == "fink (uk)" and requested == "looking too closely"
+            and catalog_title == "looking too closely") or (
         raw == "the giraffe told me in my dream" and requested == "before"
+        and catalog_title == "before"
     )
 
 
