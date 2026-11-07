@@ -9,6 +9,7 @@ on:
       - 'v207_verified_matcher_metadata.py'
       - 'v208_explicit_artist_feature.py'
       - 'v209_verified_source_title.py'
+      - 'test_v210_hard_version_credit_gates_offline.py'
       - 'test_v209_verified_source_title_offline.py'
       - 'test_v208_explicit_artist_feature_offline.py'
       - 'test_v207_verified_matcher_metadata_offline.py'
@@ -98,6 +99,7 @@ jobs:
           python test_v207_verified_matcher_metadata_offline.py
           python test_v208_explicit_artist_feature_offline.py
           python test_v209_verified_source_title_offline.py
+          python test_v210_hard_version_credit_gates_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v206_duyster_historische_audit_offline.py
           python test_v159_playlist_rebuild_offline.py
