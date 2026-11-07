@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794010780.929384,
+  "__v150_next_spotify_round_at": 1794010905.915291,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "jimi hendrix|||the wind cries mary"
     ],
     "dreampop_radio": [
+      "marlon williams|||dark child",
       "the national|||slow show",
       "paula cole|||where have all the cowboys gone?",
       "damien jurado|||trials",
@@ -436,7 +437,6 @@
       "fink|||yesterday was hard on all of us",
       "sumie|||let you go",
       "wilco|||what light",
-      "marlon williams|||dark child",
       "new musik|||on islands",
       "inspiral carpets|||move",
       "the smiths|||i know it's over",
@@ -626,6 +626,7 @@
       "kate pierson|||mister sister"
     ],
     "dkfm_edge": [
+      "bad light|||little misery",
       "dreamwheel|||redeemer",
       "day aches|||lavender",
       "shrine|||sorrow",
@@ -724,8 +725,7 @@
       "shrine|||distant",
       "mayzie oceans|||mess you up",
       "she's in parties|||ritual",
-      "mo dotti|||really wish",
-      "thelma's dream|||sofia"
+      "mo dotti|||really wish"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794010772.2416363,
-    "mellow_mix": 1794010772.247657,
-    "big_sonic_heaven": 1794010772.250977,
-    "radio_x_chilled": 1794010772.2559736,
-    "dreampop_radio": 1794010772.2593167,
-    "indie_select": 1794010772.2634914,
-    "dkfm_edge": 1794010772.2685187,
+    "vuurland": 1794010785.5348933,
+    "mellow_mix": 1794010785.5410535,
+    "big_sonic_heaven": 1794010785.5446236,
+    "radio_x_chilled": 1794010785.548592,
+    "dreampop_radio": 1794010785.5516334,
+    "indie_select": 1794010785.5555184,
+    "dkfm_edge": 1794010785.7305243,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794010772.273607
+    "dark_edge": 1794010785.73516
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7481,6 +7481,7 @@
       "bad bloom|||remnant",
       "bad charm|||shorty",
       "bad light|||cyanide",
+      "bad light|||little misery",
       "bad light|||lorena",
       "bad light|||portrait",
       "bathe alone|||gemini edit",
@@ -9390,6 +9391,14 @@
       "failed_at": 1794001488,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "mint julep|||all that we'll ever be": {
+      "artist": "Mint Julep",
+      "title": "All That We'll Ever Be",
+      "source": "big_sonic_heaven",
+      "failed_at": 1794010787,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -9400,8 +9409,8 @@
   "__last_radio_key_mellow_mix": "elton john|||country comfort",
   "__last_radio_key_big_sonic_heaven": "chris & cosey|||exotika",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 6194,
-  "__v146_spotify_budget_slot": 1794010661.5994341,
+  "__v116_fifo_next_sequence": 6195,
+  "__v146_spotify_budget_slot": 1794010786.5555196,
   "__vuurland_active_playlist_count": 6386,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -54571,7 +54580,7 @@
     "coldshoes andrew marrah|||formation": 5,
     "phosphene|||wire": 5,
     "simon & garfunkel|||for emily wherever i may find her live": 5,
-    "mint julep|||all that we'll ever be": 4,
+    "mint julep|||all that we'll ever be": 5,
     "the mynabirds|||one foot": 3,
     "hollow coves|||heatwave": 3,
     "young man|||unfair": 3,
@@ -77344,7 +77353,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the national|||slow show",
+  "__last_radio_key_dreampop_radio": "marlon williams|||dark child",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -78844,7 +78853,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "dreamwheel|||redeemer",
+  "__last_radio_key_dkfm_edge": "bad light|||little misery",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
