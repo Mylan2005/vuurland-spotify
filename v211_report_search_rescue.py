@@ -113,3 +113,36 @@ def mint_julep_same_single(artist: str, title: str, spotify_artist: str,
             "all we'll ever be", "wildfire",
         }
     )
+
+# Only FIRST-search hints for the six cases whose exact Spotify catalog
+# recording could not be independently confirmed. Never auto-approve matches.
+_OTHER_SEARCHES = {
+    ("dead can dance", "eleusis"): 'track:"Eleusis" "Dead Can Dance"',
+    ("grizzly bear", "boy from school (hot chip cover)"): 'track:"Boy From School" "Grizzly Bear"',
+    ("natalie imbruglia", "leave me alone (portishead mix)"): 'track:"Leave Me Alone" "Natalie Imbruglia" Portishead',
+    ("the killers", "mr brightside (live acoustic)"): 'track:"Mr Brightside" "The Killers" acoustic live',
+    ("the voxx", "border"): 'track:"Border" "The Voxx"',
+    ("torpus & the art directors", "the story's all the same"): 'track:"The story''s all the same" Torpus',
+}
+
+
+def unconfirmed_song_search(artist, title):
+    """Search hint ONLY, not evidence of catalog availability."""
+    return _OTHER_SEARCHES.get(_key(artist, title))
+
+
+def special_requested_version_is_safe(artist, title, spotify_title, spotify_album,
+                                      spotify_version):
+    """No studio substitution for specific live/acoustic or named remix."""
+    import re
+    requested = _key(artist, title)
+    text = " ".join((str(spotify_title or ""), str(spotify_album or ""))).casefold()
+    if requested == ("the killers", "mr brightside (live acoustic)"):
+        return bool(re.search(r"\blive\b", text)
+                    and re.search(r"\bacoustic\b", text)
+                    and spotify_version in {"live", "acoustic"})
+    if requested == ("natalie imbruglia", "leave me alone (portishead mix)"):
+        return bool(re.search(r"\bportishead\b", text)
+                    and re.search(r"\b(?:mix|remix)\b", text)
+                    and spotify_version in {"mix", "remix"})
+    return True
