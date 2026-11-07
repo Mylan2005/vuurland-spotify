@@ -6,6 +6,8 @@ on:
       - 'vuurland_sync.py'
       - 'v194_matcher_metadata.py'
       - 'v200_verified_catalog_titles.py'
+      - 'v207_verified_matcher_metadata.py'
+      - 'test_v207_verified_matcher_metadata_offline.py'
       - 'v202_auto_matcher_triage.py'
       - 'v203_matcher_upgrade_requeue.py'
       - 'v204_spotify_dedup_review.py'
@@ -89,6 +91,7 @@ jobs:
           python test_v203_matcher_upgrade_requeue_offline.py
           python test_v204_spotify_dedup_offline.py
           python test_v205_lifetime_backup_offline.py
+          python test_v207_verified_matcher_metadata_offline.py
           python test_duyster_weekly_update_offline.py
           python test_v206_duyster_historische_audit_offline.py
           python test_v159_playlist_rebuild_offline.py
