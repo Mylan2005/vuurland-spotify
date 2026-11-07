@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794015744.883064,
+  "__v150_next_spotify_round_at": 1794015868.3610237,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "james|||sit down 2meter session"
     ],
     "dreampop_radio": [
+      "honig|||golden circle",
       "lily & madeleine|||i've got freedom",
       "the war on drugs|||lost in the dream",
       "sharon van etten|||one day",
@@ -520,8 +521,7 @@
       "tobias jesso jr|||without you",
       "bonnie prince billy|||goodbye dear old stepstone",
       "frightened rabbit|||if you were me",
-      "the elwins|||forgetful assistance",
-      "noel gallagher's high flying birds|||riverman"
+      "the elwins|||forgetful assistance"
     ],
     "indie_select": [
       "telefis|||falun gong dancer with jah wobble",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794015735.1962402,
-    "mellow_mix": 1794015735.2013862,
-    "big_sonic_heaven": 1794015735.2047856,
-    "radio_x_chilled": 1794015735.2088656,
-    "dreampop_radio": 1794015735.2117126,
-    "indie_select": 1794015735.2152784,
-    "dkfm_edge": 1794015735.2196965,
+    "vuurland": 1794015748.190016,
+    "mellow_mix": 1794015748.19524,
+    "big_sonic_heaven": 1794015748.198626,
+    "radio_x_chilled": 1794015748.2027109,
+    "dreampop_radio": 1794015748.2055879,
+    "indie_select": 1794015748.2091174,
+    "dkfm_edge": 1794015748.2134385,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794015735.3782341
+    "dark_edge": 1794015748.2178562
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -9470,6 +9470,14 @@
       "failed_at": 1794015008,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "hollow coves|||heatwave": {
+      "artist": "Hollow Coves",
+      "title": "Heatwave",
+      "source": "dreampop_radio",
+      "failed_at": 1794015749,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -9481,7 +9489,7 @@
   "__last_radio_key_big_sonic_heaven": "the telescopes|||vanishing lines",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 6270,
-  "__v146_spotify_budget_slot": 1794015625.493164,
+  "__v146_spotify_budget_slot": 1794015748.987871,
   "__vuurland_active_playlist_count": 6416,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -54774,7 +54782,7 @@
     "simon & garfunkel|||for emily wherever i may find her live": 5,
     "mint julep|||all that we'll ever be": 5,
     "the mynabirds|||one foot": 5,
-    "hollow coves|||heatwave": 4,
+    "hollow coves|||heatwave": 5,
     "young man|||unfair": 3,
     "stephen duffy & the lilac time|||so far away": 3,
     "93millionmilesfromthesun|||slowdive": 3,
@@ -77669,7 +77677,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "lily & madeleine|||i've got freedom",
+  "__last_radio_key_dreampop_radio": "honig|||golden circle",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
