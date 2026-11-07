@@ -27,6 +27,7 @@ from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
 from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
+from v208_explicit_artist_feature import canonical_explicit_artist_feature as v208_artist_feature
 from v207_verified_matcher_metadata import (
     verified_artist_search_name as v207_artist_search_name,
     verified_artist_identity as v207_artist_identity,
@@ -2457,6 +2458,14 @@ def find_spotify_track(
     if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
         print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
         return None
+
+    # v208: een expliciet haakjes-feature is een VERPLICHTE tweede artiest.
+    # Alleen vormcorrectie; laat de bestaande artiest-/titel-/versietoets
+    # intact. Originele v101-cache- en bronidentiteit zijn al vastgelegd.
+    _v208_feature_artist = v208_artist_feature(artist)
+    if _v208_feature_artist != artist:
+        print(f"📝 v208: volledige featuring-credit behouden: {artist} → {_v208_feature_artist}")
+        artist = _v208_feature_artist
 
     # v194: generieke en controleerbare RadioBox-metadata-correcties.
     # De ORIGINELE item-/cache-key en bron blijven onveranderd. De schone
