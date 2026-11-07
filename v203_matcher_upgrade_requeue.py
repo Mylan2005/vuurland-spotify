@@ -22,6 +22,7 @@ MATCHER_RETRY_RULES = (
     "v207_fink_uk_exact_title",
     "v207_giraffe_chinese_full_artist",
     "v207_balthazar_castle_named_version",
+    "v208_parenthesized_feature",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -60,6 +61,11 @@ def applicable_rules(artist, title):
     if verified_balthazar_castle_version(
             artist, title, "Balthazar", "On A Roll - Sand Castle Tapes"):
         hits.append("v207_balthazar_castle_named_version")
+    # Bron en Spotify bevestigen UNKLE + Ian Brown voor Be There.
+    # Alleen deze bewezen eerdere misser krijgt een beheerste FIFO-herkansing.
+    if (artist.strip().casefold() == "unkle (feat. ian brown)"
+            and title.strip().casefold() == "be there"):
+        hits.append("v208_parenthesized_feature")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
