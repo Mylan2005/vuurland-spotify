@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794036933.6211736,
+  "__v150_next_spotify_round_at": 1794037060.9058547,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794036925.7966237,
-    "mellow_mix": 1794036925.804796,
-    "big_sonic_heaven": 1794036925.8107736,
-    "radio_x_chilled": 1794036925.817112,
-    "dreampop_radio": 1794036925.8216999,
-    "indie_select": 1794036925.828043,
-    "dkfm_edge": 1794036925.8351398,
+    "vuurland": 1794036940.678322,
+    "mellow_mix": 1794036940.6863217,
+    "big_sonic_heaven": 1794036940.6922631,
+    "radio_x_chilled": 1794036940.6985013,
+    "dreampop_radio": 1794036940.7030745,
+    "indie_select": 1794036940.7093983,
+    "dkfm_edge": 1794036940.7164457,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794036925.8425689
+    "dark_edge": 1794036940.7238317
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -9833,8 +9833,8 @@
   "__last_radio_key_big_sonic_heaven": "jahrund|||delirium",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 6583,
-  "__v146_spotify_budget_slot": 1794036814.454462,
-  "__vuurland_active_playlist_count": 6536,
+  "__v146_spotify_budget_slot": 1794036941.7569156,
+  "__vuurland_active_playlist_count": 6537,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794034398,
@@ -12421,6 +12421,7 @@
     "foo fighters|||everlong",
     "foo fighters|||everlong acoustic",
     "foo fighters|||home",
+    "foo fighters|||next year",
     "foo fighters|||times like these",
     "foo fighters|||times like these acoustic",
     "ford chupik|||in my room alone",
@@ -19465,6 +19466,7 @@
     "spotify:track:1Wm5RExsdlZdOiAlm8o13E",
     "spotify:track:1WmU3Ub6nCef9OSRjeZONV",
     "spotify:track:1WvInhbItBzIuuVpQIXgPP",
+    "spotify:track:1WwWjG2FGbBK6IkBBTknao",
     "spotify:track:1X0WrYiHH8P6miOiIDTWxf",
     "spotify:track:1X937gcn6Bub06IdNOvrfS",
     "spotify:track:1XHTJ2n4ajw9dDzuPGY4Rm",
@@ -30511,6 +30513,7 @@
     "USRW30700018",
     "USRW30900002",
     "USRW39900007",
+    "USRW39900009",
     "USRXL1000128",
     "USRXL1100170",
     "USRY10262007",
@@ -37564,7 +37567,8 @@
     "spotify:track:6g4DgASUwDFOzfqIRsv2GD": "QMMZN1300561",
     "spotify:track:3NRBslKOgA59nDDT2oGFn4": "QZES91991668",
     "spotify:track:4rylUVBblCUdmtDuYql6oI": "USRE10900214",
-    "spotify:track:1w7NpCjw4YaWSYopQ61hTl": "GBBTF9200077"
+    "spotify:track:1w7NpCjw4YaWSYopQ61hTl": "GBBTF9200077",
+    "spotify:track:1WwWjG2FGbBK6IkBBTknao": "USRW39900009"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -68407,6 +68411,7 @@
       "foo fighters|||everlong",
       "foo fighters|||everlong acoustic",
       "foo fighters|||home",
+      "foo fighters|||next year",
       "foo fighters|||times like these",
       "foo fighters|||times like these acoustic",
       "forest fire|||fortune teller",
@@ -70967,6 +70972,7 @@
       "spotify:track:1WNM7dOZMZXNAuUvRfT4Gh",
       "spotify:track:1WYBZ6QJXmjxatLRwBwAZT",
       "spotify:track:1WYEDcS7WGjv0rG7rmMX3o",
+      "spotify:track:1WwWjG2FGbBK6IkBBTknao",
       "spotify:track:1X0WrYiHH8P6miOiIDTWxf",
       "spotify:track:1X937gcn6Bub06IdNOvrfS",
       "spotify:track:1XnPVbzLhuBv0sHaCTgyoi",
@@ -75567,6 +75573,7 @@
       "USRW30700018",
       "USRW30900002",
       "USRW39900007",
+      "USRW39900009",
       "USRXL1000128",
       "USRXL1100170",
       "USRY10262007",
@@ -78628,7 +78635,8 @@
       "spotify:track:6g4DgASUwDFOzfqIRsv2GD": "QMMZN1300561",
       "spotify:track:3NRBslKOgA59nDDT2oGFn4": "QZES91991668",
       "spotify:track:4rylUVBblCUdmtDuYql6oI": "USRE10900214",
-      "spotify:track:1w7NpCjw4YaWSYopQ61hTl": "GBBTF9200077"
+      "spotify:track:1w7NpCjw4YaWSYopQ61hTl": "GBBTF9200077",
+      "spotify:track:1WwWjG2FGbBK6IkBBTknao": "USRW39900009"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -81592,5 +81600,6 @@
   "__match_v35__sgo|||dismiss everything sweet nauseas": "spotify:track:3NRBslKOgA59nDDT2oGFn4",
   "__not_found_v35__the voxx|||border": 1794036561,
   "__match_v35__neil young|||dont let it bring you down": "spotify:track:4rylUVBblCUdmtDuYql6oI",
-  "__match_v35__sugarcubes|||sick for toys": "spotify:track:1w7NpCjw4YaWSYopQ61hTl"
+  "__match_v35__sugarcubes|||sick for toys": "spotify:track:1w7NpCjw4YaWSYopQ61hTl",
+  "__match_v35__foo fighters|||next year": "spotify:track:1WwWjG2FGbBK6IkBBTknao"
 }
