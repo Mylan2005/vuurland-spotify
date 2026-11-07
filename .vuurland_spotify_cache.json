@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794015003.5674303,
+  "__v150_next_spotify_round_at": 1794015126.5374424,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -626,6 +626,7 @@
       "tv on the radio|||happy idiot"
     ],
     "dkfm_edge": [
+      "deafcult|||chemicals",
       "daydream twins|||gleaming",
       "wires to the temples|||smeared/aura",
       "supertanker|||made of light",
@@ -724,8 +725,7 @@
       "trauma ray|||iso",
       "decay|||scary eyes",
       "mo dotti|||late august early september",
-      "softlightsymphony|||circling",
-      "thermal|||18"
+      "softlightsymphony|||circling"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794014993.6765182,
-    "mellow_mix": 1794014993.6817324,
-    "big_sonic_heaven": 1794014993.6851451,
-    "radio_x_chilled": 1794014993.6891475,
-    "dreampop_radio": 1794014993.6919355,
-    "indie_select": 1794014993.695549,
-    "dkfm_edge": 1794014993.699808,
+    "vuurland": 1794015006.2085848,
+    "mellow_mix": 1794015006.2138329,
+    "big_sonic_heaven": 1794015006.217272,
+    "radio_x_chilled": 1794015006.2213244,
+    "dreampop_radio": 1794015006.2241058,
+    "indie_select": 1794015006.2276852,
+    "dkfm_edge": 1794015006.3874276,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794014993.7042124
+    "dark_edge": 1794015006.3919218
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7607,6 +7607,7 @@
       "dead leaf echo|||another breath",
       "dead leaf echo|||call",
       "dead leaf echo|||dream orphans",
+      "deafcult|||chemicals",
       "deafcult|||sleep",
       "deafcult|||the well",
       "deary|||aurelia",
@@ -9449,6 +9450,14 @@
       "failed_at": 1794010787,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "the mynabirds|||one foot": {
+      "artist": "The Mynabirds",
+      "title": "One Foot",
+      "source": "dreampop_radio",
+      "failed_at": 1794015008,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -9459,8 +9468,8 @@
   "__last_radio_key_mellow_mix": "daniel lanois|||jolie louise",
   "__last_radio_key_big_sonic_heaven": "silk|||auralux",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 6257,
-  "__v146_spotify_budget_slot": 1794014884.1950617,
+  "__v116_fifo_next_sequence": 6258,
+  "__v146_spotify_budget_slot": 1794015007.177457,
   "__vuurland_active_playlist_count": 6412,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -54736,7 +54745,7 @@
     "phosphene|||wire": 5,
     "simon & garfunkel|||for emily wherever i may find her live": 5,
     "mint julep|||all that we'll ever be": 5,
-    "the mynabirds|||one foot": 4,
+    "the mynabirds|||one foot": 5,
     "hollow coves|||heatwave": 3,
     "young man|||unfair": 3,
     "stephen duffy & the lilac time|||so far away": 3,
@@ -79116,7 +79125,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "daydream twins|||gleaming",
+  "__last_radio_key_dkfm_edge": "deafcult|||chemicals",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
