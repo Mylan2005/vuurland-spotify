@@ -9,6 +9,12 @@ import time
 from v194_matcher_metadata import canonical_artist, canonical_title
 from v200_verified_catalog_titles import verified_catalog_title
 from v208_explicit_artist_feature import verified_report_album_hint
+from v211_report_search_rescue import (
+    album_hint as v211_album_hint,
+    confirmed_guest_credit as v211_confirmed_guest,
+    mint_julep_catalog_search_title as v211_mint_title,
+    unconfirmed_song_search as v211_unconfirmed_query,
+)
 from v209_verified_source_title import verified_emily_live_source_title
 from v207_verified_matcher_metadata import (
     verified_artist_search_name,
@@ -28,6 +34,10 @@ MATCHER_RETRY_RULES = (
     "v208_plusminus_exact_album_artist",
     "v208_verified_album_query",
     "v209_emily_live_exact_source_spelling",
+    "v211_verified_original_album_search",
+    "v211_verified_lucy_ryan_artist",
+    "v211_verified_mint_julep_single",
+    "v211_unconfirmed_catalog_safe_search",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -80,6 +90,17 @@ def applicable_rules(artist, title):
         hits.append("v208_verified_album_query")
     if verified_emily_live_source_title(artist, title) != title.strip():
         hits.append("v209_emily_live_exact_source_spelling")
+    # v211: alleen de 20 oorspronkelijke, echte missers uit rapporten 45/46.
+    # De bronidentiteit komt verplicht uit bewaarde mislukte zoekresultaten.
+    # De herprobeerde song blijft aan de originele FIFO + matcher gebonden.
+    if v211_album_hint(artist, title):
+        hits.append("v211_verified_original_album_search")
+    if v211_confirmed_guest(artist, title) != artist.strip():
+        hits.append("v211_verified_lucy_ryan_artist")
+    if v211_mint_title(artist, title):
+        hits.append("v211_verified_mint_julep_single")
+    if v211_unconfirmed_query(artist, title):
+        hits.append("v211_unconfirmed_catalog_safe_search")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 

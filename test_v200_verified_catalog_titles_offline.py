@@ -24,6 +24,8 @@ guard = source[i:j]
 assert "primary_artist_exact" in guard
 assert "wanted_version == spotify_version" in guard
 assert "v200_verified_catalog_title(" in guard
-assert "or truncated_title_match" in source[j:j+150]
+# v211 voegt alleen een nieuwe exacte variant TOE vóór de bestaande regel.
+# De structurele prioriteitsketen moet de oude veilige controles behouden.
+assert "or truncated_title_match" in source[j:j+450]
 assert "max_additions_per_round = 1" in source
 print("✅ v200: exact Tired Pony rescue and existing version/FIFO safety gates.")

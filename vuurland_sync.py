@@ -27,6 +27,14 @@ from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
 from v200_verified_catalog_titles import verified_catalog_title as v200_verified_catalog_title
+from v211_report_search_rescue import (
+    safer_album_query as v211_album_query,
+    unconfirmed_song_search as v211_unconfirmed_search,
+    special_requested_version_is_safe as v211_version_guard,
+    confirmed_guest_credit as v211_guest_credit,
+    mint_julep_catalog_search_title as v211_mint_search_title,
+    mint_julep_same_single as v211_mint_same_single,
+)
 from v209_verified_source_title import verified_emily_live_source_title as v209_emily_title
 from v208_explicit_artist_feature import (
     canonical_explicit_artist_feature as v208_artist_feature,
@@ -2480,6 +2488,15 @@ def find_spotify_track(
         print(f"📝 v209: geverifieerde titelspelling, live blijft verplicht: {title} → {_v209_title}")
         title = _v209_title
 
+    # v211: enkel voor Atlas is Lucy Ryan door een externe bron expliciet
+    # geïdentificeerd als Bobbi Lu. Behoud BEIDE verplichte artiestcredits.
+    # Geen algemene naamswissing, geen titel- of versie-ontheffing.
+    _v211_guest = v211_guest_credit(artist, title)
+    _v211_had_confirmed_guest = _v211_guest != artist
+    if _v211_guest != artist:
+        print(f"📝 v211: gecontroleerde volledige gastidentiteit: {artist} → {_v211_guest}")
+        artist = _v211_guest
+
     # v194: generieke en controleerbare RadioBox-metadata-correcties.
     # De ORIGINELE item-/cache-key en bron blijven onveranderd. De schone
     # artiest/titel dienen uitsluitend voor Spotify Search en kandidaatmatch.
@@ -2879,6 +2896,13 @@ def find_spotify_track(
         return raw, None
 
     search_title, title_feature_artist = split_title_feature(title)
+
+    # v211: catalogus gebruikt een andere VOLLEDIGE titel voor exact één
+    # bewezen Mint Julep-single. Uitsluitend zoekhint: originele titel
+    # blijft behouden en matching hieronder eist exact song + album.
+    _v211_catalog_title = v211_mint_search_title(artist, title)
+    if _v211_catalog_title:
+        search_title = _v211_catalog_title
 
     # RadioBox beschrijft de titel ":)" soms als
     # ":) (smiley face)". Voor Spotify Search moet
@@ -3327,6 +3351,15 @@ def find_spotify_track(
         _v208_source_album_query = v208_report_query(artist, title)
         if _v208_source_album_query:
             query = _v208_source_album_query
+
+    # v211: reguliere eerste zoekpoging mag het door de broneigenaar
+    # bevestigde album gebruiken als extra zoekfilter. Geen extra Spotify
+    # Search en geen enkele omzeiling van de strenge kandidaatvalidatie.
+    if search_variant == 0:
+        _v211_targeted_query = (v211_album_query(artist, title)
+                                or v211_unconfirmed_search(artist, title))
+        if _v211_targeted_query:
+            query = _v211_targeted_query
 
     # v142d: eerste poging op Acoustic/Unplugged richten; bij geen match
     # probeert de bestaande retrylogica een bredere zoekopdracht later.
@@ -5011,7 +5044,7 @@ def find_spotify_track(
         if missing_feature_count:
             # v210: de nieuwe v208-haakjesfeat is een expliciet gevraagde
             # volledige samenwerking, nooit een uitnodiging voor solo-fallback.
-            if _v208_had_explicit_parenthesized_guest:
+            if _v208_had_explicit_parenthesized_guest or _v211_had_confirmed_guest:
                 continue
             if (not primary_artist_exact
                     or len(spotify_artists) != 1):
@@ -5059,6 +5092,15 @@ def find_spotify_track(
         )
 
         spotify_version = spotify_candidate_version(item)
+
+        # v211: bij EXACT benoemde studio-/live-/remixwensen is een
+        # cataloguskandidaat pas veilig als ook de SPECIFIEKE versie klopt.
+        # 'Mr Brightside (Live Acoustic)' nooit een elektrisch live-item;
+        # 'Portishead Mix' nooit de gewone Natalie Imbruglia opname.
+        if not v211_version_guard(
+                artist, title, item.get('name', ''),
+                (item.get('album') or {}).get('name', ''), spotify_version):
+            continue
 
         # v210: één bewezen bronspelfout met expliciet '(live)' mag
         # NOOIT aan de gewone studioversie worden gekoppeld, ook als de
@@ -5283,8 +5325,13 @@ def find_spotify_track(
                 spotify_title_base,
             )
         )
+        v211_exact_mint = v211_mint_same_single(
+            artist, title, spotify_primary_artist, item.get('name', ''),
+            (item.get('album') or {}).get('name', '')
+        )
         structural_title_match = (
-            v207_exact_castle
+            v211_exact_mint
+            or v207_exact_castle
             or verified_catalog_variant
             or truncated_title_match
             or incomplete_last_word
