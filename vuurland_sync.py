@@ -2964,7 +2964,7 @@ def find_spotify_track(
 
     # v207: uitsluitend VOLLEDIG geverifieerde artiestennaam-varianten
     # voor de zoekhint; kandidaatcontrole blijft onafhankelijk verplicht.
-    spotify_search_artist = v207_artist_search_name(spotify_search_artist)
+    spotify_search_artist = v207_artist_search_name(spotify_search_artist, title)
 
     # Zoek op de actuele Spotify-artiestnaam wanneer een
     # expliciete alias bekend is.
@@ -4529,7 +4529,7 @@ def find_spotify_track(
         # identiteit, alleen voor de exacte nummers uit de matcher-rapporten.
         # De titel, versie, afspeelbaarheid en ambiguïteitsregels blijven intact.
         if (not primary_artist_exact and
-                v207_artist_identity(artist, spotify_primary_artist, title)):
+                v207_artist_identity(artist, spotify_primary_artist, title, item.get('name', ''))):
             primary_artist_exact = True
             primary_artist_score = 1.0
         # v52.5: intern koppelteken versus spatie in DEZELFDE volledige
