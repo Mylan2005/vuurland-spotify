@@ -53,6 +53,11 @@ allowed = [
     ("Gorillaz", "Silent Running"),
     ("Gorillaz feat. Adeleye Omotayo", "Silent Running"),
     ("Gorillaz", "Happy Dictator"),
+    ("Taylor Swift", "Cardigan"),
+    ("Taylor Swift", "exile"),
+    ("TAYLOR SWIFT", "Willow"),
+    ("Taylor Swift feat. Bon Iver", "exile"),
+    ("Taylor Swift (feat. Bon Iver)", "exile"),
 ]
 for artist, title in allowed:
     assert dark_edge_reject_reason(artist, title) is None, (artist, title)
@@ -76,7 +81,8 @@ blocked_pop = [
     ("Adele", "Someone Like You"),
     ("Billie Eilish", "Birds of a Feather"),
     ("Sia", "Like a River Runs"),
-    ("Taylor Swift", "Cardigan"),
+    ("Taylor Swift feat. Sam Smith", "Cardigan"),
+    ("Taylor Swift feat. Ed Sheeran", "Everything Has Changed"),
     ("The Weeknd", "Blinding Lights"),
     ("Robyn", "Dancing On My Own"),
     ("Coldplay", "My Universe"),
@@ -118,6 +124,8 @@ for artist, title in [
 # could be added without affecting the separately blocked 'Sam Smith'.
 assert "sam smiths" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "sam smith" in DARK_EDGE_BLOCKED_ARTISTS
+assert "taylor swift" in DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS
+assert "taylor swift" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "gorillaz" not in DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS
 assert ("gorillaz", "silent running") in DARK_EDGE_APPROVED_SONGS
 assert "sam smith" not in DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS
@@ -152,6 +160,8 @@ ns = {
         ("Adele", "Someone Like You"),
         ("Unknown Shoegaze Artist", "Beautiful Sky"),
         ("Gorillaz", "El Mañana"),
+        ("Taylor Swift", "Cardigan"),
+        ("Taylor Swift feat. Sam Smith", "Cardigan"),
         ("Gorillaz", "Clint Eastwood"),
         ("Kylie Minogue", "In My Arms"),
         ("Sia", "Like a River Runs"),
@@ -175,6 +185,7 @@ for name in ("v190_is_language_exempt_artist",
 assert ns["get_dark_edge_tracks"]() == [
     ("Muse", "Supermassive Black Hole"),
     ("Gorillaz", "El Mañana"),
+    ("Taylor Swift", "Cardigan"),
     ("Nothing But Thieves", "Real Love Song"),
     ("Spinvis", "Ik wil alleen maar zwemmen"),
     ("Blanco White", "Mano a Mano"),

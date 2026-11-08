@@ -53,6 +53,9 @@ DARK_EDGE_BLOCKED_ARTISTS = frozenset({
 # faalt daarom veilig gesloten voor ONBEKENDE artiesten.
 # Nieuwe indie-artiesten kunnen later na muzikale verificatie worden
 # toegevoegd; geen automatische genreclaims op basis van de artiestnaam.
+# Door gebruiker expliciet toegelaten uitzondering op de strenge Dark Edge-
+# bronselectie. Dit is een muziekvoorkeur, geen claim over het genre.
+# Bestaande blokken voor ongewenste samenwerkingen blijven gelden.
 DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS = frozenset({
     "a perfect circle", "agnes obel", "air", "alt-j", "angel olsen",
     "angus & julia stone", "arcade fire", "arctic monkeys", "aurora",
@@ -82,6 +85,7 @@ DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS = frozenset({
     "this mortal coil", "tindersticks", "toro y moi", "torres",
     "tricky", "tv on the radio", "ulrich schnauss", "warpaint",
     "wild nothing", "wolf alice", "wye oak", "youth lagoon",
+    "taylor swift",  # persoonlijke uitzondering: wél via Dark Edge
     "zola jesus", "harold budd", "nils frahm",
 })
 # Volledige songtitels die de gebruiker binnen een gemengde artiest
