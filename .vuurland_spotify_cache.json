@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794155954.8306284,
+  "__v150_next_spotify_round_at": 1794156079.774745,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -821,6 +821,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "future islands|||balance",
       "phoenix|||1901",
       "bahamas|||all the time",
       "pizzagirl|||seabirds",
@@ -919,22 +920,21 @@
       "velosonics|||love for gold",
       "everything everything|||a fever dream",
       "stakka bo|||great blondino",
-      "the regrettes|||i dare you",
-      "the griswolds|||beware the dog"
+      "the regrettes|||i dare you"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794155945.8404472,
-    "mellow_mix": 1794155945.8445957,
-    "big_sonic_heaven": 1794155945.848141,
-    "radio_x_chilled": 1794155945.8516579,
-    "dreampop_radio": 1794155945.8550367,
-    "indie_select": 1794155945.8586395,
-    "dkfm_edge": 1794155945.8624206,
+    "vuurland": 1794155958.941443,
+    "mellow_mix": 1794155958.9455638,
+    "big_sonic_heaven": 1794155958.9490848,
+    "radio_x_chilled": 1794155958.9528933,
+    "dreampop_radio": 1794155958.956284,
+    "indie_select": 1794155958.9599075,
+    "dkfm_edge": 1794155958.9636526,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794155945.8663282
+    "dark_edge": 1794155959.2057042
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -10003,6 +10003,7 @@
       "fun lovin' criminals|||run daddy run",
       "fur|||angel eyes",
       "future islands|||a dream of you and me",
+      "future islands|||balance",
       "future islands|||light house",
       "g smith|||painkiller",
       "gabby's world|||i admit i'm scared",
@@ -10939,12 +10940,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "so much 4 gravity|||gotta get out of this town": {
-      "artist": "So Much 4 Gravity",
-      "title": "Gotta Get Out Of This Town",
-      "source": "indie_select",
-      "failed_at": 1794069548
-    },
     "the joy formidable|||a minute's silence record store day": {
       "artist": "The Joy Formidable",
       "title": "A minute's silence (Record store day)",
@@ -11618,9 +11613,9 @@
   "__last_radio_key_mellow_mix": "chrissie hynde|||adding the blue",
   "__last_radio_key_big_sonic_heaven": "darksoft|||some things you just know",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 8159,
-  "__v146_spotify_budget_slot": 1794155835.814304,
-  "__vuurland_active_playlist_count": 7261,
+  "__v116_fifo_next_sequence": 8161,
+  "__v146_spotify_budget_slot": 1794155960.9413123,
+  "__vuurland_active_playlist_count": 7262,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794155086,
@@ -14424,6 +14419,7 @@
     "four tet|||melody day - four tet remix",
     "four tet|||teenage birdsong",
     "four tet|||two thousand and seventeen",
+    "fragile animals|||watching the clock",
     "fran healy|||sing me to sleep w/ neko case",
     "francis of delirium|||real love",
     "frank black|||i burn today",
@@ -22475,6 +22471,7 @@
     "spotify:track:1tAFUG3qqxFbccNnC2yQtJ",
     "spotify:track:1tBZgW287YNKFDgAXTby65",
     "spotify:track:1tFlVn4Eui4VsPTa5jlzIx",
+    "spotify:track:1tHH8RLRfhlDvcXzAT8Ziu",
     "spotify:track:1tHcL6hUrXxLelVBcUT6F1",
     "spotify:track:1tLDBychkP96pHT664rJIY",
     "spotify:track:1tLg4ZwpX9RYhgMlAXpe9R",
@@ -28012,6 +28009,7 @@
     "AUGSG1600007",
     "AUGSG1600015",
     "AUGSG1600016",
+    "AUHB22300023",
     "AUHF02124004",
     "AUI442200242",
     "AUIYA2300036",
@@ -42321,7 +42319,8 @@
     "spotify:track:7sQZ46LaQcq8Jd0Ps7wiw6": "QZHN92436617",
     "spotify:track:1m4bo6CTas8pbOiRFSdQAP": "US3DF1622458",
     "spotify:track:4PxzGOH79jcmmldKgoI9sB": "USA360309911",
-    "spotify:track:3m6r7pM9CDEWT2dyFbuhNc": "USUM71915128"
+    "spotify:track:3m6r7pM9CDEWT2dyFbuhNc": "USUM71915128",
+    "spotify:track:1tHH8RLRfhlDvcXzAT8Ziu": "AUHB22300023"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -73473,6 +73472,7 @@
       "foo fighters|||times like these",
       "foo fighters|||times like these acoustic",
       "forest fire|||fortune teller",
+      "fragile animals|||watching the clock",
       "fran healy|||sing me to sleep w/ neko case",
       "francis of delirium|||real love",
       "frank black|||i burn today",
@@ -76896,6 +76896,7 @@
       "spotify:track:1sdRWvmgydC9JgJqxGEjUj",
       "spotify:track:1si2IKFJfzPKHyemnRF29V",
       "spotify:track:1tBZgW287YNKFDgAXTby65",
+      "spotify:track:1tHH8RLRfhlDvcXzAT8Ziu",
       "spotify:track:1tHcL6hUrXxLelVBcUT6F1",
       "spotify:track:1tLDBychkP96pHT664rJIY",
       "spotify:track:1tdarjaWSw6cxpFdLNANuQ",
@@ -79555,6 +79556,7 @@
       "AUGBT2578238",
       "AUGID1400007",
       "AUGNB1300001",
+      "AUHB22300023",
       "AUHF02124004",
       "AUJE31100005",
       "AUJE31600003",
@@ -86455,7 +86457,8 @@
       "spotify:track:7sQZ46LaQcq8Jd0Ps7wiw6": "QZHN92436617",
       "spotify:track:1m4bo6CTas8pbOiRFSdQAP": "US3DF1622458",
       "spotify:track:4PxzGOH79jcmmldKgoI9sB": "USA360309911",
-      "spotify:track:3m6r7pM9CDEWT2dyFbuhNc": "USUM71915128"
+      "spotify:track:3m6r7pM9CDEWT2dyFbuhNc": "USUM71915128",
+      "spotify:track:1tHH8RLRfhlDvcXzAT8Ziu": "AUHB22300023"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -88343,7 +88346,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "phoenix|||1901",
+  "__last_radio_key_dark_edge": "future islands|||balance",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -90220,5 +90223,6 @@
   "__match_v35__tennis|||ladies don't play guitar": "spotify:track:1m4bo6CTas8pbOiRFSdQAP",
   "__match_v35__neko case|||i wish i was the moon": "spotify:track:4PxzGOH79jcmmldKgoI9sB",
   "__match_v35__nirvana|||polly unplugged": "spotify:track:3m6r7pM9CDEWT2dyFbuhNc",
-  "__not_found_v35__take it easy|||bluelies": 1794155836
+  "__not_found_v35__take it easy|||bluelies": 1794155836,
+  "__match_v35__fragile animals|||watching the clock": "spotify:track:1tHH8RLRfhlDvcXzAT8Ziu"
 }
