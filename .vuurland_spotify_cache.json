@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794159952.9305472,
+  "__v150_next_spotify_round_at": 1794160078.6266448,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -626,6 +626,7 @@
       "a certain ratio|||bootsy swingfire mix"
     ],
     "dkfm_edge": [
+      "self love club|||hours",
       "rezn|||instinct",
       "cigarettes for breakfast|||solitaire",
       "wallice|||why do you love me?",
@@ -724,8 +725,7 @@
       "mo dotti|||never comes around",
       "quiet houses|||what my heart is for",
       "fawn|||regress",
-      "mariin k|||face 2 face",
-      "shedfromthebody|||titania"
+      "mariin k|||face 2 face"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794159944.2786186,
-    "mellow_mix": 1794159944.2830741,
-    "big_sonic_heaven": 1794159944.2868764,
-    "radio_x_chilled": 1794159944.290598,
-    "dreampop_radio": 1794159944.2941518,
-    "indie_select": 1794159944.2979374,
-    "dkfm_edge": 1794159944.3018887,
+    "vuurland": 1794159958.041456,
+    "mellow_mix": 1794159958.0458663,
+    "big_sonic_heaven": 1794159958.0496013,
+    "radio_x_chilled": 1794159958.0532887,
+    "dreampop_radio": 1794159958.0567763,
+    "indie_select": 1794159958.0605593,
+    "dkfm_edge": 1794159958.0645769,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794159944.3059723
+    "dark_edge": 1794159958.0686533
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11190,6 +11190,12 @@
       "title": "Bluelies",
       "source": "dkfm_edge",
       "failed_at": 1794155836
+    },
+    "julia a noack|||things break": {
+      "artist": "Julia A. Noack",
+      "title": "Things Break",
+      "source": "dreampop_radio",
+      "failed_at": 1794159960
     }
   },
   "__v51_radio_unmatched": {
@@ -11659,7 +11665,7 @@
   "__last_radio_key_big_sonic_heaven": "mg x cd jl = martin gore & cliff damavandi|||cross whisper",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 8200,
-  "__v146_spotify_budget_slot": 1794159833.8967853,
+  "__v146_spotify_budget_slot": 1794159959.6114824,
   "__vuurland_active_playlist_count": 7285,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -60677,7 +60683,7 @@
     "shoegazer|||spiral": 3,
     "t a k e r|||taker - jackalope": 3,
     "take it easy|||bluelies": 3,
-    "julia a noack|||things break": 2,
+    "julia a noack|||things break": 3,
     "nathaniel rateliff|||and it's still allright": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -60893,7 +60899,8 @@
     "nick cave|||evil - 'silver alert' remix featuring matt berninger": 1,
     "shoegazer|||spiral": 1,
     "t a k e r|||taker - jackalope": 1,
-    "take it easy|||bluelies": 1
+    "take it easy|||bluelies": 1,
+    "julia a noack|||things break": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -88569,7 +88576,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "rezn|||instinct",
+  "__last_radio_key_dkfm_edge": "self love club|||hours",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -90484,5 +90491,6 @@
   "__match_v35__the radio dept|||sloboda narodu": "spotify:track:0pa1HllpubQWVtilcykmux",
   "__match_v35__massive attack|||splitting the atom": "spotify:track:1r9mGafUiSgumJoRqyLrSt",
   "__match_v35__slow salvation|||here we lie": "spotify:track:6vXY9FawfsVe8KIOxIWxbm",
-  "__match_v35__whitley|||i remember": "spotify:track:1JncZo7a3MPo1StGyfS9oM"
+  "__match_v35__whitley|||i remember": "spotify:track:1JncZo7a3MPo1StGyfS9oM",
+  "__not_found_v35__julia a noack|||things break": 1794159960
 }
