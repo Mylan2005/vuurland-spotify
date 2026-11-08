@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794167814.7407773,
+  "__v150_next_spotify_round_at": 1794167940.9828691,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -626,6 +626,7 @@
       "the boxer rebellion|||don't ever stop"
     ],
     "dkfm_edge": [
+      "night tapes|||loner",
       "the neverminds|||aphrodite",
       "slow salvation|||grow",
       "animal ghosts|||swell",
@@ -724,8 +725,7 @@
       "so totally|||btw",
       "fragile animals|||garden",
       "closedown|||skywards",
-      "momma narrow head|||medicine",
-      "we melt chocolate|||bright off"
+      "momma narrow head|||medicine"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794167806.2742374,
-    "mellow_mix": 1794167806.277646,
-    "big_sonic_heaven": 1794167806.2804992,
-    "radio_x_chilled": 1794167806.2833817,
-    "dreampop_radio": 1794167806.286254,
-    "indie_select": 1794167806.2892435,
-    "dkfm_edge": 1794167806.2923236,
+    "vuurland": 1794167820.5019855,
+    "mellow_mix": 1794167820.5054536,
+    "big_sonic_heaven": 1794167820.5082994,
+    "radio_x_chilled": 1794167820.5111527,
+    "dreampop_radio": 1794167820.5139806,
+    "indie_select": 1794167820.5169528,
+    "dkfm_edge": 1794167820.5201433,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794167806.2955
+    "dark_edge": 1794167820.5233877
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11288,6 +11288,12 @@
       "title": "Wind & Wing(Arakawa River Mix)-Bonus Track",
       "source": "dkfm_edge",
       "failed_at": 1794167066
+    },
+    "swallowtail|||spring guillotine": {
+      "artist": "Swallowtail",
+      "title": "Spring Guillotine",
+      "source": "dkfm_edge",
+      "failed_at": 1794167822
     }
   },
   "__v51_radio_unmatched": {
@@ -11765,7 +11771,7 @@
   "__last_radio_key_big_sonic_heaven": "blaudiss &tilly|||you & them & missing",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 8286,
-  "__v146_spotify_budget_slot": 1794167695.6059163,
+  "__v146_spotify_budget_slot": 1794167821.7405732,
   "__vuurland_active_playlist_count": 7326,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -60958,7 +60964,7 @@
     "sevonaurs|||genuine almost killed rmx": 3,
     "rave down|||staircase paradox - 19-91": 3,
     "plant cell|||wind & wing arakawa river mix -bonus track": 3,
-    "swallowtail|||spring guillotine": 2,
+    "swallowtail|||spring guillotine": 3,
     "d i d|||hotel": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -61180,7 +61186,8 @@
     "the black keys|||go": 1,
     "sevonaurs|||genuine almost killed rmx": 1,
     "rave down|||staircase paradox - 19-91": 1,
-    "plant cell|||wind & wing arakawa river mix -bonus track": 1
+    "plant cell|||wind & wing arakawa river mix -bonus track": 1,
+    "swallowtail|||spring guillotine": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -89025,7 +89032,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "the neverminds|||aphrodite",
+  "__last_radio_key_dkfm_edge": "night tapes|||loner",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -90989,5 +90996,6 @@
   "__not_found_v35__plant cell|||wind & wing arakawa river mix -bonus track": 1794167066,
   "__match_v35__lumari|||in waves": "spotify:track:1TCyRG85qTC8O0v1wUmzkY",
   "__match_v35__willie wright|||nantucket island": "spotify:track:5Cl0T1nwxwxyMnrAXz9uQB",
-  "__match_v35__goat|||hide from the sun": "spotify:track:3M2bnIrNIAkfdGq7fic1EG"
+  "__match_v35__goat|||hide from the sun": "spotify:track:3M2bnIrNIAkfdGq7fic1EG",
+  "__not_found_v35__swallowtail|||spring guillotine": 1794167822
 }
