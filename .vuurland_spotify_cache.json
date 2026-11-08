@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794110258.0263987,
+  "__v150_next_spotify_round_at": 1794110386.0741808,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -626,6 +626,7 @@
       "stars|||one more night"
     ],
     "dkfm_edge": [
+      "cold gawd|||malibu beach house",
       "new age healers|||all wrapped up",
       "paastel|||on promises",
       "human colonies|||kintsukuroi",
@@ -724,8 +725,7 @@
       "pia fraus|||sunny afternoon",
       "cigarettes for breakfast|||seeing stars",
       "keaper|||the painting",
-      "pale waves|||gravity",
-      "sorry dave|||simply disappear"
+      "pale waves|||gravity"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794110250.222931,
-    "mellow_mix": 1794110250.2304976,
-    "big_sonic_heaven": 1794110250.2356336,
-    "radio_x_chilled": 1794110250.2417698,
-    "dreampop_radio": 1794110250.24658,
-    "indie_select": 1794110250.2525785,
-    "dkfm_edge": 1794110250.2591877,
+    "vuurland": 1794110265.4817357,
+    "mellow_mix": 1794110265.4890888,
+    "big_sonic_heaven": 1794110265.4942005,
+    "radio_x_chilled": 1794110265.5001736,
+    "dreampop_radio": 1794110265.5050087,
+    "indie_select": 1794110265.5109777,
+    "dkfm_edge": 1794110265.5177674,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794110250.2660778
+    "dark_edge": 1794110265.5247548
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -10628,6 +10628,12 @@
       "title": "Do Do Do",
       "source": "indie_select",
       "failed_at": 1794108863
+    },
+    "fleeting joys|||hooked into my soul": {
+      "artist": "Fleeting Joys",
+      "title": "Hooked Into My Soul",
+      "source": "big_sonic_heaven",
+      "failed_at": 1794110268
     }
   },
   "__v51_radio_unmatched": {
@@ -11041,7 +11047,7 @@
   "__last_radio_key_big_sonic_heaven": "goodbye|||origami",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 7633,
-  "__v146_spotify_budget_slot": 1794110138.9649363,
+  "__v146_spotify_budget_slot": 1794110267.0323982,
   "__vuurland_active_playlist_count": 6980,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -58771,7 +58777,7 @@
     "bloc party|||lean": 3,
     "giovanni battista pergolesi|||stabat mater dolorosa": 3,
     "hot rocket|||do do do": 3,
-    "fleeting joys|||hooked into my soul": 2,
+    "fleeting joys|||hooked into my soul": 3,
     "hudson|||against the grain": 2,
     "styrofoam featuring ben gibbard|||couches in alleys - styrofoam featuring ben gibbard": 2
   },
@@ -58969,7 +58975,8 @@
     "elbow|||on a day like this": 1,
     "bloc party|||lean": 1,
     "giovanni battista pergolesi|||stabat mater dolorosa": 1,
-    "hot rocket|||do do do": 1
+    "hot rocket|||do do do": 1,
+    "fleeting joys|||hooked into my soul": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -85376,7 +85383,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "new age healers|||all wrapped up",
+  "__last_radio_key_dkfm_edge": "cold gawd|||malibu beach house",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -86952,5 +86959,6 @@
   "__match_v35__roxy music|||to turn you on": "spotify:track:0y74BqFLkaMbhZtywFJ1I4",
   "__match_v35__steve forbert|||song for katrina": "spotify:track:2YatnBCG3LM6JF3Qvrh5AA",
   "__match_v35__chris isaak|||two hearts": "spotify:track:0p7nP5ddNnk9I5v3QoCKYm",
-  "__match_v35__jenny lewis|||melt your heart": "spotify:track:2UbfGu7OgZ8D7w5ynxxDh5"
+  "__match_v35__jenny lewis|||melt your heart": "spotify:track:2UbfGu7OgZ8D7w5ynxxDh5",
+  "__not_found_v35__fleeting joys|||hooked into my soul": 1794110268
 }
