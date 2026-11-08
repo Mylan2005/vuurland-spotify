@@ -1,8 +1,9 @@
 """Conservatieve Dark Edge Radio-filter: geen externe APIs of Spotify-aanvragen.
 
 Er is GEEN lijst meer met toegelaten artiesten: nieuwe indie-acts worden
-niet afgewezen omdat ze onbekend zijn. Popartiesten zijn op zichzelf
-toegestaan: alleen expliciet ongewenste artiesten, dance-/EDM-acts,
+niet afgewezen omdat ze onbekend zijn. Duidelijke commerciële hitparadepop is hier niet welkom; sfeervolle
+alternatieve pop kan wel. Geen onbetrouwbare genre-inferentie uit alleen
+RadioBox-tekst. Expliciet ongewenste artiesten, dance-/EDM-acts,
 punk/metal en herkenbare ongewenste taal/titels worden geweerd.
 Nederlands, Engels en Spaans mogen (bv. sfeervolle indie zoals Blanco White).
 Genre en gezongen taal zijn met alleen RadioBox-metadata niet waterdicht vast te stellen.
@@ -11,16 +12,27 @@ Genre en gezongen taal zijn met alleen RadioBox-metadata niet waterdicht vast te
 import re
 import unicodedata
 
-# Geen algemene popblokkade: Adele, Billie Eilish, Sia, Kylie Minogue,
-# Taylor Swift enz. mogen via Dark Edge als hun nummers elders door de
-# bestaande matcher en taalcontroles geraken. De gebruiker beoordeelt
-# incidenteel minder passende popsongs zelf.
-# Gerichte blokkade van dance-/EDM-acts (zoals Avicii), een persoonlijke
-# uitzondering voor Dua Lipa, en bekende punk-/metalbands.
-# Exacte artiestnamen en expliciete featurings, geen fuzzy artiestmatching.
+# Conservatieve, expliciete Dark Edge-bronpolicy: blokkeer herkenbare
+# commerciële hitparadepop en club-/EDM-acts op basis van VOLLEDIGE artiest-
+# of featuring-credits. Geen globale popban: bv. Gorillaz, Billie Eilish,
+# Adele, Sia, Taylor Swift/Cardigan en onbekende alternatieve acts kunnen
+# passend zijn. Geen genre-API, fuzzy substringverbod of Spotify-extra call.
+# Exacte artiestnamen en expliciete featurings; overige bronnen ongemoeid.
 DARK_EDGE_BLOCKED_ARTISTS = frozenset({
     # Persoonlijke uitsluiting.
     "dua lipa",
+    # Expliciete gebruikerfeedback: Sam Smith past niet in Vuurland via Dark Edge.
+    "sam smith",
+    # Commerciële, duidelijk hitparadegerichte pop: uitsluitend Dark Edge.
+    "ed sheeran", "justin bieber", "shawn mendes", "charlie puth",
+    "maroon 5", "meghan trainor", "katy perry", "ariana grande",
+    "kylie minogue", "britney spears", "backstreet boys",
+    "one direction", "jonas brothers", "selena gomez",
+    "camila cabello", "jason derulo", "harry styles",
+    "ava max", "bebe rexha", "zara larsson", "rita ora",
+    "sabrina carpenter", "tate mcrae", "bruno mars",
+    "lewis capaldi", "james arthur", "benson boone",
+
     # Dance, EDM en mainstream festival-/club-DJ's.
     "afrojack", "alan walker", "alesso", "armin van buuren",
     "avicii", "axwell", "calvin harris", "david guetta",
@@ -90,7 +102,15 @@ def dark_edge_reject_reason(artist, title):
         return "lege artiest/titel"
     # Exacte artiest en expliciet gecrediteerde gasten; GEEN substring-ban
     # (bv. 'sia' mag nooit een deel van een andere artiestnaam raken).
-    credited = re.split(r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*", a)
+    # Parenthesized guests are also mandatory: "Kim Petras (feat. Sam
+    # Smith)" must not slip through the Dark Edge gate. Only parenthesized
+    # explicit credit markers are unwrapped, never arbitrary parentheses.
+    credit_text = re.sub(
+        r"\(\s*(?=(?:feat\.?|ft\.?|featuring|with)\s+)", " ", a
+    )
+    credited = [part.strip(" ()[]") for part in re.split(
+        r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*", credit_text
+    )]
     if a in DARK_EDGE_BLOCKED_ARTISTS or any(
         name.strip() in DARK_EDGE_BLOCKED_ARTISTS for name in credited
     ):
