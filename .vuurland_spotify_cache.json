@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794107318.3114574,
+  "__v150_next_spotify_round_at": 1794107446.9798937,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794107310.900182,
-    "mellow_mix": 1794107310.9075003,
-    "big_sonic_heaven": 1794107310.9125361,
-    "radio_x_chilled": 1794107310.91853,
-    "dreampop_radio": 1794107310.9232674,
-    "indie_select": 1794107310.9290907,
-    "dkfm_edge": 1794107310.9355218,
+    "vuurland": 1794107326.3900018,
+    "mellow_mix": 1794107326.3972719,
+    "big_sonic_heaven": 1794107326.402308,
+    "radio_x_chilled": 1794107326.4081593,
+    "dreampop_radio": 1794107326.4129498,
+    "indie_select": 1794107326.4187944,
+    "dkfm_edge": 1794107326.4253101,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794107311.179043
+    "dark_edge": 1794107326.4321253
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -10603,6 +10603,12 @@
       "title": "Lean",
       "source": "indie_select",
       "failed_at": 1794100672
+    },
+    "giovanni battista pergolesi|||stabat mater dolorosa": {
+      "artist": "Giovanni Battista Pergolesi",
+      "title": "Stabat Mater dolorosa",
+      "source": "mellow_mix",
+      "failed_at": 1794107328
     }
   },
   "__v51_radio_unmatched": {
@@ -11008,7 +11014,7 @@
   "__last_radio_key_big_sonic_heaven": "echo & the bunnymen|||can't be sold",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 7603,
-  "__v146_spotify_budget_slot": 1794107199.2628756,
+  "__v146_spotify_budget_slot": 1794107327.9316583,
   "__vuurland_active_playlist_count": 6971,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -58700,7 +58706,7 @@
     "future islands|||seasons change": 3,
     "elbow|||on a day like this": 3,
     "bloc party|||lean": 3,
-    "giovanni battista pergolesi|||stabat mater dolorosa": 2
+    "giovanni battista pergolesi|||stabat mater dolorosa": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -58894,7 +58900,8 @@
     "punk tv|||wintersample": 1,
     "future islands|||seasons change": 1,
     "elbow|||on a day like this": 1,
-    "bloc party|||lean": 1
+    "bloc party|||lean": 1,
+    "giovanni battista pergolesi|||stabat mater dolorosa": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -86828,5 +86835,6 @@
   "__match_v35__the beatles|||mother nature's son": "spotify:track:6TjUg1cTUzWHbal6yQAi7c",
   "__match_v35__wasia project|||ur so pretty": "spotify:track:1Jt24MPLz6fGXSCTlXTjzF",
   "__match_v35__owel|||razors": "spotify:track:1g32kOEPIcQjoNMnhWt6Jd",
-  "__match_v35__tom petty|||time to move on": "spotify:track:20dt11ZTAtjsfcNJLP9u30"
+  "__match_v35__tom petty|||time to move on": "spotify:track:20dt11ZTAtjsfcNJLP9u30",
+  "__not_found_v35__giovanni battista pergolesi|||stabat mater dolorosa": 1794107328
 }
