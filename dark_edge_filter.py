@@ -21,6 +21,8 @@ import unicodedata
 DARK_EDGE_BLOCKED_ARTISTS = frozenset({
     # Persoonlijke uitsluiting.
     "dua lipa",
+    # Expliciete gebruikerfeedback: Sam Smith past niet in Vuurland via Dark Edge.
+    "sam smith",
     # Dance, EDM en mainstream festival-/club-DJ's.
     "afrojack", "alan walker", "alesso", "armin van buuren",
     "avicii", "axwell", "calvin harris", "david guetta",
