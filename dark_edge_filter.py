@@ -62,7 +62,7 @@ DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS = frozenset({
     "caspian", "cigarettes after sex", "cocteau twins", "cold cave",
     "daughter", "deafheaven", "death cab for cutie", "deerhunter",
     "diiv", "dinosaur jr.", "doves", "dream ivory", "dry cleaning",
-    "echo & the bunnymen", "elbow", "elliott smith", "emily haines",
+    "echo & the bunnymen", "editors", "elbow", "elliott smith", "emily haines",
     "explosions in the sky", "fever ray", "fleet foxes",
     "fontaines d.c.", "foals", "frightened rabbit", "future islands",
     "grizzly bear", "have a nice life", "het zesde metaal",
