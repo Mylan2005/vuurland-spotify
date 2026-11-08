@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794122904.2735207,
+  "__v150_next_spotify_round_at": 1794123032.7813618,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794122896.8616278,
-    "mellow_mix": 1794122896.8707836,
-    "big_sonic_heaven": 1794122896.876866,
-    "radio_x_chilled": 1794122896.883421,
-    "dreampop_radio": 1794122896.8890736,
-    "indie_select": 1794122896.8958652,
-    "dkfm_edge": 1794122896.9031854,
+    "vuurland": 1794122912.199614,
+    "mellow_mix": 1794122912.2085233,
+    "big_sonic_heaven": 1794122912.214625,
+    "radio_x_chilled": 1794122912.221178,
+    "dreampop_radio": 1794122912.2267914,
+    "indie_select": 1794122912.233595,
+    "dkfm_edge": 1794122912.240966,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794122896.9108846
+    "dark_edge": 1794122912.2486317
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -10790,6 +10790,12 @@
       "title": "Lodestar",
       "source": "mellow_mix",
       "failed_at": 1794122530
+    },
+    "dead can dance|||our day will come": {
+      "artist": "Dead Can Dance",
+      "title": "Our Day Will Come",
+      "source": "big_sonic_heaven",
+      "failed_at": 1794122914
     }
   },
   "__v51_radio_unmatched": {
@@ -11219,7 +11225,7 @@
   "__last_radio_key_big_sonic_heaven": "the giraffe told me in my dream|||strolling",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 7780,
-  "__v146_spotify_budget_slot": 1794122785.2130945,
+  "__v146_spotify_budget_slot": 1794122913.7218103,
   "__vuurland_active_playlist_count": 7049,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -59233,7 +59239,7 @@
     "younghearts|||this love": 3,
     "q-burns abstract message|||jennifer thermal mix 1": 3,
     "sarah harmer|||lodestar": 3,
-    "dead can dance|||our day will come": 2,
+    "dead can dance|||our day will come": 3,
     "the drums|||forever and ever amen saint etienne remix": 2,
     "rickie lee jones|||little mysteries": 2,
     "trophy wife|||seven waves": 1
@@ -59439,7 +59445,8 @@
     "stereo mcs|||boy feat jamie cullum album": 1,
     "younghearts|||this love": 1,
     "q-burns abstract message|||jennifer thermal mix 1": 1,
-    "sarah harmer|||lodestar": 1
+    "sarah harmer|||lodestar": 1,
+    "dead can dance|||our day will come": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -87776,5 +87783,6 @@
   "__match_v35__the kinks|||waterloo sunset": "spotify:track:3G0EALIIp5DAeIERxXBHmo",
   "__match_v35__mazzy star|||halah": "spotify:track:6JuEshIRliNXRU1LXctRjZ",
   "__match_v35__paul simon|||mother and child reunion": "spotify:track:5vZ1BKMSLgrxxPYGMR904n",
-  "__not_found_v35__sarah harmer|||lodestar": 1794122530
+  "__not_found_v35__sarah harmer|||lodestar": 1794122530,
+  "__not_found_v35__dead can dance|||our day will come": 1794122914
 }
