@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794108853.886403,
+  "__v150_next_spotify_round_at": 1794108981.2901163,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794108845.4101205,
-    "mellow_mix": 1794108845.4174309,
-    "big_sonic_heaven": 1794108845.4225206,
-    "radio_x_chilled": 1794108845.4283357,
-    "dreampop_radio": 1794108845.4331148,
-    "indie_select": 1794108845.4389286,
-    "dkfm_edge": 1794108845.4454007,
+    "vuurland": 1794108860.7071638,
+    "mellow_mix": 1794108860.7144463,
+    "big_sonic_heaven": 1794108860.7195754,
+    "radio_x_chilled": 1794108860.7254796,
+    "dreampop_radio": 1794108860.7303069,
+    "indie_select": 1794108860.736217,
+    "dkfm_edge": 1794108860.742679,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794108845.452134
+    "dark_edge": 1794108860.7494187
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -10610,6 +10610,12 @@
       "title": "Stabat Mater dolorosa",
       "source": "mellow_mix",
       "failed_at": 1794107328
+    },
+    "hot rocket|||do do do": {
+      "artist": "Hot Rocket",
+      "title": "Do Do Do",
+      "source": "indie_select",
+      "failed_at": 1794108863
     }
   },
   "__v51_radio_unmatched": {
@@ -11023,7 +11029,7 @@
   "__last_radio_key_big_sonic_heaven": "the secret french postcards|||shame",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 7615,
-  "__v146_spotify_budget_slot": 1794108734.824196,
+  "__v146_spotify_budget_slot": 1794108862.221826,
   "__vuurland_active_playlist_count": 6977,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -58740,7 +58746,7 @@
     "elbow|||on a day like this": 3,
     "bloc party|||lean": 3,
     "giovanni battista pergolesi|||stabat mater dolorosa": 3,
-    "hot rocket|||do do do": 2
+    "hot rocket|||do do do": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -58935,7 +58941,8 @@
     "future islands|||seasons change": 1,
     "elbow|||on a day like this": 1,
     "bloc party|||lean": 1,
-    "giovanni battista pergolesi|||stabat mater dolorosa": 1
+    "giovanni battista pergolesi|||stabat mater dolorosa": 1,
+    "hot rocket|||do do do": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -86901,5 +86908,6 @@
   "__match_v35__agnes obel|||it's happening again": "spotify:track:5uE0ggArLjnpwVPEXc36Hx",
   "__match_v35__ducktails|||killin' the vibe": "spotify:track:4NcYXkAAvldlvl7esKz5A3",
   "__match_v35__the veils|||lavinia": "spotify:track:1Tn31wDSYGPyFlKRLLFfq9",
-  "__match_v35__bombay bicycle club|||eat sleep wake nothing but you": "spotify:track:3nClCcBmn9NnrRQkQTkx1J"
+  "__match_v35__bombay bicycle club|||eat sleep wake nothing but you": "spotify:track:3nClCcBmn9NnrRQkQTkx1J",
+  "__not_found_v35__hot rocket|||do do do": 1794108863
 }
