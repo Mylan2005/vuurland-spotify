@@ -92,7 +92,9 @@ def dark_edge_reject_reason(artist, title):
         return "lege artiest/titel"
     # Exacte artiest en expliciet gecrediteerde gasten; GEEN substring-ban
     # (bv. 'sia' mag nooit een deel van een andere artiestnaam raken).
-    credited = re.split(r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*", a)
+    credited = [part.strip(" ()[]") for part in re.split(
+        r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*", a
+    )]
     if a in DARK_EDGE_BLOCKED_ARTISTS or any(
         name.strip() in DARK_EDGE_BLOCKED_ARTISTS for name in credited
     ):
