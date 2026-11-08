@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794168819.5057817,
+  "__v150_next_spotify_round_at": 1794168946.591826,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -218,6 +218,7 @@
       "the church|||to be in your eyes"
     ],
     "big_sonic_heaven": [
+      "talk talk|||living in another world",
       "letting up despite great faults|||dress",
       "echo & the bunnymen|||brussels is haunted",
       "stereolab|||cloud land",
@@ -316,8 +317,7 @@
       "the cure|||piggy in the mirror",
       "pia fraus|||regret everything",
       "fleeting colours|||autumn",
-      "blouse|||into black",
-      "fever ray|||even it out"
+      "blouse|||into black"
     ],
     "radio_x_chilled": [
       "david bowie|||starman",
@@ -524,6 +524,7 @@
       "band of horses|||everything's gonna be undone"
     ],
     "indie_select": [
+      "public service broadcasting|||people let's dance feat eera",
       "the kills|||future starts slow",
       "ryan hemsworth|||here i stand feat ms john soda",
       "owel|||razors",
@@ -622,10 +623,10 @@
       "guards|||ready to go",
       "wild nothing|||drifter",
       "calluna luups|||i just smoke",
-      "death cab for cutie|||i don't know how i survive",
-      "moev|||sadistic years"
+      "death cab for cutie|||i don't know how i survive"
     ],
     "dkfm_edge": [
+      "life on venus|||monochrome",
       "whitelands|||cheer",
       "leaving time|||angel in the sand",
       "anilore|||entangled",
@@ -724,8 +725,7 @@
       "ride|||light in a quiet room",
       "beach vacation|||blurred out feat cathedral bells",
       "spywell|||all around you",
-      "gift|||it's all too fast",
-      "so totally|||btw"
+      "gift|||it's all too fast"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -924,17 +924,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794168811.437762,
-    "mellow_mix": 1794168811.4412496,
-    "big_sonic_heaven": 1794168811.444135,
-    "radio_x_chilled": 1794168811.4471674,
-    "dreampop_radio": 1794168811.450074,
-    "indie_select": 1794168811.4531054,
-    "dkfm_edge": 1794168811.4562438,
+    "vuurland": 1794168825.915369,
+    "mellow_mix": 1794168825.918806,
+    "big_sonic_heaven": 1794168826.12282,
+    "radio_x_chilled": 1794168826.1257868,
+    "dreampop_radio": 1794168826.1286464,
+    "indie_select": 1794168826.1318924,
+    "dkfm_edge": 1794168826.1350894,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794168811.459726
+    "dark_edge": 1794168826.1383288
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5350,6 +5350,7 @@
       "t g shand|||seats",
       "t g shand|||the deadpan break",
       "talk talk|||give it up",
+      "talk talk|||living in another world",
       "tallies|||am i the man",
       "tallies|||when your life is not over",
       "tallies|||wound up tight",
@@ -11072,12 +11073,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "jurgen ufer|||weg nach haus": {
-      "artist": "Jürgen Ufer",
-      "title": "Weg nach Haus",
-      "source": "dreampop_radio",
-      "failed_at": 1794082384
-    },
     "i|||moon": {
       "artist": "i",
       "title": "Moon",
@@ -11293,6 +11288,12 @@
       "title": "Spring Guillotine",
       "source": "dkfm_edge",
       "failed_at": 1794167822
+    },
+    "d i d|||hotel": {
+      "artist": "D.I.D",
+      "title": "Hotel",
+      "source": "indie_select",
+      "failed_at": 1794168828
     }
   },
   "__v51_radio_unmatched": {
@@ -11767,10 +11768,10 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "wet leg|||obvious",
   "__last_radio_key_mellow_mix": "the band|||the weight w/ the staples family",
-  "__last_radio_key_big_sonic_heaven": "letting up despite great faults|||dress",
+  "__last_radio_key_big_sonic_heaven": "talk talk|||living in another world",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 8292,
-  "__v146_spotify_budget_slot": 1794168700.2713916,
+  "__v116_fifo_next_sequence": 8294,
+  "__v146_spotify_budget_slot": 1794168827.5182545,
   "__vuurland_active_playlist_count": 7332,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -60988,7 +60989,7 @@
     "rave down|||staircase paradox - 19-91": 3,
     "plant cell|||wind & wing arakawa river mix -bonus track": 3,
     "swallowtail|||spring guillotine": 3,
-    "d i d|||hotel": 2
+    "d i d|||hotel": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -61210,7 +61211,8 @@
     "sevonaurs|||genuine almost killed rmx": 1,
     "rave down|||staircase paradox - 19-91": 1,
     "plant cell|||wind & wing arakawa river mix -bonus track": 1,
-    "swallowtail|||spring guillotine": 1
+    "swallowtail|||spring guillotine": 1,
+    "d i d|||hotel": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -87698,7 +87700,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the kills|||future starts slow",
+  "__last_radio_key_indie_select": "public service broadcasting|||people let's dance feat eera",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -89079,7 +89081,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "whitelands|||cheer",
+  "__last_radio_key_dkfm_edge": "life on venus|||monochrome",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -91050,5 +91052,6 @@
   "__match_v35__hot hot heat|||kid who stays in the picture": "spotify:track:6C5RRdw0tcmlsATNijUp9i",
   "__match_v35__blood cultures|||best for you": "spotify:track:7qwn6Pgj4wsxLfvXYELGsF",
   "__match_v35__sun's signature|||make lovely the day": "spotify:track:3RB8zfK1nB89tuOpsksENX",
-  "__match_v35__jackie leven|||snow in central park": "spotify:track:5uwsr2ZDzwUMy2FkgWPKsB"
+  "__match_v35__jackie leven|||snow in central park": "spotify:track:5uwsr2ZDzwUMy2FkgWPKsB",
+  "__not_found_v35__d i d|||hotel": 1794168828
 }
