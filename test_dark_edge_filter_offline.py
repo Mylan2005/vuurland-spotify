@@ -33,15 +33,18 @@ for artist, title in (
     ("Coldplay", "The Scientist"),
     ("Adele", "Someone Like You"),
     ("Billie Eilish", "Birds of a Feather"),
-    ("Kylie Minogue", "In My Arms"),
     ("Sia", "Like a River Runs"),
     ("Taylor Swift", "Cardigan"),
-    ("Ariana Grande", "We Can't Be Friends"),
     ("The Weeknd", "Blinding Lights"),
     ("Robyn", "Dancing On My Own"),
     ("Coldplay", "My Universe"),
     ("Coldplay", "Higher Power"),
     ("Muse feat. Drake", "Supermassive Black Hole"),
+    ("Gorillaz", "Silent Running"),
+    ("Gorillaz", "Empire Ants"),
+    ("Sam Smiths", "Different Artist"),
+    ("The Sam Smiths", "Different Artist"),
+    ("Indie Band", "Sam Smith"),
     ("The Weeknd & Kendrick Lamar", "Pray For Me"),
     # Spaanse indie/folk is welkom; Duitse zang niet.
     ("Blanco White", "Mano a Mano"),
@@ -56,6 +59,21 @@ for artist, title in (
 # Gerichte EDM-/dance-, persoonlijke Dua Lipa-, punk-/metal- en taalblokkades.
 for artist, title in (
     ("Dua Lipa", "Levitating"),
+    ("Sam Smith", "Stay With Me"),
+    ("SAM SMITH", "Too Good at Goodbyes"),
+    ("Sam Smith feat. Kim Petras", "Unholy"),
+    ("Kim Petras feat. Sam Smith", "Unholy"),
+    ("Kim Petras (feat. Sam Smith)", "Unholy"),
+    ("Sam Smith & Kim Petras", "Unholy"),
+    ("Ed Sheeran", "Shape of You"),
+    ("Maroon 5", "Sugar"),
+    ("Kylie Minogue", "In My Arms"),
+    ("Ariana Grande", "We Can't Be Friends"),
+    ("Justin Bieber", "Sorry"),
+    ("Shawn Mendes", "Treat You Better"),
+    ("Sabrina Carpenter", "Espresso"),
+    ("Lewis Capaldi", "Someone You Loved"),
+    ("Benson Boone", "Beautiful Things"),
     ("Avicii", "Levels"),
     ("David Guetta", "Titanium"),
     ("Calvin Harris feat. Ellie Goulding", "Outside"),
@@ -91,12 +109,16 @@ for artist, title in (
 
 assert "muse" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "nothing but thieves" not in DARK_EDGE_BLOCKED_ARTISTS
-assert "kylie minogue" not in DARK_EDGE_BLOCKED_ARTISTS
+assert "kylie minogue" in DARK_EDGE_BLOCKED_ARTISTS
 assert "sia" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "taylor swift" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "avicii" in DARK_EDGE_BLOCKED_ARTISTS
 assert "calvin harris" in DARK_EDGE_BLOCKED_ARTISTS
 assert "dua lipa" in DARK_EDGE_BLOCKED_ARTISTS
+assert "sam smith" in DARK_EDGE_BLOCKED_ARTISTS
+assert "ariana grande" in DARK_EDGE_BLOCKED_ARTISTS
+assert "ed sheeran" in DARK_EDGE_BLOCKED_ARTISTS
+assert "gorillaz" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "adele" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "billie eilish" not in DARK_EDGE_BLOCKED_ARTISTS
 assert "the offspring" in DARK_EDGE_BLOCKED_ARTISTS
@@ -113,7 +135,9 @@ ns = {
     "DARK_EDGE_SOURCE_URL": "https://example.invalid/",
     "get_radiobox_tracks": lambda *args: [
         ("Muse", "Supermassive Black Hole"),
+        ("Sam Smith", "Stay With Me"),
         ("Kylie Minogue", "In My Arms"),
+        ("Ariana Grande", "We Can't Be Friends"),
         ("Sia", "Like a River Runs"),
         ("Avicii", "Levels"),
         ("Dua Lipa", "Levitating"),
@@ -137,7 +161,6 @@ for name in ("v190_is_language_exempt_artist", "dark_edge_track_allowed", "get_d
                  "<" + name + ">", "exec"), ns)
 assert ns["get_dark_edge_tracks"]() == [
     ("Muse", "Supermassive Black Hole"),
-    ("Kylie Minogue", "In My Arms"),
     ("Sia", "Like a River Runs"),
     ("Nothing But Thieves", "Real Love Song"),
     ("Spinvis", "Ik wil alleen maar zwemmen"),
