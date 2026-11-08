@@ -1,12 +1,8 @@
-"""Conservatieve Dark Edge Radio-filter: geen externe APIs of Spotify-aanvragen.
+"""Dark Edge Radio: conservatieve alternatieve-muziekpoort, alleen deze bron.
 
-Er is GEEN lijst meer met toegelaten artiesten: nieuwe indie-acts worden
-niet afgewezen omdat ze onbekend zijn. Duidelijke commerciële hitparadepop is hier niet welkom; sfeervolle
-alternatieve pop kan wel. Geen onbetrouwbare genre-inferentie uit alleen
-RadioBox-tekst. Expliciet ongewenste artiesten, dance-/EDM-acts,
-punk/metal en herkenbare ongewenste taal/titels worden geweerd.
-Nederlands, Engels en Spaans mogen (bv. sfeervolle indie zoals Blanco White).
-Genre en gezongen taal zijn met alleen RadioBox-metadata niet waterdicht vast te stellen.
+Automatisch toelaten uitsluitend voor gecureerde alternatieve artiesten.
+Onbekenden worden overgeslagen, NIET als pop geclassificeerd.
+Geen netwerk-/Spotify-genrevraag, geen afbraak van queue of andere bronnen.
 """
 
 import re
@@ -49,6 +45,83 @@ DARK_EDGE_BLOCKED_ARTISTS = frozenset({
     "papa roach", "pantera", "rammstein", "slipknot",
     "sum 41", "system of a down", "the offspring", "volbeat",
 })
+
+# Het bezwaar van de gebruiker is tegen pop via Dark Edge, niet tegen
+# muziek die toevallig het woord "pop" als subgenre heeft (dreampop,
+# artpop, triphop). Een negatieve artiestenlijst alleen faalt open voor
+# elke nieuw opkomende popster. Deze EXACTE, gecontroleerde bronselectie
+# faalt daarom veilig gesloten voor ONBEKENDE artiesten.
+# Nieuwe indie-artiesten kunnen later na muzikale verificatie worden
+# toegevoegd; geen automatische genreclaims op basis van de artiestnaam.
+DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS = frozenset({
+    "a perfect circle", "agnes obel", "air", "alt-j", "angel olsen",
+    "angus & julia stone", "arcade fire", "arctic monkeys", "aurora",
+    "beach house", "ben howard", "big thief", "black country, new road",
+    "black midi", "black rebel motorcycle club", "blanco white",
+    "bloc party", "bon iver", "broadcast", "broken social scene",
+    "caspian", "cigarettes after sex", "cocteau twins", "cold cave",
+    "daughter", "deafheaven", "death cab for cutie", "deerhunter",
+    "diiv", "dinosaur jr.", "doves", "dream ivory", "dry cleaning",
+    "echo & the bunnymen", "elbow", "elliott smith", "emily haines",
+    "explosions in the sky", "fever ray", "fleet foxes",
+    "fontaines d.c.", "foals", "frightened rabbit", "future islands",
+    "grizzly bear", "have a nice life", "het zesde metaal",
+    "interpol", "james blake", "japanese breakfast", "jessica pratt",
+    "julien baker", "keaton henson", "king krule", "kurt vile",
+    "lanterns on the lake", "lcd soundsystem", "low", "mazzy star",
+    "midlake", "mogwai", "mount kimbie", "muse", "my bloody valentine",
+    "nick cave & the bad seeds", "nine inch nails", "nothing",
+    "nothing but thieves", "olafur arnalds", "ó​lafur arnalds",
+    "other lives", "pale saints", "placebo", "portishead",
+    "post-rock project", "radiohead", "ride", "röyksopp",
+    "sigur rós", "sigur ros", "slowdive", "snow patrol", "son lux",
+    "sophia", "spiritualized", "spinvis", "sufjan stevens",
+    "sundara karma", "swans", "tame impala", "the antlers",
+    "the cure", "the drums", "the national", "the neighbourhood",
+    "the notwist", "the radio dept.", "the smile", "the war on drugs",
+    "this mortal coil", "tindersticks", "toro y moi", "torres",
+    "tricky", "tv on the radio", "ulrich schnauss", "warpaint",
+    "wild nothing", "wolf alice", "wye oak", "youth lagoon",
+    "zola jesus", "harold budd", "nils frahm",
+})
+# Volledige songtitels die de gebruiker binnen een gemengde artiest
+# persoonlijk heeft aangeduid als passend. Niet de hele discografie.
+DARK_EDGE_APPROVED_SONGS = frozenset({
+    ("gorillaz", "el mañana"),
+    ("gorillaz", "el manana"),
+    ("gorillaz", "tomorrow comes today"),
+    ("gorillaz", "on melancholy hill"),
+    ("gorillaz", "empire ants"),
+    ("gorillaz", "silent running"),
+    ("gorillaz", "happy dictator"),
+})
+
+def dark_edge_is_confirmed_alternative(artist, title):
+    """Geen vaag genre-oordeel: uitsluitend expliciet goedgekeurde identiteit."""
+    artist_key = _key(artist)
+    title_key = _key(title)
+    if (artist_key, title_key) in DARK_EDGE_APPROVED_SONGS:
+        return True
+    if artist_key in DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS:
+        return True
+    # Samenwerkingen worden alleen toegelaten als ELKE artiest apart
+    # bevestigd is. Eenvoudige complete bandnamen met & zijn hierboven
+    # veilig als één geheel gekend.
+    credit_text = re.sub(
+        r"\(\s*(?=(?:feat\.?|ft\.?|featuring|with)\s+)", " ", artist_key
+    )
+    credits = [
+        name.strip(" ()[]")
+        for name in re.split(
+            r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*",
+            credit_text,
+        )
+        if name.strip(" ()[]")
+    ]
+    return bool(credits) and all(
+        name in DARK_EDGE_APPROVED_ALTERNATIVE_ARTISTS for name in credits
+    )
+
 
 # Enkel expliciet ongewenste nummers uitsluiten, niet het hele
 # (mogelijk popgerichte) oeuvre van een artiest. Avicii's productie
@@ -126,4 +199,8 @@ def dark_edge_reject_reason(artist, title):
     words = " ".join(re.sub(r"[^a-z0-9]+", " ", normalized).split())
     if any(re.search(pattern, words) for pattern in _NON_ENGLISH_PHRASES):
         return "duidelijk anderstalige titel"
+    # Dark Edge heeft een sterke identiteit: onbekend is NIET bewezen
+    # alternatief. Niet gokken dat generieke pop wel zal passen.
+    if not dark_edge_is_confirmed_alternative(artist, title):
+        return "Dark Edge: artiest/nummer niet bevestigd als passende alternatieve muziek"
     return None
