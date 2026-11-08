@@ -102,8 +102,14 @@ def dark_edge_reject_reason(artist, title):
         return "lege artiest/titel"
     # Exacte artiest en expliciet gecrediteerde gasten; GEEN substring-ban
     # (bv. 'sia' mag nooit een deel van een andere artiestnaam raken).
+    # Parenthesized guests are also mandatory: "Kim Petras (feat. Sam
+    # Smith)" must not slip through the Dark Edge gate. Only parenthesized
+    # explicit credit markers are unwrapped, never arbitrary parentheses.
+    credit_text = re.sub(
+        r"\(\s*(?=(?:feat\.?|ft\.?|featuring|with)\s+)", " ", a
+    )
     credited = [part.strip(" ()[]") for part in re.split(
-        r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*", a
+        r"\s+(?:feat\.?|ft\.?|featuring|with)\s+|\s*(?:&|,)\s*", credit_text
     )]
     if a in DARK_EDGE_BLOCKED_ARTISTS or any(
         name.strip() in DARK_EDGE_BLOCKED_ARTISTS for name in credited
