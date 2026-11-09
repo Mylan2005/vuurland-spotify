@@ -104,10 +104,21 @@ assert run(cache, q, now=2000000000+30) == (0, 0)
 assert run(cache, q, now=2000000000+7*3600) == (1, 0)
 assert len(q) == 2 and q[0]["artist"] == "Tired Pony"
 
-# Full FIFO and Duyster cap are always respected.
+# Large existing FIFO and 100+ Duyster items must not block a verified retry.
+from duyster_archive_fifo import DUYSTER_MAX_PENDING, DUYSTER_MAX_TOTAL_QUEUE
+k, cache = parked("Tired Pony", "All Things At Once", source="duyster")
+cache["__v50_duyster_unmatched"] = cache.pop("__v51_radio_unmatched")
+q = [{"artist": "Duyster older", "title": str(i), "source": "duyster"} for i in range(101)]
+q += [{"artist": "Other", "title": str(i), "source": "vuurland"} for i in range(3500)]
+original = list(q)
+assert run(cache, q) == (1, 0)
+assert q[:-1] == original and q[-1]["source"] == "duyster"
+assert len(q) == 3602
+
+# The shared limits still prevent unbounded queue growth.
 k, cache = parked()
-q = [{"artist": "Other", "title": str(i), "source": "vuurland"} for i in range(3600)]
-assert run(cache, q) == (0,0) and len(q) == 3600
+q = [{"artist": "Other", "title": str(i), "source": "vuurland"} for i in range(DUYSTER_MAX_TOTAL_QUEUE)]
+assert run(cache, q) == (0,0) and len(q) == DUYSTER_MAX_TOTAL_QUEUE
 
 # Corrupt state must never trigger broad requeue.
 k, cache = parked()
