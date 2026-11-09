@@ -2,7 +2,7 @@ name: Vuurland Spotify Sync
 
 on:
   workflow_dispatch:
-  # Eén herstart bij een wijziging van de workflow; state-commits starten niets.
+  # Codeherstel 2026-11-09: trigger nieuwe sync na geslaagde preflight-fix (PR #39).
   push:
     branches: [main]
     paths:
