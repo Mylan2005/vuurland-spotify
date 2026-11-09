@@ -228,8 +228,8 @@ order = next(node.value for node in tree.body
              if isinstance(node, ast.Assign)
              and any(isinstance(t, ast.Name) and t.id == "RADIO_SOURCE_ORDER"
                      for t in node.targets))
-assert len(ast.literal_eval(order)) == 8
-assert ast.literal_eval(order)[-1] == "dark_edge"
+assert len(ast.literal_eval(order)) == 10
+assert ast.literal_eval(order)[-2:] == ("dkfm_shoegaze", "dkfm_classic")
 sync_text = ast.get_source_segment(source, functions["sync"])
 collector_text = ast.get_source_segment(source, functions["v96_collect_live_plays"])
 assert '"dark_edge": ("Dark Edge Radio", get_dark_edge_tracks,' in sync_text
