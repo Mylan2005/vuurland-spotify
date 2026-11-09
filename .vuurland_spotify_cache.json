@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794197796.8090935,
+  "__v150_next_spotify_round_at": 1794197923.100097,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "biffy clyro|||many of horror live for radio x presents"
     ],
     "dreampop_radio": [
+      "vetiver|||you may be blue neighbors remix",
       "the midnight|||kick drums & red wine",
       "fad gadget|||love parasite",
       "ellie goulding|||lights",
@@ -520,8 +521,7 @@
       "turin brakes|||underdog save me",
       "herman dune|||tell me something i don't know",
       "alberta cross|||ghost of city life",
-      "the cure|||pictures of you",
-      "allo darlin'|||we come from the same place"
+      "the cure|||pictures of you"
     ],
     "indie_select": [
       "october drift|||blame the young",
@@ -847,17 +847,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794197788.294225,
-    "mellow_mix": 1794197788.3001091,
-    "big_sonic_heaven": 1794197788.3042276,
-    "radio_x_chilled": 1794197788.3090613,
-    "dreampop_radio": 1794197788.3137746,
-    "indie_select": 1794197788.3188016,
-    "dkfm_edge": 1794197788.324318,
+    "vuurland": 1794197802.6929297,
+    "mellow_mix": 1794197802.6987348,
+    "big_sonic_heaven": 1794197802.7027962,
+    "radio_x_chilled": 1794197802.7075875,
+    "dreampop_radio": 1794197802.9306192,
+    "indie_select": 1794197802.9357495,
+    "dkfm_edge": 1794197802.9412644,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794197788.3248944
+    "dark_edge": 1794197802.9418526
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7058,6 +7058,7 @@
       "valerie dore|||the night",
       "vance joy|||play with fire",
       "vetiver|||strictly rule",
+      "vetiver|||you may be blue neighbors remix",
       "volcano choir|||comrade",
       "von brucken|||gold gegen blei akustik",
       "wake owl|||gold",
@@ -11368,6 +11369,12 @@
       "title": "Believe in Yourself",
       "source": "big_sonic_heaven",
       "failed_at": 1794193538
+    },
+    "oliver beardmore|||dead oceans": {
+      "artist": "Oliver Beardmore",
+      "title": "Dead Oceans",
+      "source": "dkfm_edge",
+      "failed_at": 1794197804
     }
   },
   "__v51_radio_unmatched": {
@@ -11868,8 +11875,8 @@
   "__last_radio_key_mellow_mix": "iron & wine|||jezebel",
   "__last_radio_key_big_sonic_heaven": "kaela|||tender",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 8481,
-  "__v146_spotify_budget_slot": 1794197677.456995,
+  "__v116_fifo_next_sequence": 8482,
+  "__v146_spotify_budget_slot": 1794197803.7501366,
   "__vuurland_active_playlist_count": 7521,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -61855,7 +61862,7 @@
     "jakonigja|||temptation": 3,
     "paul smith|||north atlantic drift master": 3,
     "zbigniew preisner & lisa gerrard|||believe in yourself": 3,
-    "oliver beardmore|||dead oceans": 2,
+    "oliver beardmore|||dead oceans": 3,
     "heathermint|||komes": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -62087,7 +62094,8 @@
     "haermape|||racing my own shadow": 1,
     "jakonigja|||temptation": 1,
     "paul smith|||north atlantic drift master": 1,
-    "zbigniew preisner & lisa gerrard|||believe in yourself": 1
+    "zbigniew preisner & lisa gerrard|||believe in yourself": 1,
+    "oliver beardmore|||dead oceans": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -89216,7 +89224,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the midnight|||kick drums & red wine",
+  "__last_radio_key_dreampop_radio": "vetiver|||you may be blue neighbors remix",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -92887,5 +92895,6 @@
   "__match_v35__echo & the bunnymen|||read it in books": "spotify:track:7CQJNt721MgIqIRwvPrhkd",
   "__match_v35__concrete knives|||happy mondays": "spotify:track:4zRnr5FjuOt4MM4m8P4UOJ",
   "__match_v35__future islands|||the tower": "spotify:track:5tH2qe9ZNeIpto9dxk4ufx",
-  "__match_v35__oi va voi|||i know what you are": "spotify:track:5fdtuaPY8aX8fpEmfdsGdB"
+  "__match_v35__oi va voi|||i know what you are": "spotify:track:5fdtuaPY8aX8fpEmfdsGdB",
+  "__not_found_v35__oliver beardmore|||dead oceans": 1794197804
 }
