@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794237372.631328,
+  "__v150_next_spotify_round_at": 1794237497.4211938,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "james|||laid live atlanta 1994"
     ],
     "dreampop_radio": [
+      "frazey ford|||one more cup of coffee",
       "dylan mondegreen|||come with me to albuquerque",
       "the good morning diary|||the day i turned into a ghost",
       "admiral fallow|||subbuteo",
@@ -520,8 +521,7 @@
       "immanu el|||on wide shoulders",
       "city and colour|||body in a box",
       "craig cardiff|||dirty old town",
-      "the eastern sea|||the match",
-      "seabear|||seashell"
+      "the eastern sea|||the match"
     ],
     "indie_select": [
       "spear of destiny|||never take me alive",
@@ -834,17 +834,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794237363.344056,
-    "mellow_mix": 1794237363.3463004,
-    "big_sonic_heaven": 1794237363.347998,
-    "radio_x_chilled": 1794237363.3496857,
-    "dreampop_radio": 1794237363.3513672,
-    "indie_select": 1794237363.3532434,
-    "dkfm_edge": 1794237363.3550217,
+    "vuurland": 1794237376.9567869,
+    "mellow_mix": 1794237376.959336,
+    "big_sonic_heaven": 1794237376.961302,
+    "radio_x_chilled": 1794237376.9633007,
+    "dreampop_radio": 1794237376.9653027,
+    "indie_select": 1794237376.9674692,
+    "dkfm_edge": 1794237376.9695466,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794237363.3554327
+    "dark_edge": 1794237376.970002
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11581,6 +11581,12 @@
       "title": "Drive All Night",
       "source": "dreampop_radio",
       "failed_at": 1794236022
+    },
+    "rocket|||pipe dream": {
+      "artist": "Rocket",
+      "title": "Pipe Dream",
+      "source": "dkfm_edge",
+      "failed_at": 1794237378
     }
   },
   "__v51_radio_unmatched": {
@@ -12137,8 +12143,8 @@
   "__last_radio_key_mellow_mix": "jackson browne|||jamaica say you will",
   "__last_radio_key_big_sonic_heaven": "the mary onettes|||stop this melody",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 8886,
-  "__v146_spotify_budget_slot": 1794237253.1901104,
+  "__v116_fifo_next_sequence": 8887,
+  "__v146_spotify_budget_slot": 1794237378.0609505,
   "__vuurland_active_playlist_count": 7729,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -62975,7 +62981,7 @@
     "hayien|||hayien - somehow i still manage": 3,
     "cole lloyd|||backwoods reprise": 3,
     "glen hansard featuring eddie vedder & jake clemons|||drive all night": 3,
-    "rocket|||pipe dream": 2,
+    "rocket|||pipe dream": 3,
     "fin del mundo|||el dia de las flores single - feat eterna inocencia": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -63223,7 +63229,8 @@
     "the joy formidable|||twin peaks": 1,
     "hayien|||hayien - somehow i still manage": 1,
     "cole lloyd|||backwoods reprise": 1,
-    "glen hansard featuring eddie vedder & jake clemons|||drive all night": 1
+    "glen hansard featuring eddie vedder & jake clemons|||drive all night": 1,
+    "rocket|||pipe dream": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -91187,7 +91194,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "dylan mondegreen|||come with me to albuquerque",
+  "__last_radio_key_dreampop_radio": "frazey ford|||one more cup of coffee",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -93436,8 +93443,8 @@
     "v193-shuffle",
     "7196d52bcab461cd2d638532421fafdcc3409345469a36a87efb2035a27c2d53"
   ],
-  "__v192_duyster_archive_cursor": 180,
-  "__v192_duyster_next_enqueue_at": 1794237372.2696767,
+  "__v192_duyster_archive_cursor": 181,
+  "__v192_duyster_next_enqueue_at": 1794237496.9824734,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -95088,5 +95095,6 @@
   "__match_v35__cathedral bells|||overdrive": "spotify:track:1vSLIoLnO9s9iMKkPoclS3",
   "__match_v35__broken head|||spilled milk": "spotify:track:5aRZ6qBwA2SVNJly7clzso",
   "__match_v35__gifts for the earth|||wishes": "spotify:track:1M2KH6yKvJGje0KaicerFk",
-  "__match_v35__deerhunter|||element": "spotify:track:11dGVtIVoXsnoc8uRKlHMJ"
+  "__match_v35__deerhunter|||element": "spotify:track:11dGVtIVoXsnoc8uRKlHMJ",
+  "__not_found_v35__rocket|||pipe dream": 1794237378
 }
