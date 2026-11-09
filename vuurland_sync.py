@@ -16,6 +16,7 @@ import requests
 from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
+from v214_processed_history import preserve_processed_playlist_history
 from v194_matcher_metadata import (
     canonical_artist as v194_canonical_artist,
     artist_join_key as v194_artist_join_key,
@@ -8252,6 +8253,14 @@ def sync():
             playlist_uris.update(stage.get("live_uris", []))
             playlist_isrcs.update(stage.get("live_isrcs", []))
             spotify_uri_isrc.update(stage.get("live_uri_isrc", {}))
+            # v214: handmatig uit Spotify verwijderde opnames blijven
+            # permanent verwerkt. Een complete playlistscan mag de
+            # historische dedupe-geheugens nooit kleiner maken.
+            # Geen extra Spotify-requests, en alleen na complete scan.
+            (playlist_keys, playlist_uris, playlist_isrcs,
+             spotify_uri_isrc) = preserve_processed_playlist_history(
+                cache, playlist_keys, playlist_uris,
+                playlist_isrcs, spotify_uri_isrc)
             cache.pop("__v166_playlist_scan", None)
             cache.pop("__v177_playlist_delta", None)  # volledige scan vervangt delta
             # ---------------------------------
