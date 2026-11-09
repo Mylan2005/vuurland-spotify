@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794261912.7541966,
+  "__v150_next_spotify_round_at": 1794262041.8564067,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -626,6 +626,7 @@
       "dog is dead|||do the right thing"
     ],
     "dkfm_edge": [
+      "crystal canyon|||belt of orion",
       "riley's mountain|||lovelylittle",
       "francis of delirium|||real love",
       "bleach lab|||nothing left to lose",
@@ -724,8 +725,7 @@
       "bleach lab|||drown",
       "haermape|||plastic shield",
       "dream pop|||you went away",
-      "futureheaven|||ghosts",
-      "still|||crushed"
+      "futureheaven|||ghosts"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -956,17 +956,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794261905.752597,
-    "mellow_mix": 1794261905.757061,
-    "big_sonic_heaven": 1794261905.760629,
-    "radio_x_chilled": 1794261905.7643335,
-    "dreampop_radio": 1794261905.767762,
-    "indie_select": 1794261905.7714415,
-    "dkfm_edge": 1794261905.7752795,
+    "vuurland": 1794261921.3084154,
+    "mellow_mix": 1794261921.3128939,
+    "big_sonic_heaven": 1794261921.3174999,
+    "radio_x_chilled": 1794261921.321153,
+    "dreampop_radio": 1794261921.3245275,
+    "indie_select": 1794261921.3280926,
+    "dkfm_edge": 1794261921.3319337,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794261905.7758865,
-    "dkfm_shoegaze": 1794261905.779477,
-    "dkfm_classic": 1794261905.782913
+    "dark_edge": 1794261921.3325596,
+    "dkfm_shoegaze": 1794261921.336071,
+    "dkfm_classic": 1794261921.3394933
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12218,6 +12218,12 @@
       "title": "Strawberry",
       "source": "dkfm_edge",
       "failed_at": 1794261794
+    },
+    "hatchie|||eyes without a face": {
+      "artist": "Hatchie",
+      "title": "Eyes Without A Face",
+      "source": "dkfm_edge",
+      "failed_at": 1794261923
     }
   },
   "__v51_radio_unmatched": {
@@ -12782,8 +12788,8 @@
   "__last_radio_key_mellow_mix": "chris stapleton|||higher",
   "__last_radio_key_big_sonic_heaven": "nation of language|||deliver me from wondering why",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 9328,
-  "__v146_spotify_budget_slot": 1794261793.6217937,
+  "__v116_fifo_next_sequence": 9329,
+  "__v146_spotify_budget_slot": 1794261922.6906097,
   "__vuurland_active_playlist_count": 7880,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -64240,7 +64246,7 @@
     "phosphene|||black sheep": 3,
     "fragile animals|||breathe out and in": 3,
     "eyelash|||strawberry": 3,
-    "hatchie|||eyes without a face": 2,
+    "hatchie|||eyes without a face": 3,
     "comsat angels|||shiva descending": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -64499,7 +64505,8 @@
     "shout out louds|||hard rain live from haldern festival": 1,
     "phosphene|||black sheep": 1,
     "fragile animals|||breathe out and in": 1,
-    "eyelash|||strawberry": 1
+    "eyelash|||strawberry": 1,
+    "hatchie|||eyes without a face": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -94566,7 +94573,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "riley's mountain|||lovelylittle",
+  "__last_radio_key_dkfm_edge": "crystal canyon|||belt of orion",
   "__last_radio_key_dkfm_shoegaze": "iris|||fix me",
   "__last_radio_key_dkfm_classic": "swervedriver|||for seeking heat",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -95320,8 +95327,8 @@
     "v193-shuffle",
     "7196d52bcab461cd2d638532421fafdcc3409345469a36a87efb2035a27c2d53"
   ],
-  "__v192_duyster_archive_cursor": 399,
-  "__v192_duyster_next_enqueue_at": 1794261912.2414134,
+  "__v192_duyster_archive_cursor": 400,
+  "__v192_duyster_next_enqueue_at": 1794262041.3582036,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -97140,5 +97147,6 @@
   "__match_v35__my morning jacket|||where to begin": "spotify:track:3Z7kNqZQIfV0OyPcbbf4te",
   "__match_v35__fawns of love|||mournful eyes glass version": "spotify:track:0DZvlv9ipyQXeFudbFyG3E",
   "__match_v35__bad charm|||shorty": "spotify:track:3wJQMwO2MGkEKAB8MCuwDW",
-  "__not_found_v35__eyelash|||strawberry": 1794261794
+  "__not_found_v35__eyelash|||strawberry": 1794261794,
+  "__not_found_v35__hatchie|||eyes without a face": 1794261923
 }
