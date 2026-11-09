@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794189253.3556614,
+  "__v150_next_spotify_round_at": 1794189379.2130866,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -847,17 +847,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794189244.6935647,
-    "mellow_mix": 1794189244.6988041,
-    "big_sonic_heaven": 1794189244.7028818,
-    "radio_x_chilled": 1794189244.7073827,
-    "dreampop_radio": 1794189244.7114155,
-    "indie_select": 1794189244.7158113,
-    "dkfm_edge": 1794189244.7208722,
+    "vuurland": 1794189259.0247,
+    "mellow_mix": 1794189259.0297801,
+    "big_sonic_heaven": 1794189259.0336742,
+    "radio_x_chilled": 1794189259.0378604,
+    "dreampop_radio": 1794189259.0415792,
+    "indie_select": 1794189259.0456932,
+    "dkfm_edge": 1794189259.0504358,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794189244.7214599
+    "dark_edge": 1794189259.0510294
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11352,6 +11352,12 @@
       "title": "Temptation",
       "source": "indie_select",
       "failed_at": 1794187755
+    },
+    "paul smith|||north atlantic drift master": {
+      "artist": "Paul Smith",
+      "title": "North Atlantic Drift Master",
+      "source": "indie_select",
+      "failed_at": 1794189260
     }
   },
   "__v51_radio_unmatched": {
@@ -11845,7 +11851,7 @@
   "__last_radio_key_big_sonic_heaven": "my bloody valentine|||we have all the time in the world",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 8448,
-  "__v146_spotify_budget_slot": 1794189134.0282714,
+  "__v146_spotify_budget_slot": 1794189259.861122,
   "__vuurland_active_playlist_count": 7463,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -61595,7 +61601,7 @@
     "diffident daffodils|||go away now": 3,
     "haermape|||racing my own shadow": 3,
     "jakonigja|||temptation": 3,
-    "paul smith|||north atlantic drift master": 2
+    "paul smith|||north atlantic drift master": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -61824,7 +61830,8 @@
     "clara luzia|||sink like a stone album edit": 1,
     "diffident daffodils|||go away now": 1,
     "haermape|||racing my own shadow": 1,
-    "jakonigja|||temptation": 1
+    "jakonigja|||temptation": 1,
+    "paul smith|||north atlantic drift master": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -92330,5 +92337,6 @@
   "__match_v35__paperwhite|||get away": "spotify:track:5mIM8wMyZ8NqhNP3brwnEV",
   "__match_v35__smush|||horse drawing": "spotify:track:7xIAtRTwl5jv1MFI7a1RVq",
   "__match_v35__toy|||it's been so long": "spotify:track:2N9q8m2HEG168kkeF3ugjd",
-  "__match_v35__taj mahal|||take a giant step": "spotify:track:6Nf71UnBJ89Y36vn0PwY8D"
+  "__match_v35__taj mahal|||take a giant step": "spotify:track:6Nf71UnBJ89Y36vn0PwY8D",
+  "__not_found_v35__paul smith|||north atlantic drift master": 1794189260
 }
