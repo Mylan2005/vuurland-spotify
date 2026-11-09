@@ -75,7 +75,7 @@ for artist in (
 
 assert ns["is_confirmed_german_vocal"]("Sigur Rós", "Ich liebe dich")
 assert ns["is_confirmed_german_vocal"]("Tomte", "Die Schönheit der Chance")
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge")' in src
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic")' in src
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in src
 assert "max_additions_per_round = 1" in src
 assert 'item.get("source") == "dark_edge" and not dark_edge_track_allowed(artist, title)' in src
