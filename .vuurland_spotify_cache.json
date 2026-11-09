@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794240332.7801156,
+  "__v150_next_spotify_round_at": 1794240456.624613,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "the maccabees|||toothpaste kisses"
     ],
     "dreampop_radio": [
+      "eva & manu|||empty",
       "fleetwood mac|||dreams",
       "glen hansard|||talking with the wolves",
       "tennis|||cape dory",
@@ -520,8 +521,7 @@
       "aimee mann|||high on sunday 51",
       "sarah jaffe|||clementine",
       "the sun days|||don't need to be them",
-      "the weepies|||all good things",
-      "camera obscura|||i don't do crowds"
+      "the weepies|||all good things"
     ],
     "indie_select": [
       "the smiths|||girlfriend in a coma",
@@ -626,6 +626,7 @@
       "memory tapes|||plain material"
     ],
     "dkfm_edge": [
+      "t g shand|||scenes",
       "shrine|||serenity",
       "adelaida|||oceano mundial",
       "pale waves|||gravity",
@@ -724,8 +725,7 @@
       "twen|||seastar",
       "indoor voices|||so down",
       "crystal canyon|||sierra",
-      "so totally|||distinct star",
-      "mint julep|||mint julep - all that we'll ever be"
+      "so totally|||distinct star"
     ],
     "dkfm_shoegaze": [
       "casino garden|||the devil comes home",
@@ -836,17 +836,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794240322.7659833,
-    "mellow_mix": 1794240322.9243977,
-    "big_sonic_heaven": 1794240322.9262707,
-    "radio_x_chilled": 1794240322.9281204,
-    "dreampop_radio": 1794240322.9298892,
-    "indie_select": 1794240322.9318817,
-    "dkfm_edge": 1794240322.9337811,
+    "vuurland": 1794240336.2226446,
+    "mellow_mix": 1794240336.2250056,
+    "big_sonic_heaven": 1794240336.226806,
+    "radio_x_chilled": 1794240336.2286346,
+    "dreampop_radio": 1794240336.2304754,
+    "indie_select": 1794240336.2324626,
+    "dkfm_edge": 1794240336.2344441,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794240322.9341984
+    "dark_edge": 1794240336.234898
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11378,12 +11378,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "t a k e r|||taker - jackalope": {
-      "artist": "T A K E R",
-      "title": "TAKER - Jackalope",
-      "source": "dkfm_edge",
-      "failed_at": 1794153839
-    },
     "take it easy|||bluelies": {
       "artist": "Take it Easy",
       "title": "Bluelies",
@@ -12179,9 +12173,9 @@
   "__last_radio_key_mellow_mix": "cat stevens|||morning has broken",
   "__last_radio_key_big_sonic_heaven": "tokyo shoegazer|||new dawn",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 8931,
-  "__v146_spotify_budget_slot": 1794240213.3387675,
-  "__vuurland_active_playlist_count": 7746,
+  "__v116_fifo_next_sequence": 8933,
+  "__v146_spotify_budget_slot": 1794240337.3087347,
+  "__vuurland_active_playlist_count": 7747,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794237006,
@@ -14354,6 +14348,7 @@
     "death cab for cutie|||pepper - acoustic",
     "death cab for cutie|||soul meets body",
     "death cab for cutie|||summer years",
+    "death cab for cutie|||to the ground",
     "death cab for cutie|||underneath the sycamore",
     "death cab for cutie|||waterfalls",
     "death cab for cutie|||your heart is an empty room",
@@ -28013,6 +28008,7 @@
     "spotify:track:6MTxftPAssBVTyGFJ4KB1l",
     "spotify:track:6MWgidUKVdOOV7wQoVVM8b",
     "spotify:track:6MWnAibO1HAEhlrHoH1kNi",
+    "spotify:track:6MdbEX55Ks1oqGVwRb3nyX",
     "spotify:track:6MgCtrW4YX3we3zYoue5el",
     "spotify:track:6MpyaUgutthEieLdLtMmVr",
     "spotify:track:6MyZGpLgGLgcvpWGXO286U",
@@ -35283,6 +35279,7 @@
     "USAT21802564",
     "USAT21802830",
     "USAT21802834",
+    "USAT21904097",
     "USAT22007729",
     "USAT22102101",
     "USAT22105353",
@@ -44836,7 +44833,8 @@
     "spotify:track:6pGCPIsFrMihuaXfrxB1tL": "USA4R1406110",
     "spotify:track:4zJjCZws6TBKBgF728rGHP": "GX5MY2259198",
     "spotify:track:1FNITTgQt6d5uxElfXtDa1": "GBUM71026870",
-    "spotify:track:3umPlcrEvda9XIYOSAJCVn": "QZNWR2386359"
+    "spotify:track:3umPlcrEvda9XIYOSAJCVn": "QZNWR2386359",
+    "spotify:track:6MdbEX55Ks1oqGVwRb3nyX": "USAT21904097"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -75878,6 +75876,7 @@
       "death cab for cutie|||northern lights",
       "death cab for cutie|||passenger seat",
       "death cab for cutie|||summer years",
+      "death cab for cutie|||to the ground",
       "death cab for cutie|||your heart is an empty room",
       "death in vegas|||girls",
       "death of heather|||head in the sand",
@@ -82332,6 +82331,7 @@
       "spotify:track:6MM22AtXB7I5gfTErMF0mJ",
       "spotify:track:6MTxftPAssBVTyGFJ4KB1l",
       "spotify:track:6MWgidUKVdOOV7wQoVVM8b",
+      "spotify:track:6MdbEX55Ks1oqGVwRb3nyX",
       "spotify:track:6MgCtrW4YX3we3zYoue5el",
       "spotify:track:6MpyaUgutthEieLdLtMmVr",
       "spotify:track:6MyZGpLgGLgcvpWGXO286U",
@@ -85921,6 +85921,7 @@
       "USAT21802564",
       "USAT21802830",
       "USAT21802834",
+      "USAT21904097",
       "USAT22105353",
       "USAT22204471",
       "USAT22307367",
@@ -90995,7 +90996,8 @@
       "spotify:track:6pGCPIsFrMihuaXfrxB1tL": "USA4R1406110",
       "spotify:track:4zJjCZws6TBKBgF728rGHP": "GX5MY2259198",
       "spotify:track:1FNITTgQt6d5uxElfXtDa1": "GBUM71026870",
-      "spotify:track:3umPlcrEvda9XIYOSAJCVn": "QZNWR2386359"
+      "spotify:track:3umPlcrEvda9XIYOSAJCVn": "QZNWR2386359",
+      "spotify:track:6MdbEX55Ks1oqGVwRb3nyX": "USAT21904097"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -91370,7 +91372,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "fleetwood mac|||dreams",
+  "__last_radio_key_dreampop_radio": "eva & manu|||empty",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -92865,7 +92867,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "shrine|||serenity",
+  "__last_radio_key_dkfm_edge": "t g shand|||scenes",
   "__last_radio_key_dkfm_shoegaze": "casino garden|||the devil comes home",
   "__last_radio_key_dkfm_classic": "bark psychosis|||all different things",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -93619,8 +93621,8 @@
     "v193-shuffle",
     "7196d52bcab461cd2d638532421fafdcc3409345469a36a87efb2035a27c2d53"
   ],
-  "__v192_duyster_archive_cursor": 205,
-  "__v192_duyster_next_enqueue_at": 1794240332.4437757,
+  "__v192_duyster_archive_cursor": 207,
+  "__v192_duyster_next_enqueue_at": 1794240456.2457063,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -95291,5 +95293,6 @@
   "__match_v35__amy lavere|||dark moon": "spotify:track:6pGCPIsFrMihuaXfrxB1tL",
   "__match_v35__april june|||biking to your house": "spotify:track:4zJjCZws6TBKBgF728rGHP",
   "__match_v35__the pierces|||drag you down": "spotify:track:1FNITTgQt6d5uxElfXtDa1",
-  "__match_v35__stab|||blue light hell": "spotify:track:3umPlcrEvda9XIYOSAJCVn"
+  "__match_v35__stab|||blue light hell": "spotify:track:3umPlcrEvda9XIYOSAJCVn",
+  "__match_v35__death cab for cutie|||to the ground": "spotify:track:6MdbEX55Ks1oqGVwRb3nyX"
 }
