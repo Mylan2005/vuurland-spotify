@@ -19,6 +19,7 @@ from v211_report_search_rescue import (
 )
 from v209_verified_source_title import verified_emily_live_source_title
 from v216_report_metadata import has_report_correction
+from v217_report_search import has_report_search_rescue
 from v207_verified_matcher_metadata import (
     verified_artist_search_name,
     verified_balthazar_castle_version,
@@ -42,6 +43,7 @@ MATCHER_RETRY_RULES = (
     "v211_verified_mint_julep_single",
     "v211_unconfirmed_catalog_safe_search",
     "v216_report_exact_metadata",
+    "v217_report_independent_third_search",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -108,6 +110,8 @@ def applicable_rules(artist, title):
     # Een retry is geen toestemming voor een andere Spotify-opname.
     if has_report_correction(artist, title):
         hits.append("v216_report_exact_metadata")
+    if has_report_search_rescue(artist, title):
+        hits.append("v217_report_independent_third_search")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
