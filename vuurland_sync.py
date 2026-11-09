@@ -15,6 +15,7 @@ import webbrowser
 import requests
 from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
+from vuurland_music_policy import global_music_reject_reason
 from v194_matcher_metadata import (
     canonical_artist as v194_canonical_artist,
     artist_join_key as v194_artist_join_key,
@@ -6531,7 +6532,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         reasons = {}
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
-            if sid == "dark_edge" and not dark_edge_track_allowed(artist, title):
+            if global_music_reject_reason(artist, title):
+                reason = "globaal uitgesloten muziek: " + global_music_reject_reason(artist, title)
+            elif sid == "dark_edge" and not dark_edge_track_allowed(artist, title):
                 reason = "Dark Edge: alleen gecontroleerde alternatieve muziek; geen mainstream pop/ongeldige titel"
             elif key in seen_this_scan:
                 reason = "herhaling binnen deze bronmeting"
@@ -7253,6 +7256,7 @@ def sync():
     live_queue = [item for item in live_queue if (
         isinstance(item, dict)
         and str(item.get("source") or "vuurland").strip() in FIFO_SOURCE_ORDER
+        and not global_music_reject_reason(item.get("artist", ""), item.get("title", ""))
         and (item.get("source") != "dark_edge" or dark_edge_track_allowed(
             item.get("artist", ""), item.get("title", "")))
     )]
@@ -7645,6 +7649,7 @@ def sync():
     # inclusief aflevering 833. De bestaande FIFO blijft strikt intact.
     def _duyster_song_allowed(artist, title):
         if (is_interview_fragment(title)
+                or global_music_reject_reason(artist, title)
                 or v191_is_german_vocal_risk(artist, title)
                 or v140_is_unwanted_language_title(title, artist)
                 or v131_block_nonlatin_east_asian(artist, title)
@@ -8537,6 +8542,15 @@ def sync():
         # Slotfilter, ook voor items die eerder in de wachtrij stonden.
         if item.get("source") == "indie_select" and indie_select_blocks_german(artist, title):
             print(f"⛔ Indie Select Duitstalig: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
+
+        # Bronoverstijgend: bekende ongewenste acts nooit aan Spotify doorgeven.
+        rejection = global_music_reject_reason(artist, title)
+        if rejection:
+            print(f"⛔ Muziekvoorkeur: {artist} — {title} ({rejection})")
             live_queue.pop(0)
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
