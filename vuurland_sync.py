@@ -140,7 +140,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge")  # Acht live bronnen; Radio X, DKFM Shoegaze en DKFM Classic blijven uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic")  # Tien live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -7352,6 +7352,18 @@ def sync():
             cache.setdefault("__v96_radio_snapshots", {}).pop(dkfm_sid, None)
             cache.setdefault("__v174_radio_snapshot_times", {}).pop(dkfm_sid, None)
         cache["__v187_dkfm_three_reactivated_20261105"] = True
+        save_cache(cache)
+    # 2026-11-09: de twee extra DKFM-feeds pas vanaf de eerste actuele
+    # radiometing verzamelen. Nooit zeven dagen oude RadioBox-uitzendingen
+    # of eerder ontdekte nummers in de bestaande FIFO importeren.
+    # Deze marker geldt uitsluitend voor Shoegaze/Classic; Edge, Duyster,
+    # Spotify-cache, likes en alle overige snapshots blijven ongewijzigd.
+    if not cache.get("__v213_dkfm_shoegaze_classic_baseline_20261109"):
+        for dkfm_sid in ("dkfm_shoegaze", "dkfm_classic"):
+            cache.setdefault("__v96_radio_snapshots", {}).pop(dkfm_sid, None)
+            cache.setdefault("__v174_radio_snapshot_times", {}).pop(dkfm_sid, None)
+            cache.setdefault("__v47_radio_discovered", {}).pop(dkfm_sid, None)
+        cache["__v213_dkfm_shoegaze_classic_baseline_20261109"] = True
         save_cache(cache)
     # Nieuwe bron alleen vanaf de eerste live meting, nooit oude historie.
     # Alleen Dark Edge snapshots opschonen; playlist, likes, FIFO en andere
