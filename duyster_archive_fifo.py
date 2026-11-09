@@ -4,7 +4,7 @@
 - Geen Spotify-/netwerkvragen en geen automatische playlistinventaris.
 - Willekeurige, reproduceerbare volgorde uit alle Duyster-afleveringen.
 - Aflevering 833 staat in het archief maar krijgt geen oneerlijke voorrang.
-- Hoogstens 100 wachtende Duyster-nummers en max. 3600 FIFO-items.
+- Backpressure blijft bestaan, maar de vroegere 100/3600-limieten\n  blokkeerden het volledige Duyster-archief ten onrechte.\n- Maximaal 9000 wachtende Duyster-nummers en 14000 totale FIFO-items;\n  voldoende capaciteit voor het huidige unieke archief zonder queue-reset.
 - Alle bestaande radio-items en hun volgorde blijven onaangeroerd.
 """
 import csv
@@ -16,8 +16,8 @@ import secrets
 import time
 
 DUYSTER_ENQUEUE_INTERVAL_SECONDS = 120
-DUYSTER_MAX_PENDING = 100
-DUYSTER_MAX_TOTAL_QUEUE = 3600
+DUYSTER_MAX_PENDING = 9000
+DUYSTER_MAX_TOTAL_QUEUE = 14000
 _CURSOR = "__v192_duyster_archive_cursor"
 _NEXT = "__v192_duyster_next_enqueue_at"
 _SHAPE = "__v192_duyster_archive_shape"

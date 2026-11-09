@@ -129,6 +129,32 @@ with tempfile.TemporaryDirectory() as tmp:
     item = enqueue_one(old_cache, [], set(), now=base, **kwargs)
     assert item and old_cache[_SEED] >= 0 and old_cache[_CURSOR] > 0
 
+    # Regressie: oude harde limiet 100 en totaallimiet 3600 mogen de
+    # archiefaanvoer niet stilleggen. Simuleer reeds opgebouwde achterstand
+    # zonder bestaande records, volgorde of 120s-slot te veranderen.
+    assert DUYSTER_MAX_PENDING > 8316
+    assert DUYSTER_MAX_TOTAL_QUEUE > 3000 + 8316
+    backlog = [
+        {"artist": "Historical Duyster", "title": f"Old {i}", "source": "duyster"}
+        for i in range(100)
+    ] + [
+        {"artist": "Existing radio", "title": f"Radio {i}", "source": "vuurland"}
+        for i in range(3500)
+    ]
+    backlog_before = list(backlog)
+    fresh_cache = {"__playlist_keys": [], _SEED: seed}
+    new_after_old_cap = enqueue_one(
+        fresh_cache, backlog, set(), now=base, **kwargs
+    )
+    assert new_after_old_cap is not None
+    assert backlog[:-1] == backlog_before
+    assert backlog[-1] is new_after_old_cap
+    assert new_after_old_cap["source"] == "duyster"
+    assert enqueue_one(fresh_cache, backlog, set(), now=base + 119, **kwargs) is None
+    assert len(backlog) == len(backlog_before) + 1
+    assert enqueue_one(fresh_cache, backlog, set(), now=base + 120, **kwargs)
+    assert len(backlog) == len(backlog_before) + 2
+
     # FIFO remmen als er al veel Duyster-nummers wachten.
     full_duyster = [{"artist": "X", "title": str(i), "source": "duyster"}
                     for i in range(DUYSTER_MAX_PENDING)]
@@ -206,6 +232,6 @@ assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 assert "max_additions_per_round = 1" in source
 assert DUYSTER_ENQUEUE_INTERVAL_SECONDS == 120
 
-print("✅ Duyster-archief: blijvende shuffle tussen afleveringen, 120s-tempo en FIFO.")
+print("✅ Duyster-archief: 100/3600-cap opgeheven; 120s-tempo, shuffle en FIFO behouden.")
 print("✅ Aflevering 833 blijft aanwezig: 25 nummers, 8308 muzieknummers na opschoning.")
 print("✅ Geen duplicaten, Duitse zang, EDM, queueverlies of extra Spotify-API-calls.")
