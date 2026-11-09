@@ -44,7 +44,8 @@ assert _explicit_modifiers("Song (Live) - Remastered") == frozenset({"live"})
 
 src = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 ast.parse(src)
-matcher = src[src.index("def find_spotify_track("):src.index("def spotify_search", src.index("def find_spotify_track("))]
+matcher_node = next(n for n in ast.parse(src).body if isinstance(n, ast.FunctionDef) and n.name == "find_spotify_track")
+matcher = ast.get_source_segment(src, matcher_node)
 guard = 'if has_unrequested_performance_modifiers(title, item.get("name", "")):\n            continue'
 assert guard in matcher
 assert matcher.index(guard) < matcher.index("v211_version_guard(")
