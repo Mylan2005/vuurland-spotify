@@ -19,6 +19,7 @@ from vuurland_music_policy import global_music_reject_reason
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v216_report_metadata import report_metadata_correction as v216_report_correction
+from v217_report_search import report_third_search_query as v217_report_query
 from v194_matcher_metadata import (
     canonical_artist as v194_canonical_artist,
     artist_join_key as v194_artist_join_key,
@@ -3356,6 +3357,14 @@ def find_spotify_track(
         core_title = v521_broad_catalog_title(search_query_title)
         broad_title = v521_distinct_search_terms(core_title)
         query = f'artist:"{quoted_artist}" {broad_title}'
+
+    # v217: derde poging op exact gerapporteerde mislukte bronparen:
+    # volledige artiest en kerntitel als zachte phrase-hints, geen
+    # field-filters. Spotify krijgt nooit een extra zoekaanvraag;
+    # alle artiest-, titel-, versie- en regiocontroles blijven verplicht.
+    _v217_query = v217_report_query(*v101_original_key, search_variant)
+    if _v217_query:
+        query = _v217_query
 
     # v79: do not prune spaced letters to six tokens.
     if search_variant == 1 and re.fullmatch(r"[A-Za-z](?: [A-Za-z]){5,15}", str(search_query_title)):
