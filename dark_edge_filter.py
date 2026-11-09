@@ -196,7 +196,7 @@ def dark_edge_reject_reason(artist, title):
     ):
         return "geblokkeerde dance-/EDM-, punk-/metalartiest of persoonlijke uitzondering"
     # Ook eventuele versieachtervoegsels en accentschrijfwijzen weren.
-    if a == "grimus" and re.match(r"^priveste[- ]ma(?:\\b|$)", t):
+    if a == "grimus" and re.match(r"^priveste\s*[- ]\s*ma(?:\b|$)", t):
         return "bevestigd Roemeenstalige opname"
     if (a, t) in DARK_EDGE_BLOCKED_RECORDINGS:
         return "expliciet uitgesloten opname"
