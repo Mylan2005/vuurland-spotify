@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794261783.1354983,
+  "__v150_next_spotify_round_at": 1794261912.7541966,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "jack penate|||tonight's today"
     ],
     "dreampop_radio": [
+      "the swell season|||low rising",
       "chorus grant|||o everyone",
       "aurora|||runaway",
       "kurt vile|||runner ups",
@@ -520,8 +521,7 @@
       "syml|||where's my love",
       "jens lekman|||how can i tell him",
       "beach house|||rough song",
-      "ten fe|||in the air",
-      "kt tunstall|||love is an ocean"
+      "ten fe|||in the air"
     ],
     "indie_select": [
       "morrissey|||first of the gang to die",
@@ -956,17 +956,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794261775.9548414,
-    "mellow_mix": 1794261775.9593937,
-    "big_sonic_heaven": 1794261775.9630685,
-    "radio_x_chilled": 1794261775.9678192,
-    "dreampop_radio": 1794261775.9711895,
-    "indie_select": 1794261775.9747891,
-    "dkfm_edge": 1794261776.2296565,
+    "vuurland": 1794261792.1929982,
+    "mellow_mix": 1794261792.197425,
+    "big_sonic_heaven": 1794261792.2009435,
+    "radio_x_chilled": 1794261792.204581,
+    "dreampop_radio": 1794261792.2080438,
+    "indie_select": 1794261792.211651,
+    "dkfm_edge": 1794261792.215408,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794261776.2303326,
-    "dkfm_shoegaze": 1794261776.2339153,
-    "dkfm_classic": 1794261776.237366
+    "dark_edge": 1794261792.2159956,
+    "dkfm_shoegaze": 1794261792.219532,
+    "dkfm_classic": 1794261792.2228868
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12211,6 +12211,12 @@
       "title": "Breathe Out And In",
       "source": "dkfm_edge",
       "failed_at": 1794258822
+    },
+    "eyelash|||strawberry": {
+      "artist": "eyelash",
+      "title": "Strawberry",
+      "source": "dkfm_edge",
+      "failed_at": 1794261794
     }
   },
   "__v51_radio_unmatched": {
@@ -12775,8 +12781,8 @@
   "__last_radio_key_mellow_mix": "angus & julia stone|||the devil's tears",
   "__last_radio_key_big_sonic_heaven": "nation of language|||deliver me from wondering why",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 9326,
-  "__v146_spotify_budget_slot": 1794261663.9990618,
+  "__v116_fifo_next_sequence": 9327,
+  "__v146_spotify_budget_slot": 1794261793.6217937,
   "__vuurland_active_playlist_count": 7880,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -64232,7 +64238,7 @@
     "shout out louds|||hard rain live from haldern festival": 3,
     "phosphene|||black sheep": 3,
     "fragile animals|||breathe out and in": 3,
-    "eyelash|||strawberry": 2,
+    "eyelash|||strawberry": 3,
     "hatchie|||eyes without a face": 2,
     "comsat angels|||shiva descending": 1
   },
@@ -64491,7 +64497,8 @@
     "the comsat angels|||high tide": 1,
     "shout out louds|||hard rain live from haldern festival": 1,
     "phosphene|||black sheep": 1,
-    "fragile animals|||breathe out and in": 1
+    "fragile animals|||breathe out and in": 1,
+    "eyelash|||strawberry": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -93064,7 +93071,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "chorus grant|||o everyone",
+  "__last_radio_key_dreampop_radio": "the swell season|||low rising",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -95312,8 +95319,8 @@
     "v193-shuffle",
     "7196d52bcab461cd2d638532421fafdcc3409345469a36a87efb2035a27c2d53"
   ],
-  "__v192_duyster_archive_cursor": 398,
-  "__v192_duyster_next_enqueue_at": 1794261782.5516508,
+  "__v192_duyster_archive_cursor": 399,
+  "__v192_duyster_next_enqueue_at": 1794261912.2414134,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -97131,5 +97138,6 @@
   "__match_v35__hem|||leave me here": "spotify:track:1XOC7X1JoofA4MoWfjHCX5",
   "__match_v35__my morning jacket|||where to begin": "spotify:track:3Z7kNqZQIfV0OyPcbbf4te",
   "__match_v35__fawns of love|||mournful eyes glass version": "spotify:track:0DZvlv9ipyQXeFudbFyG3E",
-  "__match_v35__bad charm|||shorty": "spotify:track:3wJQMwO2MGkEKAB8MCuwDW"
+  "__match_v35__bad charm|||shorty": "spotify:track:3wJQMwO2MGkEKAB8MCuwDW",
+  "__not_found_v35__eyelash|||strawberry": 1794261794
 }
