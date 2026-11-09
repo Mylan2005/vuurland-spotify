@@ -156,6 +156,7 @@ jobs:
             python3 test_v158_routing_offline.py
             python3 test_dark_edge_filter_offline.py
             python3 test_v212_music_policy_offline.py
+            python3 test_v213_dkfm_activation_offline.py
             python3 test_v190_language_exempt_artists_offline.py
             python3 test_v159_playlist_rebuild_offline.py
             python3 test_v160_requeue_offline.py
