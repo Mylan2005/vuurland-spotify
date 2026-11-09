@@ -1,6 +1,7 @@
 """v171: live-nulmeting en oude seen-status blokkeren nieuwe uitzendingen niet."""
 import ast
 from pathlib import Path
+from vuurland_music_policy import global_music_reject_reason
 
 source = Path("vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
@@ -15,6 +16,7 @@ ns = {
     "RADIO_SOURCE_ORDER": ("vuurland", "mellow_mix", "radio_britannia", "big_sonic_heaven"),
     "_v47_key": key,
     "normalize_match": str.lower,
+    "global_music_reject_reason": global_music_reject_reason,
     "v110_correct_radio_artist": lambda a, sid: a,
     "is_confirmed_german_vocal": lambda a, t: False,
     "is_interview_fragment": lambda t: False,
@@ -66,6 +68,23 @@ cache = {"__playlist_keys": [], "__v96_radio_snapshots": {sid: ["gone"]},
 queue = []
 assert collect(source, cache, set(), queue) == 0
 assert not queue
+
+# Nieuwe wereldwijde muziekvoorkeur wordt ook door de los geladen
+# collector toegepast: ongewenste pop niet in FIFO, indie wel.
+cache = {"__playlist_keys": []}
+q = []
+src = [{"id": "vuurland", "name": "Vuurland",
+        "tracks": [("Slowdive", "Alison")]}]
+assert collect(src, cache, set(), q) == 0
+src[0]["tracks"] = [("Ed Sheeran", "Shape of You"),
+                    ("Slowdive", "Alison")]
+assert collect(src, cache, set(), q) == 0
+assert not q
+src[0]["tracks"] = [("Cocteau Twins", "Heaven or Las Vegas"),
+                    ("Ed Sheeran", "Shape of You"),
+                    ("Slowdive", "Alison")]
+assert collect(src, cache, set(), q) == 1
+assert q[0]["artist"] == "Cocteau Twins"
 
 # Oude snapshots van uitgeschakelde bronnen krijgen geen toegang tot de FIFO.
 print("✅ v171: vier radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
