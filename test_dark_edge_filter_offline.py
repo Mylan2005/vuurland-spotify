@@ -63,6 +63,11 @@ for artist, title in allowed:
     assert dark_edge_reject_reason(artist, title) is None, (artist, title)
 
 blocked_pop = [
+    ("Grimus", "Privește-mă"),
+    ("Grimus", "Priveşte-mă"),
+    ("Grimus", "Priveste-ma"),
+    ("Grimus", "Priveste - Ma"),
+    ("Grimus", "Priveste Ma (Live)"),
     ("Sam Smith", "Stay With Me"),
     ("SAM SMITH", "Too Good at Goodbyes"),
     ("Sam Smith feat. Kim Petras", "Unholy"),
@@ -105,6 +110,24 @@ blocked_pop = [
 ]
 for artist, title in blocked_pop:
     assert dark_edge_reject_reason(artist, title), (artist, title)
+
+# Same verified Romanian recording also fails the global pre-Spotify
+# language check, even if it is sourced from a different station or queue.
+global_language = ast.parse(source)
+language_fn = next(
+    n for n in global_language.body
+    if isinstance(n, ast.FunctionDef) and n.name == "v150_is_unwanted_language"
+)
+language_ns = {}
+exec(compile(ast.Module(body=[language_fn], type_ignores=[]),
+             "<v150_is_unwanted_language>", "exec"), language_ns)
+for romanian_title in (
+    "Privește-mă", "Priveşte-mă", "Priveste-ma",
+    "Priveste Ma", "Priveste - Ma", "Priveste-ma (Live)",
+):
+    assert language_ns["v150_is_unwanted_language"]("Grimus", romanian_title), romanian_title
+assert not language_ns["v150_is_unwanted_language"]("Grimus", "Vitriol")
+assert not language_ns["v150_is_unwanted_language"]("Muse", "Supermassive Black Hole")
 
 # Unknown is not declared pop: it's held OUT of Dark Edge's automatic FIFO.
 for artist, title in [
