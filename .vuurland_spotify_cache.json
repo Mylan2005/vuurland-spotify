@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794263961.3050354,
+  "__v150_next_spotify_round_at": 1794264089.161681,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -524,6 +524,7 @@
       "doves|||sea song"
     ],
     "indie_select": [
+      "mumford & sons|||lover of the light",
       "two door cinema club|||settle",
       "the joy formidable|||this ladder is ours",
       "alt-j|||something good",
@@ -622,8 +623,7 @@
       "propaganda|||femme fatale",
       "siouxsie & the banshees|||peek-a-boo",
       "world party|||ship of fools",
-      "belfegore|||all that i wanted",
-      "athlete|||tourist"
+      "belfegore|||all that i wanted"
     ],
     "dkfm_edge": [
       "cement diver|||pull",
@@ -857,6 +857,7 @@
       "amy o|||planet blue"
     ],
     "dkfm_classic": [
+      "raspberry jam|||wonders of love",
       "curve|||cherry",
       "the chameleons|||time - the end of time",
       "medicine|||defective",
@@ -955,22 +956,21 @@
       "cranes|||and ever",
       "slowdive|||ballad of sister sue",
       "loop|||shot with a diamond",
-      "revolver|||venice",
-      "the popguns|||crazy - remaster"
+      "revolver|||venice"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794263953.469002,
-    "mellow_mix": 1794263953.4755347,
-    "big_sonic_heaven": 1794263953.4801056,
-    "radio_x_chilled": 1794263953.4848573,
-    "dreampop_radio": 1794263953.4893017,
-    "indie_select": 1794263953.4940217,
-    "dkfm_edge": 1794263953.499386,
+    "vuurland": 1794263968.2899961,
+    "mellow_mix": 1794263968.2966003,
+    "big_sonic_heaven": 1794263968.301005,
+    "radio_x_chilled": 1794263968.3057542,
+    "dreampop_radio": 1794263968.310088,
+    "indie_select": 1794263968.3151393,
+    "dkfm_edge": 1794263968.3205538,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794263953.5000625,
-    "dkfm_shoegaze": 1794263953.504684,
-    "dkfm_classic": 1794263953.5090775
+    "dark_edge": 1794263968.3212602,
+    "dkfm_shoegaze": 1794263968.3259115,
+    "dkfm_classic": 1794263968.597757
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11946,6 +11946,7 @@
       "piano magic|||not fair",
       "piano magic|||waking up",
       "raspberry jam|||easter",
+      "raspberry jam|||wonders of love",
       "revolver|||i wear your chain",
       "revolver|||molasses",
       "revolver|||shakesdown",
@@ -12282,6 +12283,12 @@
       "title": "Mercy seat (12\")",
       "source": "indie_select",
       "failed_at": 1794263843
+    },
+    "loom|||slowmotion": {
+      "artist": "Loom",
+      "title": "Slowmotion",
+      "source": "dkfm_edge",
+      "failed_at": 1794263971
     }
   },
   "__v51_radio_unmatched": {
@@ -12838,8 +12845,8 @@
   "__last_radio_key_mellow_mix": "love spells|||don't touch",
   "__last_radio_key_big_sonic_heaven": "kate de rosset|||the spark",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 9367,
-  "__v146_spotify_budget_slot": 1794263842.2281783,
+  "__v116_fifo_next_sequence": 9369,
+  "__v146_spotify_budget_slot": 1794263970.086005,
   "__vuurland_active_playlist_count": 7891,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -64318,7 +64325,7 @@
     "hatchie|||eyes without a face": 3,
     "comsat angels|||shiva descending": 3,
     "ultra vivid scene|||mercy seat 12\"": 3,
-    "loom|||slowmotion": 2,
+    "loom|||slowmotion": 3,
     "more earth than sea|||alone again": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -64579,7 +64586,8 @@
     "eyelash|||strawberry": 1,
     "hatchie|||eyes without a face": 1,
     "comsat angels|||shiva descending": 1,
-    "ultra vivid scene|||mercy seat 12\"": 1
+    "ultra vivid scene|||mercy seat 12\"": 1,
+    "loom|||slowmotion": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -93290,7 +93298,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "two door cinema club|||settle",
+  "__last_radio_key_indie_select": "mumford & sons|||lover of the light",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -94667,7 +94675,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "cement diver|||pull",
   "__last_radio_key_dkfm_shoegaze": "julie|||april's-bloom",
-  "__last_radio_key_dkfm_classic": "curve|||cherry",
+  "__last_radio_key_dkfm_classic": "raspberry jam|||wonders of love",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -95419,8 +95427,8 @@
     "v193-shuffle",
     "7196d52bcab461cd2d638532421fafdcc3409345469a36a87efb2035a27c2d53"
   ],
-  "__v192_duyster_archive_cursor": 415,
-  "__v192_duyster_next_enqueue_at": 1794263960.7531426,
+  "__v192_duyster_archive_cursor": 416,
+  "__v192_duyster_next_enqueue_at": 1794264088.6169548,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -97250,5 +97258,6 @@
   "__not_found_v35__comsat angels|||shiva descending": 1794262842,
   "__match_v35__gang of four|||is it love": "spotify:track:20qKKnW5t3grGDiLqk0fGh",
   "__match_v35__the cactus blossoms|||hey baby": "spotify:track:4MaNTAN78ylZnCMCKBFiU9",
-  "__not_found_v35__ultra vivid scene|||mercy seat 12\"": 1794263843
+  "__not_found_v35__ultra vivid scene|||mercy seat 12\"": 1794263843,
+  "__not_found_v35__loom|||slowmotion": 1794263971
 }
