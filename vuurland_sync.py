@@ -1722,6 +1722,8 @@ def v150_is_unwanted_language(artist, title):
         ('suie paparude', 'cea mai buna zi'),
         ('jurjak', 'vantul'),
         ('eyedrops', 'pastreaza mi calmul'),
+        # Grimus - Privește-mă: bevestigd Roemeenstalige opname (ook ASCII).
+        ('grimus', 'priveste ma'),
     }
     if any(a == ar and (t == ti or t.startswith(ti + ' ')) for ar, ti in known):
         return True
@@ -1734,6 +1736,8 @@ def v150_is_unwanted_language(artist, title):
         r'\b(?:inima|sufletul|viata|iubirea|dragostea)\s+(?:mea|ta|noastra)\b',
         r'\b(?:unde|cand|cine|cum)\s+(?:esti|suntem|pleci|ramane|vine|stii)\b',
         r'\b(?:cea|cel)\s+mai\s+(?:buna|bun|frumoasa|frumos)\b',
+        # Bevestigd Roemeense aanspreekvorm; accenten/streepje genormaliseerd.
+        r'\bpriveste\s+ma\b',
     )
     german = (
         r'\b(?:ich|du|wir)\s+(?:liebe|vermisse|brauche|suche|habe|hab|bin|bist|mochte|will|kann|weiss)\b',
