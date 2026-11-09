@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794202450.5185473,
+  "__v150_next_spotify_round_at": 1794202576.175112,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "spinvis|||bagagedrager",
       "asgeir|||against the current",
       "ciska ciska|||angel",
       "edward sharpe & the magnetic zeros|||man on fire",
@@ -112,8 +113,7 @@
       "marble sounds|||axolotl",
       "role model|||sally when the wine runs out",
       "the paper kites feat julia stone|||without your love",
-      "the smile|||skrting on the surface",
-      "jordan rakei & tom mcfarland|||easy to love"
+      "the smile|||skrting on the surface"
     ],
     "mellow_mix": [
       "indigo girls|||starkville",
@@ -851,17 +851,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794202442.0819778,
-    "mellow_mix": 1794202442.0879476,
-    "big_sonic_heaven": 1794202442.092041,
-    "radio_x_chilled": 1794202442.0970743,
-    "dreampop_radio": 1794202442.1020534,
-    "indie_select": 1794202442.1072845,
-    "dkfm_edge": 1794202442.1131072,
+    "vuurland": 1794202455.9573483,
+    "mellow_mix": 1794202455.9635093,
+    "big_sonic_heaven": 1794202455.9676194,
+    "radio_x_chilled": 1794202455.9726024,
+    "dreampop_radio": 1794202455.9776404,
+    "indie_select": 1794202455.9829233,
+    "dkfm_edge": 1794202455.9888322,
     "dkfm_shoegaze": 1793872191.3211873,
     "dkfm_classic": 1793872191.3214877,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794202442.1137357
+    "dark_edge": 1794202455.9894392
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11906,18 +11906,26 @@
       "failed_at": 1794200696,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "giardini di miro|||othello": {
+      "artist": "Giardini Di Mirò",
+      "title": "Othello",
+      "source": "indie_select",
+      "failed_at": 1794202457,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "asgeir|||against the current",
+  "__last_radio_key_vuurland": "spinvis|||bagagedrager",
   "__last_radio_key_mellow_mix": "indigo girls|||starkville",
   "__last_radio_key_big_sonic_heaven": "midsommar|||dive in",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 8505,
-  "__v146_spotify_budget_slot": 1794202331.37491,
+  "__v146_spotify_budget_slot": 1794202456.8112085,
   "__vuurland_active_playlist_count": 7548,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -61856,7 +61864,7 @@
     "tusq|||love vs reason": 5,
     "bear mccreary|||battlestar galactica": 5,
     "calluna roots|||wicked man sg-remix": 5,
-    "giardini di miro|||othello": 4,
+    "giardini di miro|||othello": 5,
     "the pieces of shit|||lay & love": 3,
     "акульи слезы shark's tears|||дождь | rain": 3,
     "hyper nova|||with you": 3,
