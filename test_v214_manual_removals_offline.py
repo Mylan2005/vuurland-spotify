@@ -60,7 +60,6 @@ assert "preserve_processed_playlist_history(" in span
 assert span.index('stage.get("live_keys", [])') < span.index("preserve_processed_playlist_history(")
 assert "max_additions_per_round = 1" in src
 assert 'FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)' in src
-assert 'if key in seen and sid not in RADIO_SOURCE_ORDER:' not in src or True
 # No new Liked Songs inventory or destructive Spotify write was introduced.
 assert 'spotify_request("GET", "/me/tracks"' not in src
 print("✅ v214: handmatig verwijderde playlistnummers blijven verwerkt; geen herimport na scan.")
