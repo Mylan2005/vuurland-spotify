@@ -86,6 +86,7 @@ jobs:
           python test_dark_edge_filter_offline.py
           python test_v212_music_policy_offline.py
           python test_v213_dkfm_activation_offline.py
+          python test_v214_manual_removals_offline.py
           python test_v190_language_exempt_artists_offline.py
           python test_v192_duyster_fifo_offline.py
           python test_v194_matcher_reports_offline.py
