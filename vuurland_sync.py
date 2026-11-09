@@ -18,6 +18,7 @@ from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
+from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v194_matcher_metadata import (
     canonical_artist as v194_canonical_artist,
     artist_join_key as v194_artist_join_key,
@@ -2504,6 +2505,15 @@ def find_spotify_track(
     if _v211_guest != artist:
         print(f"📝 v211: gecontroleerde volledige gastidentiteit: {artist} → {_v211_guest}")
         artist = _v211_guest
+
+    # v216: zeven expliciete report-schrijfwijzen, steeds originele
+    # v101 bronkey en mislukte-match-identiteit behouden. NOOIT een
+    # Spotify-ID of versie automatisch goedkeuren.
+    _v216_artist, _v216_title = v216_report_correction(artist, title)
+    if (_v216_artist, _v216_title) != (artist, title):
+        print(f"📝 v216: bronmetadata → cataloguszoekvorm: "
+              f"{artist} — {title} → {_v216_artist} — {_v216_title}")
+        artist, title = _v216_artist, _v216_title
 
     # v194: generieke en controleerbare RadioBox-metadata-correcties.
     # De ORIGINELE item-/cache-key en bron blijven onveranderd. De schone
