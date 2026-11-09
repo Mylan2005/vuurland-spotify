@@ -41,8 +41,8 @@ def global_music_reject_reason(artist, title):
     # Gastartiesten: alleen expliciete 'feat', 'ft', 'featuring', 'with'.
     # Splits geen bestaande bandnamen met '&' of gewone woorden.
     credits = re.split(
-        r"\\s+(?:feat\\.?|ft\\.?|featuring|with)\\s+",
-        re.sub(r"\\(\\s*(?=(?:feat\\.?|ft\\.?|featuring|with)\\s+)", " ", name),
+        r"\s+(?:feat\.?|ft\.?|featuring|with)\s+",
+        re.sub(r"\(\s*(?=(?:feat\.?|ft\.?|featuring|with)\s+)", " ", name),
         flags=re.IGNORECASE,
     )
     if any(part.strip(" ()[]") in GLOBAL_EXCLUDED_ARTISTS for part in credits):
