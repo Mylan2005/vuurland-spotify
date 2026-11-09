@@ -17,6 +17,7 @@ from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v214_processed_history import preserve_processed_playlist_history
+from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v194_matcher_metadata import (
     canonical_artist as v194_canonical_artist,
     artist_join_key as v194_artist_join_key,
@@ -5099,6 +5100,13 @@ def find_spotify_track(
         )
 
         spotify_version = spotify_candidate_version(item)
+
+        # v215: een expliciet gevraagde uitvoering kan meerdere kenmerken
+        # tegelijk dragen (bv. 'Live Acoustic'). Andere extra kenmerken
+        # op een Spotify-kandidaat zijn NOOIT dezelfde opname. Vergelijk
+        # vóór eventuele titel-/fuzzy-score of vaste mapping.
+        if has_unrequested_performance_modifiers(title, item.get("name", "")):
+            continue
 
         # v211: bij EXACT benoemde studio-/live-/remixwensen is een
         # cataloguskandidaat pas veilig als ook de SPECIFIEKE versie klopt.
