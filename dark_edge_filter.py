@@ -134,6 +134,7 @@ def dark_edge_is_confirmed_alternative(artist, title):
 DARK_EDGE_BLOCKED_RECORDINGS = frozenset({
     ("coldplay", "a sky full of stars"),
     ("travka", "distante"),  # Bevestigde anderstalige titel uit de radiogeschiedenis.
+    ("grimus", "priveste-ma"),  # Roemeenstalig: ook met diakritische titel.
 })
 
 # Alleen duidelijke meertalige zinsdelen, niet korte ambigue woorden als
@@ -142,6 +143,7 @@ _NON_ENGLISH_PHRASES = (
     # Roemeens (ook enkele onderscheidende losse woorden/frasen)
     r"\b(?:culori\s+uitate|floare\s+de\s+maidan|povestea|iubirea|iubesc|dragostea|noaptea|sufletul|pastreaza|dezorientat|zilele|ploile|vantul)\b",
     r"\b(?:cea|cel)\s+mai\b",
+    r"\bpriveste\s+ma\b",  # Privește-mă / Priveste-ma
     r"\b(?:nu|sa)\s+(?:mai|stiu|vreau|pot|plec|pleci|iubesc|iubesti)\b",
     r"\b(?:te|ma)\s+(?:iubesc|iubesti|astept|doare)\b",
     r"\b(?:inima|ochii|sufletul|viata|iubirea)\s+(?:mea|ta|noastra|tai)\b",
@@ -193,6 +195,9 @@ def dark_edge_reject_reason(artist, title):
         name.strip() in DARK_EDGE_BLOCKED_ARTISTS for name in credited
     ):
         return "geblokkeerde dance-/EDM-, punk-/metalartiest of persoonlijke uitzondering"
+    # Ook eventuele versieachtervoegsels en accentschrijfwijzen weren.
+    if a == "grimus" and re.match(r"^priveste\s*[- ]\s*ma(?:\b|$)", t):
+        return "bevestigd Roemeenstalige opname"
     if (a, t) in DARK_EDGE_BLOCKED_RECORDINGS:
         return "expliciet uitgesloten opname"
     # Geen Griekse/Cyrillische/Arabische/CJK-tekens in titels.
