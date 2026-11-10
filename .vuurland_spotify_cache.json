@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sam amidon|||blue mountains",
       "moby|||natural blues",
       "first aid kit|||emmylou",
       "sufjan stevens|||javelin to have and to hold",
@@ -112,8 +113,7 @@
       "ry x|||yayaya",
       "jjerome87|||track and field",
       "damien rice|||cannonball",
-      "kings of leon|||revelry",
-      "leon bridges|||steam"
+      "kings of leon|||revelry"
     ],
     "mellow_mix": [
       "diana krall|||temptation",
@@ -218,6 +218,7 @@
       "supergrass|||sad girl"
     ],
     "big_sonic_heaven": [
+      "bug teeth|||tapeworm",
       "presents for sally|||a thousand ways to say goodbye",
       "bragolin|||tar with salt foam",
       "the cure|||a thousand hours",
@@ -316,8 +317,7 @@
       "still corners|||white sands",
       "the church|||winter",
       "the cure|||how beautiful you are",
-      "fever ray|||the lake cinematic",
-      "encarta 98|||destello"
+      "fever ray|||the lake cinematic"
     ],
     "radio_x_chilled": [
       "plain white t's|||hey there delilah",
@@ -626,6 +626,7 @@
       "mumford & sons|||ditmas"
     ],
     "dkfm_edge": [
+      "sgo|||bookcase",
       "bright like stars|||star dust",
       "loom|||trapdoor",
       "astronomies|||water song",
@@ -724,8 +725,7 @@
       "riley's mountain|||lovelylittle",
       "francis of delirium|||real love",
       "bleach lab|||nothing left to lose",
-      "voidsoul|||leaves",
-      "loom|||slowmotion"
+      "voidsoul|||leaves"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -861,6 +861,7 @@
       "radio supernova|||vapaa"
     ],
     "dkfm_classic": [
+      "should|||sarah missing",
       "the emerald down|||scream the sound",
       "swervedriver|||girl on a motorbike",
       "moose|||polly",
@@ -959,22 +960,21 @@
       "slowdive|||40 days",
       "lorelei|||sometimesmethinks",
       "lush|||starlust",
-      "love spirals downwards|||el pedregal",
-      "bethany curve|||strength"
+      "love spirals downwards|||el pedregal"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794284729.0950482,
-    "mellow_mix": 1794284729.0998898,
-    "big_sonic_heaven": 1794284729.1029625,
-    "radio_x_chilled": 1794284729.106308,
-    "dreampop_radio": 1794284729.108881,
-    "indie_select": 1794284729.1122332,
-    "dkfm_edge": 1794284729.115926,
+    "vuurland": 1794284802.055775,
+    "mellow_mix": 1794284802.0602727,
+    "big_sonic_heaven": 1794284802.0633254,
+    "radio_x_chilled": 1794284802.0665317,
+    "dreampop_radio": 1794284802.0690377,
+    "indie_select": 1794284802.0723069,
+    "dkfm_edge": 1794284802.0758913,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794284729.1164107,
-    "dkfm_shoegaze": 1794284729.2672153,
-    "dkfm_classic": 1794284729.27064
+    "dark_edge": 1794284802.0763376,
+    "dkfm_shoegaze": 1794284802.079668,
+    "dkfm_classic": 1794284802.217346
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12194,6 +12194,7 @@
       "rocketship|||let's go away",
       "seefeel|||filter dub",
       "should|||inst2",
+      "should|||sarah missing",
       "siddal|||circus fire",
       "siddal|||ghost",
       "siddal|||the pedestal",
@@ -12764,14 +12765,6 @@
       "matching_version": 35,
       "failed_searches": 5
     },
-    "stephen duffy & the lilac time|||so far away": {
-      "artist": "Stephen Duffy & The Lilac Time",
-      "title": "So Far Away",
-      "source": "dreampop_radio",
-      "failed_at": 1794019620,
-      "matching_version": 35,
-      "failed_searches": 5
-    },
     "93millionmilesfromthesun|||slowdive": {
       "artist": "93millionmilesfromthesun",
       "title": "Slowdive",
@@ -13121,11 +13114,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "moby|||natural blues",
+  "__last_radio_key_vuurland": "sam amidon|||blue mountains",
   "__last_radio_key_mellow_mix": "diana krall|||temptation",
-  "__last_radio_key_big_sonic_heaven": "presents for sally|||a thousand ways to say goodbye",
+  "__last_radio_key_big_sonic_heaven": "bug teeth|||tapeworm",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 9765,
+  "__v116_fifo_next_sequence": 9767,
   "__v146_spotify_budget_slot": 1794284730.2708519,
   "__vuurland_active_playlist_count": 8025,
   "__vuurland_active_volume": 1,
@@ -64926,7 +64919,6 @@
     "longingsky|||stay feat tyscha wagemans": 5,
     "coldshoes andrew marrah|||formation": 5,
     "phosphene|||wire": 5,
-    "stephen duffy & the lilac time|||so far away": 5,
     "93millionmilesfromthesun|||slowdive": 5,
     "josh rouse|||streetlights": 5,
     "torpus & the art directors|||the story's all the same": 5,
@@ -65189,7 +65181,6 @@
     "longingsky|||stay feat tyscha wagemans": 1,
     "coldshoes andrew marrah|||formation": 1,
     "phosphene|||wire": 1,
-    "stephen duffy & the lilac time|||so far away": 1,
     "93millionmilesfromthesun|||slowdive": 1,
     "josh rouse|||streetlights": 1,
     "torpus & the art directors|||the story's all the same": 1,
@@ -94986,7 +94977,6 @@
   "__match_v35__kevin devine|||fever moon": "spotify:track:04Mb51Qe6lMyRR71oehJlF",
   "__match_v35__vance joy|||play with fire": "spotify:track:0d0bU9qHxAHvuJRjio7cU6",
   "__match_v35__jose gonzales|||heartbeats": "spotify:track:5eQrB6dVXuSW9vheqtqElY",
-  "__not_found_v35__stephen duffy & the lilac time|||so far away": 1793708493,
   "__match_v35__the phoenix foundation|||flock of hearts": "spotify:track:72CwjynzZhQkAkfAoVMGlo",
   "__match_v35__wilco|||what light": "spotify:track:1BZwQMVd2CrXc9dOeUqrbW",
   "__match_v35__coldplay|||brothers and sisters": "spotify:track:4E1puwynQif5GJqPEXj35p",
@@ -96035,9 +96025,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "bright like stars|||star dust",
+  "__last_radio_key_dkfm_edge": "sgo|||bookcase",
   "__last_radio_key_dkfm_shoegaze": "smush|||milkweed butterfly",
-  "__last_radio_key_dkfm_classic": "the emerald down|||scream the sound",
+  "__last_radio_key_dkfm_classic": "should|||sarah missing",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -96886,9 +96876,12 @@
     ],
     "young man|||unfair": [
       "v211_verified_original_album_search"
+    ],
+    "stephen duffy & the lilac time|||so far away": [
+      "v211_verified_original_album_search"
     ]
   },
-  "__v203_matcher_upgrade_last_release": 1794263171.6484919,
+  "__v203_matcher_upgrade_last_release": 1794284802.2291296,
   "__match_v35__jamie woon|||night air": "spotify:track:73C8W2PBSEbfoNIi1J93MN",
   "__match_v35__blue states|||across the wire": "spotify:track:56P7P2AUXIqqcTFDvuEMlZ",
   "__match_v35__the pretenders|||everyday is like sunday": "spotify:track:5e2OTaaDJIPOxMixPCVajF",
