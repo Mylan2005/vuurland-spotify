@@ -1,25 +1,25 @@
 {
   "format": "v206-duyster-complete-episodes-v1",
-  "next_pid": 260,
+  "next_pid": 251,
   "target_last_pid": 833,
   "verified_episodes": {
     "833": {
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "c8cd44668fa9d94f16d9e600cfec64da46805997827e42a449a2156bf97fbedb",
-      "checked_at_utc": "2026-11-09T23:27:58.411375+00:00"
+      "checked_at_utc": "2026-11-10T09:58:18.522269+00:00"
     },
     "832": {
       "source_tracks": 24,
       "recovered": 0,
       "source_sha256": "60bc0e70f5f9b6a26829999270feea0fdd2d7da9d350db6e785d1ae3d28d56ad",
-      "checked_at_utc": "2026-11-09T23:28:00.020270+00:00"
+      "checked_at_utc": "2026-11-10T09:58:20.165277+00:00"
     },
     "831": {
       "source_tracks": 26,
       "recovered": 0,
       "source_sha256": "bd35ba9f7841f27f0718e2fd1f698c75de2b73101b540f9ecf0ba37c0905bc87",
-      "checked_at_utc": "2026-11-09T23:28:01.599163+00:00"
+      "checked_at_utc": "2026-11-10T09:58:21.806181+00:00"
     },
     "830": {
       "source_tracks": 24,
@@ -3440,12 +3440,66 @@
       "recovered": 0,
       "source_sha256": "d2db11d777d9c648a9037c28030001b52e243f0182da19f024bfc0a6f088994f",
       "checked_at_utc": "2026-11-09T23:29:32.345746+00:00"
+    },
+    "260": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "7cdacfeaed5d0412354006c6904556ab9f5d625ac033d017a64b748c0f60ec5e",
+      "checked_at_utc": "2026-11-10T09:58:23.447964+00:00"
+    },
+    "259": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "74bcf1d3015075fbe599ff6dd06a2ab927b3b310657103bf1ede6f06c3318f0b",
+      "checked_at_utc": "2026-11-10T09:58:25.076450+00:00"
+    },
+    "258": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "4633bb5088944586e5a94005aa395ad3e7ce4d587806ad5ab0284d775265d05b",
+      "checked_at_utc": "2026-11-10T09:58:26.726497+00:00"
+    },
+    "257": {
+      "source_tracks": 23,
+      "recovered": 0,
+      "source_sha256": "8021443acb0146189ea9652d994e26e2128168052ba78451f26cd0d55e252520",
+      "checked_at_utc": "2026-11-10T09:58:28.376208+00:00"
+    },
+    "256": {
+      "source_tracks": 26,
+      "recovered": 0,
+      "source_sha256": "30a2ccbd8dfa749e92fd8c90453f7ef1dd51c8ae58e96e29bd815b0963f900da",
+      "checked_at_utc": "2026-11-10T09:58:30.042967+00:00"
+    },
+    "255": {
+      "source_tracks": 25,
+      "recovered": 0,
+      "source_sha256": "94eec03e3529ff85cf904619e2d703c1aff000abcf62ae857cf93180ae324af6",
+      "checked_at_utc": "2026-11-10T09:58:31.661369+00:00"
+    },
+    "254": {
+      "source_tracks": 22,
+      "recovered": 0,
+      "source_sha256": "7e51f919c8ba24fa88c4f46770417174b20b7871a401e9542e3bf685014ff963",
+      "checked_at_utc": "2026-11-10T09:58:33.338156+00:00"
+    },
+    "253": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "3185c378bcac19e7840de6a14305be7a0fb7e51c53553fb02c1db1239395fbe1",
+      "checked_at_utc": "2026-11-10T09:58:34.982702+00:00"
+    },
+    "252": {
+      "source_tracks": 24,
+      "recovered": 0,
+      "source_sha256": "44ab07c7f374056f5ac6de043f998c321573df425e95270034664d58b3f5b3b0",
+      "checked_at_utc": "2026-11-10T09:58:36.644230+00:00"
     }
   },
   "total_recovered": 8,
   "complete": false,
-  "last_checked_at_utc": "2026-11-09T23:29:32.345763+00:00",
-  "last_batch_verified": 60,
+  "last_checked_at_utc": "2026-11-10T09:58:38.203754+00:00",
+  "last_batch_verified": 12,
   "last_batch_recovered": 0,
-  "last_error": null
+  "last_error": "Aflevering 251 niet bevestigd: ValueError: Duyster aflevering 251 ontbreekt of is onvolledig"
 }
