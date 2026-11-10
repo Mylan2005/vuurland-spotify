@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794344339.8224084,
+  "__v150_next_spotify_round_at": 1794344471.8559685,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -626,6 +626,7 @@
       "tiesto feat kele okereke|||it's not the things you say - tiesto feat kele okereke"
     ],
     "dkfm_edge": [
+      "flashes|||good mourning",
       "mo dotti|||whirling sad",
       "pulse park|||briars",
       "tannhauser orchestra|||spring reverb",
@@ -724,8 +725,7 @@
       "cloakroom|||unbelonging",
       "brief candles|||murky",
       "closedown|||red oval",
-      "the sewing club|||strange",
-      "pia fraus|||sunny afternoon"
+      "the sewing club|||strange"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -961,17 +961,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794344334.2157042,
-    "mellow_mix": 1794344334.2205045,
-    "big_sonic_heaven": 1794344334.2245493,
-    "radio_x_chilled": 1794344334.2286522,
-    "dreampop_radio": 1794344334.232591,
-    "indie_select": 1794344334.5333664,
-    "dkfm_edge": 1794344334.5376563,
+    "vuurland": 1794344351.5959616,
+    "mellow_mix": 1794344351.6006227,
+    "big_sonic_heaven": 1794344351.6045294,
+    "radio_x_chilled": 1794344351.6085453,
+    "dreampop_radio": 1794344351.6123881,
+    "indie_select": 1794344351.6165068,
+    "dkfm_edge": 1794344351.6207745,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794344334.538348,
-    "dkfm_shoegaze": 1794344334.5423818,
-    "dkfm_classic": 1794344334.5463731
+    "dark_edge": 1794344351.6214833,
+    "dkfm_shoegaze": 1794344351.625581,
+    "dkfm_classic": 1794344351.629702
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13298,6 +13298,12 @@
       "title": "Sink Or Swim (Rettungsring Radio Remix)",
       "source": "indie_select",
       "failed_at": 1794342769
+    },
+    "new order|||12-new order-vanishing point": {
+      "artist": "New Order",
+      "title": "12-New Order-Vanishing Point",
+      "source": "indie_select",
+      "failed_at": 1794344354
     }
   },
   "__v51_radio_unmatched": {
@@ -13911,7 +13917,7 @@
   "__last_radio_key_big_sonic_heaven": "boy harsher|||pray 4 me",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 10964,
-  "__v146_spotify_budget_slot": 1794344220.963593,
+  "__v146_spotify_budget_slot": 1794344352.9600956,
   "__vuurland_active_playlist_count": 8355,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -67281,7 +67287,7 @@
     "bonnie prince billy|||goodbye dear old stepstone": 3,
     "caelum bliss|||slow": 3,
     "bad lieutenant|||sink or swim rettungsring radio remix": 3,
-    "new order|||12-new order-vanishing point": 2,
+    "new order|||12-new order-vanishing point": 3,
     "jj|||new work": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -67567,7 +67573,8 @@
     "a festival a parade|||people person": 1,
     "bonnie prince billy|||goodbye dear old stepstone": 1,
     "caelum bliss|||slow": 1,
-    "bad lieutenant|||sink or swim rettungsring radio remix": 1
+    "bad lieutenant|||sink or swim rettungsring radio remix": 1,
+    "new order|||12-new order-vanishing point": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -99510,7 +99517,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "mo dotti|||whirling sad",
+  "__last_radio_key_dkfm_edge": "flashes|||good mourning",
   "__last_radio_key_dkfm_shoegaze": "vibragun|||my secret history",
   "__last_radio_key_dkfm_classic": "ride|||leave them all behind",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -102602,5 +102609,6 @@
   "__match_v35__red house painters|||sundays & holidays": "spotify:track:0qPXks0PAVj2pJJr8qS2AS",
   "__match_v35__wisp|||see you soon": "spotify:track:5TMGf0iNjOVLOgBf9vgq2O",
   "__match_v35__school is cool|||close": "spotify:track:5OALkG3x5wCyxtEiNudEuQ",
-  "__match_v35__sophia|||a last dance to sad eyes": "spotify:track:6oWeU0twbEduOfv85VDYmh"
+  "__match_v35__sophia|||a last dance to sad eyes": "spotify:track:6oWeU0twbEduOfv85VDYmh",
+  "__not_found_v35__new order|||12-new order-vanishing point": 1794344354
 }
