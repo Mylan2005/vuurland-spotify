@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794333638.1523287,
+  "__v150_next_spotify_round_at": 1794333771.3530393,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -956,17 +956,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794333632.2693667,
-    "mellow_mix": 1794333632.2733655,
-    "big_sonic_heaven": 1794333632.2766893,
-    "radio_x_chilled": 1794333632.2800493,
-    "dreampop_radio": 1794333632.2832596,
-    "indie_select": 1794333632.2868035,
-    "dkfm_edge": 1794333632.2902539,
+    "vuurland": 1794333651.0968833,
+    "mellow_mix": 1794333651.1009803,
+    "big_sonic_heaven": 1794333651.104387,
+    "radio_x_chilled": 1794333651.1079109,
+    "dreampop_radio": 1794333651.1112394,
+    "indie_select": 1794333651.114844,
+    "dkfm_edge": 1794333651.1184127,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794333632.290903,
-    "dkfm_shoegaze": 1794333632.5611358,
-    "dkfm_classic": 1794333632.8465784
+    "dark_edge": 1794333651.119121,
+    "dkfm_shoegaze": 1794333651.1226015,
+    "dkfm_classic": 1794333651.12597
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12915,12 +12915,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "stubai|||voyager edit": {
-      "artist": "Stubai",
-      "title": "Voyager (edit)",
-      "source": "dkfm_edge",
-      "failed_at": 1794247134
-    },
     "the comsat angels|||high tide": {
       "artist": "The Comsat Angels",
       "title": "High Tide",
@@ -13748,9 +13742,9 @@
   "__last_radio_key_mellow_mix": "bill evans|||peace piece",
   "__last_radio_key_big_sonic_heaven": "spc eco|||nobody knows",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 10745,
-  "__v146_spotify_budget_slot": 1794333519.2241085,
-  "__vuurland_active_playlist_count": 8291,
+  "__v116_fifo_next_sequence": 10746,
+  "__v146_spotify_budget_slot": 1794333652.6249433,
+  "__vuurland_active_playlist_count": 8292,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794333389,
@@ -23794,6 +23788,7 @@
     "wye oak|||civilian",
     "wye oak|||every day like the last",
     "wye oak|||its way with me",
+    "wye oak|||take it in",
     "wye oak|||watching the waiting",
     "wynona bleach|||swim in the bay",
     "xavier rudd|||follow the sun",
@@ -31262,6 +31257,7 @@
     "spotify:track:6yaQUItQasaCSNBc9r12Eb",
     "spotify:track:6yajX6McMc6xKZh0ynLl1U",
     "spotify:track:6ypqW6kawv0iJFyW1k1UQr",
+    "spotify:track:6ysdhvHaXExRogtJHCM446",
     "spotify:track:6yu5GvFfmHKF04OODVztAS",
     "spotify:track:6z2Rhkt1WJR9ex3uCeDrYj",
     "spotify:track:6z6Nd3M3D38XJMnkEC0GZh",
@@ -39250,6 +39246,7 @@
     "USMRG0628006",
     "USMRG0728504",
     "USMRG0728507",
+    "USMRG0934603",
     "USMRG1140005",
     "USMRG1142018",
     "USMRG1347304",
@@ -48575,7 +48572,8 @@
     "spotify:track:2LLynI3LFOswg1CHuFpL92": "TCAHL2396778",
     "spotify:track:0pTMpJiaTqvhgAxhfXZCLq": "NLD322100216",
     "spotify:track:00udfYIC2Z9rLaghIxRh3x": "CAN112300234",
-    "spotify:track:3Rh50iTqDRpSFSMaQ30Uf8": "GBAFL2300257"
+    "spotify:track:3Rh50iTqDRpSFSMaQ30Uf8": "GBAFL2300257",
+    "spotify:track:6ysdhvHaXExRogtJHCM446": "USMRG0934603"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -83441,6 +83439,7 @@
       "wybercron|||imprint",
       "wye oak|||civilian",
       "wye oak|||its way with me",
+      "wye oak|||take it in",
       "wye oak|||watching the waiting",
       "wynona bleach|||swim in the bay",
       "xavier rudd|||home",
@@ -87520,6 +87519,7 @@
       "spotify:track:6ySzojuQvq5ooqUXGGcFDe",
       "spotify:track:6yVIVzLwV2L6Uxc12AOO3K",
       "spotify:track:6yajX6McMc6xKZh0ynLl1U",
+      "spotify:track:6ysdhvHaXExRogtJHCM446",
       "spotify:track:6yu5GvFfmHKF04OODVztAS",
       "spotify:track:6z2Rhkt1WJR9ex3uCeDrYj",
       "spotify:track:6z6Nd3M3D38XJMnkEC0GZh",
@@ -91753,6 +91753,7 @@
       "USMRG0628004",
       "USMRG0628006",
       "USMRG0728504",
+      "USMRG0934603",
       "USMRG1140005",
       "USMRG1347505",
       "USMRG1656408",
@@ -96965,7 +96966,8 @@
       "spotify:track:2LLynI3LFOswg1CHuFpL92": "TCAHL2396778",
       "spotify:track:0pTMpJiaTqvhgAxhfXZCLq": "NLD322100216",
       "spotify:track:00udfYIC2Z9rLaghIxRh3x": "CAN112300234",
-      "spotify:track:3Rh50iTqDRpSFSMaQ30Uf8": "GBAFL2300257"
+      "spotify:track:3Rh50iTqDRpSFSMaQ30Uf8": "GBAFL2300257",
+      "spotify:track:6ysdhvHaXExRogtJHCM446": "USMRG0934603"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -101849,5 +101851,6 @@
   "__match_v35__trauma ray|||tracers": "spotify:track:2LLynI3LFOswg1CHuFpL92",
   "__match_v35__the slow show|||woven blue": "spotify:track:0pTMpJiaTqvhgAxhfXZCLq",
   "__match_v35__bleach lab|||nothing left to lose": "spotify:track:00udfYIC2Z9rLaghIxRh3x",
-  "__match_v35__cocteau twins|||evangeline": "spotify:track:3Rh50iTqDRpSFSMaQ30Uf8"
+  "__match_v35__cocteau twins|||evangeline": "spotify:track:3Rh50iTqDRpSFSMaQ30Uf8",
+  "__match_v35__wye oak|||take it in": "spotify:track:6ysdhvHaXExRogtJHCM446"
 }
