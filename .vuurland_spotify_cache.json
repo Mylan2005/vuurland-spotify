@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "celeste|||i can see the change",
       "whitney|||back to the wind",
       "hermanos gutierrez|||canto andino",
       "finneas|||what they'll say about us",
@@ -112,10 +113,10 @@
       "ane brun|||all my tears",
       "james blake|||i had a dream she took my hand",
       "taylor swift feat phoebe bridgers|||nothing new taylor's version",
-      "jack johnson|||upside down",
-      "still corners|||static"
+      "jack johnson|||upside down"
     ],
     "mellow_mix": [
+      "loreena mckennitt|||skellig",
       "fantastic negrito|||i hope somebody's loving you",
       "cassandra wilson|||fragile",
       "grateful dead|||dire wolf live",
@@ -214,8 +215,7 @@
       "john martyn|||glory box",
       "the decemberists|||carolina low",
       "jamie stillway|||stout street rag",
-      "tanya donelly|||moonbeam monkey",
-      "mondo cozmo|||plastic soul"
+      "tanya donelly|||moonbeam monkey"
     ],
     "big_sonic_heaven": [
       "kate de rosset|||chase the bloom",
@@ -934,17 +934,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794323989.1463504,
-    "mellow_mix": 1794323989.1494398,
-    "big_sonic_heaven": 1794323989.1518936,
-    "radio_x_chilled": 1794323989.1544929,
-    "dreampop_radio": 1794323989.1569357,
-    "indie_select": 1794323989.4783041,
-    "dkfm_edge": 1794323989.481122,
+    "vuurland": 1794324029.1726878,
+    "mellow_mix": 1794324029.4478397,
+    "big_sonic_heaven": 1794324029.4502997,
+    "radio_x_chilled": 1794324029.45287,
+    "dreampop_radio": 1794324029.4553416,
+    "indie_select": 1794324029.458015,
+    "dkfm_edge": 1794324029.4606698,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794323989.4816387,
-    "dkfm_shoegaze": 1794323989.484202,
-    "dkfm_classic": 1794323989.4866729
+    "dark_edge": 1794324029.4612296,
+    "dkfm_shoegaze": 1794324029.4637883,
+    "dkfm_classic": 1794324029.4662428
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -3314,6 +3314,7 @@
       "lord huron|||the night we met",
       "lord huron|||when the night is over",
       "loreena mckennitt|||marco polo",
+      "loreena mckennitt|||skellig",
       "loreena mckennitt|||the dark night of the soul",
       "loreena mckennitt|||the mummers dance",
       "los incas|||el condor pasa",
@@ -13621,11 +13622,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "whitney|||back to the wind",
-  "__last_radio_key_mellow_mix": "fantastic negrito|||i hope somebody's loving you",
+  "__last_radio_key_vuurland": "celeste|||i can see the change",
+  "__last_radio_key_mellow_mix": "loreena mckennitt|||skellig",
   "__last_radio_key_big_sonic_heaven": "kate de rosset|||chase the bloom",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 10553,
+  "__v116_fifo_next_sequence": 10554,
   "__v146_spotify_budget_slot": 1794323915.948595,
   "__vuurland_active_playlist_count": 8253,
   "__vuurland_active_volume": 1,
