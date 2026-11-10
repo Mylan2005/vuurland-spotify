@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794280394.0878437,
+  "__v150_next_spotify_round_at": 1794280521.9012084,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "biffy clyro|||mountains acoustic"
     ],
     "dreampop_radio": [
+      "graveyard club|||the night is mine",
       "the sand band|||set me free",
       "kings of convenience|||parallel lines",
       "kurt vile|||snowflakes are dancing",
@@ -520,8 +521,7 @@
       "sleeping at last|||i'm gonna be 500 miles",
       "bon iver|||i can't make you love me/nick of time bonnie raitt cover",
       "ryan adams|||wonderwall oasis cover",
-      "say lou lou|||feels like we only go backwards tame impala cover",
-      "editors|||lullaby the cure cover"
+      "say lou lou|||feels like we only go backwards tame impala cover"
     ],
     "indie_select": [
       "grant mclennan|||girl in a beret",
@@ -965,17 +965,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794280385.9821286,
-    "mellow_mix": 1794280385.9900649,
-    "big_sonic_heaven": 1794280385.9951644,
-    "radio_x_chilled": 1794280386.0011811,
-    "dreampop_radio": 1794280386.0059712,
-    "indie_select": 1794280386.0120153,
-    "dkfm_edge": 1794280386.2822046,
+    "vuurland": 1794280401.2788897,
+    "mellow_mix": 1794280401.287035,
+    "big_sonic_heaven": 1794280401.2922432,
+    "radio_x_chilled": 1794280401.2983444,
+    "dreampop_radio": 1794280401.3032472,
+    "indie_select": 1794280401.3094206,
+    "dkfm_edge": 1794280401.3161805,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794280386.2830482,
-    "dkfm_shoegaze": 1794280386.2894278,
-    "dkfm_classic": 1794280386.2954614
+    "dark_edge": 1794280401.3169425,
+    "dkfm_shoegaze": 1794280401.3233352,
+    "dkfm_classic": 1794280401.32945
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13057,6 +13057,14 @@
       "failed_at": 1794272944,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "owls of the swamp|||shelter": {
+      "artist": "Owls of the Swamp",
+      "title": "Shelter",
+      "source": "dreampop_radio",
+      "failed_at": 1794280404,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -13067,8 +13075,8 @@
   "__last_radio_key_mellow_mix": "counting crows|||mr jones live",
   "__last_radio_key_big_sonic_heaven": "&tilly|||clearest blue",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 9686,
-  "__v146_spotify_budget_slot": 1794280275.038385,
+  "__v116_fifo_next_sequence": 9687,
+  "__v146_spotify_budget_slot": 1794280402.8575292,
   "__vuurland_active_playlist_count": 7998,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -64802,7 +64810,7 @@
     "kruger brothers|||the gate of memory": 5,
     "patty griffin|||making pies": 5,
     "the canon logic|||avenue of criminals album version": 5,
-    "owls of the swamp|||shelter": 4,
+    "owls of the swamp|||shelter": 5,
     "keeley|||the glitter and the glue tipler remix": 4,
     "equation|||hard underground": 3,
     "posies the|||last crawl": 3,
@@ -94269,7 +94277,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the sand band|||set me free",
+  "__last_radio_key_dreampop_radio": "graveyard club|||the night is mine",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -96513,8 +96521,8 @@
     "v193-shuffle",
     "7196d52bcab461cd2d638532421fafdcc3409345469a36a87efb2035a27c2d53"
   ],
-  "__v192_duyster_archive_cursor": 547,
-  "__v192_duyster_next_enqueue_at": 1794280393.5034528,
+  "__v192_duyster_archive_cursor": 548,
+  "__v192_duyster_next_enqueue_at": 1794280521.3493457,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
