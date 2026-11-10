@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794294747.012136,
+  "__v150_next_spotify_round_at": 1794294872.4374053,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -193,17 +193,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794294738.5615861,
-    "mellow_mix": 1794294738.5622303,
-    "big_sonic_heaven": 1794294738.5627398,
-    "radio_x_chilled": 1794294738.5629685,
-    "dreampop_radio": 1794294738.5632844,
-    "indie_select": 1794294738.5637443,
-    "dkfm_edge": 1794294738.5640576,
+    "vuurland": 1794294752.1043596,
+    "mellow_mix": 1794294752.104995,
+    "big_sonic_heaven": 1794294752.1055145,
+    "radio_x_chilled": 1794294752.1057405,
+    "dreampop_radio": 1794294752.1060123,
+    "indie_select": 1794294752.1064696,
+    "dkfm_edge": 1794294752.1067874,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794294738.5644104,
-    "dkfm_shoegaze": 1794294738.5646162,
-    "dkfm_classic": 1794294738.564789
+    "dark_edge": 1794294752.1071024,
+    "dkfm_shoegaze": 1794294752.1072927,
+    "dkfm_classic": 1794294752.1074824
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11894,6 +11894,12 @@
       "title": "For You",
       "source": "dkfm_edge",
       "failed_at": 1794293008
+    },
+    "stillfilms|||fader": {
+      "artist": "stillfilms",
+      "title": "Fader",
+      "source": "dkfm_edge",
+      "failed_at": 1794294753
     }
   },
   "__v51_radio_unmatched": {
@@ -12498,8 +12504,8 @@
   "__last_radio_key_mellow_mix": "lucinda williams|||out of touch",
   "__last_radio_key_big_sonic_heaven": "pale saints|||featherframe",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 9967,
-  "__v146_spotify_budget_slot": 1794294627.5731933,
+  "__v116_fifo_next_sequence": 9968,
+  "__v146_spotify_budget_slot": 1794294753.0054693,
   "__vuurland_active_playlist_count": 8082,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -64754,7 +64760,7 @@
     "pom pom squad|||popular feat nada surf & matthew caws": 3,
     "the kissaway trail|||sarah jevo": 3,
     "indoor voices|||for you": 3,
-    "stillfilms|||fader": 2,
+    "stillfilms|||fader": 3,
     "plant cell|||in the sky": 2,
     "unknown mortal orchestra|||the dock of the bay": 1
   },
@@ -65021,7 +65027,8 @@
     "fujiya & miyagi|||yoyo": 1,
     "pom pom squad|||popular feat nada surf & matthew caws": 1,
     "the kissaway trail|||sarah jevo": 1,
-    "indoor voices|||for you": 1
+    "indoor voices|||for you": 1,
+    "stillfilms|||fader": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -96627,8 +96634,8 @@
     "v193-shuffle",
     "7196d52bcab461cd2d638532421fafdcc3409345469a36a87efb2035a27c2d53"
   ],
-  "__v192_duyster_archive_cursor": 677,
-  "__v192_duyster_next_enqueue_at": 1794294746.6800168,
+  "__v192_duyster_archive_cursor": 678,
+  "__v192_duyster_next_enqueue_at": 1794294872.1200407,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -98664,5 +98671,6 @@
   "__match_v35__cowboy junkies|||anniversary song": "spotify:track:3YHK9S7k7Ii8vZxjMdP780",
   "__match_v35__the xx|||fiction": "spotify:track:40Gp0YR5kj8vT7Z55YzTFM",
   "__match_v35__cuff the duke|||diamond sea sonic youth cover": "spotify:track:6pWLiNuNOTnVK3xn6198Ci",
-  "__match_v35__ride|||kaleidoscope": "spotify:track:4oqZhaz3506QfeMXc2sXaL"
+  "__match_v35__ride|||kaleidoscope": "spotify:track:4oqZhaz3506QfeMXc2sXaL",
+  "__not_found_v35__stillfilms|||fader": 1794294753
 }
