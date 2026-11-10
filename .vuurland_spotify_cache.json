@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794340646.9079344,
+  "__v150_next_spotify_round_at": 1794340779.2456048,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -754,6 +754,7 @@
       "editors|||munich"
     ],
     "dkfm_shoegaze": [
+      "푸른 산|||내일은 없다",
       "slow crush|||que du noir",
       "softsurf|||hazy dusk",
       "mount mural|||lonely sun",
@@ -852,8 +853,7 @@
       "myveronica|||sick sad world",
       "starbelliedbug|||rocket",
       "neon wire|||fade",
-      "miniatures|||sine",
-      "airiel|||500 deep"
+      "miniatures|||sine"
     ],
     "dkfm_classic": [
       "adorable|||submarine",
@@ -959,17 +959,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794340640.590834,
-    "mellow_mix": 1794340640.5953043,
-    "big_sonic_heaven": 1794340640.5991964,
-    "radio_x_chilled": 1794340640.6031206,
-    "dreampop_radio": 1794340640.6068027,
-    "indie_select": 1794340640.6107783,
-    "dkfm_edge": 1794340640.6147745,
+    "vuurland": 1794340658.6695344,
+    "mellow_mix": 1794340658.6740422,
+    "big_sonic_heaven": 1794340658.6778028,
+    "radio_x_chilled": 1794340658.6816652,
+    "dreampop_radio": 1794340658.6853156,
+    "indie_select": 1794340658.6892285,
+    "dkfm_edge": 1794340658.693184,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794340640.6154833,
-    "dkfm_shoegaze": 1794340640.8899767,
-    "dkfm_classic": 1794340641.1423087
+    "dark_edge": 1794340658.69385,
+    "dkfm_shoegaze": 1794340659.016321,
+    "dkfm_classic": 1794340659.0201418
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12461,6 +12461,7 @@
       "youth valley|||cerberus",
       "youth valley|||earthbiter",
       "yumi zouma|||kpr",
+      "푸른 산|||내일은 없다",
       "テリハリー神様 delivery kamisama|||神様 赫らむ箱庭 the glowing miniature garden"
     ],
     "dkfm_classic": [
@@ -13243,6 +13244,12 @@
       "title": "Goodbye Dear Old Stepstone",
       "source": "dreampop_radio",
       "failed_at": 1794339735
+    },
+    "caelum bliss|||slow": {
+      "artist": "Caelum Bliss",
+      "title": "Slow",
+      "source": "big_sonic_heaven",
+      "failed_at": 1794340661
     }
   },
   "__v51_radio_unmatched": {
@@ -13855,8 +13862,8 @@
   "__last_radio_key_mellow_mix": "foo fighters|||on the mend",
   "__last_radio_key_big_sonic_heaven": "cigarettes for breakfast|||mesmerized",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 10889,
-  "__v146_spotify_budget_slot": 1794340527.9991765,
+  "__v116_fifo_next_sequence": 10890,
+  "__v146_spotify_budget_slot": 1794340660.3278306,
   "__vuurland_active_playlist_count": 8335,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -67143,7 +67150,7 @@
     "israel kamakawiwo'ole|||somewhere/wonderful": 3,
     "a festival a parade|||people person": 3,
     "bonnie prince billy|||goodbye dear old stepstone": 3,
-    "caelum bliss|||slow": 2
+    "caelum bliss|||slow": 3
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -67426,7 +67433,8 @@
     "mariin k|||beach single": 1,
     "israel kamakawiwo'ole|||somewhere/wonderful": 1,
     "a festival a parade|||people person": 1,
-    "bonnie prince billy|||goodbye dear old stepstone": 1
+    "bonnie prince billy|||goodbye dear old stepstone": 1,
+    "caelum bliss|||slow": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -99289,7 +99297,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "wisp|||luna",
-  "__last_radio_key_dkfm_shoegaze": "slow crush|||que du noir",
+  "__last_radio_key_dkfm_shoegaze": "푸른 산|||내일은 없다",
   "__last_radio_key_dkfm_classic": "adorable|||submarine",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -102358,5 +102366,6 @@
   "__match_v35__she's in parties|||angelic": "spotify:track:2tEUouOMR7YchHxVVN8rxo",
   "__match_v35__the verve|||the drugs don't work": "spotify:track:31VCiCtdGTg6tPLDaenzjo",
   "__match_v35__me and my drummer|||so foreign": "spotify:track:3820y7Y2TV4mf1iV6uy6Py",
-  "__match_v35__ian sweet|||fight": "spotify:track:1jZJQAKItIS6865yWWaCeK"
+  "__match_v35__ian sweet|||fight": "spotify:track:1jZJQAKItIS6865yWWaCeK",
+  "__not_found_v35__caelum bliss|||slow": 1794340661
 }
