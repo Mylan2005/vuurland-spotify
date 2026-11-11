@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794391054.8423476,
+  "__v150_next_spotify_round_at": 1794391186.6065047,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "audrey hobert|||wet hair",
       "angus and julia stone|||big jet plane",
       "tiny ruins|||me at the museum you in the wintergardens",
       "kurt vile|||zoom 97",
@@ -62,6 +63,7 @@
       "the war on drugs|||under the pressure"
     ],
     "mellow_mix": [
+      "neil finn|||turn and run",
       "awolnation|||panoramic view",
       "ella fitzgerald|||over the rainbow",
       "lyle lovett|||step inside this house",
@@ -416,17 +418,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794391048.09315,
-    "mellow_mix": 1794391048.0946221,
-    "big_sonic_heaven": 1794391048.0957797,
-    "radio_x_chilled": 1794391048.0964944,
-    "dreampop_radio": 1794391048.0973284,
-    "indie_select": 1794391048.0984766,
-    "dkfm_edge": 1794391048.0994098,
+    "vuurland": 1794391065.8736029,
+    "mellow_mix": 1794391065.8751888,
+    "big_sonic_heaven": 1794391065.8763356,
+    "radio_x_chilled": 1794391065.8770404,
+    "dreampop_radio": 1794391065.8778412,
+    "indie_select": 1794391065.8790112,
+    "dkfm_edge": 1794391065.8799016,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794391048.099908,
-    "dkfm_shoegaze": 1794391048.100984,
-    "dkfm_classic": 1794391048.373341
+    "dark_edge": 1794391065.8804224,
+    "dkfm_shoegaze": 1794391065.8813808,
+    "dkfm_classic": 1794391065.8822334
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13894,12 +13896,12 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "angus and julia stone|||big jet plane",
-  "__last_radio_key_mellow_mix": "awolnation|||panoramic view",
+  "__last_radio_key_vuurland": "audrey hobert|||wet hair",
+  "__last_radio_key_mellow_mix": "neil finn|||turn and run",
   "__last_radio_key_big_sonic_heaven": "electrafixion|||zephyr",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 11835,
-  "__v146_spotify_budget_slot": 1794390936.014661,
+  "__v116_fifo_next_sequence": 11836,
+  "__v146_spotify_budget_slot": 1794391067.7637591,
   "__vuurland_active_playlist_count": 8609,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -102326,8 +102328,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 17,
-  "__v192_duyster_next_enqueue_at": 1794391054.195779,
+  "__v192_duyster_archive_cursor": 19,
+  "__v192_duyster_next_enqueue_at": 1794391185.9114995,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -104891,6 +104893,12 @@
       "title": "The Needle And The Damage Done",
       "failed_at": 1794389881,
       "matching_version": 34
+    },
+    "bonnie 'prince' billy|||new whaling": {
+      "artist": "Bonnie 'Prince' Billy",
+      "title": "New Whaling",
+      "failed_at": 1794391068,
+      "matching_version": 34
     }
   },
   "__match_v35__telefon tel aviv|||sound in a dark room": "spotify:track:1yVuMJyniSoGqOaSJZmkRI",
@@ -105006,5 +105014,6 @@
   "__match_v35__four tet|||loved": "spotify:track:2rIDrqcliMqD8AydNA4Tmc",
   "__match_v35__this is lorelei|||box for buddy box for star": "spotify:track:0ktm6PQBeehUHJORIH76UX",
   "__match_v35__paint|||dial tone": "spotify:track:0gGJmFcwZWpuzjbNGfBRDM",
-  "__match_v35__mogwai|||it's what i want to do mum": "spotify:track:60VAihdHSsk2DuiYnZ4maQ"
+  "__match_v35__mogwai|||it's what i want to do mum": "spotify:track:60VAihdHSsk2DuiYnZ4maQ",
+  "__not_found_v35__bonnie 'prince' billy|||new whaling": 1794391068
 }
