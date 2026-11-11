@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "mitski|||heat lightning",
       "beck|||lost cause",
       "arcade fire|||rebellion lies",
       "big red machine feat taylor swift|||renegade",
@@ -112,8 +113,7 @@
       "unknown mortal orchestra|||multi-love",
       "jorja smith|||february 3rd",
       "radical face|||ghost towns",
-      "bleachers|||you and forever",
-      "future islands|||peach"
+      "bleachers|||you and forever"
     ],
     "mellow_mix": [
       "the prayer boat|||polichinelle",
@@ -320,6 +320,7 @@
       "puppy teeth|||melatonin"
     ],
     "radio_x_chilled": [
+      "tame impala|||the less i know the better",
       "the streets|||dry your eyes",
       "alt-j|||breezeblocks",
       "embrace|||gravity",
@@ -418,8 +419,7 @@
       "biffy clyro|||black chandelier live for radio x presents",
       "the xx|||vcr",
       "band of horses|||no one's gonna love you",
-      "paul weller|||wild wood",
-      "snow patrol / martha wainwright|||set the fire to the third bar"
+      "paul weller|||wild wood"
     ],
     "dreampop_radio": [
       "say lou lou|||maybe you cfcf remix",
@@ -732,6 +732,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "gorillaz feat st vincent|||chalk tablet tower",
       "ceo|||all around",
       "miike snow|||faker",
       "lev snowe|||in a few",
@@ -830,10 +831,10 @@
       "white lies|||to lose my life",
       "the killers|||spaceman",
       "placebo|||summer's gone",
-      "soul keita feat nicolas jaar|||democracy i was thirsty",
-      "hippo campus|||honestly"
+      "soul keita feat nicolas jaar|||democracy i was thirsty"
     ],
     "dkfm_shoegaze": [
+      "temple of angels|||waving to the wind",
       "narrow head|||stuttering stanley",
       "sunstinger|||beyond the frame",
       "wishy|||spinning",
@@ -932,10 +933,10 @@
       "my ultra violet|||islands",
       "cranes|||bewildered",
       "you nothing|||waves single",
-      "spc eco|||feel me radio mix",
-      "sleepy|||flowers"
+      "spc eco|||feel me radio mix"
     ],
     "dkfm_classic": [
+      "house of love|||in a room",
       "shallow|||light saber and the video game",
       "the wedding present|||make me smile come up and see me",
       "majesty crush|||boyfriend",
@@ -1034,22 +1035,21 @@
       "rocketship|||we're both alone",
       "auburn lull|||juni",
       "coaltar of the deepers|||aki no gyouninzaka",
-      "cranes|||wings of joy",
-      "swallow|||cherry stars collide"
+      "cranes|||wings of joy"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794430821.304762,
-    "mellow_mix": 1794430821.6011224,
-    "big_sonic_heaven": 1794430821.6051207,
-    "radio_x_chilled": 1794430821.6091094,
-    "dreampop_radio": 1794430821.6131215,
-    "indie_select": 1794430821.617468,
-    "dkfm_edge": 1794430821.6216943,
+    "vuurland": 1794430860.1477745,
+    "mellow_mix": 1794430860.1526008,
+    "big_sonic_heaven": 1794430860.15647,
+    "radio_x_chilled": 1794430860.1604974,
+    "dreampop_radio": 1794430860.164438,
+    "indie_select": 1794430860.168703,
+    "dkfm_edge": 1794430860.1728933,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794430821.6262565,
-    "dkfm_shoegaze": 1794430821.6303432,
-    "dkfm_classic": 1794430821.634418
+    "dark_edge": 1794430860.5176241,
+    "dkfm_shoegaze": 1794430860.8289769,
+    "dkfm_classic": 1794430861.1165035
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11464,6 +11464,7 @@
       "good morning|||mirror freak",
       "goodbye max|||low health",
       "gorillaz feat adeleye omotayo|||silent running",
+      "gorillaz feat st vincent|||chalk tablet tower",
       "gorillaz|||revolving doors",
       "gorillaz|||stylo",
       "gotan project|||diferente",
@@ -13307,6 +13308,7 @@
       "tears run rings|||world upside down",
       "teary|||through the side door",
       "teen idle|||sometimes",
+      "temple of angels|||waving to the wind",
       "tennis system|||technicolour blind",
       "terra pines|||green",
       "terra pines|||pinos altos",
@@ -13839,6 +13841,7 @@
       "house of love|||hannah",
       "house of love|||hedonist",
       "house of love|||i don't know why i love you",
+      "house of love|||in a room",
       "house of love|||never",
       "innocence mission|||brave",
       "innocence mission|||bright as yellow",
@@ -15243,11 +15246,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "beck|||lost cause",
+  "__last_radio_key_vuurland": "mitski|||heat lightning",
   "__last_radio_key_mellow_mix": "the prayer boat|||polichinelle",
   "__last_radio_key_big_sonic_heaven": "depeche mode|||but not tonight live",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12719,
+  "__v116_fifo_next_sequence": 12722,
   "__v146_spotify_budget_slot": 1794430747.3822098,
   "__vuurland_active_playlist_count": 8824,
   "__vuurland_active_volume": 1,
@@ -102999,7 +103002,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the streets|||dry your eyes",
+  "__last_radio_key_radio_x_chilled": "tame impala|||the less i know the better",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -104586,8 +104589,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "futureheaven|||tired eyes",
-  "__last_radio_key_dkfm_shoegaze": "narrow head|||stuttering stanley",
-  "__last_radio_key_dkfm_classic": "shallow|||light saber and the video game",
+  "__last_radio_key_dkfm_shoegaze": "temple of angels|||waving to the wind",
+  "__last_radio_key_dkfm_classic": "house of love|||in a room",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -104599,7 +104602,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "ceo|||all around",
+  "__last_radio_key_dark_edge": "gorillaz feat st vincent|||chalk tablet tower",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
