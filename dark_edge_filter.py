@@ -1,8 +1,7 @@
 """Dark Edge-bronfilter: laat onbekende ontdekkingen toe, zonder extra Spotify-calls.
 
 Geen gesloten lijst met bekende artiesten: elk geldig nummer mag aan de normale
-Vuurland-matcher worden aangeboden. Alleen persoonlijke artiestblokkades,
-expliciet herkenbare Roemeenstalige opnames en eerdere specifieke uitsluitingen
+Vuurland-matcher worden aangeboden. Alleen Avicii en herkenbare Roemeenstalige opnames
 blijven hier geblokkeerd. Dit is geen betrouwbare audio-taaldetectie:
 RadioBox levert alleen artiest en titel.
 """
@@ -10,13 +9,11 @@ import re
 import unicodedata
 
 # Exacte volledige artiest of expliciete gast; nooit een substringfilter.
-# Eerdere persoonlijke voorkeuren blijven behouden; Avicii is expliciet verboden.
-DARK_EDGE_BLOCKED_ARTISTS = frozenset({"avicii", "dua lipa", "sam smith"})
+# Enkel Avicii als uitvoerende artiest of expliciet gecrediteerde gast blokkeren.
+DARK_EDGE_BLOCKED_ARTISTS = frozenset({"avicii"})
 
-# De opname van Coldplay heeft Avicii-productie, zonder een Avicii-artiestcredit.
-# De twee bevestigde Roemeenstalige opnames blijven geweerd.
+# Bevestigd Roemeenstalige opnames blijven geweerd.
 DARK_EDGE_BLOCKED_RECORDINGS = frozenset({
-    ("coldplay", "a sky full of stars"),
     ("travka", "distante"),
     ("grimus", "priveste-ma"),
 })
