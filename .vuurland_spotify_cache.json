@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "patrick watson|||love songs for robots",
       "warhaus|||where the names are real",
       "noonzy|||buffalo",
       "coldplay|||day 'n' nite",
@@ -112,8 +113,7 @@
       "the radar station|||the giant",
       "ben howard|||what a day",
       "unknown mortal orchestra|||so good at being in trouble",
-      "wet leg|||obvious",
-      "mk gee|||are you looking up"
+      "wet leg|||obvious"
     ],
     "mellow_mix": [
       "jethro tull|||reasons for waiting",
@@ -936,6 +936,7 @@
       "lauren lakis|||we'll be fine"
     ],
     "dkfm_classic": [
+      "ride|||time machine",
       "th' faith healers|||it's easy being you",
       "drop nineteens|||angel",
       "half string|||lolligag",
@@ -1034,22 +1035,21 @@
       "orange|||against nature",
       "lush|||kiss chase",
       "pale saints|||king fade",
-      "the sundays|||i kicked a boy",
-      "band of susans|||child of the moon"
+      "the sundays|||i kicked a boy"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794414560.6792,
-    "mellow_mix": 1794414560.683615,
-    "big_sonic_heaven": 1794414560.687142,
-    "radio_x_chilled": 1794414560.6907036,
-    "dreampop_radio": 1794414560.6943078,
-    "indie_select": 1794414560.6981993,
-    "dkfm_edge": 1794414560.70209,
+    "vuurland": 1794414635.4877386,
+    "mellow_mix": 1794414635.4920018,
+    "big_sonic_heaven": 1794414635.495391,
+    "radio_x_chilled": 1794414635.4988167,
+    "dreampop_radio": 1794414635.5022957,
+    "indie_select": 1794414635.5060604,
+    "dkfm_edge": 1794414635.5097609,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794414560.9819922,
-    "dkfm_shoegaze": 1794414560.9858785,
-    "dkfm_classic": 1794414560.9894373
+    "dark_edge": 1794414635.5133636,
+    "dkfm_shoegaze": 1794414635.5169034,
+    "dkfm_classic": 1794414635.787188
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13822,6 +13822,7 @@
       "ride|||nowhere",
       "ride|||paralysed",
       "ride|||taste",
+      "ride|||time machine",
       "ride|||twisterella",
       "riverside|||a slow fall",
       "riverside|||always",
@@ -14787,14 +14788,6 @@
       "matching_version": 35,
       "failed_searches": 5
     },
-    "!!! chk chk chk|||am/fm": {
-      "artist": "!!! (Chk Chk Chk)",
-      "title": "AM/FM",
-      "source": "indie_select",
-      "failed_at": 1794254285,
-      "matching_version": 35,
-      "failed_searches": 5
-    },
     "tombstones in their eyes|||fall": {
       "artist": "Tombstones In Their Eyes",
       "title": "Fall",
@@ -14944,11 +14937,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "warhaus|||where the names are real",
+  "__last_radio_key_vuurland": "patrick watson|||love songs for robots",
   "__last_radio_key_mellow_mix": "jethro tull|||reasons for waiting",
   "__last_radio_key_big_sonic_heaven": "flower face|||bad dream",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12378,
+  "__v116_fifo_next_sequence": 12380,
   "__v146_spotify_budget_slot": 1794414562.9685764,
   "__vuurland_active_playlist_count": 8731,
   "__vuurland_active_volume": 1,
@@ -69607,7 +69600,6 @@
     "hyper nova|||with you": 5,
     "dead can dance|||death cults": 5,
     "she her her hers|||stereochrome": 5,
-    "!!! chk chk chk|||am/fm": 5,
     "tombstones in their eyes|||fall": 5,
     "kruger brothers|||the gate of memory": 5,
     "patty griffin|||making pies": 5,
@@ -69922,7 +69914,6 @@
     "hyper nova|||with you": 1,
     "dead can dance|||death cults": 1,
     "she her her hers|||stereochrome": 1,
-    "!!! chk chk chk|||am/fm": 1,
     "tombstones in their eyes|||fall": 1,
     "kruger brothers|||the gate of memory": 1,
     "patty griffin|||making pies": 1,
@@ -103414,7 +103405,6 @@
   "__match_v35__chris isaak|||waiting": "spotify:track:54ml187ODyuLYxBYvZyYgS",
   "__match_v35__the xx|||dangerous": "spotify:track:0l42kqoxQv5L6LZVqHdc2Q",
   "__match_v35__zach bryan|||dear miss": "spotify:track:17epPYISlrms9BG2REiwi8",
-  "__not_found_v35__!!! chk chk chk|||am/fm": 1793842457,
   "__match_v35__delphic|||clarion call": "spotify:track:51mXFFDBDgNApnRyZG7KZ8",
   "__match_v35__mint julep|||iteration": "spotify:track:2zkvMGghZGLiQ8eUtLOqCi",
   "__match_v35__djo|||end of beginning": "spotify:track:3qhlB30KknSejmIvZZLjOD",
@@ -103606,7 +103596,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "precocious neophyte|||감기약 panpyrin",
   "__last_radio_key_dkfm_shoegaze": "vixsin|||keep it",
-  "__last_radio_key_dkfm_classic": "th' faith healers|||it's easy being you",
+  "__last_radio_key_dkfm_classic": "ride|||time machine",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -104471,9 +104461,12 @@
     ],
     "tucker zimmerman feat big thief twain & iji|||burial at sea": [
       "v216_report_exact_metadata"
+    ],
+    "!!! chk chk chk|||am/fm": [
+      "v216_report_exact_metadata"
     ]
   },
-  "__v203_matcher_upgrade_last_release": 1794392978.4825454,
+  "__v203_matcher_upgrade_last_release": 1794414635.81781,
   "__match_v35__jamie woon|||night air": "spotify:track:73C8W2PBSEbfoNIi1J93MN",
   "__match_v35__blue states|||across the wire": "spotify:track:56P7P2AUXIqqcTFDvuEMlZ",
   "__match_v35__the pretenders|||everyday is like sunday": "spotify:track:5e2OTaaDJIPOxMixPCVajF",
