@@ -25,8 +25,8 @@ assert 'cache.setdefault("__v96_radio_snapshots", {}).pop(dkfm_sid, None)' in sy
 assert 'cache.setdefault("__v174_radio_snapshot_times", {}).pop(dkfm_sid, None)' in sync
 assert 'if sid in RADIO_SOURCE_ORDER:' in collect
 assert 'arrivals = []' in collect
-assert 'if global_music_reject_reason(artist, title):' in collect
-assert 'elif is_confirmed_german_vocal(artist, title):' in collect
+assert 'if sid != "dark_edge" and global_music_reject_reason(artist, title):' in collect
+assert 'elif sid != "dark_edge" and is_confirmed_german_vocal(artist, title):' in collect
 assert 'FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)' in src
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in src
 assert "max_additions_per_round = 1" in sync
