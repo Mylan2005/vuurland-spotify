@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794404153.697772,
+  "__v150_next_spotify_round_at": 1794404284.2728286,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -978,17 +978,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794404147.0415835,
-    "mellow_mix": 1794404147.0447803,
-    "big_sonic_heaven": 1794404147.0470963,
-    "radio_x_chilled": 1794404147.0492985,
-    "dreampop_radio": 1794404147.0515676,
-    "indie_select": 1794404147.0542064,
-    "dkfm_edge": 1794404147.0568545,
+    "vuurland": 1794404163.571493,
+    "mellow_mix": 1794404163.5758026,
+    "big_sonic_heaven": 1794404163.5781987,
+    "radio_x_chilled": 1794404163.580323,
+    "dreampop_radio": 1794404163.582525,
+    "indie_select": 1794404163.5851657,
+    "dkfm_edge": 1794404163.5877469,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794404147.059553,
-    "dkfm_shoegaze": 1794404147.3436127,
-    "dkfm_classic": 1794404147.3459957
+    "dark_edge": 1794404163.5904548,
+    "dkfm_shoegaze": 1794404163.5930674,
+    "dkfm_classic": 1794404163.5953522
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14729,8 +14729,8 @@
   "__last_radio_key_mellow_mix": "sierra ferrell|||whispering waltz",
   "__last_radio_key_big_sonic_heaven": "blonde redhead|||kiss her kiss her",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12153,
-  "__v146_spotify_budget_slot": 1794404035.092073,
+  "__v116_fifo_next_sequence": 12154,
+  "__v146_spotify_budget_slot": 1794404165.4632728,
   "__vuurland_active_playlist_count": 8673,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -103661,8 +103661,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 149,
-  "__v192_duyster_next_enqueue_at": 1794404153.0945213,
+  "__v192_duyster_archive_cursor": 150,
+  "__v192_duyster_next_enqueue_at": 1794404283.62509,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -106259,6 +106259,12 @@
       "title": "You Were On My Side",
       "failed_at": 1794402204,
       "matching_version": 34
+    },
+    "cocorosie|||vampire": {
+      "artist": "CocoRosie",
+      "title": "Vampire",
+      "failed_at": 1794404166,
+      "matching_version": 34
     }
   },
   "__match_v35__telefon tel aviv|||sound in a dark room": "spotify:track:1yVuMJyniSoGqOaSJZmkRI",
@@ -106446,5 +106452,6 @@
   "__match_v35__op8|||cracklin' water": "spotify:track:49JXjoQVVU7bBobTZnWCf7",
   "__match_v35__the innocence mission|||brave": "spotify:track:60rk1I0cs5KrcAIGXV1tY3",
   "__match_v35__red sparowes|||a mutiny": "spotify:track:7sDKwbDVH4m0lPGe7ErdgE",
-  "__match_v35__zach bryan|||28": "spotify:track:07nsmU3kE3ibmjGo1gNROP"
+  "__match_v35__zach bryan|||28": "spotify:track:07nsmU3kE3ibmjGo1gNROP",
+  "__not_found_v35__cocorosie|||vampire": 1794404166
 }
