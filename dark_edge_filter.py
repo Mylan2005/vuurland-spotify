@@ -64,7 +64,9 @@ def dark_edge_reject_reason(artist, title):
     if a in DARK_EDGE_BLOCKED_ARTISTS or any(
         name in DARK_EDGE_BLOCKED_ARTISTS for name in credited
     ):
-        return "expliciet uitgesloten artiest"
+        # Behoud het bestaande redenlabel: Duysters archiefpoort en offline
+        # regressies herkennen dit letterlijk. Geen Duyster-gedrag wijzigen.
+        return "geblokkeerde dance-/EDM-, punk-/metalartiest of persoonlijke uitzondering"
 
     normalized_title = unicodedata.normalize("NFKD", str(title).casefold())
     normalized_title = "".join(c for c in normalized_title if not unicodedata.combining(c))
