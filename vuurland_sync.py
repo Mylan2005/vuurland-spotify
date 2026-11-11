@@ -1489,9 +1489,8 @@ def dark_edge_track_allowed(artist, title):
 
 
 def get_dark_edge_tracks():
-    # Alleen gecontroleerde alternatieve artiesten / exacte uitzonderlijke
-    # opnames (Gorillaz-favorieten). Onbekende credits gaan NIET automatisch
-    # de FIFO in: geen mainstream hitparadepop via deze bron.
+    # Nieuwe alternatieve artiesten mogen binnen: geen gesloten artiestenlijst.
+    # Alleen expliciet ongewenste artiesten en herkenbare Roemeense titels weren.
     # Andere radiozenders en Duyster blijven onaangeroerd.
     # Geen extra Spotify-/AI-API-calls.
     # De zenderjingle blijft ook uit de RadioBox-resultaten.
@@ -1502,8 +1501,8 @@ def get_dark_edge_tracks():
     )
     approved = [(artist, title) for artist, title in raw
                 if dark_edge_track_allowed(artist, title)]
-    print(f"🛡️ Dark Edge: {len(approved)}/{len(raw)} conservatief toegelaten "
-          f"(overige nummers NIET in wachtrij).")
+    print(f"🌱 Dark Edge: {len(approved)}/{len(raw)} na gerichte bronuitsluitingen "
+          f"(onbekende artiesten mogen mee in de FIFO).")
     return approved
 
 
