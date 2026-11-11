@@ -26,7 +26,7 @@ BRONNEN = {
     'dkfm_shoegaze': 'DKFM Shoegaze Radio',
     'dkfm_classic': 'DKFM Classic',
 }
-SELECTIE = re.compile(r'gezamenlijke FIFO:.*?\(bron:\s*([a-z_]+)\)')
+SELECTIE = re.compile(r'(?:gezamenlijke FIFO:|bronrotatie:).*?\(bron:\s*([a-z0-9_]+)\)')
 
 
 def format_music(raw, source, clock=None):
