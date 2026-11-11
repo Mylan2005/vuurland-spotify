@@ -24,6 +24,8 @@ on:
       - 'test_v224_fair_spotify_opportunities_offline.py'
       - 'bronrapport_v138.py'
       - 'test_v225_source_accountability_offline.py'
+      - 'live_music_stream.py'
+      - 'test_v226_visible_source_attempts_offline.py'
       - 'v203_matcher_upgrade_requeue.py'
       - 'v204_spotify_dedup_review.py'
       - 'v205_lifetime_backup.py'
@@ -113,6 +115,7 @@ jobs:
           python test_v221_source_round_robin_offline.py
           python test_v224_fair_spotify_opportunities_offline.py
           python test_v225_source_accountability_offline.py
+          python test_v226_visible_source_attempts_offline.py
           python test_v203_matcher_upgrade_requeue_offline.py
           python test_v204_spotify_dedup_offline.py
           python test_v205_lifetime_backup_offline.py
