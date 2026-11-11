@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "isbells|||dreamer",
       "mooneye|||fix the heater",
       "erlend oye & la comitiva|||lockdown blues",
       "portland|||time to talk",
@@ -112,10 +113,10 @@
       "warhaus|||where the names are real",
       "noonzy|||buffalo",
       "coldplay|||day 'n' nite",
-      "hermanos gutierrez|||canto andino",
-      "loverman|||into the night"
+      "hermanos gutierrez|||canto andino"
     ],
     "mellow_mix": [
+      "crosby stills nash & young|||helpless",
       "kate miller-heidke|||your friends will tell you who you are",
       "the shins|||a comet appears",
       "lyle lovett|||if i needed you",
@@ -214,10 +215,10 @@
       "pink floyd|||if",
       "patrick watson|||a mermaid in lisbon feat teresa salgueiro",
       "noah kahan|||all my love",
-      "the breeders|||drivin' on 9",
-      "the waifs|||i learn the hard way"
+      "the breeders|||drivin' on 9"
     ],
     "big_sonic_heaven": [
+      "good day father|||sonic amadea",
       "tokyo shoegazer|||remains",
       "dead can dance|||mesmerism remastered",
       "deary|||beauty in all blue satin",
@@ -316,8 +317,7 @@
       "night hikes|||iona",
       "prepare my glider|||change",
       "she's green|||mandy",
-      "cocteau twins|||sugar hiccup",
-      "kiara ngl|||in the deep"
+      "cocteau twins|||sugar hiccup"
     ],
     "radio_x_chilled": [
       "the temper trap|||sweet disposition",
@@ -732,6 +732,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "touched|||low tide",
       "dreamgirl|||weekend 4 the girls",
       "the smashing pumpkins|||bullet with butterfly wings",
       "lawndry|||hillbilly spiritual",
@@ -830,8 +831,7 @@
       "mark farina feat sean hayes|||dream machine",
       "half waif|||turn me around",
       "bloc party|||hunting for witches",
-      "snow patrol|||headlights on dark roads",
-      "foals|||in degrees"
+      "snow patrol|||headlights on dark roads"
     ],
     "dkfm_shoegaze": [
       "hazy waters|||are you there",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794436202.4211113,
-    "mellow_mix": 1794436202.4262283,
-    "big_sonic_heaven": 1794436202.4301999,
-    "radio_x_chilled": 1794436202.4342709,
-    "dreampop_radio": 1794436202.438421,
-    "indie_select": 1794436202.4428918,
-    "dkfm_edge": 1794436202.4473026,
+    "vuurland": 1794436280.8131073,
+    "mellow_mix": 1794436280.8182096,
+    "big_sonic_heaven": 1794436280.8222373,
+    "radio_x_chilled": 1794436280.8262472,
+    "dreampop_radio": 1794436280.8303406,
+    "indie_select": 1794436280.8347628,
+    "dkfm_edge": 1794436280.8391492,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794436202.4520154,
-    "dkfm_shoegaze": 1794436202.4562294,
-    "dkfm_classic": 1794436202.4603918
+    "dark_edge": 1794436281.1199546,
+    "dkfm_shoegaze": 1794436281.1242204,
+    "dkfm_classic": 1794436281.1283755
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12522,6 +12522,7 @@
       "torres|||don't go puttin wishes in my head",
       "torres|||three futures",
       "totally enormous extinct dinosaurs|||don't you forget about me",
+      "touched|||low tide",
       "toulouse lautrec|||te spun",
       "tracey thorn featuring corinne bailey rae|||sister",
       "tram cops|||@be ur man",
@@ -15138,14 +15139,6 @@
       "matching_version": 35,
       "failed_searches": 5
     },
-    "tombstones in their eyes|||fall": {
-      "artist": "Tombstones In Their Eyes",
-      "title": "Fall",
-      "source": "big_sonic_heaven",
-      "failed_at": 1794261406,
-      "matching_version": 35,
-      "failed_searches": 5
-    },
     "kruger brothers|||the gate of memory": {
       "artist": "Krüger Brothers",
       "title": "The Gate of Memory",
@@ -15327,11 +15320,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "mooneye|||fix the heater",
-  "__last_radio_key_mellow_mix": "kate miller-heidke|||your friends will tell you who you are",
-  "__last_radio_key_big_sonic_heaven": "tokyo shoegazer|||remains",
+  "__last_radio_key_vuurland": "isbells|||dreamer",
+  "__last_radio_key_mellow_mix": "crosby stills nash & young|||helpless",
+  "__last_radio_key_big_sonic_heaven": "good day father|||sonic amadea",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12836,
+  "__v116_fifo_next_sequence": 12838,
   "__v146_spotify_budget_slot": 1794436204.4700773,
   "__vuurland_active_playlist_count": 8849,
   "__vuurland_active_volume": 1,
@@ -70424,7 +70417,6 @@
     "hyper nova|||with you": 5,
     "dead can dance|||death cults": 5,
     "she her her hers|||stereochrome": 5,
-    "tombstones in their eyes|||fall": 5,
     "kruger brothers|||the gate of memory": 5,
     "patty griffin|||making pies": 5,
     "the canon logic|||avenue of criminals album version": 5,
@@ -70751,7 +70743,6 @@
     "hyper nova|||with you": 1,
     "dead can dance|||death cults": 1,
     "she her her hers|||stereochrome": 1,
-    "tombstones in their eyes|||fall": 1,
     "kruger brothers|||the gate of memory": 1,
     "patty griffin|||making pies": 1,
     "the canon logic|||avenue of criminals album version": 1,
@@ -104713,7 +104704,6 @@
   "__match_v35__starsailor|||good souls": "spotify:track:1YJo6EdXGh0zNSCwCeGQFh",
   "__match_v35__the wailin' jennys|||take it down": "spotify:track:49OyIwWLgVoGBA0zJBOqB0",
   "__match_v35__dead can dance|||in power we entrust the love advocated": "spotify:track:7CENk0ppYFd6jwrGJ0JP0E",
-  "__not_found_v35__tombstones in their eyes|||fall": 1793846359,
   "__match_v35__the moody blues|||the voice": "spotify:track:0iGNd4z2m80OjE2JcWmBSs",
   "__match_v35__el perro del mar|||to the beat of a dying world": "spotify:track:3eELIvyiMikVB55czvGvdo",
   "__match_v35__softcult|||16/25": "spotify:track:4TrbaX6aAn2xTE76sdOpZr",
@@ -104891,7 +104881,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "dreamgirl|||weekend 4 the girls",
+  "__last_radio_key_dark_edge": "touched|||low tide",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -105747,9 +105737,12 @@
     ],
     "!!! chk chk chk|||am/fm": [
       "v216_report_exact_metadata"
+    ],
+    "tombstones in their eyes|||fall": [
+      "v217_report_independent_third_search"
     ]
   },
-  "__v203_matcher_upgrade_last_release": 1794414635.81781,
+  "__v203_matcher_upgrade_last_release": 1794436281.1609015,
   "__match_v35__jamie woon|||night air": "spotify:track:73C8W2PBSEbfoNIi1J93MN",
   "__match_v35__blue states|||across the wire": "spotify:track:56P7P2AUXIqqcTFDvuEMlZ",
   "__match_v35__the pretenders|||everyday is like sunday": "spotify:track:5e2OTaaDJIPOxMixPCVajF",
