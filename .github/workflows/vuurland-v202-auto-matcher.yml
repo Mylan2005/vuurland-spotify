@@ -74,8 +74,9 @@ jobs:
             echo "Geen nieuwe voldoende onderbouwde zoekhints; geen PR."
             exit 0
           fi
-          if gh pr list --state open --search 'in:title [matcher-bot] Zoekhintvoorstellen' \
-              --json number --jq 'length' | grep -qxv '0'; then
+          if gh pr list --state open --json number,title \
+              --jq '[.[] | select(.title == "[matcher-bot] Zoekhintvoorstellen uit dagelijkse rapporten")] | length' \
+              | grep -qxv '0'; then
             echo "Er staat al een matcherbot-PR open. Geen dubbele voorstellen."
             exit 0
           fi
