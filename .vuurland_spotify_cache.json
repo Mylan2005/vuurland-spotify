@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794431797.492748,
+  "__v150_next_spotify_round_at": 1794431929.8288584,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -320,6 +320,7 @@
       "fun with ether|||brown town"
     ],
     "radio_x_chilled": [
+      "mumford & sons|||timshel",
       "lana del rey|||video games",
       "blossoms|||there's a reason why i never returned your calls acoustic",
       "massive attack|||teardrop",
@@ -418,8 +419,7 @@
       "cocteau twins|||pearly-dewdrops' drops",
       "lana del rey|||summertime sadness",
       "stephen fretwell|||run",
-      "eels|||susan's house",
-      "biffy clyro|||black chandelier live for radio x presents"
+      "eels|||susan's house"
     ],
     "dreampop_radio": [
       "gypsy & the cat|||broken kites",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794431791.4946783,
-    "mellow_mix": 1794431791.4996214,
-    "big_sonic_heaven": 1794431791.5035365,
-    "radio_x_chilled": 1794431791.5075824,
-    "dreampop_radio": 1794431791.5115714,
-    "indie_select": 1794431791.5159729,
-    "dkfm_edge": 1794431791.5203133,
+    "vuurland": 1794431809.080567,
+    "mellow_mix": 1794431809.0855522,
+    "big_sonic_heaven": 1794431809.089458,
+    "radio_x_chilled": 1794431809.0936434,
+    "dreampop_radio": 1794431809.0977175,
+    "indie_select": 1794431809.1021333,
+    "dkfm_edge": 1794431809.106415,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794431791.5249035,
-    "dkfm_shoegaze": 1794431791.529033,
-    "dkfm_classic": 1794431791.5331142
+    "dark_edge": 1794431809.1110606,
+    "dkfm_shoegaze": 1794431809.1152375,
+    "dkfm_classic": 1794431809.1193707
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15252,8 +15252,8 @@
   "__last_radio_key_mellow_mix": "laura veirs|||ocean night song",
   "__last_radio_key_big_sonic_heaven": "landing|||whirligig",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12741,
-  "__v146_spotify_budget_slot": 1794431678.7765877,
+  "__v116_fifo_next_sequence": 12742,
+  "__v146_spotify_budget_slot": 1794431811.1527607,
   "__vuurland_active_playlist_count": 8830,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -70518,7 +70518,7 @@
     "crux of faith|||turbulence": 3,
     "a r kane|||pop short version": 3,
     "virgins|||gliss": 3,
-    "all get out|||time and place": 1,
+    "all get out|||time and place": 2,
     "snow patrol|||how to be dead cla mix": 1,
     "since always|||we still know how to dream": 1
   },
@@ -103053,7 +103053,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "lana del rey|||video games",
+  "__last_radio_key_radio_x_chilled": "mumford & sons|||timshel",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -105391,8 +105391,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 413,
-  "__v192_duyster_next_enqueue_at": 1794431796.8193185,
+  "__v192_duyster_archive_cursor": 414,
+  "__v192_duyster_next_enqueue_at": 1794431929.1521282,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -108326,7 +108326,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "radio_x_chilled",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -108338,7 +108338,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "radio_x_chilled",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
