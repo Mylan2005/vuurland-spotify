@@ -16,6 +16,11 @@ allowed = [
     ("Tati Falco", "Selva y mar"),
     ("Sam Smiths", "Different Artist"),
     ("The Sam Smiths", "Different Artist"),
+    ("Sam Smith", "Stay With Me"),
+    ("Dua Lipa", "Levitating"),
+    ("Coldplay", "A Sky Full of Stars"),
+    ("Muse", "Ich liebe dich"),
+    ("Band", "Je t'aime"),
     ("Gorillaz", "Clint Eastwood"),
     ("Adele", "Someone Like You"),
     ("Billie Eilish", "Birds of a Feather"),
@@ -37,10 +42,6 @@ blocked = [
     ("Muse (feat. Avicii)", "Supermassive Black Hole"),
     ("Muse & Avicii", "Supermassive Black Hole"),
     ("Avicii feat. Aloe Blacc", "Wake Me Up"),
-    ("Coldplay", "A Sky Full of Stars"),
-    ("Dua Lipa", "Levitating"),
-    ("Sam Smith", "Stay With Me"),
-    ("Kim Petras (feat. Sam Smith)", "Unholy"),
     ("Grimus", "Privește-mă"),
     ("Grimus", "Priveşte-mă"),
     ("Grimus", "Priveste-ma"),
@@ -58,7 +59,7 @@ blocked = [
 for artist, title in blocked:
     assert dark_edge_reject_reason(artist, title), (artist, title)
 
-assert "avicii" in DARK_EDGE_BLOCKED_ARTISTS
+assert DARK_EDGE_BLOCKED_ARTISTS == frozenset({"avicii"})
 assert "sam smiths" not in DARK_EDGE_BLOCKED_ARTISTS
 assert dark_edge_reject_reason("Avi Ciin", "More Rain") is None
 assert dark_edge_reject_reason("Indie Band", "Sam Smith") is None
@@ -95,15 +96,20 @@ for name in ("v190_is_language_exempt_artist",
                  "<" + name + ">", "exec"), ns)
 assert ns["get_dark_edge_tracks"]() == [
     ("Nieuw Indieproject", "New Atmospheric Song"),
+    ("Sam Smith", "Stay With Me"),
+    ("Dua Lipa", "Levitating"),
     ("Gorillaz", "Clint Eastwood"),
     ("Sia", "Like a River Runs"),
+    ("Muse", "Ich liebe dich"),
     ("Sigur Rós", "Inní mér syngur vitleysingur"),
     ("Cocteau Twins", "Привет"),
 ]
 assert ns["dark_edge_track_allowed"]("New Alternative Band", "New Song")
 assert not ns["dark_edge_track_allowed"]("Avicii", "Levels")
 assert not ns["dark_edge_track_allowed"]("Sigur Rós feat. Avicii", "Great Song")
-assert not ns["dark_edge_track_allowed"]("Muse", "Ich liebe dich")
+assert ns["dark_edge_track_allowed"]("Muse", "Ich liebe dich")
+assert ns["dark_edge_track_allowed"]("Adele", "Someone Like You")
+assert ns["dark_edge_track_allowed"]("Dua Lipa", "Levitating")
 
 sync_text = ast.get_source_segment(source, functions["sync"])
 collector_text = ast.get_source_segment(source, functions["v96_collect_live_plays"])
@@ -113,6 +119,12 @@ assert 'item.get("source") == "dark_edge" and not dark_edge_track_allowed(artist
 assert 'sid == "dark_edge" and not dark_edge_track_allowed(artist, title)' in collector_text
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 assert "max_additions_per_round = 1" in source
+# Global policy is only bypassed for Dark Edge; remains for every other source.
+assert 'sid != "dark_edge" and global_music_reject_reason(artist, title)' in collector_text
+assert 'item.get("source") == "dark_edge" or not global_music_reject_reason(' in sync_text
+assert 'None if item.get("source") == "dark_edge" else' in sync_text
+assert 'item.get("source") != "dark_edge" and v140_is_unwanted_language_title' in sync_text
+assert 'item.get("source") != "dark_edge" and is_confirmed_german_vocal' in sync_text
 assert "def _duyster_song_allowed(artist, title):" in source
-print("✅ Dark Edge: nieuwe alternatieve artiesten toegelaten; Avicii/expliciet Roemeens geweerd.")
+print("✅ Dark Edge: geen whitelist; alleen Avicii/expliciet Roemeens geweerd.")
 print("✅ Andere bronnen, globale filters, FIFO en Spotify-budget onveranderd.")
