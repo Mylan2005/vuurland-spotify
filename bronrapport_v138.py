@@ -8,26 +8,41 @@ SOURCES = {
  'indie_select':'Indie Select','championship_vinyl':'Championship Vinyl',
  'dark_edge':'Dark Edge Radio','dreampop_radio':'Dreampop Radio',
  'radio_indie_alternative':'Radio Indie Alternative','dkfm_edge':'DKFM Edge',
- 'dkfm_shoegaze':'DKFM Shoegaze Radio','dkfm_classic':'DKFM Classic'}
-SELECT=re.compile(r'gezamenlijke FIFO: volgnummer\s+\d+\s+geselecteerd\s*\(bron:\s*([a-z_]+)\)')
+ 'dkfm_shoegaze':'DKFM Shoegaze Radio','dkfm_classic':'DKFM Classic',
+ 'duyster':'Duyster archief'}
+SELECT=re.compile(r'(?:gezamenlijke FIFO|v221 bronrotatie): (?:FIFO-)?volgnummer\s+\d+\s+geselecteerd\s*\(bron:\s*([a-z_]+)\)')
+SEARCH=re.compile(r'v224 Spotify-zoekbeurt:\s*([a-z_]+)')
+ADD_SOURCE=re.compile(r'v224 Spotify-toevoegbeurt:\s*([a-z_]+)')
+NO_MATCH=re.compile(r'Geen betrouwbare Spotify-match gevonden:')
 COUNT=re.compile(r'^(.+?):\s+(\d+) nummers gevonden\.')
 ADD=re.compile(r'^✅ Toegevoegd:')
 
 def assess(log, queue):
     lines=pathlib.Path(log).read_text(encoding='utf-8', errors='replace').splitlines() if pathlib.Path(log).is_file() else []
-    rounds=0; seen=collections.Counter(); ok=collections.Counter(); added=collections.Counter(); selected=None
+    rounds=0; seen=collections.Counter(); ok=collections.Counter(); added=collections.Counter()
+    searched=collections.Counter(); misses=collections.Counter(); selected=None; search_source=None; add_source=None
     for line in lines:
         line=line.strip()
-        if '📻 Vuurland sync' in line: rounds+=1; selected=None
+        if '📻 Vuurland sync' in line:
+            rounds+=1; selected=None; search_source=None; add_source=None
         if line.startswith('📻 ') and line.endswith(' wordt gecontroleerd...'):
             seen[line[2:-len(' wordt gecontroleerd...')]]+=1
         m=COUNT.match(line)
         if m: ok[m.group(1)]+=1
         m=SELECT.search(line)
         if m: selected=m.group(1)
+        match=SEARCH.search(line)
+        if match:
+            search_source=match.group(1)
+            searched[search_source]+=1
+        if NO_MATCH.search(line):
+            misses[search_source or selected or 'onbekend']+=1
+            search_source=None
+        match=ADD_SOURCE.search(line)
+        if match: add_source=match.group(1)
         if ADD.match(line):
-            added[selected or 'onbekend']+=1
-            selected=None
+            added[add_source or selected or 'onbekend']+=1
+            selected=None; add_source=None; search_source=None
     try:
         entries=json.loads(pathlib.Path(queue).read_text(encoding='utf-8'))
         if not isinstance(entries,list): raise ValueError('queue is not an array')
@@ -40,11 +55,12 @@ def assess(log, queue):
         entries=[];counts=collections.Counter();warning=f'⚠️ Wachtrij kon niet gelezen worden: {exc}'
     out=['# 📻 Vuurland — gezondheid per bron','',
         f'**{rounds} syncronde(s) in deze runner** — dit is géén 24-uursstatistiek.','',
-        '| Radiobron | Controle gestart | Titels gevonden (rondes) | Spotify toegevoegd | Nu in queue |',
-        '|---|---:|---:|---:|---:|']
+        '| Radiobron | Controle gestart | Titels gevonden (rondes) | Spotify Search | Geen match | Spotify toegevoegd | Nu in queue |',
+        '|---|---:|---:|---:|---:|---:|---:|']
     for key,name in SOURCES.items():
-        out.append(f'| {name} | {seen[name]} | {ok[name]} | {added[key]} | {counts[key]} |')
+        out.append(f'| {name} | {seen[name]} | {ok[name]} | {searched[key]} | {misses[key]} | {added[key]} | {counts[key]} |')
     out.extend(['',warning,'',
+      '⚠️ Spotify Search telt echte zoekbeurten, niet geslaagde nummers. Bij een volle wachtrij zonder zoekbeurten moet de bronselectie onderzocht worden. ',
       '⚠️ Een bron die wel gecontroleerd is maar geen nummers toevoegt, is niet per se defect. '
       'De wachtrij en duplicaatfilter kunnen alle uitzendingen al kennen.',
       '⚠️ Deze rapportage telt regels in het log. Een netwerkfout of ontbrekende log kan een onvolledig beeld geven.',''])
