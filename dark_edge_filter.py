@@ -1,16 +1,63 @@
 """Dark Edge-bronfilter: laat onbekende ontdekkingen toe, zonder extra Spotify-calls.
 
-Geen gesloten lijst met bekende artiesten: elk geldig nummer mag aan de normale
-Vuurland-matcher worden aangeboden. Alleen Avicii en herkenbare Roemeenstalige opnames
-blijven hier geblokkeerd. Dit is geen betrouwbare audio-taaldetectie:
-RadioBox levert alleen artiest en titel.
+Geen gesloten lijst met goedgekeurde artiesten. Wel exact de 36 door de
+gebruiker beoordeelde tracks, acht uitgesloten artiesten inclusief Avicii,
+en duidelijke Roemeenstalige titels weren. Dit is geen audio-taaldetectie:
+RadioBox levert alleen artiest en titel. Andere bronnen blijven onaangeroerd.
 """
 import re
 import unicodedata
 
 # Exacte volledige artiest of expliciete gast; nooit een substringfilter.
-# Enkel Avicii als uitvoerende artiest of expliciet gecrediteerde gast blokkeren.
-DARK_EDGE_BLOCKED_ARTISTS = frozenset({"avicii"})
+# Zeven door de gebruiker bevestigde pop-/danceartiesten én Avicii.
+# Alleen Dark Edge: de algemene uitsluitingen van andere bronnen wijzigen niet.
+DARK_EDGE_BLOCKED_ARTISTS = frozenset({
+    "avicii", "disclosure", "the chemical brothers", "tones and i",
+    "sam smith", "dua lipa", "oakenfold", "paul oakenfold", "kylie minogue",
+})
+
+# Exacte gebruikerkeuzes uit de zes Dark Edge-weekoverzichten (11-11-2026).
+# Bewaar artiest én titel; geen algemeen genreverbod of landfilter.
+# Schrijfvarianten (accenten, leestekens, spatiering) worden genormaliseerd.
+DARK_EDGE_USER_BLOCKED_TRACKS = (
+    ("Alexandru Andrieș", "Cea mai frumoasa zi"),
+    ("Byron", "Granița-n răniță"),
+    ("Eyedrops", "Culori Uitate"),
+    ("Eyedrops", "Păstrează-mi calmul"),
+    ("Firma", "Două suflete"),
+    ("Grimus", "Privește-mă"),
+    ("Jurjak", "Inima de piatră"),
+    ("Jurjak", "Vântul"),
+    ("Kumm", "Să Nu Spui Nimănui"),
+    ("Omul cu Șobolani", "(dez)Orientat"),
+    ("Omul cu Șobolani vs. Michi", "Dezorientat"),
+    ("Robin and the Backstabbers", "Muzica în cântece"),
+    ("Robin and the Backstabbers", "Sat După Sat"),
+    ("Robin and the Backstabbers", "Soare Cu Dinți"),
+    ("Robin and the Backstabbers", "Vânătoarea Regală"),
+    ("Snails", "Nu-mi pasă"),
+    ("Șuie Paparude", "Cea mai bună zi"),
+    ("The Mono Jacks", "Un sfert de secundă"),
+    ("Toulouse Lautrec", "Te spun"),
+    ("Travka", "Soare răsare"),
+    ("Urma", "Cine iubește și lasă"),
+    ("Vita de Vie", "Haihui"),
+    ("Vita de Vie", "Varză"),
+    ("Gojira & Planet H feat. Robin", "Regele Verii"),
+    ("Alternosfera", "Muta"),
+    ("Ana Coman", "Contratimp"),
+    ("Eyedrops", "Bicicleta"),
+    ("Kumm", "Morsa"),
+    ("The Mono Jacks", "Drumul"),
+    ("Disclosure feat. Eliza Doolittle", "You & Me (Flume remix)"),
+    ("The Chemical Brothers", "Hey Boy Hey Girl"),
+    ("Tones and I", "Dance Monkey"),
+    ("Sam Smith", "Too Good at Goodbyes"),
+    ("Dua Lipa", "Be The One"),
+    ("Oakenfold", "Starry Eyed Surprise"),
+    ("Kylie Minogue", "I Believe in You (Mylo Vocal Mix)"),
+)
+
 
 # Bevestigd Roemeenstalige opnames blijven geweerd.
 DARK_EDGE_BLOCKED_RECORDINGS = frozenset({
@@ -36,12 +83,42 @@ def _key(value):
     return " ".join(value.split())
 
 
+def _song_key(value):
+    # Titelvergelijking; verwijder zero-width tekens en onschuldige interpunctie.
+    value = _key(str(value).replace("\u200b", "").replace("\ufeff", ""))
+    return " ".join(re.findall(r"[^\W_]+", value, flags=re.UNICODE))
+
+
+DARK_EDGE_USER_BLOCKED_KEYS = frozenset(
+    (_song_key(artist), _song_key(title))
+    for artist, title in DARK_EDGE_USER_BLOCKED_TRACKS
+)
+
+
+def _is_user_blocked_track(artist, title):
+    a, t = _song_key(artist), _song_key(title)
+    if (a, t) in DARK_EDGE_USER_BLOCKED_KEYS:
+        return True
+    # Met of zonder een expliciete versieaanduiding zoals (Live)/(Remaster).
+    # Alleen voor de exacte uitgesloten track; geen andere liedjes blokkeren.
+    if a == "grimus" and re.match(r"^priveste ma(?:\b|$)", t):
+        return True
+    if a in ("omul cu sobolani", "omul cu sobolani vs michi") and re.match(
+        r"^(?:dez orientat|dezorientat)(?:\b|$)", t
+    ):
+        return True
+    return False
+
+
 def dark_edge_reject_reason(artist, title):
     """None = bronacceptatie; overige globale taal-/muziekregels gelden later."""
     a = _key(artist)
     t = _key(title)
     if not a or not t:
         return "lege artiest/titel"
+    if _is_user_blocked_track(artist, title):
+        return "gebruikerskeuze: expliciet uitgesloten Dark Edge-opname"
+
 
     # Oudere opnames met accentverschillen en een Live-suffix eveneens weren.
     normalized_title = " ".join(re.sub(r"[^a-z0-9]+", " ", t).split())
