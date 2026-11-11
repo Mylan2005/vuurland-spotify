@@ -20,6 +20,7 @@ from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
+from v223_report_search_hints import report_third_search_hint as v223_report_query
 from v194_matcher_metadata import (
     canonical_artist as v194_canonical_artist,
     artist_join_key as v194_artist_join_key,
@@ -3370,6 +3371,12 @@ def find_spotify_track(
     _v217_query = v217_report_query(*v101_original_key, search_variant)
     if _v217_query:
         query = _v217_query
+    elif search_variant == 2:
+        # v223: exact uit rapporten voorgestelde EN gereviewde zoekhint.
+        # Alleen dezelfde reeds geplande derde Search, NOOIT match-approval.
+        _v223_query = v223_report_query(*v101_original_key, search_variant)
+        if _v223_query:
+            query = _v223_query
 
     # v79: do not prune spaced letters to six tokens.
     if search_variant == 1 and re.fullmatch(r"[A-Za-z](?: [A-Za-z]){5,15}", str(search_query_title)):
