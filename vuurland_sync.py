@@ -1601,6 +1601,10 @@ V119_GERMAN_TITLES = frozenset({
     "wohnen auf inseln", "die leute und ich",
     "die große sporadische", "das ende der beschwerde",
     "keine bewegung", "die toten auf dem rücksitz",
+    # Extra bevestigde Duitse titels uit Indie Select (7-dagenlijst 11-11-2026).
+    # Schrijfwijzen zonder umlaut worden ook door de expliciete opnamecheck opgepakt.
+    "17 worte", "eigenes berlin", "wettentspannen", "nur mit dir",
+    "eisbar", "eisbär", "im licht",
 })
 
 
@@ -1797,6 +1801,15 @@ GERMAN_VOCAL_RADIO_TRACKS = frozenset({
 
     ("tomte", "die schönheit der chance"),
     ("tomte", "die schonheit der chance"),
+    # Aanvullingen uit de aangeleverde Indie Select-afspeellijsten.
+    # Alleen deze opnames, nooit alle muziek van een Duitse artiest blokkeren.
+    ("thees uhlmann", "17 worte"),
+    ("gloria", "eigenes berlin"),
+    ("peter licht", "wettentspannen"),
+    ("nouvelle vague", "eisbar"),
+    ("nouvelle vague", "eisbär"),
+    ("1. futurologischer congress", "nur mit dir"),
+    ("public service broadcasting", "im licht"),
 })
 GERMAN_VOCAL_SPOTIFY_IDS = frozenset({
     "1j10uvA0XYl6TNNyY7XqGm",  # Door gebruiker bevestigde Duitse zang.

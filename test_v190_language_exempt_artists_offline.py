@@ -80,4 +80,48 @@ assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in src
 assert "max_additions_per_round = 1" in src
 assert 'item.get("source") == "dark_edge" and not dark_edge_track_allowed(artist, title)' in src
 assert "if v190_is_language_exempt_artist(artist):" in src
+# Duitse nummers uit 12 door gebruiker aangeleverde RadioBox-weekoverzichten
+# (Indie Select en Dreampop Radio, november 2026): exact dezelfde
+# Duitse-titel/confirmed-vocal checks gelden voor ALLE bronnen.
+v119_titles = next(n for n in tree.body if isinstance(n, ast.Assign)
+                   and any(isinstance(t, ast.Name) and t.id == "V119_GERMAN_TITLES"
+                           for t in n.targets))
+vocal_titles = next(n for n in tree.body if isinstance(n, ast.Assign)
+                    and any(isinstance(t, ast.Name) and t.id == "GERMAN_VOCAL_RADIO_TRACKS"
+                            for t in n.targets))
+real_ns = {
+    "re": re,
+    "V119_GERMAN_TITLES": frozenset(ast.literal_eval(v119_titles.value.args[0])),
+    "GERMAN_VOCAL_RADIO_TRACKS": frozenset(ast.literal_eval(vocal_titles.value.args[0])),
+}
+for name in ("v119_title_normalize", "v119_is_german_title",
+             "is_confirmed_german_vocal"):
+    exec(compile(ast.Module(body=[functions[name]], type_ignores=[]),
+                 "<" + name + ">", "exec"), real_ns)
+new_german = [
+    ("Thees Uhlmann", "17 Worte"),
+    ("Gloria", "Eigenes Berlin"),
+    ("Peter Licht", "Wettentspannen"),
+    ("Nouvelle Vague", "Eisbar"),
+    ("1. Futurologischer Congress", "Nur mit Dir"),
+    ("Public Service Broadcasting", "Im Licht"),
+]
+for artist, title in new_german:
+    assert real_ns["v119_is_german_title"](title), (artist, title)
+    assert real_ns["is_confirmed_german_vocal"](artist, title), (artist, title)
+assert real_ns["v119_is_german_title"]("Eigenes Berlin (Live)")
+assert real_ns["v119_is_german_title"]("Eisbär")
+assert real_ns["v119_is_german_title"]("Wettentspannen (Remix)")
+for artist, title in [
+    ("The Notwist", "Pick Up The Phone"),
+    ("Urlaub In Polen", "The Velvet Blues"),
+    ("Schneider TM", "The Light 3000"),
+    ("Monta", "Farewell Dear Ghost"),
+    ("Maximilian Hecker", "Over"),
+    ("The Chemical Brothers", "Hey Boy Hey Girl"),
+]:
+    assert not real_ns["v119_is_german_title"](title), (artist, title)
+    assert not real_ns["is_confirmed_german_vocal"](artist, title), (artist, title)
+print("✅ 6 Duitse opnames uit Indie Select geweerd; Dreampop en Engelstalige tracks behouden.")
+
 print("✅ Sigur Rós, Ólafur Arnalds en Cocteau Twins welkom; Duitse zang blijft voor iedereen geblokkeerd.")
