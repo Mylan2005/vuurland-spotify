@@ -1474,18 +1474,8 @@ def v191_is_german_vocal_risk(artist, title):
 
 
 def dark_edge_track_allowed(artist, title):
-    # Alle drie favoriete artiesten mogen door de niet-Duitse taalfilters,
-    # maar bevestigde Duitse zang / sterke Duitse titelsignalen NOOIT.
-    if v191_is_german_vocal_risk(artist, title):
-        return False
-    language_exception = v190_is_language_exempt_artist(artist)
-    reason = dark_edge_reject_reason(artist, title)
-    return ((reason is None or
-             (language_exception and reason in
-              {"duidelijk anderstalige titel", "niet-Latijns schrift"}))
-            and (language_exception or
-                 (not v140_is_unwanted_language_title(title, artist)
-                  and not v131_block_nonlatin_east_asian(artist, title))))
+    # v218: Dark Edge: alleen Avicii en Roemeense titelsignalen blokkeren.
+    return dark_edge_reject_reason(artist, title) is None
 
 
 def get_dark_edge_tracks():
@@ -6559,17 +6549,17 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         reasons = {}
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
-            if global_music_reject_reason(artist, title):
+            if sid != "dark_edge" and global_music_reject_reason(artist, title):
                 reason = "globaal uitgesloten muziek: " + global_music_reject_reason(artist, title)
             elif sid == "dark_edge" and not dark_edge_track_allowed(artist, title):
-                reason = "Dark Edge: alleen gecontroleerde alternatieve muziek; geen mainstream pop/ongeldige titel"
+                reason = "Dark Edge: Roemeense titel of Avicii geweerd"
             elif key in seen_this_scan:
                 reason = "herhaling binnen deze bronmeting"
             else:
                 seen_this_scan.add(key)
                 if sid == "indie_select" and indie_select_blocks_german(artist, title):
                     reason = "Indie Select: Duitstalig geblokkeerd"
-                elif is_confirmed_german_vocal(artist, title):
+                elif sid != "dark_edge" and is_confirmed_german_vocal(artist, title):
                     reason = "bevestigde Duitse zang"
                 elif is_interview_fragment(title):
                     reason = "interviewfragment"
@@ -7283,7 +7273,8 @@ def sync():
     live_queue = [item for item in live_queue if (
         isinstance(item, dict)
         and str(item.get("source") or "vuurland").strip() in FIFO_SOURCE_ORDER
-        and not global_music_reject_reason(item.get("artist", ""), item.get("title", ""))
+        and (item.get("source") == "dark_edge" or not global_music_reject_reason(
+            item.get("artist", ""), item.get("title", "")))
         and (item.get("source") != "dark_edge" or dark_edge_track_allowed(
             item.get("artist", ""), item.get("title", "")))
     )]
@@ -7792,15 +7783,17 @@ def sync():
     # v131: bestaande en nieuw toegevoegde FIFO-items vóór Spotify opschonen.
     _v131_before = len(live_queue)
     live_queue = [x for x in live_queue if not (
-        isinstance(x, dict) and v131_block_nonlatin_east_asian(
+        isinstance(x, dict) and x.get("source") != "dark_edge"
+        and v131_block_nonlatin_east_asian(
             x.get("artist", ""), x.get("title", "")))]
     if len(live_queue) != _v131_before:
         print(f"⏭️ v131: {_v131_before - len(live_queue)} CJK-titel(s)/artiest(en) uit FIFO geweerd.")
     _v119_before = len(live_queue)
     live_queue = [x for x in live_queue if isinstance(x, dict) and
                   x.get("source") in FIFO_SOURCE_ORDER and
-                  not v140_is_unwanted_language_title(x.get("title", ""), x.get("artist", "")) and
-                  not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", "")) and
+                  (x.get("source") == "dark_edge" or
+                    (not v140_is_unwanted_language_title(x.get("title", ""), x.get("artist", ""))
+                     and not is_confirmed_german_vocal(x.get("artist", ""), x.get("title", "")))) and
                   not (x.get("source") == "indie_select" and indie_select_blocks_german(x.get("artist", ""), x.get("title", "")))]
     _v119_removed = _v119_before - len(live_queue)
     if _v119_removed:
@@ -8595,7 +8588,8 @@ def sync():
             continue
 
         # Bronoverstijgend: bekende ongewenste acts nooit aan Spotify doorgeven.
-        rejection = global_music_reject_reason(artist, title)
+        rejection = (None if item.get("source") == "dark_edge" else
+                     global_music_reject_reason(artist, title))
         if rejection:
             print(f"⛔ Muziekvoorkeur: {artist} — {title} ({rejection})")
             live_queue.pop(0)
@@ -8604,7 +8598,7 @@ def sync():
             continue
 
         # v131: extra veiligheidscontrole vóór iedere Spotify-zoekactie/toevoeging.
-        if v131_block_nonlatin_east_asian(artist, title):
+        if item.get("source") != "dark_edge" and v131_block_nonlatin_east_asian(artist, title):
             print(f"⏭️ v131: Japanse/Chinese/Koreaanse tekens overgeslagen: {artist} — {title}")
             live_queue.pop(0)
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
@@ -8613,14 +8607,15 @@ def sync():
 
 
         # v119: titelcheck vóór elke Spotify Search, onafhankelijk van artiestenland.
-        if v140_is_unwanted_language_title(title, artist):
+        if item.get("source") != "dark_edge" and v140_is_unwanted_language_title(title, artist):
             print(f"⛔ v148 ongewenste taal geblokkeerd: {artist} — {title}")
             live_queue.pop(0)
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
             save_cache(cache)
             continue
 
-        language_decision = v106_language_decision(artist, title)
+        language_decision = ("allow" if item.get("source") == "dark_edge" else
+                             v106_language_decision(artist, title))
         if language_decision == "review":
             # v107: onbekende taal registreren, maar sync niet stilleggen.
             # Alleen expliciet bevestigde Duitse zang wordt geblokkeerd.
@@ -8636,7 +8631,7 @@ def sync():
         # geen land-cooldown en geen Duitse-artiestenblokkering.
         # Bevestigde Duitse zang blijft wel geblokkeerd.
 
-        if is_confirmed_german_vocal(artist, title):
+        if item.get("source") != "dark_edge" and is_confirmed_german_vocal(artist, title):
             print(f"⏭️ Bevestigde Duitse zang overgeslagen: {artist} — {title}")
             live_queue.pop(0)
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
