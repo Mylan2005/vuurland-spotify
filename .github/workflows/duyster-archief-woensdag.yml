@@ -1,11 +1,11 @@
-name: Duyster archief elke woensdag bijwerken
+name: Duyster archief meerdere keren per dag controleren
 
 on:
   schedule:
-    # België: 08:00 CET = 07:00 UTC, 08:00 CEST = 06:00 UTC.
-    # De tijdzonepoort hieronder kiest exact één van beide runs.
-    - cron: '0 6 * * 3'
-    - cron: '0 7 * * 3'
+    # Vier controles per dag: 08:00, 12:00, 16:00, 20:00 Belgische tijd.
+    # GitHub cron gebruikt UTC; tijdzonepoort voorkomt dubbele import.
+    # Niet alleen woensdag: een aflevering kan maandag al online komen.
+    - cron: '0 6,7,10,11,14,15,18,19 * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Alleen woensdag 08:00 Belgische tijd (zomer- en winteruur)
+      - name: Alleen 08, 12, 16 of 20 uur Belgische tijd
         id: belgian_time
         env:
           EVENT_NAME: ${{ github.event_name }}
@@ -40,10 +40,16 @@ jobs:
 
           local = datetime.now(ZoneInfo("Europe/Brussels"))
           offset = int(local.utcoffset().total_seconds() // 3600)
-          correct_cron = f"0 {8 - offset} * * 3"
+          # De workflow wordt voor beide UTC-offsets ingepland;
+          # alleen echte lokale controle-uren mogen de importer draaien.
+          scheduled_hours = {8, 12, 16, 20}
+          expected_utc_hours = {h - offset for h in scheduled_hours}
+          scheduled_cron = "0 6,7,10,11,14,15,18,19 * * *"
           execute = os.environ["EVENT_NAME"] == "workflow_dispatch" or (
-              local.weekday() == 2
-              and os.environ.get("SCHEDULE_SPEC") == correct_cron
+              local.hour in scheduled_hours
+              and local.minute == 0
+              and os.environ.get("SCHEDULE_SPEC") == scheduled_cron
+              and local.hour - offset in expected_utc_hours
           )
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
               out.write(f"should_run={'true' if execute else 'false'}\n")
