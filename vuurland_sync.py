@@ -94,6 +94,9 @@ ARTIST_ALIASES = {
     "cat stevens": [
         "Yusuf / Cat Stevens",
     ],
+    # v231: Chappaqua Wrestling wijzigde in maart 2025 officieel de naam
+    # naar CQ Wrestling. De gewone titel- en versievalidatie blijft verplicht.
+    "chappaqua wrestling": ["CQ Wrestling"],
     # v229: door gebruiker bevestigde DKFM Edge-credit; artiest noemt zich
     # op Spotify WIRES//TMPLS (zelfde project als Wires to the Temples).
     "wires to the temples": ["WIRES//TMPLS"],
