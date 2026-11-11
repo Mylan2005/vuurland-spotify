@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "tamino|||dissolve",
       "nick cave & the bad seeds|||long dark night",
       "edward sharpe & the magnetic zeros|||better days",
       "jjerome87|||track and field",
@@ -112,8 +113,7 @@
       "clairo|||bags",
       "lucy dacus|||planting tomatoes",
       "maru maru|||the conversation",
-      "olivia dean|||so easy to fall in love",
-      "lord huron|||mine forever"
+      "olivia dean|||so easy to fall in love"
     ],
     "mellow_mix": [
       "raymond kane|||popoki slack key",
@@ -422,6 +422,7 @@
       "the fratellis|||whistle for the choir"
     ],
     "dreampop_radio": [
+      "daft punk|||something about us",
       "tesla boy|||thinking of you",
       "paul oakenfold|||hold your hand ft emiliana torrini",
       "klingande feat broken back|||riva restart the game",
@@ -520,10 +521,10 @@
       "jenny lewis|||melt your heart",
       "fleet foxes|||mykonos",
       "seabear|||libraries",
-      "calexico|||two silver trees",
-      "soley|||smashed birds"
+      "calexico|||two silver trees"
     ],
     "indie_select": [
+      "francis of delirium|||blue tuesday",
       "newdad|||angel",
       "the mary onettes|||tears to an ocean",
       "fontaines d c|||before you i just forget",
@@ -622,8 +623,7 @@
       "architecture in helsinki|||echo",
       "glasvegas|||if",
       "moderat|||intruder live",
-      "baden baden|||glory lies",
-      "athlete|||half light"
+      "baden baden|||glory lies"
     ],
     "dkfm_edge": [
       "blush|||crush",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794428889.053416,
-    "mellow_mix": 1794428889.0581048,
-    "big_sonic_heaven": 1794428889.0618768,
-    "radio_x_chilled": 1794428889.0656984,
-    "dreampop_radio": 1794428889.0694814,
-    "indie_select": 1794428889.0736322,
-    "dkfm_edge": 1794428889.0776744,
+    "vuurland": 1794428965.2680357,
+    "mellow_mix": 1794428965.2727313,
+    "big_sonic_heaven": 1794428965.2765255,
+    "radio_x_chilled": 1794428965.280331,
+    "dreampop_radio": 1794428965.2843044,
+    "indie_select": 1794428965.288796,
+    "dkfm_edge": 1794428965.2929,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794428889.3363504,
-    "dkfm_shoegaze": 1794428889.3404505,
-    "dkfm_classic": 1794428889.344638
+    "dark_edge": 1794428965.2972717,
+    "dkfm_shoegaze": 1794428965.301193,
+    "dkfm_classic": 1794428965.3050485
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15205,7 +15205,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "nick cave & the bad seeds|||long dark night",
+  "__last_radio_key_vuurland": "tamino|||dissolve",
   "__last_radio_key_mellow_mix": "raymond kane|||popoki slack key",
   "__last_radio_key_big_sonic_heaven": "johnny marr|||all in a life",
   "__v181_vuurland_two_missing_recovered": true,
@@ -102989,7 +102989,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "tesla boy|||thinking of you",
+  "__last_radio_key_dreampop_radio": "daft punk|||something about us",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -103107,7 +103107,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "newdad|||angel",
+  "__last_radio_key_indie_select": "francis of delirium|||blue tuesday",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
