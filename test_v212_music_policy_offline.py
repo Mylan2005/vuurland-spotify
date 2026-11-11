@@ -1,5 +1,6 @@
 """Offline regressies voor bronoverstijgende muziekvoorkeuren."""
 import ast
+import json
 from pathlib import Path
 from vuurland_music_policy import global_music_reject_reason
 
@@ -43,11 +44,19 @@ for artist, title in [
 ]:
     assert global_music_reject_reason(artist, title) is None, (artist, title)
 
+# Een specifiek afgewezen nummer mag nooit opnieuw via een van de
+# radiobronnen of Duyster naar Spotify gaan; andere Eefje-tracks blijven.
+user_exclusions = json.loads(
+    Path(__file__).with_name("vuurland_user_exclusions.json").read_text(encoding="utf-8")
+)
+assert ["eefje de visser", "onomkeerbaar"] in user_exclusions["pairs"]
+
 source = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
 functions = {x.name: x for x in tree.body if isinstance(x, ast.FunctionDef)}
 collector = ast.get_source_segment(source, functions["v96_collect_live_plays"])
 sync = ast.get_source_segment(source, functions["sync"])
+assert 'v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS' in collector
 assert 'sid != "dark_edge" and global_music_reject_reason(artist, title)' in collector
 assert 'item.get("source") == "dark_edge" or not global_music_reject_reason(' in sync
 assert 'global_music_reject_reason(artist, title)' in sync
