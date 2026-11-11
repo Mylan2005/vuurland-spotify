@@ -73,11 +73,42 @@ def parse_episode(html, pid):
 
 
 def get_episode(pid, *, request_get=requests.get):
-    response = request_get(BASE + str(pid), headers=HEADERS, timeout=15)
-    if response.status_code in (404, 410):
-        return None
-    response.raise_for_status()
-    return parse_episode(response.text, pid)
+    """Controleer de genummerde URL; probeer anders de actuele playlist.
+
+    De Duyster-site kan de laatste uitzending wel via /playlist.php tonen,
+    terwijl ?pid=N geen bruikbare pagina geeft. De fallback mag uitsluitend
+    dezelfde exacte pid accepteren. Nooit een andere aflevering onder het
+    gevraagde nummer importeren en nooit een cursor overslaan.
+    """
+    error = None
+    try:
+        response = request_get(BASE + str(pid), headers=HEADERS, timeout=15)
+        if response.status_code not in (404, 410):
+            response.raise_for_status()
+            episode = parse_episode(response.text, pid)
+            if episode is not None:
+                return episode
+    except requests.RequestException as exc:
+        error = exc
+
+    # Alleen de laatste playlist is via deze route beschikbaar; een oudere
+    # verdwenen aflevering kan hierdoor NOOIT stilzwijgend worden overgeslagen.
+    try:
+        response = request_get("https://duyster-online.be/playlist.php",
+                               headers=HEADERS, timeout=15)
+        if response.status_code not in (404, 410):
+            response.raise_for_status()
+            episode = parse_episode(response.text, pid)
+            if episode is not None:
+                print(f"📚 Duyster aflevering {pid} gevonden op actuele playlist-URL.")
+                return episode
+    except requests.RequestException:
+        if error is not None:
+            raise error
+        raise
+    if error is not None:
+        raise error
+    return None
 
 
 def read_archive(path):

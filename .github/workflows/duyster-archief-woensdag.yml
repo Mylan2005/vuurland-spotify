@@ -1,11 +1,11 @@
-name: Duyster archief elke woensdag bijwerken
+name: Duyster archief meerdere keren per dag controleren
 
 on:
   schedule:
-    # België: 08:00 CET = 07:00 UTC, 08:00 CEST = 06:00 UTC.
-    # De tijdzonepoort hieronder kiest exact één van beide runs.
-    - cron: '0 6 * * 3'
-    - cron: '0 7 * * 3'
+    # Vier controles per dag, elke vier uur, ook buiten woensdag.
+    # GitHub schedule kan vertraagd starten: nooit afbreken op lokale minuten.
+    # 07, 11, 15, 19 UTC = 08/12/16/20 CET of 09/13/17/21 CEST.
+    - cron: '0 7,11,15,19 * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,29 +27,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Alleen woensdag 08:00 Belgische tijd (zomer- en winteruur)
+      - name: Controleer gepland of handmatig gestart
         id: belgian_time
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          SCHEDULE_SPEC: ${{ github.event.schedule }}
         run: |
-          python - <<'PY'
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          import os
-
-          local = datetime.now(ZoneInfo("Europe/Brussels"))
-          offset = int(local.utcoffset().total_seconds() // 3600)
-          correct_cron = f"0 {8 - offset} * * 3"
-          execute = os.environ["EVENT_NAME"] == "workflow_dispatch" or (
-              local.weekday() == 2
-              and os.environ.get("SCHEDULE_SPEC") == correct_cron
-          )
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
-              out.write(f"should_run={'true' if execute else 'false'}\n")
-          print(f"Duyster-controle: {local.isoformat()}, "
-                f"cron={os.environ.get('SCHEDULE_SPEC')!r}, uitvoeren={execute}")
-          PY
+          # GitHub Actions cron-runs kunnen minuten/uren vertraagd starten.
+          # Geen exacte-klokpoort: iedere geplande run mag veilig controleren.
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
 
       - name: Benodigdheden voor alleen Duyster-website installeren
         if: steps.belgian_time.outputs.should_run == 'true'

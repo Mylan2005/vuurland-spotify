@@ -52,6 +52,8 @@ def mock_get(url, **kwargs):
         return Response(200, page(834, playlist_834))
     if url.endswith("pid=835"):
         return Response(404)
+    if url == "https://duyster-online.be/playlist.php":
+        return Response(200, page(834, playlist_834))
     raise AssertionError(url)
 
 
@@ -64,6 +66,22 @@ assert ("Recording Artist", "Northern Lights") in episode["songs"]
 assert ("Mogwai", "Richie Sacremento") in episode["songs"]
 assert sum(1 for artist, title in episode["songs"] if (artist, title) == ("Mogwai", "Remurdered")) == 1
 assert get_episode(835, request_get=mock_get) is None
+# If the numbered endpoint fails but the live playlist already publishes
+# exactly the intended episode, import safely with the same pid validation.
+def current_page_rescue(url, **kwargs):
+    if url.endswith("pid=834"):
+        return Response(404)
+    assert url == "https://duyster-online.be/playlist.php"
+    return Response(200, page(834, playlist_834))
+rescued = get_episode(834, request_get=current_page_rescue)
+assert rescued and rescued["pid"] == 834
+assert len(rescued["songs"]) == 6
+
+# Never import the latest 834 while seeking 835.
+assert get_episode(835, request_get=lambda url, **kwargs:
+                   Response(404) if url.endswith("pid=835")
+                   else Response(200, page(834, playlist_834))) is None
+
 assert get_episode(834, request_get=lambda *_args, **_kwargs:
                    Response(200, page(833, playlist_834))) is None
 for entry in ("Interview", "Sessie", "Interview + Sessie", "interview & sessie"):
