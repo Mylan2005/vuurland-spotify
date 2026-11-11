@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794419349.6862051,
+  "__v150_next_spotify_round_at": 1794419478.745249,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -218,6 +218,7 @@
       "patti smith|||paths that cross"
     ],
     "big_sonic_heaven": [
+      "encarta 98|||nada va a cambiar",
       "this love is deadly|||vertigo",
       "ives|||dahlia",
       "deary|||fairground",
@@ -316,10 +317,10 @@
       "pigeonhed|||the full sentence",
       "autoregulate|||double sky",
       "the tear garden|||strange land",
-      "bibi club|||a different light",
-      "cocteau twins & harold budd|||sea swallow me"
+      "bibi club|||a different light"
     ],
     "radio_x_chilled": [
+      "the cranberries|||dreams acoustic",
       "jose gonzalez|||heartbeats",
       "vance joy|||riptide",
       "shed seven|||chasing rainbows",
@@ -418,8 +419,7 @@
       "michael kiwanuka|||light",
       "badly drawn boy|||once around the block live for radio x",
       "coldplay|||in my place",
-      "oasis|||champagne supernova",
-      "groove armada|||at the river"
+      "oasis|||champagne supernova"
     ],
     "dreampop_radio": [
       "over the rhine|||i want you to be my love",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794419342.5977073,
-    "mellow_mix": 1794419342.6023252,
-    "big_sonic_heaven": 1794419342.6059277,
-    "radio_x_chilled": 1794419342.6096153,
-    "dreampop_radio": 1794419342.613322,
-    "indie_select": 1794419342.6174183,
-    "dkfm_edge": 1794419342.621394,
+    "vuurland": 1794419358.0067813,
+    "mellow_mix": 1794419358.011324,
+    "big_sonic_heaven": 1794419358.015013,
+    "radio_x_chilled": 1794419358.0191689,
+    "dreampop_radio": 1794419358.0230188,
+    "indie_select": 1794419358.0271943,
+    "dkfm_edge": 1794419358.0312095,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794419342.6252902,
-    "dkfm_shoegaze": 1794419342.6291354,
-    "dkfm_classic": 1794419342.6327536
+    "dark_edge": 1794419358.0354314,
+    "dkfm_shoegaze": 1794419358.039451,
+    "dkfm_classic": 1794419358.0431676
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15033,11 +15033,11 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "kevin morby|||i have been to the mountain",
   "__last_radio_key_mellow_mix": "beck|||heart is a drum",
-  "__last_radio_key_big_sonic_heaven": "this love is deadly|||vertigo",
+  "__last_radio_key_big_sonic_heaven": "encarta 98|||nada va a cambiar",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12476,
-  "__v146_spotify_budget_slot": 1794419230.9648352,
-  "__vuurland_active_playlist_count": 8755,
+  "__v116_fifo_next_sequence": 12477,
+  "__v146_spotify_budget_slot": 1794419360.010366,
+  "__vuurland_active_playlist_count": 8756,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794417937,
@@ -23220,6 +23220,7 @@
     "soldier's heart|||african fire",
     "soley|||smashed birds",
     "someday jacob|||crossing over jordan",
+    "somesurprises|||why i stay",
     "son volt|||medication",
     "son volt|||shine on",
     "son volt|||tear stained eye",
@@ -34094,6 +34095,7 @@
     "spotify:track:7lKAwbhCybMqd24MD68bvM",
     "spotify:track:7lL2lMWNtzOcf5HnEudNgn",
     "spotify:track:7lLkkhRfp9SHX0gUc8xSi1",
+    "spotify:track:7lLrGzI4mdN6OvkEjO3hgL",
     "spotify:track:7lS6WPvGvQPDsD7J9pxtxP",
     "spotify:track:7lX5thFFq1mEARXVPgJ1op",
     "spotify:track:7lZIMb2AD7T09fZlqOQJ0q",
@@ -41230,6 +41232,7 @@
     "USCGH2424250",
     "USCGH2433329",
     "USCGH2455210",
+    "USCGH2471450",
     "USCGH2672355",
     "USCGH2672358",
     "USCGH2672359",
@@ -51717,7 +51720,8 @@
     "spotify:track:4NER7GaKfCrigpY4UPdPWO": "GXBDS2321623",
     "spotify:track:166UshyvcAAP8KZmBWqFf9": "GBAYK8800003",
     "spotify:track:3WV7yB1wBrjf9j3aL5M6YD": "GBARL9100062",
-    "spotify:track:0JRnP0jSDW9Ct4G6Es4Wf7": "JPS802353496"
+    "spotify:track:0JRnP0jSDW9Ct4G6Es4Wf7": "JPS802353496",
+    "spotify:track:7lLrGzI4mdN6OvkEjO3hgL": "USCGH2471450"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -85853,6 +85857,7 @@
       "soldier's heart|||african fire",
       "soley|||smashed birds",
       "someday jacob|||crossing over jordan",
+      "somesurprises|||why i stay",
       "son volt|||medication",
       "son volt|||shine on",
       "son volt|||tear stained eye",
@@ -91980,6 +91985,7 @@
       "spotify:track:7lEZ4UjPAjgu20XyTZm0j8",
       "spotify:track:7lKAwbhCybMqd24MD68bvM",
       "spotify:track:7lL2lMWNtzOcf5HnEudNgn",
+      "spotify:track:7lLrGzI4mdN6OvkEjO3hgL",
       "spotify:track:7lS6WPvGvQPDsD7J9pxtxP",
       "spotify:track:7leOfpblnwIyAqr2u4hNZE",
       "spotify:track:7liKkuG8Gs9VaAUjCYcXnO",
@@ -95908,6 +95914,7 @@
       "USCGH2424250",
       "USCGH2433329",
       "USCGH2455210",
+      "USCGH2471450",
       "USCGH2672358",
       "USCGJ0580279",
       "USCGJ0988298",
@@ -102032,7 +102039,8 @@
       "spotify:track:4NER7GaKfCrigpY4UPdPWO": "GXBDS2321623",
       "spotify:track:166UshyvcAAP8KZmBWqFf9": "GBAYK8800003",
       "spotify:track:3WV7yB1wBrjf9j3aL5M6YD": "GBARL9100062",
-      "spotify:track:0JRnP0jSDW9Ct4G6Es4Wf7": "JPS802353496"
+      "spotify:track:0JRnP0jSDW9Ct4G6Es4Wf7": "JPS802353496",
+      "spotify:track:7lLrGzI4mdN6OvkEjO3hgL": "USCGH2471450"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -102302,7 +102310,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "jose gonzalez|||heartbeats",
+  "__last_radio_key_radio_x_chilled": "the cranberries|||dreams acoustic",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -104640,8 +104648,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 300,
-  "__v192_duyster_next_enqueue_at": 1794419349.0193548,
+  "__v192_duyster_archive_cursor": 301,
+  "__v192_duyster_next_enqueue_at": 1794419478.0747297,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -107540,5 +107548,6 @@
   "__match_v35__we melt chocolate|||neko": "spotify:track:4NER7GaKfCrigpY4UPdPWO",
   "__match_v35__the waterboys|||fisherman's blues": "spotify:track:166UshyvcAAP8KZmBWqFf9",
   "__match_v35__cranes|||thursday": "spotify:track:3WV7yB1wBrjf9j3aL5M6YD",
-  "__match_v35__cigarette in your bed|||you should know": "spotify:track:0JRnP0jSDW9Ct4G6Es4Wf7"
+  "__match_v35__cigarette in your bed|||you should know": "spotify:track:0JRnP0jSDW9Ct4G6Es4Wf7",
+  "__match_v35__somesurprises|||why i stay": "spotify:track:7lLrGzI4mdN6OvkEjO3hgL"
 }
