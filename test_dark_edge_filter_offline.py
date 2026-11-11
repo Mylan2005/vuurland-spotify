@@ -2,7 +2,10 @@
 import ast
 import re
 from pathlib import Path
-from dark_edge_filter import DARK_EDGE_BLOCKED_ARTISTS, dark_edge_reject_reason
+from dark_edge_filter import (
+    DARK_EDGE_BLOCKED_ARTISTS, DARK_EDGE_USER_BLOCKED_TRACKS,
+    dark_edge_reject_reason,
+)
 
 source = (Path(__file__).resolve().parent / "vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
@@ -16,8 +19,6 @@ allowed = [
     ("Tati Falco", "Selva y mar"),
     ("Sam Smiths", "Different Artist"),
     ("The Sam Smiths", "Different Artist"),
-    ("Sam Smith", "Stay With Me"),
-    ("Dua Lipa", "Levitating"),
     ("Coldplay", "A Sky Full of Stars"),
     ("Muse", "Ich liebe dich"),
     ("Band", "Je t'aime"),
@@ -59,7 +60,33 @@ blocked = [
 for artist, title in blocked:
     assert dark_edge_reject_reason(artist, title), (artist, title)
 
-assert DARK_EDGE_BLOCKED_ARTISTS == frozenset({"avicii"})
+assert DARK_EDGE_BLOCKED_ARTISTS == frozenset({
+    "avicii", "disclosure", "the chemical brothers", "tones and i",
+    "sam smith", "dua lipa", "oakenfold", "paul oakenfold", "kylie minogue",
+})
+assert len(DARK_EDGE_USER_BLOCKED_TRACKS) == 36
+for artist, title in DARK_EDGE_USER_BLOCKED_TRACKS:
+    assert dark_edge_reject_reason(artist, title), (artist, title)
+for artist in [
+    "Disclosure", "The Chemical Brothers", "Tones and I", "Sam Smith",
+    "Dua Lipa", "Oakenfold", "Paul Oakenfold", "Kylie Minogue", "Avicii",
+]:
+    assert dark_edge_reject_reason(artist, "Some Other Track"), artist
+for artist in ["Indie Band feat. Dua Lipa", "Indie Band (feat. Sam Smith)",
+               "Band & The Chemical Brothers", "Dua Lipa feat. Indie Band"]:
+    assert dark_edge_reject_reason(artist, "New Song"), artist
+for artist, title in [
+    ("Eyedrops", "Pastreaza-mi CalmUl"),
+    ("FIRMA", "Doua suflete"),
+    ("Goji\u200bra & Planet H feat. Robin", "Regele Verii"),
+    ("Omul Cu Sobolani VS. Michi", "Dezorientat (Live)"),
+    ("Grimus", "Priveste Ma - Live"),
+    ("Byron", "Granita-n ranita"),
+]:
+    assert dark_edge_reject_reason(artist, title), (artist, title)
+assert dark_edge_reject_reason("The Chemical Brothers Tribute", "Hey Boy Hey Girl") is None
+assert dark_edge_reject_reason("Unknown Band", "Morsa") is None
+assert dark_edge_reject_reason("Kumm", "English Song") is None
 assert "sam smiths" not in DARK_EDGE_BLOCKED_ARTISTS
 assert dark_edge_reject_reason("Avi Ciin", "More Rain") is None
 assert dark_edge_reject_reason("Indie Band", "Sam Smith") is None
@@ -96,8 +123,6 @@ for name in ("v190_is_language_exempt_artist",
                  "<" + name + ">", "exec"), ns)
 assert ns["get_dark_edge_tracks"]() == [
     ("Nieuw Indieproject", "New Atmospheric Song"),
-    ("Sam Smith", "Stay With Me"),
-    ("Dua Lipa", "Levitating"),
     ("Gorillaz", "Clint Eastwood"),
     ("Sia", "Like a River Runs"),
     ("Muse", "Ich liebe dich"),
@@ -109,7 +134,7 @@ assert not ns["dark_edge_track_allowed"]("Avicii", "Levels")
 assert not ns["dark_edge_track_allowed"]("Sigur Rós feat. Avicii", "Great Song")
 assert ns["dark_edge_track_allowed"]("Muse", "Ich liebe dich")
 assert ns["dark_edge_track_allowed"]("Adele", "Someone Like You")
-assert ns["dark_edge_track_allowed"]("Dua Lipa", "Levitating")
+assert not ns["dark_edge_track_allowed"]("Dua Lipa", "Levitating")
 
 sync_text = ast.get_source_segment(source, functions["sync"])
 collector_text = ast.get_source_segment(source, functions["v96_collect_live_plays"])
@@ -126,5 +151,5 @@ assert 'None if item.get("source") == "dark_edge" else' in sync_text
 assert 'item.get("source") != "dark_edge" and v140_is_unwanted_language_title' in sync_text
 assert 'item.get("source") != "dark_edge" and is_confirmed_german_vocal' in sync_text
 assert "def _duyster_song_allowed(artist, title):" in source
-print("✅ Dark Edge: geen whitelist; alleen Avicii/expliciet Roemeens geweerd.")
+print("✅ Dark Edge: 36 gekozen tracks en 8 artiesten; andere artiesten welkom.")
 print("✅ Andere bronnen, globale filters, FIFO en Spotify-budget onveranderd.")
