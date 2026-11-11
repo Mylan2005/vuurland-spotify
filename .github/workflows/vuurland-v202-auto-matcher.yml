@@ -5,9 +5,10 @@ on:
     - cron: '23 7 * * *'
 
 permissions:
-  contents: read
-  actions: read
+  contents: write
+  actions: write
   issues: write
+  pull-requests: write
 
 concurrency:
   group: vuurland-matchertriage
@@ -53,6 +54,49 @@ jobs:
             --reports-dir auto_matcher/runs \
             --out-dir auto_matcher/output
           cat auto_matcher/output/matcher_automatische_issue.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Genereer veilige, exact begrensde matcherzoekhints
+        run: |
+          python v223_daily_matcher_proposal.py \
+            --analysis auto_matcher/output/matcher_automatische_analyse.json \
+            --current v223_matcher_search_hints.json \
+            --output auto_matcher/output/v223_matcher_search_hints.json \
+            --summary auto_matcher/output/v223_voorstel.md
+          cat auto_matcher/output/v223_voorstel.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Maak review-PR bij nieuwe kandidaten (nooit automerge)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cp auto_matcher/output/v223_matcher_search_hints.json v223_matcher_search_hints.json
+          if git diff --quiet -- v223_matcher_search_hints.json; then
+            echo "Geen nieuwe voldoende onderbouwde zoekhints; geen PR."
+            exit 0
+          fi
+          if gh pr list --state open --json number,title \
+              --jq '[.[] | select(.title == "[matcher-bot] Zoekhintvoorstellen uit dagelijkse rapporten")] | length' \
+              | grep -qxv '0'; then
+            echo "Er staat al een matcherbot-PR open. Geen dubbele voorstellen."
+            exit 0
+          fi
+          BRANCH="matcher-bot/safe-search-hints-${GITHUB_RUN_ID}"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c "$BRANCH"
+          git add v223_matcher_search_hints.json
+          git commit -m 'Propose reviewed third-query matcher hints from daily reports'
+          git push origin "$BRANCH"
+          if gh pr create --base main --head "$BRANCH" \
+              --title '[matcher-bot] Zoekhintvoorstellen uit dagelijkse rapporten' \
+              --body-file auto_matcher/output/v223_voorstel.md; then
+            # PRs created by GITHUB_TOKEN do not automatically trigger PR CI.
+            # Explicitly run the existing offline safety workflow on the branch.
+            gh workflow run vuurland-v85-veiligheid.yml --ref "$BRANCH"
+          else
+            echo "::warning::Repositoryinstelling blokkeert automatische PR-aanmaak."
+            echo "Voorstel en branch blijven beschikbaar voor handmatige review."
+          fi
 
       - name: Bewaar volledige downloadbare analyse
         uses: actions/upload-artifact@v4
