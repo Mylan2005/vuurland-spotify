@@ -2,10 +2,10 @@ name: Duyster archief meerdere keren per dag controleren
 
 on:
   schedule:
-    # Vier controles per dag: 08:00, 12:00, 16:00, 20:00 Belgische tijd.
-    # GitHub cron gebruikt UTC; tijdzonepoort voorkomt dubbele import.
-    # Niet alleen woensdag: een aflevering kan maandag al online komen.
-    - cron: '0 6,7,10,11,14,15,18,19 * * *'
+    # Vier controles per dag, elke vier uur, ook buiten woensdag.
+    # GitHub schedule kan vertraagd starten: nooit afbreken op lokale minuten.
+    # 07, 11, 15, 19 UTC = 08/12/16/20 CET of 09/13/17/21 CEST.
+    - cron: '0 7,11,15,19 * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,35 +27,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Alleen 08, 12, 16 of 20 uur Belgische tijd
+      - name: Controleer gepland of handmatig gestart
         id: belgian_time
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          SCHEDULE_SPEC: ${{ github.event.schedule }}
         run: |
-          python - <<'PY'
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          import os
-
-          local = datetime.now(ZoneInfo("Europe/Brussels"))
-          offset = int(local.utcoffset().total_seconds() // 3600)
-          # De workflow wordt voor beide UTC-offsets ingepland;
-          # alleen echte lokale controle-uren mogen de importer draaien.
-          scheduled_hours = {8, 12, 16, 20}
-          expected_utc_hours = {h - offset for h in scheduled_hours}
-          scheduled_cron = "0 6,7,10,11,14,15,18,19 * * *"
-          execute = os.environ["EVENT_NAME"] == "workflow_dispatch" or (
-              local.hour in scheduled_hours
-              and local.minute == 0
-              and os.environ.get("SCHEDULE_SPEC") == scheduled_cron
-              and local.hour - offset in expected_utc_hours
-          )
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
-              out.write(f"should_run={'true' if execute else 'false'}\n")
-          print(f"Duyster-controle: {local.isoformat()}, "
-                f"cron={os.environ.get('SCHEDULE_SPEC')!r}, uitvoeren={execute}")
-          PY
+          # GitHub Actions cron-runs kunnen minuten/uren vertraagd starten.
+          # Geen exacte-klokpoort: iedere geplande run mag veilig controleren.
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
 
       - name: Benodigdheden voor alleen Duyster-website installeren
         if: steps.belgian_time.outputs.should_run == 'true'
