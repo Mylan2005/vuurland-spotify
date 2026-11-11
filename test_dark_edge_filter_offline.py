@@ -61,19 +61,19 @@ for artist, title in blocked:
     assert dark_edge_reject_reason(artist, title), (artist, title)
 
 assert DARK_EDGE_BLOCKED_ARTISTS == frozenset({
-    "avicii", "disclosure", "the chemical brothers", "tones and i",
+    "avicii", "disclosure", "tones and i",
     "sam smith", "dua lipa", "oakenfold", "paul oakenfold", "kylie minogue",
 })
-assert len(DARK_EDGE_USER_BLOCKED_TRACKS) == 36
+assert len(DARK_EDGE_USER_BLOCKED_TRACKS) == 35
 for artist, title in DARK_EDGE_USER_BLOCKED_TRACKS:
     assert dark_edge_reject_reason(artist, title), (artist, title)
 for artist in [
-    "Disclosure", "The Chemical Brothers", "Tones and I", "Sam Smith",
+    "Disclosure", "Tones and I", "Sam Smith",
     "Dua Lipa", "Oakenfold", "Paul Oakenfold", "Kylie Minogue", "Avicii",
 ]:
     assert dark_edge_reject_reason(artist, "Some Other Track"), artist
 for artist in ["Indie Band feat. Dua Lipa", "Indie Band (feat. Sam Smith)",
-               "Band & The Chemical Brothers", "Dua Lipa feat. Indie Band"]:
+               "Band & Disclosure", "Dua Lipa feat. Indie Band"]:
     assert dark_edge_reject_reason(artist, "New Song"), artist
 for artist, title in [
     ("Eyedrops", "Pastreaza-mi CalmUl"),
@@ -85,6 +85,10 @@ for artist, title in [
 ]:
     assert dark_edge_reject_reason(artist, title), (artist, title)
 assert dark_edge_reject_reason("The Chemical Brothers Tribute", "Hey Boy Hey Girl") is None
+assert dark_edge_reject_reason("The Chemical Brothers", "Hey Boy Hey Girl") is None
+assert dark_edge_reject_reason("The Chemical Brothers", "Galvanize") is None
+assert dark_edge_reject_reason("Band feat. The Chemical Brothers", "Great Music") is None
+
 assert dark_edge_reject_reason("Unknown Band", "Morsa") is None
 assert dark_edge_reject_reason("Kumm", "English Song") is None
 assert "sam smiths" not in DARK_EDGE_BLOCKED_ARTISTS
@@ -125,14 +129,13 @@ assert ns["get_dark_edge_tracks"]() == [
     ("Nieuw Indieproject", "New Atmospheric Song"),
     ("Gorillaz", "Clint Eastwood"),
     ("Sia", "Like a River Runs"),
-    ("Muse", "Ich liebe dich"),
     ("Sigur Rós", "Inní mér syngur vitleysingur"),
     ("Cocteau Twins", "Привет"),
 ]
 assert ns["dark_edge_track_allowed"]("New Alternative Band", "New Song")
 assert not ns["dark_edge_track_allowed"]("Avicii", "Levels")
 assert not ns["dark_edge_track_allowed"]("Sigur Rós feat. Avicii", "Great Song")
-assert ns["dark_edge_track_allowed"]("Muse", "Ich liebe dich")
+assert not ns["dark_edge_track_allowed"]("Muse", "Ich liebe dich")
 assert ns["dark_edge_track_allowed"]("Adele", "Someone Like You")
 assert not ns["dark_edge_track_allowed"]("Dua Lipa", "Levitating")
 
@@ -151,5 +154,5 @@ assert 'None if item.get("source") == "dark_edge" else' in sync_text
 assert 'item.get("source") != "dark_edge" and v140_is_unwanted_language_title' in sync_text
 assert 'item.get("source") != "dark_edge" and is_confirmed_german_vocal' in sync_text
 assert "def _duyster_song_allowed(artist, title):" in source
-print("✅ Dark Edge: 36 gekozen tracks en 8 artiesten; andere artiesten welkom.")
+print("✅ Dark Edge: 35 verboden tracks en 7 artiesten, Chemical Brothers volledig welkom.")
 print("✅ Andere bronnen, globale filters, FIFO en Spotify-budget onveranderd.")
