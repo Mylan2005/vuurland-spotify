@@ -22,6 +22,27 @@ for artist, title in (
 ):
     assert global_music_reject_reason(artist, title) is None, artist
 
+# Nieuwe gebruikerskeuzes gelden ook voor DKFM, Duyster, Vuurland en alle andere.
+for artist, title in [
+    ("Alternosfera", "Muta"), ("Firma", "Două suflete"),
+    ("The Mono Jacks", "Drumul"), ("Kumm", "Morsa"),
+    ("Byron", "Granița-n răniță"), ("Eyedrops", "Bicicleta"),
+    ("Tones and I", "Any Other Track"), ("Disclosure", "Different Song"),
+    ("Sam Smith", "Stay With Me"), ("Oakenfold", "Any Title"),
+    ("Paul Oakenfold", "Another Track"), ("Kylie Minogue", "Another Track"),
+    ("Band feat. Disclosure", "New Track"),
+    ("Avicii", "Levels"),
+]:
+    assert global_music_reject_reason(artist, title), (artist, title)
+for artist, title in [
+    ("The Chemical Brothers", "Hey Boy Hey Girl"),
+    ("The Chemical Brothers", "Galvanize"),
+    ("Band feat. The Chemical Brothers", "Collaboration"),
+    ("Unknown Shoegaze Artist", "Fresh Music"),
+    ("Kumm", "English Song"),
+]:
+    assert global_music_reject_reason(artist, title) is None, (artist, title)
+
 source = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
 functions = {x.name: x for x in tree.body if isinstance(x, ast.FunctionDef)}
