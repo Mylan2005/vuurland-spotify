@@ -94,6 +94,9 @@ ARTIST_ALIASES = {
     "cat stevens": [
         "Yusuf / Cat Stevens",
     ],
+    # v229: door gebruiker bevestigde DKFM Edge-credit; artiest noemt zich
+    # op Spotify WIRES//TMPLS (zelfde project als Wires to the Temples).
+    "wires to the temples": ["WIRES//TMPLS"],
 
     "bob marley": [
         "Bob Marley & The Wailers",
@@ -2348,6 +2351,9 @@ def v101_safe_title_spelling(title):
 # doorloopt de kandidaat dezelfde artiest-, titel-, regio- en versietoetsen.
 # Geen vrij toepasbare fuzzy uitzondering en geen tweede Spotify Search.
 V81_VERIFIED_CATALOG_TRACKS = {
+    # v229: door gebruiker expliciet bevestigde Spotify-URI voor DKFM Edge.
+    # De ID is alleen een locator: volledige artiest/titel/versie/regio-guards blijven gelden.
+    ("wires to the temples", "smeared/aura"): "74VpqnAOJM1ha2XKFbdFYG",
     # v94: user-confirmed original studio recording; GET /tracks validates it.
     ("the cure", "the snakepit"): "2VeryXhfwHZmwHEYqB0phS",
     ("gipsy kings", "recuerdo apasionado"): "4I1hdRXL4tCnbtJfuqv58A",
