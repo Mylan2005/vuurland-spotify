@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "phosphorescent|||wolves",
+      "lianne la havas|||bittersweet",
       "band of horses|||no one's gonna love you",
       "half moon run|||grow into love",
       "james blake|||i had a dream she took my hand",
@@ -111,11 +113,10 @@
       "rex orange county|||threat",
       "novastar|||mars needs woman re-imagined",
       "jjerome87|||track and field",
-      "royel otis|||car",
-      "bear's den|||agape",
-      "david kushner|||dead man"
+      "royel otis|||car"
     ],
     "mellow_mix": [
+      "joe jackson|||steppin' out",
       "sade|||long hard road",
       "john hiatt|||have a little faith in me",
       "ocie elliott|||be around",
@@ -214,10 +215,10 @@
       "natalie merchant|||life is sweet",
       "peter gabriel|||cloudless",
       "luka bloom|||dreams in america",
-      "aukai|||azure",
-      "mazzy star|||into dust"
+      "aukai|||azure"
     ],
     "big_sonic_heaven": [
+      "fawns of love|||his face",
       "actors|||left on read",
       "cocteau twins|||sultitan itan",
       "fleeting colours|||autumn",
@@ -316,8 +317,7 @@
       "frisbees in the fog|||porth",
       "future islands|||the tower",
       "the cure|||this is a lie ambient mix",
-      "pye corner audio|||cycle feat andy bell",
-      "lower dens|||galapagos"
+      "pye corner audio|||cycle feat andy bell"
     ],
     "radio_x_chilled": [
       "soundgarden|||black hole sun acoustic",
@@ -524,6 +524,8 @@
       "marlon williams|||dark child"
     ],
     "indie_select": [
+      "emily b tls orchestra tls choir|||i'm not ready to go - emily b tls orchestra tls choir",
+      "mint mind|||contemporary jaguars",
       "sleaford mods ft sue tompkins|||no touch",
       "newdad|||safe",
       "miki berenyi trio|||ubique",
@@ -621,9 +623,7 @@
       "astropol|||make love stay familjen remix",
       "wolf alice|||don't delete the kisses",
       "urlaub in polen|||the velvet blues ext version",
-      "shout out louds|||my companion",
-      "john & the volta|||empirical synth",
-      "william fitzsimmons|||no promises"
+      "shout out louds|||my companion"
     ],
     "dkfm_edge": [
       "so totally|||btw",
@@ -732,6 +732,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "james bay|||just for tonight acoustic",
       "beck|||think i'm in love",
       "young the giant|||amerika",
       "ian brown|||keep what ya got",
@@ -830,8 +831,7 @@
       "starcrawler|||she gets around",
       "golan|||lonely nights",
       "bucolic|||pasture pop",
-      "suede|||beautiful ones",
-      "franz ferdinand|||this fire"
+      "suede|||beautiful ones"
     ],
     "dkfm_shoegaze": [
       "the surrounded|||reset",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794417746.7504508,
-    "mellow_mix": 1794417746.7549224,
-    "big_sonic_heaven": 1794417746.7584438,
-    "radio_x_chilled": 1794417746.7620773,
-    "dreampop_radio": 1794417746.7657382,
-    "indie_select": 1794417746.7696695,
-    "dkfm_edge": 1794417746.773635,
+    "vuurland": 1794417787.0020807,
+    "mellow_mix": 1794417787.006652,
+    "big_sonic_heaven": 1794417787.2941806,
+    "radio_x_chilled": 1794417787.2977877,
+    "dreampop_radio": 1794417787.3014326,
+    "indie_select": 1794417787.3061721,
+    "dkfm_edge": 1794417787.3101106,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794417746.777473,
-    "dkfm_shoegaze": 1794417747.0550103,
-    "dkfm_classic": 1794417747.3843937
+    "dark_edge": 1794417787.6303499,
+    "dkfm_shoegaze": 1794417787.6342287,
+    "dkfm_classic": 1794417787.6378503
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5229,6 +5229,7 @@
       "ex:re|||two chords",
       "faithless|||evergreen feat zoe johnston",
       "fawns of love|||girls glass version",
+      "fawns of love|||his face",
       "fawns of love|||miranda glass version",
       "fawns of love|||mournful eyes glass version",
       "fawn|||fleeting sun",
@@ -11511,6 +11512,7 @@
       "jake bugg|||seen it all",
       "jakob|||all your love",
       "james bay|||hold back the river",
+      "james bay|||just for tonight acoustic",
       "james bay|||rescue",
       "james bay|||when we were on fire",
       "james blake|||limit to your love",
@@ -15001,11 +15003,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "band of horses|||no one's gonna love you",
-  "__last_radio_key_mellow_mix": "sade|||long hard road",
-  "__last_radio_key_big_sonic_heaven": "actors|||left on read",
+  "__last_radio_key_vuurland": "phosphorescent|||wolves",
+  "__last_radio_key_mellow_mix": "joe jackson|||steppin' out",
+  "__last_radio_key_big_sonic_heaven": "fawns of love|||his face",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12443,
+  "__v116_fifo_next_sequence": 12445,
   "__v146_spotify_budget_slot": 1794417675.2043529,
   "__vuurland_active_playlist_count": 8747,
   "__vuurland_active_volume": 1,
@@ -102428,7 +102430,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "sleaford mods ft sue tompkins|||no touch",
+  "__last_radio_key_indie_select": "emily b tls orchestra tls choir|||i'm not ready to go - emily b tls orchestra tls choir",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -103806,7 +103808,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "beck|||think i'm in love",
+  "__last_radio_key_dark_edge": "james bay|||just for tonight acoustic",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
