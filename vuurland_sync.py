@@ -30,6 +30,7 @@ from v194_matcher_metadata import (
 )
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 from v221_source_round_robin import fair_source_candidates
+from v227_strict_source_turns import next_source_turn
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
@@ -8527,6 +8528,30 @@ def sync():
         cache.get("__v221_last_selected_source"),
     )
 
+    # v227: EEN bron per echt Spotify-tijdslot. Voorheen kon dezelfde ronde
+    # door verschillende stations lopen en bij een later station eindigen.
+    # Daardoor was het zichtbare gedrag geen strikte 11-bronnenbeurtrol.
+    last_turn_source = cache.get(
+        "__v227_last_source_turn",
+        cache.get("__v224_last_spotify_opportunity_source",
+                  cache.get("__v221_last_selected_source")),
+    )
+    turn_source, ready_count = next_source_turn(
+        live_queue, source_order, last_turn_source,
+        lambda candidate: time.time() >= _v41_cooldown_until(candidate),
+    )
+    if turn_source is None:
+        print("⏳ v227: geen van de 11 bronnen heeft nu zoekklare nummers; "
+              "wachtrij blijft bewaard.")
+        return
+    # Reserveer deze bron direct, ook als zijn oudste 35 nummers later
+    # al bekend, afgekeurd of geparkeerd blijken. De volgende ronde is
+    # voor de daaropvolgende bron; een missende match steelt geen beurt.
+    cache["__v227_last_source_turn"] = turn_source
+    save_cache(cache)
+    print(f"🎟️ v227 bronbeurt: {turn_source} ({ready_count} zoekklare nummers); "
+          f"vorige bron: {last_turn_source or 'geen'}.")
+
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
             break
@@ -8543,6 +8568,8 @@ def sync():
             live_queue, source_order, round_last_selected_source,
         )
         for index, candidate in candidates:
+            if str(candidate.get("source") or "vuurland").strip() != turn_source:
+                continue
             if id(candidate) in processed_item_ids:
                 continue
             if now < _v41_cooldown_until(candidate):
@@ -8561,8 +8588,9 @@ def sync():
 
         if selected_index is None:
             if waiting_for_retry:
-                print("⏳ Alternatieve Spotify-zoekpogingen wachten; "
-                      "geen ander nummer klaar voor verwerking.")
+                print(f"⏳ v227 {turn_source}: alternatieve zoekpogingen in cooldown.")
+            else:
+                print(f"📭 v227 {turn_source}: geen extra zoekklaar nummer in deze beurt.")
             break
 
         # Lokale rotatie voor opruimwerk; de persistente Spotify-kanscursor
