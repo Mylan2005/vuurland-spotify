@@ -28,7 +28,7 @@ assert "Duyster archief" in result[2] and "Bron onbekend" not in result[2]
 rows = extract(lines)
 assert len(rows) == 3, rows
 assert [row[1] for row in rows] == [
-    "Studio Brussel Vuurland", "DKFM Shoegaze Radio", "duyster"
+    "Studio Brussel Vuurland", "DKFM Shoegaze Radio", "Duyster archief"
 ]
 assert [row[4] for row in rows] == ["12001", "12002", "12003"]
 excluded = json.loads(Path(__file__).with_name("vuurland_user_exclusions.json").read_text(encoding="utf-8"))
