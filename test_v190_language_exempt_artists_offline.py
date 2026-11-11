@@ -91,8 +91,8 @@ vocal_titles = next(n for n in tree.body if isinstance(n, ast.Assign)
                             for t in n.targets))
 real_ns = {
     "re": re,
-    "V119_GERMAN_TITLES": ast.literal_eval(v119_titles.value),
-    "GERMAN_VOCAL_RADIO_TRACKS": ast.literal_eval(vocal_titles.value),
+    "V119_GERMAN_TITLES": frozenset(ast.literal_eval(v119_titles.value.args[0])),
+    "GERMAN_VOCAL_RADIO_TRACKS": frozenset(ast.literal_eval(vocal_titles.value.args[0])),
 }
 for name in ("v119_title_normalize", "v119_is_german_title",
              "is_confirmed_german_vocal"):
