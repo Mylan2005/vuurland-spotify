@@ -27,12 +27,12 @@ tree = ast.parse(source)
 functions = {x.name: x for x in tree.body if isinstance(x, ast.FunctionDef)}
 collector = ast.get_source_segment(source, functions["v96_collect_live_plays"])
 sync = ast.get_source_segment(source, functions["sync"])
-assert 'if global_music_reject_reason(artist, title):' in collector
-assert 'not global_music_reject_reason(item.get("artist", ""), item.get("title", ""))' in sync
-assert 'or global_music_reject_reason(artist, title)' in sync
-assert 'rejection = global_music_reject_reason(artist, title)' in sync
+assert 'sid != "dark_edge" and global_music_reject_reason(artist, title)' in collector
+assert 'item.get("source") == "dark_edge" or not global_music_reject_reason(' in sync
+assert 'global_music_reject_reason(artist, title)' in sync
+assert 'None if item.get("source") == "dark_edge" else' in sync
 assert "DUYSTER_ENQUEUE_INTERVAL_SECONDS = 120" in Path(__file__).with_name(
     "duyster_archive_fifo.py").read_text(encoding="utf-8")
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 assert "max_additions_per_round = 1" in source
-print("✅ Bronoverstijgende muziekuitsluitingen, Duyster-tempo en Spotify-limieten veilig.")
+print("✅ Andere bronnen: oude muziekuitsluitingen; Dark Edge alleen bronfilter; Duyster-tempo en Spotify-limieten intact.")
