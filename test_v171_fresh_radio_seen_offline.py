@@ -15,6 +15,8 @@ def key(a, t):
 ns = {
     "RADIO_SOURCE_ORDER": ("vuurland", "mellow_mix", "radio_britannia", "big_sonic_heaven"),
     "_v47_key": key,
+    "v101_radio_key": lambda a, t: (" ".join(a.casefold().split()), " ".join(t.casefold().split())),
+    "V101_EXCLUDED_RADIO_TRACKS": {("Test Blocked", "Blocked Song"), ("test blocked", "blocked song")},
     "normalize_match": str.lower,
     "global_music_reject_reason": global_music_reject_reason,
     "v110_correct_radio_artist": lambda a, sid: a,
@@ -85,6 +87,17 @@ src[0]["tracks"] = [("Cocteau Twins", "Heaven or Las Vegas"),
                     ("Slowdive", "Alison")]
 assert collect(src, cache, set(), q) == 1
 assert q[0]["artist"] == "Cocteau Twins"
+
+# Controleer ook de nieuwe, exact gematchte gebruikersuitsluitingen.
+cache = {"__playlist_keys": []}
+q = []
+src = [{"id": "vuurland", "name": "Vuurland",
+        "tracks": [("Artist", "Baseline")]}]
+assert collect(src, cache, set(), q) == 0
+src[0]["tracks"] = [("Test Blocked", "Blocked Song"),
+                    ("Artist", "Baseline")]
+assert collect(src, cache, set(), q) == 0
+assert q == []
 
 # Oude snapshots van uitgeschakelde bronnen krijgen geen toegang tot de FIFO.
 print("✅ v171: vier radiofeeds: nulmeting, enkel nieuwe plays, zonder dubbels")
