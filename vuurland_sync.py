@@ -1474,8 +1474,10 @@ def v191_is_german_vocal_risk(artist, title):
 
 
 def dark_edge_track_allowed(artist, title):
-    # v218: Dark Edge: alleen Avicii en Roemeense titelsignalen blokkeren.
-    return dark_edge_reject_reason(artist, title) is None
+    # v220: ook Dark Edge weigert Duitse zang/sterke Duitse titelsignalen.
+    # De 35 keuzes en 7 artiesten gelden wereldwijd via music_policy.
+    return (not v191_is_german_vocal_risk(artist, title)
+            and dark_edge_reject_reason(artist, title) is None)
 
 
 def get_dark_edge_tracks():
