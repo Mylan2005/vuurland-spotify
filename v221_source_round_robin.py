@@ -17,7 +17,7 @@ def fair_source_candidates(queue, source_order, last_source):
         return []
     groups = {source: [] for source in sources}
     for index, item in enumerate(queue):
-        if not isinstance(item, dict):
+        if not isinstance(item, dict) or not item:
             continue
         source = str(item.get("source") or "vuurland").strip()
         if source in groups:
