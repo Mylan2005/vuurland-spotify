@@ -158,6 +158,7 @@ jobs:
             python3 test_v224_fair_spotify_opportunities_offline.py
             python3 test_v225_source_accountability_offline.py
             python3 test_v226_visible_source_attempts_offline.py
+            python3 test_v227_strict_source_turns_offline.py
             python3 test_dark_edge_filter_offline.py
             python3 test_v212_music_policy_offline.py
             python3 test_v213_dkfm_activation_offline.py
