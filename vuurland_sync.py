@@ -28,6 +28,7 @@ from v194_matcher_metadata import (
     clearly_truncated_final_word as v194_truncated_final_word,
 )
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
+from v221_source_round_robin import fair_source_candidates
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
 from v203_matcher_upgrade_requeue import release_for_matcher_upgrades as v203_release_matcher_upgrade
@@ -8444,13 +8445,13 @@ def sync():
 
     duyster_confirmed_links = {}  # v192: Duyster via gewone veilige matcher; geen extra Spotify-calls
 
-    # v120: gezamenlijke FIFO zonder bronbeurtrol.
-    # Nieuwe nummers van alle vier radiobronnen sluiten aan in de FIFO.
-    # De bestaande persistente _v116_fifo_seq blijft leidend.
+    # v221: eerlijke bronrotatie, persistent over herstarts.
+    # Binnen iedere bron blijft de bestaande _v116_fifo_seq leidend.
+    # Niets aan de fysieke queue of de Spotify-/Duyster-limieten wijzigen.
     processed_item_ids = set()
     max_queue_items_per_round = 35
     source_order = FIFO_SOURCE_ORDER
-    print(f"🔀 {len(RADIO_SOURCE_ORDER)} live radiobronnen + Duyster-archief; één gezamenlijke FIFO.")
+    print(f"🔀 {len(RADIO_SOURCE_ORDER)} live radiobronnen + Duyster-archief; bronrotatie met FIFO per bron.")
     additions_this_round = 0
     duyster_additions_this_round = 0
     max_additions_per_round = 1  # v66: maximaal één playlisttoevoeging en bijbehorende like
@@ -8501,14 +8502,14 @@ def sync():
             _source_counts[_source] += 1
     print("📊 v120 wachtrij per bron: "
           + ", ".join(f"{name}={_source_counts[name]} zoekklaar" for name in source_order)
-          + "; gezamenlijke FIFO zonder bronvoorrang.")
+          + "; eerlijke bronrotatie met FIFO per bron.")
 
     # v160: alleen na de volledige, actuele playlist-scan herstellen.
     if cache.get("__v159_rebuild_scanned") == V159_REBUILD_TOKEN:
         v160_restore_vuurland_history(cache, live_queue, playlist_keys)
         v167_restore_four_radio_histories(cache, live_queue, playlist_keys)
 
-    # v120: oudste beschikbare nummer, ongeacht radiobron.
+    # v221: oudste beschikbare item per bron; de volgende bron krijgt een beurt.
 
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
@@ -8519,14 +8520,11 @@ def sync():
         waiting_for_retry = False
         now = time.time()
 
-        # v120: sorteer ALLE twaalf bronnen op hun onveranderlijke FIFO-nummer.
-        # Tijdelijke cooldowns en reeds geprobeerde items worden overgeslagen,
-        # maar blijven bewaard voor latere sync-rondes.
-        candidates = sorted(
-            ((index, candidate) for index, candidate in enumerate(live_queue)
-             if isinstance(candidate, dict)
-             and str(candidate.get("source") or "vuurland").strip() in source_order),
-            key=lambda pair: (pair[1].get("_v116_fifo_seq", 10**30), pair[0]),
+        # v221: na de laatst geselecteerde bron begint de volgende bron.
+        # Per bron staat het oudste bestaande FIFO-volgnummer voorop.
+        # Cooldowns worden hieronder onveranderd overgeslagen.
+        candidates = fair_source_candidates(
+            live_queue, source_order, cache.get("__v221_last_selected_source"),
         )
         for index, candidate in candidates:
             if id(candidate) in processed_item_ids:
@@ -8551,12 +8549,17 @@ def sync():
                       "geen ander nummer klaar voor verwerking.")
             break
 
+        # Cursor duurzaam opslaan vóór de Spotify-verwerking, zodat een nieuwe
+        # runner niet opnieuw met dezelfde bron begint. Dit wijzigt geen item.
+        cache["__v221_last_selected_source"] = selected_source
+        save_cache(cache)
+
         # De bestaande verwerking verwacht zijn gekozen item op positie nul.
         if selected_index != 0:
             selected_item = live_queue.pop(selected_index)
             live_queue.insert(0, selected_item)
 
-        print(f"🔢 v120 gezamenlijke FIFO: volgnummer "
+        print(f"🔢 v221 bronrotatie: FIFO-volgnummer "
               f"{live_queue[0].get('_v116_fifo_seq')} geselecteerd "
               f"(bron: {selected_source}).")
         processed_item_ids.add(id(live_queue[0]))
