@@ -7,12 +7,44 @@ alternatieve artiesten blijven toegelaten.
 import re
 import unicodedata
 
-from dark_edge_filter import DARK_EDGE_BLOCKED_ARTISTS
+# v218: de historische bronoeverstijgende blokkades los van Dark Edge bewaren.
+# Dark Edge mag onbekende artiesten toelaten zonder andere bronnen te wijzigen.
+GLOBAL_LEGACY_BLOCKED_ARTISTS = frozenset({
+    # Persoonlijke uitsluiting.
+    "dua lipa",
+    # Expliciete gebruikerfeedback: Sam Smith past niet in Vuurland via Dark Edge.
+    "sam smith",
+    # Commerciële, duidelijk hitparadegerichte pop: uitsluitend Dark Edge.
+    "ed sheeran", "justin bieber", "shawn mendes", "charlie puth",
+    "maroon 5", "meghan trainor", "katy perry", "ariana grande",
+    "kylie minogue", "britney spears", "backstreet boys",
+    "one direction", "jonas brothers", "selena gomez",
+    "camila cabello", "jason derulo", "harry styles",
+    "ava max", "bebe rexha", "zara larsson", "rita ora",
+    "sabrina carpenter", "tate mcrae", "bruno mars",
+    "lewis capaldi", "james arthur", "benson boone",
+
+    # Dance, EDM en mainstream festival-/club-DJ's.
+    "afrojack", "alan walker", "alesso", "armin van buuren",
+    "avicii", "axwell", "calvin harris", "david guetta",
+    "deadmau5", "diplo", "dj snake", "don diablo", "fisher",
+    "galantis", "hardwell", "ingrosso", "kleerup", "kygo",
+    "lost frequencies", "major lazer", "marshmello",
+    "martin garrix", "meduza", "robin schulz", "sigala",
+    "skrillex", "steve aoki", "swedish house mafia",
+    "the chainsmokers", "tiesto", "zedd",
+    # Punk, nu-metal en zware rock die niet bij de playlist passen.
+    "blink-182", "bring me the horizon", "faith no more",
+    "fall out boy", "five finger death punch", "green day",
+    "limp bizkit", "linkin park", "metallica", "megadeth",
+    "papa roach", "pantera", "rammstein", "slipknot",
+    "sum 41", "system of a down", "the offspring", "volbeat",
+})
 
 # Alleen duidelijk ongewenste mainstream pop / EDM uit de reeds bestaande
 # Dark Edge uitsluitingen. Zwaardere rock/punk uit die lijst is eveneens
 # uitgesloten volgens de bestaande muziekvoorkeur.
-GLOBAL_EXCLUDED_ARTISTS = DARK_EDGE_BLOCKED_ARTISTS | frozenset({
+GLOBAL_EXCLUDED_ARTISTS = GLOBAL_LEGACY_BLOCKED_ARTISTS | frozenset({
     # Bekende J-/K-/C-pop-projecten die de gebruiker niet wil; dit is een
     # muziekselectie, geen gok naar de taal van onbekende artiesten.
     "bts", "blackpink", "twice", "stray kids", "newjeans", "aespa",
