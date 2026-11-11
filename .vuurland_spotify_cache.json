@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "coldplay|||day 'n' nite",
+      "hermanos gutierrez|||canto andino",
       "loverman|||into the night",
       "tamino feat mitski|||sanctuary",
       "the weather station|||tried to tell you",
@@ -111,11 +113,10 @@
       "wet leg|||obvious",
       "mk gee|||are you looking up",
       "billie eilish|||birds of a feather",
-      "loverman|||differences aside",
-      "audrey hobert|||wet hair",
-      "angus and julia stone|||big jet plane"
+      "loverman|||differences aside"
     ],
     "mellow_mix": [
+      "laura veirs|||shape shifter",
       "pink floyd|||if",
       "patrick watson|||a mermaid in lisbon feat teresa salgueiro",
       "noah kahan|||all my love",
@@ -214,8 +215,7 @@
       "neil finn|||turn and run",
       "awolnation|||panoramic view",
       "ella fitzgerald|||over the rainbow",
-      "lyle lovett|||step inside this house",
-      "elbow|||asleep in the back"
+      "lyle lovett|||step inside this house"
     ],
     "big_sonic_heaven": [
       "control freq|||sweetest day",
@@ -524,6 +524,7 @@
       "electric youth|||innocence"
     ],
     "indie_select": [
+      "trixie whitley|||high wire",
       "whenyoung|||home movie",
       "skinny pelembe|||don't be another",
       "the album leaf|||stretched home",
@@ -622,10 +623,10 @@
       "death cab for cutie|||i don't know how i survive",
       "james vincent mcmorrow|||sparrow and the wolf",
       "the pains of being pure at heart|||lost saint",
-      "james yuill|||crying for hollywood",
-      "stars|||take me to the riot"
+      "james yuill|||crying for hollywood"
     ],
     "dkfm_edge": [
+      "glimmer|||buried",
       "softcult|||shortest fuse",
       "drop nineteens|||a hitch",
       "draag|||the day has come",
@@ -724,8 +725,7 @@
       "mo dotti|||dead to me",
       "birgir hansen|||vera",
       "sungazer|||vienumoj",
-      "whitelands|||the prophet & i",
-      "haermape|||deep breaths"
+      "whitelands|||the prophet & i"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794413656.6788871,
-    "mellow_mix": 1794413656.6830893,
-    "big_sonic_heaven": 1794413656.686458,
-    "radio_x_chilled": 1794413656.6897967,
-    "dreampop_radio": 1794413656.6932125,
-    "indie_select": 1794413656.696941,
-    "dkfm_edge": 1794413656.7005908,
+    "vuurland": 1794413729.715906,
+    "mellow_mix": 1794413729.7203279,
+    "big_sonic_heaven": 1794413729.723761,
+    "radio_x_chilled": 1794413729.7272532,
+    "dreampop_radio": 1794413729.730774,
+    "indie_select": 1794413729.7348652,
+    "dkfm_edge": 1794413729.7387395,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794413656.7041006,
-    "dkfm_shoegaze": 1794413656.707593,
-    "dkfm_classic": 1794413656.7108717
+    "dark_edge": 1794413729.7424672,
+    "dkfm_shoegaze": 1794413729.7460918,
+    "dkfm_classic": 1794413729.7495499
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14933,8 +14933,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "loverman|||into the night",
-  "__last_radio_key_mellow_mix": "pink floyd|||if",
+  "__last_radio_key_vuurland": "coldplay|||day 'n' nite",
+  "__last_radio_key_mellow_mix": "laura veirs|||shape shifter",
   "__last_radio_key_big_sonic_heaven": "control freq|||sweetest day",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 12357,
@@ -102202,7 +102202,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "whenyoung|||home movie",
+  "__last_radio_key_indie_select": "trixie whitley|||high wire",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -103567,7 +103567,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "softcult|||shortest fuse",
+  "__last_radio_key_dkfm_edge": "glimmer|||buried",
   "__last_radio_key_dkfm_shoegaze": "sleepwalk|||05-jan 22",
   "__last_radio_key_dkfm_classic": "the belltower|||eyes on the time",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
