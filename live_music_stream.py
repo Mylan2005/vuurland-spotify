@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Toon alleen bevestigde Spotify-toevoegingen in live Actions-log.
+"""Toon alleen Spotify-toevoegingen, gemiste matches en belangrijke fouten live.
 
 Alle originele uitvoer wordt gelijktijdig opgeslagen voor diagnose.
 Deze code verandert nooit Spotify, de FIFO of JSON-state.
@@ -47,7 +47,6 @@ def format_music(raw, source, clock=None):
 def stream(instream, logfile, emit=print):
     source = None
     search_source = None
-    search_song = None
     show_error_detail = False
     with open(logfile, 'a', encoding='utf-8', buffering=1) as handle:
         for text in instream:
@@ -65,17 +64,11 @@ def stream(instream, logfile, emit=print):
             selected = SELECTIE.search(line)
             if selected:
                 source = selected.group(1)
-            # Het oorspronkelijke overzicht verstopte álle zoekpogingen
-            # zonder toevoeging; dit leek op het overslaan van een station.
-            if line.startswith('🔎 Spotify zoeken: '):
-                search_song = line.split('🔎 Spotify zoeken: ', 1)[1].strip()
+            # Houd zoekbeurten uitsluitend in het volledige technische log.
+            # Bewaar wel de bron voor een eventuele zichtbare ⚠️-melding.
             turn = ZOEKBEURT.search(line)
             if turn:
                 search_source = turn.group(1)
-                stamp = datetime.now(ZoneInfo('Europe/Brussels')).strftime('%H:%M')
-                label = BRONNEN.get(search_source, search_source)
-                emit(f'🔎 {stamp} | {label} | Spotify-zoekbeurt: {search_song or "nummer onbekend"}', flush=True)
-                search_song = None
             if GEEN_MATCH in line:
                 failed_source = search_source or source
                 stamp = datetime.now(ZoneInfo('Europe/Brussels')).strftime('%H:%M')

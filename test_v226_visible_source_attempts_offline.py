@@ -1,4 +1,4 @@
-"""Offline regression: visible search attempts for every radio source, no Spotify calls."""
+"""Offline regression: display only additions, misses, and errors, retain all technical logs."""
 import io
 import tempfile
 from pathlib import Path
@@ -37,12 +37,12 @@ with tempfile.TemporaryDirectory() as folder:
                    "duyster":"Duyster archief"}
         label=mapping.get(source)
         if label:
-            assert any(f"| {label} | Spotify-zoekbeurt: {song}" in line for line in output), (source, output)
+            assert not any(f"| {label} | Spotify-zoekbeurt:" in line for line in output), (source, output)
         if source in ("dkfm_edge", "duyster"):
             assert any("✅ " in line and f"| {label} |" in line for line in output)
         else:
             assert any("⚠️ " in line and ("Geen betrouwbare Spotify-match: " + song) in line for line in output)
-    assert len([line for line in output if line.startswith("🔎 ")]) == 8
+    assert not any(line.startswith("🔎 ") for line in output)
     assert len([line for line in output if line.startswith("⚠️ ")]) == 6
     assert len([line for line in output if line.startswith("✅ ")]) == 2
-print("✅ v226: alle zoekbeurten zichtbaar, ook als Spotify niets betrouwbaar vindt.")
+print("✅ v230: alleen toevoegingen en missers zichtbaar; zoekbeurten technisch bewaard.")
