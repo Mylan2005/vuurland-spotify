@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794439520.449557,
+  "__v150_next_spotify_round_at": 1794439654.6685183,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -422,6 +422,7 @@
       "the war on drugs|||pain"
     ],
     "dreampop_radio": [
+      "gisbert zu knyphausen|||melancholie",
       "wolke|||second hand gefuhl",
       "keimzeit|||kling klang",
       "wolfgang muller|||immer noch fahrrad",
@@ -520,8 +521,7 @@
       "tennis|||my better self",
       "boy|||hit my heart",
       "wye oak|||civilian",
-      "fink|||warm shadow",
-      "the late call|||pickpocket"
+      "fink|||warm shadow"
     ],
     "indie_select": [
       "beirut|||no dice",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794439515.3181252,
-    "mellow_mix": 1794439515.3234115,
-    "big_sonic_heaven": 1794439515.327608,
-    "radio_x_chilled": 1794439515.331893,
-    "dreampop_radio": 1794439515.3362427,
-    "indie_select": 1794439515.3409634,
-    "dkfm_edge": 1794439515.3456342,
+    "vuurland": 1794439533.9337876,
+    "mellow_mix": 1794439533.9389336,
+    "big_sonic_heaven": 1794439533.9430592,
+    "radio_x_chilled": 1794439533.9472232,
+    "dreampop_radio": 1794439533.9516966,
+    "indie_select": 1794439533.956431,
+    "dkfm_edge": 1794439533.9611547,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794439515.6502204,
-    "dkfm_shoegaze": 1794439515.9885147,
-    "dkfm_classic": 1794439515.9929907
+    "dark_edge": 1794439533.967269,
+    "dkfm_shoegaze": 1794439533.9718063,
+    "dkfm_classic": 1794439533.9761825
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14473,12 +14473,6 @@
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
   "__v47_failed_tracks": {
-    "stillfilms|||safe bet": {
-      "artist": "stillfilms",
-      "title": "Safe Bet",
-      "source": "dkfm_edge",
-      "failed_at": 1794353104
-    },
     "liam finn eliza jane|||plane crash": {
       "artist": "Liam Finn Eliza Jane",
       "title": "Plane Crash",
@@ -15368,9 +15362,9 @@
   "__last_radio_key_mellow_mix": "nick drake|||river man",
   "__last_radio_key_big_sonic_heaven": "&tilly|||glass castles",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12906,
-  "__v146_spotify_budget_slot": 1794439401.7832787,
-  "__vuurland_active_playlist_count": 8870,
+  "__v116_fifo_next_sequence": 12908,
+  "__v146_spotify_budget_slot": 1794439536.195099,
+  "__vuurland_active_playlist_count": 8871,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794436870,
@@ -24149,6 +24143,7 @@
     "teen idle|||birthday cake",
     "teenage fanclub|||star sign",
     "tegan and sara|||back in your head rac mix",
+    "telefis|||falun gong dancer with jah wobble",
     "telefon tel aviv|||sound in a dark room",
     "telefon tel aviv|||the birds",
     "telekinesis|||patterns",
@@ -26491,6 +26486,7 @@
     "spotify:track:0JrfXPdEybpsVs0AjU0sSn",
     "spotify:track:0Jw508xkJRUk6fTybsO0rX",
     "spotify:track:0K5uG3tx9rvg5xWLGma19t",
+    "spotify:track:0KF2Db7y6EJXwUARGldDZy",
     "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9",
     "spotify:track:0KN2tNTeW1oGasiDuEZjV7",
     "spotify:track:0KPWi8mDRagwxnwaA0di8a",
@@ -40914,6 +40910,7 @@
     "UKXN22323568",
     "UKXN22360488",
     "UKXN22360492",
+    "UKYBD2100047",
     "UKYT62400340",
     "UKYT62400342",
     "US04B7800053",
@@ -52468,7 +52465,8 @@
     "spotify:track:0NiWSr6RZQQKWH2yG7fnrC": "IEACJ2300007",
     "spotify:track:71yXwcl1PNMmEBWYK6JMDV": "USAM19100287",
     "spotify:track:22HK7FANZiL4S3UU0pH2X6": "GBKZV1425020",
-    "spotify:track:4YNGgPmj7nkrCKQpaGRxav": "GBCEL1300192"
+    "spotify:track:4YNGgPmj7nkrCKQpaGRxav": "GBCEL1300192",
+    "spotify:track:0KF2Db7y6EJXwUARGldDZy": "UKYBD2100047"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -86971,6 +86969,7 @@
       "teddy swims|||the door",
       "teen idle|||birthday cake",
       "tegan and sara|||back in your head rac mix",
+      "telefis|||falun gong dancer with jah wobble",
       "telefon tel aviv|||sound in a dark room",
       "telefon tel aviv|||the birds",
       "telekinesis|||patterns",
@@ -88263,6 +88262,7 @@
       "spotify:track:0JrfXPdEybpsVs0AjU0sSn",
       "spotify:track:0Jw508xkJRUk6fTybsO0rX",
       "spotify:track:0K5uG3tx9rvg5xWLGma19t",
+      "spotify:track:0KF2Db7y6EJXwUARGldDZy",
       "spotify:track:0KIPa0YuQ5QFmlAqRyXNd9",
       "spotify:track:0KN2tNTeW1oGasiDuEZjV7",
       "spotify:track:0KPWi8mDRagwxnwaA0di8a",
@@ -96441,6 +96441,7 @@
       "UKXN22323568",
       "UKXN22360488",
       "UKXN22360492",
+      "UKYBD2100047",
       "US04B7800053",
       "US22N0804202",
       "US22N1308901",
@@ -103217,7 +103218,8 @@
       "spotify:track:0NiWSr6RZQQKWH2yG7fnrC": "IEACJ2300007",
       "spotify:track:71yXwcl1PNMmEBWYK6JMDV": "USAM19100287",
       "spotify:track:22HK7FANZiL4S3UU0pH2X6": "GBKZV1425020",
-      "spotify:track:4YNGgPmj7nkrCKQpaGRxav": "GBCEL1300192"
+      "spotify:track:4YNGgPmj7nkrCKQpaGRxav": "GBCEL1300192",
+      "spotify:track:0KF2Db7y6EJXwUARGldDZy": "UKYBD2100047"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -103591,7 +103593,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "wolke|||second hand gefuhl",
+  "__last_radio_key_dreampop_radio": "gisbert zu knyphausen|||melancholie",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -105824,8 +105826,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 487,
-  "__v192_duyster_next_enqueue_at": 1794439519.8112113,
+  "__v192_duyster_archive_cursor": 488,
+  "__v192_duyster_next_enqueue_at": 1794439654.0092528,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -108762,7 +108764,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dreampop_radio",
+  "__v221_last_selected_source": "indie_select",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -108774,7 +108776,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dreampop_radio",
+  "__v224_last_spotify_opportunity_source": "indie_select",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -108807,7 +108809,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dreampop_radio",
+  "__v227_last_source_turn": "indie_select",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -108842,5 +108844,6 @@
   "__match_v35__hozier|||de selby part 2": "spotify:track:0NiWSr6RZQQKWH2yG7fnrC",
   "__match_v35__sting|||mad about you": "spotify:track:71yXwcl1PNMmEBWYK6JMDV",
   "__match_v35__johnny flynn|||detectorists": "spotify:track:22HK7FANZiL4S3UU0pH2X6",
-  "__match_v35__cass mccombs|||there can be only one": "spotify:track:4YNGgPmj7nkrCKQpaGRxav"
+  "__match_v35__cass mccombs|||there can be only one": "spotify:track:4YNGgPmj7nkrCKQpaGRxav",
+  "__match_v35__telefis|||falun gong dancer with jah wobble": "spotify:track:0KF2Db7y6EJXwUARGldDZy"
 }
