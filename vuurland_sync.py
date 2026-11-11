@@ -8518,7 +8518,14 @@ def sync():
         v160_restore_vuurland_history(cache, live_queue, playlist_keys)
         v167_restore_four_radio_histories(cache, live_queue, playlist_keys)
 
-    # v221: oudste beschikbare item per bron; de volgende bron krijgt een beurt.
+    # v224: Spotify-kansen zijn onafhankelijk van administratieve queue-afhandeling.
+    # Bewaar een aparte cursor voor echte Search/playlisttoevoeging: filters,
+    # reeds bekende duplicaten en cooldowns mogen geen andere bron verdringen.
+    # De lokale cursor roteert wel tijdens dezelfde ronde, ook bij housekeeping.
+    round_last_selected_source = cache.get(
+        "__v224_last_spotify_opportunity_source",
+        cache.get("__v221_last_selected_source"),
+    )
 
     for _queue_slot in range(max_queue_items_per_round):
         if not live_queue or additions_this_round >= max_additions_per_round:
@@ -8533,7 +8540,7 @@ def sync():
         # Per bron staat het oudste bestaande FIFO-volgnummer voorop.
         # Cooldowns worden hieronder onveranderd overgeslagen.
         candidates = fair_source_candidates(
-            live_queue, source_order, cache.get("__v221_last_selected_source"),
+            live_queue, source_order, round_last_selected_source,
         )
         for index, candidate in candidates:
             if id(candidate) in processed_item_ids:
@@ -8558,8 +8565,9 @@ def sync():
                       "geen ander nummer klaar voor verwerking.")
             break
 
-        # Cursor duurzaam opslaan vóór de Spotify-verwerking, zodat een nieuwe
-        # runner niet opnieuw met dezelfde bron begint. Dit wijzigt geen item.
+        # Lokale rotatie voor opruimwerk; de persistente Spotify-kanscursor
+        # verandert uitsluitend bij een echte Search of een toevoeging.
+        round_last_selected_source = selected_source
         cache["__v221_last_selected_source"] = selected_source
         save_cache(cache)
 
@@ -9042,6 +9050,11 @@ def sync():
                 f"🔎 Spotify zoeken: "
                 f"{artist} - {title}"
             )
+            # v224: reken deze echte zoekpoging aan de bron toe, ook wanneer
+            # Spotify een fout geeft of de match later wordt afgewezen.
+            cache["__v224_last_spotify_opportunity_source"] = selected_source
+            save_cache(cache)
+            print(f"🎯 v224 Spotify-zoekbeurt: {selected_source}")
 
             try:
 
@@ -9287,6 +9300,11 @@ def sync():
                     active_playlist_count,
                 ) = get_active_volume_playlist(cache)
 
+        # Ook een veilige toevoeging uit de bestaande match-cache is een
+        # echte Spotify-kans. Geen extra Search en geen wijziging aan FIFO.
+        cache["__v224_last_spotify_opportunity_source"] = selected_source
+        save_cache(cache)
+        print(f"🎯 v224 Spotify-toevoegbeurt: {selected_source}")
         add_tracks(
             playlist_id,
             [uri]

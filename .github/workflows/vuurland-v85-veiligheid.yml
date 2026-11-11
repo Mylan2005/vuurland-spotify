@@ -20,6 +20,8 @@ on:
       - 'v223_report_search_hints.py'
       - 'v223_matcher_search_hints.json'
       - 'test_v223_daily_matcher_pr_offline.py'
+      - 'test_v221_source_round_robin_offline.py'
+      - 'test_v224_fair_spotify_opportunities_offline.py'
       - 'v203_matcher_upgrade_requeue.py'
       - 'v204_spotify_dedup_review.py'
       - 'v205_lifetime_backup.py'
@@ -106,6 +108,8 @@ jobs:
           python test_v201_matcher_safety_offline.py
           python test_v202_auto_matcher_triage_offline.py
           python test_v223_daily_matcher_pr_offline.py
+          python test_v221_source_round_robin_offline.py
+          python test_v224_fair_spotify_opportunities_offline.py
           python test_v203_matcher_upgrade_requeue_offline.py
           python test_v204_spotify_dedup_offline.py
           python test_v205_lifetime_backup_offline.py
