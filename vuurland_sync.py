@@ -6565,7 +6565,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         reasons = {}
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
-            if sid != "dark_edge" and global_music_reject_reason(artist, title):
+            if v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS:
+                reason = "expliciet uitgesloten nummer (alle bronnen)"
+            elif sid != "dark_edge" and global_music_reject_reason(artist, title):
                 reason = "globaal uitgesloten muziek: " + global_music_reject_reason(artist, title)
             elif sid == "dark_edge" and not dark_edge_track_allowed(artist, title):
                 reason = "Dark Edge: Roemeense titel of Avicii geweerd"
