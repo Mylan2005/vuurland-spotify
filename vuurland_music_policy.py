@@ -7,6 +7,8 @@ alternatieve artiesten blijven toegelaten.
 import re
 import unicodedata
 
+from dark_edge_filter import dark_edge_reject_reason
+
 # v218: de historische bronoeverstijgende blokkades los van Dark Edge bewaren.
 # Dark Edge mag onbekende artiesten toelaten zonder andere bronnen te wijzigen.
 GLOBAL_LEGACY_BLOCKED_ARTISTS = frozenset({
@@ -68,6 +70,11 @@ def global_music_reject_reason(artist, title):
     name = _identity(artist)
     if not name or not str(title or "").strip():
         return "artiest of titel ontbreekt"
+    # Gebruikerskeuzes voor 35 opnames + 7 artiesten, inclusief Roemeense
+    # titelregels, gelden voortaan ZONDER bronuitzondering voor alle stations.
+    chosen_reason = dark_edge_reject_reason(artist, title)
+    if chosen_reason is not None:
+        return chosen_reason
     if name in GLOBAL_EXCLUDED_ARTISTS:
         return "expliciet uitgesloten pop-/dance-/andere artiest"
     # Gastartiesten: alleen expliciete 'feat', 'ft', 'featuring', 'with'.

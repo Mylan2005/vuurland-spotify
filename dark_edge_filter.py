@@ -1,22 +1,23 @@
 """Dark Edge-bronfilter: laat onbekende ontdekkingen toe, zonder extra Spotify-calls.
 
-Geen gesloten lijst met goedgekeurde artiesten. Wel exact de 36 door de
-gebruiker beoordeelde tracks, acht uitgesloten artiesten inclusief Avicii,
-en duidelijke Roemeenstalige titels weren. Dit is geen audio-taaldetectie:
-RadioBox levert alleen artiest en titel. Andere bronnen blijven onaangeroerd.
+Geen gesloten lijst met goedgekeurde artiesten. De 35 resterende
+gebruikersafkeuringen (zonder The Chemical Brothers) en zeven verboden
+artiesten inclusief Avicii gelden nu voor alle bronnen. Dit is geen audio-taaldetectie:
+RadioBox levert alleen artiest en titel; Duitstalige zang wordt apart tegengehouden.
 """
 import re
 import unicodedata
 
 # Exacte volledige artiest of expliciete gast; nooit een substringfilter.
-# Zeven door de gebruiker bevestigde pop-/danceartiesten én Avicii.
-# Alleen Dark Edge: de algemene uitsluitingen van andere bronnen wijzigen niet.
+# Zes uitgesloten pop-/danceartiesten plus Avicii; Chemical Brothers welkom.
+# Via vuurland_music_policy ook van kracht voor alle andere bronnen.
 DARK_EDGE_BLOCKED_ARTISTS = frozenset({
-    "avicii", "disclosure", "the chemical brothers", "tones and i",
+    "avicii", "disclosure", "tones and i",
     "sam smith", "dua lipa", "oakenfold", "paul oakenfold", "kylie minogue",
 })
 
-# Exacte gebruikerkeuzes uit de zes Dark Edge-weekoverzichten (11-11-2026).
+# Gebruikerskeuzes uit de zes weekoverzichten (11-11-2026): 35 verboden tracks.
+# The Chemical Brothers - Hey Boy Hey Girl is uitdrukkelijk WEL toegestaan.
 # Bewaar artiest én titel; geen algemeen genreverbod of landfilter.
 # Schrijfvarianten (accenten, leestekens, spatiering) worden genormaliseerd.
 DARK_EDGE_USER_BLOCKED_TRACKS = (
@@ -50,7 +51,6 @@ DARK_EDGE_USER_BLOCKED_TRACKS = (
     ("Kumm", "Morsa"),
     ("The Mono Jacks", "Drumul"),
     ("Disclosure feat. Eliza Doolittle", "You & Me (Flume remix)"),
-    ("The Chemical Brothers", "Hey Boy Hey Girl"),
     ("Tones and I", "Dance Monkey"),
     ("Sam Smith", "Too Good at Goodbyes"),
     ("Dua Lipa", "Be The One"),
@@ -117,7 +117,7 @@ def dark_edge_reject_reason(artist, title):
     if not a or not t:
         return "lege artiest/titel"
     if _is_user_blocked_track(artist, title):
-        return "gebruikerskeuze: expliciet uitgesloten Dark Edge-opname"
+        return "gebruikerskeuze: expliciet uitgesloten opname"
 
 
     # Oudere opnames met accentverschillen en een Live-suffix eveneens weren.
