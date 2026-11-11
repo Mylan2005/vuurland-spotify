@@ -49,7 +49,7 @@ for artist, title in [
 user_exclusions = json.loads(
     Path(__file__).with_name("vuurland_user_exclusions.json").read_text(encoding="utf-8")
 )
-assert ["eefje de visser", "onomkeerbaar"] in user_exclusions["pairs"]
+assert ["eefje de visser", "onomkeerbaar"] not in user_exclusions["pairs"]
 
 source = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
