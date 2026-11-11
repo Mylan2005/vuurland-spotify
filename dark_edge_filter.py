@@ -85,7 +85,7 @@ def _key(value):
 
 def _song_key(value):
     # Titelvergelijking; verwijder zero-width tekens en onschuldige interpunctie.
-    value = _key(value)
+    value = _key(str(value).replace("\u200b", "").replace("\ufeff", ""))
     return " ".join(re.findall(r"[^\W_]+", value, flags=re.UNICODE))
 
 
@@ -101,10 +101,10 @@ def _is_user_blocked_track(artist, title):
         return True
     # Met of zonder een expliciete versieaanduiding zoals (Live)/(Remaster).
     # Alleen voor de exacte uitgesloten track; geen andere liedjes blokkeren.
-    if a == "grimus" and re.match(r"^priveste ma(?:\\b|$)", t):
+    if a == "grimus" and re.match(r"^priveste ma(?:\b|$)", t):
         return True
     if a in ("omul cu sobolani", "omul cu sobolani vs michi") and re.match(
-        r"^(?:dez orientat|dezorientat)(?:\\b|$)", t
+        r"^(?:dez orientat|dezorientat)(?:\b|$)", t
     ):
         return True
     return False
