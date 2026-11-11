@@ -19,7 +19,7 @@ SOURCE_NAMES = {
     'dkfm_edge': 'DKFM Edge',
     'dkfm_shoegaze': 'DKFM Shoegaze Radio',
 }
-SELECT = re.compile(r'^🔢 v120 gezamenlijke FIFO: volgnummer\s+(\d+)\s+geselecteerd\s+\(bron:\s*([a-z0-9_]+)\)')
+SELECT = re.compile(r'^🔢 v(?:120 gezamenlijke FIFO: volgnummer|221 bronrotatie: FIFO-volgnummer)\s+(\d+)\s+geselecteerd\s+\(bron:\s*([a-z0-9_]+)\)')
 ADDED = re.compile(r'^✅ Toegevoegd:\s*(.+?)\s+-\s+(.+?)\s*$')
 RUN_DATE = re.compile(r'^[A-Z][a-z]{2} [A-Z][a-z]{2}\s+\d{1,2}\s+\d\d:\d\d:\d\d\s+(?:UTC|GMT)\s+\d{4}$')
 
