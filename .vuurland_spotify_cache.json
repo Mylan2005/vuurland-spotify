@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794392498.2452056,
+  "__v150_next_spotify_round_at": 1794392627.7145143,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -514,17 +514,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794392491.0085816,
-    "mellow_mix": 1794392491.0103312,
-    "big_sonic_heaven": 1794392491.0115464,
-    "radio_x_chilled": 1794392491.0123785,
-    "dreampop_radio": 1794392491.0133028,
-    "indie_select": 1794392491.0149064,
-    "dkfm_edge": 1794392491.0159097,
+    "vuurland": 1794392507.0444477,
+    "mellow_mix": 1794392507.046114,
+    "big_sonic_heaven": 1794392507.0473533,
+    "radio_x_chilled": 1794392507.04819,
+    "dreampop_radio": 1794392507.0491362,
+    "indie_select": 1794392507.0504344,
+    "dkfm_edge": 1794392507.051474,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794392491.0170686,
-    "dkfm_shoegaze": 1794392491.0181298,
-    "dkfm_classic": 1794392491.2838526
+    "dark_edge": 1794392507.0526853,
+    "dkfm_shoegaze": 1794392507.0538144,
+    "dkfm_classic": 1794392507.054806
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13424,6 +13424,12 @@
       "title": "London Girl (Matthew Herbert's Kent Boy Dub) - The Invisble",
       "source": "indie_select",
       "failed_at": 1794390013
+    },
+    "stay|||eyes feat no ceremony///": {
+      "artist": "Stay",
+      "title": "Eyes (feat. NO CEREMONY///)",
+      "source": "indie_select",
+      "failed_at": 1794392510
     }
   },
   "__v51_radio_unmatched": {
@@ -14060,8 +14066,8 @@
   "__last_radio_key_mellow_mix": "bruce cockburn|||the coming rains",
   "__last_radio_key_big_sonic_heaven": "julee cruise|||the nightingale",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 11883,
-  "__v146_spotify_budget_slot": 1794392379.4210222,
+  "__v116_fifo_next_sequence": 11884,
+  "__v146_spotify_budget_slot": 1794392508.878039,
   "__vuurland_active_playlist_count": 8614,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -68491,7 +68497,7 @@
     "pocket|||backwards from ten feat danny seim of menomena": 3,
     "the veldt|||morning june and yesterday single": 3,
     "the invisble|||london girl matthew herbert's kent boy dub - the invisble": 3,
-    "stay|||eyes feat no ceremony///": 2,
+    "stay|||eyes feat no ceremony///": 3,
     "the veldt|||c c c p": 2
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
@@ -68796,7 +68802,8 @@
     "ultravivid scene|||mercy seat 12\"": 1,
     "pocket|||backwards from ten feat danny seim of menomena": 1,
     "the veldt|||morning june and yesterday single": 1,
-    "the invisble|||london girl matthew herbert's kent boy dub - the invisble": 1
+    "the invisble|||london girl matthew herbert's kent boy dub - the invisble": 1,
+    "stay|||eyes feat no ceremony///": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -102530,8 +102537,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 34,
-  "__v192_duyster_next_enqueue_at": 1794392497.6426442,
+  "__v192_duyster_archive_cursor": 36,
+  "__v192_duyster_next_enqueue_at": 1794392627.0835583,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -105222,5 +105229,6 @@
   "__match_v35__marco giongrandi|||long wait": "spotify:track:2eVrVCn9zpmZ32eT4Y2QQ1",
   "__match_v35__thingy|||ballpoint pen": "spotify:track:1vkb8zd4RJTGD688UEbYFm",
   "__match_v35__miners|||twilight language": "spotify:track:496OrvxZU0MkbulPBUoSq4",
-  "__match_v35__karate|||operation: sand": "spotify:track:29gpshiEuwtJpH3iP1lCBB"
+  "__match_v35__karate|||operation: sand": "spotify:track:29gpshiEuwtJpH3iP1lCBB",
+  "__not_found_v35__stay|||eyes feat no ceremony///": 1794392510
 }
