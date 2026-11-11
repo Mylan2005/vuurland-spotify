@@ -23,7 +23,16 @@ def fair_source_candidates(queue, source_order, last_source):
         if source in groups:
             groups[source].append((index, item))
     for group in groups.values():
-        group.sort(key=lambda pair: (pair[1].get("_v116_fifo_seq", 10**30), pair[0]))
+        # v228: een nummer dat al zonder betrouwbare match werd gezocht,
+        # mag niet opnieuw alle nog ongeteste nummers van dezelfde bron
+        # blokkeren. Vroeger werd het na een retry achteraan gezet, maar
+        # opnieuw naar voren gesorteerd op zijn oudste FIFO-volgnummer.
+        # FIFO blijft strikt binnen de groepen "nog nooit gezocht" en
+        # "retry"; een retry blijft bewaard, maar komt later aan bod.
+        group.sort(key=lambda pair: (
+            int(pair[1].get("_v34_search_variant", 0) or 0) > 0,
+            pair[1].get("_v116_fifo_seq", 10**30), pair[0],
+        ))
 
     start = ((sources.index(last_source) + 1) % len(sources)
              if last_source in sources else 0)
