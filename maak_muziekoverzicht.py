@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 SOURCE_NAMES = {
+    'duyster': 'Duyster archief',
+    'dkfm_classic': 'DKFM Classic',
     'vuurland': 'Studio Brussel Vuurland',
     'mellow_mix': 'Radio Paradise Mellow Mix',
     'big_sonic_heaven': 'Big Sonic Heaven Radio',
