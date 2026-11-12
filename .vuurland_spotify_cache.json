@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sigur ros|||hljomalind",
       "tame impala|||solitude is bliss",
       "mooneye|||in between",
       "lucy dacus|||planting tomatoes",
@@ -112,8 +113,7 @@
       "luvcat|||love and money",
       "maya hawke|||bring home my man",
       "big thief|||certainty",
-      "tamino|||dissolve",
-      "nick cave & the bad seeds|||long dark night"
+      "tamino|||dissolve"
     ],
     "mellow_mix": [
       "stan getz|||corcovado quiet nights of quiet stars",
@@ -218,6 +218,7 @@
       "shook twins|||growing things"
     ],
     "big_sonic_heaven": [
+      "dog silent|||welcome to the ocean of my drowned stars",
       "erasure|||piano song",
       "royksopp|||what else is there?",
       "silverdeer|||montauk",
@@ -316,8 +317,7 @@
       "my bloody valentine|||don't ask why",
       "untitled halo|||how to make your love stay",
       "the shallows|||soft night",
-      "nation of language|||spare me the decision",
-      "alison's halo|||slowbleed"
+      "nation of language|||spare me the decision"
     ],
     "radio_x_chilled": [
       "radiohead|||high and dry",
@@ -524,6 +524,7 @@
       "broods|||mother & father"
     ],
     "indie_select": [
+      "the shins|||it's only life",
       "bloc party|||lean",
       "the futureheads|||thursday a capella version",
       "noel gallagher's high flying birds|||i wanna live in a dream in my record machine",
@@ -622,8 +623,7 @@
       "the horrors|||more than life",
       "royel otis|||moody",
       "matt berninger|||inland ocean",
-      "provider|||sleepwalking",
-      "the mary onettes|||sworn"
+      "provider|||sleepwalking"
     ],
     "dkfm_edge": [
       "jared martin|||longing",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794451170.1066618,
-    "mellow_mix": 1794451170.1138158,
-    "big_sonic_heaven": 1794451170.1185234,
-    "radio_x_chilled": 1794451170.1233106,
-    "dreampop_radio": 1794451170.1287186,
-    "indie_select": 1794451170.1339934,
-    "dkfm_edge": 1794451170.1398215,
+    "vuurland": 1794451249.6471233,
+    "mellow_mix": 1794451249.6543362,
+    "big_sonic_heaven": 1794451249.6591897,
+    "radio_x_chilled": 1794451249.664,
+    "dreampop_radio": 1794451249.6693933,
+    "indie_select": 1794451249.675011,
+    "dkfm_edge": 1794451249.680867,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794451170.1460445,
-    "dkfm_shoegaze": 1794451170.1515396,
-    "dkfm_classic": 1794451170.1569123
+    "dark_edge": 1794451249.6871133,
+    "dkfm_shoegaze": 1794451249.6926417,
+    "dkfm_classic": 1794451249.6980798
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15483,9 +15483,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "tame impala|||solitude is bliss",
+  "__last_radio_key_vuurland": "sigur ros|||hljomalind",
   "__last_radio_key_mellow_mix": "stan getz|||corcovado quiet nights of quiet stars",
-  "__last_radio_key_big_sonic_heaven": "erasure|||piano song",
+  "__last_radio_key_big_sonic_heaven": "dog silent|||welcome to the ocean of my drowned stars",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 13150,
   "__v146_spotify_budget_slot": 1794451172.1969433,
@@ -104437,7 +104437,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "bloc party|||lean",
+  "__last_radio_key_indie_select": "the shins|||it's only life",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
