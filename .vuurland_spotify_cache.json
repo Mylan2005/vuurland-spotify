@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794509750.704609,
+  "__v150_next_spotify_round_at": 1794509879.5851982,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -116,6 +116,7 @@
       "soccer mommy|||circle the drain"
     ],
     "mellow_mix": [
+      "cat stevens|||sad lisa",
       "aurora|||runaway",
       "mark knopfler|||coyote",
       "artie barsamian|||the enchanting melody",
@@ -214,8 +215,7 @@
       "robert plant|||29 palms",
       "the national|||fake empire",
       "beck|||lost cause",
-      "paul simon|||something so right",
-      "jesse colin young|||song for juli"
+      "paul simon|||something so right"
     ],
     "big_sonic_heaven": [
       "tyynyt|||rodos '86",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794509742.674898,
-    "mellow_mix": 1794509742.6785347,
-    "big_sonic_heaven": 1794509742.6816394,
-    "radio_x_chilled": 1794509742.6847324,
-    "dreampop_radio": 1794509742.687875,
-    "indie_select": 1794509742.6911962,
-    "dkfm_edge": 1794509742.6945825,
+    "vuurland": 1794509758.729162,
+    "mellow_mix": 1794509758.958747,
+    "big_sonic_heaven": 1794509758.9619503,
+    "radio_x_chilled": 1794509758.9651148,
+    "dreampop_radio": 1794509758.968294,
+    "indie_select": 1794509758.971672,
+    "dkfm_edge": 1794509758.9749722,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794509742.698208,
-    "dkfm_shoegaze": 1794509742.701441,
-    "dkfm_classic": 1794509742.9369016
+    "dark_edge": 1794509758.978582,
+    "dkfm_shoegaze": 1794509758.9818795,
+    "dkfm_classic": 1794509758.9849784
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2648,6 +2648,7 @@
       "cat stevens|||morning has broken",
       "cat stevens|||on the road to find out",
       "cat stevens|||peace train",
+      "cat stevens|||sad lisa",
       "cat stevens|||where do the children play",
       "cat stevens|||wild world",
       "catie curtis|||doctor",
@@ -16161,12 +16162,12 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "dressed like boys|||jaouad",
-  "__last_radio_key_mellow_mix": "aurora|||runaway",
+  "__last_radio_key_mellow_mix": "cat stevens|||sad lisa",
   "__last_radio_key_big_sonic_heaven": "tyynyt|||rodos '86",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 14383,
-  "__v146_spotify_budget_slot": 1794509631.8432028,
-  "__vuurland_active_playlist_count": 9330,
+  "__v116_fifo_next_sequence": 14385,
+  "__v146_spotify_budget_slot": 1794509760.7162857,
+  "__vuurland_active_playlist_count": 9331,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794506494,
@@ -18012,6 +18013,7 @@
     "chappaqua wrestling|||wide asleep live at on the beach",
     "chapterhouse|||in my arms",
     "chapterhouse|||mesmerise",
+    "chapterhouse|||pearl",
     "chapterhouse|||pearl - edit",
     "charles bradley & menahan street band|||you put the flame on it",
     "charles bradley|||ain't it a sin",
@@ -36245,6 +36247,7 @@
     "spotify:track:7gKxCvTDWwV9wBhdeBbr3l",
     "spotify:track:7gNsowLQ8QkLCGYuMe2bKO",
     "spotify:track:7gSZkeBr9Koc9Rfm3pp769",
+    "spotify:track:7gVcaSCDGYVuOALeSlvjHJ",
     "spotify:track:7gWiECl6tbN1dzCA3SIsx3",
     "spotify:track:7gWsxve2t9GaHgEh4iZsNp",
     "spotify:track:7gYwIAHB6VxzLJFSZMMv8i",
@@ -40090,6 +40093,7 @@
     "GBETG0300007",
     "GBETG0700044",
     "GBETG1000003",
+    "GBETY1815902",
     "GBEUE0400112",
     "GBEWK0800015",
     "GBF068125080",
@@ -55102,7 +55106,8 @@
     "spotify:track:6mnDez8mWJqlTyp6GjCKKR": "GBAFL8600050",
     "spotify:track:4IGplpRUYEBfMFbmUtWhhw": "GBV8F2000160",
     "spotify:track:4MMlFCyd7NovH8fbOtX2g9": "USCPT1110006",
-    "spotify:track:7z5wQwZJ13o4R62k4tXn0s": "QZMEP2351632"
+    "spotify:track:7z5wQwZJ13o4R62k4tXn0s": "QZMEP2351632",
+    "spotify:track:7gVcaSCDGYVuOALeSlvjHJ": "GBETY1815902"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -86309,6 +86314,7 @@
       "chappaqua wrestling|||wide asleep",
       "chappaqua wrestling|||wide asleep live at on the beach",
       "chapterhouse|||in my arms",
+      "chapterhouse|||pearl",
       "charles bradley|||ain't it a sin",
       "charles bradley|||changes",
       "charles bradley|||strictly reserved for you",
@@ -96469,6 +96475,7 @@
       "spotify:track:7g3NSoTxNawnTid82nPI1u",
       "spotify:track:7gE4Pjr7woi8bxAXhmQoW5",
       "spotify:track:7gNsowLQ8QkLCGYuMe2bKO",
+      "spotify:track:7gVcaSCDGYVuOALeSlvjHJ",
       "spotify:track:7gWsxve2t9GaHgEh4iZsNp",
       "spotify:track:7gc6I5PHBetDZqT0eyA1Py",
       "spotify:track:7gjibmFA065UL13vGpbzhZ",
@@ -98668,6 +98675,7 @@
       "GBETG0300007",
       "GBETG0700044",
       "GBETG1000003",
+      "GBETY1815902",
       "GBEUE0400112",
       "GBEWK0800015",
       "GBF068500920",
@@ -107725,7 +107733,8 @@
       "spotify:track:6mnDez8mWJqlTyp6GjCKKR": "GBAFL8600050",
       "spotify:track:4IGplpRUYEBfMFbmUtWhhw": "GBV8F2000160",
       "spotify:track:4MMlFCyd7NovH8fbOtX2g9": "USCPT1110006",
-      "spotify:track:7z5wQwZJ13o4R62k4tXn0s": "QZMEP2351632"
+      "spotify:track:7z5wQwZJ13o4R62k4tXn0s": "QZMEP2351632",
+      "spotify:track:7gVcaSCDGYVuOALeSlvjHJ": "GBETY1815902"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -110332,8 +110341,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 1194,
-  "__v192_duyster_next_enqueue_at": 1794509750.1305263,
+  "__v192_duyster_archive_cursor": 1195,
+  "__v192_duyster_next_enqueue_at": 1794509879.0462468,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -113270,7 +113279,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dark_edge",
+  "__v221_last_selected_source": "dkfm_shoegaze",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -113282,7 +113291,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dark_edge",
+  "__v224_last_spotify_opportunity_source": "dkfm_shoegaze",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -113315,7 +113324,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dark_edge",
+  "__v227_last_source_turn": "dkfm_shoegaze",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -113808,5 +113817,6 @@
   "__match_v35__cocteau twins and harold budd|||why do you love me ?": "spotify:track:6mnDez8mWJqlTyp6GjCKKR",
   "__match_v35__thea gilmore|||st luke's summer": "spotify:track:4IGplpRUYEBfMFbmUtWhhw",
   "__match_v35__beirut|||the rip tide": "spotify:track:4MMlFCyd7NovH8fbOtX2g9",
-  "__match_v35__cosmicdust|||after sadness": "spotify:track:7z5wQwZJ13o4R62k4tXn0s"
+  "__match_v35__cosmicdust|||after sadness": "spotify:track:7z5wQwZJ13o4R62k4tXn0s",
+  "__match_v35__chapterhouse|||pearl": "spotify:track:7gVcaSCDGYVuOALeSlvjHJ"
 }
