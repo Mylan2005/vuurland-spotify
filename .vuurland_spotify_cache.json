@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "wilco|||one sunday morning",
+      "florence the machine|||cosmic love",
       "emma hessels|||always lost",
       "the golden dregs|||american airlines",
       "angus & julia stone|||karaoke bar",
@@ -111,9 +113,7 @@
       "tame impala|||cause i'm a man",
       "iskander moon|||ghosts",
       "maya hawke|||bring home my man",
-      "sampha|||too much",
-      "rex orange county|||keep it up",
-      "the xx|||a violent noise"
+      "sampha|||too much"
     ],
     "mellow_mix": [
       "bon iver|||there's a rhythm",
@@ -422,6 +422,7 @@
       "alanis morissette|||head over feet acoustic"
     ],
     "dreampop_radio": [
+      "matthew and the atlas|||on a midnight street - acoustic version",
       "yuck|||rebirth",
       "bill callahan|||riding for the feeling",
       "air|||all i need",
@@ -520,10 +521,10 @@
       "seapony|||prove to me",
       "peasant|||bound for glory",
       "aimee mann|||high on sunday 51",
-      "boy|||drive darling",
-      "twin limb|||long shadow"
+      "boy|||drive darling"
     ],
     "indie_select": [
+      "kristin kontrol|||what is love",
       "githead|||today",
       "wolf alice|||she",
       "emperor of ice cream|||it's alright to show yourself",
@@ -622,8 +623,7 @@
       "the wombats|||anti-d",
       "breton|||fifteen minutes",
       "new young pony club|||oh cherie",
-      "lloyd cole|||california earthquake",
-      "red kite|||the gathering storm"
+      "lloyd cole|||california earthquake"
     ],
     "dkfm_edge": [
       "diffident daffodils|||what we've lost",
@@ -732,6 +732,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "bat for lashes|||all your gold",
       "elephant castle|||cool to be unhappy",
       "moonlight breakfast|||my baby",
       "starwalker|||bad weather",
@@ -830,10 +831,10 @@
       "buhu|||franny",
       "mystery jets|||serotonin",
       "the staves|||steady",
-      "dotan|||home",
-      "all we are|||eden"
+      "dotan|||home"
     ],
     "dkfm_shoegaze": [
+      "the beremy jets|||good times",
       "pencey sloe|||all ok",
       "flyying colours|||leaks",
       "lunar vacation|||the basement",
@@ -932,8 +933,7 @@
       "feeble little horse|||this is real",
       "total wife|||still asleep",
       "lubec|||more of us",
-      "blush|||crush",
-      "pia fraus|||doctor optimism"
+      "blush|||crush"
     ],
     "dkfm_classic": [
       "cranes|||organ song instrumental",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794511456.3339863,
-    "mellow_mix": 1794511456.3378472,
-    "big_sonic_heaven": 1794511456.3411393,
-    "radio_x_chilled": 1794511456.3443422,
-    "dreampop_radio": 1794511456.347576,
-    "indie_select": 1794511456.3510182,
-    "dkfm_edge": 1794511456.3544683,
+    "vuurland": 1794511531.0295432,
+    "mellow_mix": 1794511531.0334003,
+    "big_sonic_heaven": 1794511531.036718,
+    "radio_x_chilled": 1794511531.0399458,
+    "dreampop_radio": 1794511531.0433962,
+    "indie_select": 1794511531.2800932,
+    "dkfm_edge": 1794511531.2835948,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794511456.358221,
-    "dkfm_shoegaze": 1794511456.3616705,
-    "dkfm_classic": 1794511456.3648727
+    "dark_edge": 1794511531.520256,
+    "dkfm_shoegaze": 1794511531.7522542,
+    "dkfm_classic": 1794511531.7555375
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -8924,6 +8924,7 @@
       "kitty solaris|||17",
       "kota the friend|||outside",
       "kraftwerk|||radioactivity",
+      "kristin kontrol|||what is love",
       "ladyhawke|||magic",
       "ladyhawke|||my delirium",
       "ladytron|||tomorrow apparat remix",
@@ -11332,6 +11333,7 @@
       "bastille|||good grief",
       "bastille|||overjoyed",
       "bastille|||send them off!",
+      "bat for lashes|||all your gold",
       "baxter dury|||palm trees",
       "baxter dury|||porcelain",
       "baxter dury|||saliva hog",
@@ -14136,6 +14138,7 @@
       "terry vs tori|||keepsake box",
       "the asteroid no 4|||sky blue",
       "the autumn sighs|||green",
+      "the beremy jets|||good times",
       "the bilinda butchers|||night and blur",
       "the bilinda butchers|||tulips",
       "the casket girls|||suddenly",
@@ -16181,11 +16184,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "emma hessels|||always lost",
+  "__last_radio_key_vuurland": "wilco|||one sunday morning",
   "__last_radio_key_mellow_mix": "bon iver|||there's a rhythm",
   "__last_radio_key_big_sonic_heaven": "della zyr|||following her to no particular sunrise",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 14421,
+  "__v116_fifo_next_sequence": 14425,
   "__v146_spotify_budget_slot": 1794511458.160896,
   "__vuurland_active_playlist_count": 9342,
   "__vuurland_active_volume": 1,
@@ -108217,7 +108220,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "yuck|||rebirth",
+  "__last_radio_key_dreampop_radio": "matthew and the atlas|||on a midnight street - acoustic version",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -108335,7 +108338,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "githead|||today",
+  "__last_radio_key_indie_select": "kristin kontrol|||what is love",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -109699,7 +109702,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "diffident daffodils|||what we've lost",
-  "__last_radio_key_dkfm_shoegaze": "pencey sloe|||all ok",
+  "__last_radio_key_dkfm_shoegaze": "the beremy jets|||good times",
   "__last_radio_key_dkfm_classic": "cranes|||organ song instrumental",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -109712,7 +109715,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "elephant castle|||cool to be unhappy",
+  "__last_radio_key_dark_edge": "bat for lashes|||all your gold",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
