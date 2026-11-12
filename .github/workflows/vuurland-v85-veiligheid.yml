@@ -31,6 +31,8 @@ on:
       - 'test_v228_fresh_first_round_robin_offline.py'
       - 'test_v229_wires_tmpls_offline.py'
       - 'test_v231_cq_wrestling_offline.py'
+      - 'v232_verified_radio_metadata.py'
+      - 'test_v232_verified_radio_metadata_offline.py'
       - 'v203_matcher_upgrade_requeue.py'
       - 'v204_spotify_dedup_review.py'
       - 'v205_lifetime_backup.py'
@@ -125,6 +127,7 @@ jobs:
           python test_v228_fresh_first_round_robin_offline.py
           python test_v229_wires_tmpls_offline.py
           python test_v231_cq_wrestling_offline.py
+          python test_v232_verified_radio_metadata_offline.py
           python test_v203_matcher_upgrade_requeue_offline.py
           python test_v204_spotify_dedup_offline.py
           python test_v205_lifetime_backup_offline.py

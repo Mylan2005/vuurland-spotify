@@ -30,6 +30,7 @@ from v194_matcher_metadata import (
 )
 from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 from v221_source_round_robin import fair_source_candidates
+from v232_verified_radio_metadata import verified_radio_metadata as v232_radio_metadata
 from v227_strict_source_turns import next_source_turn
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
@@ -2531,6 +2532,15 @@ def find_spotify_track(
         print(f"📝 v216: bronmetadata → cataloguszoekvorm: "
               f"{artist} — {title} → {_v216_artist} — {_v216_title}")
         artist, title = _v216_artist, _v216_title
+
+    # v232: alleen twee extern bevestigde RadioBox catalogusspelfouten.
+    # De bron-/FIFO-/playlistkey blijft de oorspronkelijke artiest/titel;
+    # ook een gecorrigeerde titel moet door alle veilige matcherchecks.
+    _v232_artist, _v232_title = v232_radio_metadata(artist, title)
+    if (_v232_artist, _v232_title) != (artist, title):
+        print(f"📝 v232: bevestigde radiometadata: "
+              f"{artist} — {title} → {_v232_artist} — {_v232_title}")
+        artist, title = _v232_artist, _v232_title
 
     # v194: generieke en controleerbare RadioBox-metadata-correcties.
     # De ORIGINELE item-/cache-key en bron blijven onveranderd. De schone
