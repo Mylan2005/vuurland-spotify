@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "big thief|||simulation swarm",
+      "wet leg|||obvious",
       "trixie whitley|||salt",
       "bon iver|||speyside",
       "sufjan stevens|||a running start",
@@ -111,11 +113,10 @@
       "yonderboi|||were you thinking of me?",
       "bon iver|||skinny love",
       "nathaniel rateliff & the night sweats|||face down in the moment",
-      "jungle|||let's go back",
-      "foals|||spanish sahara",
-      "the walters|||i love you so"
+      "jungle|||let's go back"
     ],
     "mellow_mix": [
+      "the be good tanyas|||it's not happening",
       "the tragically hip|||bobcaygeon",
       "van morrison|||precious time",
       "talking heads|||nothing but flowers",
@@ -214,8 +215,7 @@
       "the national|||your mind is not your friend",
       "the cactus blossoms|||got a lotta love",
       "john klemmer|||touch",
-      "jimmy buffett|||a pirate looks at forty",
-      "crosby stills nash & young|||helpless"
+      "jimmy buffett|||a pirate looks at forty"
     ],
     "big_sonic_heaven": [
       "the know|||you",
@@ -626,6 +626,7 @@
       "pieter nooten|||sanctuary"
     ],
     "dkfm_edge": [
+      "arches|||hate",
       "the fauns|||how lost",
       "looser|||equals",
       "theredone|||set visibility high voltage mix",
@@ -724,14 +725,14 @@
       "so totally|||distinct star",
       "thelma's dream|||sofia",
       "thermal|||plaster girl",
-      "animal ghosts|||spells",
-      "lozenge|||interloper"
+      "animal ghosts|||spells"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
       "suede|||trash"
     ],
     "dark_edge": [
+      "rex orange county|||new house",
       "wolf alice|||blush",
       "the horrors|||your love subtitulada",
       "jw francis|||good time",
@@ -830,8 +831,7 @@
       "j-walk|||soul vibration",
       "ben howard|||conrad",
       "the undercurrent|||waves",
-      "the beatles|||here comes the sun",
-      "l p|||lost on you"
+      "the beatles|||here comes the sun"
     ],
     "dkfm_shoegaze": [
       "velveteen|||my dreams are changing",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794460339.1937003,
-    "mellow_mix": 1794460339.2005935,
-    "big_sonic_heaven": 1794460339.2048986,
-    "radio_x_chilled": 1794460339.2091756,
-    "dreampop_radio": 1794460339.2138767,
-    "indie_select": 1794460339.2187715,
-    "dkfm_edge": 1794460339.2238448,
+    "vuurland": 1794460414.7288976,
+    "mellow_mix": 1794460414.735891,
+    "big_sonic_heaven": 1794460414.740255,
+    "radio_x_chilled": 1794460414.7446966,
+    "dreampop_radio": 1794460414.7494822,
+    "indie_select": 1794460414.7544441,
+    "dkfm_edge": 1794460414.7596009,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794460339.2291236,
-    "dkfm_shoegaze": 1794460339.2339067,
-    "dkfm_classic": 1794460339.4274073
+    "dark_edge": 1794460414.975269,
+    "dkfm_shoegaze": 1794460414.9801738,
+    "dkfm_classic": 1794460414.9848862
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12266,6 +12266,7 @@
       "republica|||drop dead gorgeous",
       "reverend and the makers|||heavyweight champion of the world",
       "reverend and the makers|||open your window",
+      "rex orange county|||new house",
       "rhno|||ode to the peculiar",
       "rhodes & birdy|||let it all go",
       "rhye|||count to five",
@@ -15605,11 +15606,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "trixie whitley|||salt",
-  "__last_radio_key_mellow_mix": "the tragically hip|||bobcaygeon",
+  "__last_radio_key_vuurland": "big thief|||simulation swarm",
+  "__last_radio_key_mellow_mix": "the be good tanyas|||it's not happening",
   "__last_radio_key_big_sonic_heaven": "the know|||you",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 13353,
+  "__v116_fifo_next_sequence": 13354,
   "__v146_spotify_budget_slot": 1794460340.9041166,
   "__vuurland_active_playlist_count": 9004,
   "__vuurland_active_volume": 1,
@@ -106403,7 +106404,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "the fauns|||how lost",
+  "__last_radio_key_dkfm_edge": "arches|||hate",
   "__last_radio_key_dkfm_shoegaze": "velveteen|||my dreams are changing",
   "__last_radio_key_dkfm_classic": "riverside|||follow me",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -106417,7 +106418,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "wolf alice|||blush",
+  "__last_radio_key_dark_edge": "rex orange county|||new house",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
