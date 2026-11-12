@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "bleachers|||you and forever",
+      "ben howard|||life in the time",
       "london grammar|||baby it's you",
       "palace|||face in the crowd",
       "big thief|||incomprehensible",
@@ -111,9 +113,7 @@
       "benjamin clementine|||delighted",
       "family of the year|||hero",
       "hozier|||take me to church",
-      "uwase|||pedestal",
-      "dressed like boys|||stonewall riots forever",
-      "elbow|||the seldom seen kid"
+      "uwase|||pedestal"
     ],
     "mellow_mix": [
       "lee ritenour & dave grusin|||lagrima",
@@ -320,6 +320,7 @@
       "cocteau twins|||sultitan itan"
     ],
     "radio_x_chilled": [
+      "elbow|||newborn",
       "paolo nutini|||candy",
       "belle and sebastian|||the boy with the arab strap",
       "foo fighters|||times like these acoustic",
@@ -418,8 +419,7 @@
       "sam fender|||two people",
       "jack penate|||have i been a fool",
       "guns n' roses|||knockin' on heaven's door",
-      "the cranberries|||dreams acoustic",
-      "jose gonzalez|||heartbeats"
+      "the cranberries|||dreams acoustic"
     ],
     "dreampop_radio": [
       "wilco|||far far away",
@@ -524,6 +524,7 @@
       "fleetwood mac|||dreams"
     ],
     "indie_select": [
+      "nada surf|||looking through",
       "mint julep|||days gone by",
       "simple minds|||theme for great cities",
       "freebass|||stalingrad",
@@ -622,10 +623,10 @@
       "strand of oaks|||party at monster lake",
       "marble sounds|||an emotional high",
       "metric|||nothing is perfect",
-      "fontaines d c|||favourite",
-      "ride|||last frontier"
+      "fontaines d c|||favourite"
     ],
     "dkfm_edge": [
+      "deafcult|||the well",
       "girlpuppy|||champ",
       "coder|||nothing's the same here",
       "kid tigrrr|||shapes of water",
@@ -724,8 +725,7 @@
       "april june|||xmas break",
       "calliere|||thought i saw you",
       "lunar vacation|||set the stage",
-      "always other|||there's love and death in those woods part one",
-      "self love club|||hours"
+      "always other|||there's love and death in those woods part one"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794445680.7637517,
-    "mellow_mix": 1794445680.770143,
-    "big_sonic_heaven": 1794445680.77463,
-    "radio_x_chilled": 1794445680.7791452,
-    "dreampop_radio": 1794445680.7838886,
-    "indie_select": 1794445680.7888377,
-    "dkfm_edge": 1794445680.794234,
+    "vuurland": 1794445759.709904,
+    "mellow_mix": 1794445759.7162256,
+    "big_sonic_heaven": 1794445759.7207854,
+    "radio_x_chilled": 1794445759.7253976,
+    "dreampop_radio": 1794445759.7300658,
+    "indie_select": 1794445759.735314,
+    "dkfm_edge": 1794445759.7408001,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794445681.0754392,
-    "dkfm_shoegaze": 1794445681.0803804,
-    "dkfm_classic": 1794445681.085092
+    "dark_edge": 1794445759.7465546,
+    "dkfm_shoegaze": 1794445759.7513638,
+    "dkfm_classic": 1794445759.7560217
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15432,7 +15432,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "london grammar|||baby it's you",
+  "__last_radio_key_vuurland": "bleachers|||you and forever",
   "__last_radio_key_mellow_mix": "lee ritenour & dave grusin|||lagrima",
   "__last_radio_key_big_sonic_heaven": "fleeting colours|||autumn",
   "__v181_vuurland_two_missing_recovered": true,
@@ -103905,7 +103905,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "paolo nutini|||candy",
+  "__last_radio_key_radio_x_chilled": "elbow|||newborn",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -104127,7 +104127,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "mint julep|||days gone by",
+  "__last_radio_key_indie_select": "nada surf|||looking through",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -105490,7 +105490,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "girlpuppy|||champ",
+  "__last_radio_key_dkfm_edge": "deafcult|||the well",
   "__last_radio_key_dkfm_shoegaze": "cranes|||adoration",
   "__last_radio_key_dkfm_classic": "galaxie 500|||cold night",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
