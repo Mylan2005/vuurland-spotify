@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "wasia project|||somebody come through",
+      "aurora|||runaway",
       "dressed like boys|||jaouad",
       "porcelain id|||vlaanderen",
       "hozier|||work song",
@@ -111,9 +113,7 @@
       "snow patrol|||chasing cars",
       "mac demarco|||all of our yesterdays",
       "the haunted youth|||wake up",
-      "the tallest man on earth|||looking for love",
-      "michael kiwanuka|||floating parade",
-      "soccer mommy|||circle the drain"
+      "the tallest man on earth|||looking for love"
     ],
     "mellow_mix": [
       "cat stevens|||sad lisa",
@@ -218,6 +218,7 @@
       "paul simon|||something so right"
     ],
     "big_sonic_heaven": [
+      "satantango|||permafrost",
       "tyynyt|||rodos '86",
       "no you|||invisible",
       "bleary eyed|||heaven year",
@@ -316,10 +317,10 @@
       "sinead o'connor|||drink before the war",
       "the wolfgang press|||speakers don't speak",
       "locust & olive kimoto|||white light",
-      "ride|||i came to see the wreck",
-      "night swimming|||dark clouds"
+      "ride|||i came to see the wreck"
     ],
     "radio_x_chilled": [
+      "courteeners|||acrylic acoustic",
       "bjork|||play dead",
       "paolo nutini|||candy",
       "gorillaz|||on melancholy hill",
@@ -418,8 +419,7 @@
       "coldplay|||sparks",
       "foo fighters|||home",
       "the national|||i need my girl",
-      "blossoms|||your girlfriend acoustic",
-      "weezer|||island in the sun"
+      "blossoms|||your girlfriend acoustic"
     ],
     "dreampop_radio": [
       "marissa nadler|||rosary",
@@ -524,6 +524,7 @@
       "camera obscura|||tougher than the rest"
     ],
     "indie_select": [
+      "/- plus/minus|||all the light left behind",
       "death cab for cutie|||black sun",
       "frightened rabbit|||an otherwise disappointing life",
       "noel gallagher's high flying birds|||ballad of the mighty i",
@@ -622,8 +623,7 @@
       "trophy wife|||glue",
       "the drums|||forever and ever amen saint etienne remix",
       "the radio dept|||we got game",
-      "blaudzun|||hollow people",
-      "white lies|||is love"
+      "blaudzun|||hollow people"
     ],
     "dkfm_edge": [
       "la lune|||a little life",
@@ -732,6 +732,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "muse|||undisclosed desires",
       "snow patrol|||take back the city",
       "windows|||upstairs",
       "the courteeners|||the 17th",
@@ -830,10 +831,10 @@
       "tops|||i feel alive",
       "the pogues|||dirty old town",
       "cavetown|||this is home",
-      "tom odell|||grow old with me",
-      "the war on drugs|||you don't have to go"
+      "tom odell|||grow old with me"
     ],
     "dkfm_shoegaze": [
+      "isn't|||i can't see tomorrow",
       "temple of angels|||seaflower",
       "caelum|||believe me",
       "hints|||benediction",
@@ -932,8 +933,7 @@
       "lwna|||shadowns on the floor",
       "maria false|||shoot it",
       "no vacation|||lovefool",
-      "elsa|||never come down",
-      "crush|||chewed"
+      "elsa|||never come down"
     ],
     "dkfm_classic": [
       "love spirals downwards|||madras",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794509758.729162,
-    "mellow_mix": 1794509758.958747,
-    "big_sonic_heaven": 1794509758.9619503,
-    "radio_x_chilled": 1794509758.9651148,
-    "dreampop_radio": 1794509758.968294,
-    "indie_select": 1794509758.971672,
-    "dkfm_edge": 1794509758.9749722,
+    "vuurland": 1794509834.016698,
+    "mellow_mix": 1794509834.0204604,
+    "big_sonic_heaven": 1794509834.0237803,
+    "radio_x_chilled": 1794509834.02705,
+    "dreampop_radio": 1794509834.030314,
+    "indie_select": 1794509834.034016,
+    "dkfm_edge": 1794509834.0375009,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794509758.978582,
-    "dkfm_shoegaze": 1794509758.9818795,
-    "dkfm_classic": 1794509758.9849784
+    "dark_edge": 1794509834.270249,
+    "dkfm_shoegaze": 1794509834.5013936,
+    "dkfm_classic": 1794509834.504636
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12329,6 +12329,7 @@
       "muse|||madness",
       "muse|||resistance",
       "muse|||supermassive black hole",
+      "muse|||undisclosed desires",
       "muse|||uprising",
       "mutual benefit|||auburn epitaphs",
       "my morning jacket|||touch me i'm going to scream",
@@ -13637,6 +13638,7 @@
       "iris|||clementine",
       "iris|||fix me",
       "iris|||ragdoll",
+      "isn't|||i can't see tomorrow",
       "jambox|||sinking jellyfish",
       "japanese heart software|||cold weather",
       "japanese heart software|||nice one",
@@ -16161,11 +16163,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "dressed like boys|||jaouad",
+  "__last_radio_key_vuurland": "wasia project|||somebody come through",
   "__last_radio_key_mellow_mix": "cat stevens|||sad lisa",
-  "__last_radio_key_big_sonic_heaven": "tyynyt|||rodos '86",
+  "__last_radio_key_big_sonic_heaven": "satantango|||permafrost",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 14385,
+  "__v116_fifo_next_sequence": 14387,
   "__v146_spotify_budget_slot": 1794509760.7162857,
   "__vuurland_active_playlist_count": 9331,
   "__vuurland_active_volume": 1,
@@ -108004,7 +108006,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "bjork|||play dead",
+  "__last_radio_key_radio_x_chilled": "courteeners|||acrylic acoustic",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -108226,7 +108228,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "death cab for cutie|||black sun",
+  "__last_radio_key_indie_select": "/- plus/minus|||all the light left behind",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -109590,7 +109592,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "la lune|||a little life",
-  "__last_radio_key_dkfm_shoegaze": "temple of angels|||seaflower",
+  "__last_radio_key_dkfm_shoegaze": "isn't|||i can't see tomorrow",
   "__last_radio_key_dkfm_classic": "love spirals downwards|||madras",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -109603,7 +109605,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "snow patrol|||take back the city",
+  "__last_radio_key_dark_edge": "muse|||undisclosed desires",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
