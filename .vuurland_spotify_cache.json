@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the xx|||vcr",
+      "philemon|||how do you do",
       "november ultra|||novembre",
       "men i trust|||lauren",
       "sufjan stevens|||mystery of love",
@@ -111,9 +113,7 @@
       "suki waterhouse|||on this love",
       "father john misty|||goodbye mr blue",
       "ise|||goodbye letter",
-      "kevin morby|||i have been to the mountain",
-      "thomas azier|||year in a spiral",
-      "blanco white|||el buho"
+      "kevin morby|||i have been to the mountain"
     ],
     "mellow_mix": [
       "manassas|||colorado",
@@ -626,6 +626,8 @@
       "the armory show|||harry dean stanton"
     ],
     "dkfm_edge": [
+      "lesser angels|||burn it away",
+      "wasting|||tulips",
       "grundeis|||strange",
       "she's in parties|||ritual",
       "softcult|||heaven",
@@ -723,15 +725,14 @@
       "seablite|||frozen strawberries",
       "new age healers|||all wrapped up",
       "drop nineteens|||the price was high",
-      "diffident daffodils|||go away now",
-      "slow salvation|||here we lie",
-      "so totally|||btw"
+      "diffident daffodils|||go away now"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
       "suede|||trash"
     ],
     "dark_edge": [
+      "zanias|||follow the body",
       "little racer|||montevideo",
       "sam fender|||poundshop kardashians",
       "manchester orchestra|||virgin",
@@ -830,8 +831,7 @@
       "just friends|||don't tell me",
       "ana coman|||cum e?ti",
       "tobtok emil hero|||higher - oliver nelson & skogsra remix",
-      "james|||say something",
-      "everything everything|||no reptiles"
+      "james|||say something"
     ],
     "dkfm_shoegaze": [
       "murmure|||le reveil",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794441801.415548,
-    "mellow_mix": 1794441801.4217172,
-    "big_sonic_heaven": 1794441801.4260232,
-    "radio_x_chilled": 1794441801.4303663,
-    "dreampop_radio": 1794441801.4348426,
-    "indie_select": 1794441801.439585,
-    "dkfm_edge": 1794441801.444321,
+    "vuurland": 1794441879.4196308,
+    "mellow_mix": 1794441879.4257593,
+    "big_sonic_heaven": 1794441879.4300015,
+    "radio_x_chilled": 1794441879.434307,
+    "dreampop_radio": 1794441879.438793,
+    "indie_select": 1794441879.4434996,
+    "dkfm_edge": 1794441879.448437,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794441801.4494326,
-    "dkfm_shoegaze": 1794441801.454013,
-    "dkfm_classic": 1794441801.458458
+    "dark_edge": 1794441879.7302053,
+    "dkfm_shoegaze": 1794441879.734811,
+    "dkfm_classic": 1794441879.7392664
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12704,6 +12704,7 @@
       "zach schimpf|||tell me a story",
       "zach schimpf|||ten whole years",
       "zachary murdock|||preach",
+      "zanias|||follow the body",
       "zhu tame impala|||my life",
       "ziggy alberts|||tell me the hoddevik song",
       "zola blood|||play out",
@@ -15393,11 +15394,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "november ultra|||novembre",
+  "__last_radio_key_vuurland": "the xx|||vcr",
   "__last_radio_key_mellow_mix": "manassas|||colorado",
   "__last_radio_key_big_sonic_heaven": "nostalghia|||mechanical",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 12964,
+  "__v116_fifo_next_sequence": 12965,
   "__v146_spotify_budget_slot": 1794441803.4216168,
   "__vuurland_active_playlist_count": 8888,
   "__vuurland_active_volume": 1,
@@ -105239,7 +105240,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "grundeis|||strange",
+  "__last_radio_key_dkfm_edge": "lesser angels|||burn it away",
   "__last_radio_key_dkfm_shoegaze": "murmure|||le reveil",
   "__last_radio_key_dkfm_classic": "catherine wheel|||balloon",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -105253,7 +105254,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "little racer|||montevideo",
+  "__last_radio_key_dark_edge": "zanias|||follow the body",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
