@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "cordelia|||little life",
+      "jamie woon|||shoulda",
       "big thief|||not",
       "dan auerbach|||king of a one horse town",
       "james blake|||i had a dream she took my hand",
@@ -111,11 +113,10 @@
       "abby sage|||backwards directions",
       "noah kahan|||doors",
       "absynthe minded|||heaven knows",
-      "girl in red|||we fell in love in october",
-      "strand of oaks|||weird ways",
-      "slowdive|||alife"
+      "girl in red|||we fell in love in october"
     ],
     "mellow_mix": [
+      "k d lang|||constant craving",
       "john coltrane|||naima",
       "joe henry|||struck",
       "vienna teng|||in another life",
@@ -214,10 +215,10 @@
       "eddie vedder|||guaranteed",
       "neil young|||harvest moon",
       "black rebel motorcycle club|||echo",
-      "lord huron|||the night we met",
-      "the lumineers|||salt and the sea"
+      "lord huron|||the night we met"
     ],
     "big_sonic_heaven": [
+      "93millionmilesfromthesun|||sorrow song",
       "kate de rosset|||chase the bloom",
       "julee cruise|||falling",
       "emma anderson|||the presence",
@@ -316,8 +317,7 @@
       "zola jesus|||bound",
       "don't get lemon|||blow-up",
       "new order|||paradise",
-      "cigarettes for breakfast|||melting",
-      "now always fades|||coalesce feat olive kimoto"
+      "cigarettes for breakfast|||melting"
     ],
     "radio_x_chilled": [
       "stornoway|||zorbing",
@@ -422,6 +422,7 @@
       "the beatles|||while my guitar gently weeps"
     ],
     "dreampop_radio": [
+      "the velvet underground|||pale blue eyes",
       "volcano choir|||comrade",
       "bat for lashes|||joe's dream",
       "coldplay|||a message",
@@ -520,8 +521,7 @@
       "ghostpoet|||shedding skin feat melanie de biasio",
       "bon iver|||29 #strafford apts",
       "boy|||hotel",
-      "sharon van etten|||i don't want to let you down",
-      "kt tunstall|||run on home"
+      "sharon van etten|||i don't want to let you down"
     ],
     "indie_select": [
       "iggy pop|||candy",
@@ -834,6 +834,7 @@
       "severija janusauskaite|||von asche zu staub"
     ],
     "dkfm_shoegaze": [
+      "the mary onettes|||cola falls",
       "airiel|||introduction",
       "the bilinda butchers|||lotus eaters",
       "no joy|||a thorn in garland's side",
@@ -932,8 +933,7 @@
       "clockart|||ginvoluoy",
       "l23|||take my breath",
       "the courts|||on yr mind",
-      "rocket|||sugarcoated",
-      "paint|||after all"
+      "rocket|||sugarcoated"
     ],
     "dkfm_classic": [
       "drop nineteens|||winona",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794525770.8270454,
-    "mellow_mix": 1794525770.8312466,
-    "big_sonic_heaven": 1794525770.8347452,
-    "radio_x_chilled": 1794525770.8382518,
-    "dreampop_radio": 1794525770.8418252,
-    "indie_select": 1794525770.845663,
-    "dkfm_edge": 1794525770.849471,
+    "vuurland": 1794525846.8225818,
+    "mellow_mix": 1794525846.8268886,
+    "big_sonic_heaven": 1794525847.0722516,
+    "radio_x_chilled": 1794525847.0759454,
+    "dreampop_radio": 1794525847.0797243,
+    "indie_select": 1794525847.0836213,
+    "dkfm_edge": 1794525847.0875292,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794525770.8548791,
-    "dkfm_shoegaze": 1794525770.858554,
-    "dkfm_classic": 1794525770.8621464
+    "dark_edge": 1794525847.0917947,
+    "dkfm_shoegaze": 1794525847.0956855,
+    "dkfm_classic": 1794525847.099312
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -4826,6 +4826,7 @@
       "93millionmilesfromthesun|||hey now",
       "93millionmilesfromthesun|||how i feel",
       "93millionmilesfromthesun|||slowdive",
+      "93millionmilesfromthesun|||sorrow song",
       "93millionmilesfromthesun|||we are left behind",
       "a certain ratio|||and then she smiles",
       "a r kane|||lollita",
@@ -14299,6 +14300,7 @@
       "the julies|||forever songs",
       "the kestrels|||are you alone",
       "the love agenda|||peace in this world",
+      "the mary onettes|||cola falls",
       "the meeting places|||millions",
       "the mites|||getting closer",
       "the mites|||washaway",
@@ -16353,11 +16355,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "big thief|||not",
-  "__last_radio_key_mellow_mix": "john coltrane|||naima",
-  "__last_radio_key_big_sonic_heaven": "kate de rosset|||chase the bloom",
+  "__last_radio_key_vuurland": "cordelia|||little life",
+  "__last_radio_key_mellow_mix": "k d lang|||constant craving",
+  "__last_radio_key_big_sonic_heaven": "93millionmilesfromthesun|||sorrow song",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 14719,
+  "__v116_fifo_next_sequence": 14720,
   "__v146_spotify_budget_slot": 1794525772.6789992,
   "__vuurland_active_playlist_count": 9427,
   "__vuurland_active_volume": 1,
@@ -109136,7 +109138,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "volcano choir|||comrade",
+  "__last_radio_key_dreampop_radio": "the velvet underground|||pale blue eyes",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -110618,7 +110620,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "bleach lab|||drown",
-  "__last_radio_key_dkfm_shoegaze": "airiel|||introduction",
+  "__last_radio_key_dkfm_shoegaze": "the mary onettes|||cola falls",
   "__last_radio_key_dkfm_classic": "drop nineteens|||winona",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
