@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "bleachers|||you and forever",
+      "death cab for cutie|||love song",
       "the xx|||chained",
       "lianne la havas|||weird fishes",
       "soccer mommy|||your dog",
@@ -111,11 +113,10 @@
       "sault|||free",
       "warhaus|||machinery",
       "westerman|||confirmation",
-      "teddy swims|||lose control",
-      "angus and julia stone|||grizzly bear",
-      "leon bridges feat lydia kitto|||all day all night"
+      "teddy swims|||lose control"
     ],
     "mellow_mix": [
+      "the wallflowers|||6th avenue heartache",
       "ben howard|||old pine",
       "santo & johnny|||sleep walk",
       "black pumas|||colors",
@@ -214,10 +215,10 @@
       "marianne faithfull|||crazy love",
       "gracie abrams|||hit the wall",
       "sixpence none the richer|||a million parachutes",
-      "natalie merchant|||kind & generous",
-      "air|||playground love"
+      "natalie merchant|||kind & generous"
     ],
     "big_sonic_heaven": [
+      "yndling|||as fast as i can",
       "fleeting colours|||autumn",
       "yumeia & tre flip|||inverno",
       "the jesus and mary chain|||chemical animal",
@@ -316,8 +317,7 @@
       "sugarcubes|||birthday",
       "maria chiara argiro|||light",
       "soft blue shimmer|||sapphire door",
-      "the cure|||apart",
-      "hammock|||the unsetting sun"
+      "the cure|||apart"
     ],
     "radio_x_chilled": [
       "the cure|||just like heaven acoustic",
@@ -834,6 +834,7 @@
       "the wallflowers|||one headlight"
     ],
     "dkfm_shoegaze": [
+      "midsommar|||alice",
       "hexagrams|||dagger",
       "temple of angels|||star-shaped eyes",
       "doused|||dull yr knife on my skull",
@@ -932,8 +933,7 @@
       "appi|||ukiyo",
       "cold gawd|||steel",
       "hazel english|||conversations",
-      "toner|||smoov",
-      "whimsical|||monochrome"
+      "toner|||smoov"
     ],
     "dkfm_classic": [
       "band of susans|||trouble follows",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794582547.855694,
-    "mellow_mix": 1794582547.8579025,
-    "big_sonic_heaven": 1794582547.8596487,
-    "radio_x_chilled": 1794582547.8613067,
-    "dreampop_radio": 1794582547.8629339,
-    "indie_select": 1794582547.864847,
-    "dkfm_edge": 1794582547.8665645,
+    "vuurland": 1794582621.429823,
+    "mellow_mix": 1794582621.4322028,
+    "big_sonic_heaven": 1794582621.434056,
+    "radio_x_chilled": 1794582621.4357374,
+    "dreampop_radio": 1794582621.4373934,
+    "indie_select": 1794582621.4393327,
+    "dkfm_edge": 1794582621.4410841,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794582547.8686392,
-    "dkfm_shoegaze": 1794582547.870402,
-    "dkfm_classic": 1794582547.8721972
+    "dark_edge": 1794582621.4431014,
+    "dkfm_shoegaze": 1794582621.4449368,
+    "dkfm_classic": 1794582621.4467683
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17094,9 +17094,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "the xx|||chained",
-  "__last_radio_key_mellow_mix": "ben howard|||old pine",
-  "__last_radio_key_big_sonic_heaven": "fleeting colours|||autumn",
+  "__last_radio_key_vuurland": "bleachers|||you and forever",
+  "__last_radio_key_mellow_mix": "the wallflowers|||6th avenue heartache",
+  "__last_radio_key_big_sonic_heaven": "yndling|||as fast as i can",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 15815,
   "__v146_spotify_budget_slot": 1794582549.3162153,
@@ -114133,7 +114133,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "stomp talk modstone|||hello new world",
-  "__last_radio_key_dkfm_shoegaze": "hexagrams|||dagger",
+  "__last_radio_key_dkfm_shoegaze": "midsommar|||alice",
   "__last_radio_key_dkfm_classic": "band of susans|||trouble follows",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
