@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "mogwai|||take me somewhere nice",
       "silversun pickups|||lazy eye",
       "coldplay|||green eyes",
       "damien rice|||cannonball",
@@ -112,10 +113,10 @@
       "khruangbin|||people everywhere still alive",
       "warhaus|||kreusch",
       "elis floreen|||panther",
-      "eels|||sweet smile",
-      "olivia dean|||i've seen it"
+      "eels|||sweet smile"
     ],
     "mellow_mix": [
+      "conjure one|||endless dream",
       "beck|||everybody's got to learn sometime",
       "sam cooke|||a change is gonna come",
       "the mighty diamonds|||i shall be released",
@@ -214,8 +215,7 @@
       "loreena mckennitt|||night ride across the caucasus live",
       "oscar isaac|||green green rocky road",
       "marc cohn|||ghost train",
-      "bonnie raitt|||silver lining",
-      "luka bloom|||exploring the blue"
+      "bonnie raitt|||silver lining"
     ],
     "big_sonic_heaven": [
       "lanterns on the lake|||freeze frame",
@@ -524,6 +524,7 @@
       "la sera|||hour of the dawn"
     ],
     "indie_select": [
+      "shout out louds|||very loud",
       "essence|||burned in heaven album",
       "voice of the beehive|||i say nothing",
       "the the|||slow train to dawn",
@@ -622,8 +623,7 @@
       "kristin kontrol|||what is love",
       "githead|||today",
       "wolf alice|||she",
-      "emperor of ice cream|||it's alright to show yourself",
-      "we were promised jetpacks|||medicine"
+      "emperor of ice cream|||it's alright to show yourself"
     ],
     "dkfm_edge": [
       "adorer|||slowly",
@@ -834,6 +834,7 @@
       "sexy pigeon|||run away together"
     ],
     "dkfm_shoegaze": [
+      "momma|||motorbike",
       "elsa|||tailored heartbeat",
       "whimsical|||beautiful virtue 2016",
       "cocteau twins|||oil of angels",
@@ -932,10 +933,10 @@
       "sheer|||shut it off",
       "the spectors|||borderline",
       "my bloody valentine|||new you",
-      "so totally|||fantastic mountain",
-      "ether feels|||kiss"
+      "so totally|||fantastic mountain"
     ],
     "dkfm_classic": [
+      "whimsical|||dry your eyes",
       "teen idle|||sometimes",
       "lush|||covert",
       "swirl|||poppel grave",
@@ -1034,22 +1035,21 @@
       "flying saucer attack|||in the light of time",
       "cocteau twins|||fifty-fifty clown",
       "bowery electric|||beat",
-      "14 iced bears|||hay fever",
-      "slowdive|||avalyn ii"
+      "14 iced bears|||hay fever"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794536645.4581318,
-    "mellow_mix": 1794536645.4641235,
-    "big_sonic_heaven": 1794536645.4680274,
-    "radio_x_chilled": 1794536645.4720106,
-    "dreampop_radio": 1794536645.4765494,
-    "indie_select": 1794536645.4809165,
-    "dkfm_edge": 1794536645.4856617,
+    "vuurland": 1794536722.1369913,
+    "mellow_mix": 1794536722.3741298,
+    "big_sonic_heaven": 1794536722.3780434,
+    "radio_x_chilled": 1794536722.3820317,
+    "dreampop_radio": 1794536722.386464,
+    "indie_select": 1794536722.623509,
+    "dkfm_edge": 1794536722.6283095,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794536645.4909163,
-    "dkfm_shoegaze": 1794536645.495534,
-    "dkfm_classic": 1794536645.4996197
+    "dark_edge": 1794536722.6336703,
+    "dkfm_shoegaze": 1794536722.8443422,
+    "dkfm_classic": 1794536723.0735345
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -2700,6 +2700,7 @@
       "colin hay|||overkill acoustic",
       "collective soul|||forgiveness",
       "collective soul|||reunion",
+      "conjure one|||endless dream",
       "conjure one|||tears from the moon w/ sinead o'connor",
       "cornershop|||sleep on the left side",
       "counting crows|||mr jones live",
@@ -9477,6 +9478,7 @@
       "shout out louds|||souvenirs",
       "shout out louds|||tonight i have to leave it",
       "shout out louds|||tonight i have to leave it the russian futurists remix",
+      "shout out louds|||very loud",
       "shout out louds|||your parents livingroom",
       "sia|||buttons",
       "sigur ros|||inni mer syngur vitleysingur",
@@ -14016,6 +14018,7 @@
       "moaning|||tired",
       "modern time machines|||high noon",
       "momma|||cross your heart",
+      "momma|||motorbike",
       "money|||flacco",
       "monocism|||bansui 晩翠",
       "mono|||winter daphne",
@@ -15820,6 +15823,7 @@
       "velocity girl|||why should i be nice to you?",
       "weedipus|||places to go",
       "whimsical|||beautiful virtue",
+      "whimsical|||dry your eyes",
       "whimsical|||head above water",
       "whimsical|||masterpiece",
       "whimsical|||memories",
@@ -16540,11 +16544,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "silversun pickups|||lazy eye",
-  "__last_radio_key_mellow_mix": "beck|||everybody's got to learn sometime",
+  "__last_radio_key_vuurland": "mogwai|||take me somewhere nice",
+  "__last_radio_key_mellow_mix": "conjure one|||endless dream",
   "__last_radio_key_big_sonic_heaven": "lanterns on the lake|||freeze frame",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 14949,
+  "__v116_fifo_next_sequence": 14953,
   "__v146_spotify_budget_slot": 1794536647.4340749,
   "__vuurland_active_playlist_count": 9490,
   "__vuurland_active_volume": 1,
@@ -109957,7 +109961,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "essence|||burned in heaven album",
+  "__last_radio_key_indie_select": "shout out louds|||very loud",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -111321,8 +111325,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "adorer|||slowly",
-  "__last_radio_key_dkfm_shoegaze": "elsa|||tailored heartbeat",
-  "__last_radio_key_dkfm_classic": "teen idle|||sometimes",
+  "__last_radio_key_dkfm_shoegaze": "momma|||motorbike",
+  "__last_radio_key_dkfm_classic": "whimsical|||dry your eyes",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
