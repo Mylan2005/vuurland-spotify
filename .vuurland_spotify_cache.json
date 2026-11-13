@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794534639.4965193,
+  "__v150_next_spotify_round_at": 1794534773.2225053,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -116,6 +116,7 @@
       "florence the machine|||cosmic love"
     ],
     "mellow_mix": [
+      "steve forbert|||goin' down to laurel",
       "cat stevens|||into white",
       "clay and kelsy|||three little birds",
       "madredeus|||as ilhas dos acores",
@@ -214,8 +215,7 @@
       "the shins|||gone for good",
       "great lake swimmers|||think that you might be wrong",
       "van morrison|||caravan",
-      "glen hansard|||come away to the water",
-      "the infamous stringdusters|||gravity"
+      "glen hansard|||come away to the water"
     ],
     "big_sonic_heaven": [
       "sigur ros|||hoppipolla",
@@ -422,6 +422,7 @@
       "sigur ros|||hoppipolla"
     ],
     "dreampop_radio": [
+      "neil finn|||last to know",
       "old man canyon|||wiser",
       "wallis bird|||measuring cities",
       "damien rice|||cannonball",
@@ -520,8 +521,7 @@
       "allo darlin'|||tallulah",
       "the swell season|||in these arms",
       "julia stone|||let's forget all the things that we say",
-      "loney dear|||my heart",
-      "rocky votolato|||start over"
+      "loney dear|||my heart"
     ],
     "indie_select": [
       "wolfsheim|||the sparrows and the nightingales",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794534634.41401,
-    "mellow_mix": 1794534634.420032,
-    "big_sonic_heaven": 1794534634.4237823,
-    "radio_x_chilled": 1794534634.4276013,
-    "dreampop_radio": 1794534634.4314966,
-    "indie_select": 1794534634.4356837,
-    "dkfm_edge": 1794534634.4403257,
+    "vuurland": 1794534652.418002,
+    "mellow_mix": 1794534652.4242616,
+    "big_sonic_heaven": 1794534652.4280932,
+    "radio_x_chilled": 1794534652.4318867,
+    "dreampop_radio": 1794534652.435872,
+    "indie_select": 1794534652.4400256,
+    "dkfm_edge": 1794534652.444618,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794534634.4454303,
-    "dkfm_shoegaze": 1794534634.4499586,
-    "dkfm_classic": 1794534634.7047732
+    "dark_edge": 1794534652.4497132,
+    "dkfm_shoegaze": 1794534652.4542348,
+    "dkfm_classic": 1794534652.458241
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -16505,12 +16505,12 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "ciska ciska|||biotope",
-  "__last_radio_key_mellow_mix": "cat stevens|||into white",
+  "__last_radio_key_mellow_mix": "steve forbert|||goin' down to laurel",
   "__last_radio_key_big_sonic_heaven": "sigur ros|||hoppipolla",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 14906,
-  "__v146_spotify_budget_slot": 1794534520.6736686,
-  "__vuurland_active_playlist_count": 9476,
+  "__v116_fifo_next_sequence": 14907,
+  "__v146_spotify_budget_slot": 1794534654.5762482,
+  "__vuurland_active_playlist_count": 9477,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v164_playlist_count_checked_at": 1794532404,
@@ -25888,6 +25888,7 @@
     "the band|||the weight w/ the staples family",
     "the barr brothers|||beggar in the morning",
     "the barr brothers|||even the darkness has arms",
+    "the barr brothers|||let there be horses",
     "the barr brothers|||old mythologies",
     "the barr brothers|||you would have to lose your mind",
     "the be good tanyas|||human thing",
@@ -29322,6 +29323,7 @@
     "spotify:track:1ADnKGJN6sQxkYpcgpyKbm",
     "spotify:track:1AK5VflDy4u1CDI66RFxnk",
     "spotify:track:1AMpGS1jVsZEdjnqOykepE",
+    "spotify:track:1ANfad7M9YimUEzRSLxuS0",
     "spotify:track:1ASUVRxADu66bSIKV9XN9r",
     "spotify:track:1AVQ7nBRWvBac2MIK8fibQ",
     "spotify:track:1AWsIwO7b5LqJ9vyVfIX2X",
@@ -37818,6 +37820,7 @@
     "CA0RZ1100057",
     "CA0RZ1100071",
     "CA0RZ1100073",
+    "CA0RZ1100080",
     "CA0RZ1200011",
     "CA0RZ1300001",
     "CA0RZ1400025",
@@ -56059,7 +56062,8 @@
     "spotify:track:4lPjKUt023rNAUKJ5BI9dA": "USDY41961509",
     "spotify:track:0D8cpFpAXmCSMSNh9rGyeN": "QMS521200090",
     "spotify:track:3ZZeiySq3bX10VwR0u1AZ6": "QMFMG2346067",
-    "spotify:track:0KrWcy7OfnlarmOyk7eOgr": "GBAWA0513734"
+    "spotify:track:0KrWcy7OfnlarmOyk7eOgr": "GBAWA0513734",
+    "spotify:track:1ANfad7M9YimUEzRSLxuS0": "CA0RZ1100080"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -91200,6 +91204,7 @@
       "the band|||the weight w/ the staples family",
       "the barr brothers|||beggar in the morning",
       "the barr brothers|||even the darkness has arms",
+      "the barr brothers|||let there be horses",
       "the barr brothers|||old mythologies",
       "the be good tanyas|||human thing",
       "the be good tanyas|||it's not happening",
@@ -93185,6 +93190,7 @@
       "spotify:track:1ADXTpSjj0FVWSEymDBB3H",
       "spotify:track:1AK5VflDy4u1CDI66RFxnk",
       "spotify:track:1AMpGS1jVsZEdjnqOykepE",
+      "spotify:track:1ANfad7M9YimUEzRSLxuS0",
       "spotify:track:1AVQ7nBRWvBac2MIK8fibQ",
       "spotify:track:1AZzR4p53x1R0XoboH76h8",
       "spotify:track:1AaVZlJsmrXuryaR020EzJ",
@@ -98273,6 +98279,7 @@
       "CA0RZ1100057",
       "CA0RZ1100071",
       "CA0RZ1100073",
+      "CA0RZ1100080",
       "CA0RZ1300001",
       "CA0RZ1400025",
       "CA0RZ1400026",
@@ -109315,7 +109322,8 @@
       "spotify:track:4lPjKUt023rNAUKJ5BI9dA": "USDY41961509",
       "spotify:track:0D8cpFpAXmCSMSNh9rGyeN": "QMS521200090",
       "spotify:track:3ZZeiySq3bX10VwR0u1AZ6": "QMFMG2346067",
-      "spotify:track:0KrWcy7OfnlarmOyk7eOgr": "GBAWA0513734"
+      "spotify:track:0KrWcy7OfnlarmOyk7eOgr": "GBAWA0513734",
+      "spotify:track:1ANfad7M9YimUEzRSLxuS0": "CA0RZ1100080"
     }
   },
   "__not_found_v35__dead can dance|||mon amour sauvage": 1793562994,
@@ -109689,7 +109697,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "old man canyon|||wiser",
+  "__last_radio_key_dreampop_radio": "neil finn|||last to know",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -111922,8 +111930,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 1444,
-  "__v192_duyster_next_enqueue_at": 1794534638.9539125,
+  "__v192_duyster_archive_cursor": 1445,
+  "__v192_duyster_next_enqueue_at": 1794534772.5238125,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -114860,7 +114868,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "big_sonic_heaven",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -114872,7 +114880,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -114905,7 +114913,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "big_sonic_heaven",
+  "__v227_last_source_turn": "dreampop_radio",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -115556,5 +115564,6 @@
   "__match_v35__band of susans|||it's locked away": "spotify:track:0D8cpFpAXmCSMSNh9rGyeN",
   "__match_v35__jess ribeiro|||airborne": "spotify:track:3ZZeiySq3bX10VwR0u1AZ6",
   "__not_found_v35__stephen sanchez|||tighten up live": 1794534257,
-  "__match_v35__patsy cline|||walkin' after midnight": "spotify:track:0KrWcy7OfnlarmOyk7eOgr"
+  "__match_v35__patsy cline|||walkin' after midnight": "spotify:track:0KrWcy7OfnlarmOyk7eOgr",
+  "__match_v35__the barr brothers|||let there be horses": "spotify:track:1ANfad7M9YimUEzRSLxuS0"
 }
