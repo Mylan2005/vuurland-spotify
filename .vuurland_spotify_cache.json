@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the xx|||chained",
+      "lianne la havas|||weird fishes",
       "soccer mommy|||your dog",
       "bear's den|||auld wives",
       "absynthe minded|||envoi",
@@ -111,9 +113,7 @@
       "westerman|||confirmation",
       "teddy swims|||lose control",
       "angus and julia stone|||grizzly bear",
-      "leon bridges feat lydia kitto|||all day all night",
-      "spinvis|||bagagedrager",
-      "deus|||the real sugar"
+      "leon bridges feat lydia kitto|||all day all night"
     ],
     "mellow_mix": [
       "santo & johnny|||sleep walk",
@@ -422,6 +422,7 @@
       "foo fighters|||home"
     ],
     "dreampop_radio": [
+      "tina dico|||nobody's man",
       "bear's den|||emeralds",
       "coldplay|||magic",
       "bombay bicycle club|||leaving blues",
@@ -520,10 +521,10 @@
       "daughter|||get lucky cover",
       "johnny cash|||solitary man",
       "the postal service|||against all odds",
-      "smashing pumpkins|||landslide",
-      "unknown mortal orchestra|||the dock of the bay"
+      "smashing pumpkins|||landslide"
     ],
     "indie_select": [
+      "lali puna trampauline|||mary maloone",
       "interpol|||public pervert carlos d remix",
       "the kissaway trail|||telly the truth the breach",
       "fujiya & miyagi|||synthetic symphonies",
@@ -622,10 +623,10 @@
       "githead|||faster",
       "interpol|||something changed",
       "giana factory|||right or wrong",
-      "deaf club|||break it slow",
-      "fujiya & miyagi|||to the last beat of my heart"
+      "deaf club|||break it slow"
     ],
     "dkfm_edge": [
+      "allegra neve|||rewind",
       "starflyer 59|||909",
       "thermal|||18",
       "so totally|||distinct star",
@@ -724,8 +725,7 @@
       "soft science|||grip",
       "my sister maura|||in a car",
       "torrey|||slow blues",
-      "animal ghosts|||swallow",
-      "springloader|||nothing i want more"
+      "animal ghosts|||swallow"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794582165.2332883,
-    "mellow_mix": 1794582165.2356472,
-    "big_sonic_heaven": 1794582165.2374935,
-    "radio_x_chilled": 1794582165.2392519,
-    "dreampop_radio": 1794582165.2409718,
-    "indie_select": 1794582165.24295,
-    "dkfm_edge": 1794582165.244738,
+    "vuurland": 1794582240.459245,
+    "mellow_mix": 1794582240.461566,
+    "big_sonic_heaven": 1794582240.4634109,
+    "radio_x_chilled": 1794582240.4651268,
+    "dreampop_radio": 1794582240.4669213,
+    "indie_select": 1794582240.469123,
+    "dkfm_edge": 1794582240.4709775,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794582165.2467782,
-    "dkfm_shoegaze": 1794582165.248621,
-    "dkfm_classic": 1794582165.250475
+    "dark_edge": 1794582240.473027,
+    "dkfm_shoegaze": 1794582240.4748554,
+    "dkfm_classic": 1794582240.476698
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17092,7 +17092,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "soccer mommy|||your dog",
+  "__last_radio_key_vuurland": "the xx|||chained",
   "__last_radio_key_mellow_mix": "santo & johnny|||sleep walk",
   "__last_radio_key_big_sonic_heaven": "yumeia & tre flip|||inverno",
   "__v181_vuurland_two_missing_recovered": true,
@@ -112625,7 +112625,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "bear's den|||emeralds",
+  "__last_radio_key_dreampop_radio": "tina dico|||nobody's man",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -112743,7 +112743,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "interpol|||public pervert carlos d remix",
+  "__last_radio_key_indie_select": "lali puna trampauline|||mary maloone",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -114106,7 +114106,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "starflyer 59|||909",
+  "__last_radio_key_dkfm_edge": "allegra neve|||rewind",
   "__last_radio_key_dkfm_shoegaze": "hexagrams|||dagger",
   "__last_radio_key_dkfm_classic": "the telescopes|||flying",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
