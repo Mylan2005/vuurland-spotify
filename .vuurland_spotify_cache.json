@@ -524,6 +524,7 @@
       "real estate|||navigator"
     ],
     "indie_select": [
+      "broken bells|||shelter",
       "muzz|||bad feeling",
       "sleaford mods ft sue tompkins|||no touch",
       "minus the tiger|||home is where the heart is",
@@ -622,10 +623,10 @@
       "the joy formidable|||endtapes",
       "the go find|||the river",
       "so much 4 gravity|||communicate",
-      "owel|||flying man",
-      "jamie xx|||seesaw"
+      "owel|||flying man"
     ],
     "dkfm_edge": [
+      "bright arc|||cedars",
       "glia|||see through you",
       "dummy|||minus world",
       "jeanwilder|||palindrome",
@@ -724,8 +725,7 @@
       "newmoon|||eternal fall",
       "feeble little horse|||sweet",
       "crystal canyon|||penelope the odyssey",
-      "the joy formidable|||cut your face",
-      "maquillage|||blue"
+      "the joy formidable|||cut your face"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -834,6 +834,7 @@
       "florence the machine|||delilah"
     ],
     "dkfm_shoegaze": [
+      "shedfromthebody|||in the pines",
       "tallies|||memento",
       "pieces|||open door",
       "sadfields|||despiertame",
@@ -932,10 +933,10 @@
       "life on venus|||everything ends here",
       "ancient channels|||chimera",
       "marina yozora|||snow heat",
-      "daydream twins|||bombinate",
-      "lavender blush|||my pal k"
+      "daydream twins|||bombinate"
     ],
     "dkfm_classic": [
+      "cocteau twins|||lorelei",
       "adorable|||sunshine smile",
       "pale saints|||ordeal",
       "teenage fanclub|||december",
@@ -1034,22 +1035,21 @@
       "february|||angel bomb",
       "the curtain society|||chelsea",
       "band of susans|||the last temptation of susan",
-      "drop nineteens|||reberrymemberer",
-      "cranes|||cloudless"
+      "drop nineteens|||reberrymemberer"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794598944.7727711,
-    "mellow_mix": 1794598944.7771795,
-    "big_sonic_heaven": 1794598944.7797155,
-    "radio_x_chilled": 1794598944.782088,
-    "dreampop_radio": 1794598944.7845118,
-    "indie_select": 1794598944.7872088,
-    "dkfm_edge": 1794598944.7897544,
+    "vuurland": 1794599020.7664232,
+    "mellow_mix": 1794599020.7703938,
+    "big_sonic_heaven": 1794599020.7726865,
+    "radio_x_chilled": 1794599020.7748804,
+    "dreampop_radio": 1794599020.7771065,
+    "indie_select": 1794599020.7798038,
+    "dkfm_edge": 1794599020.7821977,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794598944.7925465,
-    "dkfm_shoegaze": 1794598944.7949793,
-    "dkfm_classic": 1794598944.7975128
+    "dark_edge": 1794599020.784815,
+    "dkfm_shoegaze": 1794599020.9758499,
+    "dkfm_classic": 1794599020.97842
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14749,6 +14749,7 @@
       "she's green|||silhouette",
       "she's in parties|||cherish",
       "shedfromthebody|||hum",
+      "shedfromthebody|||in the pines",
       "sheer|||shut it off",
       "shelling|||unfading scent",
       "shinyhunt|||my heart was good you never knew",
@@ -15542,6 +15543,7 @@
       "cocteau twins|||kookaburra",
       "cocteau twins|||lazy calm",
       "cocteau twins|||little spacey",
+      "cocteau twins|||lorelei",
       "cocteau twins|||multifoiled",
       "cocteau twins|||musette and drums",
       "cocteau twins|||my love paramour",
@@ -17272,7 +17274,7 @@
   "__last_radio_key_mellow_mix": "hippie sabotage|||feet in the sand",
   "__last_radio_key_big_sonic_heaven": "the cure|||like cockatoos",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 16128,
+  "__v116_fifo_next_sequence": 16129,
   "__v146_spotify_budget_slot": 1794598946.3843505,
   "__vuurland_active_playlist_count": 9866,
   "__vuurland_active_volume": 1,
@@ -113778,7 +113780,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "muzz|||bad feeling",
+  "__last_radio_key_indie_select": "broken bells|||shelter",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -115141,9 +115143,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "glia|||see through you",
-  "__last_radio_key_dkfm_shoegaze": "tallies|||memento",
-  "__last_radio_key_dkfm_classic": "adorable|||sunshine smile",
+  "__last_radio_key_dkfm_edge": "bright arc|||cedars",
+  "__last_radio_key_dkfm_shoegaze": "shedfromthebody|||in the pines",
+  "__last_radio_key_dkfm_classic": "cocteau twins|||lorelei",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
