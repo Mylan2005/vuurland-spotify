@@ -2,7 +2,7 @@
   "__vuurland_volume_playlists": {
     "1": "555lFTvdRswe9ukybmOM8T"
   },
-  "__v150_next_spotify_round_at": 1794535570.4211001,
+  "__v150_next_spotify_round_at": 1794535702.6512933,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -732,6 +732,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "alex vargas|||now that i think about it",
       "space|||neighbourhood",
       "alex g|||hope",
       "youth lagoon|||montana",
@@ -830,8 +831,7 @@
       "beck|||devil's haircut",
       "morcheeba|||even though",
       "castle theater|||slow cannonball",
-      "the maccabees|||toothpaste kisses",
-      "dope lemon|||salt & pepper"
+      "the maccabees|||toothpaste kisses"
     ],
     "dkfm_shoegaze": [
       "the daysleepers|||release the kraken",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794535564.8010328,
-    "mellow_mix": 1794535564.8072991,
-    "big_sonic_heaven": 1794535564.8112478,
-    "radio_x_chilled": 1794535564.8152645,
-    "dreampop_radio": 1794535564.8193562,
-    "indie_select": 1794535564.823712,
-    "dkfm_edge": 1794535564.828533,
+    "vuurland": 1794535581.7074592,
+    "mellow_mix": 1794535581.7137403,
+    "big_sonic_heaven": 1794535581.7176595,
+    "radio_x_chilled": 1794535581.7216628,
+    "dreampop_radio": 1794535581.7257097,
+    "indie_select": 1794535581.7300258,
+    "dkfm_edge": 1794535581.7347617,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794535564.8338492,
-    "dkfm_shoegaze": 1794535564.8385303,
-    "dkfm_classic": 1794535564.8426757
+    "dark_edge": 1794535581.9964592,
+    "dkfm_shoegaze": 1794535582.0012007,
+    "dkfm_classic": 1794535582.0053575
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -11307,6 +11307,7 @@
       "alex clare|||relax my beloved",
       "alex g|||hope",
       "alex lahey|||let's go out",
+      "alex vargas|||now that i think about it",
       "alex vargas|||till forever runs out",
       "alex winston|||locomotive",
       "alexandra savior|||mirage",
@@ -16511,6 +16512,14 @@
       "failed_at": 1794433404,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "the radar station|||house with no seasons": {
+      "artist": "THE RADAR STATION",
+      "title": "House with no seasons",
+      "source": "vuurland",
+      "failed_at": 1794535585,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -16521,8 +16530,8 @@
   "__last_radio_key_mellow_mix": "nick drake|||which will",
   "__last_radio_key_big_sonic_heaven": "dog silent|||flew",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 14926,
-  "__v146_spotify_budget_slot": 1794535451.8711371,
+  "__v116_fifo_next_sequence": 14928,
+  "__v146_spotify_budget_slot": 1794535583.8375137,
   "__vuurland_active_playlist_count": 9483,
   "__vuurland_active_volume": 1,
   "__vuurland_active_playlist_id": "555lFTvdRswe9ukybmOM8T",
@@ -74245,7 +74254,7 @@
     "dean garcia|||all the same": 3,
     "the voxx|||border": 3,
     "freebass|||not too late": 3,
-    "the radar station|||house with no seasons": 4,
+    "the radar station|||house with no seasons": 5,
     "ollie brown|||don't change a thing": 3,
     "michael hedges|||prelude to cello suite #1 js bach": 3,
     "morning parade|||under the stars wilkinson remix": 3,
@@ -111253,7 +111262,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "space|||neighbourhood",
+  "__last_radio_key_dark_edge": "alex vargas|||now that i think about it",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -111991,8 +112000,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 1454,
-  "__v192_duyster_next_enqueue_at": 1794535569.6490111,
+  "__v192_duyster_archive_cursor": 1455,
+  "__v192_duyster_next_enqueue_at": 1794535702.0694838,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -114929,7 +114938,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "duyster",
+  "__v221_last_selected_source": "vuurland",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -114941,7 +114950,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "duyster",
+  "__v224_last_spotify_opportunity_source": "vuurland",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -114974,7 +114983,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "duyster",
+  "__v227_last_source_turn": "vuurland",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
