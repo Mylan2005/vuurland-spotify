@@ -14,7 +14,6 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
-      "sohn|||riverbank",
       "jjerome87|||track and field",
       "arlo parks|||eugene",
       "kings of leon|||revelry",
@@ -113,10 +112,10 @@
       "hermanos gutierrez|||canto andino",
       "still woozy|||all your life",
       "sohn|||conrad",
-      "the tallest man on earth|||i'm a stranger now"
+      "the tallest man on earth|||i'm a stranger now",
+      "edmund november|||cold street light"
     ],
     "mellow_mix": [
-      "slackwax|||close to my fire",
       "kt tunstall|||white bird",
       "pearl jam|||thin air",
       "bonnie raitt|||angel from montgomery",
@@ -215,10 +214,10 @@
       "paul simon|||she moves on",
       "the cure|||close to me closer mix",
       "the heptones|||book of rules",
-      "khruangbin|||a love international"
+      "khruangbin|||a love international",
+      "cyril pahinui|||po mahina"
     ],
     "big_sonic_heaven": [
-      "ivy|||fragile people acoustic",
       "curve|||horror head",
       "miki berenyi trio lol tolhurst & gray|||stranger",
       "trentemøller|||terrified",
@@ -317,7 +316,8 @@
       "minor victories|||scattered ashes song for richard",
       "helen|||endless sky",
       "dead can dance|||devorzhum",
-      "emma anderson|||willow and mallow"
+      "emma anderson|||willow and mallow",
+      "encarta 98|||destello"
     ],
     "radio_x_chilled": [
       "hozier|||eat your young",
@@ -524,7 +524,6 @@
       "the war on drugs|||holding on"
     ],
     "indie_select": [
-      "the clash|||rock the casbah",
       "the psychedelic furs|||pretty in pink",
       "the church|||under the milky way",
       "dj shadow|||you can't go home again",
@@ -623,10 +622,10 @@
       "metric|||cascades",
       "the whitest boy alive|||burning",
       "polica|||matty",
-      "gorillaz|||crystalised the xx cover"
+      "gorillaz|||crystalised the xx cover",
+      "the wombats|||let's dance to joy division"
     ],
     "dkfm_edge": [
-      "glassmanet|||enter the deep",
       "velvet|||purity feat old coke",
       "kablamo|||pay for it",
       "nuclear daisies|||blown a wish",
@@ -725,7 +724,8 @@
       "wybercron|||imprint",
       "t a k e r|||taker - jackalope",
       "night tapes|||loner",
-      "bored at my grandmas house|||show & tell"
+      "bored at my grandmas house|||show & tell",
+      "the asteroid no 4|||dandelion"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -834,7 +834,6 @@
       "laurel|||hold tight"
     ],
     "dkfm_shoegaze": [
-      "etti/etta|||eyes and ears",
       "my bloody valentine|||off your face",
       "lush|||leaves me cold",
       "wildhoney|||thin air",
@@ -933,10 +932,10 @@
       "seafrost|||hallucinations",
       "highspire|||take a drive with me",
       "silk|||auralux",
-      "wolfschmidt|||whaler"
+      "wolfschmidt|||whaler",
+      "sun shines cold|||winters edge"
     ],
     "dkfm_classic": [
-      "boo radleys|||best lose the fear",
       "medicine|||sweet explosion",
       "14 iced bears|||these are the things",
       "lush|||monochrome",
@@ -1035,21 +1034,22 @@
       "a r kane|||w o g s",
       "bethany curve|||over and out",
       "riverside|||careful light",
-      "the house of love|||hope"
+      "the house of love|||hope",
+      "orange|||does of heaven"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794529293.3395684,
-    "mellow_mix": 1794529293.345087,
-    "big_sonic_heaven": 1794529293.3488128,
-    "radio_x_chilled": 1794529293.352373,
-    "dreampop_radio": 1794529293.3560636,
-    "indie_select": 1794529293.8518531,
-    "dkfm_edge": 1794529293.8560042,
+    "vuurland": 1794529330.4607186,
+    "mellow_mix": 1794529330.4661555,
+    "big_sonic_heaven": 1794529330.469741,
+    "radio_x_chilled": 1794529330.4734242,
+    "dreampop_radio": 1794529330.4771862,
+    "indie_select": 1794529330.4811184,
+    "dkfm_edge": 1794529330.485094,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794529293.8607717,
-    "dkfm_shoegaze": 1794529294.3397653,
-    "dkfm_classic": 1794529294.807081
+    "dark_edge": 1794529330.4898295,
+    "dkfm_shoegaze": 1794529330.4937038,
+    "dkfm_classic": 1794529330.4974382
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -16410,9 +16410,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "sohn|||riverbank",
-  "__last_radio_key_mellow_mix": "slackwax|||close to my fire",
-  "__last_radio_key_big_sonic_heaven": "ivy|||fragile people acoustic",
+  "__last_radio_key_vuurland": "jjerome87|||track and field",
+  "__last_radio_key_mellow_mix": "kt tunstall|||white bird",
+  "__last_radio_key_big_sonic_heaven": "curve|||horror head",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 14792,
   "__v146_spotify_budget_slot": 1794529217.465448,
@@ -109481,7 +109481,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the clash|||rock the casbah",
+  "__last_radio_key_indie_select": "the psychedelic furs|||pretty in pink",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -110844,9 +110844,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "glassmanet|||enter the deep",
-  "__last_radio_key_dkfm_shoegaze": "etti/etta|||eyes and ears",
-  "__last_radio_key_dkfm_classic": "boo radleys|||best lose the fear",
+  "__last_radio_key_dkfm_edge": "velvet|||purity feat old coke",
+  "__last_radio_key_dkfm_shoegaze": "my bloody valentine|||off your face",
+  "__last_radio_key_dkfm_classic": "medicine|||sweet explosion",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
