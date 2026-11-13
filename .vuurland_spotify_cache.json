@@ -14,6 +14,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "widowspeak|||the jacket",
+      "arcade fire|||no cars go",
       "eefje de visser|||gloeien",
       "the radar station|||house with no seasons",
       "james blake|||i had a dream she took my hand",
@@ -111,11 +113,10 @@
       "band of horses|||the funeral",
       "manchester orchestra|||the gold",
       "the bony king of nowhere|||everybody knows",
-      "lucy dacus|||planting tomatoes",
-      "olivia dean|||let alone the one you love",
-      "royel otis|||sofa king"
+      "lucy dacus|||planting tomatoes"
     ],
     "mellow_mix": [
+      "the beatles|||girl",
       "beck|||everybody's gotta learn sometime",
       "the cranberries|||when you're gone",
       "dire straits|||portobello belle",
@@ -214,8 +215,7 @@
       "traffic|||walking in the wind",
       "remy zero|||fair",
       "andrea bejar|||delicately",
-      "the ocean blue|||cerulean",
-      "allison russell|||nightflyer"
+      "the ocean blue|||cerulean"
     ],
     "big_sonic_heaven": [
       "ringo deathstarr|||tambourine girl",
@@ -732,6 +732,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "shura|||what's it gonna be",
       "toro y moi|||sidelines",
       "ed mount flore benguigui|||distant calls",
       "ultra nate|||free",
@@ -830,10 +831,10 @@
       "the strokes|||the adults are talking",
       "zach schimpf|||welcome to the dystopia",
       "the ting tings|||that's not my name",
-      "stereophonics|||song for the summer",
-      "hozier|||eat your young"
+      "stereophonics|||song for the summer"
     ],
     "dkfm_shoegaze": [
+      "shinyhunt|||my heart was good you never knew",
       "sleepwalk|||craving",
       "bleach dream|||bayshore",
       "vim|||down",
@@ -932,10 +933,10 @@
       "bodywash|||turn in",
       "draminine|||better or worse",
       "bloody knives|||afterimage",
-      "duszno|||bluszcz",
-      "midsommar|||dive in"
+      "duszno|||bluszcz"
     ],
     "dkfm_classic": [
+      "catherine wheel|||girl stand still",
       "the suncharms|||time will tell",
       "bowery electric|||coming down",
       "majesty crush|||if jfa were still together",
@@ -1034,22 +1035,21 @@
       "alison's halo|||wishes",
       "cranes|||inescapable",
       "swirl|||going home",
-      "bethany curve|||cygnus x-1",
-      "siddal|||ghost"
+      "bethany curve|||cygnus x-1"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794608770.6932998,
-    "mellow_mix": 1794608770.7000124,
-    "big_sonic_heaven": 1794608770.704423,
-    "radio_x_chilled": 1794608770.7091355,
-    "dreampop_radio": 1794608770.713728,
-    "indie_select": 1794608770.7187006,
-    "dkfm_edge": 1794608770.7237535,
+    "vuurland": 1794608850.9860103,
+    "mellow_mix": 1794608850.9929662,
+    "big_sonic_heaven": 1794608850.9974227,
+    "radio_x_chilled": 1794608851.0021052,
+    "dreampop_radio": 1794608851.0066495,
+    "indie_select": 1794608851.0117438,
+    "dkfm_edge": 1794608851.0166593,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794608770.7290745,
-    "dkfm_shoegaze": 1794608770.7338464,
-    "dkfm_classic": 1794608770.738661
+    "dark_edge": 1794608851.3370688,
+    "dkfm_shoegaze": 1794608851.3422134,
+    "dkfm_classic": 1794608851.3472373
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13232,6 +13232,7 @@
       "shivaree|||goodnight moon",
       "shook|||lullaby",
       "shovels & rope|||botched execution",
+      "shura|||what's it gonna be",
       "sia|||breathe me",
       "sia|||i go to sleep",
       "sia|||like a river runs",
@@ -17380,11 +17381,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "eefje de visser|||gloeien",
-  "__last_radio_key_mellow_mix": "beck|||everybody's gotta learn sometime",
+  "__last_radio_key_vuurland": "widowspeak|||the jacket",
+  "__last_radio_key_mellow_mix": "the beatles|||girl",
   "__last_radio_key_big_sonic_heaven": "ringo deathstarr|||tambourine girl",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 16304,
+  "__v116_fifo_next_sequence": 16305,
   "__v146_spotify_budget_slot": 1794608773.23394,
   "__vuurland_active_playlist_count": 9927,
   "__vuurland_active_volume": 1,
@@ -115758,8 +115759,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "april june|||the trip we never took",
-  "__last_radio_key_dkfm_shoegaze": "sleepwalk|||craving",
-  "__last_radio_key_dkfm_classic": "the suncharms|||time will tell",
+  "__last_radio_key_dkfm_shoegaze": "shinyhunt|||my heart was good you never knew",
+  "__last_radio_key_dkfm_classic": "catherine wheel|||girl stand still",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -115771,7 +115772,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "toro y moi|||sidelines",
+  "__last_radio_key_dark_edge": "shura|||what's it gonna be",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
