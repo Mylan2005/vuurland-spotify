@@ -7824,6 +7824,20 @@ def sync():
     if _v116_new:
         print(f"📥 v116: {_v116_new} queue-item(s) een vaste FIFO-positie gegeven.")
 
+    # v237: eenmalige, door eigenaar gevraagde vervroegde Spotify-403 retry.
+    # Bestaande 429-cooldowns blijven onaangeroerd. Na een nieuwe 403
+    # blijft de normale lange cooldown gelden; dit is geen retry-lus.
+    last_403 = cache.get("__v236_last_spotify_403")
+    if (isinstance(last_403, dict)
+            and not last_403.get("recovered_at")
+            and not cache.get("__v237_manual_403_retry_attempted")
+            and float(cache.get("__spotify_server_error_until", 0) or 0) > time.time()):
+        cache["__v237_manual_403_retry_attempted"] = int(time.time())
+        cache["__spotify_server_error_until"] = 0
+        atomic_save_json(CACHE_FILE, cache, indent=2, ensure_ascii=False)
+        print("🔄 v237: eenmalige vervroegde Spotify-403 hercontrole; "
+              "bij nieuwe 403 blijft de normale pauze gelden.")
+
     # v67: blijf RadioBox volgen tijdens de Spotify-cooldown. De ingestie
     # hierboven gebruikt geen Spotify API; verdere matcher-/playliststappen
     # zouden dat wel kunnen doen. Daarom hier bewust vroeg terugkeren.
