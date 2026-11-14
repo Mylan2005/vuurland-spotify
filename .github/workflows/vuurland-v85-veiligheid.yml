@@ -36,6 +36,8 @@ on:
       - 'v233_general_radio_metadata.py'
       - 'test_v233_general_radio_metadata_offline.py'
       - 'test_v234_volume_switch_offline.py'
+      - 'v235_general_search_rescue.py'
+      - 'test_v235_general_search_rescue_offline.py'
       - 'v203_matcher_upgrade_requeue.py'
       - 'v204_spotify_dedup_review.py'
       - 'v205_lifetime_backup.py'
@@ -133,6 +135,7 @@ jobs:
           python test_v232_verified_radio_metadata_offline.py
           python test_v233_general_radio_metadata_offline.py
           python test_v234_volume_switch_offline.py
+          python test_v235_general_search_rescue_offline.py
           python test_v203_matcher_upgrade_requeue_offline.py
           python test_v204_spotify_dedup_offline.py
           python test_v205_lifetime_backup_offline.py
