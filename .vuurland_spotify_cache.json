@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1794669742.924062,
+  "__v150_next_spotify_round_at": 1794669870.2756817,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -835,6 +835,7 @@
       "tokyo tea room|||forever out of time"
     ],
     "dkfm_shoegaze": [
+      "highspire|||joke's on you",
       "vida eterna|||had to let you know",
       "deux visages|||automatic",
       "funsover|||needles",
@@ -933,8 +934,7 @@
       "highspire|||brontosaurus",
       "the sewing club|||strange 2",
       "alonekitty|||tell me that you've lost your mind",
-      "chuju|||box",
-      "shitakuchu|||junky"
+      "chuju|||box"
     ],
     "dkfm_classic": [
       "boo radleys|||lazarus saint etienne remix",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794669734.7777376,
-    "mellow_mix": 1794669734.7799392,
-    "big_sonic_heaven": 1794669734.7817814,
-    "radio_x_chilled": 1794669734.7834496,
-    "dreampop_radio": 1794669734.785123,
-    "indie_select": 1794669734.787029,
-    "dkfm_edge": 1794669734.7887921,
+    "vuurland": 1794669749.8323035,
+    "mellow_mix": 1794669749.8344688,
+    "big_sonic_heaven": 1794669749.8363035,
+    "radio_x_chilled": 1794669749.8379827,
+    "dreampop_radio": 1794669749.8396578,
+    "indie_select": 1794669749.8415942,
+    "dkfm_edge": 1794669749.8433878,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794669734.7909226,
-    "dkfm_shoegaze": 1794669734.7927675,
-    "dkfm_classic": 1794669734.7945685
+    "dark_edge": 1794669749.8455365,
+    "dkfm_shoegaze": 1794669750.0367281,
+    "dkfm_classic": 1794669750.0387037
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14846,6 +14846,7 @@
       "highnoon|||back to you",
       "highspire|||brontosaurus",
       "highspire|||disappears",
+      "highspire|||joke's on you",
       "highspire|||satellite",
       "highspire|||take a drive with me",
       "hints|||benediction",
@@ -18008,9 +18009,9 @@
   "__last_radio_key_mellow_mix": "the donnis trio|||tip of the tongue",
   "__last_radio_key_big_sonic_heaven": "the giraffe told me in my dream|||drop",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17400,
-  "__v146_spotify_budget_slot": 1794669623.9148793,
-  "__vuurland_active_playlist_count": 1318,
+  "__v116_fifo_next_sequence": 17401,
+  "__v146_spotify_budget_slot": 1794669751.266484,
+  "__vuurland_active_playlist_count": 1319,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1794666810,
@@ -26144,6 +26145,7 @@
     "portishead|||magic doors",
     "portishead|||mourning air",
     "portishead|||mysterons",
+    "portishead|||numb",
     "portishead|||only you",
     "portishead|||over",
     "portishead|||roads",
@@ -40125,6 +40127,7 @@
     "spotify:track:7lL2lMWNtzOcf5HnEudNgn",
     "spotify:track:7lLkkhRfp9SHX0gUc8xSi1",
     "spotify:track:7lLrGzI4mdN6OvkEjO3hgL",
+    "spotify:track:7lR743VxfubUw5m9dpnR9x",
     "spotify:track:7lS6WPvGvQPDsD7J9pxtxP",
     "spotify:track:7lX5thFFq1mEARXVPgJ1op",
     "spotify:track:7lZIMb2AD7T09fZlqOQJ0q",
@@ -43078,6 +43081,7 @@
     "GBAPA7100001",
     "GBAQH9900001",
     "GBAQT9400003",
+    "GBAQT9400026",
     "GBAQT9400032",
     "GBAQT9400058",
     "GBAQT9400060",
@@ -60856,7 +60860,8 @@
     "spotify:track:2RoKcLsDPkKZGW5nnNx0BL": "NLSB72000796",
     "spotify:track:6VLAQT0jgtxCN3jsZmuwQN": "GBBLY1003047",
     "spotify:track:2SyWSmFAZzlzx6XpLHqmfl": "GBLEL0700018",
-    "spotify:track:4HHge4zAyIw3pkrtFzmwCl": "USSM17100516"
+    "spotify:track:4HHge4zAyIw3pkrtFzmwCl": "USSM17100516",
+    "spotify:track:7lR743VxfubUw5m9dpnR9x": "GBAQT9400026"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -118173,7 +118178,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "ellis|||it'll be alright",
-  "__last_radio_key_dkfm_shoegaze": "vida eterna|||had to let you know",
+  "__last_radio_key_dkfm_shoegaze": "highspire|||joke's on you",
   "__last_radio_key_dkfm_classic": "boo radleys|||lazarus saint etienne remix",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -121858,7 +121863,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "mellow_mix",
+  "__v221_last_selected_source": "big_sonic_heaven",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -121870,7 +121875,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "mellow_mix",
+  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -121903,7 +121908,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "mellow_mix",
+  "__v227_last_source_turn": "big_sonic_heaven",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -123380,5 +123385,6 @@
   "__match_v35__maida rose|||every day is blue": "spotify:track:2RoKcLsDPkKZGW5nnNx0BL",
   "__match_v35__sun dial|||i don't mind": "spotify:track:6VLAQT0jgtxCN3jsZmuwQN",
   "__match_v35__hefner|||hello kitten": "spotify:track:2SyWSmFAZzlzx6XpLHqmfl",
-  "__match_v35__carole king|||so far away": "spotify:track:4HHge4zAyIw3pkrtFzmwCl"
+  "__match_v35__carole king|||so far away": "spotify:track:4HHge4zAyIw3pkrtFzmwCl",
+  "__match_v35__portishead|||numb": "spotify:track:7lR743VxfubUw5m9dpnR9x"
 }
