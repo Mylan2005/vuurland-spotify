@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sigur ros|||hljomalind",
       "moby|||in this world",
       "the marias|||back to me",
       "bear's den|||above the clouds of pompeii",
@@ -113,10 +114,10 @@
       "eefje de visser|||de parade",
       "solange|||cranes in the sky",
       "coldplay|||god put a smile upon your face",
-      "kings of leon|||my whole world",
-      "tamino|||crocodile"
+      "kings of leon|||my whole world"
     ],
     "mellow_mix": [
+      "ellen mcilwaine|||up from the skies",
       "tracy chapman|||give me one reason",
       "gomez|||hamoa beach",
       "lyle lovett|||friend of the devil",
@@ -215,8 +216,7 @@
       "ludovico einaudi|||experience",
       "neil halstead|||paint a face",
       "marianne faithfull|||witches song",
-      "patty griffin|||ohio",
-      "bela fleck|||big country"
+      "patty griffin|||ohio"
     ],
     "big_sonic_heaven": [
       "dead can dance|||in power we entrust the love advocated",
@@ -525,6 +525,7 @@
       "ten fe|||elodie"
     ],
     "indie_select": [
+      "grant mclennan|||all her songs",
       "stars|||we called it love",
       "the joy formidable|||twin peaks",
       "the xx|||say something loving",
@@ -623,10 +624,10 @@
       "billy bragg|||something happened solo version",
       "the pains of being pure at heart|||simple & sure",
       "vampire weekend|||giving up the gun",
-      "new young pony club|||chaos",
-      "badly drawn boy|||silent sigh"
+      "new young pony club|||chaos"
     ],
     "dkfm_edge": [
+      "luster|||missing you",
       "lumari|||in waves",
       "sea lemon|||3a",
       "crystal canyon|||cobra aurora",
@@ -725,8 +726,7 @@
       "future nostalgia|||stick around coming down",
       "fin del mundo|||la noche",
       "skymender|||long shadows",
-      "diffident daffodils|||go away now",
-      "funeral commercial|||vanish"
+      "diffident daffodils|||go away now"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -937,6 +937,7 @@
       "sleepwalk|||sandbox"
     ],
     "dkfm_classic": [
+      "difference engine|||and never pull",
       "chapterhouse|||pearl",
       "mercury rev|||bronx cheer",
       "half string|||tripped up breathing",
@@ -1035,22 +1036,21 @@
       "rocketship|||let's go away",
       "blind mr jones|||surfer baby",
       "bowery electric|||psalms of survival",
-      "moose|||soon is never soon enough",
-      "the house of love|||mr jo"
+      "moose|||soon is never soon enough"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794683219.9999173,
-    "mellow_mix": 1794683220.0031357,
-    "big_sonic_heaven": 1794683220.005795,
-    "radio_x_chilled": 1794683220.0083287,
-    "dreampop_radio": 1794683220.0108635,
-    "indie_select": 1794683220.0137773,
-    "dkfm_edge": 1794683220.016615,
+    "vuurland": 1794683296.935076,
+    "mellow_mix": 1794683296.9383316,
+    "big_sonic_heaven": 1794683296.9409618,
+    "radio_x_chilled": 1794683296.9435549,
+    "dreampop_radio": 1794683296.9461699,
+    "indie_select": 1794683296.9492693,
+    "dkfm_edge": 1794683296.952162,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794683220.0198271,
-    "dkfm_shoegaze": 1794683220.0224764,
-    "dkfm_classic": 1794683220.025278
+    "dark_edge": 1794683296.9554415,
+    "dkfm_shoegaze": 1794683296.958116,
+    "dkfm_classic": 1794683296.9610183
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18131,11 +18131,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "moby|||in this world",
-  "__last_radio_key_mellow_mix": "tracy chapman|||give me one reason",
+  "__last_radio_key_vuurland": "sigur ros|||hljomalind",
+  "__last_radio_key_mellow_mix": "ellen mcilwaine|||up from the skies",
   "__last_radio_key_big_sonic_heaven": "dead can dance|||in power we entrust the love advocated",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17634,
+  "__v116_fifo_next_sequence": 17635,
   "__v146_spotify_budget_slot": 1794683221.389507,
   "__vuurland_active_playlist_count": 385,
   "__vuurland_active_volume": 2,
@@ -117314,7 +117314,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "stars|||we called it love",
+  "__last_radio_key_indie_select": "grant mclennan|||all her songs",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -118677,9 +118677,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "lumari|||in waves",
+  "__last_radio_key_dkfm_edge": "luster|||missing you",
   "__last_radio_key_dkfm_shoegaze": "modern daze|||sewn on",
-  "__last_radio_key_dkfm_classic": "chapterhouse|||pearl",
+  "__last_radio_key_dkfm_classic": "difference engine|||and never pull",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -119429,8 +119429,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 2921,
-  "__v192_duyster_next_enqueue_at": 1794683279.2807648,
+  "__v192_duyster_archive_cursor": 2923,
+  "__v192_duyster_next_enqueue_at": 1794683417.0295558,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
