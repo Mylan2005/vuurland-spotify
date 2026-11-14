@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "gabriels|||love and hate in a different time",
+      "elis floreen|||avalanches",
       "wet leg|||obvious",
       "pinback|||loro",
       "broken glass heroes|||let's not fall apart",
@@ -112,9 +114,7 @@
       "the smile|||skrting on the surface",
       "bon iver|||22 over s??n",
       "birame|||the worst parts of you",
-      "mac demarco|||still beating",
-      "dotan|||let you go",
-      "paolo nutini|||coming up easy"
+      "mac demarco|||still beating"
     ],
     "mellow_mix": [
       "marc cohn|||true companion",
@@ -411,6 +411,7 @@
       "oasis|||let there be love"
     ],
     "dreampop_radio": [
+      "yo la tengo|||my heart's not in it",
       "of monsters and men|||i of the storm",
       "bat for lashes|||if i knew",
       "the war on drugs|||holding on",
@@ -509,8 +510,7 @@
       "fleetwood mac|||dreams",
       "hello saferide|||x telling me about the loss of something dear at age 16",
       "george ezra|||barcelona",
-      "the helio sequence|||the measure",
-      "nick drake|||pink moon"
+      "the helio sequence|||the measure"
     ],
     "indie_select": [
       "maximo park|||midnight on the hill",
@@ -925,6 +925,7 @@
       "red red sun|||paper swan"
     ],
     "dkfm_classic": [
+      "rocketship|||let's go away",
       "blind mr jones|||surfer baby",
       "bowery electric|||psalms of survival",
       "moose|||soon is never soon enough",
@@ -1023,22 +1024,21 @@
       "スーハーカー|||top 10",
       "curve|||chinese burn",
       "lush|||sweetness and light",
-      "february|||afterglow",
-      "14 iced bears|||miles away"
+      "february|||afterglow"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794659530.0029013,
-    "mellow_mix": 1794659530.0051486,
-    "big_sonic_heaven": 1794659530.0068517,
-    "radio_x_chilled": 1794659530.0084925,
-    "dreampop_radio": 1794659530.01014,
-    "indie_select": 1794659530.012127,
-    "dkfm_edge": 1794659530.013884,
+    "vuurland": 1794659603.566381,
+    "mellow_mix": 1794659603.5685632,
+    "big_sonic_heaven": 1794659603.570253,
+    "radio_x_chilled": 1794659603.5718417,
+    "dreampop_radio": 1794659603.5735588,
+    "indie_select": 1794659603.5754797,
+    "dkfm_edge": 1794659603.577178,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794659530.2459102,
-    "dkfm_shoegaze": 1794659530.2478697,
-    "dkfm_classic": 1794659530.2496908
+    "dark_edge": 1794659603.5793347,
+    "dkfm_shoegaze": 1794659603.5811684,
+    "dkfm_classic": 1794659603.583023
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17887,7 +17887,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "wet leg|||obvious",
+  "__last_radio_key_vuurland": "gabriels|||love and hate in a different time",
   "__last_radio_key_mellow_mix": "marc cohn|||true companion",
   "__last_radio_key_big_sonic_heaven": "jeff buckley|||hallelujah",
   "__v181_vuurland_two_missing_recovered": true,
@@ -116403,7 +116403,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "of monsters and men|||i of the storm",
+  "__last_radio_key_dreampop_radio": "yo la tengo|||my heart's not in it",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -117886,7 +117886,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "delfini v brneni|||na pozdni shledanou",
   "__last_radio_key_dkfm_shoegaze": "slowwves|||killed by egoistic disease",
-  "__last_radio_key_dkfm_classic": "blind mr jones|||surfer baby",
+  "__last_radio_key_dkfm_classic": "rocketship|||let's go away",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
