@@ -33,6 +33,7 @@ from v221_source_round_robin import fair_source_candidates
 from v232_verified_radio_metadata import verified_radio_metadata as v232_radio_metadata
 from v233_general_radio_metadata import normalize_radio_metadata as v233_radio_metadata
 from v235_general_search_rescue import catalog_search_artist as v235_search_artist, rescue_search_query as v235_rescue_query
+from v236_spotify_403_diagnostics import safe_403_detail
 from v227_strict_source_turns import next_source_turn
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
@@ -724,16 +725,30 @@ def spotify_request(
                     explanation = str(detail.get("message", ""))[:160]
             except (ValueError, TypeError, AttributeError):
                 pass
-            print(f"🚫 Spotify HTTP 403 op {endpoint.split('?', 1)[0]}"
-                  + (f": {explanation}" if explanation else ""))
+            # v236: de publieke foutregel bevat alleen de methode en een
+            # geanonimiseerd API-pad. Geen token, Spotify-ID of zoektekst.
+            # Bewaar dit ook in de cache zodat de fout terug te vinden is
+            # wanneer GitHub de lange lopende joblogs nog niet vrijgeeft.
+            diagnosis = safe_403_detail(method, endpoint, explanation)
+            print(
+                f"🚫 Spotify HTTP 403: {diagnosis['method']} "
+                f"{diagnosis['endpoint']} ({diagnosis['reason']})"
+            )
             cache = load_cache()
-            cache["__spotify_server_error_until"] = max(
+            blocked_until = max(
                 float(cache.get("__spotify_server_error_until", 0) or 0),
                 time.time() + 3600,
             )
+            cache["__spotify_server_error_until"] = blocked_until
+            cache["__v236_last_spotify_403"] = {
+                **diagnosis,
+                "at": int(time.time()),
+                "retry_after": int(blocked_until),
+            }
             save_cache(cache)
             raise RuntimeError(
-                "Spotify HTTP 403: toegangsweigering; 60 minuten "
+                f"Spotify HTTP 403 bij {diagnosis['method']} "
+                f"{diagnosis['endpoint']}: toegangsweigering; 60 minuten "
                 "Spotify-pauze, radiowachtrij bewaren."
             )
 
@@ -766,6 +781,17 @@ def spotify_request(
             )
 
         response.raise_for_status()
+
+        # Na afloop van de bewaakte pauze herneemt de bestaande runner
+        # automatisch. Registreer pas een herstel NA een echte HTTP-success.
+        if 200 <= response.status_code < 300:
+            current = load_cache()
+            last_403 = current.get("__v236_last_spotify_403")
+            if isinstance(last_403, dict) and not last_403.get("recovered_at"):
+                last_403["recovered_at"] = int(time.time())
+                current["__v236_last_spotify_403"] = last_403
+                save_cache(current)
+                print("✅ Spotify API hersteld na eerdere HTTP 403; sync kan verder.")
 
         if response.content:
             return response.json()
