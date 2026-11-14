@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "alt-j|||tessellate",
+      "ry x|||your love",
       "mayer hawthorne|||the walk",
       "london grammar|||oh woman oh man",
       "kevin morby|||i have been to the mountain",
@@ -112,11 +114,10 @@
       "air traffic|||no more running away",
       "gabriel rios feat devendra banhart|||la torre",
       "thomas azier|||year in a spiral",
-      "jasmine 4 t & phoebe bridgers|||guy fawkes tesco dissociation",
-      "eefje de visser|||vlijmscherp",
-      "kevin morby|||this is a photograph"
+      "jasmine 4 t & phoebe bridgers|||guy fawkes tesco dissociation"
     ],
     "mellow_mix": [
+      "thea gilmore|||crazy love",
       "aukai|||azure",
       "mark knopfler|||hill farmer's blues",
       "mike oldfield|||muse",
@@ -215,8 +216,7 @@
       "bahamas|||lost in the light",
       "richard thompson|||salford sunday",
       "cameron whitcomb|||you and me",
-      "etta marcus|||skin parade",
-      "turin brakes|||rome"
+      "etta marcus|||skin parade"
     ],
     "big_sonic_heaven": [
       "the radio dept|||swedish guns",
@@ -423,6 +423,7 @@
       "courteeners|||what took you so long? acoustic"
     ],
     "dreampop_radio": [
+      "low low low la la la love love love|||burrow",
       "run river north|||run river run",
       "the stone roses|||this is the one",
       "the barr brothers|||even the darkness has arms",
@@ -521,8 +522,7 @@
       "pure bathing culture|||dream the dare",
       "rocky votolato|||what waited for me",
       "wilco|||far far away",
-      "ollie brown|||don't change a thing",
-      "eva & manu|||empty"
+      "ollie brown|||don't change a thing"
     ],
     "indie_select": [
       "william fitzsimmons|||the 1",
@@ -835,6 +835,7 @@
       "of monsters and men|||ahay"
     ],
     "dkfm_shoegaze": [
+      "funsover|||needles",
       "love is struggle|||reach",
       "tannhauser orchestra|||endless hymn",
       "beabadoobee|||sun has set",
@@ -933,8 +934,7 @@
       "alonekitty|||tell me that you've lost your mind",
       "chuju|||box",
       "shitakuchu|||junky",
-      "laughter|||memory",
-      "fogpark|||update"
+      "laughter|||memory"
     ],
     "dkfm_classic": [
       "moose|||high flying bird",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794668726.829819,
-    "mellow_mix": 1794668726.831895,
-    "big_sonic_heaven": 1794668726.8336432,
-    "radio_x_chilled": 1794668726.8352504,
-    "dreampop_radio": 1794668726.8368444,
-    "indie_select": 1794668726.838704,
-    "dkfm_edge": 1794668726.8404918,
+    "vuurland": 1794668799.1765294,
+    "mellow_mix": 1794668799.178727,
+    "big_sonic_heaven": 1794668799.180466,
+    "radio_x_chilled": 1794668799.182076,
+    "dreampop_radio": 1794668799.1837516,
+    "indie_select": 1794668799.1856174,
+    "dkfm_edge": 1794668799.187489,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794668726.8425605,
-    "dkfm_shoegaze": 1794668726.8443727,
-    "dkfm_classic": 1794668726.8461602
+    "dark_edge": 1794668799.1896992,
+    "dkfm_shoegaze": 1794668799.1915615,
+    "dkfm_classic": 1794668799.1933072
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17999,11 +17999,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "mayer hawthorne|||the walk",
-  "__last_radio_key_mellow_mix": "aukai|||azure",
+  "__last_radio_key_vuurland": "alt-j|||tessellate",
+  "__last_radio_key_mellow_mix": "thea gilmore|||crazy love",
   "__last_radio_key_big_sonic_heaven": "the radio dept|||swedish guns",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17385,
+  "__v116_fifo_next_sequence": 17386,
   "__v146_spotify_budget_slot": 1794668728.0023801,
   "__vuurland_active_playlist_count": 1311,
   "__vuurland_active_volume": 2,
@@ -116658,7 +116658,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "run river north|||run river run",
+  "__last_radio_key_dreampop_radio": "low low low la la la love love love|||burrow",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -118140,7 +118140,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "the asteroid no 4|||sky blue",
-  "__last_radio_key_dkfm_shoegaze": "love is struggle|||reach",
+  "__last_radio_key_dkfm_shoegaze": "funsover|||needles",
   "__last_radio_key_dkfm_classic": "moose|||high flying bird",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -118891,8 +118891,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 2772,
-  "__v192_duyster_next_enqueue_at": 1794668794.7146368,
+  "__v192_duyster_archive_cursor": 2773,
+  "__v192_duyster_next_enqueue_at": 1794668919.252783,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
