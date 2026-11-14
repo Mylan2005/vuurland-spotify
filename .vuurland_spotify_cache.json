@@ -14,6 +14,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "ben howard|||conrad",
       "mooneye feat meskerem mees|||bright lights",
       "camille camille|||in a song",
       "charlie cunningham|||permanent way",
@@ -112,8 +113,7 @@
       "kingfishr feat matt corby|||the blade",
       "phosphorescent|||song for zula",
       "feist|||1234",
-      "oh wonder|||lose it",
-      "dominic fike|||king of everything"
+      "oh wonder|||lose it"
     ],
     "mellow_mix": [
       "the smashing pumpkins|||crush",
@@ -218,6 +218,7 @@
       "tom petty & the heartbreakers|||something good coming"
     ],
     "big_sonic_heaven": [
+      "j francis|||lonely star",
       "sinead o'connor|||black boys on mopeds",
       "she's green|||empty house",
       "alcest|||shelter",
@@ -316,10 +317,10 @@
       "yumeia & tre flip|||mai",
       "love spirals downwards|||city moon",
       "portishead|||undenied",
-      "lucid express|||something blue",
-      "alcian blue|||carousel"
+      "lucid express|||something blue"
     ],
     "radio_x_chilled": [
+      "stereophonics|||hurry up and wait",
       "badly drawn boy|||something to talk about",
       "the doors|||riders on the storm",
       "lana del rey|||born to die",
@@ -418,10 +419,10 @@
       "jack johnson|||better together",
       "peter bjorn and john|||young folks",
       "james vincent mcmorrow|||higher love",
-      "skunk anansie|||hedonism just because you feel good",
-      "keane|||somewhere only we know"
+      "skunk anansie|||hedonism just because you feel good"
     ],
     "dreampop_radio": [
+      "jack johnson|||no other way",
       "tallest man on earth|||sagres",
       "eddie vedder|||hard sun",
       "christian kjellvander|||two souls",
@@ -520,8 +521,7 @@
       "lemonheads|||ride with me",
       "feist|||one evening",
       "the national|||start a war",
-      "brooke fraser|||love where is your fire?",
-      "the verve|||lucky man"
+      "brooke fraser|||love where is your fire?"
     ],
     "indie_select": [
       "the futureheads|||skip to the end",
@@ -1039,17 +1039,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794620309.0796382,
-    "mellow_mix": 1794620309.0874894,
-    "big_sonic_heaven": 1794620309.0925126,
-    "radio_x_chilled": 1794620309.0981824,
-    "dreampop_radio": 1794620309.1037974,
-    "indie_select": 1794620309.109778,
-    "dkfm_edge": 1794620309.1160617,
+    "vuurland": 1794620344.8287518,
+    "mellow_mix": 1794620344.8367968,
+    "big_sonic_heaven": 1794620344.841989,
+    "radio_x_chilled": 1794620344.8478255,
+    "dreampop_radio": 1794620344.8535771,
+    "indie_select": 1794620344.8595467,
+    "dkfm_edge": 1794620344.8657064,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794620309.4464202,
-    "dkfm_shoegaze": 1794620309.4523668,
-    "dkfm_classic": 1794620309.4582736
+    "dark_edge": 1794620344.8722787,
+    "dkfm_shoegaze": 1794620344.878165,
+    "dkfm_classic": 1794620344.8840532
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17495,9 +17495,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "mooneye feat meskerem mees|||bright lights",
+  "__last_radio_key_vuurland": "ben howard|||conrad",
   "__last_radio_key_mellow_mix": "the smashing pumpkins|||crush",
-  "__last_radio_key_big_sonic_heaven": "sinead o'connor|||black boys on mopeds",
+  "__last_radio_key_big_sonic_heaven": "j francis|||lonely star",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 16506,
   "__v146_spotify_budget_slot": 1794620231.435039,
@@ -114857,7 +114857,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "badly drawn boy|||something to talk about",
+  "__last_radio_key_radio_x_chilled": "stereophonics|||hurry up and wait",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -114961,7 +114961,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "tallest man on earth|||sagres",
+  "__last_radio_key_dreampop_radio": "jack johnson|||no other way",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
