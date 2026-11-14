@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "jjerome87|||track and field",
+      "rosalia|||sauvignon blanc",
       "wilco|||jesus etc",
       "ben howard|||promise",
       "novastar|||your world",
@@ -112,11 +114,10 @@
       "meskerem mees|||astronaut",
       "big thief|||certainty",
       "jordan rakei & tom mcfarland|||easy to love",
-      "olivia dean|||time",
-      "james blake|||a case of you",
-      "whitney|||crying laughing loving lying"
+      "olivia dean|||time"
     ],
     "mellow_mix": [
+      "jeff beck|||suspension",
       "fleetwood mac|||landslide",
       "caro emerald|||a night like this",
       "govi|||andalusian nights",
@@ -215,8 +216,7 @@
       "the shins|||the past and the pending",
       "black rebel motorcycle club|||fault line",
       "toad the wet sprocket|||nightingale song",
-      "the avett brothers|||i and love and you",
-      "led zeppelin|||thank you"
+      "the avett brothers|||i and love and you"
     ],
     "big_sonic_heaven": [
       "portishead|||glory box",
@@ -937,6 +937,7 @@
       "highspire|||joke's on you"
     ],
     "dkfm_classic": [
+      "pale saints|||hunted",
       "riverside|||a slow fall",
       "the verve|||butterfly",
       "the house of love|||road",
@@ -1035,22 +1036,21 @@
       "band of susans|||truce",
       "a r kane|||snow joke",
       "the ocean blue|||when life was easy",
-      "ride|||here and now",
-      "slowdive|||sing"
+      "ride|||here and now"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794695019.9369297,
-    "mellow_mix": 1794695019.9431665,
-    "big_sonic_heaven": 1794695019.9461799,
-    "radio_x_chilled": 1794695019.9491181,
-    "dreampop_radio": 1794695019.9521067,
-    "indie_select": 1794695019.9553895,
-    "dkfm_edge": 1794695019.9589756,
+    "vuurland": 1794695094.609663,
+    "mellow_mix": 1794695094.6168706,
+    "big_sonic_heaven": 1794695094.6198907,
+    "radio_x_chilled": 1794695094.6228902,
+    "dreampop_radio": 1794695094.6259682,
+    "indie_select": 1794695094.6292992,
+    "dkfm_edge": 1794695094.6328263,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794695019.9629984,
-    "dkfm_shoegaze": 1794695019.9659235,
-    "dkfm_classic": 1794695019.9690576
+    "dark_edge": 1794695094.636878,
+    "dkfm_shoegaze": 1794695094.6398451,
+    "dkfm_classic": 1794695094.6430562
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18218,11 +18218,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "wilco|||jesus etc",
-  "__last_radio_key_mellow_mix": "fleetwood mac|||landslide",
+  "__last_radio_key_vuurland": "jjerome87|||track and field",
+  "__last_radio_key_mellow_mix": "jeff beck|||suspension",
   "__last_radio_key_big_sonic_heaven": "portishead|||glory box",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17820,
+  "__v116_fifo_next_sequence": 17821,
   "__v146_spotify_budget_slot": 1794695021.3195949,
   "__vuurland_active_playlist_count": 466,
   "__vuurland_active_volume": 2,
@@ -119096,7 +119096,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "beach novels|||hate it now",
   "__last_radio_key_dkfm_shoegaze": "after daylight|||the death of everthing",
-  "__last_radio_key_dkfm_classic": "riverside|||a slow fall",
+  "__last_radio_key_dkfm_classic": "pale saints|||hunted",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -119846,8 +119846,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 3040,
-  "__v192_duyster_next_enqueue_at": 1794695087.2132366,
+  "__v192_duyster_archive_cursor": 3041,
+  "__v192_duyster_next_enqueue_at": 1794695214.7096765,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
