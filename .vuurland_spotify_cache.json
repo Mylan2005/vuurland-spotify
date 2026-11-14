@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1794689342.5790596,
+  "__v150_next_spotify_round_at": 1794689470.48274,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "the black keys|||walk across the water",
       "norah jones|||flipside",
       "sylvan esso|||play it right",
       "quarterboy|||never meant to",
@@ -831,8 +832,7 @@
       "diiv|||healthy moon",
       "moby|||go",
       "hollow coves|||the woods",
-      "coin|||talk too much",
-      "sophie zelmani|||going home"
+      "coin|||talk too much"
     ],
     "dkfm_shoegaze": [
       "deux visages|||silhouette",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794689334.5779946,
-    "mellow_mix": 1794689334.5814166,
-    "big_sonic_heaven": 1794689334.5843742,
-    "radio_x_chilled": 1794689334.5873141,
-    "dreampop_radio": 1794689334.5902598,
-    "indie_select": 1794689334.5934074,
-    "dkfm_edge": 1794689334.5964217,
+    "vuurland": 1794689349.9698467,
+    "mellow_mix": 1794689349.9735262,
+    "big_sonic_heaven": 1794689349.9764063,
+    "radio_x_chilled": 1794689349.9791718,
+    "dreampop_radio": 1794689349.9819758,
+    "indie_select": 1794689349.9851224,
+    "dkfm_edge": 1794689349.9881966,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794689334.6014981,
-    "dkfm_shoegaze": 1794689334.6043842,
-    "dkfm_classic": 1794689334.6074278
+    "dark_edge": 1794689350.2238755,
+    "dkfm_shoegaze": 1794689350.2268121,
+    "dkfm_classic": 1794689350.2298613
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13889,6 +13889,7 @@
       "the black keys|||have love will travel",
       "the black keys|||strange times",
       "the black keys|||tighten up",
+      "the black keys|||walk across the water",
       "the blancos|||fool for you",
       "the boxer rebellion|||big ideas",
       "the breeders|||cannonball",
@@ -18185,9 +18186,9 @@
   "__last_radio_key_mellow_mix": "paul simon|||loves me like a rock",
   "__last_radio_key_big_sonic_heaven": "sinead o'connor|||the last day of our acquaintance",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17737,
-  "__v146_spotify_budget_slot": 1794689223.7172348,
-  "__vuurland_active_playlist_count": 426,
+  "__v116_fifo_next_sequence": 17738,
+  "__v146_spotify_budget_slot": 1794689351.6112642,
+  "__vuurland_active_playlist_count": 427,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1794688970,
@@ -21759,6 +21760,7 @@
     "fear of men|||island",
     "fear of men|||waterfall",
     "february|||peacock",
+    "february|||riproar",
     "february|||rue mouffetard",
     "federale|||heaven forgive me",
     "federico mecozzi|||seven days walking / day 6: ascent",
@@ -32333,6 +32335,7 @@
     "spotify:track:1J5BowdTFzoTIpweNFPSAC",
     "spotify:track:1J6ooHQNlMmAPss3XKWQkI",
     "spotify:track:1J7wMZrvCtWZlXBdMM25Ce",
+    "spotify:track:1JAWEmqN62UInJkpYS65th",
     "spotify:track:1JKsRF8iQOQTpEv8Fcy37T",
     "spotify:track:1JMyndqIXDM7cKmRu3nFws",
     "spotify:track:1JS7SJxALtgTPIbf2OArnE",
@@ -46596,6 +46599,7 @@
     "QMTXS1600026",
     "QMTXS1600073",
     "QMTXS1600077",
+    "QMTXS1600094",
     "QMTXS1600098",
     "QMTXS1600099",
     "QMTXS1600108",
@@ -61570,7 +61574,8 @@
     "spotify:track:0wM5AB7kH7FhQ2jXwXXNEQ": "US2G91452311",
     "spotify:track:0I20aOcnTB0RLrBlSNI65D": "CAN112300236",
     "spotify:track:5EXoEKHi059HnZfjJTp7SR": "USUM71812088",
-    "spotify:track:0m1UvSWBKJBZjopUtfTNOx": "QZTB22237181"
+    "spotify:track:0m1UvSWBKJBZjopUtfTNOx": "QZTB22237181",
+    "spotify:track:1JAWEmqN62UInJkpYS65th": "QMTXS1600094"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -118909,7 +118914,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "norah jones|||flipside",
+  "__last_radio_key_dark_edge": "the black keys|||walk across the water",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -122580,7 +122585,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dkfm_shoegaze",
+  "__v221_last_selected_source": "dkfm_classic",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -122592,7 +122597,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dkfm_shoegaze",
+  "__v224_last_spotify_opportunity_source": "dkfm_classic",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -122625,7 +122630,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dkfm_shoegaze",
+  "__v227_last_source_turn": "dkfm_classic",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -124235,5 +124240,6 @@
   "__match_v35__plusminus|||jumping the tracks": "spotify:track:0wM5AB7kH7FhQ2jXwXXNEQ",
   "__match_v35__bleach lab|||smile for me": "spotify:track:0I20aOcnTB0RLrBlSNI65D",
   "__match_v35__james bay|||just for tonight acoustic": "spotify:track:5EXoEKHi059HnZfjJTp7SR",
-  "__match_v35__arches|||candy": "spotify:track:0m1UvSWBKJBZjopUtfTNOx"
+  "__match_v35__arches|||candy": "spotify:track:0m1UvSWBKJBZjopUtfTNOx",
+  "__match_v35__february|||riproar": "spotify:track:1JAWEmqN62UInJkpYS65th"
 }
