@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "wet leg|||obvious",
+      "d4vd|||here with me",
       "soldier's heart|||african fire",
       "maggie rogers|||so sick of dreaming",
       "jamie woon|||sharpness",
@@ -112,9 +114,7 @@
       "jessie ware|||wildest moments",
       "november ultra|||novembre",
       "marble sounds|||axolotl",
-      "the xx|||say something loving",
-      "florence the machine|||never let me go",
-      "leon bridges feat lydia kitto|||all day all night"
+      "the xx|||say something loving"
     ],
     "mellow_mix": [
       "orchestral manoeuvres in the dark|||la femme accident",
@@ -321,6 +321,7 @@
       "doublespeak benge vince clarke & blancmange|||brand new life"
     ],
     "radio_x_chilled": [
+      "lana del rey|||born to die",
       "blur|||this is a low",
       "black rebel motorcycle club|||fault line",
       "editors|||smokers outside the hospital doors live for radio x",
@@ -419,8 +420,7 @@
       "massive attack|||protection",
       "kings of leon|||knocked up",
       "belle and sebastian|||the boy with the arab strap",
-      "athlete|||tourist",
-      "arlo parks|||black dog"
+      "athlete|||tourist"
     ],
     "dreampop_radio": [
       "honig|||lemon law",
@@ -627,6 +627,7 @@
       "carnival youth|||brown eyes and all the rest"
     ],
     "dkfm_edge": [
+      "flyingfish|||forest green",
       "in the afterglow|||lives in tandem",
       "newdad|||nightmares",
       "ocean daze|||murder your memory",
@@ -725,8 +726,7 @@
       "kestrels|||lilys",
       "buzhold|||shoe case",
       "temple of angels|||the hill",
-      "dead leaf echo|||call",
-      "spywell|||all around you"
+      "dead leaf echo|||call"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -835,6 +835,7 @@
       "billie eilish|||bury a friend"
     ],
     "dkfm_shoegaze": [
+      "momma|||christian brothers",
       "seasurfer|||flurry glory",
       "cold gawd|||grease",
       "deafcult|||sentimental mistake",
@@ -933,8 +934,7 @@
       "all you can hate|||craving",
       "driven by clockwork|||whatever time has told you",
       "everything recently|||lost ground",
-      "deafcult|||mount forever sic",
-      "the first eloi|||drawn into these headlights"
+      "deafcult|||mount forever sic"
     ],
     "dkfm_classic": [
       "cocteau twins|||fotzepolitic",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794697709.2935686,
-    "mellow_mix": 1794697709.2993987,
-    "big_sonic_heaven": 1794697709.30258,
-    "radio_x_chilled": 1794697709.306029,
-    "dreampop_radio": 1794697709.309221,
-    "indie_select": 1794697709.3127294,
-    "dkfm_edge": 1794697709.3164606,
+    "vuurland": 1794697782.0899994,
+    "mellow_mix": 1794697782.0956044,
+    "big_sonic_heaven": 1794697782.098795,
+    "radio_x_chilled": 1794697782.1023319,
+    "dreampop_radio": 1794697782.105464,
+    "indie_select": 1794697782.1088502,
+    "dkfm_edge": 1794697782.1126242,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794697709.3207564,
-    "dkfm_shoegaze": 1794697709.3238256,
-    "dkfm_classic": 1794697709.32748
+    "dark_edge": 1794697782.1168752,
+    "dkfm_shoegaze": 1794697782.1200838,
+    "dkfm_classic": 1794697782.12367
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18245,11 +18245,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "soldier's heart|||african fire",
+  "__last_radio_key_vuurland": "wet leg|||obvious",
   "__last_radio_key_mellow_mix": "orchestral manoeuvres in the dark|||la femme accident",
   "__last_radio_key_big_sonic_heaven": "nightbus|||angles mortz",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17870,
+  "__v116_fifo_next_sequence": 17871,
   "__v146_spotify_budget_slot": 1794697710.7211819,
   "__vuurland_active_playlist_count": 484,
   "__vuurland_active_volume": 2,
@@ -117611,7 +117611,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "blur|||this is a low",
+  "__last_radio_key_radio_x_chilled": "lana del rey|||born to die",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -119196,8 +119196,8 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "in the afterglow|||lives in tandem",
-  "__last_radio_key_dkfm_shoegaze": "seasurfer|||flurry glory",
+  "__last_radio_key_dkfm_edge": "flyingfish|||forest green",
+  "__last_radio_key_dkfm_shoegaze": "momma|||christian brothers",
   "__last_radio_key_dkfm_classic": "cocteau twins|||fotzepolitic",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -119948,8 +119948,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 3066,
-  "__v192_duyster_next_enqueue_at": 1794697775.924673,
+  "__v192_duyster_archive_cursor": 3067,
+  "__v192_duyster_next_enqueue_at": 1794697902.1906276,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
