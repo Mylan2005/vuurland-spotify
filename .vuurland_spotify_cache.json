@@ -321,6 +321,7 @@
       "the giraffe told me in my dream|||drop"
     ],
     "radio_x_chilled": [
+      "cast|||walk away",
       "neil young|||harvest moon",
       "athlete|||you got the style",
       "lana del rey|||born to die",
@@ -419,8 +420,7 @@
       "sam fender|||two people",
       "elbow|||the bones of you",
       "starsailor|||alcoholic",
-      "massive attack|||protection",
-      "kings of leon|||knocked up"
+      "massive attack|||protection"
     ],
     "dreampop_radio": [
       "john grant|||where dreams go to die",
@@ -835,6 +835,7 @@
       "daft punk|||da funk"
     ],
     "dkfm_shoegaze": [
+      "mireal|||do you remember",
       "starbelliedbug|||milkycake",
       "encarta 98|||todo se d e s v a n e c e",
       "momma|||christian brothers",
@@ -933,8 +934,7 @@
       "чары спали|||wet-dry world",
       "new age healers|||the fastest slow",
       "diiv|||the fountain",
-      "all you can hate|||craving",
-      "driven by clockwork|||whatever time has told you"
+      "all you can hate|||craving"
     ],
     "dkfm_classic": [
       "ecstasy of saint theresa|||pistacchio places",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794698476.0202978,
-    "mellow_mix": 1794698476.0258863,
-    "big_sonic_heaven": 1794698476.0290914,
-    "radio_x_chilled": 1794698476.0325954,
-    "dreampop_radio": 1794698476.0361261,
-    "indie_select": 1794698476.039653,
-    "dkfm_edge": 1794698476.043348,
+    "vuurland": 1794698550.4593542,
+    "mellow_mix": 1794698550.4648669,
+    "big_sonic_heaven": 1794698550.468075,
+    "radio_x_chilled": 1794698550.4716723,
+    "dreampop_radio": 1794698550.4750948,
+    "indie_select": 1794698550.478561,
+    "dkfm_edge": 1794698550.4822843,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794698476.0476484,
-    "dkfm_shoegaze": 1794698476.0507576,
-    "dkfm_classic": 1794698476.0543842
+    "dark_edge": 1794698550.4865954,
+    "dkfm_shoegaze": 1794698550.489738,
+    "dkfm_classic": 1794698550.4934227
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18253,7 +18253,7 @@
   "__last_radio_key_mellow_mix": "colin hay|||overkill acoustic",
   "__last_radio_key_big_sonic_heaven": "choux|||thirteen",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17882,
+  "__v116_fifo_next_sequence": 17883,
   "__v146_spotify_budget_slot": 1794698477.4359524,
   "__vuurland_active_playlist_count": 489,
   "__vuurland_active_volume": 2,
@@ -117636,7 +117636,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "neil young|||harvest moon",
+  "__last_radio_key_radio_x_chilled": "cast|||walk away",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -119222,7 +119222,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "stab|||blue light hell",
-  "__last_radio_key_dkfm_shoegaze": "starbelliedbug|||milkycake",
+  "__last_radio_key_dkfm_shoegaze": "mireal|||do you remember",
   "__last_radio_key_dkfm_classic": "ecstasy of saint theresa|||pistacchio places",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -119973,8 +119973,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 3073,
-  "__v192_duyster_next_enqueue_at": 1794698540.3877418,
+  "__v192_duyster_archive_cursor": 3074,
+  "__v192_duyster_next_enqueue_at": 1794698670.5610557,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
