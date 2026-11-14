@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "tom odell|||heal",
+      "father john misty|||mr tillman",
       "the lumineers|||ho hey",
       "bear's den|||laurel wreath",
       "taylor swift feat phoebe bridgers|||nothing new taylor's version",
@@ -112,9 +114,7 @@
       "taylor swift feat bon iver|||exile",
       "tom odell|||the end",
       "maro|||to grieve you",
-      "bleachers|||you and forever",
-      "loverman|||into the night",
-      "jessie ware|||wildest moments"
+      "bleachers|||you and forever"
     ],
     "mellow_mix": [
       "chrissie hynde|||adding the blue",
@@ -219,6 +219,7 @@
       "u2|||wild honey"
     ],
     "big_sonic_heaven": [
+      "deary|||smile",
       "choux|||thirteen",
       "fever ray|||triangle walks",
       "the giraffe told me in my dream|||fading mountains",
@@ -317,8 +318,7 @@
       "glazyhaze|||romeo",
       "chapterhouse|||pearl",
       "bragolin & carrellee|||feel this flame unfold",
-      "blonde redhead|||23",
-      "the giraffe told me in my dream|||drop"
+      "blonde redhead|||23"
     ],
     "radio_x_chilled": [
       "blossoms|||your girlfriend acoustic",
@@ -627,6 +627,7 @@
       "the boxer rebellion|||big ideas"
     ],
     "dkfm_edge": [
+      "flowersatherfeet|||tempted",
       "somesurprises|||be reasonable",
       "stab|||blue light hell",
       "fawning|||under your skin",
@@ -725,8 +726,7 @@
       "leavs|||to be here to stay here",
       "sungazer|||mieste",
       "copperplate|||hello florence",
-      "new age healers|||all wrapped up",
-      "no vacation|||how"
+      "new age healers|||all wrapped up"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794698731.4239671,
-    "mellow_mix": 1794698731.42964,
-    "big_sonic_heaven": 1794698731.432866,
-    "radio_x_chilled": 1794698731.436377,
-    "dreampop_radio": 1794698731.4398465,
-    "indie_select": 1794698731.4433534,
-    "dkfm_edge": 1794698731.4471197,
+    "vuurland": 1794698805.6359398,
+    "mellow_mix": 1794698805.641742,
+    "big_sonic_heaven": 1794698805.645046,
+    "radio_x_chilled": 1794698805.6485214,
+    "dreampop_radio": 1794698805.6520317,
+    "indie_select": 1794698805.6556118,
+    "dkfm_edge": 1794698805.6594462,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794698731.45148,
-    "dkfm_shoegaze": 1794698731.4545803,
-    "dkfm_classic": 1794698731.458313
+    "dark_edge": 1794698805.6637378,
+    "dkfm_shoegaze": 1794698805.6668267,
+    "dkfm_classic": 1794698805.6705282
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18252,11 +18252,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "the lumineers|||ho hey",
+  "__last_radio_key_vuurland": "tom odell|||heal",
   "__last_radio_key_mellow_mix": "chrissie hynde|||adding the blue",
-  "__last_radio_key_big_sonic_heaven": "choux|||thirteen",
+  "__last_radio_key_big_sonic_heaven": "deary|||smile",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17888,
+  "__v116_fifo_next_sequence": 17889,
   "__v146_spotify_budget_slot": 1794698732.8314106,
   "__vuurland_active_playlist_count": 491,
   "__vuurland_active_volume": 2,
@@ -119232,7 +119232,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "somesurprises|||be reasonable",
+  "__last_radio_key_dkfm_edge": "flowersatherfeet|||tempted",
   "__last_radio_key_dkfm_shoegaze": "funsover|||fields",
   "__last_radio_key_dkfm_classic": "swirlies|||intro",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -119984,8 +119984,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 3076,
-  "__v192_duyster_next_enqueue_at": 1794698799.197988,
+  "__v192_duyster_archive_cursor": 3078,
+  "__v192_duyster_next_enqueue_at": 1794698925.7384763,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
