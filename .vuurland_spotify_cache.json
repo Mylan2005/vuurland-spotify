@@ -219,6 +219,7 @@
       "beth orton|||pass in time"
     ],
     "big_sonic_heaven": [
+      "this mortal coil|||another day",
       "siouxsie & the banshees|||face to face",
       "aztec camera|||walk out to winter",
       "state of grace|||diamonds in the sand",
@@ -317,8 +318,7 @@
       "ssaann|||echo",
       "ride|||pulsar",
       "акульи слезы shark's tears|||дождь | rain",
-      "cubzoa|||buckle up",
-      "sugarcubes|||coldsweat"
+      "cubzoa|||buckle up"
     ],
     "radio_x_chilled": [
       "alanis morissette|||head over feet acoustic",
@@ -627,6 +627,7 @@
       "tiger lou|||leap of love"
     ],
     "dkfm_edge": [
+      "blush response|||push & pull",
       "mop|||blue clay",
       "la lune|||a little life",
       "rat palace|||look my way",
@@ -725,8 +726,7 @@
       "indoor voices|||past present",
       "the asteroid no 4|||sky blue",
       "drift|||burden",
-      "lostsleep|||recovery",
-      "slow salvation|||north park dive"
+      "lostsleep|||recovery"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -835,6 +835,8 @@
       "45acidbabies|||dorian dale"
     ],
     "dkfm_shoegaze": [
+      "funsover|||dizzy",
+      "glixen|||medicine bow",
       "diiv|||idiot in the sky",
       "starbelliedbug|||april skies demo",
       "drauve|||close call",
@@ -884,7 +886,6 @@
       "dr horsehead|||alone together",
       "drauve|||two crows",
       "sphere|||holos",
-      "funsover|||dizzy",
       "bosses|||grace",
       "atmos bloom|||closer",
       "sidewave|||headlong",
@@ -933,10 +934,10 @@
       "sy fy gy|||this one",
       "rebecca dow david sloan|||beneath you",
       "spill|||hope you're doing okay",
-      "the sewing club|||complicated",
-      "myveronica|||sick sad world"
+      "the sewing club|||complicated"
     ],
     "dkfm_classic": [
+      "lush|||second sight",
       "my bloody valentine|||soon",
       "lovesliescrushing|||blooded and blossom-blown",
       "half string|||slow engine kill over",
@@ -1035,22 +1036,21 @@
       "cocteau twins|||for phoebe still a baby",
       "catherine wheel|||receive",
       "the house of love|||welt",
-      "lorelei|||quiet staid debt",
-      "band of susans|||thorn in my side"
+      "lorelei|||quiet staid debt"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794691649.431292,
-    "mellow_mix": 1794691649.4360683,
-    "big_sonic_heaven": 1794691649.438952,
-    "radio_x_chilled": 1794691649.4418676,
-    "dreampop_radio": 1794691649.4447987,
-    "indie_select": 1794691649.4480374,
-    "dkfm_edge": 1794691649.4510968,
+    "vuurland": 1794691723.0176427,
+    "mellow_mix": 1794691723.0223546,
+    "big_sonic_heaven": 1794691723.0254269,
+    "radio_x_chilled": 1794691723.0283535,
+    "dreampop_radio": 1794691723.0312686,
+    "indie_select": 1794691723.0345292,
+    "dkfm_edge": 1794691723.0377128,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794691649.4549432,
-    "dkfm_shoegaze": 1794691649.4578385,
-    "dkfm_classic": 1794691649.460913
+    "dark_edge": 1794691723.0416193,
+    "dkfm_shoegaze": 1794691723.6212237,
+    "dkfm_classic": 1794691723.6245286
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18200,9 +18200,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tje|||days exist",
   "__last_radio_key_mellow_mix": "jonathan coulton|||now i am an arsonist w/ suzanne vega",
-  "__last_radio_key_big_sonic_heaven": "siouxsie & the banshees|||face to face",
+  "__last_radio_key_big_sonic_heaven": "this mortal coil|||another day",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17769,
+  "__v116_fifo_next_sequence": 17772,
   "__v146_spotify_budget_slot": 1794691650.82968,
   "__vuurland_active_playlist_count": 443,
   "__vuurland_active_volume": 2,
@@ -118980,9 +118980,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "mop|||blue clay",
-  "__last_radio_key_dkfm_shoegaze": "diiv|||idiot in the sky",
-  "__last_radio_key_dkfm_classic": "my bloody valentine|||soon",
+  "__last_radio_key_dkfm_edge": "blush response|||push & pull",
+  "__last_radio_key_dkfm_shoegaze": "funsover|||dizzy",
+  "__last_radio_key_dkfm_classic": "lush|||second sight",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -119732,8 +119732,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 3000,
-  "__v192_duyster_next_enqueue_at": 1794691716.5943773,
+  "__v192_duyster_archive_cursor": 3001,
+  "__v192_duyster_next_enqueue_at": 1794691843.6923814,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
