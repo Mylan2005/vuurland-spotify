@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "meskerem mees|||seasons shift",
+      "beirut|||postcards from italy",
       "elis floreen|||panther",
       "whitney|||kansas",
       "the xx|||vcr",
@@ -112,11 +114,10 @@
       "the veils|||lavinia",
       "alt-j|||tessellate",
       "ry x|||your love",
-      "mayer hawthorne|||the walk",
-      "london grammar|||oh woman oh man",
-      "kevin morby|||i have been to the mountain"
+      "mayer hawthorne|||the walk"
     ],
     "mellow_mix": [
+      "the band|||stage fright",
       "sam roberts|||hard road",
       "vance joy|||mess is mine",
       "grateful dead|||ripple",
@@ -215,8 +216,7 @@
       "beth orton|||pass in time",
       "thea gilmore|||crazy love",
       "aukai|||azure",
-      "mark knopfler|||hill farmer's blues",
-      "mike oldfield|||muse"
+      "mark knopfler|||hill farmer's blues"
     ],
     "big_sonic_heaven": [
       "state of grace|||diamonds in the sand",
@@ -321,6 +321,7 @@
       "spotlight kid|||sugar pills"
     ],
     "radio_x_chilled": [
+      "nirvana|||something in the way",
       "james bay|||let it go",
       "red hot chili peppers|||under the bridge",
       "elbow|||golden slumbers",
@@ -419,8 +420,7 @@
       "bloc party|||so here we are",
       "the fratellis|||whistle for the choir",
       "embrace|||gravity",
-      "bob dylan|||knockin' on heaven's door",
-      "alanis morissette|||head over feet"
+      "bob dylan|||knockin' on heaven's door"
     ],
     "dreampop_radio": [
       "gregory alan isakov|||big black car",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794691010.536605,
-    "mellow_mix": 1794691010.5414793,
-    "big_sonic_heaven": 1794691010.5444255,
-    "radio_x_chilled": 1794691010.5473175,
-    "dreampop_radio": 1794691010.5502362,
-    "indie_select": 1794691010.553475,
-    "dkfm_edge": 1794691010.5566113,
+    "vuurland": 1794691084.9382236,
+    "mellow_mix": 1794691084.9431272,
+    "big_sonic_heaven": 1794691084.9460227,
+    "radio_x_chilled": 1794691084.949002,
+    "dreampop_radio": 1794691084.951866,
+    "indie_select": 1794691084.9550667,
+    "dkfm_edge": 1794691084.9581559,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794691010.5602446,
-    "dkfm_shoegaze": 1794691010.5631945,
-    "dkfm_classic": 1794691010.5662847
+    "dark_edge": 1794691084.9617817,
+    "dkfm_shoegaze": 1794691084.964651,
+    "dkfm_classic": 1794691084.9677336
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18193,11 +18193,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "elis floreen|||panther",
-  "__last_radio_key_mellow_mix": "sam roberts|||hard road",
+  "__last_radio_key_vuurland": "meskerem mees|||seasons shift",
+  "__last_radio_key_mellow_mix": "the band|||stage fright",
   "__last_radio_key_big_sonic_heaven": "state of grace|||diamonds in the sand",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17760,
+  "__v116_fifo_next_sequence": 17761,
   "__v146_spotify_budget_slot": 1794691011.9369526,
   "__vuurland_active_playlist_count": 438,
   "__vuurland_active_volume": 2,
@@ -117370,7 +117370,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "james bay|||let it go",
+  "__last_radio_key_radio_x_chilled": "nirvana|||something in the way",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -119707,8 +119707,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 2994,
-  "__v192_duyster_next_enqueue_at": 1794691074.6411276,
+  "__v192_duyster_archive_cursor": 2996,
+  "__v192_duyster_next_enqueue_at": 1794691205.034319,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
