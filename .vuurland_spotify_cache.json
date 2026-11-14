@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "marble sounds|||axolotl",
+      "the xx|||say something loving",
       "florence the machine|||never let me go",
       "leon bridges feat lydia kitto|||all day all night",
       "men i trust|||lauren",
@@ -112,9 +114,7 @@
       "marble sounds|||the ever after",
       "xavier rudd|||follow the sun",
       "philemon|||how do you do",
-      "jjerome87|||track and field",
-      "father john misty|||goodbye mr blue",
-      "london grammar|||wasting my young years"
+      "jjerome87|||track and field"
     ],
     "mellow_mix": [
       "u2|||wild honey",
@@ -423,6 +423,7 @@
       "blur|||end of a century"
     ],
     "dreampop_radio": [
+      "kina grannis|||chandelier",
       "turin brakes|||they cant buy the sunshine",
       "jonathan jeremiah|||wild fire",
       "sharon van etten|||one day",
@@ -521,8 +522,7 @@
       "incan abraham|||springhouse",
       "neil finn|||the climber",
       "vetiver|||strictly rule",
-      "haruko|||autumn golden trees",
-      "polyana felbel tommy finke & daniel brandl|||yellow"
+      "haruko|||autumn golden trees"
     ],
     "indie_select": [
       "indieselect|||indieselect-jingle-",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794675264.1972718,
-    "mellow_mix": 1794675264.1997812,
-    "big_sonic_heaven": 1794675264.2017648,
-    "radio_x_chilled": 1794675264.2036936,
-    "dreampop_radio": 1794675264.205507,
-    "indie_select": 1794675264.2076106,
-    "dkfm_edge": 1794675264.209542,
+    "vuurland": 1794675338.976065,
+    "mellow_mix": 1794675338.9787276,
+    "big_sonic_heaven": 1794675338.9807923,
+    "radio_x_chilled": 1794675338.982723,
+    "dreampop_radio": 1794675338.9847379,
+    "indie_select": 1794675338.9869316,
+    "dkfm_edge": 1794675338.9889631,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794675264.2118745,
-    "dkfm_shoegaze": 1794675264.2138507,
-    "dkfm_classic": 1794675264.2158234
+    "dark_edge": 1794675338.9913733,
+    "dkfm_shoegaze": 1794675338.993423,
+    "dkfm_classic": 1794675338.9954662
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18058,11 +18058,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "florence the machine|||never let me go",
+  "__last_radio_key_vuurland": "marble sounds|||axolotl",
   "__last_radio_key_mellow_mix": "u2|||wild honey",
   "__last_radio_key_big_sonic_heaven": "cocteau twins|||aikea-guinea",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17502,
+  "__v116_fifo_next_sequence": 17503,
   "__v146_spotify_budget_slot": 1794675265.4025958,
   "__vuurland_active_playlist_count": 1358,
   "__vuurland_active_volume": 2,
@@ -116912,7 +116912,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "turin brakes|||they cant buy the sunshine",
+  "__last_radio_key_dreampop_radio": "kina grannis|||chandelier",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -119145,8 +119145,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 2837,
-  "__v192_duyster_next_enqueue_at": 1794675331.2992945,
+  "__v192_duyster_archive_cursor": 2838,
+  "__v192_duyster_next_enqueue_at": 1794675459.0578582,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
