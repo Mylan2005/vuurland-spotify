@@ -54,17 +54,34 @@ def main():
         rows=collect(session,f'/playlists/{pid}/items',token,100)
         playlists[key]={'playlist_id':pid,'tracks':rows}
         print('🔥 Volume',key,':',len(rows))
-    likes=collect(session,'/me/tracks',token,50)
-    print('❤️ Liked Songs:',len(likes))
+    # Liked Songs is niet vereist voor de volume-vergelijking. Een live
+    # sync kan de bibliotheek tijdens het bladeren veranderen; laat dat
+    # geen verder complete playlist-snapshot ongeldig maken.
+    likes = None
+    liked_status = "niet_gescand"
+    if os.environ.get("VUURLAND_SNAPSHOT_SCAN_LIKES", "0") == "1":
+        try:
+            likes = collect(session, '/me/tracks', token, 50)
+            liked_status = "compleet"
+            print('❤️ Liked Songs:', len(likes))
+        except (RuntimeError, requests.RequestException) as exc:
+            liked_status = "onvolledig"
+            print('⚠️ Liked Songs niet opgenomen:', str(exc))
+    else:
+        print('ℹ️ Liked Songs bewust overgeslagen; alleen playlistvergelijking.')
     OUT.mkdir(exist_ok=True)
-    for name,data in [('playlists_na.json',playlists),('liked_na.json',likes)]:
+    exports = [('playlists_na.json', playlists)]
+    if likes is not None:
+        exports.append(('liked_na.json', likes))
+    for name, data in exports:
         (OUT/name).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
     manifest={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
               'playlist_counts':{k:len(v['tracks']) for k,v in playlists.items()},
-              'liked_count':len(likes),
-              'sha256':{name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ('playlists_na.json','liked_na.json')}}
+              'liked_status':liked_status,
+              'liked_count':len(likes) if likes is not None else None,
+              'sha256':{name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name, _ in exports}}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
-    print('✅ Volledige LIVE-snapshot opgeslagen. Geen Spotify-wijzigingen, geen cache-reset.')
+    print('✅ LIVE-playlistsnapshot opgeslagen. Geen Spotify-wijzigingen, geen cache-reset.')
 
 if __name__=='__main__':
     try:main()
