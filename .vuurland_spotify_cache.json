@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "billie eilish|||chihiro",
+      "camille camille|||in a song",
       "sufjan stevens|||the only thing",
       "taylor swift feat bon iver|||exile",
       "tom odell|||the end",
@@ -112,9 +114,7 @@
       "smith & burrows|||wonderful life",
       "damien rice|||delicate",
       "naive set|||no relation",
-      "james blake|||i had a dream she took my hand",
-      "nick mulvey|||cucurucu",
-      "the xx|||intro"
+      "james blake|||i had a dream she took my hand"
     ],
     "mellow_mix": [
       "down like silver|||to the river",
@@ -627,6 +627,7 @@
       "primal scream|||uptown calvin harris remix"
     ],
     "dkfm_edge": [
+      "thelma's dream|||sofia",
       "sunsick daisy|||away from me",
       "newdad|||dream of me",
       "dummy|||soonish",
@@ -725,14 +726,14 @@
       "shedfromthebody|||hush",
       "meltway|||disarray",
       "mirror of haze|||paralyzed feat broken nails",
-      "glassmanet|||enter the deep",
-      "crystal canyon|||dreamray"
+      "glassmanet|||enter the deep"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
       "suede|||trash"
     ],
     "dark_edge": [
+      "the walkmen|||heaven",
       "muse|||feeling good",
       "matchbox 20|||back 2 good",
       "patrick watson|||love songs for robots",
@@ -831,8 +832,7 @@
       "ryan adams|||come pick me up",
       "beach house|||hurts to love",
       "max frost|||white lies - ep version",
-      "dna feat suzanne vega|||tom's diner",
-      "trentemøller|||transformer man"
+      "dna feat suzanne vega|||tom's diner"
     ],
     "dkfm_shoegaze": [
       "youth valley|||anchored",
@@ -937,6 +937,7 @@
       "highspire|||disappears"
     ],
     "dkfm_classic": [
+      "veldt|||revolutionary sister",
       "catherine wheel|||i want to touch you",
       "bowery electric|||saved",
       "riverside|||careful light",
@@ -1035,22 +1036,21 @@
       "raspberry jam|||now watch the man",
       "cranes|||golden",
       "band of susans|||the red and the black",
-      "スーハーカー|||drive",
-      "teenage fanclub|||alcoholiday"
+      "スーハーカー|||drive"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794677577.215229,
-    "mellow_mix": 1794677577.2177901,
-    "big_sonic_heaven": 1794677577.2198865,
-    "radio_x_chilled": 1794677577.2218618,
-    "dreampop_radio": 1794677577.2238662,
-    "indie_select": 1794677577.2261012,
-    "dkfm_edge": 1794677577.2281792,
+    "vuurland": 1794677653.1577039,
+    "mellow_mix": 1794677653.160225,
+    "big_sonic_heaven": 1794677653.162274,
+    "radio_x_chilled": 1794677653.1642177,
+    "dreampop_radio": 1794677653.1661618,
+    "indie_select": 1794677653.1684117,
+    "dkfm_edge": 1794677653.17065,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794677577.2306774,
-    "dkfm_shoegaze": 1794677577.2327576,
-    "dkfm_classic": 1794677577.2348497
+    "dark_edge": 1794677653.3539512,
+    "dkfm_shoegaze": 1794677653.356226,
+    "dkfm_classic": 1794677653.3584583
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14040,6 +14040,7 @@
       "the verve|||so sister",
       "the verve|||sonnet",
       "the view|||same jeans",
+      "the walkmen|||heaven",
       "the walkmen|||we can't be beat",
       "the wallflowers|||one headlight",
       "the war on drugs|||an ocean in between the waves",
@@ -18076,11 +18077,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "sufjan stevens|||the only thing",
+  "__last_radio_key_vuurland": "billie eilish|||chihiro",
   "__last_radio_key_mellow_mix": "down like silver|||to the river",
   "__last_radio_key_big_sonic_heaven": "moev|||sentencing",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17535,
+  "__v116_fifo_next_sequence": 17537,
   "__v146_spotify_budget_slot": 1794677578.4389899,
   "__vuurland_active_playlist_count": 1374,
   "__vuurland_active_volume": 2,
@@ -118476,9 +118477,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "sunsick daisy|||away from me",
+  "__last_radio_key_dkfm_edge": "thelma's dream|||sofia",
   "__last_radio_key_dkfm_shoegaze": "youth valley|||anchored",
-  "__last_radio_key_dkfm_classic": "catherine wheel|||i want to touch you",
+  "__last_radio_key_dkfm_classic": "veldt|||revolutionary sister",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -118490,7 +118491,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "muse|||feeling good",
+  "__last_radio_key_dark_edge": "the walkmen|||heaven",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -119228,8 +119229,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 2861,
-  "__v192_duyster_next_enqueue_at": 1794677644.0429344,
+  "__v192_duyster_archive_cursor": 2864,
+  "__v192_duyster_next_enqueue_at": 1794677773.4204943,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
