@@ -14,7 +14,7 @@ def safe_spotify_endpoint(endpoint):
     path = re.sub(r"/artists/[^/]+", "/artists/{id}", path)
     path = re.sub(r"/albums/[^/]+", "/albums/{id}", path)
     if path not in {"/search", "/me", "/me/playlists", "/me/library"} and not (
-        re.fullmatch(r"/playlists/\{id\}/(?:items|tracks)?", path)
+        re.fullmatch(r"/playlists/\{id\}(?:/(?:items|tracks))?", path)
         or re.fullmatch(r"/tracks/\{id\}", path)
         or re.fullmatch(r"/artists/\{id\}", path)
         or re.fullmatch(r"/albums/\{id\}", path)
