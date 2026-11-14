@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "isaac roux|||lost in some dream",
+      "regina spektor|||samson",
       "radiohead|||pyramid song",
       "metronomy|||things will be fine",
       "jorja smith|||february 3rd",
@@ -112,11 +114,10 @@
       "eddie vedder|||guaranteed",
       "blanco white|||colder heavens",
       "beck|||everybody's got to learn sometime",
-      "sault|||wildfires",
-      "kings of leon|||my whole world",
-      "the war on drugs|||holding on"
+      "sault|||wildfires"
     ],
     "mellow_mix": [
+      "the civil wars|||20 years",
       "leon russell|||magic mirror",
       "jenny lewis|||pretty bird",
       "van morrison|||and it stoned me",
@@ -215,8 +216,7 @@
       "anna ternheim|||lovers dream",
       "antonio carlos jobim|||corcovado",
       "stevie wonder|||i believe",
-      "daniel lanois|||jolie louise",
-      "nickel creek|||tomorrow is a long time"
+      "daniel lanois|||jolie louise"
     ],
     "big_sonic_heaven": [
       "the haunted youth|||hurt",
@@ -937,6 +937,7 @@
       "vim|||down"
     ],
     "dkfm_classic": [
+      "stereolab|||cybele's reverie",
       "rollerskate skinny|||speed to my side",
       "church|||hotel womb",
       "black tambourine|||by tomorrow",
@@ -1035,22 +1036,21 @@
       "the sundays|||what do you think?",
       "the chameleons|||seriocity",
       "piano magic|||waking up",
-      "flying saucer attack|||moonset",
-      "the curtain society|||september scar two"
+      "flying saucer attack|||moonset"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794632746.2646356,
-    "mellow_mix": 1794632746.271935,
-    "big_sonic_heaven": 1794632746.2767096,
-    "radio_x_chilled": 1794632746.281761,
-    "dreampop_radio": 1794632746.2869318,
-    "indie_select": 1794632746.2924483,
-    "dkfm_edge": 1794632746.2980998,
+    "vuurland": 1794632823.9582477,
+    "mellow_mix": 1794632823.9656665,
+    "big_sonic_heaven": 1794632823.9703848,
+    "radio_x_chilled": 1794632823.975356,
+    "dreampop_radio": 1794632823.9804413,
+    "indie_select": 1794632823.9859173,
+    "dkfm_edge": 1794632823.9915473,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794632746.3041987,
-    "dkfm_shoegaze": 1794632746.3096132,
-    "dkfm_classic": 1794632746.3149853
+    "dark_edge": 1794632823.9976153,
+    "dkfm_shoegaze": 1794632824.0029602,
+    "dkfm_classic": 1794632824.0084574
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17640,8 +17640,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "radiohead|||pyramid song",
-  "__last_radio_key_mellow_mix": "leon russell|||magic mirror",
+  "__last_radio_key_vuurland": "isaac roux|||lost in some dream",
+  "__last_radio_key_mellow_mix": "the civil wars|||20 years",
   "__last_radio_key_big_sonic_heaven": "the haunted youth|||hurt",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 16742,
@@ -116906,7 +116906,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "the shallows|||murder your darlings",
   "__last_radio_key_dkfm_shoegaze": "berzica|||new star",
-  "__last_radio_key_dkfm_classic": "rollerskate skinny|||speed to my side",
+  "__last_radio_key_dkfm_classic": "stereolab|||cybele's reverie",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
