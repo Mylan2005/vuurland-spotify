@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sylvie kreusch|||belle",
+      "balthazar|||blood like wine",
       "the paper kites feat julia stone|||without your love",
       "the slow show|||hey lover",
       "dressed like boys|||healing",
@@ -112,9 +114,7 @@
       "ben kweller feat mj lenderman|||oh dorian",
       "hermanos gutierrez|||canto andino",
       "noah yorke|||trying too hard lullaby",
-      "beck|||think i'm in love",
-      "laufey|||silver lining",
-      "unknown mortal orchestra|||so good at being in trouble"
+      "beck|||think i'm in love"
     ],
     "mellow_mix": [
       "crosby & nash|||lay me down",
@@ -219,6 +219,7 @@
       "traffic|||walking in the wind"
     ],
     "big_sonic_heaven": [
+      "bragolin & carrellee|||feel this flame unfold",
       "blonde redhead|||23",
       "the giraffe told me in my dream|||drop",
       "ian mcculloch|||lover lover lover",
@@ -317,8 +318,7 @@
       "postiljonen|||atlantis",
       "trentemøller|||halved",
       "dead can dance|||rakim live",
-      "yndling|||some things you don't get",
-      "nightbus|||angles mortz"
+      "yndling|||some things you don't get"
     ],
     "radio_x_chilled": [
       "air|||sexy boy",
@@ -423,6 +423,7 @@
       "smashing pumpkins|||1979"
     ],
     "dreampop_radio": [
+      "po' girl|||take the long way",
       "the sand band|||set me free",
       "admiral fallow|||subbuteo",
       "girls in hawaii|||shades of time",
@@ -521,10 +522,10 @@
       "girls in hawaii|||found in the ground",
       "seafret|||oceans",
       "the paper kites|||featherstone",
-      "neil finn|||last to know",
-      "liza anne|||room"
+      "neil finn|||last to know"
     ],
     "indie_select": [
+      "maximo park|||brain cells",
       "editors|||sugar",
       "all about eve|||wild hearted woman",
       "the comsat angels|||high tide",
@@ -623,8 +624,7 @@
       "plus/minus|||making the horse drink",
       "the twilight sad|||the room",
       "phillip boa|||cruising",
-      "the answering machine|||a courtyard",
-      "lali puna|||faking the books"
+      "the answering machine|||a courtyard"
     ],
     "dkfm_edge": [
       "death of heather|||endless emotions",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "white lies|||don't fall",
       "polifauna|||last days of summer",
       "jack leopards & the dolphin club|||look what you made me do",
       "tove lo|||habits stay high hippie sabotage remix",
@@ -831,10 +832,11 @@
       "dirty art club|||blisstrap",
       "nirvana|||dumb",
       "u2|||numb",
-      "balam acab|||oh why",
-      "haim|||forever"
+      "balam acab|||oh why"
     ],
     "dkfm_shoegaze": [
+      "just penelope|||after",
+      "tycho & sea lemon|||anotherwave",
       "atmos bloom|||plain sailing",
       "highspire|||joke's on you",
       "vida eterna|||had to let you know",
@@ -932,9 +934,7 @@
       "sphere|||qualia",
       "emerald comets|||runway out",
       "sky is alright|||emily's star",
-      "highspire|||brontosaurus",
-      "the sewing club|||strange 2",
-      "alonekitty|||tell me that you've lost your mind"
+      "highspire|||brontosaurus"
     ],
     "dkfm_classic": [
       "slowdive|||sing",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794670130.3066409,
-    "mellow_mix": 1794670130.3088644,
-    "big_sonic_heaven": 1794670130.3107285,
-    "radio_x_chilled": 1794670130.3124392,
-    "dreampop_radio": 1794670130.3141725,
-    "indie_select": 1794670130.3161573,
-    "dkfm_edge": 1794670130.3180137,
+    "vuurland": 1794670204.388257,
+    "mellow_mix": 1794670204.3904662,
+    "big_sonic_heaven": 1794670204.392361,
+    "radio_x_chilled": 1794670204.394048,
+    "dreampop_radio": 1794670204.3957791,
+    "indie_select": 1794670204.397879,
+    "dkfm_edge": 1794670204.399684,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794670130.3202357,
-    "dkfm_shoegaze": 1794670130.3221667,
-    "dkfm_classic": 1794670130.3241484
+    "dark_edge": 1794670204.5874987,
+    "dkfm_shoegaze": 1794670204.589604,
+    "dkfm_classic": 1794670204.5914664
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14236,6 +14236,7 @@
       "when in rome|||the promise",
       "when we land|||come home",
       "whistle peak|||big and bright",
+      "white lies|||don't fall",
       "white lies|||farewell to the fairground",
       "white lies|||getting even",
       "white lies|||there goes our love again",
@@ -18007,11 +18008,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "the paper kites feat julia stone|||without your love",
+  "__last_radio_key_vuurland": "sylvie kreusch|||belle",
   "__last_radio_key_mellow_mix": "crosby & nash|||lay me down",
-  "__last_radio_key_big_sonic_heaven": "blonde redhead|||23",
+  "__last_radio_key_big_sonic_heaven": "bragolin & carrellee|||feel this flame unfold",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 17406,
+  "__v116_fifo_next_sequence": 17408,
   "__v146_spotify_budget_slot": 1794670131.5324955,
   "__vuurland_active_playlist_count": 1321,
   "__vuurland_active_volume": 2,
@@ -116706,7 +116707,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the sand band|||set me free",
+  "__last_radio_key_dreampop_radio": "po' girl|||take the long way",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -116824,7 +116825,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "editors|||sugar",
+  "__last_radio_key_indie_select": "maximo park|||brain cells",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -118188,7 +118189,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "death of heather|||endless emotions",
-  "__last_radio_key_dkfm_shoegaze": "atmos bloom|||plain sailing",
+  "__last_radio_key_dkfm_shoegaze": "just penelope|||after",
   "__last_radio_key_dkfm_classic": "slowdive|||sing",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -118201,7 +118202,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "polifauna|||last days of summer",
+  "__last_radio_key_dark_edge": "white lies|||don't fall",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -118939,8 +118940,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 2789,
-  "__v192_duyster_next_enqueue_at": 1794670197.7177217,
+  "__v192_duyster_archive_cursor": 2790,
+  "__v192_duyster_next_enqueue_at": 1794670324.6524894,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
