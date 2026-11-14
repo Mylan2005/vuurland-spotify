@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "trixie whitley|||closer",
+      "blanco white|||el buho",
       "audrey hobert|||wet hair",
       "bleachers|||you and forever",
       "isaac roux|||lost in some dream",
@@ -112,9 +114,7 @@
       "men i trust|||carried away",
       "matt berninger & rosanne cash|||who loves the sun",
       "ry x|||let you go",
-      "adrianne lenker|||anything",
-      "eddie vedder|||guaranteed",
-      "blanco white|||colder heavens"
+      "adrianne lenker|||anything"
     ],
     "mellow_mix": [
       "when in rome|||the promise",
@@ -525,6 +525,7 @@
       "olivia broadfield|||don't cry"
     ],
     "indie_select": [
+      "the stills|||being here",
       "the wombats|||techno fan",
       "the joy formidable|||a second in white",
       "garbage|||if i lost you",
@@ -623,8 +624,7 @@
       "chvrches|||recover",
       "lali puna bomb the bass|||clearcut",
       "maps|||you don't know her name",
-      "delorean|||seasun",
-      "yacht|||summer song"
+      "delorean|||seasun"
     ],
     "dkfm_edge": [
       "swirlpool|||distant echoes",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "two feet|||pink",
       "cake|||short skirt/long jacket album version",
       "hurts|||better than love",
       "get cape wear cape fly|||white lines road signs and vacuous minds: the life and times of a disenfranchised rockstar",
@@ -831,8 +832,7 @@
       "soda shop|||keep swimming",
       "portishead|||wandering star",
       "inning|||expensive flights",
-      "mk gee|||i know how you get",
-      "beck|||beautiful way"
+      "mk gee|||i know how you get"
     ],
     "dkfm_shoegaze": [
       "spacecadetbloom|||crucify",
@@ -1040,17 +1040,17 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794633546.1221623,
-    "mellow_mix": 1794633546.1296864,
-    "big_sonic_heaven": 1794633546.1345406,
-    "radio_x_chilled": 1794633546.1396434,
-    "dreampop_radio": 1794633546.1448953,
-    "indie_select": 1794633546.1504767,
-    "dkfm_edge": 1794633546.156323,
+    "vuurland": 1794633624.1288211,
+    "mellow_mix": 1794633624.1362064,
+    "big_sonic_heaven": 1794633624.1410484,
+    "radio_x_chilled": 1794633624.146174,
+    "dreampop_radio": 1794633624.1514778,
+    "indie_select": 1794633624.157247,
+    "dkfm_edge": 1794633624.1629984,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794633546.1624966,
-    "dkfm_shoegaze": 1794633546.1678526,
-    "dkfm_classic": 1794633546.1732497
+    "dark_edge": 1794633624.3839812,
+    "dkfm_shoegaze": 1794633624.3895109,
+    "dkfm_classic": 1794633624.3950055
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13921,6 +13921,7 @@
       "two door cinema club|||talk",
       "two door cinema club|||undercover martyn",
       "two door cinema club|||what you know",
+      "two feet|||pink",
       "tyler burkhart|||jude's song",
       "u2|||13 there is a light",
       "u2|||bullet the blue sky",
@@ -17646,11 +17647,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "audrey hobert|||wet hair",
+  "__last_radio_key_vuurland": "trixie whitley|||closer",
   "__last_radio_key_mellow_mix": "when in rome|||the promise",
   "__last_radio_key_big_sonic_heaven": "tokyo shoegazer|||new dawn",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 16755,
+  "__v116_fifo_next_sequence": 16756,
   "__v146_spotify_budget_slot": 1794633548.1626532,
   "__vuurland_active_playlist_count": 79,
   "__vuurland_active_volume": 2,
@@ -115571,7 +115572,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the wombats|||techno fan",
+  "__last_radio_key_indie_select": "the stills|||being here",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -116948,7 +116949,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "cake|||short skirt/long jacket album version",
+  "__last_radio_key_dark_edge": "two feet|||pink",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
