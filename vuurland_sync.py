@@ -32,6 +32,7 @@ from duyster_archive_fifo import enqueue_one as enqueue_duyster_archive_one
 from v221_source_round_robin import fair_source_candidates
 from v232_verified_radio_metadata import verified_radio_metadata as v232_radio_metadata
 from v233_general_radio_metadata import normalize_radio_metadata as v233_radio_metadata
+from v235_general_search_rescue import catalog_search_artist as v235_search_artist, rescue_search_query as v235_rescue_query
 from v227_strict_source_turns import next_source_turn
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
@@ -3066,6 +3067,9 @@ def find_spotify_track(
     # v207: uitsluitend VOLLEDIG geverifieerde artiestennaam-varianten
     # voor de zoekhint; kandidaatcontrole blijft onafhankelijk verplicht.
     spotify_search_artist = v207_artist_search_name(spotify_search_artist, title)
+    # v235: algemene zoekhint voor letter-voor-letter geschreven artiesten.
+    # Dit verandert NOOIT primary_search_artist of de eindmatchcriteria.
+    spotify_search_artist = v235_search_artist(spotify_search_artist)
 
     # Zoek op de actuele Spotify-artiestnaam wanneer een
     # expliciete alias bekend is.
@@ -3450,6 +3454,11 @@ def find_spotify_track(
         catalog_id = v82_confirmed_locator(load_cache(), artist, title)
         if catalog_id:
             catalog_reason = 'v82'
+    # v235: alleen de reeds geplande zoekquery veilig verbreden bij
+    # afgebroken radiotitels; geen extra Spotify Search of match-autorisatie.
+    if not catalog_id:
+        query = v235_rescue_query(spotify_search_artist, search_title, query, search_variant)
+
     if catalog_id:
         print(f"📀 {catalog_reason} cataloguscontrole: {artist} — {title} (geen Search nodig; volledige validatie)")
         catalog_track = spotify_request(
