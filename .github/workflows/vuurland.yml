@@ -14,6 +14,9 @@ on:
       - 'v235_general_search_rescue.py'
       - 'test_v203_matcher_upgrade_requeue_offline.py'
       - 'test_v233_general_radio_metadata_offline.py'
+      - 'v239_structural_title_rescue.py'
+      - 'v239_reported_miss_retries.py'
+      - 'test_v239_structural_title_rescue_offline.py'
   schedule:
     - cron: "17 */6 * * *"
 
@@ -173,6 +176,8 @@ jobs:
             python3 test_v233_general_radio_metadata_offline.py
             python3 test_v234_volume_switch_offline.py
             python3 test_v235_general_search_rescue_offline.py
+            python3 test_v203_matcher_upgrade_requeue_offline.py
+            python3 test_v239_structural_title_rescue_offline.py
             python3 test_v236_spotify_403_diagnostics_offline.py
             python3 test_dark_edge_filter_offline.py
             python3 test_v212_music_policy_offline.py
