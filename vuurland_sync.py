@@ -145,6 +145,7 @@ SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlist/?lang=nl"
 EGOFM_RNB_SOURCE_URL = "https://onlineradiobox.com/de/egofmrb/playlist/?lang=nl"
 EGOFM_CHILLOUT_SOURCE_URL = "https://onlineradiobox.com/de/egofmchillout/playlist/?lang=nl"
+DJ_NEIHTUL_SOURCE_URL = "https://onlineradiobox.com/de/djneihtul/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
@@ -159,7 +160,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout")  # Twaalf live bronnen; Radio X main blijft uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul")  # Dertien live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -1414,6 +1415,29 @@ def get_egofm_rnb_tracks():
 def get_egofm_chillout_tracks():
     """egoFM Chillout: Online Radio Box-playlist, met veilige live-nulmeting."""
     return get_radiobox_tracks(EGOFM_CHILLOUT_SOURCE_URL, "egoFM Chillout")
+
+
+# Bewust geen brede house/techno- of nachtfilter: de bron bevat veel passende
+# elektronische parels. Alleen twee uitgesproken rave-opnames uitsluiten.
+DJ_NEIHTUL_EXCLUDED_TRACKS = frozenset({
+    ("human resource", "dominator"),
+    ("human ressource", "dominator"),
+    ("hardfloor", "acperience 1"),
+})
+
+
+def get_dj_neihtul_tracks():
+    """DJ Neihtul: live RadioBox-feed, zonder historische backfill."""
+    raw = get_radiobox_tracks(DJ_NEIHTUL_SOURCE_URL, "DJ Neihtul")
+    selected = []
+    for artist, title in raw:
+        key = (" ".join(artist.casefold().split()),
+               " ".join(title.casefold().split()))
+        if key in DJ_NEIHTUL_EXCLUDED_TRACKS or v191_is_german_vocal_risk(artist, title):
+            print(f"⏭️ DJ Neihtul: uitgesloten opname/taalrisico: {artist} — {title}")
+            continue
+        selected.append((artist, title))
+    return selected
 
 
 def get_big_sonic_heaven_tracks():
@@ -7323,6 +7347,7 @@ def sync():
         "mellow_mix": ("Radio Paradise Mellow Mix", get_mellow_mix_tracks, "__last_radio_key_mellow_mix"),
         "egofm_rnb": ("egoFM R&B", get_egofm_rnb_tracks, "__last_radio_key_egofm_rnb"),
         "egofm_chillout": ("egoFM Chillout", get_egofm_chillout_tracks, "__last_radio_key_egofm_chillout"),
+        "dj_neihtul": ("DJ Neihtul", get_dj_neihtul_tracks, "__last_radio_key_dj_neihtul"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
