@@ -7,6 +7,7 @@ regio- en duplicatecontroles. Nooit een match goedkeuren in deze module.
 import re
 
 from v239_structural_title_rescue import safe_search_title
+from v241_final_plural_rescue import final_s_candidate_title
 
 
 def catalog_search_artist(artist):
@@ -70,6 +71,11 @@ def rescue_search_query(artist, title, query, variant):
         # De originele query hoeft niet opnieuw samengesteld te worden:
         # vervang uitsluitend letter-voor-letter tokens als HELE woordgroep.
         result = result.replace(original_artist, search_artist)
+    # v241: on an existing retry only, query final-s plural title forms;
+    # search alone never authorizes a track or removes guest/version checks.
+    _v241_plural = final_s_candidate_title(title) if int(variant or 0) >= 1 else None
+    if _v241_plural and search_artist:
+        return f'"{search_artist.replace(chr(34), " ")}" "{_v241_plural.replace(chr(34), " ")}"'
     # Source-independent title variants on the already budgeted retry call.
     # Never change the version or trust a search query as a match decision.
     _v239_title = safe_search_title(original_artist, title, variant)

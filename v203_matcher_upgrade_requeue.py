@@ -19,6 +19,7 @@ from v211_report_search_rescue import (
 )
 from v233_general_radio_metadata import normalize_radio_metadata
 from v239_structural_title_rescue import safe_search_title
+from v241_final_plural_rescue import final_s_candidate_title
 from v239_reported_miss_retries import reported_for_safe_retry
 from v235_general_search_rescue import catalog_search_artist, split_compound_light_title
 from v209_verified_source_title import verified_emily_live_source_title
@@ -52,6 +53,7 @@ MATCHER_RETRY_RULES = (
     "v238_spotify_search_spelling",
     "v239_structural_query",
     "v239_reported_source_retry",
+    "v241_final_plural_title",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -127,6 +129,8 @@ def applicable_rules(artist, title):
     if (catalog_search_artist(artist) != artist
             or split_compound_light_title(title) is not None):
         hits.append("v238_spotify_search_spelling")
+    if final_s_candidate_title(title) is not None:
+        hits.append("v241_final_plural_title")
     if safe_search_title(artist, title, 1) is not None:
         hits.append("v239_structural_query")
     # Explicit user-provided log: retry only if the ORIGINAL failure and
