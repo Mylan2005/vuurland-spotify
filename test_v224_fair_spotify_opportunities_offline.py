@@ -32,11 +32,11 @@ add_cursor = sync.rindex(f'cache["{key}"] = selected_source')
 assert sync.index('if uri in playlist_uris:') < add_cursor < sync.index('add_tracks(\n            playlist_id')
 
 # Verschillende wachtrijgroottes geven dezelfde Search-kans bij 11
-# actieve bronnen. Fouten of missers houden de bron niet eindeloos vast.
+# actieve bronnen (12 radio + Duyster). Fouten of missers houden de bron niet eindeloos vast.
 sources = (
     "vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled",
     "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge",
-    "dkfm_shoegaze", "dkfm_classic", "duyster",
+    "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "duyster",
 )
 queue = []
 for i, source in enumerate(sources):
