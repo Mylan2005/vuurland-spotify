@@ -39,6 +39,19 @@ for a, t in (
 ):
     assert applicable_rules(a, t) == (), (a,t)
 
+# General spelling fixes are retry-eligible only for real historical misses.
+assert "v238_general_radio_metadata" in applicable_rules("GoldLink x Hare Squead", "Herside Story")
+assert "v238_general_radio_metadata" in applicable_rules("Portishead", "Portishead - Half Day Closing")
+assert "v238_spotify_search_spelling" in applicable_rules("Josh Rouse", "Streetlights")
+assert "v238_spotify_search_spelling" in applicable_rules("T R A C E S", "conceal")
+assert applicable_rules("GoldLink & Hare Squead", "Herside Story") == ()
+k_spelling, spelling_cache = parked("Josh Rouse", "Streetlights")
+spelling_queue = []
+assert run(spelling_cache, spelling_queue) == (1, 0)
+assert spelling_queue[0] == {"artist": "Josh Rouse", "title": "Streetlights", "source": "indie_select", "_v34_search_variant": 0}
+assert k_spelling not in spelling_cache["__v51_radio_unmatched"]
+assert run(spelling_cache, spelling_queue, now=2000000000 + 7 * 3600) == (0, 0)
+
 k, cache = parked()
 queue = [{"artist": "Other", "title": "First", "source": "vuurland",
           "_v116_fifo_seq": 41}]

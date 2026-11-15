@@ -17,6 +17,8 @@ from v211_report_search_rescue import (
     mint_julep_catalog_search_title as v211_mint_title,
     unconfirmed_song_search as v211_unconfirmed_query,
 )
+from v233_general_radio_metadata import normalize_radio_metadata
+from v235_general_search_rescue import catalog_search_artist, split_compound_light_title
 from v209_verified_source_title import verified_emily_live_source_title
 from v216_report_metadata import has_report_correction
 from v217_report_search import has_report_search_rescue
@@ -44,6 +46,8 @@ MATCHER_RETRY_RULES = (
     "v211_unconfirmed_catalog_safe_search",
     "v216_report_exact_metadata",
     "v217_report_independent_third_search",
+    "v238_general_radio_metadata",
+    "v238_spotify_search_spelling",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -112,6 +116,13 @@ def applicable_rules(artist, title):
         hits.append("v216_report_exact_metadata")
     if has_report_search_rescue(artist, title):
         hits.append("v217_report_independent_third_search")
+    # A spelling correction only releases a historical observed miss. It does
+    # not certify a Spotify recording, nor weaken the normal candidate gates.
+    if normalize_radio_metadata(artist, title) != (artist, title):
+        hits.append("v238_general_radio_metadata")
+    if (catalog_search_artist(artist) != artist
+            or split_compound_light_title(title) is not None):
+        hits.append("v238_spotify_search_spelling")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
