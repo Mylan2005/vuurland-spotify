@@ -146,6 +146,7 @@ MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlis
 EGOFM_RNB_SOURCE_URL = "https://onlineradiobox.com/de/egofmrb/playlist/?lang=nl"
 EGOFM_CHILLOUT_SOURCE_URL = "https://onlineradiobox.com/de/egofmchillout/playlist/?lang=nl"
 DJ_NEIHTUL_SOURCE_URL = "https://onlineradiobox.com/de/djneihtul/playlist/?lang=nl"
+GRI_BALKON_SOURCE_URL = "https://onlineradiobox.com/tr/gribalcon/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
@@ -160,7 +161,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul")  # Dertien live bronnen; Radio X main blijft uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon")  # Veertien live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -1435,6 +1436,28 @@ def get_dj_neihtul_tracks():
                " ".join(title.casefold().split()))
         if key in DJ_NEIHTUL_EXCLUDED_TRACKS or v191_is_german_vocal_risk(artist, title):
             print(f"⏭️ DJ Neihtul: uitgesloten opname/taalrisico: {artist} — {title}")
+            continue
+        selected.append((artist, title))
+    return selected
+
+
+def get_gri_balkon_tracks():
+    """Gri Balkon: brede elektronische selectie, zonder stationjingles.
+
+    Gri Balkon - TR/TR 2/TR 3 zijn stationidentificaties, geen muziek.
+    Duitstalige titelsignalen blijven geblokkeerd; andere muziek blijft
+    onderworpen aan de bestaande globale taal-, Spotify- en duplicatechecks.
+    """
+    raw = get_radiobox_tracks(GRI_BALKON_SOURCE_URL, "Gri Balkon")
+    selected = []
+    for artist, title in raw:
+        station_artist = " ".join(str(artist).casefold().split())
+        station_title = " ".join(str(title).casefold().split())
+        if station_artist == "gri balkon" and station_title in {"tr", "tr 2", "tr 3"}:
+            print(f"⏭️ Gri Balkon: stationjingle overgeslagen: {artist} — {title}")
+            continue
+        if v191_is_german_vocal_risk(artist, title):
+            print(f"⏭️ Gri Balkon: Duitse taalsignalen: {artist} — {title}")
             continue
         selected.append((artist, title))
     return selected
@@ -7348,6 +7371,7 @@ def sync():
         "egofm_rnb": ("egoFM R&B", get_egofm_rnb_tracks, "__last_radio_key_egofm_rnb"),
         "egofm_chillout": ("egoFM Chillout", get_egofm_chillout_tracks, "__last_radio_key_egofm_chillout"),
         "dj_neihtul": ("DJ Neihtul", get_dj_neihtul_tracks, "__last_radio_key_dj_neihtul"),
+        "gri_balkon": ("Gri Balkon", get_gri_balkon_tracks, "__last_radio_key_gri_balkon"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
