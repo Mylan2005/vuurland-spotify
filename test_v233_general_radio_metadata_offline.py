@@ -49,7 +49,7 @@ assert normalize_mixed_script_typos("Jumping") == "Jumping"
 # v238: de x-verbinder is een algemeen duo-formaat, geen artist-alias.
 assert normalize_radio_metadata("GoldLink x Hare Squead", "Herside Story") == (
     "GoldLink & Hare Squead", "Herside Story")
-assert normalize_radio_metadata("Artist Alpha X Artist Beta", "Deep Track") == (
+assert normalize_radio_metadata("Artist Alpha x Artist Beta", "Deep Track") == (
     "Artist Alpha & Artist Beta", "Deep Track")
 for untouched in ("X Japan", "The xx", "Project X", "The X Factor"):
     assert normalize_radio_metadata(untouched, "Track")[0] == untouched
