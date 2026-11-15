@@ -1883,6 +1883,8 @@ def v119_is_german_title(title):
 # v102: Duitse ZANG uitsluiten, niet Duitse titels of artiesten.
 # Alleen gecontroleerde opnames. Geen automatische taalherkenning op metadata.
 GERMAN_VOCAL_RADIO_TRACKS = frozenset({
+    # Keimzeit - Kling Klang (1993): confirmed German vocals (Dreampop Radio).
+    ("keimzeit", "kling klang"),
     ("thees uhlmann", "zum laichen und sterben ziehen die lachse den fluss hinauf"),
     ("thees uhlmann", "zum laichen und sterben ziehen die lachse den fluss hinauf live gf36"),
 
