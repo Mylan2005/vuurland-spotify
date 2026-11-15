@@ -96,3 +96,20 @@ def structural_recording_equivalent(requested, candidate, *, primary_artist_exac
         (left_theme and right_plain and _fold(left_theme) == _fold(right_plain))
         or (right_theme and left_plain and _fold(right_theme) == _fold(left_plain))
     )
+
+
+def explicit_dual_feature_names(feature_credit):
+    """Parse '&' *only* after an explicit feat marker has isolated guests.
+
+    Each guest must have a complete multiword name; normal band identities
+    and '&' in primary artists remain untouched. This only demands MORE
+    credited artists in the ordinary matcher, never approves solo results.
+    """
+    value = str(feature_credit or "").strip()
+    match = re.fullmatch(r"(.+?)\\s+(?:&|and)\\s+(.+)", value, re.I)
+    if not match:
+        return None
+    parts = tuple(" ".join(x.split()) for x in match.groups())
+    if any(len(re.findall(r"\\w+", x)) < 2 or len(x) < 5 for x in parts):
+        return None
+    return parts
