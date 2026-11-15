@@ -580,6 +580,12 @@ def spotify_request(
 ):
 
     global SPOTIFY_SEARCH_HTTP_USED
+    # Defense in depth: no code path may add/remove saved library tracks.
+    # Unlike playlist writes, this endpoint is intentionally read-only.
+    _library_path = str(endpoint or "").split("?", 1)[0].rstrip("/")
+    if str(method or "").upper() in {"PUT", "POST", "DELETE"} and (
+            _library_path in {"/me/library", "/me/tracks"}):
+        raise RuntimeError("Playlist-only: Liked Songs wijzigingen zijn uitgeschakeld.")
     is_search = endpoint.split("?", 1)[0].rstrip("/") == "/search"
     max_server_errors = 5
     server_errors = 0
