@@ -144,6 +144,7 @@ ARTIST_ALIASES = {
 SOURCE_URL = "https://onlineradiobox.com/be/vuurland/playlist/?lang=nl"
 MELLOW_MIX_SOURCE_URL = "https://onlineradiobox.com/us/paradisemellowmix/playlist/?lang=nl"
 EGOFM_RNB_SOURCE_URL = "https://onlineradiobox.com/de/egofmrb/playlist/?lang=nl"
+EGOFM_CHILLOUT_SOURCE_URL = "https://onlineradiobox.com/de/egofmchillout/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
@@ -158,7 +159,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb")  # Elf live bronnen; Radio X main blijft uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout")  # Twaalf live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -1408,6 +1409,11 @@ def get_mellow_mix_tracks():
 def get_egofm_rnb_tracks():
     """egoFM R&B: alleen de zichtbare Online Radio Box-livemetingen."""
     return get_radiobox_tracks(EGOFM_RNB_SOURCE_URL, "egoFM R&B")
+
+
+def get_egofm_chillout_tracks():
+    """egoFM Chillout: Online Radio Box-playlist, met veilige live-nulmeting."""
+    return get_radiobox_tracks(EGOFM_CHILLOUT_SOURCE_URL, "egoFM Chillout")
 
 
 def get_big_sonic_heaven_tracks():
@@ -7316,6 +7322,7 @@ def sync():
         "vuurland": ("Studio Brussel Vuurland", get_vuurland_tracks, "__last_radio_key_vuurland"),
         "mellow_mix": ("Radio Paradise Mellow Mix", get_mellow_mix_tracks, "__last_radio_key_mellow_mix"),
         "egofm_rnb": ("egoFM R&B", get_egofm_rnb_tracks, "__last_radio_key_egofm_rnb"),
+        "egofm_chillout": ("egoFM Chillout", get_egofm_chillout_tracks, "__last_radio_key_egofm_chillout"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
