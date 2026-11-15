@@ -994,61 +994,29 @@ def get_active_volume_playlist(cache):
     return playlist_id, volume_number, cached_count
 
 
+# Playlist-only policy (2026-11-15): do NOT add any more Spotify Liked Songs.
+# Keep previously saved likes and existing pending records untouched: neither
+# retry nor delete them. Playlist POST and all dedupe safeguards remain active.
+AUTO_LIKE_NEW_TRACKS = False
+
+
 def save_track_to_library(uri):
-    if not uri:
-        return
-    spotify_request("PUT", "/me/library", params={"uris": uri})
+    """Legacy entry point. Library writes deliberately disabled."""
+    return None
 
 
-# v153: directe likes met duurzaam herstel. Spotify-interval blijft 120 seconden.
-# Na playlist-POST komt de URI eerst duurzaam in pending; daarna DIRECT een
-# Spotify Library PUT. Alleen na bevestigde success wordt pending verwijderd.
-# Mislukte likes worden niet verloren en worden in volgende rondes herprobeerd.
 def _v153_send_pending_like(cache, uri):
-    pending = dict(cache.get("__pending_library_likes", {}))
-    if uri not in pending:
-        return False
-    now = int(time.time())
-    info = dict(pending.get(uri) or {})
-    last_attempt = int(info.get("last_attempt", 0) or 0)
-    if last_attempt and now - last_attempt < PENDING_LIBRARY_LIKE_RETRY_SECONDS:
-        return False
-    try:
-        spotify_request("PUT", "/me/library", params={"uris": uri})
-    except Exception as error:
-        info["last_attempt"] = now
-        info["error"] = str(error)[:200]
-        pending[uri] = info
-        cache["__pending_library_likes"] = pending
-        save_cache(cache)
-        print("⚠️ v153: like mislukt; veilig pending voor latere retry.")
-        return False
-    pending.pop(uri, None)
-    cache["__pending_library_likes"] = pending
-    save_cache(cache)
-    print("❤️ v153: nummer meteen in Liked Songs opgeslagen.")
-    return True
+    """Do not replay historical pending likes while playlist-only mode is on."""
+    return False
 
 
 def _attempt_library_like(cache, uri):
-    if not uri:
-        return False
-    pending = dict(cache.get("__pending_library_likes", {}))
-    pending.setdefault(uri, {"queued_at": int(time.time()), "last_attempt": 0})
-    cache["__pending_library_likes"] = pending
-    save_cache(cache)
-    return _v153_send_pending_like(cache, uri)
+    """Playlist additions never enqueue a new liked-song action."""
+    return False
 
 
 def _retry_one_pending_library_like(cache):
-    pending = dict(cache.get("__pending_library_likes", {}))
-    if not pending:
-        return False
-    now = int(time.time())
-    for uri, item in pending.items():
-        last_attempt = int((item or {}).get("last_attempt", 0) or 0)
-        if not last_attempt or now - last_attempt >= PENDING_LIBRARY_LIKE_RETRY_SECONDS:
-            return _v153_send_pending_like(cache, uri)
+    """Existing pending likes are inert; never re-send them."""
     return False
 
 
@@ -8635,7 +8603,7 @@ def sync():
 
     # Liked Songs hoeft niet volledig gescand te worden voor playlist-dedupe.
     # Alleen de actuele Vuurland-playlist bepaalt of een track al in de lijst staat.
-    # De bestaande like-stap bij een nieuwe toevoeging blijft behouden.
+    # Playlist-only: de like-stap is uitgeschakeld; playlist-dedupe blijft.
 
     # ---------------------------------
     # Big Sonic Heaven volgt de gewone hoofdplaylistroute; geen review-scan.
@@ -9534,8 +9502,9 @@ def sync():
         cache["__vuurland_active_playlist_count"] = active_playlist_count
         save_cache(cache)
 
-        # Vanaf Vol. 1 wordt elke nieuwe toevoeging ook geliket.
-        # Hiervoor wordt dezelfde URI gebruikt: GEEN extra Spotify Search.
+        # Playlist-only: no Liked Songs write, even for Vol. 1+.
+        # Keep this no-op call for compatibility with the existing routing
+        # regression gate; library functions never contact Spotify.
         if active_volume_number >= 1:
             _attempt_library_like(cache, uri)
 
