@@ -35,6 +35,7 @@ from v233_general_radio_metadata import normalize_radio_metadata as v233_radio_m
 from v235_general_search_rescue import catalog_search_artist as v235_search_artist, rescue_search_query as v235_rescue_query
 from v236_spotify_403_diagnostics import safe_403_detail
 from v239_structural_title_rescue import structural_recording_equivalent as v239_title_equivalent
+from v239_structural_title_rescue import explicit_dual_feature_names as v240_dual_feature
 from v227_strict_source_turns import next_source_turn
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
@@ -4085,11 +4086,19 @@ def find_spotify_track(
             value
         )
 
-        return [
-            part.strip()
-            for part in parts
-            if part.strip()
-        ]
+        # v240: only within explicitly marked feat/ft/featuring/w/ metadata,
+        # two complete guest names joined by '&' must BOTH be present as
+        # Spotify artist objects. Never split a primary band's own name.
+        if len(parts) > 1:
+            expanded = [parts[0]]
+            for credit in parts[1:]:
+                guests = v240_dual_feature(credit)
+                if guests:
+                    expanded.extend(guests)
+                else:
+                    expanded.append(credit)
+            parts = expanded
+        return [part.strip() for part in parts if part.strip()]
 
     def title_identity(value):
         """
