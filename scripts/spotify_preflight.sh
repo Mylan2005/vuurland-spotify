@@ -40,4 +40,31 @@ for V86_TEST_VERSION in 77 78 79 80 81 82; do
   python3 "v${V86_TEST_VERSION}_offline_test.py"
 done
 python3 test_v83_offline.py
+
+# Historical matcher regressions previously run only by the other CI workflow.
+# Keeping them here ensures a matcher change cannot pass one gate but fail another.
+python3 test_v155_offline.py
+python3 test_matcher_audit_offline.py
+python3 test_v156_matcher_offline.py
+python3 test_v157_spaced_titles_offline.py
+python3 test_v192_duyster_fifo_offline.py
+python3 test_v194_matcher_reports_offline.py
+python3 test_v195_radio_replay_offline.py
+python3 test_v196_matcher_insights_offline.py
+python3 test_v197_combine_matcher_reports_offline.py
+python3 test_v198_report_dedup_offline.py
+python3 test_v199_exact_radio_title_offline.py
+python3 test_v200_verified_catalog_titles_offline.py
+python3 test_v201_matcher_safety_offline.py
+python3 test_v202_auto_matcher_triage_offline.py
+python3 test_v223_daily_matcher_pr_offline.py
+python3 test_v204_spotify_dedup_offline.py
+python3 test_v205_lifetime_backup_offline.py
+python3 test_v207_verified_matcher_metadata_offline.py
+python3 test_v208_explicit_artist_feature_offline.py
+python3 test_v209_verified_source_title_offline.py
+python3 test_v210_hard_version_credit_gates_offline.py
+python3 test_v211_all_matcher_reports_offline.py
+python3 test_duyster_weekly_update_offline.py
+python3 test_v206_duyster_historische_audit_offline.py
 echo "✅ Volledige offline veiligheidstests geslaagd."
