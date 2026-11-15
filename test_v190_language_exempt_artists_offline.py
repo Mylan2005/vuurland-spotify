@@ -125,3 +125,24 @@ for artist, title in [
 print("✅ 6 Duitse opnames uit Indie Select geweerd; Dreampop en Engelstalige tracks behouden.")
 
 print("✅ Sigur Rós, Ólafur Arnalds en Cocteau Twins welkom; Duitse zang blijft voor iedereen geblokkeerd.")
+
+
+# Reported Dreampop Radio play: confirmed German vocals, without artist-wide ban.
+# Verify the REAL production exclusion set, not only this test's stub set.
+pair_node = next(
+    node for node in tree.body
+    if isinstance(node, ast.Assign)
+    and any(isinstance(t, ast.Name) and t.id == "GERMAN_VOCAL_RADIO_TRACKS"
+            for t in node.targets)
+)
+real_pairs = ast.literal_eval(pair_node.value.args[0])
+assert ("keimzeit", "kling klang") in real_pairs
+assert ("keimzeit", "english song") not in real_pairs
+real_vocal = {"GERMAN_VOCAL_RADIO_TRACKS": real_pairs}
+exec(compile(ast.Module(body=[functions["is_confirmed_german_vocal"]],
+                        type_ignores=[]), "<production-vocal-check>", "exec"), real_vocal)
+assert real_vocal["is_confirmed_german_vocal"]("Keimzeit", "Kling Klang")
+assert real_vocal["is_confirmed_german_vocal"](" KEIMZEIT ", " KLING KLANG ")
+assert not real_vocal["is_confirmed_german_vocal"]("Keimzeit", "Another Song")
+assert not real_vocal["is_confirmed_german_vocal"]("Different Band", "Kling Klang")
+assert "is_confirmed_german_vocal(artist, title)" in src
