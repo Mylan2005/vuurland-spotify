@@ -56,12 +56,13 @@ def normalize_mixed_script_typos(title):
 def normalize_radio_metadata(artist, title):
     """Algemene, bewijsgestuurde metadata-opkuis (nooit fuzzy artiestmatching)."""
     artist_str = str(artist or "").strip()
+    corrected_artist = artist
     # In een expliciete radiocredit 'A x B' is x een samenwerkingsscheiding,
     # geen deel van de artiestennaam. Deze vormcorrectie mag alleen met twee
     # volledige, niet-lege namen; de matcher verifieert nog beide credits.
     radio_duo = re.fullmatch(r"(.{2,}?)\\s+[xX]\\s+(.{2,}?)", artist_str)
     if radio_duo:
-        artist_str = f"{radio_duo.group(1).strip()} & {radio_duo.group(2).strip()}"
+        corrected_artist = f"{radio_duo.group(1).strip()} & {radio_duo.group(2).strip()}"
     title_str = str(title or "")  # originele spaties bewaren als er geen correctie is
     # De artiest moet in zijn VOLLEDIGE vorm vooraan staan, niet als
     # gedeeltelijke bandnaam of gewoon eerste woord van een echte titel.
@@ -73,4 +74,4 @@ def normalize_radio_metadata(artist, title):
         if prefix == wanted and match.group(2).strip():
             title_str = match.group(2).strip()
     title_str = normalize_mixed_script_typos(title_str)
-    return artist_str, title_str
+    return corrected_artist, title_str
