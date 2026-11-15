@@ -3,6 +3,7 @@ import ast
 from pathlib import Path
 from v235_general_search_rescue import (
     catalog_search_artist, incomplete_parenthesis_search_core,
+    split_compound_light_title,
     rescue_search_query,
 )
 
@@ -46,6 +47,16 @@ assert rescue_search_query("Morning Parade", "Under The Stars (Wilkinson Remix",
 assert rescue_search_query("The Charlottes", "Keep Me Down (Album Version)", "original query", 1) == "original query"
 assert rescue_search_query("Beyonce", "Dreams (Live)", "original query", 2) == "original query"
 assert rescue_search_query("T R A C E S", "conceal", "T R A C E S conceal", 0) == "TRACES conceal"
+
+# v238: alleen veilige nieuwe zoekwoorden op een bestaande retrybeurt.
+assert split_compound_light_title("Streetlights") == "Street lights"
+assert split_compound_light_title("Headlights") == "Head lights"
+assert split_compound_light_title("Street Lights") is None
+assert split_compound_light_title("Flakes (Mystery Jets Cover)") is None
+assert split_compound_light_title("Lights") is None
+assert rescue_search_query("Josh Rouse", "Streetlights", "Streetlights Josh Rouse", 0) == "Streetlights Josh Rouse"
+assert rescue_search_query("Josh Rouse", "Streetlights", "old", 1) == '"Josh Rouse" "Street lights"'
+assert rescue_search_query("Josh Rouse", "Streetlights", "original", 2) == "original"
 
 source = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
