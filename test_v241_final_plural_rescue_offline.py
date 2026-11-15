@@ -14,6 +14,8 @@ def equivalent(a, b, *, artist=True, all_guests=True, version=None, candidate_ve
 # The real observed difference is only one final s in a multiword title.
 assert final_s_candidate_title("Chalk Tablet Tower") == "Chalk Tablet Towers"
 assert final_s_candidate_title("Chalk Tablet Towers") is None
+assert final_s_candidate_title("Holy War - Other Artist") is None
+assert final_s_candidate_title("Chalk Tablet Tower (Radio Edit)") is None
 assert final_s_candidate_title("Sun") is None
 assert final_s_candidate_title("Red Velvet (Blue Remix)") is None
 assert final_s_candidate_title("Boy From School (Hot Chip Cover)") is None

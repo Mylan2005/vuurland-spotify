@@ -29,6 +29,10 @@ def final_s_candidate_title(title):
     Do not alter explicit version, cover, mix, or guest qualifiers.
     """
     raw = str(title or "").strip()
+    # A separated suffix (e.g. "Holy War - Other Artist") is not a
+    # complete last title word. Do not manufacture plural retry rules for it.
+    if re.search(r"\s[-–—]\s|[()\[\]]", raw):
+        return None
     if re.search(r"(?i)\b(feat\.?|ft\.?|featuring|remix|mix|live|cover|version|extended|edit|demo)\b", raw):
         return None
     parsed = _full_stem_and_last(raw)
