@@ -6,6 +6,8 @@ regio- en duplicatecontroles. Nooit een match goedkeuren in deze module.
 """
 import re
 
+from v239_structural_title_rescue import safe_search_title
+
 
 def catalog_search_artist(artist):
     """'T R A C E S' -> 'TRACES' als ALLE tokens losse letters zijn.
@@ -68,6 +70,11 @@ def rescue_search_query(artist, title, query, variant):
         # De originele query hoeft niet opnieuw samengesteld te worden:
         # vervang uitsluitend letter-voor-letter tokens als HELE woordgroep.
         result = result.replace(original_artist, search_artist)
+    # Source-independent title variants on the already budgeted retry call.
+    # Never change the version or trust a search query as a match decision.
+    _v239_title = safe_search_title(original_artist, title, variant)
+    if _v239_title and search_artist:
+        return f'"{search_artist.replace(chr(34), " ")}" "{_v239_title.replace(chr(34), " ")}"'
     if int(variant or 0) == 1:
         split_lights = split_compound_light_title(title)
         if split_lights and search_artist:
