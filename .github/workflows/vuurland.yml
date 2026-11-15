@@ -2,6 +2,7 @@ name: Vuurland Spotify Sync
 
 on:
   workflow_dispatch:
+  # Handmatige sync-aanvraag 2026-11-15: push start een nieuwe Actions-run.
   # Codeherstel 2026-11-09: trigger nieuwe sync na geslaagde preflight-fix (PR #39).
   # Herstart 2026-11-15: veiligheidstests bijgewerkt voor 12 live radiobronnen; geen workflowlogica gewijzigd.
   push:
