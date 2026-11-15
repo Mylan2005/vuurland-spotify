@@ -1,4 +1,4 @@
-"""Regression: eight live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
+"""Regression: twelve live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
 import ast
 from pathlib import Path
 
@@ -22,7 +22,7 @@ assert '"big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_trac
 assert '"radio_britannia": ("Radio Britannia", get_radio_britannia_tracks,' in body
 assert '"duyster": ("Duyster archief", lambda: [],' in body
 assert "duyster_archive.run(cache, live_queue, duyster_known, _v47_key)" not in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic")' in source
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout")' in source
 assert '"dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks,' in body
 assert '"indie_select": ("Indie Select", get_indie_select_tracks,' in body
 assert 'if item.get("source") == "indie_select" and indie_select_blocks_german(artist, title):' in body
@@ -32,6 +32,10 @@ assert '"soma_lush": ("SomaFM Lush", get_soma_lush_tracks,' not in body
 assert '"dkfm_edge": ("DKFM Edge", get_dkfm_edge_tracks,' in body
 assert '"dkfm_shoegaze": ("DKFM Shoegaze Radio", get_dkfm_shoegaze_tracks,' in body
 assert '"dkfm_classic": ("DKFM Classic", get_dkfm_classic_tracks,' in body
+assert '"egofm_rnb": ("egoFM R&B", get_egofm_rnb_tracks,' in body
+assert '"egofm_chillout": ("egoFM Chillout", get_egofm_chillout_tracks,' in body
+assert 'EGOFM_RNB_SOURCE_URL = "https://onlineradiobox.com/de/egofmrb/playlist/?lang=nl"' in source
+assert 'EGOFM_CHILLOUT_SOURCE_URL = "https://onlineradiobox.com/de/egofmchillout/playlist/?lang=nl"' in source
 assert '__v187_dkfm_three_reactivated_20261105' in body
 assert '__v186_dkfm_edge_four_source_baseline' in body
 assert '"tracks": dkfm_vuurland_filter(get_dkfm_edge_tracks(), "DKFM Edge")' not in body
@@ -48,7 +52,7 @@ assert '"radio_x_main": ("Radio X", get_radio_x_main_tracks,' in body
 assert '__v188_radio_x_main_baseline_20261105' in body
 assert 'RADIO_X_MAIN_ALLOWED_ARTISTS' in source
 assert 'RADIO_X_MAIN_SOURCE_URL' in source
-print("✅ Tien livebronnen actief: DKFM Shoegaze en Classic erbij, Radio X main uit; Duyster als archief.")
+print("✅ Twaalf livebronnen actief: egoFM R&B en Chillout erbij; Radio X main uit; Duyster als archief.")
 
 assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
 
