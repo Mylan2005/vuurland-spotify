@@ -2599,7 +2599,7 @@ def find_spotify_track(
     # naar 'A & B' vertaald. Een A-solo-opname is nooit de juiste match.
     import re as _v238_re
     _v238_radio_duo = _v238_re.fullmatch(
-        r"\\s*(.{2,}?)\\s+[xX]\\s+(.{2,}?)\\s*", str(artist or "")
+        r"\s*(.{2,}?)\s+[xX]\s+(.{2,}?)\s*", str(artist or "")
     )
     v101_original_key = v101_radio_key(artist, title)
     if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
