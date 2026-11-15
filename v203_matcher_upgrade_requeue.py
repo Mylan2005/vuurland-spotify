@@ -18,6 +18,8 @@ from v211_report_search_rescue import (
     unconfirmed_song_search as v211_unconfirmed_query,
 )
 from v233_general_radio_metadata import normalize_radio_metadata
+from v239_structural_title_rescue import safe_search_title
+from v239_reported_miss_retries import reported_for_safe_retry
 from v235_general_search_rescue import catalog_search_artist, split_compound_light_title
 from v209_verified_source_title import verified_emily_live_source_title
 from v216_report_metadata import has_report_correction
@@ -48,6 +50,8 @@ MATCHER_RETRY_RULES = (
     "v217_report_independent_third_search",
     "v238_general_radio_metadata",
     "v238_spotify_search_spelling",
+    "v239_structural_query",
+    "v239_reported_source_retry",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -123,6 +127,12 @@ def applicable_rules(artist, title):
     if (catalog_search_artist(artist) != artist
             or split_compound_light_title(title) is not None):
         hits.append("v238_spotify_search_spelling")
+    if safe_search_title(artist, title, 1) is not None:
+        hits.append("v239_structural_query")
+    # Explicit user-provided log: retry only if the ORIGINAL failure and
+    # source are independently present in the cache. This is not a match.
+    if reported_for_safe_retry(artist, title):
+        hits.append("v239_reported_source_retry")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 

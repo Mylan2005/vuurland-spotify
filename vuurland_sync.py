@@ -34,6 +34,7 @@ from v232_verified_radio_metadata import verified_radio_metadata as v232_radio_m
 from v233_general_radio_metadata import normalize_radio_metadata as v233_radio_metadata
 from v235_general_search_rescue import catalog_search_artist as v235_search_artist, rescue_search_query as v235_rescue_query
 from v236_spotify_403_diagnostics import safe_403_detail
+from v239_structural_title_rescue import structural_recording_equivalent as v239_title_equivalent
 from v227_strict_source_turns import next_source_turn
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
@@ -5532,7 +5533,13 @@ def find_spotify_track(
             (item.get('album') or {}).get('name', '')
         )
         structural_title_match = (
-            v211_exact_mint
+            v239_title_equivalent(
+                wanted_title_for_match, item.get("name", ""),
+                primary_artist_exact=primary_artist_exact,
+                requested_version=wanted_version,
+                candidate_version=spotify_version,
+            )
+            or v211_exact_mint
             or v207_exact_castle
             or verified_catalog_variant
             or truncated_title_match
