@@ -1,4 +1,4 @@
-"""v227: de 11 bronnen krijgen een echte, vaste beurt per Spotify-slot."""
+"""v227: de 13 bronnen (12 radio + Duyster) krijgen een echte, vaste beurt per Spotify-slot."""
 import ast
 from pathlib import Path
 from v227_strict_source_turns import next_source_turn
@@ -7,7 +7,7 @@ from v221_source_round_robin import fair_source_candidates
 sources = (
     "vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled",
     "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge",
-    "dkfm_shoegaze", "dkfm_classic", "duyster",
+    "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "duyster",
 )
 queue = []
 for i, source in enumerate(sources):
@@ -17,7 +17,7 @@ for i, source in enumerate(sources):
 before = [dict(item) for item in queue]
 turns=[]
 cursor=None
-for _ in range(33):
+for _ in range(len(sources) * 3):
     selected, count = next_source_turn(queue, sources, cursor, lambda row: True)
     assert count > 0
     turns.append(selected)
@@ -27,7 +27,7 @@ assert queue == before  # geen mutaties en geen herordening
 # Het verwijderen van de gehele Classic-bron laat het systeem doorroteren.
 without_classic=[item for item in queue if item["source"]!="dkfm_classic"]
 next_source,_ = next_source_turn(without_classic, sources, "dkfm_shoegaze", lambda row: True)
-assert next_source == "duyster"
+assert next_source == "egofm_rnb"
 # Tijdelijke cooldown laat de bron weg, maar de volgende ronde komt hij terug.
 next_source,_ = next_source_turn(queue, sources, "radio_x_chilled",
                                  lambda row: row["source"]!="dreampop_radio")
@@ -51,4 +51,4 @@ assert 'SPOTIFY_SEARCH_HTTP_LIMIT = 1' in src
 assert 'fair_source_candidates(' in sync
 assert 'processed_item_ids.add(id(live_queue[0]))' in sync
 assert 'atomic_save_json(live_queue_file, live_queue' in sync
-print("✅ v227: 11 stations in vaste beurt, één bron per slot, FIFO behouden.")
+print("✅ v227: 12 radiostations + Duyster in vaste beurt, één bron per slot, FIFO behouden.")
