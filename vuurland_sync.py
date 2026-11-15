@@ -147,6 +147,7 @@ EGOFM_RNB_SOURCE_URL = "https://onlineradiobox.com/de/egofmrb/playlist/?lang=nl"
 EGOFM_CHILLOUT_SOURCE_URL = "https://onlineradiobox.com/de/egofmchillout/playlist/?lang=nl"
 DJ_NEIHTUL_SOURCE_URL = "https://onlineradiobox.com/de/djneihtul/playlist/?lang=nl"
 GRI_BALKON_SOURCE_URL = "https://onlineradiobox.com/tr/gribalcon/playlist/?lang=nl"
+IGNORERADIO_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ie/ignoreland/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
@@ -161,7 +162,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon")  # Veertien live bronnen; Radio X main blijft uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze")  # Vijftien live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -1458,6 +1459,18 @@ def get_gri_balkon_tracks():
             continue
         if v191_is_german_vocal_risk(artist, title):
             print(f"⏭️ Gri Balkon: Duitse taalsignalen: {artist} — {title}")
+            continue
+        selected.append((artist, title))
+    return selected
+
+
+def get_ignoreradio_shoegaze_tracks():
+    """Ignoreradio Shoegaze: uitsluitend nieuwe live-plays na een nulmeting."""
+    raw = get_radiobox_tracks(IGNORERADIO_SHOEGAZE_SOURCE_URL, "Ignoreradio Shoegaze")
+    selected = []
+    for artist, title in raw:
+        if v191_is_german_vocal_risk(artist, title):
+            print(f"⏭️ Ignoreradio Shoegaze: Duitse taalsignalen: {artist} — {title}")
             continue
         selected.append((artist, title))
     return selected
@@ -7372,6 +7385,7 @@ def sync():
         "egofm_chillout": ("egoFM Chillout", get_egofm_chillout_tracks, "__last_radio_key_egofm_chillout"),
         "dj_neihtul": ("DJ Neihtul", get_dj_neihtul_tracks, "__last_radio_key_dj_neihtul"),
         "gri_balkon": ("Gri Balkon", get_gri_balkon_tracks, "__last_radio_key_gri_balkon"),
+        "ignoreradio_shoegaze": ("Ignoreradio Shoegaze", get_ignoreradio_shoegaze_tracks, "__last_radio_key_ignoreradio_shoegaze"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
