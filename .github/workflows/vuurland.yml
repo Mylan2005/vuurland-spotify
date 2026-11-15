@@ -8,6 +8,12 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/vuurland.yml'
+      - 'vuurland_sync.py'
+      - 'v203_matcher_upgrade_requeue.py'
+      - 'v233_general_radio_metadata.py'
+      - 'v235_general_search_rescue.py'
+      - 'test_v203_matcher_upgrade_requeue_offline.py'
+      - 'test_v233_general_radio_metadata_offline.py'
   schedule:
     - cron: "17 */6 * * *"
 
