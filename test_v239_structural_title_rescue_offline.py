@@ -1,5 +1,5 @@
 """Offline regression checks for structural search recalls; no Spotify requests."""
-from v239_structural_title_rescue import safe_search_title, structural_recording_equivalent as same
+from v239_structural_title_rescue import safe_search_title, structural_recording_equivalent as same, explicit_dual_feature_names
 from v235_general_search_rescue import rescue_search_query
 
 def equivalent(left, right, req=None, cand=None, exact=True):
@@ -35,3 +35,16 @@ assert query == '"Kyle Dixon & Michael Stein" "Stranger Things Extended"'
 assert rescue_search_query("Seekae", "3 (Three)", "initial", 1) == '"Seekae" "3"'
 assert rescue_search_query("Fenech-Soler", "Lies (Original)", "initial", 0) == "initial"
 print("✅ v239: guarded soundtrack, number, apostrophe and original-version search tests")
+
+# Full guest-credit splitting is guarded by the caller's explicit feat marker.
+assert explicit_dual_feature_names("Sufjan Stevens & Rebecca Sugar") == ("Sufjan Stevens", "Rebecca Sugar")
+assert explicit_dual_feature_names("Alex Landon") is None
+assert explicit_dual_feature_names("Hare Squead") is None
+assert explicit_dual_feature_names("Angus & Julia") is None
+assert explicit_dual_feature_names("Lady Gaga & Rebecca Sugar") == ("Lady Gaga", "Rebecca Sugar")
+
+from pathlib import Path
+source = Path(__file__).with_name("vuurland_sync.py").read_text("utf-8")
+assert "guests = v240_dual_feature(credit)" in source
+assert "expanded.extend(guests)" in source
+assert "for wanted_feature in wanted_artist_compact[1:]" in source
