@@ -1,4 +1,4 @@
-"""v227: de 14 bronnen (13 radio + Duyster) krijgen een echte, vaste beurt per Spotify-slot."""
+"""v227: de 15 bronnen (14 radio + Duyster) krijgen een echte, vaste beurt per Spotify-slot."""
 import ast
 from pathlib import Path
 from v227_strict_source_turns import next_source_turn
@@ -7,7 +7,7 @@ from v221_source_round_robin import fair_source_candidates
 sources = (
     "vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled",
     "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge",
-    "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "duyster",
+    "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "duyster",
 )
 queue = []
 for i, source in enumerate(sources):
@@ -51,4 +51,4 @@ assert 'SPOTIFY_SEARCH_HTTP_LIMIT = 1' in src
 assert 'fair_source_candidates(' in sync
 assert 'processed_item_ids.add(id(live_queue[0]))' in sync
 assert 'atomic_save_json(live_queue_file, live_queue' in sync
-print("✅ v227: 13 radiostations + Duyster in vaste beurt, één bron per slot, FIFO behouden.")
+print("✅ v227: 14 radiostations + Duyster in vaste beurt, één bron per slot, FIFO behouden.")
