@@ -41,6 +41,20 @@ def incomplete_parenthesis_search_core(title):
     return core
 
 
+def split_compound_light_title(title):
+    """'Streetlights' -> 'Street Lights' als alternatieve ZOEKterm.
+
+    Het betreft een generieke, strikt structurele woordgrens bij enkelvoudige
+    titels, geen catalogusgoedkeuring; de bestaande title_identity moet daarna
+    beide volledige titels als dezelfde letterreeks bewijzen.
+    """
+    raw = str(title or "").strip()
+    m = re.fullmatch(r"([A-Za-z]{4,})(lights?)", raw, flags=re.IGNORECASE)
+    if not m:
+        return None
+    return m.group(1) + " " + m.group(2)
+
+
 def rescue_search_query(artist, title, query, variant):
     """Herschrijf hoogstens de reeds geplande Search; geen extra HTTP-call.
 
@@ -54,6 +68,10 @@ def rescue_search_query(artist, title, query, variant):
         # De originele query hoeft niet opnieuw samengesteld te worden:
         # vervang uitsluitend letter-voor-letter tokens als HELE woordgroep.
         result = result.replace(original_artist, search_artist)
+    if int(variant or 0) == 1:
+        split_lights = split_compound_light_title(title)
+        if split_lights and search_artist:
+            return f'"{search_artist.replace(chr(34), " ")}" "{split_lights}"'
     if int(variant or 0) >= 1:
         core = incomplete_parenthesis_search_core(title)
         if core and search_artist:
