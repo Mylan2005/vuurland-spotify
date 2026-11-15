@@ -1,0 +1,30 @@
+name: Vuurland Offline Preflight
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '**/*.py'
+      - 'scripts/spotify_preflight.sh'
+      - 'requirements.txt'
+      - '.github/workflows/vuurland.yml'
+      - '.github/workflows/matcher-preflight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-preflight:
+    name: All offline safety tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python3 -m pip install -r requirements.txt
+      - name: Run exactly the same offline preflight as the live sync
+        run: bash scripts/spotify_preflight.sh

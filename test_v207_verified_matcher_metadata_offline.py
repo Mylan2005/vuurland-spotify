@@ -49,7 +49,9 @@ assert "v207_artist_identity(artist, spotify_primary_artist, title, item.get('na
 assert "v207_exact_castle = v207_castle_version(" in sync
 assert "spotify_named_variant = wanted_named_variant" in sync
 assert "spotify_version = wanted_version" in sync
-assert "v207_exact_castle" in sync.split("structural_title_match = (", 1)[1][:250]
+structural_start = sync.index("structural_title_match = (")
+structural_end = sync.index("spotify_extension_compacts =", structural_start)
+assert "v207_exact_castle" in sync[structural_start:structural_end]
 assert "if wanted_named_variant and spotify_named_variant != wanted_named_variant:" in sync
 assert 'max_additions_per_round = 1' in sync
 assert '"market": "from_token"' in sync

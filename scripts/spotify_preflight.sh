@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+# One canonical full offline preflight shared by PR CI and production sync.
+# No Spotify credentials/network calls: fail before touching playlists/state.
+set -euo pipefail
+python3 -m compileall -q .
+python3 -m py_compile vuurland_sync.py
+python3 test_v85_offline.py
+python3 test_v86_offline.py
+python3 test_v158_routing_offline.py
+python3 test_v221_source_round_robin_offline.py
+python3 test_v224_fair_spotify_opportunities_offline.py
+python3 test_v225_source_accountability_offline.py
+python3 test_v226_visible_source_attempts_offline.py
+python3 test_v227_strict_source_turns_offline.py
+python3 test_v228_fresh_first_round_robin_offline.py
+python3 test_v229_wires_tmpls_offline.py
+python3 test_v231_cq_wrestling_offline.py
+python3 test_v232_verified_radio_metadata_offline.py
+python3 test_v233_general_radio_metadata_offline.py
+python3 test_v234_volume_switch_offline.py
+python3 test_v235_general_search_rescue_offline.py
+python3 test_v203_matcher_upgrade_requeue_offline.py
+python3 test_v239_structural_title_rescue_offline.py
+python3 test_v239_reported_miss_retries_offline.py
+python3 test_playlist_only_no_likes_offline.py
+python3 test_v241_final_plural_rescue_offline.py
+python3 test_v236_spotify_403_diagnostics_offline.py
+python3 test_dark_edge_filter_offline.py
+python3 test_v212_music_policy_offline.py
+python3 test_v213_dkfm_activation_offline.py
+python3 test_v214_manual_removals_offline.py
+python3 test_v215_multi_version_guard_offline.py
+python3 test_v216_report_metadata_offline.py
+python3 test_v217_report_search_offline.py
+python3 test_v190_language_exempt_artists_offline.py
+python3 test_v159_playlist_rebuild_offline.py
+python3 test_v160_requeue_offline.py
+python3 test_v171_fresh_radio_seen_offline.py
+for V86_TEST_VERSION in 77 78 79 80 81 82; do
+  python3 "v${V86_TEST_VERSION}_offline_test.py"
+done
+python3 test_v83_offline.py
+
+# Historical matcher regressions previously run only by the other CI workflow.
+# Keeping them here ensures a matcher change cannot pass one gate but fail another.
+python3 test_v155_offline.py
+python3 test_matcher_audit_offline.py
+python3 test_v156_matcher_offline.py
+python3 test_v157_spaced_titles_offline.py
+python3 test_v192_duyster_fifo_offline.py
+python3 test_v194_matcher_reports_offline.py
+python3 test_v195_radio_replay_offline.py
+python3 test_v196_matcher_insights_offline.py
+python3 test_v197_combine_matcher_reports_offline.py
+python3 test_v198_report_dedup_offline.py
+python3 test_v199_exact_radio_title_offline.py
+python3 test_v200_verified_catalog_titles_offline.py
+python3 test_v201_matcher_safety_offline.py
+python3 test_v202_auto_matcher_triage_offline.py
+python3 test_v223_daily_matcher_pr_offline.py
+python3 test_v204_spotify_dedup_offline.py
+python3 test_v205_lifetime_backup_offline.py
+python3 test_v207_verified_matcher_metadata_offline.py
+python3 test_v208_explicit_artist_feature_offline.py
+python3 test_v209_verified_source_title_offline.py
+python3 test_v210_hard_version_credit_gates_offline.py
+python3 test_v211_all_matcher_reports_offline.py
+python3 test_duyster_weekly_update_offline.py
+python3 test_v206_duyster_historische_audit_offline.py
+echo "✅ Volledige offline veiligheidstests geslaagd."
