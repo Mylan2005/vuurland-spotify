@@ -2594,6 +2594,13 @@ def find_spotify_track(
     # Deze controle gebeurt vóór Spotify Search zodat
     # bekende mappings ook werken tijdens een Search-block.
 
+    # v238: een expliciete 'A x B'-broncredit vereist BEIDE artiesten.
+    # Bewaar de originele source-key; de v233-zoekvorm wordt afzonderlijk
+    # naar 'A & B' vertaald. Een A-solo-opname is nooit de juiste match.
+    import re as _v238_re
+    _v238_radio_duo = _v238_re.fullmatch(
+        r"\\s*(.{2,}?)\\s+[xX]\\s+(.{2,}?)\\s*", str(artist or "")
+    )
     v101_original_key = v101_radio_key(artist, title)
     if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
         print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
@@ -4665,6 +4672,18 @@ def find_spotify_track(
 
         if not spotify_artists:
             continue
+
+        # v238: bij A x B moet Spotify precies de twee VOLLEDIGE artiesten
+        # als afzonderlijke artist objects hebben. Geen solo-fallback en
+        # geen ontbrekende featuring-credits, ongeacht de titelscore.
+        if _v238_radio_duo:
+            required = {
+                alias_key(_v238_radio_duo.group(1).strip()),
+                alias_key(_v238_radio_duo.group(2).strip()),
+            }
+            credited = {alias_key(name) for name in spotify_artists}
+            if len(required) != 2 or credited != required or len(spotify_artists) != 2:
+                continue
 
         # -------------------------------------------------
         # ID-VEILIGE ARTIEST-ALIAS
