@@ -36,6 +36,7 @@ from v235_general_search_rescue import catalog_search_artist as v235_search_arti
 from v236_spotify_403_diagnostics import safe_403_detail
 from v239_structural_title_rescue import structural_recording_equivalent as v239_title_equivalent
 from v239_structural_title_rescue import explicit_dual_feature_names as v240_dual_feature
+from v241_final_plural_rescue import safe_final_plural_equivalent as v241_plural_equivalent
 from v227_strict_source_turns import next_source_turn
 from v194_report_requeue import release_report_retries as v194_release_reports
 from v195_radio_replay import release_parked_replay as v195_release_parked_replay
@@ -5515,8 +5516,21 @@ def find_spotify_track(
             artist, title, spotify_primary_artist, item.get('name', ''),
             (item.get('album') or {}).get('name', '')
         )
+        # v241: allow only a COMPLETE 3+-word title differing by the
+        # final plural 's'. Full primary/featured artists and the exact
+        # recorded version must already agree. No fuzzy/covers bypass.
+        v241_plurals_match = v241_plural_equivalent(
+            wanted_title_base_for_match, spotify_title_base,
+            primary_artist_exact=primary_artist_exact,
+            all_credits_present=(missing_feature_count == 0
+                                 and not guest_only_catalog_match
+                                 and not solo_collab_fallback),
+            wanted_version=wanted_version,
+            catalog_version=spotify_version,
+        )
         structural_title_match = (
-            v239_title_equivalent(
+            v241_plurals_match
+            or v239_title_equivalent(
                 wanted_title_for_match, item.get("name", ""),
                 primary_artist_exact=primary_artist_exact,
                 requested_version=wanted_version,
