@@ -177,7 +177,20 @@ def release_for_matcher_upgrades(
 
     # Preserve the cache's own insertion order, not popularity or searches:
     # one release per round, appended at the END of the normal FIFO.
-    for key in dict.fromkeys((*parked, *failed, *duyster)):
+    # Put explicitly reported observed misses first *for retry selection*.
+    # Each selected item is still appended at the END of the normal FIFO.
+    # This avoids old, unrelated historical misses indefinitely delaying the
+    # user's freshly reported cases; their original arrival order stays stable.
+    pending_keys = tuple(dict.fromkeys((*parked, *failed, *duyster)))
+    reported_keys, other_keys = [], []
+    for candidate_key in pending_keys:
+        original = parked.get(candidate_key) or failed.get(candidate_key) or duyster.get(candidate_key)
+        if (isinstance(original, dict) and reported_for_safe_retry(
+                original.get("artist"), original.get("title"))):
+            reported_keys.append(candidate_key)
+        else:
+            other_keys.append(candidate_key)
+    for key in (*reported_keys, *other_keys):
         entry = parked.get(key) or failed.get(key) or duyster.get(key)
         if not isinstance(entry, dict):
             continue
