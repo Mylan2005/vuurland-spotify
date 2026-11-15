@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "death cab for cutie|||pepper",
+      "leon bridges feat lydia kitto|||all day all night",
       "portishead|||roads",
       "hozier|||too sweet",
       "the tallest man on earth|||the dreamer",
@@ -112,11 +114,10 @@
       "eefje de visser|||bitterzoet",
       "sharon van etten|||every time the sun comes up",
       "porcelain id|||vlaanderen",
-      "balthazar|||fifteen floors",
-      "nick cave & warren ellis|||carnage",
-      "london grammar|||kind of man"
+      "balthazar|||fifteen floors"
     ],
     "mellow_mix": [
+      "robert plant|||killing the blues",
       "london grammar|||shyer",
       "the waifs|||rescue",
       "sheryl crow|||strong enough",
@@ -215,10 +216,10 @@
       "john martyn|||bless the weather",
       "natalie merchant|||life is sweet",
       "sade|||long hard road",
-      "crosby stills nash & young|||4 20",
-      "ellen mcilwaine|||up from the skies"
+      "crosby stills nash & young|||4 20"
     ],
     "big_sonic_heaven": [
+      "cocteau twins|||a kissed out red floatboat",
       "atmos bloom|||it's enough",
       "memoryhouse|||caregiver",
       "club 8|||the sweetness of honey",
@@ -317,8 +318,7 @@
       "curve|||coast is clear",
       "cranes|||come this far",
       "slowdive|||waves",
-      "sinead o'connor|||you cause as much sorrow",
-      "xymox|||imagination"
+      "sinead o'connor|||you cause as much sorrow"
     ],
     "radio_x_chilled": [
       "oasis|||sad song",
@@ -627,6 +627,7 @@
       "pumarosa|||priestess"
     ],
     "dkfm_edge": [
+      "swiims|||diving in",
       "sloe noon|||new > old",
       "haermape|||the underworld",
       "the whisperer|||to you",
@@ -725,8 +726,7 @@
       "wybercron|||imprint",
       "haermape|||plastic shield",
       "bed bug guru|||hazy",
-      "luster|||missing you",
-      "lumari|||in waves"
+      "luster|||missing you"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -937,6 +937,7 @@
       "modern daze|||sewn on"
     ],
     "dkfm_classic": [
+      "my bloody valentine|||instrumental #2",
       "the house of love|||happy",
       "spiritualized|||smiles",
       "should|||inst2",
@@ -1035,8 +1036,7 @@
       "the emerald down|||another day new edit",
       "medicine|||aruca",
       "the verve|||virtual world",
-      "blind mr jones|||disneyworld",
-      "difference engine|||and never pull"
+      "blind mr jones|||disneyworld"
     ],
     "egofm_rnb": [
       "movement|||ivory",
@@ -1550,22 +1550,22 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794707186.005729,
-    "mellow_mix": 1794707186.0142362,
-    "big_sonic_heaven": 1794707186.019567,
-    "radio_x_chilled": 1794707186.025748,
-    "dreampop_radio": 1794707186.031948,
-    "indie_select": 1794707186.3773284,
-    "dkfm_edge": 1794707186.3841815,
+    "vuurland": 1794707272.3631449,
+    "mellow_mix": 1794707272.3714712,
+    "big_sonic_heaven": 1794707272.376971,
+    "radio_x_chilled": 1794707272.3830087,
+    "dreampop_radio": 1794707272.389032,
+    "indie_select": 1794707272.3953385,
+    "dkfm_edge": 1794707272.4019642,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794707187.034569,
-    "dkfm_shoegaze": 1794707187.3674414,
-    "dkfm_classic": 1794707187.9910123,
-    "egofm_rnb": 1794707188.690317,
-    "egofm_chillout": 1794707189.372516,
-    "dj_neihtul": 1794707189.6869473,
-    "gri_balkon": 1794707189.9786165,
-    "ignoreradio_shoegaze": 1794707189.9804585
+    "dark_edge": 1794707272.409216,
+    "dkfm_shoegaze": 1794707272.4143763,
+    "dkfm_classic": 1794707272.4210663,
+    "egofm_rnb": 1794707272.42742,
+    "egofm_chillout": 1794707272.4337935,
+    "dj_neihtul": 1794707272.4381807,
+    "gri_balkon": 1794707272.4420953,
+    "ignoreradio_shoegaze": 1794707272.4477632
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -20189,9 +20189,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "portishead|||roads",
-  "__last_radio_key_mellow_mix": "london grammar|||shyer",
-  "__last_radio_key_big_sonic_heaven": "atmos bloom|||it's enough",
+  "__last_radio_key_vuurland": "death cab for cutie|||pepper",
+  "__last_radio_key_mellow_mix": "robert plant|||killing the blues",
+  "__last_radio_key_big_sonic_heaven": "cocteau twins|||a kissed out red floatboat",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 18091,
   "__v146_spotify_budget_slot": 1794707192.6069853,
@@ -121350,9 +121350,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "sloe noon|||new > old",
+  "__last_radio_key_dkfm_edge": "swiims|||diving in",
   "__last_radio_key_dkfm_shoegaze": "indoor voices|||you won't know",
-  "__last_radio_key_dkfm_classic": "the house of love|||happy",
+  "__last_radio_key_dkfm_classic": "my bloody valentine|||instrumental #2",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
