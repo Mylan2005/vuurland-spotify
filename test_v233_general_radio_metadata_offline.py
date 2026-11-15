@@ -46,6 +46,14 @@ assert normalize_mixed_script_typos("роман") == "роман"
 assert normalize_mixed_script_typos("mуsic") == "mysic"
 assert normalize_mixed_script_typos("Jumping") == "Jumping"
 
+# v238: de x-verbinder is een algemeen duo-formaat, geen artist-alias.
+assert normalize_radio_metadata("GoldLink x Hare Squead", "Herside Story") == (
+    "GoldLink & Hare Squead", "Herside Story")
+assert normalize_radio_metadata("Artist Alpha X Artist Beta", "Deep Track") == (
+    "Artist Alpha & Artist Beta", "Deep Track")
+for untouched in ("X Japan", "The xx", "Project X", "The X Factor"):
+    assert normalize_radio_metadata(untouched, "Track")[0] == untouched
+
 source = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
 matcher = ast.get_source_segment(source, next(n for n in tree.body
@@ -55,5 +63,8 @@ assert matcher.index("v233_radio_metadata(artist, title)") < matcher.index("v232
 assert matcher.index("v232_radio_metadata(artist, title)") < matcher.index("v194_canonical_artist(artist)")
 assert "v81_catalog_locator(*v101_original_key)" in matcher
 assert "primary_artist_exact" in matcher
+assert "if _v238_radio_duo:" in matcher
+assert "credited != required" in matcher
+assert "len(spotify_artists) != 2" in matcher
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source
 print("✅ v233: generieke structurele correcties + originele bronidentiteit behouden.")
