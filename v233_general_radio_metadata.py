@@ -60,7 +60,7 @@ def normalize_radio_metadata(artist, title):
     # In een expliciete radiocredit 'A x B' is x een samenwerkingsscheiding,
     # geen deel van de artiestennaam. Deze vormcorrectie mag alleen met twee
     # volledige, niet-lege namen; de matcher verifieert nog beide credits.
-    radio_duo = re.fullmatch(r"(.{2,}?)\\s+[xX]\\s+(.{2,}?)", artist_str)
+    radio_duo = re.fullmatch(r"(.{2,}?)\s+[xX]\s+(.{2,}?)", artist_str)
     if radio_duo:
         corrected_artist = f"{radio_duo.group(1).strip()} & {radio_duo.group(2).strip()}"
     title_str = str(title or "")  # originele spaties bewaren als er geen correctie is
