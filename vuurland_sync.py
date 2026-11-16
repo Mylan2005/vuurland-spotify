@@ -19,6 +19,7 @@ from vuurland_music_policy import global_music_reject_reason
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
+from v245_multi_guest_credits import split_explicit_multiword_guests
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
 from v223_report_search_hints import report_third_search_hint as v223_report_query
@@ -2472,6 +2473,11 @@ V81_VERIFIED_CATALOG_TRACKS = {
     # v229: door gebruiker expliciet bevestigde Spotify-URI voor DKFM Edge.
     # De ID is alleen een locator: volledige artiest/titel/versie/regio-guards blijven gelden.
     ("wires to the temples", "smeared/aura"): "74VpqnAOJM1ha2XKFbdFYG",
+    # v245: publicly verified original Emergence recording; GET /tracks,
+    # not a bypass of the ordinary artist, version and market validation.
+    ("max cooper", "trust ft. tom hodge & kathrin deboer"): "7EWkEIxfgg5cieKB6CJGws",
+    ("max cooper", "trust feat. tom hodge & kathrin deboer"): "7EWkEIxfgg5cieKB6CJGws",
+    ("max cooper", "trust (feat. tom hodge & kathrin deboer)"): "7EWkEIxfgg5cieKB6CJGws",
     # v94: user-confirmed original studio recording; GET /tracks validates it.
     ("the cure", "the snakepit"): "2VeryXhfwHZmwHEYqB0phS",
     ("gipsy kings", "recuerdo apasionado"): "4I1hdRXL4tCnbtJfuqv58A",
@@ -4623,18 +4629,14 @@ def find_spotify_track(
     # Een feature die achter de RadioBox-titel staat,
     # hoort bij de Spotify-artiesten en moet aanwezig zijn.
     if title_feature_artist:
-        normalized_title_feature = normalize(
-            title_feature_artist
-        )
-
-        if (
-            normalized_title_feature
-            and normalized_title_feature
-            not in wanted_artists
-        ):
-            wanted_artists.append(
-                normalized_title_feature
-            )
+        # v245: RadioBox can group TWO fully named guests in one suffix,
+        # e.g. 'ft. Tom Hodge & Kathrin deBoer'. Spotify stores each as
+        # a distinct artist object. Require BOTH, never silently drop one.
+        for title_guest in split_explicit_multiword_guests(title_feature_artist):
+            normalized_title_feature = normalize(title_guest)
+            if (normalized_title_feature
+                    and normalized_title_feature not in wanted_artists):
+                wanted_artists.append(normalized_title_feature)
 
     # RadioBox vermeldt bij "Never Back Down":
     # "Novastar & Piet Goddaer".
