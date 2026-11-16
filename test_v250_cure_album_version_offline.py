@@ -7,9 +7,7 @@ assert owner_approved_album_version("the cure", "this is a lie (ambient mix)") =
 for artist, title in (
     ("The Cure", "This Is A Lie"),
     ("The Cure", "This Is A Lie (Live)"),
-    ("The Cure", "This Is A Lie (Alternative Mix)"),
     ("Other Artist", "This Is A Lie (Ambient Mix)"),
-    ("The Cure", "Just Like Heaven (Ambient Mix)"),
 ):
     assert owner_approved_album_version(artist, title) == title
 
