@@ -148,6 +148,7 @@
       "natalie merchant|||life is sweet"
     ],
     "big_sonic_heaven": [
+      "echo & the bunnymen|||brussels is haunted",
       "new order|||be a rebel",
       "mirrorball|||devil mirror",
       "primer|||the winner",
@@ -246,8 +247,7 @@
       "bluhm|||sugar phantom blackout",
       "the radio dept|||you fear the wrong thing baby",
       "ninon|||leave on your light",
-      "fun with ether|||spirit kid",
-      "laika|||prairie dog"
+      "fun with ether|||spirit kid"
     ],
     "radio_x_chilled": [
       "coldplay|||sparks",
@@ -352,6 +352,7 @@
       "sam fender|||two people"
     ],
     "dreampop_radio": [
+      "paula cole|||where have all the cowboys gone?",
       "maximilian hecker|||over",
       "luca vasta|||wicked games",
       "the head and the heart|||let's be still",
@@ -450,10 +451,10 @@
       "sara lov|||just my heart talkin'",
       "coldplay|||always in my head",
       "william fitzsimmons|||it's not true",
-      "phantogram|||16 years",
-      "tim neuhaus|||blankets"
+      "phantogram|||16 years"
     ],
     "indie_select": [
+      "beatsteakes|||let me in",
       "art school girlfriend|||the peaks",
       "trixie whitley|||high wire",
       "whenyoung|||home movie",
@@ -552,8 +553,7 @@
       "midge ure|||no regrets",
       "maximo park|||fade into you",
       "the beautiful south|||love wars",
-      "vampire weekend|||i'm going down springsteen cover",
-      "anni rossi|||inbetween days"
+      "vampire weekend|||i'm going down springsteen cover"
     ],
     "dkfm_edge": [
       "mo dotti|||wasted delay",
@@ -866,6 +866,7 @@
       "desperate journalist|||dust"
     ],
     "dkfm_classic": [
+      "cranes|||cha cha escueta",
       "band of susans|||because of you",
       "blind mr jones|||henna and swayed",
       "swirl|||yesterday blue",
@@ -964,8 +965,7 @@
       "lorelei|||the bitter air",
       "coaltar of the deepers|||charming sister kiss me dead!!",
       "should|||aside",
-      "jesus & mary chain|||the hardest walk",
-      "veldt|||i couldn't care less"
+      "jesus & mary chain|||the hardest walk"
     ],
     "egofm_rnb": [
       "sza|||julia",
@@ -1070,6 +1070,7 @@
       "prince|||kiss"
     ],
     "egofm_chillout": [
+      "kinderzimmer productions|||es kommt in wellen instrumental",
       "terranova|||hotel amour feat everybody",
       "buzzy lee|||what has a man done",
       "pieter de graaf|||maximilian's masterplan",
@@ -1168,8 +1169,7 @@
       "frieder nagel feat mima|||obey",
       "massive attack|||teardrop",
       "mounika feat ocie elliott|||tender love",
-      "iwamizu|||edo",
-      "tesk|||p i c k m e u p"
+      "iwamizu|||edo"
     ],
     "dj_neihtul": [
       "brian eno|||an ending ascent by brian eno",
@@ -1479,22 +1479,22 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1794812752.5851817,
-    "mellow_mix": 1794812752.5904922,
-    "big_sonic_heaven": 1794812752.5960016,
-    "radio_x_chilled": 1794812752.6000407,
-    "dreampop_radio": 1794812752.6046553,
-    "indie_select": 1794812752.609244,
-    "dkfm_edge": 1794812752.6138856,
+    "vuurland": 1794812835.5604608,
+    "mellow_mix": 1794812835.565705,
+    "big_sonic_heaven": 1794812835.5712597,
+    "radio_x_chilled": 1794812835.5753326,
+    "dreampop_radio": 1794812835.580051,
+    "indie_select": 1794812835.5848606,
+    "dkfm_edge": 1794812835.5895383,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794812752.6193616,
-    "dkfm_shoegaze": 1794812752.6233764,
-    "dkfm_classic": 1794812752.627917,
-    "egofm_rnb": 1794812752.6323009,
-    "egofm_chillout": 1794812752.6365643,
-    "dj_neihtul": 1794812752.640039,
-    "gri_balkon": 1794812752.6427414,
-    "ignoreradio_shoegaze": 1794812752.6468573
+    "dark_edge": 1794812835.595026,
+    "dkfm_shoegaze": 1794812835.5990727,
+    "dkfm_classic": 1794812835.6037388,
+    "egofm_rnb": 1794812835.6080675,
+    "egofm_chillout": 1794812835.897865,
+    "dj_neihtul": 1794812835.901527,
+    "gri_balkon": 1794812835.904187,
+    "ignoreradio_shoegaze": 1794812835.9083235
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -22186,9 +22186,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
   "__last_radio_key_mellow_mix": "the peter malick group|||strange transmissions w/ norah jones",
-  "__last_radio_key_big_sonic_heaven": "new order|||be a rebel",
+  "__last_radio_key_big_sonic_heaven": "echo & the bunnymen|||brussels is haunted",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 21202,
+  "__v116_fifo_next_sequence": 21203,
   "__v146_spotify_budget_slot": 1794812754.5696335,
   "__vuurland_active_playlist_count": 1207,
   "__vuurland_active_volume": 2,
@@ -124597,7 +124597,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "maximilian hecker|||over",
+  "__last_radio_key_dreampop_radio": "paula cole|||where have all the cowboys gone?",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -124715,7 +124715,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "art school girlfriend|||the peaks",
+  "__last_radio_key_indie_select": "beatsteakes|||let me in",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -126080,7 +126080,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "mo dotti|||wasted delay",
   "__last_radio_key_dkfm_shoegaze": "cocteau twins|||fifty-fifty clown",
-  "__last_radio_key_dkfm_classic": "band of susans|||because of you",
+  "__last_radio_key_dkfm_classic": "cranes|||cha cha escueta",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -131499,7 +131499,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "sza|||julia",
-  "__last_radio_key_egofm_chillout": "terranova|||hotel amour feat everybody",
+  "__last_radio_key_egofm_chillout": "kinderzimmer productions|||es kommt in wellen instrumental",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
