@@ -65,11 +65,11 @@ def alternate_remix_credit_search(title):
     the original artist, title, version and territory gates.
     """
     raw = str(title or "").strip()
-    match = re.search(r"\\(remix by ([^()]{2,70})\\)$", raw, flags=re.I)
+    match = re.search(r"\(remix by ([^()]{2,70})\)$", raw, flags=re.I)
     if not match:
         return None
     remixer = match.group(1).strip()
-    if re.search(r"(?i)\\b(?:feat|ft|with)\\b", remixer):
+    if re.search(r"(?i)\b(?:feat|ft|with)\b", remixer):
         return None
     return raw[:match.start()] + f"({remixer} Remix)"
 
