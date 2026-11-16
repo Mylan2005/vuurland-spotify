@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1794841705.4011292,
+  "__v150_next_spotify_round_at": 1794841826.8270137,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -337,6 +337,7 @@
       "courteeners|||acrylic acoustic"
     ],
     "dreampop_radio": [
+      "neil finn|||last to know",
       "wilco|||far far away",
       "night moves|||carl sagan",
       "jesca hoop|||the lost sky",
@@ -435,8 +436,7 @@
       "honig|||golden circle",
       "radical face|||ghost towns",
       "timesbold|||when i come around",
-      "tokunbo|||homecoming",
-      "bear's den|||elysium"
+      "tokunbo|||homecoming"
     ],
     "indie_select": [
       "kraftwerk|||radioactivity",
@@ -946,6 +946,7 @@
       "bleach|||headless"
     ],
     "egofm_rnb": [
+      "bonobo feat szjerdene|||get thy bearings",
       "chet faker|||gold",
       "janelle monae feat miguel|||primetime",
       "bruno major|||cold blood",
@@ -1044,8 +1045,7 @@
       "dominic fike|||cancel me",
       "bernhoft|||we have a dream",
       "quinn christopherson|||evelene",
-      "tyler the creator|||are we still friends",
-      "yuno|||sunlight"
+      "tyler the creator|||are we still friends"
     ],
     "egofm_chillout": [
       "jose gonzalez|||tjomme dj koze remix",
@@ -1436,21 +1436,21 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794841669.608998,
-    "big_sonic_heaven": 1794841669.611086,
-    "radio_x_chilled": 1794841669.6131852,
-    "dreampop_radio": 1794841669.6153183,
-    "indie_select": 1794841669.6175156,
-    "dkfm_edge": 1794841669.619713,
+    "mellow_mix": 1794841706.0169141,
+    "big_sonic_heaven": 1794841706.019008,
+    "radio_x_chilled": 1794841706.0211105,
+    "dreampop_radio": 1794841706.0233295,
+    "indie_select": 1794841706.025534,
+    "dkfm_edge": 1794841706.027702,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794841669.622442,
-    "dkfm_shoegaze": 1794841669.6250029,
-    "dkfm_classic": 1794841669.6273384,
-    "egofm_rnb": 1794841669.629617,
-    "egofm_chillout": 1794841669.9570246,
-    "dj_neihtul": 1794841669.9588943,
-    "gri_balkon": 1794841669.9603589,
-    "ignoreradio_shoegaze": 1794841669.9623685
+    "dark_edge": 1794841706.030406,
+    "dkfm_shoegaze": 1794841706.0328379,
+    "dkfm_classic": 1794841706.035115,
+    "egofm_rnb": 1794841706.0375178,
+    "egofm_chillout": 1794841706.039695,
+    "dj_neihtul": 1794841706.0415347,
+    "gri_balkon": 1794841706.0430272,
+    "ignoreradio_shoegaze": 1794841706.0450773
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -22667,8 +22667,8 @@
   "__last_radio_key_mellow_mix": "the spinners|||i'll be around",
   "__last_radio_key_big_sonic_heaven": "johnny marr|||ophelia",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 22005,
-  "__v146_spotify_budget_slot": 1794841587.140321,
+  "__v116_fifo_next_sequence": 22006,
+  "__v146_spotify_budget_slot": 1794841708.547074,
   "__vuurland_active_playlist_count": 1402,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -88508,7 +88508,8 @@
     "lesser angels|||burn it away": 1,
     "james bright & pete gooding|||chilli squid": 1,
     "spotlight kid|||nvmbr": 1,
-    "zwan|||honestly": 1
+    "zwan|||honestly": 1,
+    "stefano guzzetti|||la ment w/ ayu okakita": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -125860,7 +125861,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "wilco|||far far away",
+  "__last_radio_key_dreampop_radio": "neil finn|||last to know",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -128091,8 +128092,8 @@
     "v193-shuffle",
     "4c555880f8135ec6b8439743be50c5c11bb9626468edbf3e78314a2790d7e0ef"
   ],
-  "__v192_duyster_archive_cursor": 4449,
-  "__v192_duyster_next_enqueue_at": 1794841704.5479872,
+  "__v192_duyster_archive_cursor": 4451,
+  "__v192_duyster_next_enqueue_at": 1794841826.097211,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -131034,7 +131035,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "mellow_mix",
+  "__v221_last_selected_source": "big_sonic_heaven",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -131046,7 +131047,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "mellow_mix",
+  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -131079,7 +131080,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "mellow_mix",
+  "__v227_last_source_turn": "big_sonic_heaven",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -132763,7 +132764,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "chet faker|||gold",
+  "__last_radio_key_egofm_rnb": "bonobo feat szjerdene|||get thy bearings",
   "__last_radio_key_egofm_chillout": "jose gonzalez|||tjomme dj koze remix",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
