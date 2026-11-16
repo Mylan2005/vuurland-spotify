@@ -25,7 +25,7 @@ assert 'cache.pop("__v166_playlist_scan", None)' in src
 assert 'stage["offset"]' in src
 assert 'playlist_offset + len(playlist_batch)' in src
 assert 'save_cache(cache)\n                print(f"📋 v166:' in src
-assert src.index('cache["__v166_playlist_scan"] = stage') < src.index('add_tracks(\n            playlist_id,')
+assert src.index('cache["__v166_playlist_scan"] = stage') < src.index('was_added = add_tracks(\n                playlist_id,')
 assert 'or playlist_count_changed' in src
 assert 'stage["expected_total"] = latest_total' in src
 assert 'cache.pop("__v166_playlist_scan", None)' in src
