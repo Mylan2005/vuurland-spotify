@@ -19,6 +19,7 @@ from vuurland_music_policy import global_music_reject_reason
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
+from v250_cure_album_version import owner_approved_album_version
 from v245_multi_guest_credits import split_explicit_multiword_guests
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
@@ -2663,6 +2664,14 @@ def find_spotify_track(
     if v101_original_key in V101_EXCLUDED_RADIO_TRACKS:
         print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
         return None
+
+    # v250: owner explicitly requested the ordinary studio recording for
+    # The Cure - This Is A Lie (Ambient Mix), unavailable in their Spotify.
+    # Keep the original queue/cache identity; only adjust the match query.
+    _v250_album_title = owner_approved_album_version(artist, title)
+    if _v250_album_title != title:
+        print(f"🎵 v250: goedgekeurde albumversie: {artist} — {title} → {_v250_album_title}")
+        title = _v250_album_title
 
     # v208: een expliciet haakjes-feature is een VERPLICHTE tweede artiest.
     # Alleen vormcorrectie; laat de bestaande artiest-/titel-/versietoets
