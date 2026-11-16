@@ -20,6 +20,7 @@ from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
 from v250_cure_album_version import owner_approved_album_version
+from v252_unavailable_radio_x import skip_unavailable_radio_x_recording
 from v245_multi_guest_credits import split_explicit_multiword_guests
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
@@ -6787,6 +6788,9 @@ def v47_collect_radio_history(radio_sources, cache, seen, live_queue, matching_v
             if not artist or not title:
                 continue
             key = _v47_key(artist, title)
+            if skip_unavailable_radio_x_recording(sid, artist, title):
+                source_seen.add(key)
+                continue
             if is_interview_fragment(title):
                 source_seen.add(key)
                 continue
@@ -6894,7 +6898,9 @@ def v96_collect_live_plays(radio_sources, cache, seen, live_queue,
         reasons = {}
         seen_this_scan = set()
         for key, artist, title in reversed(arrivals):
-            if v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS:
+            if skip_unavailable_radio_x_recording(sid, artist, title):
+                reason = "v252: gebruiker bevestigt niet beschikbaar op Spotify"
+            elif v101_radio_key(artist, title) in V101_EXCLUDED_RADIO_TRACKS:
                 reason = "expliciet uitgesloten nummer (alle bronnen)"
             elif sid != "dark_edge" and global_music_reject_reason(artist, title):
                 reason = "globaal uitgesloten muziek: " + global_music_reject_reason(artist, title)
@@ -7625,6 +7631,8 @@ def sync():
     live_queue = [item for item in live_queue if (
         isinstance(item, dict)
         and str(item.get("source") or "vuurland").strip() in FIFO_SOURCE_ORDER
+        and not skip_unavailable_radio_x_recording(
+            item.get("source"), item.get("artist"), item.get("title"))
         and (item.get("source") == "dark_edge" or not global_music_reject_reason(
             item.get("artist", ""), item.get("title", "")))
         and (item.get("source") != "dark_edge" or dark_edge_track_allowed(
@@ -8972,6 +8980,14 @@ def sync():
             item["artist"] = artist
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
+
+        # v252: also guard items restored by older retry/cache logic.
+        if skip_unavailable_radio_x_recording(item.get("source"), artist, title):
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            print(f"⏭️ v252 Radio X Chilled: definitief overgeslagen (niet op Spotify): {artist} — {title}")
+            continue
 
         # Tweede Dark Edge-controle direct vóór mogelijke Spotify-actie,
         # ook voor herstelde/in het verleden opgeslagen queue-items.
