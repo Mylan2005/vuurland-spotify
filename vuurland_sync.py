@@ -9147,6 +9147,19 @@ def sync():
             f"__match_v{MATCHING_RULES_VERSION}__" + cache_key
         )
 
+        # v251: do not use a cached URI previously matched for a named mix
+        # or the mislabeled "Play". Revalidate once against the ordinary
+        # recording, then keep the newly confirmed match for future rounds.
+        if owner_approved_album_version(artist, title) != title:
+            migrated = cache.get("__v251_cure_version_migrated")
+            if not isinstance(migrated, list):
+                migrated = []
+            if cache_key not in migrated:
+                cache.pop(match_cache_key, None)
+                migrated.append(cache_key)
+                cache["__v251_cure_version_migrated"] = migrated
+                save_cache(cache)
+
         # Bescherm tegen een oude foutieve vaste match: dit is The Cure,
         # niet de uitvoering van Death Cab for Cutie.
         if (
