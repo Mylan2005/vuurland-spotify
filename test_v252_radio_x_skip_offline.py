@@ -17,9 +17,9 @@ for source, artist, title in (
 
 s = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 assert 'from v252_unavailable_radio_x import skip_unavailable_radio_x_recording' in s
-assert "if skip_unavailable_radio_x_recording(sid, artist, title):" in s
-assert "if skip_unavailable_radio_x_recording(sid, artist, title):" in s[s.index("def v96_collect_live_plays("):]
-assert "if skip_unavailable_radio_x_recording(sid, artist, title):" in s[s.index("def v47_collect_radio_history("):s.index("def v96_collect_live_plays(")]
+assert "skip_unavailable_radio_x_recording(sid, artist, title)" in s
+assert "skip_unavailable_radio_x_recording(sid, artist, title)" in s[s.index("def v96_collect_live_plays("):]
+assert "skip_unavailable_radio_x_recording(sid, artist, title)" in s[s.index("def v47_collect_radio_history("):s.index("def v96_collect_live_plays(")]
 assert "and not skip_unavailable_radio_x_recording(" in s[s.index("def sync("):s.index("before_source_filter =", s.index("def sync("))+1900]
 assert 'skip_unavailable_radio_x_recording(item.get("source"), artist, title)' in s
 print("✅ v252: live-opname skip bij ingestie, bestaande queue en vóór Spotify Search.")
