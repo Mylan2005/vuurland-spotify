@@ -21,6 +21,7 @@ from v233_general_radio_metadata import normalize_radio_metadata
 from v239_structural_title_rescue import safe_search_title
 from v241_final_plural_rescue import final_s_candidate_title
 from v239_reported_miss_retries import reported_for_safe_retry
+from v242_reported_misses import reported_v242_for_safe_retry, reported_v242_track
 from v235_general_search_rescue import catalog_search_artist, split_compound_light_title
 from v209_verified_source_title import verified_emily_live_source_title
 from v216_report_metadata import has_report_correction
@@ -53,6 +54,7 @@ MATCHER_RETRY_RULES = (
     "v238_spotify_search_spelling",
     "v239_structural_query",
     "v239_reported_source_retry",
+    "v242_reported_source_retry",
     "v241_final_plural_title",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
@@ -137,6 +139,8 @@ def applicable_rules(artist, title):
     # source are independently present in the cache. This is not a match.
     if reported_for_safe_retry(artist, title):
         hits.append("v239_reported_source_retry")
+    if reported_v242_track(artist, title):
+        hits.append("v242_reported_source_retry")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
@@ -189,8 +193,9 @@ def release_for_matcher_upgrades(
     reported_keys, other_keys = [], []
     for candidate_key in pending_keys:
         original = parked.get(candidate_key) or failed.get(candidate_key) or duyster.get(candidate_key)
-        if (isinstance(original, dict) and reported_for_safe_retry(
-                original.get("artist"), original.get("title"))):
+        if (isinstance(original, dict) and (reported_for_safe_retry(
+                original.get("artist"), original.get("title"))
+                or reported_v242_for_safe_retry(original.get("artist"), original.get("title"), original.get("source")))):
             reported_keys.append(candidate_key)
         else:
             other_keys.append(candidate_key)
@@ -208,6 +213,9 @@ def release_for_matcher_upgrades(
         if not isinstance(previously, list):
             continue
         new_rules = [rule for rule in rules if rule not in previously]
+        # v242 user report is source-specific, not a cross-station guess.
+        if not reported_v242_for_safe_retry(artist, title, entry.get("source")):
+            new_rules = [rule for rule in new_rules if rule != "v242_reported_source_retry"]
         if not new_rules:
             continue
         source = entry.get("source")

@@ -696,6 +696,35 @@ def spotify_request(
         # TIJDELIJKE SERVERFOUTEN
         # ---------------------------------
         if response.status_code in (500, 502, 503, 504):
+            # Playlist POST is NOT idempotent. A 502 may arrive after Spotify
+            # actually appended the track. Never blindly send a second POST
+            # in this request: keep the FIFO item and let the next normal
+            # sync perform its existing playlist/URI duplicate checks.
+            _playlist_append = (str(method).upper() == "POST"
+                                and re.fullmatch(r"/playlists/[^/]+/items", _library_path))
+            if _playlist_append:
+                cache = load_cache()
+                cache["__spotify_server_error_until"] = max(
+                    float(cache.get("__spotify_server_error_until", 0) or 0),
+                    time.time() + 180,
+                )
+                # Record the exact uncertain URI and pre-POST count.
+                # This is intentionally scoped to one append, not a playlist scan.
+                _payload = kwargs.get("json") or {}
+                _uris = _payload.get("uris", []) if isinstance(_payload, dict) else []
+                if len(_uris) == 1 and isinstance(_uris[0], str):
+                    cache["__v242_uncertain_playlist_append"] = {
+                        "playlist_id": _library_path.split("/")[2],
+                        "uri": _uris[0],
+                        "before_count": cache.get("__vuurland_active_playlist_count"),
+                    }
+                save_cache(cache)
+                print(f"⏸️ Spotify playlist POST HTTP {response.status_code}: "
+                      "onzekere toevoeging; geen blinde POST-retry, FIFO bewaard.")
+                raise RuntimeError(
+                    f"Spotify playlist POST HTTP {response.status_code}: "
+                    "tijdelijke serverfout; status van toevoeging onzeker."
+                )
             if is_search:
                 # A 5xx is a temporary server outage, NOT a missing track or
                 # a 429. Pause Spotify for three minutes and keep RadioBox live.
@@ -6102,6 +6131,45 @@ def add_tracks(
             i:i + 100
         ]
 
+        # v242: a 502 may have occurred AFTER Spotify committed the add.
+        # Only in that situation make two bounded GETs to confirm the append
+        # before another non-idempotent POST. Never clear an uncertain flag
+        # merely because the in-memory playlist cache missed the new URI.
+        pending = load_cache().get("__v242_uncertain_playlist_append")
+        if (isinstance(pending, dict) and pending.get("playlist_id") == playlist_id
+                and len(batch) == 1 and pending.get("uri") == batch[0]):
+            live_total = _get_playlist_total(playlist_id)
+            tail = spotify_request(
+                "GET", f"/playlists/{playlist_id}/items",
+                params={"limit": 100, "offset": max(0, live_total - 100)},
+            )
+            exact_found = any(
+                isinstance(entry, dict) and
+                ((entry.get("item") or entry.get("track") or {}).get("uri") == batch[0])
+                for entry in (tail.get("items", []) or [])
+            )
+            if exact_found:
+                current = load_cache()
+                current.pop("__v242_uncertain_playlist_append", None)
+                save_cache(current)
+                print("✅ v242: eerdere Spotify-toevoeging na 502 bevestigd; geen tweede POST.")
+                continue
+            original_count = pending.get("before_count")
+            if not isinstance(original_count, int) or live_total != original_count:
+                # The count changed and the URI was not found in last 100.
+                # It could still be a confirmed append outside this window.
+                # Do not guess or risk inserting a duplicate.
+                raise RuntimeError(
+                    "Spotify playlist POST onzeker na 502: playlist gewijzigd; "
+                    "handmatige controle nodig, geen dubbele toevoeging."
+                )
+            # Same total + URI absent from last 100 means original append
+            # did not persist; a single normal POST is safe to retry.
+            current = load_cache()
+            current.pop("__v242_uncertain_playlist_append", None)
+            save_cache(current)
+            print("✅ v242: playlist na 502 gecontroleerd; oorspronkelijke toevoeging ontbreekt.")
+
         spotify_request(
             "POST",
             f"/playlists/"
@@ -9646,6 +9714,10 @@ if __name__ == "__main__":
             or "Spotify Search HTTP 503: tijdelijke serverfout" in str(error)
             or "Spotify Search HTTP 504: tijdelijke serverfout" in str(error)
             or "Spotify HTTP 403:" in str(error)
+            or "Spotify playlist POST HTTP 500:" in str(error)
+            or "Spotify playlist POST HTTP 502:" in str(error)
+            or "Spotify playlist POST HTTP 503:" in str(error)
+            or "Spotify playlist POST HTTP 504:" in str(error)
             or "Spotify tijdelijke serverpauze is nog actief" in str(error)
         ):
             stored = load_cache()
