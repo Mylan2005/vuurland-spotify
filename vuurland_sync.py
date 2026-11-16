@@ -20,6 +20,7 @@ from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
 from v245_multi_guest_credits import split_explicit_multiword_guests
+from v246_uncertain_spotify_append import verify_uncertain_spotify_append
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
 from v223_report_search_hints import report_third_search_hint as v223_report_query
@@ -6165,44 +6166,28 @@ def add_tracks(
             i:i + 100
         ]
 
-        # v242: a 502 may have occurred AFTER Spotify committed the add.
-        # Only in that situation make two bounded GETs to confirm the append
-        # before another non-idempotent POST. Never clear an uncertain flag
-        # merely because the in-memory playlist cache missed the new URI.
+        # v246: check the ENTIRE playlist after an uncertain POST. A previous
+        # successful append may now be outside the most recent 100 items.
         pending = load_cache().get("__v242_uncertain_playlist_append")
-        if (isinstance(pending, dict) and pending.get("playlist_id") == playlist_id
-                and len(batch) == 1 and pending.get("uri") == batch[0]):
-            live_total = _get_playlist_total(playlist_id)
-            tail = spotify_request(
-                "GET", f"/playlists/{playlist_id}/items",
-                params={"limit": 100, "offset": max(0, live_total - 100)},
-            )
-            exact_found = any(
-                isinstance(entry, dict) and
-                ((entry.get("item") or entry.get("track") or {}).get("uri") == batch[0])
-                for entry in (tail.get("items", []) or [])
-            )
-            if exact_found:
-                current = load_cache()
-                current.pop("__v242_uncertain_playlist_append", None)
-                save_cache(current)
-                print("✅ v242: eerdere Spotify-toevoeging na 502 bevestigd; geen tweede POST.")
-                continue
-            original_count = pending.get("before_count")
-            if not isinstance(original_count, int) or live_total != original_count:
-                # The count changed and the URI was not found in last 100.
-                # It could still be a confirmed append outside this window.
-                # Do not guess or risk inserting a duplicate.
+        if isinstance(pending, dict) and pending.get("playlist_id") == playlist_id:
+            if len(batch) != 1 or pending.get("uri") != batch[0]:
                 raise RuntimeError(
-                    "Spotify playlist POST onzeker na 502: playlist gewijzigd; "
-                    "handmatige controle nodig, geen dubbele toevoeging."
+                    "Spotify playlist POST onzeker: eerst de openstaande track "
+                    "controleren; geen andere toevoeging."
                 )
-            # Same total + URI absent from last 100 means original append
-            # did not persist; a single normal POST is safe to retry.
+            already_present = verify_uncertain_spotify_append(
+                spotify_request, playlist_id, batch[0]
+            )
             current = load_cache()
+            # Do not wipe a newer pending state accidentally.
+            if current.get("__v242_uncertain_playlist_append") != pending:
+                raise RuntimeError("Spotify onzekere toevoeging tussentijds gewijzigd.")
             current.pop("__v242_uncertain_playlist_append", None)
             save_cache(current)
-            print("✅ v242: playlist na 502 gecontroleerd; oorspronkelijke toevoeging ontbreekt.")
+            if already_present:
+                print("✅ v246: eerdere Spotify-toevoeging over volledige playlist bevestigd; geen tweede POST.")
+                return False
+            print("✅ v246: volledige playlist stabiel gecontroleerd; track ontbreekt, veilige nieuwe POST.")
 
         spotify_request(
             "POST",
@@ -6212,6 +6197,7 @@ def add_tracks(
                 "uris": batch
             }
         )
+    return True
 
 
 def get_track_isrc_from_uri(uri):
@@ -9615,10 +9601,35 @@ def sync():
         cache["__v224_last_spotify_opportunity_source"] = selected_source
         save_cache(cache)
         print(f"🎯 v224 Spotify-toevoegbeurt: {selected_source}")
-        add_tracks(
+        was_added = add_tracks(
             playlist_id,
             [uri]
         )
+        if was_added is False:
+            # Already added during the earlier HTTP 502: do not count it as a
+            # new addition or emit a misleading "Toegevoegd" line.
+            active_playlist_count = _get_playlist_total(playlist_id)
+            cache = load_cache()
+            cache["__vuurland_active_playlist_count"] = active_playlist_count
+            cache["__vuurland_active_playlist_id"] = playlist_id
+            cache["__vuurland_active_volume"] = active_volume_number
+            playlist_uris.add(uri)
+            if candidate_isrc:
+                playlist_isrcs.add(candidate_isrc)
+                spotify_uri_isrc[uri] = candidate_isrc
+            playlist_keys.add(cache_key)
+            cache["__playlist_uris"] = sorted(playlist_uris)
+            cache["__playlist_isrcs"] = sorted(playlist_isrcs)
+            cache["__spotify_uri_isrc"] = spotify_uri_isrc
+            cache["__playlist_keys"] = sorted(playlist_keys)
+            live_queue.pop(0)
+            seen.add(cache_key)
+            v83_clear_resolved_failures(cache, artist, title)
+            save_seen(seen)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            print(f"⏭️ Al aanwezig na eerdere HTTP 502: {artist} - {title}")
+            continue
 
         active_playlist_count += 1
         cache["__vuurland_active_volume"] = active_volume_number
