@@ -696,6 +696,25 @@ def spotify_request(
         # TIJDELIJKE SERVERFOUTEN
         # ---------------------------------
         if response.status_code in (500, 502, 503, 504):
+            # Playlist POST is NOT idempotent. A 502 may arrive after Spotify
+            # actually appended the track. Never blindly send a second POST
+            # in this request: keep the FIFO item and let the next normal
+            # sync perform its existing playlist/URI duplicate checks.
+            _playlist_append = (str(method).upper() == "POST"
+                                and re.fullmatch(r"/playlists/[^/]+/items", _library_path))
+            if _playlist_append:
+                cache = load_cache()
+                cache["__spotify_server_error_until"] = max(
+                    float(cache.get("__spotify_server_error_until", 0) or 0),
+                    time.time() + 180,
+                )
+                save_cache(cache)
+                print(f"⏸️ Spotify playlist POST HTTP {response.status_code}: "
+                      "onzekere toevoeging; geen blinde POST-retry, FIFO bewaard.")
+                raise RuntimeError(
+                    f"Spotify playlist POST HTTP {response.status_code}: "
+                    "tijdelijke serverfout; status van toevoeging onzeker."
+                )
             if is_search:
                 # A 5xx is a temporary server outage, NOT a missing track or
                 # a 429. Pause Spotify for three minutes and keep RadioBox live.
@@ -9646,6 +9665,10 @@ if __name__ == "__main__":
             or "Spotify Search HTTP 503: tijdelijke serverfout" in str(error)
             or "Spotify Search HTTP 504: tijdelijke serverfout" in str(error)
             or "Spotify HTTP 403:" in str(error)
+            or "Spotify playlist POST HTTP 500:" in str(error)
+            or "Spotify playlist POST HTTP 502:" in str(error)
+            or "Spotify playlist POST HTTP 503:" in str(error)
+            or "Spotify playlist POST HTTP 504:" in str(error)
             or "Spotify tijdelijke serverpauze is nog actief" in str(error)
         ):
             stored = load_cache()
