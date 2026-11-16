@@ -46,6 +46,7 @@
       "alex g|||runner"
     ],
     "mellow_mix": [
+      "10 000 maniacs|||like the weather live",
       "xavier rudd|||stoney creek",
       "nick drake|||cello song",
       "skott|||rule the world",
@@ -144,8 +145,7 @@
       "joni mitchell|||let the wind carry me",
       "the smashing pumpkins|||luna",
       "ben e king|||stand by me",
-      "sting|||shape of my heart",
-      "lord huron|||the night we met"
+      "sting|||shape of my heart"
     ],
     "big_sonic_heaven": [
       "karen o & danger mouse|||nox lumina",
@@ -764,6 +764,7 @@
       "patrice|||everyday good"
     ],
     "dkfm_shoegaze": [
+      "my violent ego|||la c'est la voix",
       "nylon smile|||dust",
       "luminous orange|||drop you vivid colours",
       "contrast|||drum machine",
@@ -862,8 +863,7 @@
       "ancient channels|||chimera",
       "attic ocean|||coastal",
       "jorge elbrecht feat tamaryn|||1/4 circle black",
-      "found space|||don't let it go",
-      "dead little penny|||dead together"
+      "found space|||don't let it go"
     ],
     "dkfm_classic": [
       "the charlottes|||prayer song album version",
@@ -968,6 +968,7 @@
       "the house of love|||sulphur"
     ],
     "egofm_rnb": [
+      "waterbaby|||airforce blue",
       "rhye|||open",
       "greentea peng|||nah it ain't the same",
       "lou asril feat avec|||when the lights go out",
@@ -1066,10 +1067,10 @@
       "ider|||cross yourself",
       "little dragon|||timothy",
       "bobby womack|||across 110th street",
-      "charles bradley|||changes",
-      "cleo sol|||why don't you"
+      "charles bradley|||changes"
     ],
     "egofm_chillout": [
+      "tom misch|||better days",
       "ame|||positivland",
       "roger sanchez|||another chance",
       "jim fletch|||burning",
@@ -1168,8 +1169,7 @@
       "no-man|||wherever there is light",
       "leavv|||aqueduct",
       "illiterate|||and forever",
-      "loma|||i don't want children",
-      "slo loris|||truthful"
+      "loma|||i don't want children"
     ],
     "dj_neihtul": [
       "christine and the queens|||people ive been sad",
@@ -1480,21 +1480,21 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794858630.4574215,
-    "big_sonic_heaven": 1794858630.4600518,
-    "radio_x_chilled": 1794858630.4624794,
-    "dreampop_radio": 1794858630.464894,
-    "indie_select": 1794858630.4677594,
-    "dkfm_edge": 1794858630.470217,
+    "mellow_mix": 1794858714.38717,
+    "big_sonic_heaven": 1794858714.3896725,
+    "radio_x_chilled": 1794858714.392035,
+    "dreampop_radio": 1794858714.3943577,
+    "indie_select": 1794858714.3969004,
+    "dkfm_edge": 1794858714.3993173,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794858630.6776674,
-    "dkfm_shoegaze": 1794858630.8874955,
-    "dkfm_classic": 1794858630.8902042,
-    "egofm_rnb": 1794858630.8928096,
-    "egofm_chillout": 1794858631.1059134,
-    "dj_neihtul": 1794858631.3720973,
-    "gri_balkon": 1794858631.374075,
-    "ignoreradio_shoegaze": 1794858631.3763893
+    "dark_edge": 1794858714.4023805,
+    "dkfm_shoegaze": 1794858714.4052207,
+    "dkfm_classic": 1794858714.4076903,
+    "egofm_rnb": 1794858714.4102638,
+    "egofm_chillout": 1794858714.6379175,
+    "dj_neihtul": 1794858714.6401772,
+    "gri_balkon": 1794858714.6419826,
+    "ignoreradio_shoegaze": 1794858714.6442287
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -23032,10 +23032,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
-  "__last_radio_key_mellow_mix": "xavier rudd|||stoney creek",
+  "__last_radio_key_mellow_mix": "10 000 maniacs|||like the weather live",
   "__last_radio_key_big_sonic_heaven": "karen o & danger mouse|||nox lumina",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 22474,
+  "__v116_fifo_next_sequence": 22475,
   "__v146_spotify_budget_slot": 1794858633.4579203,
   "__vuurland_active_playlist_count": 1514,
   "__vuurland_active_volume": 2,
@@ -128169,7 +128169,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "closedown|||aquila",
-  "__last_radio_key_dkfm_shoegaze": "nylon smile|||dust",
+  "__last_radio_key_dkfm_shoegaze": "my violent ego|||la c'est la voix",
   "__last_radio_key_dkfm_classic": "the charlottes|||prayer song album version",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -133593,8 +133593,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "rhye|||open",
-  "__last_radio_key_egofm_chillout": "ame|||positivland",
+  "__last_radio_key_egofm_rnb": "waterbaby|||airforce blue",
+  "__last_radio_key_egofm_chillout": "tom misch|||better days",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
