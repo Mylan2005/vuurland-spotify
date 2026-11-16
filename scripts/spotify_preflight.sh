@@ -25,6 +25,7 @@ python3 test_v239_reported_miss_retries_offline.py
 python3 test_playlist_only_no_likes_offline.py
 python3 test_v241_final_plural_rescue_offline.py
 python3 test_v242_reported_misses_offline.py
+python3 test_v243_remix_fallback_offline.py
 python3 test_v236_spotify_403_diagnostics_offline.py
 python3 test_dark_edge_filter_offline.py
 python3 test_v212_music_policy_offline.py
