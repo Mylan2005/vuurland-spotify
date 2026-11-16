@@ -20,7 +20,6 @@ from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
 from v245_multi_guest_credits import split_explicit_multiword_guests
-from v248_spotify_post_guard import post_5xx_cooldown_seconds, after_successful_post
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
 from v223_report_search_hints import report_third_search_hint as v223_report_query
@@ -712,11 +711,8 @@ def spotify_request(
                                 and re.fullmatch(r"/playlists/[^/]+/items", _library_path))
             if _playlist_append:
                 cache = load_cache()
-                _wait = post_5xx_cooldown_seconds(cache, time.time())
-                cache["__spotify_server_error_until"] = max(
-                    float(cache.get("__spotify_server_error_until", 0) or 0),
-                    time.time() + _wait,
-                )
+                # A playlist POST 5xx is isolated to this item: do NOT pause
+                # other Spotify additions. Preserve the ambiguous URI below.
                 # Record the exact uncertain URI and pre-POST count.
                 # This is intentionally scoped to one append, not a playlist scan.
                 _payload = kwargs.get("json") or {}
@@ -849,11 +845,7 @@ def spotify_request(
                     str(method).upper() == "POST"
                     and re.fullmatch(r"/playlists/[^/]+/items", _library_path)):
                 cache = load_cache()
-                wait = post_5xx_cooldown_seconds(cache, time.time())
-                cache["__spotify_server_error_until"] = max(
-                    float(cache.get("__spotify_server_error_until", 0) or 0),
-                    time.time() + wait,
-                )
+                # No global Spotify cooldown even after token refresh.
                 uris = (kwargs.get("json") or {}).get("uris", [])
                 if len(uris) == 1 and isinstance(uris[0], str):
                     item = {
@@ -882,10 +874,6 @@ def spotify_request(
         # automatisch. Registreer pas een herstel NA een echte HTTP-success.
         if 200 <= response.status_code < 300:
             current = load_cache()
-            if str(method).upper() == "POST" and re.fullmatch(
-                    r"/playlists/[^/]+/items", _library_path):
-                if after_successful_post(current):
-                    save_cache(current)
             last_403 = current.get("__v236_last_spotify_403")
             if isinstance(last_403, dict) and not last_403.get("recovered_at"):
                 last_403["recovered_at"] = int(time.time())
@@ -9676,10 +9664,24 @@ def sync():
         cache["__v224_last_spotify_opportunity_source"] = selected_source
         save_cache(cache)
         print(f"🎯 v224 Spotify-toevoegbeurt: {selected_source}")
-        was_added = add_tracks(
-            playlist_id,
-            [uri]
-        )
+        try:
+            was_added = add_tracks(
+                playlist_id,
+                [uri]
+            )
+        except RuntimeError as error:
+            # Only ambiguous POST 5xx is recoverable here. Never retry the
+            # non-idempotent POST, but do not freeze unrelated radio sources.
+            if not (str(error).startswith("Spotify playlist POST HTTP ")
+                    and "status van toevoeging onzeker" in str(error)):
+                raise
+            item["_v34_retry_at"] = int(time.time()) + 3600
+            live_queue.append(live_queue.pop(0))
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            cache = load_cache()
+            save_cache(cache)
+            print(f"⚠️ Spotify POST 5xx: {artist} - {title} veilig uitgesteld; andere bronnen gaan door.")
+            continue
         if was_added is None:
             # Ambiguous Spotify POST is unresolved: keep the item, do not mark
             # it as seen, and allow other radio sources to keep adding tracks.
