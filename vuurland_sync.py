@@ -20,7 +20,6 @@ from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
 from v245_multi_guest_credits import split_explicit_multiword_guests
-from v246_uncertain_spotify_append import verify_uncertain_spotify_append
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
 from v223_report_search_hints import report_third_search_hint as v223_report_query
@@ -721,11 +720,23 @@ def spotify_request(
                 _payload = kwargs.get("json") or {}
                 _uris = _payload.get("uris", []) if isinstance(_payload, dict) else []
                 if len(_uris) == 1 and isinstance(_uris[0], str):
-                    cache["__v242_uncertain_playlist_append"] = {
+                    _uncertain = {
                         "playlist_id": _library_path.split("/")[2],
                         "uri": _uris[0],
                         "before_count": cache.get("__vuurland_active_playlist_count"),
                     }
+                    # v247: never lose a previous ambiguous append if a later
+                    # (different) POST also returns 502.
+                    _all_pending = cache.get("__v247_uncertain_playlist_appends")
+                    if not isinstance(_all_pending, dict):
+                        _all_pending = {}
+                    _old_pending = cache.get("__v242_uncertain_playlist_append")
+                    if isinstance(_old_pending, dict):
+                        _old_key = str(_old_pending.get("playlist_id")) + "|" + str(_old_pending.get("uri"))
+                        _all_pending[_old_key] = _old_pending
+                    _all_pending[_uncertain["playlist_id"] + "|" + _uncertain["uri"]] = _uncertain
+                    cache["__v247_uncertain_playlist_appends"] = _all_pending
+                    cache["__v242_uncertain_playlist_append"] = _uncertain
                 save_cache(cache)
                 print(f"⏸️ Spotify playlist POST HTTP {response.status_code}: "
                       "onzekere toevoeging; geen blinde POST-retry, FIFO bewaard.")
@@ -6166,28 +6177,54 @@ def add_tracks(
             i:i + 100
         ]
 
-        # v246: check the ENTIRE playlist after an uncertain POST. A previous
-        # successful append may now be outside the most recent 100 items.
-        pending = load_cache().get("__v242_uncertain_playlist_append")
-        if isinstance(pending, dict) and pending.get("playlist_id") == playlist_id:
-            if len(batch) != 1 or pending.get("uri") != batch[0]:
-                raise RuntimeError(
-                    "Spotify playlist POST onzeker: eerst de openstaande track "
-                    "controleren; geen andere toevoeging."
-                )
-            already_present = verify_uncertain_spotify_append(
-                spotify_request, playlist_id, batch[0]
+        # v247: no full playlist scan. Check only the most recent 100 items
+        # when this exact URI had an ambiguous POST. Never blindly re-POST.
+        current = load_cache()
+        pending_map = current.get("__v247_uncertain_playlist_appends")
+        if not isinstance(pending_map, dict):
+            pending_map = {}
+        legacy = current.get("__v242_uncertain_playlist_append")
+        if isinstance(legacy, dict) and legacy.get("playlist_id") and legacy.get("uri"):
+            pending_map.setdefault(
+                str(legacy["playlist_id"]) + "|" + str(legacy["uri"]), legacy
             )
-            current = load_cache()
-            # Do not wipe a newer pending state accidentally.
-            if current.get("__v242_uncertain_playlist_append") != pending:
-                raise RuntimeError("Spotify onzekere toevoeging tussentijds gewijzigd.")
-            current.pop("__v242_uncertain_playlist_append", None)
-            save_cache(current)
-            if already_present:
-                print("✅ v246: eerdere Spotify-toevoeging over volledige playlist bevestigd; geen tweede POST.")
+        pending_key = str(playlist_id) + "|" + str(batch[0]) if len(batch) == 1 else ""
+        pending = pending_map.get(pending_key)
+        if pending is not None:
+            total = _get_playlist_total(playlist_id)
+            tail = spotify_request(
+                "GET", f"/playlists/{playlist_id}/items",
+                params={"limit": 100, "offset": max(0, total - 100)},
+            )
+            items = tail.get("items") if isinstance(tail, dict) else None
+            # A partial or unexpected response must not permit another POST.
+            if not isinstance(items, list) or len(items) != min(total, 100):
+                raise RuntimeError("Spotify 502-controle onvolledig; geen nieuwe POST.")
+            exact_found = any(
+                isinstance(entry, dict)
+                and isinstance(entry.get("item") or entry.get("track"), dict)
+                and (entry.get("item") or entry.get("track")).get("uri") == batch[0]
+                for entry in items
+            )
+            if exact_found:
+                fresh = load_cache()
+                latest = fresh.get("__v247_uncertain_playlist_appends")
+                if not isinstance(latest, dict):
+                    latest = {}
+                if isinstance(fresh.get("__v242_uncertain_playlist_append"), dict):
+                    old = fresh["__v242_uncertain_playlist_append"]
+                    latest.setdefault(str(old.get("playlist_id")) + "|" + str(old.get("uri")), old)
+                latest.pop(pending_key, None)
+                fresh["__v247_uncertain_playlist_appends"] = latest
+                if fresh.get("__v242_uncertain_playlist_append") == pending:
+                    fresh.pop("__v242_uncertain_playlist_append", None)
+                save_cache(fresh)
+                print("✅ v247: eerdere Spotify-toevoeging bevestigd in laatste 100; geen tweede POST.")
                 return False
-            print("✅ v246: volledige playlist stabiel gecontroleerd; track ontbreekt, veilige nieuwe POST.")
+            # May have been manually added somewhere earlier. Do not risk
+            # duplicates and do not block other sources or future additions.
+            print("⏸️ v247: onzekere track niet in laatste 100; dit item uitgesteld, andere bronnen gaan door.")
+            return None
 
         spotify_request(
             "POST",
@@ -9605,6 +9642,16 @@ def sync():
             playlist_id,
             [uri]
         )
+        if was_added is None:
+            # Ambiguous Spotify POST is unresolved: keep the item, do not mark
+            # it as seen, and allow other radio sources to keep adding tracks.
+            item["_v34_retry_at"] = int(time.time()) + 3600
+            live_queue.append(live_queue.pop(0))
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            cache = load_cache()
+            save_cache(cache)
+            print(f"⏸️ 502-controle uitgesteld: {artist} - {title}; andere nummers gaan door.")
+            continue
         if was_added is False:
             # Already added during the earlier HTTP 502: do not count it as a
             # new addition or emit a misleading "Toegevoegd" line.
