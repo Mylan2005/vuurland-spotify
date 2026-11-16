@@ -105,6 +105,11 @@ ARTIST_ALIASES = {
     # v231: Chappaqua Wrestling wijzigde in maart 2025 officieel de naam
     # naar CQ Wrestling. De gewone titel- en versievalidatie blijft verplicht.
     "chappaqua wrestling": ["CQ Wrestling"],
+    # v244: Oliver Beardmore now fronts silt. (publicly confirmed 2026).
+    # Spotify also catalogs the 2023 track The Smiles Don't Reach Their Eyes
+    # under silt.; use the artist rename for ALL future Oliver source tracks.
+    # Track title, version, market and all other matcher guards still apply.
+    "oliver beardmore": ["silt."],
     # v229: door gebruiker bevestigde DKFM Edge-credit; artiest noemt zich
     # op Spotify WIRES//TMPLS (zelfde project als Wires to the Temples).
     "wires to the temples": ["WIRES//TMPLS"],
