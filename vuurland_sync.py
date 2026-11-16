@@ -18,6 +18,7 @@ from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
+from v243_remix_fallback import safe_remix_original_fallback
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
 from v223_report_search_hints import report_third_search_hint as v223_report_query
@@ -5311,13 +5312,29 @@ def find_spotify_track(
         if has_unrequested_performance_modifiers(title, item.get("name", "")):
             continue
 
+        # v243: on an existing later search attempt, the user permits an
+        # ordinary recording if the requested remix could not be matched.
+        # Require exact primary artist, complete featuring credits, and exact
+        # base title; never substitute a different mix, cover or live take.
+        v243_remix_original = safe_remix_original_fallback(
+            requested_version=wanted_version,
+            candidate_version=spotify_version,
+            search_variant=search_variant,
+            primary_artist_exact=primary_artist_exact,
+            all_credits_present=(missing_feature_count == 0
+                                 and not guest_only_catalog_match
+                                 and not solo_collab_fallback),
+            requested_base=title_base(title),
+            candidate_base=spotify_title_base,
+        )
+
         # v211: bij EXACT benoemde studio-/live-/remixwensen is een
         # cataloguskandidaat pas veilig als ook de SPECIFIEKE versie klopt.
         # 'Mr Brightside (Live Acoustic)' nooit een elektrisch live-item;
         # 'Portishead Mix' nooit de gewone Natalie Imbruglia opname.
-        if not v211_version_guard(
+        if (not v243_remix_original and not v211_version_guard(
                 artist, title, item.get('name', ''),
-                (item.get('album') or {}).get('name', ''), spotify_version):
+                (item.get('album') or {}).get('name', ''), spotify_version)):
             continue
 
         # v210: één bewezen bronspelfout met expliciet '(live)' mag
@@ -5941,6 +5958,12 @@ def find_spotify_track(
             preferred_order[wanted_family] = [wanted_family] + [
                 x for x in preferred_order["ordinary"] if x != wanted_family
             ]
+        elif wanted_family == "mix":
+            # Exact mix first; only a verified ordinary recording on an
+            # existing later attempt, never a different random remix.
+            preferred_order[wanted_family] = ["mix"] + (
+                ["ordinary", "remaster"] if v243_remix_original else []
+            )
         elif wanted_family != "ordinary":
             preferred_order[wanted_family] = preferred_order["ordinary"]
         if wanted_family in preferred_order:
@@ -5952,6 +5975,10 @@ def find_spotify_track(
                     continue
                 version_tier = len(order)
             elif candidate_family in order:
+                # v243: never accept original/remaster for a requested remix
+                # unless all fallback identity gates were independently met.
+                if wanted_family == "mix" and candidate_family != "mix" and not v243_remix_original:
+                    continue
                 # Onbekende benoemde versie alleen als de basis ECHT exact is.
                 if candidate_family == "named version" and (
                     not primary_artist_exact or spotify_base_compact != wanted_base_compact
