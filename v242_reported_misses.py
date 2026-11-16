@@ -69,3 +69,8 @@ _KEYS = frozenset((_norm(artist), _norm(title), source)
 
 def reported_v242_for_safe_retry(artist, title, source):
     return (_norm(artist), _norm(title), source) in _KEYS
+
+
+def reported_v242_track(artist, title):
+    return any(_norm(artist) == a and _norm(title) == t
+               for a, t, _source in _KEYS)
