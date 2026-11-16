@@ -29,7 +29,7 @@ python3 test_v243_remix_fallback_offline.py
 python3 test_v244_oliver_silt_alias_offline.py
 python3 test_v245_multi_guest_credits_offline.py
 python3 test_v247_502_bounded_offline.py
-python3 test_v248_spotify_post_guard_offline.py
+python3 test_v249_no_pause_502_offline.py
 python3 test_v236_spotify_403_diagnostics_offline.py
 python3 test_dark_edge_filter_offline.py
 python3 test_v212_music_policy_offline.py
