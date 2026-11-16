@@ -1,6 +1,5 @@
 """v249: POST 5xx never imposes global pause; other tracks continue."""
 from pathlib import Path
-from v248_spotify_post_guard import post_5xx_cooldown_seconds
 
 src = Path(__file__).with_name("vuurland_sync.py").read_text(encoding="utf-8")
 start = src.index("def spotify_request(")
