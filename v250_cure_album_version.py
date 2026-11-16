@@ -13,6 +13,8 @@ def owner_approved_album_version(artist, title):
     raw = str(title or "").strip()
     if raw.casefold() == "play":
         return "Play for Today"
+    if raw.casefold() == "this is a lie (ambient mix)":
+        return "This Is a Lie"
     # Only an explicitly separated version suffix is removable. Never strip
     # a song whose core title itself happens to contain the word 'mix'.
     match = re.fullmatch(
