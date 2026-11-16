@@ -5,7 +5,7 @@ from v250_cure_album_version import owner_approved_album_version as corrected
 for title in ("Play", "play", " PLAY "):
     assert corrected("The Cure", title) == "Play for Today"
 for title, expected in (
-    ("This Is A Lie (Ambient Mix)", "This Is A Lie"),
+    ("This Is A Lie (Ambient Mix)", "This Is a Lie"),
     ("A Night Like This (Hello Goodbye Mix 2018)", "A Night Like This"),
     ("Close to Me (closer mix)", "Close to Me"),
     ("Just Like Heaven - Extended Mix", "Just Like Heaven"),
