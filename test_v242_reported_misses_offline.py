@@ -5,7 +5,7 @@ from pathlib import Path
 from v235_general_search_rescue import alternate_remix_credit_search, rescue_search_query
 
 assert len(REPORTED_MISSES) == 84
-assert len(set(REPORTED_MISSES)) == 51
+assert len(set(REPORTED_MISSES)) == 84
 for source, artist, title in REPORTED_MISSES:
     assert reported_v242_for_safe_retry(artist, title, source)
     assert not reported_v242_for_safe_retry(artist, title, "unknown")
