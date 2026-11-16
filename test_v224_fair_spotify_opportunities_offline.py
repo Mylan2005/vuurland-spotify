@@ -29,7 +29,7 @@ search_cursor = sync.index(f'cache["{key}"] = selected_source')
 quota = sync.index('if searches_used >= MAX_SEARCHES_PER_RUN:', sync.index('# CACHE SEARCH RESULT'))
 assert quota < search_cursor < search_section
 add_cursor = sync.rindex(f'cache["{key}"] = selected_source')
-assert sync.index('if uri in playlist_uris:') < add_cursor < sync.index('add_tracks(\n            playlist_id')
+assert sync.index('if uri in playlist_uris:') < add_cursor < sync.index('was_added = add_tracks(\n                playlist_id')
 
 # Verschillende wachtrijgroottes geven dezelfde Search-kans bij 11
 # actieve bronnen (14 radio + Duyster). Fouten of missers houden de bron niet eindeloos vast.
