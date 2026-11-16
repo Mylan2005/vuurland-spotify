@@ -76,7 +76,7 @@ assert created == [2]
 assert "VOLUME_EXACT_COUNT_GUARD = 10" in src
 assert "if active_playlist_count >= VOLUME_LIMIT - VOLUME_EXACT_COUNT_GUARD:" in src
 guard = src.index("if active_playlist_count >= VOLUME_LIMIT - VOLUME_EXACT_COUNT_GUARD:")
-add = src.index("        add_tracks(\n", guard)
+add = src.index("        was_added = add_tracks(\n", guard)
 assert src.index("active_playlist_count = _get_playlist_total(playlist_id)", guard) < add
 assert src.index("= get_active_volume_playlist(cache)", guard) < add
 print("✅ v234: 9.999→10.000→Vol 2; restart, bestaande Vol 2 en exacte guard veilig.")
