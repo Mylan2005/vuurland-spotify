@@ -58,6 +58,22 @@ def split_compound_light_title(title):
     return m.group(1) + " " + m.group(2)
 
 
+def alternate_remix_credit_search(title):
+    """Only alter query syntax: '(Remix by X)' -> '(X Remix)'.
+
+    Never remove the required remixer/recording version; candidates still pass
+    the original artist, title, version and territory gates.
+    """
+    raw = str(title or "").strip()
+    match = re.search(r"\\(remix by ([^()]{2,70})\\)$", raw, flags=re.I)
+    if not match:
+        return None
+    remixer = match.group(1).strip()
+    if re.search(r"(?i)\\b(?:feat|ft|with)\\b", remixer):
+        return None
+    return raw[:match.start()] + f"({remixer} Remix)"
+
+
 def rescue_search_query(artist, title, query, variant):
     """Herschrijf hoogstens de reeds geplande Search; geen extra HTTP-call.
 
@@ -81,6 +97,10 @@ def rescue_search_query(artist, title, query, variant):
     _v239_title = safe_search_title(original_artist, title, variant)
     if _v239_title and search_artist:
         return f'"{search_artist.replace(chr(34), " ")}" "{_v239_title.replace(chr(34), " ")}"'
+    if int(variant or 0) >= 1:
+        remix_alternative = alternate_remix_credit_search(title)
+        if remix_alternative and search_artist:
+            return f'"{search_artist.replace(chr(34), " ")}" "{remix_alternative.replace(chr(34), " ")}"'
     if int(variant or 0) == 1:
         split_lights = split_compound_light_title(title)
         if split_lights and search_artist:
