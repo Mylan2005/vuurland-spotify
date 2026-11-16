@@ -3,6 +3,7 @@ import ast
 from pathlib import Path
 from vuurland_music_policy import global_music_reject_reason
 from v252_unavailable_radio_x import skip_unavailable_radio_x_recording
+from v253_unavailable_dkfm_edge import skip_unavailable_dkfm_edge_recording
 
 source = Path("vuurland_sync.py").read_text(encoding="utf-8")
 tree = ast.parse(source)
@@ -21,6 +22,7 @@ ns = {
     "normalize_match": str.lower,
     "global_music_reject_reason": global_music_reject_reason,
     "skip_unavailable_radio_x_recording": skip_unavailable_radio_x_recording,
+    "skip_unavailable_dkfm_edge_recording": skip_unavailable_dkfm_edge_recording,
     "v110_correct_radio_artist": lambda a, sid: a,
     "is_confirmed_german_vocal": lambda a, t: False,
     "is_interview_fragment": lambda t: False,
