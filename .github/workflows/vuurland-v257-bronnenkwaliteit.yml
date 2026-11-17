@@ -1,0 +1,31 @@
+name: Vuurland v257 bronnenkwaliteit (alleen lezen)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "35 7 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  quality-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline regressietests
+        run: python -m unittest -v test_bronnenkwaliteit_v257.py
+      - name: Maak alleen-lezen wachtrijrapport
+        run: python bronnenkwaliteit_v257.py --queue vuurland_live_queue.json --out-dir bronnenkwaliteit_v257
+      - name: Downloadbaar rapport
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v257-bronnenkwaliteit
+          path: |
+            bronnenkwaliteit_v257/bronnenkwaliteit.json
+            bronnenkwaliteit_v257/bronnenkwaliteit.md
+          retention-days: 30
