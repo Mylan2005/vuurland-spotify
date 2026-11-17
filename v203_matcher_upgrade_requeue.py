@@ -25,6 +25,7 @@ from v242_reported_misses import reported_v242_for_safe_retry, reported_v242_tra
 from v235_general_search_rescue import catalog_search_artist, split_compound_light_title
 from v209_verified_source_title import verified_emily_live_source_title
 from v216_report_metadata import has_report_correction
+from v254_verified_report_metadata import has_report_correction as has_v254_report_correction
 from v217_report_search import has_report_search_rescue
 from v207_verified_matcher_metadata import (
     verified_artist_search_name,
@@ -49,6 +50,7 @@ MATCHER_RETRY_RULES = (
     "v211_verified_mint_julep_single",
     "v211_unconfirmed_catalog_safe_search",
     "v216_report_exact_metadata",
+    "v254_verified_report_metadata",
     "v217_report_independent_third_search",
     "v238_general_radio_metadata",
     "v238_spotify_search_spelling",
@@ -122,6 +124,8 @@ def applicable_rules(artist, title):
     # Een retry is geen toestemming voor een andere Spotify-opname.
     if has_report_correction(artist, title):
         hits.append("v216_report_exact_metadata")
+    if has_v254_report_correction(artist, title):
+        hits.append("v254_verified_report_metadata")
     if has_report_search_rescue(artist, title):
         hits.append("v217_report_independent_third_search")
     # A spelling correction only releases a historical observed miss. It does
