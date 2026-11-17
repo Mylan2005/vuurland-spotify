@@ -25,6 +25,7 @@ from v253_unavailable_dkfm_edge import skip_unavailable_dkfm_edge_recording
 from v245_multi_guest_credits import split_explicit_multiword_guests
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v254_verified_report_metadata import report_correction as v254_report_correction
+from v255_catalog_rescue import catalog_metadata as v255_catalog_metadata, safe_catalog_album_query as v255_catalog_album_query
 from v217_report_search import report_third_search_query as v217_report_query
 from v223_report_search_hints import report_third_search_hint as v223_report_query
 from v194_matcher_metadata import (
@@ -747,15 +748,10 @@ def spotify_request(
                     "tijdelijke serverfout; status van toevoeging onzeker."
                 )
             if is_search:
-                # A 5xx is a temporary server outage, NOT a missing track or
-                # a 429. Pause Spotify for three minutes and keep RadioBox live.
-                cache = load_cache()
-                cache["__spotify_server_error_until"] = max(
-                    float(cache.get("__spotify_server_error_until", 0) or 0),
-                    time.time() + 180,
-                )
-                save_cache(cache)
-                print("⏸️ Spotify-serverfout: 180 seconden pauze; radiocontrole blijft actief.")
+                # v255: no global pause on Search 5xx. One failed Search is
+                # not a failed match. Let sync defer only its exact FIFO item.
+                print(f"⚠️ Spotify Search HTTP {response.status_code}: tijdelijke fout; "
+                      "geen algemene Spotify-pauze.")
                 raise RuntimeError(
                     f"Spotify Search HTTP {response.status_code}: tijdelijke serverfout; "
                     "nummer blijft in de wachtrij, geen mislukte match."
@@ -2719,6 +2715,12 @@ def find_spotify_track(
               f"{_v254_artist} — {_v254_title}")
         artist, title = _v254_artist, _v254_title
 
+    # v255: exact published catalog spelling, not a different rendition.
+    _v255_artist, _v255_title = v255_catalog_metadata(artist, title)
+    if (_v255_artist, _v255_title) != (artist, title):
+        print(f"📝 v255 catalogusspelling: {artist} — {title} → {_v255_artist} — {_v255_title}")
+        artist, title = _v255_artist, _v255_title
+
     # v233: generieke en strikt structurele bronmetadatacorrecties.
     # Nooit de oorspronkelijke bron-/FIFO-/cachekey wijzigen. Spotify blijft
     # artiest, titel en versie volledig apart controleren.
@@ -3642,6 +3644,8 @@ def find_spotify_track(
     # afgebroken radiotitels; geen extra Spotify Search of match-autorisatie.
     if not catalog_id:
         query = v235_rescue_query(spotify_search_artist, search_title, query, search_variant)
+        # Reuse an ALREADY scheduled later Search for confirmed album evidence.
+        query = v255_catalog_album_query(*v101_original_key, search_variant) or query
 
     if catalog_id:
         print(f"📀 {catalog_reason} cataloguscontrole: {artist} — {title} (geen Search nodig; volledige validatie)")
@@ -7569,6 +7573,15 @@ def dkfm_vuurland_filter(tracks, station):
     return kept
 
 
+def v255_search_server_failure(error):
+    """A Spotify Search outage is retryable, not proof of a missing song."""
+    message = str(error)
+    return any(
+        message.startswith(f"Spotify Search HTTP {status}: tijdelijke serverfout")
+        for status in (500, 502, 503, 504)
+    )
+
+
 def sync():
     # Tijdelijke veilige stop: geen radio-/Spotify-aanvragen of state-wijzigingen.
     # Laat playlists, likes, wachtrijen en caches intact tot de nieuwe bronnen gekozen zijn.
@@ -9478,17 +9491,19 @@ def sync():
                 )
 
             except RuntimeError as error:
-
-                print(
-                    f"⏸️ Spotify pauzeert: {error}"
-                )
-
-                reset_live_sync_after_rate_limit(
-                    live_queue_file,
-                    cache
-                )
-
-                # GitHub Actions moet deze runner stoppen.
+                if v255_search_server_failure(error):
+                    # v255: keep track and version identity. No false "miss",
+                    # no global Spotify 5xx timer, and no immediate retry.
+                    searches_used += 1
+                    item["_v34_retry_at"] = int(time.time()) + 3600
+                    live_queue.append(live_queue.pop(0))
+                    atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+                    cache = load_cache()
+                    save_cache(cache)
+                    print(f"⚠️ Spotify Search 5xx: {artist} — {title} veilig uitgesteld; andere bronnen gaan door.")
+                    continue
+                print(f"⏸️ Spotify pauzeert: {error}")
+                reset_live_sync_after_rate_limit(live_queue_file, cache)
                 raise
 
             searches_used += 1
