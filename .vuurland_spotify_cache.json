@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1794951743.3305612,
+  "__v150_next_spotify_round_at": 1794951863.4735925,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -148,6 +148,7 @@
       "the byrds|||all i really want to do"
     ],
     "big_sonic_heaven": [
+      "my bloody valentine|||who sees you",
       "seatemples|||wine and rockets",
       "this mortal coil|||not me",
       "alison's halo|||stuck",
@@ -246,8 +247,7 @@
       "slowdive|||the slab",
       "fleeting colours|||autumn",
       "meadowlake|||hot punch",
-      "spike|||you're missing",
-      "shoreline stories|||happiness"
+      "spike|||you're missing"
     ],
     "radio_x_chilled": [
       "r e m|||man on the moon",
@@ -352,6 +352,7 @@
       "ben howard|||conrad"
     ],
     "dreampop_radio": [
+      "iron & wine|||each coming night",
       "sofia talvik|||burning fields",
       "rumer|||long long day",
       "ty segall|||sleeper",
@@ -450,8 +451,7 @@
       "kt tunstall|||girl & the ghost",
       "old man canyon|||in the rain",
       "the paper kites|||electric indigo",
-      "young man|||unfair",
-      "zero 7|||swing"
+      "young man|||unfair"
     ],
     "indie_select": [
       "the postal service|||we will become silhouettes",
@@ -1478,6 +1478,7 @@
       "lift to experience|||waiting to hit"
     ],
     "radio_britannia": [
+      "manic street preachers|||spectators of suicide feat gwenno",
       "the cribs|||we share the same skies",
       "feeder|||just the way im feeling",
       "soft launch|||dinosaur",
@@ -1576,10 +1577,10 @@
       "gorillaz|||silent running feat adeleye omotayo",
       "white lies|||holy ghost",
       "vega4|||life is beautiful",
-      "ian brown|||time is my everything",
-      "everything everything|||poison pop"
+      "ian brown|||time is my everything"
     ],
     "wbru": [
+      "beabadoobee|||write me a letter",
       "phoebe bridgers|||lost boys",
       "justice|||flower in a hurricane f tame impala sza king gizzard & lizard the wizard",
       "charli xcx|||the girl so confusing f lorde",
@@ -1678,29 +1679,28 @@
       "girl in red|||summer depression",
       "buffalo traffic jam|||fool's gold",
       "dominic fike|||small town",
-      "grouplove|||tongue tied",
-      "gorillaz|||she's my collar f kali uchis"
+      "grouplove|||tongue tied"
     ]
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794951707.6060963,
-    "big_sonic_heaven": 1794951707.6088612,
-    "radio_x_chilled": 1794951707.6115952,
-    "dreampop_radio": 1794951707.614354,
-    "indie_select": 1794951707.6174538,
-    "dkfm_edge": 1794951707.6203487,
+    "mellow_mix": 1794951742.5067835,
+    "big_sonic_heaven": 1794951742.5100174,
+    "radio_x_chilled": 1794951742.5131207,
+    "dreampop_radio": 1794951742.5162964,
+    "indie_select": 1794951742.519727,
+    "dkfm_edge": 1794951742.5229723,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794951707.6238112,
-    "dkfm_shoegaze": 1794951707.8647826,
-    "dkfm_classic": 1794951707.8677158,
-    "egofm_rnb": 1794951707.8707542,
-    "egofm_chillout": 1794951707.8737457,
-    "dj_neihtul": 1794951708.1038976,
-    "gri_balkon": 1794951708.106224,
-    "ignoreradio_shoegaze": 1794951708.3344977,
-    "radio_britannia": 1794951708.3374374,
-    "wbru": 1794951708.3396585
+    "dark_edge": 1794951742.5269206,
+    "dkfm_shoegaze": 1794951742.5322428,
+    "dkfm_classic": 1794951742.5353787,
+    "egofm_rnb": 1794951742.5386717,
+    "egofm_chillout": 1794951742.541793,
+    "dj_neihtul": 1794951742.5444567,
+    "gri_balkon": 1794951742.5467367,
+    "ignoreradio_shoegaze": 1794951742.5497496,
+    "radio_britannia": 1794951742.845542,
+    "wbru": 1794951743.1006274
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -6629,6 +6629,7 @@
       "my bloody valentine|||swallow",
       "my bloody valentine|||touched / to here knows when",
       "my bloody valentine|||we have all the time in the world",
+      "my bloody valentine|||who sees you",
       "my brilliant beast|||fall away",
       "møaa|||exist",
       "møaa|||jaywalker",
@@ -24112,6 +24113,7 @@
       "lucy rose|||over when it's over",
       "manic street preachers|||international blue",
       "manic street preachers|||motorcycle emptiness",
+      "manic street preachers|||spectators of suicide feat gwenno",
       "manic street preachers|||you stole the sun from my heart",
       "marseille|||monkey in the middle",
       "marsicans|||throw ourselves in",
@@ -25145,11 +25147,11 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
   "__last_radio_key_mellow_mix": "garrett kato|||sweet jane",
-  "__last_radio_key_big_sonic_heaven": "seatemples|||wine and rockets",
+  "__last_radio_key_big_sonic_heaven": "my bloody valentine|||who sees you",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 24575,
-  "__v146_spotify_budget_slot": 1794951624.8480015,
-  "__vuurland_active_playlist_count": 2143,
+  "__v116_fifo_next_sequence": 24577,
+  "__v146_spotify_budget_slot": 1794951744.9892805,
+  "__vuurland_active_playlist_count": 2144,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1794950779,
@@ -26398,9 +26400,11 @@
     "benjamin francis leftwich|||atlas hands",
     "benjamin francis leftwich|||some other arms",
     "benjamin gibbard|||crystals feat benjamin gibbard",
+    "benny sings feat tom misch|||nobody's fault",
     "benny sings|||big brown eyes",
     "benny sings|||loving is easy",
     "benny sings|||loving is easy feat benny sings",
+    "benny sings|||nobody's fault",
     "benny sings|||sunny afternoon",
     "benoit pioulard|||margin zachary gray remix",
     "benoit pioulard|||upon the break arch",
@@ -38179,6 +38183,7 @@
     "tom misch|||echo from the flames",
     "tom misch|||kaidi akinnibi|||days of us",
     "tom misch|||money",
+    "tom misch|||nobody's fault",
     "tom misch|||old man",
     "tom misch|||red moon",
     "tom misch|||tobie tripp|||day 5: for carol",
@@ -45587,6 +45592,7 @@
     "spotify:track:46K1MMwKf29weyCTKb2cjM",
     "spotify:track:46La3hmXqjJtXdSX4cakaj",
     "spotify:track:46O0uajv9K1TJX0PdvW80C",
+    "spotify:track:46PeJJve1BXwn8pDtvZvPb",
     "spotify:track:46ShsS3tyqJAJdxUjPezdI",
     "spotify:track:46SpOq8ojlVUBrgGnUzUlV",
     "spotify:track:46TLlKsmMNRQc53ukyFCtM",
@@ -57227,6 +57233,7 @@
     "NLV8M1700009",
     "NLV8M1900005",
     "NLX5C2000001",
+    "NLX5C2000004",
     "NLX5D2500003",
     "NLX5D2500004",
     "NLY9M2200006",
@@ -75121,7 +75128,8 @@
     "spotify:track:6isjxsCiPOE57WMrd8WVMM": "GBAHS2300976",
     "spotify:track:5MJUjZSOJIxx8IzFFQrH5s": "TCAEH1952035",
     "spotify:track:5ZZbzIqKbVWiTBElLnUFb9": "FR96X1683561",
-    "spotify:track:26dedbfCxKqK6pTsqo6KW5": "USAM19500527"
+    "spotify:track:26dedbfCxKqK6pTsqo6KW5": "USAM19500527",
+    "spotify:track:46PeJJve1BXwn8pDtvZvPb": "NLX5C2000004"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -131136,7 +131144,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "sofia talvik|||burning fields",
+  "__last_radio_key_dreampop_radio": "iron & wine|||each coming night",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -136314,7 +136322,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dkfm_classic",
+  "__v221_last_selected_source": "egofm_rnb",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -136326,7 +136334,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dkfm_classic",
+  "__v224_last_spotify_opportunity_source": "egofm_rnb",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -136359,7 +136367,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dkfm_classic",
+  "__v227_last_source_turn": "egofm_rnb",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -139588,8 +139596,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the cribs|||we share the same skies",
-  "__last_radio_key_wbru": "phoebe bridgers|||lost boys",
+  "__last_radio_key_radio_britannia": "manic street preachers|||spectators of suicide feat gwenno",
+  "__last_radio_key_wbru": "beabadoobee|||write me a letter",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -139650,5 +139658,6 @@
   "__match_v35__newdad|||dream of me": "spotify:track:6isjxsCiPOE57WMrd8WVMM",
   "__match_v35__ax and the hatchetmen|||silhouette": "spotify:track:5MJUjZSOJIxx8IzFFQrH5s",
   "__match_v35__bloodhounds on my trail|||over the wall": "spotify:track:5ZZbzIqKbVWiTBElLnUFb9",
-  "__match_v35__innocence mission|||everything's different now": "spotify:track:26dedbfCxKqK6pTsqo6KW5"
+  "__match_v35__innocence mission|||everything's different now": "spotify:track:26dedbfCxKqK6pTsqo6KW5",
+  "__match_v35__benny sings feat tom misch|||nobody's fault": "spotify:track:46PeJJve1BXwn8pDtvZvPb"
 }
