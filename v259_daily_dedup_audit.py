@@ -75,7 +75,7 @@ def spotify_get(session, token, endpoint, *, params=None):
     return response.json()
 
 
-def read_volume(session, token, number, playlist_id, pause=1.2):
+def read_volume(session, token, number, playlist_id, pause=2.0):
     playlist = spotify_get(session, token, f"/playlists/{playlist_id}")
     snapshot_id = playlist.get("snapshot_id")
     if not isinstance(snapshot_id, str) or not snapshot_id:
