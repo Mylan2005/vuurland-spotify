@@ -148,6 +148,8 @@
       "kenny burrell|||midnight blue"
     ],
     "big_sonic_heaven": [
+      "herbert & momoko|||babystar",
+      "hammock|||raising your voice trying to stop an echo",
       "ssaann|||echo",
       "fun with ether|||brown town",
       "propaganda|||the murder of love",
@@ -245,9 +247,7 @@
       "fischersund jonsi kjartan holm & sin fang|||skiptir engu",
       "bluhm|||i don't care i want you now",
       "dead can dance|||black sun",
-      "carly hann|||alone",
-      "lanterns on the lake|||this is not a drill",
-      "nonsense rats|||the night is quiet"
+      "carly hann|||alone"
     ],
     "radio_x_chilled": [
       "anna calvi|||don't beat the girl out of my boy live for radio x",
@@ -352,6 +352,7 @@
       "arctic monkeys|||riot van"
     ],
     "dreampop_radio": [
+      "la sera|||never come around",
       "cat power|||song to bobby",
       "the little hands of asphalt|||oslo",
       "old man canyon|||phantoms and friends",
@@ -450,8 +451,7 @@
       "editors|||lullaby the cure cover",
       "tegan and sara|||suffer",
       "cat power|||i found a reason",
-      "cats on trees|||sirens call",
-      "jonas david|||weak bones"
+      "cats on trees|||sirens call"
     ],
     "indie_select": [
       "heaven 17|||crushed by the wheels of industry parts one and two",
@@ -764,6 +764,7 @@
       "groove armada feat will young|||history"
     ],
     "dkfm_shoegaze": [
+      "etti/etta|||until the end",
       "jay som|||i think you're alright",
       "gliss|||mirrored",
       "sundayclub|||corydon ave to meet you",
@@ -862,8 +863,7 @@
       "blushing|||me with you",
       "magnet school|||the double agent",
       "oxy|||don't you think the air is stuffy",
-      "whimsical|||dreams",
-      "crush|||pleasure"
+      "whimsical|||dreams"
     ],
     "dkfm_classic": [
       "boo radleys|||boo! forever",
@@ -1070,6 +1070,7 @@
       "leisure|||lonely nights"
     ],
     "egofm_chillout": [
+      "sinan mercenk feat patricia solis|||don't walk away",
       "asaf avidan|||twisted olive branch",
       "faultline|||greenfields",
       "kendall miles|||overgrowth",
@@ -1168,8 +1169,7 @@
       "montell fish|||imagination",
       "sly & robbie meet nils petter molvaer feat eivind aarset and vladislav delay|||if i gave you my love",
       "robert wyatt|||shipbuilding remastered in 1998",
-      "may & robot koch|||gold",
-      "henry green|||another light"
+      "may & robot koch|||gold"
     ],
     "dj_neihtul": [
       "chase buch & nick olivetti|||locongas jay lumen recreation",
@@ -1480,21 +1480,21 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794883430.6910324,
-    "big_sonic_heaven": 1794883430.6975043,
-    "radio_x_chilled": 1794883430.7032743,
-    "dreampop_radio": 1794883430.7079227,
-    "indie_select": 1794883430.7140493,
-    "dkfm_edge": 1794883430.720336,
+    "mellow_mix": 1794883514.8134704,
+    "big_sonic_heaven": 1794883515.1473136,
+    "radio_x_chilled": 1794883515.1530974,
+    "dreampop_radio": 1794883515.1583407,
+    "indie_select": 1794883515.1643486,
+    "dkfm_edge": 1794883515.170569,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794883430.7273371,
-    "dkfm_shoegaze": 1794883430.7337108,
-    "dkfm_classic": 1794883430.739906,
-    "egofm_rnb": 1794883430.7461312,
-    "egofm_chillout": 1794883430.7521822,
-    "dj_neihtul": 1794883430.7565584,
-    "gri_balkon": 1794883430.7605793,
-    "ignoreradio_shoegaze": 1794883430.7662835
+    "dark_edge": 1794883515.177563,
+    "dkfm_shoegaze": 1794883515.5073867,
+    "dkfm_classic": 1794883515.5134983,
+    "egofm_rnb": 1794883515.5197027,
+    "egofm_chillout": 1794883515.525847,
+    "dj_neihtul": 1794883515.5302067,
+    "gri_balkon": 1794883515.5340812,
+    "ignoreradio_shoegaze": 1794883515.5397568
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -16394,6 +16394,7 @@
       "etti/etta|||always already",
       "etti/etta|||eyes and ears",
       "etti/etta|||incense",
+      "etti/etta|||until the end",
       "etti/etta|||who knows",
       "eunhadan|||tender is the night",
       "everything recently|||lost ground",
@@ -23415,9 +23416,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
   "__last_radio_key_mellow_mix": "the cactus blossoms|||mississippi",
-  "__last_radio_key_big_sonic_heaven": "ssaann|||echo",
+  "__last_radio_key_big_sonic_heaven": "herbert & momoko|||babystar",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 23020,
+  "__v116_fifo_next_sequence": 23021,
   "__v146_spotify_budget_slot": 1794883433.7041519,
   "__vuurland_active_playlist_count": 1634,
   "__vuurland_active_volume": 2,
@@ -127552,7 +127553,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "cat power|||song to bobby",
+  "__last_radio_key_dreampop_radio": "la sera|||never come around",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -129033,7 +129034,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "pure hex|||skin/twin",
-  "__last_radio_key_dkfm_shoegaze": "jay som|||i think you're alright",
+  "__last_radio_key_dkfm_shoegaze": "etti/etta|||until the end",
   "__last_radio_key_dkfm_classic": "boo radleys|||boo! forever",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -134460,7 +134461,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "kaytranada feat alunageorge & goldlink|||together",
-  "__last_radio_key_egofm_chillout": "asaf avidan|||twisted olive branch",
+  "__last_radio_key_egofm_chillout": "sinan mercenk feat patricia solis|||don't walk away",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
