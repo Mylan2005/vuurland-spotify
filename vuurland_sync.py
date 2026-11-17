@@ -20,6 +20,7 @@ from v256_station_hygiene import non_music_fragment as v256_non_music_fragment, 
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
+from v258_matcher_triage import (classify_candidates as v258_classify, early_park_after_weak_results as v258_early_park, record_miss as v258_record_miss)
 from v250_cure_album_version import owner_approved_album_version
 from v252_unavailable_radio_x import skip_unavailable_radio_x_recording
 from v253_unavailable_dkfm_edge import skip_unavailable_dkfm_edge_recording
@@ -194,6 +195,7 @@ SPOTIFY_SEARCH_HTTP_LIMIT = 1
 # zodat bestaande code en regressietests niet veranderen.
 LAST_SPOTIFY_MATCH_ISRC = None
 LAST_SPOTIFY_MATCH_METADATA = None
+LAST_SPOTIFY_TRIAGE = ("uncertain", [])
 
 DATA_DIR = os.environ.get("VUURLAND_DATA_DIR", os.path.expanduser("~"))
 TOKEN_FILE = os.path.join(DATA_DIR, ".vuurland_spotify_token.json")
@@ -2633,9 +2635,10 @@ def find_spotify_track(
     title,
     search_variant=0
 ):
-    global LAST_SPOTIFY_MATCH_ISRC, LAST_SPOTIFY_MATCH_METADATA
+    global LAST_SPOTIFY_MATCH_ISRC, LAST_SPOTIFY_MATCH_METADATA, LAST_SPOTIFY_TRIAGE
     LAST_SPOTIFY_MATCH_ISRC = None
     LAST_SPOTIFY_MATCH_METADATA = None
+    LAST_SPOTIFY_TRIAGE = ("uncertain", [])
 
     """
     Zoek een Spotify-track veilig op artiest + titel.
@@ -6199,6 +6202,9 @@ def find_spotify_track(
         )
         return candidates[0][5]
 
+    # v258: diagnostic proximity only, never grants Spotify match approval.
+    LAST_SPOTIFY_TRIAGE = v258_classify(artist, title, items)
+    print(f"🧪 v258 matcher-triage: {LAST_SPOTIFY_TRIAGE[0]} | zoekstrategie={search_variant}")
     print(f"🧭 v80 matcher-diagnose: {v80_failure_reason(items, artist, title)} | zoekstrategie={search_variant}")
     print(f"🧭 v82 afwijsreden: {v82_match_diagnosis(items, artist, title)} | zoekstrategie={search_variant}")
     print(f"🧪 Spotify-query zonder veilige match: {query}")
@@ -9559,6 +9565,33 @@ def sync():
                 counts = cache.setdefault('__v51_radio_failed_searches', {})
                 count = int(counts.get(key, 0) or 0) + 1
                 counts[key] = count
+                # v258: preserve a promising same-artist/base-title candidate
+                # for later matcher review. A clearly unrelated result must
+                # repeat in a *second* existing Search before early parking.
+                triage_kind, triage_candidates = LAST_SPOTIFY_TRIAGE
+                previous_triage = cache.get("__v258_matcher_triage", {}).get(key, {})
+                v258_should_park = v258_early_park(
+                    isinstance(previous_triage, dict)
+                    and previous_triage.get("kind") == "weak"
+                    and int(previous_triage.get("variant", -1)) < int(item.get("_v34_search_variant", 0) or 0),
+                    triage_kind, item.get("_v34_search_variant", 0))
+                v258_record_miss(
+                    cache, key, failed_source, artist, title,
+                    triage_kind, triage_candidates, item.get("_v34_search_variant", 0))
+                if v258_should_park:
+                    v51_radio_park(cache, artist, title, failed_source, count)
+                    # Keep clear diagnostic evidence even after parking.
+                    cache.setdefault("__v51_radio_unmatched", {}).setdefault(key, {})[
+                        "v258_reason"] = "two_low_relevance_searches"
+                    live_queue.pop(0)
+                    atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+                    save_cache(cache)
+                    print(f"🗃️ v258 weinig relevante resultaten na twee zoekstrategieën; "
+                          f"geparkeerd: {artist} - {title}. Bronbeurt blijft eerlijk.")
+                    continue
+                if triage_kind == "promising":
+                    print(f"🧩 v258: veelbelovende kandidaat afgewezen; "
+                          f"controleer bestaande matcherbeveiliging voor {artist} - {title}.")
                 if count >= RADIO_FAILED_SEARCH_LIMIT:
                     v51_radio_park(cache, artist, title, failed_source, count)
                     live_queue.pop(0)
