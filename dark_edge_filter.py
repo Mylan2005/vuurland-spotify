@@ -14,6 +14,7 @@ import unicodedata
 DARK_EDGE_BLOCKED_ARTISTS = frozenset({
     "avicii", "disclosure", "tones and i",
     "sam smith", "dua lipa", "oakenfold", "paul oakenfold", "kylie minogue",
+    "lambrini girls",
 })
 
 # Gebruikerskeuzes uit de zes weekoverzichten (11-11-2026): 35 verboden tracks.
