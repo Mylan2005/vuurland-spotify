@@ -16,6 +16,8 @@ GLOBAL_LEGACY_BLOCKED_ARTISTS = frozenset({
     "dua lipa",
     # Expliciete gebruikerfeedback: Sam Smith past niet in Vuurland via Dark Edge.
     "sam smith",
+    # Persoonlijke uitsluiting: Lambrini Girls uit alle bronnen weren.
+    "lambrini girls",
     # Commerciële, duidelijk hitparadegerichte pop: uitsluitend Dark Edge.
     "ed sheeran", "justin bieber", "shawn mendes", "charlie puth",
     "maroon 5", "meghan trainor", "katy perry", "ariana grande",
