@@ -1,4 +1,4 @@
-"""Regression: fifteen live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
+"""Regression: seventeen live radio sources, disabled queues cleaned, German-vocal exclusion retained."""
 import ast
 from pathlib import Path
 
@@ -22,7 +22,7 @@ assert '"big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_trac
 assert '"radio_britannia": ("Radio Britannia", get_radio_britannia_tracks,' in body
 assert '"duyster": ("Duyster archief", lambda: [],' in body
 assert "duyster_archive.run(cache, live_queue, duyster_known, _v47_key)" not in body
-assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze")' in source
+assert 'RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru")' in source
 assert '"dreampop_radio": ("Dreampop Radio", get_dreampop_radio_tracks,' in body
 assert '"indie_select": ("Indie Select", get_indie_select_tracks,' in body
 assert 'if item.get("source") == "indie_select" and indie_select_blocks_german(artist, title):' in body
@@ -55,11 +55,13 @@ assert '"radio_x_main": ("Radio X", get_radio_x_main_tracks,' in body
 assert '__v188_radio_x_main_baseline_20261105' in body
 assert 'RADIO_X_MAIN_ALLOWED_ARTISTS' in source
 assert 'RADIO_X_MAIN_SOURCE_URL' in source
-print("✅ Vijftien livebronnen actief: egoFM R&B en Chillout erbij; Radio X main uit; Duyster als archief.")
+print("✅ Zeventien livebronnen actief: Radio Britannia en WBRU erbij; Radio X main uit; Duyster als archief.")
 
 assert 'return "main"' in ast.get_source_segment(source, next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "big_sonic_destination"))
 
 radio = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "get_radio_britannia_tracks")
 radio_body = ast.get_source_segment(source, radio)
 assert "RADIO_BRITANNIA_SOURCE_URL" in radio_body
-assert 'normalize_match(artist) != "daniel roggiano"' in radio_body
+assert 'v256_non_music_fragment("radio_britannia", artist, title)' in radio_body
+wbru = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "get_wbru_tracks")
+assert 'v256_non_music_fragment("wbru", artist, title)' in ast.get_source_segment(source, wbru)

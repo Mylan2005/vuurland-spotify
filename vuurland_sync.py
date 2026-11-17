@@ -16,6 +16,7 @@ import requests
 from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
+from v256_station_hygiene import non_music_fragment as v256_non_music_fragment, britannia_heavy_caution as v256_britannia_heavy_caution
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
@@ -165,6 +166,7 @@ GRI_BALKON_SOURCE_URL = "https://onlineradiobox.com/tr/gribalcon/playlist/?lang=
 IGNORERADIO_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ie/ignoreland/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
+WBRU_SOURCE_URL = "https://onlineradiobox.com/us/wbru/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
 RADIO_X_MAIN_SOURCE_URL = "https://onlineradiobox.com/uk/radiox/playlist/?lang=nl"
 INDIE_SELECT_SOURCE_URL = "https://onlineradiobox.com/de/indieselect/playlist/?lang=nl"
@@ -177,7 +179,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze")  # Vijftien live bronnen; Radio X main blijft uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru")  # Zeventien live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -1536,12 +1538,20 @@ def get_big_sonic_heaven_tracks():
 
 
 def get_radio_britannia_tracks():
-    # De vele Britannia-jingles hebben steeds Daniel Roggiano als artiest.
-    # Filter vóór de Spotify-zoekactie en vóór de gemeenschappelijke wachtrij.
+    # Bronfilter vóór FIFO en Spotify Search. Globaal muziekbeleid blijft actief.
     return [(artist, title) for artist, title in get_radiobox_tracks(
         RADIO_BRITANNIA_SOURCE_URL, "Radio Britannia"
-    ) if normalize_match(artist) != "daniel roggiano"
-       and normalize_match(artist) != "radio britannia"]
+    ) if not v256_non_music_fragment("radio_britannia", artist, title)
+       and not v256_britannia_heavy_caution(artist, title)]
+
+
+def get_wbru_tracks():
+    # Alleen muziek uit WBRU. DJ-IDs, gesproken station-promos en
+    # reclamefragmenten horen nooit in Spotify of de gedeelde FIFO.
+    return [(artist, title) for artist, title in get_radiobox_tracks(
+        WBRU_SOURCE_URL, "WBRU"
+    ) if not v256_non_music_fragment("wbru", artist, title)]
+
 
 
 def get_radio_x_chilled_tracks():
@@ -7604,6 +7614,7 @@ def sync():
         "gri_balkon": ("Gri Balkon", get_gri_balkon_tracks, "__last_radio_key_gri_balkon"),
         "ignoreradio_shoegaze": ("Ignoreradio Shoegaze", get_ignoreradio_shoegaze_tracks, "__last_radio_key_ignoreradio_shoegaze"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
+        "wbru": ("WBRU", get_wbru_tracks, "__last_radio_key_wbru"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
         "radio_x_main": ("Radio X", get_radio_x_main_tracks, "__last_radio_key_radio_x_main"),
@@ -7734,6 +7745,16 @@ def sync():
         cache.setdefault("__v96_radio_snapshots", {}).pop("radio_x_chilled", None)
         cache.setdefault("__v174_radio_snapshot_times", {}).pop("radio_x_chilled", None)
         cache["__radio_x_chilled_reactivated_20261102"] = True
+        save_cache(cache)
+    # v256: Radio Britannia reactivation + new WBRU. Fresh baseline ONLY,
+    # never replay any of the seven-day RadioBox histories on first poll.
+    # Other sources, queues, playlist inventory, likes, cooldowns unchanged.
+    if not cache.get("__v256_new_radio_baseline_20261117"):
+        for sid in ("radio_britannia", "wbru"):
+            cache.setdefault("__v96_radio_snapshots", {}).pop(sid, None)
+            cache.setdefault("__v174_radio_snapshot_times", {}).pop(sid, None)
+            cache.setdefault("__v47_radio_discovered", {}).pop(sid, None)
+        cache["__v256_new_radio_baseline_20261117"] = True
         save_cache(cache)
     # DKFM Edge bij eerste activering nulmeten, zodat oude RadioBox-historiek
     # niet in één keer de bestaande FIFO vult. Alle andere state blijft intact.

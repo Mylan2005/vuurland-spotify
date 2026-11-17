@@ -8,9 +8,9 @@ assignment = next(node for node in tree.body if isinstance(node, ast.Assign)
                   and any(isinstance(t, ast.Name) and t.id == "RADIO_SOURCE_ORDER"
                           for t in node.targets))
 sources = ast.literal_eval(assignment.value)
-assert len(sources) == 15
+assert len(sources) == 17
 assert sources[8:10] == ("dkfm_shoegaze", "dkfm_classic")
-assert sources[10:] == ("egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze")
+assert sources[10:] == ("egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru")
 assert "duyster" not in sources
 assert "radio_x_main" not in sources
 
@@ -32,4 +32,4 @@ assert 'FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)' in src
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in src
 assert "max_additions_per_round = 1" in sync
 assert 'if item.get("source") == "dark_edge" and not dark_edge_track_allowed(artist, title):' in sync
-print("✅ Vijftien bronnen, DKFM-feeds en egoFM actief; veilige nulmeting, Duyster en Spotify-limieten behouden.")
+print("✅ Zeventien bronnen, DKFM-feeds en egoFM actief; veilige nulmeting, Duyster en Spotify-limieten behouden.")
