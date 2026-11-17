@@ -7,6 +7,7 @@ from vuurland_music_policy import global_music_reject_reason
 for artist in (
     "Ed Sheeran", "Sam Smith", "Dua Lipa", "Avicii",
     "BLACKPINK", "BTS", "YOASOBI", "Jay Chou",
+    "Lambrini Girls", "LAMBRINI GIRLS", "Band feat. Lambrini Girls",
     "Muse feat. Sam Smith", "Kim Petras (feat. Sam Smith)",
 ):
     assert global_music_reject_reason(artist, "Testlied"), artist
@@ -19,6 +20,7 @@ for artist, title in (
     ("The Japanese House", "Sunshine Baby"),
     ("Unknown Shoegaze Band", "Atmosphere"),
     ("Sam Smiths", "Different Band"),
+    ("Lambrini Girls Tribute", "Different Band"),
     ("Massive Attack & Portishead", "Unfinished"),
 ):
     assert global_music_reject_reason(artist, title) is None, artist
