@@ -34,6 +34,7 @@ python3 test_v250_cure_album_version_offline.py
 python3 test_v251_cure_mix_and_play_offline.py
 python3 test_v252_radio_x_skip_offline.py
 python3 test_v253_dkfm_edge_skip_offline.py
+python3 test_v254_verified_report_metadata_offline.py
 python3 test_v236_spotify_403_diagnostics_offline.py
 python3 test_dark_edge_filter_offline.py
 python3 test_v212_music_policy_offline.py
