@@ -3660,6 +3660,19 @@ def find_spotify_track(
         # Reuse an ALREADY scheduled later Search for confirmed album evidence.
         query = v255_catalog_album_query(*v101_original_key, search_variant) or query
 
+        # v260: a *named* remix suffix (e.g. Strange Talk Remix) may
+        # poison both later searches with a remixer not in Spotify's
+        # ordinary recording. On variants 1/2 query ONLY the full core
+        # song title + primary artist; never grant a match automatically.
+        # The existing v243 artist/credits/base-title/edition guards still
+        # determine whether any ordinary recording is acceptable.
+        if search_variant >= 1:
+            from v260_named_remix_search import original_search_hint
+            _v260_hint = original_search_hint(artist, title, spotify_search_artist)
+            if _v260_hint:
+                query = _v260_hint
+                print(f"🎵 v260: alternatieve zoekbeurt op originele songtitel: {artist} — {title}")
+
     if catalog_id:
         print(f"📀 {catalog_reason} cataloguscontrole: {artist} — {title} (geen Search nodig; volledige validatie)")
         catalog_track = spotify_request(
