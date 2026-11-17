@@ -46,6 +46,7 @@
       "alex g|||runner"
     ],
     "mellow_mix": [
+      "cyril pahinui|||panini pua kea",
       "gomez|||hamoa beach",
       "gordon lightfoot|||sundown",
       "suzanne vega|||stockings",
@@ -144,8 +145,7 @@
       "moby|||porcelain",
       "los lobos|||the fear",
       "james vincent mcmorrow|||stay cool",
-      "pearl jam|||man of the hour",
-      "the lumineers|||ativan"
+      "pearl jam|||man of the hour"
     ],
     "big_sonic_heaven": [
       "poison girl friend|||falling",
@@ -449,6 +449,7 @@
       "marissa nadler|||was it a dream"
     ],
     "indie_select": [
+      "stars|||i died so i could haunt you",
       "new order|||singularity",
       "mean martin|||knock knock",
       "grizzly bear|||two weeks",
@@ -547,10 +548,10 @@
       "matt & kim|||ice melts",
       "cold war kids|||miracle mile",
       "fat freddy ' s drop|||razor",
-      "phantogram|||turn it off",
-      "the mirrors|||fear of drowning"
+      "phantogram|||turn it off"
     ],
     "dkfm_edge": [
+      "little oso|||i don't wanna make new friends",
       "las nubes|||would be",
       "skeever|||a dive",
       "bored at my grandmas house|||show & tell",
@@ -649,8 +650,7 @@
       "swiims|||diving in",
       "the veldt|||c c c p",
       "diffident daffodils|||every gaze",
-      "mo dotti|||never comes around",
-      "mel|||雨か止んても"
+      "mo dotti|||never comes around"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -861,6 +861,7 @@
       "the meeting places|||millions"
     ],
     "dkfm_classic": [
+      "the nightblooms|||59#1",
       "february|||caught",
       "piano magic|||birdymachine",
       "veldt|||dusty blood",
@@ -959,10 +960,10 @@
       "my bloody valentine|||honey power",
       "february|||make a sound",
       "auburn lull|||hypha",
-      "chapterhouse|||come heaven",
-      "half string|||eclipse"
+      "chapterhouse|||come heaven"
     ],
     "egofm_rnb": [
+      "ella mai|||boo'd up",
       "dj shadow feat little dragon|||scale it back",
       "olivia dean|||dive",
       "kaina|||apple",
@@ -1061,8 +1062,7 @@
       "santigold|||chasing shadows",
       "fabich feat simon jnr|||need somebody",
       "raury|||channel zero",
-      "bj the chicago kid & ari lennox|||time today remix",
-      "ty dolla $ign|||famous"
+      "bj the chicago kid & ari lennox|||time today remix"
     ],
     "egofm_chillout": [
       "tim bowness|||borderline feat dylan howe & david longdon",
@@ -1343,6 +1343,7 @@
       "rival consoles|||pre"
     ],
     "ignoreradio_shoegaze": [
+      "glaring orchid|||blurry2",
       "animal ghosts|||stellar",
       "the youth play|||after a moment",
       "bedroom vacation|||false start",
@@ -1441,27 +1442,26 @@
       "spacemen 3|||it's allright",
       "chapterhouse|||need somebody",
       "caribou|||hendrix with ko",
-      "sleep movies|||miley's iris",
-      "whirr|||mellow"
+      "sleep movies|||miley's iris"
     ]
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794930187.7928796,
-    "big_sonic_heaven": 1794930187.794867,
-    "radio_x_chilled": 1794930187.7966855,
-    "dreampop_radio": 1794930187.7984495,
-    "indie_select": 1794930187.8005795,
-    "dkfm_edge": 1794930187.8024557,
+    "mellow_mix": 1794930270.69526,
+    "big_sonic_heaven": 1794930270.6972656,
+    "radio_x_chilled": 1794930270.6990116,
+    "dreampop_radio": 1794930270.7007926,
+    "indie_select": 1794930270.703156,
+    "dkfm_edge": 1794930270.705091,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794930187.8049264,
-    "dkfm_shoegaze": 1794930187.8071527,
-    "dkfm_classic": 1794930187.8091166,
-    "egofm_rnb": 1794930187.8110046,
-    "egofm_chillout": 1794930187.8127902,
-    "dj_neihtul": 1794930187.814353,
-    "gri_balkon": 1794930187.8154402,
-    "ignoreradio_shoegaze": 1794930187.8171732
+    "dark_edge": 1794930270.7075558,
+    "dkfm_shoegaze": 1794930270.7097778,
+    "dkfm_classic": 1794930270.7118297,
+    "egofm_rnb": 1794930270.713806,
+    "egofm_chillout": 1794930270.7156007,
+    "dj_neihtul": 1794930270.7171922,
+    "gri_balkon": 1794930270.7183514,
+    "ignoreradio_shoegaze": 1794930270.950651
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -22589,6 +22589,7 @@
       "gilah|||help me understand",
       "gilah|||so close but still so far away",
       "glare|||into me",
+      "glaring orchid|||blurry2",
       "glaring orchid|||downer",
       "gleemer|||soothe me",
       "gleue|||magenta",
@@ -24068,10 +24069,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
-  "__last_radio_key_mellow_mix": "gomez|||hamoa beach",
+  "__last_radio_key_mellow_mix": "cyril pahinui|||panini pua kea",
   "__last_radio_key_big_sonic_heaven": "poison girl friend|||falling",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 24042,
+  "__v116_fifo_next_sequence": 24043,
   "__v146_spotify_budget_slot": 1794930190.0971105,
   "__vuurland_active_playlist_count": 1996,
   "__vuurland_active_volume": 2,
@@ -129639,7 +129640,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "new order|||singularity",
+  "__last_radio_key_indie_select": "stars|||i died so i could haunt you",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -131001,9 +131002,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "las nubes|||would be",
+  "__last_radio_key_dkfm_edge": "little oso|||i don't wanna make new friends",
   "__last_radio_key_dkfm_shoegaze": "straightjacket fits|||hail",
-  "__last_radio_key_dkfm_classic": "february|||caught",
+  "__last_radio_key_dkfm_classic": "the nightblooms|||59#1",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -136428,7 +136429,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "dj shadow feat little dragon|||scale it back",
+  "__last_radio_key_egofm_rnb": "ella mai|||boo'd up",
   "__last_radio_key_egofm_chillout": "tim bowness|||borderline feat dylan howe & david longdon",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -136467,7 +136468,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "animal ghosts|||stellar",
+  "__last_radio_key_ignoreradio_shoegaze": "glaring orchid|||blurry2",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
