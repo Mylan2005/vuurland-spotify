@@ -454,6 +454,7 @@
       "orenda fink|||high ground"
     ],
     "indie_select": [
+      "/- plus/minus|||you are one",
       "art school girlfriend|||bending back",
       "maritime|||it's casual",
       "cold war kids|||a million eyes from stella artois - the chalice symphony",
@@ -552,10 +553,10 @@
       "hundreds|||calling",
       "stereophonics|||dakota",
       "wire|||four long years",
-      "pixies|||catfish kate",
-      "john & the volta|||paralized"
+      "pixies|||catfish kate"
     ],
     "dkfm_edge": [
+      "paint|||puzzle",
       "trauma ray|||tracers",
       "get violet|||june solstice",
       "cigarette in your bed|||you should know",
@@ -654,14 +655,14 @@
       "leavs|||ligeia",
       "swim school|||seeing it now",
       "bored at my grandmas house|||how do you see the world?",
-      "cold gawd|||duchamp is my lawyer",
-      "in the afterglow|||lives in tandem"
+      "cold gawd|||duchamp is my lawyer"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
       "suede|||trash"
     ],
     "dark_edge": [
+      "morcheeba|||gained the world",
       "dope lemon|||fuck things up",
       "beck|||dear life",
       "massive attack feat tricky|||take it there",
@@ -760,10 +761,10 @@
       "keep score|||dead leg head case",
       "peter gabriel|||digging in the dirt",
       "the ting tings|||hands",
-      "the pains of being pure at heart|||come saturday",
-      "two gallants|||steady rollin'"
+      "the pains of being pure at heart|||come saturday"
     ],
     "dkfm_shoegaze": [
+      "blushing|||her",
       "the history of apple pie|||see you",
       "flyingfish|||spotless mind",
       "shaki tavi|||hopeless // devoted",
@@ -862,10 +863,10 @@
       "ultra bloom|||velouria",
       "weed|||favourite hate",
       "the sewing club|||drop c",
-      "bad bloom|||emergent architecture",
-      "vyva melinkolya|||ugly irl new mix"
+      "bad bloom|||emergent architecture"
     ],
     "dkfm_classic": [
+      "love spirals downwards|||sunset bell",
       "february|||slinky",
       "brian jonestown massacre|||end of the day",
       "eugenius|||flame on",
@@ -964,8 +965,7 @@
       "mistle thrush|||sha sha",
       "catherine wheel|||she's my friend wilde club version",
       "band of susans|||take the express",
-      "closedown|||ring",
-      "riverside|||follow me"
+      "closedown|||ring"
     ],
     "egofm_rnb": [
       "jon batiste feat zazie smith|||show me the way",
@@ -1376,6 +1376,7 @@
       "landhouse & raddantze|||think"
     ],
     "ignoreradio_shoegaze": [
+      "fleeting joys|||spiked out",
       "bedroom vacation|||lunacy",
       "parannoul|||meaning of regret",
       "the verve|||south pacific live",
@@ -1474,27 +1475,26 @@
       "wire|||on returning",
       "softcult|||someone2me",
       "trillion|||drive away",
-      "spirits of leo|||shadow of a doubt",
-      "sleep movies|||5g daydrm"
+      "spirits of leo|||shadow of a doubt"
     ]
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794895511.0783107,
-    "big_sonic_heaven": 1794895511.0843668,
-    "radio_x_chilled": 1794895511.0895014,
-    "dreampop_radio": 1794895511.094657,
-    "indie_select": 1794895511.1002417,
-    "dkfm_edge": 1794895511.1059651,
+    "mellow_mix": 1794895596.772262,
+    "big_sonic_heaven": 1794895596.7803535,
+    "radio_x_chilled": 1794895596.7854788,
+    "dreampop_radio": 1794895596.7906437,
+    "indie_select": 1794895596.79649,
+    "dkfm_edge": 1794895596.8022835,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794895511.1124103,
-    "dkfm_shoegaze": 1794895511.118199,
-    "dkfm_classic": 1794895511.123655,
-    "egofm_rnb": 1794895511.1291957,
-    "egofm_chillout": 1794895511.4019248,
-    "dj_neihtul": 1794895511.4058886,
-    "gri_balkon": 1794895511.4092522,
-    "ignoreradio_shoegaze": 1794895511.4144728
+    "dark_edge": 1794895597.0818987,
+    "dkfm_shoegaze": 1794895597.3239188,
+    "dkfm_classic": 1794895597.3296068,
+    "egofm_rnb": 1794895597.335208,
+    "egofm_chillout": 1794895597.3407254,
+    "dj_neihtul": 1794895597.344551,
+    "gri_balkon": 1794895597.3479097,
+    "ignoreradio_shoegaze": 1794895597.6210768
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14338,6 +14338,7 @@
       "morabeza tobacco|||orinoco",
       "morcheeba|||even though",
       "morcheeba|||friction",
+      "morcheeba|||gained the world",
       "morcheeba|||gimme your love",
       "morcheeba|||let me see",
       "morcheeba|||otherwise",
@@ -16162,6 +16163,7 @@
       "blush always|||drop of rain",
       "blush response|||cruel",
       "blush response|||hearts grow dull",
+      "blushing|||her",
       "blushing|||hidden places",
       "blushing|||me with you",
       "blushing|||silver teeth",
@@ -22178,6 +22180,7 @@
       "flasher|||eastern ave",
       "fleeting joys|||change my sign",
       "fleeting joys|||cross out my heart",
+      "fleeting joys|||spiked out",
       "fleeting joys|||while i'm waiting",
       "fleuro|||float away",
       "fly pan am|||parkour",
@@ -23613,7 +23616,7 @@
   "__last_radio_key_mellow_mix": "steve miller band|||wild mountain honey",
   "__last_radio_key_big_sonic_heaven": "echo & the bunnymen|||brussels is haunted",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 23313,
+  "__v116_fifo_next_sequence": 23316,
   "__v146_spotify_budget_slot": 1794895514.2219715,
   "__vuurland_active_playlist_count": 1720,
   "__vuurland_active_volume": 2,
@@ -128221,7 +128224,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "art school girlfriend|||bending back",
+  "__last_radio_key_indie_select": "/- plus/minus|||you are one",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -129583,9 +129586,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "trauma ray|||tracers",
-  "__last_radio_key_dkfm_shoegaze": "the history of apple pie|||see you",
-  "__last_radio_key_dkfm_classic": "february|||slinky",
+  "__last_radio_key_dkfm_edge": "paint|||puzzle",
+  "__last_radio_key_dkfm_shoegaze": "blushing|||her",
+  "__last_radio_key_dkfm_classic": "love spirals downwards|||sunset bell",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -129597,7 +129600,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "dope lemon|||fuck things up",
+  "__last_radio_key_dark_edge": "morcheeba|||gained the world",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -135049,7 +135052,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "bedroom vacation|||lunacy",
+  "__last_radio_key_ignoreradio_shoegaze": "fleeting joys|||spiked out",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
