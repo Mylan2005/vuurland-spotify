@@ -11,6 +11,15 @@ def catalog_metadata(artist, title):
         "martin kohlstedt", "ell (christian löffler rework)"
     ):
         return a, "ELL - Christian Loeffler Rework"
+    # Public Spotify track confirms the official title is One Day Like This,
+    # never "On a Day Like This". No similar title is generalized.
+    if (a.casefold(), t.casefold()) == ("elbow", "on a day like this"):
+        return a, "One Day Like This"
+    # Preserve the exact edit: this is not the original or extended remix.
+    if (a.casefold(), t.casefold()) == (
+        "chicane vs. natasha bedingfield", "bruised water (michael woods edit)"
+    ):
+        return "Chicane feat. Natasha Bedingfield", "Bruised Water - Michael Woods Edit"
     return a, t
 
 
