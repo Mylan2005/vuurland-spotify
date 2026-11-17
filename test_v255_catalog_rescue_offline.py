@@ -7,6 +7,9 @@ from v255_catalog_rescue import (
 )
 assert metadata("Martin Kohlstedt", "ELL (Christian Löffler Rework)") == (
     "Martin Kohlstedt", "ELL - Christian Loeffler Rework")
+assert metadata("Elbow", "On a Day Like This") == ("Elbow", "One Day Like This")
+assert metadata("Chicane vs. Natasha Bedingfield", "Bruised Water (Michael Woods Edit)") == (
+    "Chicane feat. Natasha Bedingfield", "Bruised Water - Michael Woods Edit")
 for artist, title, album in (
     ("Curve", "Chinese Burn", "Come Clean"),
     ("Palace Brothers", "You Will Miss Me When I Burn", "Days in the Wake"),
@@ -22,6 +25,11 @@ for artist, title in (
     ("Beady Eye", "For Anyone (Remix)"),
     ("Palace Brothers", "You Will Miss Me When I Burn (Live)"),
     ("Martin Kohlstedt", "ELL (Other Rework)"),
+    ("Elbow", "One Day Like This"),
+    ("Other Band", "On a Day Like This"),
+    ("Chicane vs. Natasha Bedingfield", "Bruised Water (Original Radio Edit)"),
+    ("Chicane vs. Natasha Bedingfield", "Bruised Water (Michael Woods Remix Dub)"),
+    ("Chicane", "Bruised Water (Michael Woods Edit)"),
 ):
     assert metadata(artist, title) == (artist, title)
     assert query(artist, title, 1) is None
