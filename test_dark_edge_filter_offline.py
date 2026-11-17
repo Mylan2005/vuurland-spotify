@@ -39,6 +39,8 @@ for artist, title in allowed:
 blocked = [
     ("Avicii", "Levels"),
     ("AVICII", "Wake Me Up"),
+    ("Lambrini Girls", "Testlied"),
+    ("Band feat. Lambrini Girls", "Testlied"),
     ("Muse feat. Avicii", "Supermassive Black Hole"),
     ("Muse (feat. Avicii)", "Supermassive Black Hole"),
     ("Muse & Avicii", "Supermassive Black Hole"),
@@ -63,6 +65,7 @@ for artist, title in blocked:
 assert DARK_EDGE_BLOCKED_ARTISTS == frozenset({
     "avicii", "disclosure", "tones and i",
     "sam smith", "dua lipa", "oakenfold", "paul oakenfold", "kylie minogue",
+    "lambrini girls",
 })
 assert len(DARK_EDGE_USER_BLOCKED_TRACKS) == 35
 for artist, title in DARK_EDGE_USER_BLOCKED_TRACKS:
@@ -70,6 +73,7 @@ for artist, title in DARK_EDGE_USER_BLOCKED_TRACKS:
 for artist in [
     "Disclosure", "Tones and I", "Sam Smith",
     "Dua Lipa", "Oakenfold", "Paul Oakenfold", "Kylie Minogue", "Avicii",
+    "Lambrini Girls",
 ]:
     assert dark_edge_reject_reason(artist, "Some Other Track"), artist
 for artist in ["Indie Band feat. Dua Lipa", "Indie Band (feat. Sam Smith)",
