@@ -22,7 +22,7 @@ assert cache["__v258_matcher_triage"]["309"]["status"] == "review_guard"
 src = Path("vuurland_sync.py").read_text(encoding="utf-8")
 assert "from v258_matcher_triage import" in src
 assert "LAST_SPOTIFY_TRIAGE" in src
-assert "early_park_after_weak_results(" in src
+assert "v258_early_park(" in src
 assert "v51_radio_park(cache, artist, title, failed_source, count)" in src
 assert "max_additions_per_round = 1" in src
 assert "cache['__v150_next_spotify_round_at'] = time.time() + 120" in src
