@@ -26,6 +26,7 @@ python3 test_playlist_only_no_likes_offline.py
 python3 test_v241_final_plural_rescue_offline.py
 python3 test_v242_reported_misses_offline.py
 python3 test_v243_remix_fallback_offline.py
+python3 -m unittest -v test_v260_named_remix_search_offline.py
 python3 test_v244_oliver_silt_alias_offline.py
 python3 test_v245_multi_guest_credits_offline.py
 python3 test_v247_502_bounded_offline.py
