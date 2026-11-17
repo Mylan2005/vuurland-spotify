@@ -23,6 +23,11 @@ def report_correction(artist, title):
         # Exact featured recording, not the ordinary Cyanide studio track.
         ("daniel caesar feat. koffee", "cyanide remix"):
             ("Daniel Caesar feat. Koffee", "CYANIDE REMIX (feat. Koffee)"),
+        # Radio station prefixed the real artist with a local index.
+        ("kraftwerk 2", "spiegelsaal"): ("Kraftwerk", "Spiegelsaal"),
+        ("kraftwerk 6", "abzug"): ("Kraftwerk", "Abzug"),
+        # Track number was prefixed to a genuine Spotify studio single.
+        ("kim wilde", "03 cambodia"): ("Kim Wilde", "Cambodia"),
     }
     return corrections.get(key, (a, t))
 
