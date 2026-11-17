@@ -8,6 +8,9 @@ pairs = (
     ("MINT FIELD", "Nada Es Esta?tico Y Evoluciona", "Mint Field", "Nada Es Estático Y Evoluciona"),
     ("Cole, Lloyd", "Backwoods", "Lloyd Cole", "Backwoods"),
     ("Daniel Caesar feat. Koffee", "Cyanide Remix", "Daniel Caesar feat. Koffee", "CYANIDE REMIX (feat. Koffee)"),
+    ("Kraftwerk 2", "Spiegelsaal", "Kraftwerk", "Spiegelsaal"),
+    ("Kraftwerk 6", "Abzug", "Kraftwerk", "Abzug"),
+    ("Kim Wilde", "03 Cambodia", "Kim Wilde", "Cambodia"),
 )
 for artist, title, want_artist, want_title in pairs:
     assert report_correction(artist, title) == (want_artist, want_title)
@@ -23,6 +26,9 @@ for artist, title in (
     ("Daniel Caesar feat. Koffee", "Cyanide"),
     ("Daniel Caesar", "Cyanide Remix"),
     ("Daniel Caesar feat. Someone Else", "Cyanide Remix"),
+    ("Kraftwerk 3", "Spiegelsaal"),
+    ("Kraftwerk 2", "Abzug"),
+    ("Kim Wilde", "03 Cambodia (Live)"),
 ):
     assert report_correction(artist, title) == (artist, title), (artist, title)
     assert not has_report_correction(artist, title), (artist, title)
@@ -39,4 +45,4 @@ assert '"v254_verified_report_metadata"' in requeue
 assert "if has_v254_report_correction(artist, title):" in requeue
 assert "reported_for_safe_retry" in requeue
 assert "_MIN_GAP = 6 * 3600" in requeue
-print("✅ v254: vier concrete radiometadata-fouten hersteld, veilige match en FIFO-herkansingen.")
+print("✅ v254: zeven concrete radiometadata-fouten hersteld, veilige match en FIFO-herkansingen.")
