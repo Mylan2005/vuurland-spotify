@@ -1,0 +1,45 @@
+name: Vuurland v259 dagelijkse dubbels (alleen-lezen)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '27 5 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vuurland-v259-dagelijkse-audit
+  cancel-in-progress: false
+
+jobs:
+  daily-dedup:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installeer alleen leesafhankelijkheden
+        run: python -m pip install requests
+      - name: Offline veiligheidstests
+        run: python -m unittest -v test_v259_daily_dedup_offline.py
+      - name: Lees Spotify Volumes 1 en 2+ en maak rapport
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: python v259_daily_dedup_audit.py --cache .vuurland_spotify_cache.json --out-dir v259_dedup_rapport
+      - name: Publiceer downloadbaar rapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-v259-dagelijkse-dubbels
+          path: |
+            v259_dedup_rapport/vuurland_dubbels.json
+            v259_dedup_rapport/vuurland_dubbels.md
+          if-no-files-found: warn
+          retention-days: 30

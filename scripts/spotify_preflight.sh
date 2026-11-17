@@ -73,6 +73,7 @@ python3 test_v201_matcher_safety_offline.py
 python3 test_v202_auto_matcher_triage_offline.py
 python3 test_v223_daily_matcher_pr_offline.py
 python3 test_v204_spotify_dedup_offline.py
+python3 -m unittest -v test_v259_daily_dedup_offline.py
 python3 test_v205_lifetime_backup_offline.py
 python3 test_v207_verified_matcher_metadata_offline.py
 python3 test_v208_explicit_artist_feature_offline.py
