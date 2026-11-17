@@ -24,6 +24,7 @@ from v252_unavailable_radio_x import skip_unavailable_radio_x_recording
 from v253_unavailable_dkfm_edge import skip_unavailable_dkfm_edge_recording
 from v245_multi_guest_credits import split_explicit_multiword_guests
 from v216_report_metadata import report_metadata_correction as v216_report_correction
+from v254_verified_report_metadata import report_correction as v254_report_correction
 from v217_report_search import report_third_search_query as v217_report_query
 from v223_report_search_hints import report_third_search_hint as v223_report_query
 from v194_matcher_metadata import (
@@ -2708,6 +2709,15 @@ def find_spotify_track(
         print(f"📝 v216: bronmetadata → cataloguszoekvorm: "
               f"{artist} — {title} → {_v216_artist} — {_v216_title}")
         artist, title = _v216_artist, _v216_title
+
+    # v254: four independently verified source/catalog metadata corrections.
+    # Original radio/source/FIFO/cache identity remains unchanged; all Spotify
+    # candidate and edition guards still apply after this rewrite.
+    _v254_artist, _v254_title = v254_report_correction(artist, title)
+    if (_v254_artist, _v254_title) != (artist, title):
+        print(f"📝 v254 geverifieerde Spotify-zoekvorm: {artist} — {title} → "
+              f"{_v254_artist} — {_v254_title}")
+        artist, title = _v254_artist, _v254_title
 
     # v233: generieke en strikt structurele bronmetadatacorrecties.
     # Nooit de oorspronkelijke bron-/FIFO-/cachekey wijzigen. Spotify blijft
