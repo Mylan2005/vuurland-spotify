@@ -46,6 +46,7 @@
       "alex g|||runner"
     ],
     "mellow_mix": [
+      "agnes obel|||dorian",
       "leon bridges|||laredo",
       "jason isbell|||the blue",
       "randy newman|||last night i had a dream",
@@ -144,8 +145,7 @@
       "van morrison|||sweet thing",
       "patty griffin|||ohio",
       "david crosby|||laughing",
-      "eluvium|||prelude for time feelers",
-      "eurythmics|||here comes the rain again acoustic"
+      "eluvium|||prelude for time feelers"
     ],
     "big_sonic_heaven": [
       "lanterns on the lake|||freeze frame",
@@ -556,6 +556,7 @@
       "propaganda|||femme fatale"
     ],
     "dkfm_edge": [
+      "silvermash|||did you see it last night?",
       "adorer|||veins",
       "drop nineteens|||gal",
       "wires to the temples|||smeared/aura",
@@ -654,8 +655,7 @@
       "she's in parties|||angelic",
       "feeble little horse|||freak",
       "soft blue shimmer|||canti",
-      "tanukichan|||it gets easier feat wisp",
-      "diffident daffodils|||from the ashes"
+      "tanukichan|||it gets easier feat wisp"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -968,6 +968,7 @@
       "cocteau twins|||those eyes that mouth"
     ],
     "egofm_rnb": [
+      "baby rose|||i won't tell feat smino",
       "woman|||love",
       "bj the chicago kid & ari lennox|||time today remix",
       "alicia keys|||sweet f'in love",
@@ -1066,8 +1067,7 @@
       "daniel caesar|||best part feat h e r",
       "john legend feat andre 3000|||green light",
       "masego|||navajo",
-      "tash sultana|||cigarettes",
-      "robert glasper experiment feat snoop dogg lupe fiasco & luke james|||persevere"
+      "tash sultana|||cigarettes"
     ],
     "egofm_chillout": [
       "orbit|||hands burning man version",
@@ -1274,6 +1274,7 @@
       "yello|||drive/driven"
     ],
     "gri_balkon": [
+      "max cooper|||trust ft tom hodge & kathrin deboer",
       "luca musto & loewenthal|||chapters",
       "klima project|||come with me ft jamie",
       "leifur james|||mumma don't tell",
@@ -1372,8 +1373,7 @@
       "pale|||fearing faces vondelpark dub mix",
       "camelphat eli & fur|||waiting",
       "rival consoles|||ghosting",
-      "morris jones kim greene|||mesmerizing philistic remix",
-      "aim|||good disease ft stephen jones"
+      "morris jones kim greene|||mesmerizing philistic remix"
     ],
     "ignoreradio_shoegaze": [
       "bizarre|||ornaments",
@@ -1580,6 +1580,7 @@
       "the amazons|||how will i know?"
     ],
     "wbru": [
+      "smerz|||you got time and i got money",
       "star moles|||born again",
       "m83|||wait",
       "the womack sisters|||if i let you",
@@ -1678,29 +1679,28 @@
       "panchiko|||d>e>a>t>h>m>e>t>a>l",
       "dominic fike|||white keys",
       "mitski|||i bet on losing dogs",
-      "the verve|||bitter sweet symphony",
-      "arcade fire|||we used to wait"
+      "the verve|||bitter sweet symphony"
     ]
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794970653.2109277,
-    "big_sonic_heaven": 1794970653.2176454,
-    "radio_x_chilled": 1794970653.2211618,
-    "dreampop_radio": 1794970653.224925,
-    "indie_select": 1794970653.2290084,
-    "dkfm_edge": 1794970653.2329433,
+    "mellow_mix": 1794970737.776348,
+    "big_sonic_heaven": 1794970737.7809901,
+    "radio_x_chilled": 1794970737.7845519,
+    "dreampop_radio": 1794970737.788252,
+    "indie_select": 1794970737.7922583,
+    "dkfm_edge": 1794970737.796247,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794970653.2374582,
-    "dkfm_shoegaze": 1794970653.2415555,
-    "dkfm_classic": 1794970653.2452922,
-    "egofm_rnb": 1794970653.249154,
-    "egofm_chillout": 1794970653.2528508,
-    "dj_neihtul": 1794970653.2557902,
-    "gri_balkon": 1794970653.2583036,
-    "ignoreradio_shoegaze": 1794970653.2619398,
-    "radio_britannia": 1794970653.2658007,
-    "wbru": 1794970653.268318
+    "dark_edge": 1794970737.8008018,
+    "dkfm_shoegaze": 1794970737.804924,
+    "dkfm_classic": 1794970737.808612,
+    "egofm_rnb": 1794970737.8125339,
+    "egofm_chillout": 1794970737.8162246,
+    "dj_neihtul": 1794970737.8190908,
+    "gri_balkon": 1794970737.821625,
+    "ignoreradio_shoegaze": 1794970737.8251643,
+    "radio_britannia": 1794970737.8290145,
+    "wbru": 1794970738.0903027
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -25569,10 +25569,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
-  "__last_radio_key_mellow_mix": "leon bridges|||laredo",
+  "__last_radio_key_mellow_mix": "agnes obel|||dorian",
   "__last_radio_key_big_sonic_heaven": "lanterns on the lake|||freeze frame",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 24941,
+  "__v116_fifo_next_sequence": 24942,
   "__v146_spotify_budget_slot": 1794970655.187031,
   "__vuurland_active_playlist_count": 2269,
   "__vuurland_active_volume": 2,
@@ -133524,7 +133524,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "adorer|||veins",
+  "__last_radio_key_dkfm_edge": "silvermash|||did you see it last night?",
   "__last_radio_key_dkfm_shoegaze": "grivo|||fatigue",
   "__last_radio_key_dkfm_classic": "the charlottes|||venus album version",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -138950,7 +138950,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "woman|||love",
+  "__last_radio_key_egofm_rnb": "baby rose|||i won't tell feat smino",
   "__last_radio_key_egofm_chillout": "orbit|||hands burning man version",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -138966,7 +138966,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "luca musto & loewenthal|||chapters",
+  "__last_radio_key_gri_balkon": "max cooper|||trust ft tom hodge & kathrin deboer",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -140496,7 +140496,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "the molotovs|||get a life",
-  "__last_radio_key_wbru": "star moles|||born again",
+  "__last_radio_key_wbru": "smerz|||you got time and i got money",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
