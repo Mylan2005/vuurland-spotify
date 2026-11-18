@@ -250,6 +250,7 @@
       "crystal canyon|||belt of orion"
     ],
     "radio_x_chilled": [
+      "cat power|||the greatest",
       "sam fender|||two people",
       "coldplay|||in my place",
       "elbow|||lippy kids",
@@ -348,10 +349,10 @@
       "arctic monkeys|||i wanna be yours",
       "blur|||the universal",
       "london grammar|||strong",
-      "the cure|||friday i'm in love acoustic",
-      "james bay|||let it go"
+      "the cure|||friday i'm in love acoustic"
     ],
     "dreampop_radio": [
+      "grand archives|||a setting sun",
       "belle and sebastian|||beautiful",
       "electric youth|||innocence",
       "emma pollock|||here comes the heartbreak",
@@ -450,8 +451,7 @@
       "the velvet underground|||pale blue eyes",
       "orenda fink|||holy holy",
       "the 1975|||medicine",
-      "fleetwood mac|||dreams",
-      "sheryl crow|||safe and sound"
+      "fleetwood mac|||dreams"
     ],
     "indie_select": [
       "plusminus|||jumping the tracks",
@@ -556,6 +556,7 @@
       "joy division|||she's lost control"
     ],
     "dkfm_edge": [
+      "daze|||she said",
       "share|||somewhere without language",
       "dead leaf echo|||another breath",
       "wynona bleach|||swim in the bay",
@@ -654,8 +655,7 @@
       "riley's mountain|||bay",
       "leavs|||in a time",
       "tannhauser orchestra|||spring reverb",
-      "the curly 卷毛怪|||shadow's embrace",
-      "hotline tnt|||spot me 100"
+      "the curly 卷毛怪|||shadow's embrace"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -866,6 +866,7 @@
       "panda riot|||northern automatic music"
     ],
     "dkfm_classic": [
+      "all natural lemon and lime flavors|||jayne baby",
       "catherine wheel|||painful thing",
       "cranes|||loved",
       "velocity girl|||what you say",
@@ -964,10 +965,10 @@
       "all about eve|||blindfolded visionary",
       "my bloody valentine|||you made me realise",
       "jesus & mary chain|||taste of cindy",
-      "swervedriver|||kill the superheroes",
-      "moose|||the whistling song"
+      "swervedriver|||kill the superheroes"
     ],
     "egofm_rnb": [
+      "princess nokia|||green eggs & ham",
       "king princess|||for my friends",
       "moses sumney|||cut me",
       "chance the rapper|||blessings",
@@ -1066,8 +1067,7 @@
       "remi wolf & dominic fike|||photo id",
       "nxworries|||lyk dis",
       "jordan rakei|||rolling into one",
-      "movement|||ivory",
-      "justin timberlake|||cry me a river"
+      "movement|||ivory"
     ],
     "egofm_chillout": [
       "forest knot|||we walk through the streets of lisbon",
@@ -1376,6 +1376,8 @@
       "ishome|||ken tavr"
     ],
     "ignoreradio_shoegaze": [
+      "trauma ray|||liftoff",
+      "manual|||baja nights",
       "manual|||biarritz",
       "castoff|||elliott's song",
       "the ecstasy of saint theresa|||thorn in y'r grip",
@@ -1473,11 +1475,10 @@
       "the horrors|||moving further away",
       "astrobrite|||the void inside",
       "the radio dept|||closing scene",
-      "deerhunter|||coronado",
-      "bizarre|||laizy sun",
-      "japancakes|||handguns & firearms"
+      "deerhunter|||coronado"
     ],
     "radio_britannia": [
+      "the king blues|||headbutt",
       "paul weller|||this old town feat graham coxon",
       "banners|||got it in you",
       "clinic|||im aware",
@@ -1576,8 +1577,7 @@
       "hurts|||stay",
       "miles kane|||troubled son",
       "master peace|||sick in the bathroom",
-      "peter doherty|||last of the english roses",
-      "michael kiwanuka|||sing"
+      "peter doherty|||last of the english roses"
     ],
     "wbru": [
       "girl in red|||blue",
@@ -1684,23 +1684,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794979653.2946208,
-    "big_sonic_heaven": 1794979653.3019023,
-    "radio_x_chilled": 1794979653.3058763,
-    "dreampop_radio": 1794979653.3101158,
-    "indie_select": 1794979653.314618,
-    "dkfm_edge": 1794979653.319104,
+    "mellow_mix": 1794979737.981167,
+    "big_sonic_heaven": 1794979737.988456,
+    "radio_x_chilled": 1794979737.992553,
+    "dreampop_radio": 1794979737.9968538,
+    "indie_select": 1794979738.0013473,
+    "dkfm_edge": 1794979738.0058985,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794979653.5633285,
-    "dkfm_shoegaze": 1794979653.5681746,
-    "dkfm_classic": 1794979653.5723994,
-    "egofm_rnb": 1794979653.5767217,
-    "egofm_chillout": 1794979653.5809305,
-    "dj_neihtul": 1794979653.847465,
-    "gri_balkon": 1794979653.8502734,
-    "ignoreradio_shoegaze": 1794979653.8543768,
-    "radio_britannia": 1794979653.8589983,
-    "wbru": 1794979653.861769
+    "dark_edge": 1794979738.0109906,
+    "dkfm_shoegaze": 1794979738.0157053,
+    "dkfm_classic": 1794979738.0200064,
+    "egofm_rnb": 1794979738.0243442,
+    "egofm_chillout": 1794979738.028396,
+    "dj_neihtul": 1794979738.0314827,
+    "gri_balkon": 1794979738.0340626,
+    "ignoreradio_shoegaze": 1794979738.4861188,
+    "radio_britannia": 1794979738.7213666,
+    "wbru": 1794979738.7241857
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -23711,6 +23711,7 @@
       "mansun|||the chad who loved me",
       "manual|||andaman",
       "manual|||april trees daydream",
+      "manual|||baja nights",
       "manual|||biarritz",
       "manual|||blood sun",
       "manual|||blue skied an' clear",
@@ -24294,6 +24295,7 @@
       "transient stellar|||phae",
       "trauma ray|||breath",
       "trauma ray|||grind",
+      "trauma ray|||liftoff",
       "trespassers william|||vapour trail",
       "trillion|||drive away",
       "trpp|||a joke with yogoe",
@@ -24718,6 +24720,7 @@
       "the kills|||103",
       "the kills|||list of demands reparations",
       "the kills|||tape song",
+      "the king blues|||headbutt",
       "the king blues|||set the world on fire",
       "the kooks|||if they could only know",
       "the kooks|||never know",
@@ -25776,7 +25779,7 @@
   "__last_radio_key_mellow_mix": "teddy swims|||lose control",
   "__last_radio_key_big_sonic_heaven": "nonsense rats|||dead end generation",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 25121,
+  "__v116_fifo_next_sequence": 25124,
   "__v146_spotify_budget_slot": 1794979655.8528373,
   "__vuurland_active_playlist_count": 2322,
   "__vuurland_active_volume": 2,
@@ -132367,7 +132370,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "sam fender|||two people",
+  "__last_radio_key_radio_x_chilled": "cat power|||the greatest",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -132471,7 +132474,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "belle and sebastian|||beautiful",
+  "__last_radio_key_dreampop_radio": "grand archives|||a setting sun",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -133951,9 +133954,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "share|||somewhere without language",
+  "__last_radio_key_dkfm_edge": "daze|||she said",
   "__last_radio_key_dkfm_shoegaze": "pure hex|||spilling",
-  "__last_radio_key_dkfm_classic": "catherine wheel|||painful thing",
+  "__last_radio_key_dkfm_classic": "all natural lemon and lime flavors|||jayne baby",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -139377,7 +139380,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "king princess|||for my friends",
+  "__last_radio_key_egofm_rnb": "princess nokia|||green eggs & ham",
   "__last_radio_key_egofm_chillout": "forest knot|||we walk through the streets of lisbon",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -139416,7 +139419,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "manual|||biarritz",
+  "__last_radio_key_ignoreradio_shoegaze": "trauma ray|||liftoff",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -140929,7 +140932,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "paul weller|||this old town feat graham coxon",
+  "__last_radio_key_radio_britannia": "the king blues|||headbutt",
   "__last_radio_key_wbru": "girl in red|||blue",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
