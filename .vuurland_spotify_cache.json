@@ -148,6 +148,7 @@
       "the band|||the weight w/ the staples family"
     ],
     "big_sonic_heaven": [
+      "left at orion|||jellyfish",
       "deserta|||i'm so tired",
       "lucid express|||stars in the car",
       "the false dawns|||we just haven't earned it yet baby!",
@@ -246,8 +247,7 @@
       "sadplanet|||do you?",
       "club 8|||i wish you'd stay",
       "yumeia & tre flip|||eterno riposo",
-      "yndling|||like love is real",
-      "stereolab|||aerial troubles"
+      "yndling|||like love is real"
     ],
     "radio_x_chilled": [
       "london grammar|||strong",
@@ -352,6 +352,7 @@
       "radiohead|||no surprises"
     ],
     "dreampop_radio": [
+      "christian kjellvander|||two souls",
       "peter bradley adams|||between us",
       "sea wolf|||you're a wolf",
       "emily jane white|||the cliff",
@@ -450,8 +451,7 @@
       "luke roberts|||unspotted clothes",
       "alberta cross|||steel and glass",
       "aurora|||runaway",
-      "heidi happy|||home",
-      "keren ann|||sur le fil"
+      "heidi happy|||home"
     ],
     "indie_select": [
       "mogwai|||teenage exorcists",
@@ -968,6 +968,7 @@
       "should|||both eyes open"
     ],
     "egofm_rnb": [
+      "tom misch & yussef dayes|||last 100",
       "charlotte day wilson|||i can only whisper feat badbadnotgood",
       "olivia dean|||danger",
       "jill scott|||closure",
@@ -1066,8 +1067,7 @@
       "kllo|||candid",
       "sade|||hang on to your love",
       "winston surfshirt|||be about you",
-      "masego|||navajo",
-      "kendrick lamar blxst amanda reifer|||die hard"
+      "masego|||navajo"
     ],
     "egofm_chillout": [
       "hior chronik feat anna-maria marjamaki|||make sense",
@@ -1346,6 +1346,7 @@
       "agar agar|||i'm that guy"
     ],
     "ignoreradio_shoegaze": [
+      "the depreciation guild|||the depreciation guild - blue lily",
       "chapterhouse|||for what it's worth",
       "contrast|||livewire",
       "beach house|||lemon glow",
@@ -1444,8 +1445,7 @@
       "day aches|||breeze",
       "marvelous mark|||paralysed",
       "novanta|||outside noise",
-      "cling ring|||violet world of glass",
-      "stalled|||governor's dodge"
+      "cling ring|||violet world of glass"
     ],
     "radio_britannia": [
       "the verve|||lucky man",
@@ -1654,23 +1654,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1795013025.3160126,
-    "big_sonic_heaven": 1795013025.3194792,
-    "radio_x_chilled": 1795013025.3227208,
-    "dreampop_radio": 1795013025.3258471,
-    "indie_select": 1795013025.329699,
-    "dkfm_edge": 1795013025.332921,
+    "mellow_mix": 1795013114.9728487,
+    "big_sonic_heaven": 1795013114.9765038,
+    "radio_x_chilled": 1795013114.9796302,
+    "dreampop_radio": 1795013114.9829013,
+    "indie_select": 1795013114.9865224,
+    "dkfm_edge": 1795013114.9897366,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795013025.3371844,
-    "dkfm_shoegaze": 1795013025.3407958,
-    "dkfm_classic": 1795013025.344192,
-    "egofm_rnb": 1795013025.3475015,
-    "egofm_chillout": 1795013025.35089,
-    "dj_neihtul": 1795013025.3530543,
-    "gri_balkon": 1795013025.3550856,
-    "ignoreradio_shoegaze": 1795013025.3583777,
-    "radio_britannia": 1795013025.3616624,
-    "wbru": 1795013025.3643734
+    "dark_edge": 1795013114.9939559,
+    "dkfm_shoegaze": 1795013114.9975777,
+    "dkfm_classic": 1795013115.000993,
+    "egofm_rnb": 1795013115.0044549,
+    "egofm_chillout": 1795013115.007793,
+    "dj_neihtul": 1795013115.0099518,
+    "gri_balkon": 1795013115.0119705,
+    "ignoreradio_shoegaze": 1795013115.494943,
+    "radio_britannia": 1795013115.4982262,
+    "wbru": 1795013115.5010126
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -24624,6 +24624,7 @@
       "the dandy warhols|||ride",
       "the depreciation guild|||heavy eyes",
       "the depreciation guild|||listless",
+      "the depreciation guild|||the depreciation guild - blue lily",
       "the depreciation guild|||the depreciation guild - crucify you",
       "the depreciation guild|||the depreciation guild - spirit youth",
       "the depreciation guild|||trace",
@@ -26501,9 +26502,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
   "__last_radio_key_mellow_mix": "syml|||apollo",
-  "__last_radio_key_big_sonic_heaven": "deserta|||i'm so tired",
+  "__last_radio_key_big_sonic_heaven": "left at orion|||jellyfish",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 25767,
+  "__v116_fifo_next_sequence": 25768,
   "__v146_spotify_budget_slot": 1795013028.8354096,
   "__vuurland_active_playlist_count": 2579,
   "__vuurland_active_volume": 2,
@@ -134067,7 +134068,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "peter bradley adams|||between us",
+  "__last_radio_key_dreampop_radio": "christian kjellvander|||two souls",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -140973,7 +140974,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "charlotte day wilson|||i can only whisper feat badbadnotgood",
+  "__last_radio_key_egofm_rnb": "tom misch & yussef dayes|||last 100",
   "__last_radio_key_egofm_chillout": "hior chronik feat anna-maria marjamaki|||make sense",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -141012,7 +141013,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "chapterhouse|||for what it's worth",
+  "__last_radio_key_ignoreradio_shoegaze": "the depreciation guild|||the depreciation guild - blue lily",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
