@@ -46,6 +46,7 @@
       "alex g|||runner"
     ],
     "mellow_mix": [
+      "patty griffin|||mary",
       "ocie elliott|||a place",
       "crowded house|||walking on the spot",
       "john martyn|||may you never",
@@ -144,8 +145,7 @@
       "emmylou harris|||every grain of sand",
       "patty larkin|||the cranes",
       "stan getz|||misty",
-      "ray lamontagne|||homecoming",
-      "bunny wailer|||dream land"
+      "ray lamontagne|||homecoming"
     ],
     "big_sonic_heaven": [
       "trentemøller|||halved",
@@ -352,6 +352,7 @@
       "the temper trap|||sweet disposition"
     ],
     "dreampop_radio": [
+      "simone felice|||charade",
       "the pains of being pure at heart|||lost saint",
       "sharon van etten|||one day",
       "orenda fink|||high ground",
@@ -450,8 +451,7 @@
       "sun kil moon|||gentle moon",
       "shivaree|||goodnight moon",
       "emmy curl|||no moon",
-      "cat power|||breathless",
-      "eagle-eye cherry|||permanent tears"
+      "cat power|||breathless"
     ],
     "indie_select": [
       "hot chip|||transmission joy division cover",
@@ -764,6 +764,8 @@
       "charlotte gainsbourg|||songbird in a cage"
     ],
     "dkfm_shoegaze": [
+      "psychic guilt|||awake",
+      "nuit|||meltdown",
       "bombs over brandenburg|||wanna go out tn",
       "the city gates|||03 it's a violent life",
       "gruelmuncher|||resonant demise",
@@ -861,11 +863,10 @@
       "deep red|||falling out",
       "fever blush|||where you are",
       "luster|||true to you",
-      "chlorine eyes strayline|||prone",
-      "starbelliedbug|||milkycake",
-      "the yellow traffic light|||care"
+      "chlorine eyes strayline|||prone"
     ],
     "dkfm_classic": [
+      "revolver|||cold water flat",
       "moose|||last night i fell again",
       "half string|||eyesick",
       "smudge|||weep woman weep",
@@ -964,8 +965,7 @@
       "my bloody valentine|||soft as snow but warm inside",
       "the curtain society|||no answer",
       "ride|||twisterella",
-      "coaltar of the deepers|||hard reality",
-      "orange|||blue budd"
+      "coaltar of the deepers|||hard reality"
     ],
     "egofm_rnb": [
       "james vincent mcmorrow|||tru love",
@@ -1684,23 +1684,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794971807.0335343,
-    "big_sonic_heaven": 1794971807.0381927,
-    "radio_x_chilled": 1794971807.0417638,
-    "dreampop_radio": 1794971807.045513,
-    "indie_select": 1794971807.049581,
-    "dkfm_edge": 1794971807.0536475,
+    "mellow_mix": 1794971892.006585,
+    "big_sonic_heaven": 1794971892.011342,
+    "radio_x_chilled": 1794971892.0148993,
+    "dreampop_radio": 1794971892.0187426,
+    "indie_select": 1794971892.0228314,
+    "dkfm_edge": 1794971892.0268323,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794971807.3192317,
-    "dkfm_shoegaze": 1794971807.3235512,
-    "dkfm_classic": 1794971807.3273087,
-    "egofm_rnb": 1794971807.575999,
-    "egofm_chillout": 1794971807.5798464,
-    "dj_neihtul": 1794971807.5827775,
-    "gri_balkon": 1794971807.58535,
-    "ignoreradio_shoegaze": 1794971807.589046,
-    "radio_britannia": 1794971807.5930033,
-    "wbru": 1794971807.5955372
+    "dark_edge": 1794971892.0314806,
+    "dkfm_shoegaze": 1794971892.4694052,
+    "dkfm_classic": 1794971892.473331,
+    "egofm_rnb": 1794971892.4772902,
+    "egofm_chillout": 1794971892.481028,
+    "dj_neihtul": 1794971892.483896,
+    "gri_balkon": 1794971892.486376,
+    "ignoreradio_shoegaze": 1794971892.4900227,
+    "radio_britannia": 1794971892.493997,
+    "wbru": 1794971892.496515
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17784,6 +17784,7 @@
       "nuclear daisies|||love is a lie",
       "nuit|||breathless",
       "nuit|||finale",
+      "nuit|||meltdown",
       "nuit|||pop song",
       "nuit|||sunset feat miho moon in june sunday student",
       "nuit|||unluck sea",
@@ -17906,6 +17907,7 @@
       "proto|||j'dis n'imp",
       "proto|||nickel",
       "proto|||pas dormir",
+      "psychic guilt|||awake",
       "puppy teeth|||melatonin",
       "puppy teeth|||that time",
       "pure bathing culture|||dreams",
@@ -25596,10 +25598,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
-  "__last_radio_key_mellow_mix": "ocie elliott|||a place",
+  "__last_radio_key_mellow_mix": "patty griffin|||mary",
   "__last_radio_key_big_sonic_heaven": "trentemøller|||halved",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 24965,
+  "__v116_fifo_next_sequence": 24967,
   "__v146_spotify_budget_slot": 1794971809.5189056,
   "__vuurland_active_playlist_count": 2275,
   "__vuurland_active_volume": 2,
@@ -132096,7 +132098,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the pains of being pure at heart|||lost saint",
+  "__last_radio_key_dreampop_radio": "simone felice|||charade",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -133577,8 +133579,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "stab|||left 2 dry",
-  "__last_radio_key_dkfm_shoegaze": "bombs over brandenburg|||wanna go out tn",
-  "__last_radio_key_dkfm_classic": "moose|||last night i fell again",
+  "__last_radio_key_dkfm_shoegaze": "psychic guilt|||awake",
+  "__last_radio_key_dkfm_classic": "revolver|||cold water flat",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
