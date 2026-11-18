@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795019167.5445898,
+  "__v150_next_spotify_round_at": 1795019292.2185535,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -352,6 +352,7 @@
       "mazzy star|||into dust"
     ],
     "dreampop_radio": [
+      "tennis|||my better self",
       "boy|||hit my heart",
       "fink|||warm shadow",
       "wye oak|||civilian",
@@ -450,8 +451,7 @@
       "stealing sheep|||the garden",
       "beach house|||you came to me",
       "noel gallagher's high flying birds|||riverman",
-      "tina dico|||nobody's man",
-      "azure ray|||signs in the leaves"
+      "tina dico|||nobody's man"
     ],
     "indie_select": [
       "royel otis|||claw foot",
@@ -764,6 +764,7 @@
       "hard-fi|||suburban knights"
     ],
     "dkfm_shoegaze": [
+      "attic ocean|||aurora",
       "relay tapes|||avalon",
       "the dreamtoday|||crawlspace",
       "lozenge|||silver",
@@ -862,8 +863,7 @@
       "lsd and the search for god|||outer space",
       "hesitant|||sympathy is a knife charli xcx",
       "attic ocean|||escapades",
-      "evvolves|||13",
-      "the florist|||sundown"
+      "evvolves|||13"
     ],
     "dkfm_classic": [
       "love spirals downwards|||kykeon",
@@ -968,6 +968,7 @@
       "moose|||suzanne"
     ],
     "egofm_rnb": [
+      "sault|||up all night",
       "mustafa|||stay alive",
       "serpentwithfeet|||bless ur heart",
       "fkj|||greener feat santana",
@@ -1066,10 +1067,10 @@
       "the golf club|||soda stain",
       "kelela|||rewind",
       "saint wknd feat malou & clouds|||ridin' solo",
-      "tkay maidza|||cashmere",
-      "h e r feat kaytranada & thundercat|||bloody waters"
+      "tkay maidza|||cashmere"
     ],
     "egofm_chillout": [
+      "philanthrope & guillaume muschalle|||soil",
       "kinderzimmer productions|||es kommt in wellen instrumental",
       "ceeys|||hiddensee",
       "tesk|||p i c k m e u p",
@@ -1168,8 +1169,7 @@
       "saib|||beyond clouds",
       "chet faker|||talk is cheap",
       "kutiman|||fresh haze",
-      "thom yorke|||suspirium",
-      "talk talk|||april 5th"
+      "thom yorke|||suspirium"
     ],
     "dj_neihtul": [
       "moderat|||reminder",
@@ -1578,6 +1578,7 @@
       "blur|||to the end"
     ],
     "wbru": [
+      "girl in red|||blue",
       "fontaines d c|||marianne",
       "wolf alice|||don't delete the kisses",
       "dexter and the moonrocks|||freakin' out",
@@ -1666,7 +1667,6 @@
       "steve lacy|||c u girl",
       "cocteau twins|||cico buff",
       "everclear|||santa monica watch the world die",
-      "girl in red|||blue",
       "beach bunny|||sports",
       "malcolm todd|||earrings",
       "fitz and the tantrums|||out of my league",
@@ -1682,23 +1682,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1795019136.5896106,
-    "big_sonic_heaven": 1795019136.5934584,
-    "radio_x_chilled": 1795019136.5971465,
-    "dreampop_radio": 1795019136.6007195,
-    "indie_select": 1795019136.604728,
-    "dkfm_edge": 1795019136.6084437,
+    "mellow_mix": 1795019171.2267547,
+    "big_sonic_heaven": 1795019171.2304873,
+    "radio_x_chilled": 1795019171.2339382,
+    "dreampop_radio": 1795019171.2375195,
+    "indie_select": 1795019171.241452,
+    "dkfm_edge": 1795019171.2450106,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795019136.6131573,
-    "dkfm_shoegaze": 1795019136.6172156,
-    "dkfm_classic": 1795019136.6211605,
-    "egofm_rnb": 1795019136.6249537,
-    "egofm_chillout": 1795019136.6289485,
-    "dj_neihtul": 1795019136.631844,
-    "gri_balkon": 1795019136.6343699,
-    "ignoreradio_shoegaze": 1795019136.9775732,
-    "radio_britannia": 1795019136.9812791,
-    "wbru": 1795019136.9842913
+    "dark_edge": 1795019171.2496593,
+    "dkfm_shoegaze": 1795019171.253792,
+    "dkfm_classic": 1795019171.2575383,
+    "egofm_rnb": 1795019171.2614412,
+    "egofm_chillout": 1795019171.265356,
+    "dj_neihtul": 1795019171.268149,
+    "gri_balkon": 1795019171.270603,
+    "ignoreradio_shoegaze": 1795019171.2741742,
+    "radio_britannia": 1795019171.2777488,
+    "wbru": 1795019171.2806509
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -26663,7 +26663,7 @@
   "__last_radio_key_big_sonic_heaven": "kiara ngl|||in the deep",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 25872,
-  "__v146_spotify_budget_slot": 1795019050.0466962,
+  "__v146_spotify_budget_slot": 1795019174.761229,
   "__vuurland_active_playlist_count": 2618,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -97035,7 +97035,8 @@
     "aytun & can menek|||everywhere home ft dj daddy e": 1,
     "hatchie|||august": 1,
     "swirlies|||cousteau": 1,
-    "the charlottes|||we're going wrong album version": 1
+    "the charlottes|||we're going wrong album version": 1,
+    "the chemical brothers|||go f q-tip": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -134388,7 +134389,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "boy|||hit my heart",
+  "__last_radio_key_dreampop_radio": "tennis|||my better self",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -135869,7 +135870,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "mo dotti|||dead to me",
-  "__last_radio_key_dkfm_shoegaze": "relay tapes|||avalon",
+  "__last_radio_key_dkfm_shoegaze": "attic ocean|||aurora",
   "__last_radio_key_dkfm_classic": "love spirals downwards|||kykeon",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -139564,7 +139565,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "radio_britannia",
+  "__v221_last_selected_source": "wbru",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -139576,7 +139577,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "radio_britannia",
+  "__v224_last_spotify_opportunity_source": "wbru",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -139609,7 +139610,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "radio_britannia",
+  "__v227_last_source_turn": "wbru",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -141293,8 +141294,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "mustafa|||stay alive",
-  "__last_radio_key_egofm_chillout": "kinderzimmer productions|||es kommt in wellen instrumental",
+  "__last_radio_key_egofm_rnb": "sault|||up all night",
+  "__last_radio_key_egofm_chillout": "philanthrope & guillaume muschalle|||soil",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -142851,7 +142852,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "blur|||m o r",
-  "__last_radio_key_wbru": "fontaines d c|||marianne",
+  "__last_radio_key_wbru": "girl in red|||blue",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -144224,6 +144225,31 @@
         }
       ],
       "status": "low_relevance"
+    },
+    "the chemical brothers|||go f q-tip": {
+      "source": "wbru",
+      "artist": "The Chemical Brothers",
+      "title": "Go (f Q-Tip)",
+      "kind": "uncertain",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "The Chemical Brothers, Q-Tip",
+          "title": "Go",
+          "spotify_id": "1zWzrsWqEGv2fRXE5D18UX"
+        },
+        {
+          "artist": "The Chemical Brothers",
+          "title": "Hey Boy Hey Girl",
+          "spotify_id": "7kXmJwrZGIhDaLT9sNo3ut"
+        },
+        {
+          "artist": "The Chemical Brothers, Q-Tip",
+          "title": "Go",
+          "spotify_id": "6CtQZDVyYTlHbCmnDYYoto"
+        }
+      ],
+      "status": "uncertain"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
