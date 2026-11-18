@@ -352,6 +352,7 @@
       "fleetwood mac|||landslide"
     ],
     "dreampop_radio": [
+      "me and my drummer|||phobia",
       "the stone roses|||this is the one",
       "damien jurado|||trials",
       "life in film|||carla",
@@ -450,8 +451,7 @@
       "mandolin orange|||mandolin orange / daylight",
       "kid decker|||where it lies",
       "michael kiwanuka|||i'll get along",
-      "saintseneca|||happy alone",
-      "honig|||hometowns"
+      "saintseneca|||happy alone"
     ],
     "indie_select": [
       "fun lovin' criminals|||couldn't get it right",
@@ -866,6 +866,7 @@
       "timelost|||it only hurt once"
     ],
     "dkfm_classic": [
+      "lovesliescrushing|||ghosts that swirl",
       "adorable|||breathless",
       "boo radleys|||butterfly mcqueen",
       "cranes|||trumpet song",
@@ -964,10 +965,10 @@
       "bleach|||friends",
       "majesty crush|||brand",
       "riverside|||galaxie",
-      "cocteau twins|||pepper-tree",
-      "galaxie 500|||strange"
+      "cocteau twins|||pepper-tree"
     ],
     "egofm_rnb": [
+      "prince|||nothing compares 2 u",
       "mykki blanco & kelsey lu|||french lessons",
       "janelle monae feat erykah badu|||q u e e n",
       "rosalia|||de aqui no sales cap 4 disputa",
@@ -1066,10 +1067,10 @@
       "boozoo bajou|||sign",
       "kwabs|||saved",
       "billie eilish|||bellyache",
-      "fka twigs|||two weeks",
-      "jxn feat reyanna maria|||nintendo"
+      "fka twigs|||two weeks"
     ],
     "egofm_chillout": [
+      "portable feat lcio|||surrender",
       "nina simone|||feel good skyphos",
       "saint wknd|||girls just wanna have sun",
       "hayden thorpe|||diviner",
@@ -1168,8 +1169,7 @@
       "dinner party terrace martin robert glasper 9th wonder & kamasi washington|||the mighty tree",
       "ta-ku|||i miss you",
       "moose dawa|||bravo",
-      "hannah jadagu|||bleep bloop",
-      "ward wills|||can't find the words feat middle school"
+      "hannah jadagu|||bleep bloop"
     ],
     "dj_neihtul": [
       "joel mull|||viewpoint",
@@ -1684,23 +1684,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794964974.7578242,
-    "big_sonic_heaven": 1794964974.762092,
-    "radio_x_chilled": 1794964974.7654028,
-    "dreampop_radio": 1794964974.7688699,
-    "indie_select": 1794964974.772689,
-    "dkfm_edge": 1794964974.7763932,
+    "mellow_mix": 1794965012.9054143,
+    "big_sonic_heaven": 1794965012.9095845,
+    "radio_x_chilled": 1794965012.9129472,
+    "dreampop_radio": 1794965012.9165552,
+    "indie_select": 1794965012.9203587,
+    "dkfm_edge": 1794965012.9240925,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794964975.0042248,
-    "dkfm_shoegaze": 1794964975.0083148,
-    "dkfm_classic": 1794964975.0117874,
-    "egofm_rnb": 1794964975.0154932,
-    "egofm_chillout": 1794964975.0190206,
-    "dj_neihtul": 1794964975.021781,
-    "gri_balkon": 1794964975.0241065,
-    "ignoreradio_shoegaze": 1794964975.0275116,
-    "radio_britannia": 1794964975.0312474,
-    "wbru": 1794964975.0337193
+    "dark_edge": 1794965012.9283636,
+    "dkfm_shoegaze": 1794965012.9323645,
+    "dkfm_classic": 1794965012.9359322,
+    "egofm_rnb": 1794965012.9397469,
+    "egofm_chillout": 1794965012.943387,
+    "dj_neihtul": 1794965012.946102,
+    "gri_balkon": 1794965012.948434,
+    "ignoreradio_shoegaze": 1794965012.9518182,
+    "radio_britannia": 1794965012.95548,
+    "wbru": 1794965012.9578736
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -131780,7 +131780,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the stone roses|||this is the one",
+  "__last_radio_key_dreampop_radio": "me and my drummer|||phobia",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -133262,7 +133262,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "marlene chiapas|||never listen",
   "__last_radio_key_dkfm_shoegaze": "indoor voices|||past present",
-  "__last_radio_key_dkfm_classic": "adorable|||breathless",
+  "__last_radio_key_dkfm_classic": "lovesliescrushing|||ghosts that swirl",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -138686,8 +138686,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "mykki blanco & kelsey lu|||french lessons",
-  "__last_radio_key_egofm_chillout": "nina simone|||feel good skyphos",
+  "__last_radio_key_egofm_rnb": "prince|||nothing compares 2 u",
+  "__last_radio_key_egofm_chillout": "portable feat lcio|||surrender",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
