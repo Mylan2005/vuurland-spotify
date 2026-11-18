@@ -148,6 +148,8 @@
       "steve young|||silverlake"
     ],
     "big_sonic_heaven": [
+      "trentemøller|||johnny boy",
+      "air formation|||low december sun",
       "the julies|||neon afterlife",
       "soft blue shimmer|||sunsoft",
       "hooverphonic|||wardrope",
@@ -245,11 +247,10 @@
       "the bellwether syndicate|||translucent",
       "boy harsher|||coming home",
       "bel canto|||time without end",
-      "air formation|||finding gravity",
-      "trentemøller|||terrified",
-      "the church|||i think i knew"
+      "air formation|||finding gravity"
     ],
     "radio_x_chilled": [
+      "kings of leon|||pyro",
       "david gray|||babylon",
       "the cranberries|||zombie acoustic",
       "the rolling stones|||you can't always get what you want",
@@ -348,8 +349,7 @@
       "eels|||susan's house",
       "the maccabees|||toothpaste kisses",
       "maximo park|||books from boxes",
-      "band of horses|||no one's gonna love you",
-      "the verve|||bitter sweet symphony"
+      "band of horses|||no one's gonna love you"
     ],
     "dreampop_radio": [
       "stephen duffy & the lilac time|||so far away",
@@ -662,6 +662,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "miicah|||loneliiness",
       "kasabian|||where did all the love go?",
       "ronnie k|||8 weeks",
       "sunflower bean|||easier said",
@@ -760,10 +761,10 @@
       "peter bjorn and john|||nothing to worry about",
       "guacho bleu|||odiosamente bien",
       "angus & julia stone|||grizzly bear",
-      "rac featuring danny dwyer|||mia",
-      "massive attack|||unfinished sympathy"
+      "rac featuring danny dwyer|||mia"
     ],
     "dkfm_shoegaze": [
+      "imandra lake|||metsatants",
       "bellweather|||slug",
       "paper lady|||silt",
       "mirror travel|||stoner",
@@ -862,10 +863,10 @@
       "encarta 98|||nada va a cambiar",
       "glixen|||unwind",
       "green star|||you won't be long",
-      "nothing|||toothless coal",
-      "blue smiley|||bird"
+      "nothing|||toothless coal"
     ],
     "dkfm_classic": [
+      "see see rider|||happy",
       "a c marias|||one of our girls has gone missing",
       "galaxie 500|||isn't it a pity",
       "revolver|||painting pictures",
@@ -964,10 +965,10 @@
       "boo radleys|||i wanna be touch down jesus",
       "galaxie 500|||sorry",
       "pale saints|||thread of light",
-      "cranes|||sun and sky",
-      "bethany curve|||terpsichore"
+      "cranes|||sun and sky"
     ],
     "egofm_rnb": [
+      "joesef|||loverboy",
       "times new roman|||summer breeze",
       "ibeyi|||exhibit diaz",
       "sampha|||blood on me",
@@ -1066,8 +1067,7 @@
       "erykah badu|||woo",
       "enny & amia brave|||peng black girls",
       "marvin gaye|||sexual healing",
-      "polica|||blood",
-      "hiatus kaiyote|||chivalry is not dead"
+      "polica|||blood"
     ],
     "egofm_chillout": [
       "no-man|||all sweet things remastered",
@@ -1376,6 +1376,7 @@
       "klima project|||come with me ft jamie"
     ],
     "ignoreradio_shoegaze": [
+      "nothing|||guilty of everything",
       "lush|||leaves me cold",
       "drahla|||stimulus for living",
       "swirlies|||san cristobal de las casas",
@@ -1474,8 +1475,7 @@
       "pardoner|||spike",
       "blankenberge|||radiogaze",
       "hysterical love project|||backseat of forever",
-      "sun mahshene|||pale azure",
-      "ml buch|||well bucket"
+      "sun mahshene|||pale azure"
     ],
     "radio_britannia": [
       "florence the machine|||big god",
@@ -1684,23 +1684,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794967427.1986601,
-    "big_sonic_heaven": 1794967427.2029853,
-    "radio_x_chilled": 1794967427.206473,
-    "dreampop_radio": 1794967427.2101617,
-    "indie_select": 1794967427.2141488,
-    "dkfm_edge": 1794967427.2181194,
+    "mellow_mix": 1794967505.9126678,
+    "big_sonic_heaven": 1794967505.9171574,
+    "radio_x_chilled": 1794967505.9206424,
+    "dreampop_radio": 1794967505.9242823,
+    "indie_select": 1794967505.9282417,
+    "dkfm_edge": 1794967505.932105,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794967427.222567,
-    "dkfm_shoegaze": 1794967427.2266598,
-    "dkfm_classic": 1794967427.230274,
-    "egofm_rnb": 1794967427.2340593,
-    "egofm_chillout": 1794967427.2377064,
-    "dj_neihtul": 1794967427.2404485,
-    "gri_balkon": 1794967427.2428446,
-    "ignoreradio_shoegaze": 1794967427.246318,
-    "radio_britannia": 1794967427.2501316,
-    "wbru": 1794967427.2525334
+    "dark_edge": 1794967506.1415966,
+    "dkfm_shoegaze": 1794967506.1457794,
+    "dkfm_classic": 1794967506.1495101,
+    "egofm_rnb": 1794967506.1534333,
+    "egofm_chillout": 1794967506.157079,
+    "dj_neihtul": 1794967506.1598246,
+    "gri_balkon": 1794967506.1622348,
+    "ignoreradio_shoegaze": 1794967506.3864944,
+    "radio_britannia": 1794967506.3903503,
+    "wbru": 1794967506.3927748
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14727,6 +14727,7 @@
       "midnight snack|||closer",
       "mighty oaks|||so low so high",
       "mihail|||who you are",
+      "miicah|||loneliiness",
       "miike snow|||back of the car",
       "miike snow|||cult logic",
       "miike snow|||devil's work",
@@ -17362,6 +17363,7 @@
       "idi et amin|||porcelian boy",
       "idi et amin|||rain brunette",
       "idioteque|||if these walls could talk feat bala",
+      "imandra lake|||metsatants",
       "imperfect tree|||the first dive",
       "implodes|||scattered in the wind",
       "in inertia|||shifting to a haze",
@@ -23676,6 +23678,7 @@
       "northern picture library|||something good",
       "nosotros la miseria|||nostalgia violeta",
       "nothing|||get well",
+      "nothing|||guilty of everything",
       "nothing|||heavy water i'd rather be sleeping",
       "nothing|||tic tac toe 2013 ave c demo",
       "nothing|||vapour trail live wkdu philly 2011",
@@ -25495,9 +25498,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
   "__last_radio_key_mellow_mix": "son volt|||medication",
-  "__last_radio_key_big_sonic_heaven": "the julies|||neon afterlife",
+  "__last_radio_key_big_sonic_heaven": "trentemøller|||johnny boy",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 24885,
+  "__v116_fifo_next_sequence": 24887,
   "__v146_spotify_budget_slot": 1794967429.1004834,
   "__vuurland_active_playlist_count": 2249,
   "__vuurland_active_volume": 2,
@@ -131782,7 +131785,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "david gray|||babylon",
+  "__last_radio_key_radio_x_chilled": "kings of leon|||pyro",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -133367,8 +133370,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "cigarettes for breakfast|||solitaire",
-  "__last_radio_key_dkfm_shoegaze": "bellweather|||slug",
-  "__last_radio_key_dkfm_classic": "a c marias|||one of our girls has gone missing",
+  "__last_radio_key_dkfm_shoegaze": "imandra lake|||metsatants",
+  "__last_radio_key_dkfm_classic": "see see rider|||happy",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -133380,7 +133383,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "kasabian|||where did all the love go?",
+  "__last_radio_key_dark_edge": "miicah|||loneliiness",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -138792,7 +138795,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "times new roman|||summer breeze",
+  "__last_radio_key_egofm_rnb": "joesef|||loverboy",
   "__last_radio_key_egofm_chillout": "no-man|||all sweet things remastered",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -138831,7 +138834,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "lush|||leaves me cold",
+  "__last_radio_key_ignoreradio_shoegaze": "nothing|||guilty of everything",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
