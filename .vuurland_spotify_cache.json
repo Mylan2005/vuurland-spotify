@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1794978316.0674667,
+  "__v150_next_spotify_round_at": 1794978438.0494585,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -352,6 +352,7 @@
       "r e m|||man on the moon"
     ],
     "dreampop_radio": [
+      "peter gallway|||i wish you everything",
       "polar|||bipolar dream",
       "coldplay|||brothers and sisters",
       "ben kweller|||in other words",
@@ -450,8 +451,7 @@
       "william fitzsimmons|||it's not true",
       "luluc|||my midnight special",
       "ry x|||sweat - dusk session",
-      "washed out|||great escape",
-      "r e m|||everybody hurts"
+      "washed out|||great escape"
     ],
     "indie_select": [
       "the national|||nobody else will be there",
@@ -968,6 +968,7 @@
       "brian jonestown massacre|||methodrone"
     ],
     "egofm_rnb": [
+      "robert glasper feat musiq soulchild & chrisette michel|||ah yeah",
       "rudimental feat mnek & syron|||spoons",
       "snoh aalegra feat common|||bad things",
       "benee|||doesn't matter",
@@ -1066,8 +1067,7 @@
       "joy crookes|||no hands",
       "boo seeka|||fools",
       "raury|||channel zero",
-      "saint wknd & max|||survive",
-      "gabriels|||love and hate in a different time"
+      "saint wknd & max|||survive"
     ],
     "egofm_chillout": [
       "sworn|||keep going",
@@ -1376,6 +1376,7 @@
       "maricopa|||this way forever"
     ],
     "ignoreradio_shoegaze": [
+      "air formation|||for the hours",
       "lovesliescrushing|||the wounds that won't heal",
       "sunbeam sound machine|||i promise that i?ll try to give you all my love",
       "rilev|||vampira",
@@ -1474,10 +1475,10 @@
       "japancakes|||handguns & firearms",
       "sunbeam sound machine|||whistle while you wait",
       "launder|||become feat soko",
-      "echo and the bunnymen|||the cutter",
-      "duster|||n"
+      "echo and the bunnymen|||the cutter"
     ],
     "radio_britannia": [
+      "stereophonics|||fly like an eagle",
       "kingfishr|||weight of the feather",
       "the kooks|||if they could only know",
       "snow patrol|||if theres a rocket tie me to it",
@@ -1576,8 +1577,7 @@
       "the kills|||list of demands reparations",
       "tim burgess|||sure enough",
       "amble|||lonely island",
-      "supergrass|||next to you",
-      "doves|||cathedrals of the mind"
+      "supergrass|||next to you"
     ],
     "wbru": [
       "lana del rey|||let the light in f father john misty",
@@ -1684,23 +1684,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794978278.6426785,
-    "big_sonic_heaven": 1794978278.6479092,
-    "radio_x_chilled": 1794978278.651872,
-    "dreampop_radio": 1794978278.6559842,
-    "indie_select": 1794978278.660429,
-    "dkfm_edge": 1794978278.6648624,
+    "mellow_mix": 1794978317.1104653,
+    "big_sonic_heaven": 1794978317.1158953,
+    "radio_x_chilled": 1794978317.1197965,
+    "dreampop_radio": 1794978317.1240354,
+    "indie_select": 1794978317.128471,
+    "dkfm_edge": 1794978317.1339812,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794978278.9410431,
-    "dkfm_shoegaze": 1794978279.1635735,
-    "dkfm_classic": 1794978279.1678157,
-    "egofm_rnb": 1794978279.1721027,
-    "egofm_chillout": 1794978279.1762137,
-    "dj_neihtul": 1794978279.179337,
-    "gri_balkon": 1794978279.1819985,
-    "ignoreradio_shoegaze": 1794978279.1859603,
-    "radio_britannia": 1794978279.1903138,
-    "wbru": 1794978279.1929848
+    "dark_edge": 1794978317.1399786,
+    "dkfm_shoegaze": 1794978317.1449285,
+    "dkfm_classic": 1794978317.1494174,
+    "egofm_rnb": 1794978317.1548734,
+    "egofm_chillout": 1794978317.1599324,
+    "dj_neihtul": 1794978317.1629846,
+    "gri_balkon": 1794978317.1656213,
+    "ignoreradio_shoegaze": 1794978317.448401,
+    "radio_britannia": 1794978317.6988633,
+    "wbru": 1794978317.7016995
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -23077,6 +23077,7 @@
       "air formation|||before we forget",
       "air formation|||fallen leaves",
       "air formation|||finding gravity",
+      "air formation|||for the hours",
       "air formation|||into view",
       "air formation|||keep on endlessly",
       "air formation|||sparks die",
@@ -24650,6 +24651,7 @@
       "starsailor|||tell me it's not over",
       "stealing sheep|||never gonna live up",
       "stereolab|||melodie is a wound",
+      "stereophonics|||fly like an eagle",
       "stereophonics|||hanging on your hinges",
       "stereophonics|||indian summer",
       "stereophonics|||it means nothing",
@@ -25748,8 +25750,8 @@
   "__last_radio_key_mellow_mix": "peter gabriel|||secret world",
   "__last_radio_key_big_sonic_heaven": "perpetual void|||tree house",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 25097,
-  "__v146_spotify_budget_slot": 1794978197.6713402,
+  "__v116_fifo_next_sequence": 25099,
+  "__v146_spotify_budget_slot": 1794978319.6676586,
   "__vuurland_active_playlist_count": 2312,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -95051,7 +95053,8 @@
     "moscow olympics|||what is left unsaid": 1,
     "kleintierschaukel|||nous ft juliette c mayr": 1,
     "shine|||stare into the sun": 1,
-    "more earth than sea|||in the end": 1
+    "more earth than sea|||in the end": 1,
+    "cosmic cowboys|||if you leave tonigh ft lazarusman": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -132402,7 +132405,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "polar|||bipolar dream",
+  "__last_radio_key_dreampop_radio": "peter gallway|||i wish you everything",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -137579,7 +137582,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dj_neihtul",
+  "__v221_last_selected_source": "gri_balkon",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -137591,7 +137594,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dj_neihtul",
+  "__v224_last_spotify_opportunity_source": "gri_balkon",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -137624,7 +137627,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dj_neihtul",
+  "__v227_last_source_turn": "gri_balkon",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -139308,7 +139311,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "rudimental feat mnek & syron|||spoons",
+  "__last_radio_key_egofm_rnb": "robert glasper feat musiq soulchild & chrisette michel|||ah yeah",
   "__last_radio_key_egofm_chillout": "sworn|||keep going",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -139347,7 +139350,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "lovesliescrushing|||the wounds that won't heal",
+  "__last_radio_key_ignoreradio_shoegaze": "air formation|||for the hours",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -140860,7 +140863,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "kingfishr|||weight of the feather",
+  "__last_radio_key_radio_britannia": "stereophonics|||fly like an eagle",
   "__last_radio_key_wbru": "lana del rey|||let the light in f father john misty",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -141470,6 +141473,31 @@
         }
       ],
       "status": "low_relevance"
+    },
+    "cosmic cowboys|||if you leave tonigh ft lazarusman": {
+      "source": "gri_balkon",
+      "artist": "Cosmic Cowboys",
+      "title": "If You Leave Tonigh ft. Lazarusman",
+      "kind": "uncertain",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "Cosmic Cowboys, Lazarusman",
+          "title": "If You Leave Tonight feat. Lazarusman",
+          "spotify_id": "6gxy4fOpNLkV7BR4HdRWci"
+        },
+        {
+          "artist": "Cosmic Cowboys",
+          "title": "If You Leave Tonight - Kollektiv Turmstrasse Remix",
+          "spotify_id": "45l6tEB8ku5fVSQhnpuhKm"
+        },
+        {
+          "artist": "Cosmic France",
+          "title": "Movin' Up",
+          "spotify_id": "2EZm6guNB6MqFlRub5BLT8"
+        }
+      ],
+      "status": "uncertain"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
