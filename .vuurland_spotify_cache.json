@@ -145,6 +145,7 @@
       "joni mitchell|||cold blue steel and sweet fire"
     ],
     "big_sonic_heaven": [
+      "basement revolver|||storm",
       "bluhm|||low light",
       "lamb|||all in your hands",
       "actors|||left on read",
@@ -243,10 +244,10 @@
       "lisa germano|||reptile",
       "the veldt|||morning june and yesterday single",
       "deserta|||lost in the weight",
-      "frisbees in the fog|||porth",
-      "the false dawns|||uh!"
+      "frisbees in the fog|||porth"
     ],
     "radio_x_chilled": [
+      "the cure|||in between days acoustic",
       "arcade fire|||the suburbs",
       "embrace|||gravity",
       "supergrass|||late in the day",
@@ -345,8 +346,7 @@
       "phoenix|||if i ever feel better",
       "travis|||writing to reach you",
       "stephen fretwell|||run",
-      "longpigs|||on & on",
-      "the xx|||crystalised"
+      "longpigs|||on & on"
     ],
     "dreampop_radio": [
       "travis|||under the moonlight feat k t tunstall",
@@ -553,6 +553,7 @@
       "dirk darmstaedter|||top of the world"
     ],
     "dkfm_edge": [
+      "bloom effect|||armour",
       "møaa|||all blood is lifeless",
       "sunlotus|||last night i dreamt that somebody loved me the smiths cover",
       "meltway|||nothing is real",
@@ -651,8 +652,7 @@
       "hazel english|||there she goes",
       "indoor voices|||care too much",
       "shrine|||placid mind",
-      "swirlpool|||evergreen",
-      "copperplate|||recede"
+      "swirlpool|||evergreen"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1373,6 +1373,7 @@
       "olefonken|||ubuntu tutu"
     ],
     "ignoreradio_shoegaze": [
+      "tara|||wander",
       "catherine moan|||body work",
       "flavor crystals|||antenna house",
       "gold dust|||all's well that ends",
@@ -1471,10 +1472,10 @@
       "title fight|||make you cry",
       "cruyff in the bedroom|||i see the moonlight",
       "self defense family|||certainty of paradise",
-      "spirit of the beehive|||poly swim",
-      "plenamente|||necesito olvidarte necesito dejarte atras adonde ya no pueda verte mas"
+      "spirit of the beehive|||poly swim"
     ],
     "radio_britannia": [
+      "mumm-ra|||jeremy",
       "wolf alice|||dont delete the kisses",
       "pulp|||common people",
       "the joy formidable|||whirring",
@@ -1573,8 +1574,7 @@
       "babyshambles|||you talk",
       "london grammar|||nightcall",
       "the 1975|||shes american",
-      "wings of desire|||your twenties",
-      "kaiser chiefs|||parachute"
+      "wings of desire|||your twenties"
     ],
     "wbru": [
       "shaed|||trampoline",
@@ -1680,24 +1680,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795028148.1365077,
-    "mellow_mix": 1795028148.14144,
-    "big_sonic_heaven": 1795028148.1458066,
-    "radio_x_chilled": 1795028148.149938,
-    "dreampop_radio": 1795028148.1539843,
-    "indie_select": 1795028148.1585236,
-    "dkfm_edge": 1795028148.1627579,
+    "vuurland": 1795028238.113574,
+    "mellow_mix": 1795028238.118606,
+    "big_sonic_heaven": 1795028238.5049305,
+    "radio_x_chilled": 1795028238.509947,
+    "dreampop_radio": 1795028238.514181,
+    "indie_select": 1795028238.5188596,
+    "dkfm_edge": 1795028238.5235517,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795028148.1680725,
-    "dkfm_shoegaze": 1795028148.1727147,
-    "dkfm_classic": 1795028148.1770651,
-    "egofm_rnb": 1795028148.1816905,
-    "egofm_chillout": 1795028148.1863184,
-    "dj_neihtul": 1795028148.18967,
-    "gri_balkon": 1795028148.1926827,
-    "ignoreradio_shoegaze": 1795028148.1969414,
-    "radio_britannia": 1795028148.20138,
-    "wbru": 1795028148.5768254
+    "dark_edge": 1795028238.5289638,
+    "dkfm_shoegaze": 1795028238.533733,
+    "dkfm_classic": 1795028238.5381472,
+    "egofm_rnb": 1795028238.5426617,
+    "egofm_chillout": 1795028238.547272,
+    "dj_neihtul": 1795028238.5506287,
+    "gri_balkon": 1795028238.5536442,
+    "ignoreradio_shoegaze": 1795028238.8957286,
+    "radio_britannia": 1795028239.244014,
+    "wbru": 1795028239.2477105
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -5636,6 +5636,7 @@
       "basement revolver|||blackhole",
       "basement revolver|||circles",
       "basement revolver|||skin",
+      "basement revolver|||storm",
       "basement revolver|||transatlantic",
       "bat for lashes|||horse & i",
       "bat for lashes|||peach sky",
@@ -24814,6 +24815,7 @@
       "tapeworms|||irl",
       "tara|||second guess",
       "tara|||vistas",
+      "tara|||wander",
       "tears run rings|||mind the wires",
       "teen idle|||dreaming",
       "teenage fanclub|||alcoholiday",
@@ -25433,6 +25435,7 @@
       "morrissey|||world peace is none of your business",
       "mumford and sons|||winter winds",
       "mumford and sons|||woman",
+      "mumm-ra|||jeremy",
       "muse|||dead inside",
       "muse|||dead star",
       "muse|||knights of cydonia",
@@ -26870,9 +26873,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "coldplay|||fix you",
   "__last_radio_key_mellow_mix": "willie nelson|||blue skies",
-  "__last_radio_key_big_sonic_heaven": "bluhm|||low light",
+  "__last_radio_key_big_sonic_heaven": "basement revolver|||storm",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 26046,
+  "__v116_fifo_next_sequence": 26049,
   "__v146_spotify_budget_slot": 1795028152.0794594,
   "__vuurland_active_playlist_count": 2682,
   "__vuurland_active_volume": 2,
@@ -134750,7 +134753,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "arcade fire|||the suburbs",
+  "__last_radio_key_radio_x_chilled": "the cure|||in between days acoustic",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -136334,7 +136337,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "møaa|||all blood is lifeless",
+  "__last_radio_key_dkfm_edge": "bloom effect|||armour",
   "__last_radio_key_dkfm_shoegaze": "today's production|||86",
   "__last_radio_key_dkfm_classic": "the wedding present|||she's my best friend",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -141795,7 +141798,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "catherine moan|||body work",
+  "__last_radio_key_ignoreradio_shoegaze": "tara|||wander",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -143313,7 +143316,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "wolf alice|||dont delete the kisses",
+  "__last_radio_key_radio_britannia": "mumm-ra|||jeremy",
   "__last_radio_key_wbru": "shaed|||trampoline",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
