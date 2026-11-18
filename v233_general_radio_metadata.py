@@ -71,9 +71,9 @@ def normalize_radio_filename_and_number(title):
         # English contraction from the file's de-punctuated name.
         raw = re.sub(r"(?i)^im\b", "I'm", raw)
     # 1.000 Times / 1,000 Times are the same integer, never a decimal
-    # because precisely three digits are required after the separator.
+    # only when followed by a word; standalone decimal titles stay unchanged.
     raw = re.sub(
-        r"(?<!\d)([1-9]\d{0,2})[.,](\d{3})(?!\d)",
+        r"(?<!\d)([1-9]\d{0,2})[.,](\d{3})(?=\s+[A-Za-z])",
         lambda m: m.group(1) + m.group(2), raw,
     )
     return raw
