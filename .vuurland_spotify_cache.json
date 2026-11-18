@@ -46,6 +46,7 @@
       "alex g|||runner"
     ],
     "mellow_mix": [
+      "fleetwood mac|||silver springs",
       "jenny lewis|||the charging sky w/ the watson twins",
       "cat stevens|||where do the children play",
       "guy clark|||l a freeway",
@@ -144,8 +145,7 @@
       "peter gabriel|||cloudless",
       "travis|||sing",
       "sofi tukker|||what a wonderful world",
-      "nick drake|||northern sky",
-      "emmylou harris|||every grain of sand"
+      "nick drake|||northern sky"
     ],
     "big_sonic_heaven": [
       "the giraffe told me in my dream|||fading mountains",
@@ -454,6 +454,7 @@
       "sun kil moon|||gentle moon"
     ],
     "indie_select": [
+      "gorillaz|||crystalised the xx cover",
       "the big pink|||sweet dreams beyonce",
       "maximo park|||lover lover lover",
       "the b-52's|||downtown",
@@ -552,8 +553,7 @@
       "the other two|||unwanted",
       "the triffids|||wide open road",
       "the fall|||hit the north part 1",
-      "siouxsie & the banshees|||happy house",
-      "she wants revenge|||sugar"
+      "siouxsie & the banshees|||happy house"
     ],
     "dkfm_edge": [
       "sea lemon|||dramatic",
@@ -968,6 +968,8 @@
       "catherine wheel|||car"
     ],
     "egofm_rnb": [
+      "sepalot feat malva|||visions",
+      "mustafa|||air forces",
       "kali uchis|||rush",
       "sza|||the weekend",
       "tora|||call your name",
@@ -1065,11 +1067,10 @@
       "sbtrkt feat sampha|||trials of the past",
       "benee feat gus dapperton|||supalonely",
       "charlotte oc|||bad news",
-      "skip marley & h e r|||slow down",
-      "sir feat schoolboy q|||something foreign",
-      "emma beko|||mhs"
+      "skip marley & h e r|||slow down"
     ],
     "egofm_chillout": [
+      "zero 7|||aurora feat jose gonzalez",
       "bonobo|||kong",
       "robot koch|||black hole revisited",
       "blonde redhead|||dripping",
@@ -1168,8 +1169,7 @@
       "ben bohmer|||beyond beliefs",
       "philanthrope the field tapes & brock berrigan|||willow",
       "poppy ackroyd|||murmurations",
-      "mr bill|||composite 4 feat patrick leonard",
-      "groove armada|||at the river"
+      "mr bill|||composite 4 feat patrick leonard"
     ],
     "dj_neihtul": [
       "jose padilla|||adios ayer",
@@ -1274,6 +1274,7 @@
       "telefon tel aviv|||you are the worst thing in the world"
     ],
     "gri_balkon": [
+      "chymera|||fathoms esteble dive deep remix ft beatunique on hang",
       "mystic diversions mike francis|||josephine",
       "fazer|||white sedan",
       "rival consoles|||them is us",
@@ -1372,8 +1373,7 @@
       "kid loco|||relaxin' with cherry gak sato pre-echo mix",
       "weval|||something live edit",
       "nils frahm|||sunson",
-      "the dining rooms|||numero deux",
-      "nicolas jaar|||what my last girl put me through bluewave edit"
+      "the dining rooms|||numero deux"
     ],
     "ignoreradio_shoegaze": [
       "lilys|||evel knievel",
@@ -1478,6 +1478,7 @@
       "nothing|||vapour trail live wkdu philly 2011"
     ],
     "radio_britannia": [
+      "coldplay|||atlas",
       "glass animals|||hazey",
       "tribes|||sappho",
       "primal scream|||movin on up",
@@ -1576,8 +1577,7 @@
       "kaiser chiefs|||little shocks",
       "nile marr|||self care",
       "embrace|||come back to what you know",
-      "crawlers|||born screaming",
-      "radiohead|||burn the witch"
+      "crawlers|||born screaming"
     ],
     "wbru": [
       "father john misty|||real love baby",
@@ -1684,23 +1684,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794972758.8121345,
-    "big_sonic_heaven": 1794972758.816967,
-    "radio_x_chilled": 1794972758.8206265,
-    "dreampop_radio": 1794972758.8245037,
-    "indie_select": 1794972758.828651,
-    "dkfm_edge": 1794972758.8327549,
+    "mellow_mix": 1794972841.6142128,
+    "big_sonic_heaven": 1794972841.619393,
+    "radio_x_chilled": 1794972841.6230402,
+    "dreampop_radio": 1794972841.6268413,
+    "indie_select": 1794972841.6312084,
+    "dkfm_edge": 1794972841.6352746,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794972758.837412,
-    "dkfm_shoegaze": 1794972758.841718,
-    "dkfm_classic": 1794972758.8455245,
-    "egofm_rnb": 1794972758.8495305,
-    "egofm_chillout": 1794972758.8532405,
-    "dj_neihtul": 1794972758.8561664,
-    "gri_balkon": 1794972758.858676,
-    "ignoreradio_shoegaze": 1794972758.8623273,
-    "radio_britannia": 1794972758.8663166,
-    "wbru": 1794972758.8688393
+    "dark_edge": 1794972841.63995,
+    "dkfm_shoegaze": 1794972841.6441875,
+    "dkfm_classic": 1794972841.647972,
+    "egofm_rnb": 1794972841.8773713,
+    "egofm_chillout": 1794972841.881408,
+    "dj_neihtul": 1794972841.8843544,
+    "gri_balkon": 1794972841.8869941,
+    "ignoreradio_shoegaze": 1794972841.8906567,
+    "radio_britannia": 1794972842.1050122,
+    "wbru": 1794972842.1076806
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -24355,6 +24355,7 @@
       "circa waves|||your ghost",
       "clay|||6am",
       "coldplay|||a head full of dreams",
+      "coldplay|||atlas",
       "coldplay|||fix you",
       "coldplay|||hurts like heaven",
       "coldplay|||talk",
@@ -25617,10 +25618,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
-  "__last_radio_key_mellow_mix": "jenny lewis|||the charging sky w/ the watson twins",
+  "__last_radio_key_mellow_mix": "fleetwood mac|||silver springs",
   "__last_radio_key_big_sonic_heaven": "the giraffe told me in my dream|||fading mountains",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 24986,
+  "__v116_fifo_next_sequence": 24988,
   "__v146_spotify_budget_slot": 1794972760.7998981,
   "__vuurland_active_playlist_count": 2281,
   "__vuurland_active_volume": 2,
@@ -132260,7 +132261,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the big pink|||sweet dreams beyonce",
+  "__last_radio_key_indie_select": "gorillaz|||crystalised the xx cover",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -139048,8 +139049,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "kali uchis|||rush",
-  "__last_radio_key_egofm_chillout": "bonobo|||kong",
+  "__last_radio_key_egofm_rnb": "sepalot feat malva|||visions",
+  "__last_radio_key_egofm_chillout": "zero 7|||aurora feat jose gonzalez",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -139064,7 +139065,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "mystic diversions mike francis|||josephine",
+  "__last_radio_key_gri_balkon": "chymera|||fathoms esteble dive deep remix ft beatunique on hang",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -140599,7 +140600,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "glass animals|||hazey",
+  "__last_radio_key_radio_britannia": "coldplay|||atlas",
   "__last_radio_key_wbru": "father john misty|||real love baby",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
