@@ -46,6 +46,7 @@
       "alex g|||runner"
     ],
     "mellow_mix": [
+      "andreas vollenweider|||phases of the three moons",
       "gillian welch|||howdy howdy",
       "air|||left bank",
       "rod stewart|||mandolin wind",
@@ -144,8 +145,7 @@
       "supreme beings of leisure|||never the same",
       "martha wainwright|||far away",
       "moby|||wait for me",
-      "hamilton leithauser|||the silent orchestra",
-      "taj mahal|||take a giant step"
+      "hamilton leithauser|||the silent orchestra"
     ],
     "big_sonic_heaven": [
       "cocteau twins|||eggs and their shells",
@@ -352,6 +352,7 @@
       "mgmt|||electric feel"
     ],
     "dreampop_radio": [
+      "emma pollock|||here comes the heartbreak",
       "sophie zelmani|||black day",
       "yumi zouma|||the brae",
       "peter gallway|||i wish you everything",
@@ -450,10 +451,10 @@
       "fleetwood mac|||dreams",
       "sheryl crow|||safe and sound",
       "kings of convenience|||gold in the air of summer",
-      "william fitzsimmons|||it's not true",
-      "luluc|||my midnight special"
+      "william fitzsimmons|||it's not true"
     ],
     "indie_select": [
+      "the shins|||sleeping lessons",
       "underworld|||listen to their no",
       "nada surf|||clear eye clouded mind",
       "the national|||nobody else will be there",
@@ -552,8 +553,7 @@
       "the the|||that was the day",
       "joy division|||she's lost control",
       "the kissaway trail|||painter",
-      "the delgados|||is this all that i came for?",
-      "fischerspooner|||all we are"
+      "the delgados|||is this all that i came for?"
     ],
     "dkfm_edge": [
       "crux of faith|||turbulence",
@@ -764,6 +764,7 @@
       "etienne de crecy|||hashtag my ass"
     ],
     "dkfm_shoegaze": [
+      "frankie rose|||dyson sphere",
       "medicine|||never click",
       "weird|||infinite decay",
       "blushing|||pressure",
@@ -862,10 +863,10 @@
       "blue honey|||save me",
       "panda riot|||northern automatic music",
       "closeout|||soothe",
-      "tycho & sea lemon|||anotherwave",
-      "deafcult|||mount forever sic"
+      "tycho & sea lemon|||anotherwave"
     ],
     "dkfm_classic": [
+      "velocity girl|||what you say",
       "スーハーカー|||top 10",
       "half string|||hue",
       "february|||easy",
@@ -964,8 +965,7 @@
       "swervedriver|||kill the superheroes",
       "moose|||the whistling song",
       "the sundays|||my finest hour",
-      "slowdive|||moussaka chaos",
-      "sixpence none the richer|||within a room somewhere"
+      "slowdive|||moussaka chaos"
     ],
     "egofm_rnb": [
       "chance the rapper|||blessings",
@@ -1478,6 +1478,7 @@
       "sunbeam sound machine|||whistle while you wait"
     ],
     "radio_britannia": [
+      "clinic|||im aware",
       "manic street preachers|||la tristesse durera scream to a sigh",
       "fat white family|||work",
       "stereophonics|||fly like an eagle",
@@ -1576,8 +1577,7 @@
       "peter doherty|||last of the english roses",
       "michael kiwanuka|||sing",
       "black grape|||kellys heroes",
-      "the kills|||list of demands reparations",
-      "tim burgess|||sure enough"
+      "the kills|||list of demands reparations"
     ],
     "wbru": [
       "wolf parade|||i'll believe in anything",
@@ -1684,23 +1684,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1794978927.5783405,
-    "big_sonic_heaven": 1794978927.583745,
-    "radio_x_chilled": 1794978927.5876179,
-    "dreampop_radio": 1794978927.5918024,
-    "indie_select": 1794978927.5962963,
-    "dkfm_edge": 1794978927.6007996,
+    "mellow_mix": 1794979011.6478643,
+    "big_sonic_heaven": 1794979011.6533163,
+    "radio_x_chilled": 1794979011.6572556,
+    "dreampop_radio": 1794979011.6615407,
+    "indie_select": 1794979011.6662595,
+    "dkfm_edge": 1794979011.6707275,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1794978927.6058333,
-    "dkfm_shoegaze": 1794978927.6104214,
-    "dkfm_classic": 1794978927.6144974,
-    "egofm_rnb": 1794978927.6187916,
-    "egofm_chillout": 1794978927.6229656,
-    "dj_neihtul": 1794978927.928676,
-    "gri_balkon": 1794978927.9313917,
-    "ignoreradio_shoegaze": 1794978927.9354446,
-    "radio_britannia": 1794978927.9398308,
-    "wbru": 1794978927.9425466
+    "dark_edge": 1794979011.6758027,
+    "dkfm_shoegaze": 1794979011.6805818,
+    "dkfm_classic": 1794979011.6848116,
+    "egofm_rnb": 1794979011.6890955,
+    "egofm_chillout": 1794979011.6931314,
+    "dj_neihtul": 1794979011.69623,
+    "gri_balkon": 1794979011.6988237,
+    "ignoreradio_shoegaze": 1794979011.7029147,
+    "radio_britannia": 1794979011.93035,
+    "wbru": 1794979011.9331932
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -24449,6 +24449,7 @@
       "circa waves|||your ghost",
       "clara mann|||news from home",
       "clay|||6am",
+      "clinic|||im aware",
       "coldplay|||a head full of dreams",
       "coldplay|||atlas",
       "coldplay|||fix you",
@@ -25761,10 +25762,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
-  "__last_radio_key_mellow_mix": "gillian welch|||howdy howdy",
+  "__last_radio_key_mellow_mix": "andreas vollenweider|||phases of the three moons",
   "__last_radio_key_big_sonic_heaven": "cocteau twins|||eggs and their shells",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 25111,
+  "__v116_fifo_next_sequence": 25112,
   "__v146_spotify_budget_slot": 1794978929.9137692,
   "__vuurland_active_playlist_count": 2317,
   "__vuurland_active_volume": 2,
@@ -132439,7 +132440,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "sophie zelmani|||black day",
+  "__last_radio_key_dreampop_radio": "emma pollock|||here comes the heartbreak",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -132557,7 +132558,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "underworld|||listen to their no",
+  "__last_radio_key_indie_select": "the shins|||sleeping lessons",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -133920,8 +133921,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "crux of faith|||turbulence",
-  "__last_radio_key_dkfm_shoegaze": "medicine|||never click",
-  "__last_radio_key_dkfm_classic": "スーハーカー|||top 10",
+  "__last_radio_key_dkfm_shoegaze": "frankie rose|||dyson sphere",
+  "__last_radio_key_dkfm_classic": "velocity girl|||what you say",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -140897,7 +140898,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "manic street preachers|||la tristesse durera scream to a sigh",
+  "__last_radio_key_radio_britannia": "clinic|||im aware",
   "__last_radio_key_wbru": "wolf parade|||i'll believe in anything",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
