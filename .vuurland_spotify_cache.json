@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795011526.025541,
+  "__v150_next_spotify_round_at": 1795011651.5615819,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -46,6 +46,7 @@
       "alex g|||runner"
     ],
     "mellow_mix": [
+      "cowboy junkies|||anniversary song",
       "fran healy|||sing me to sleep w/ neko case",
       "wilco|||jesus etc",
       "donovan|||wear your love like heaven",
@@ -144,8 +145,7 @@
       "the wailin' jennys|||long time traveller",
       "lyle lovett|||if i needed you",
       "alejandro escovedo|||sensitive boys",
-      "roy orbison|||only the lonely",
-      "adele|||make you feel my love"
+      "roy orbison|||only the lonely"
     ],
     "big_sonic_heaven": [
       "trentemøller|||your love walks alone",
@@ -1437,6 +1437,7 @@
       "massage|||at the end of the world"
     ],
     "radio_britannia": [
+      "paul weller|||lawdy rolla",
       "matilda mann|||after the love",
       "kaiser chiefs|||oh my god",
       "pull tiger tail|||hurricanes",
@@ -1535,8 +1536,7 @@
       "marion|||toys for boys",
       "bombay bicycle club|||how can you swallow so much sleep",
       "mumford and sons|||winter winds",
-      "rose elinor dougall|||make it with you",
-      "kasabian|||l s f lost souls forever"
+      "rose elinor dougall|||make it with you"
     ],
     "wbru": [
       "glass animals|||gooey",
@@ -1643,23 +1643,23 @@
   },
   "__v174_radio_snapshot_times": {
     "vuurland": 1794815930.9270618,
-    "mellow_mix": 1795011495.0039105,
-    "big_sonic_heaven": 1795011495.0072742,
-    "radio_x_chilled": 1795011495.0104687,
-    "dreampop_radio": 1795011495.0135388,
-    "indie_select": 1795011495.0173187,
-    "dkfm_edge": 1795011495.0205667,
+    "mellow_mix": 1795011530.1940067,
+    "big_sonic_heaven": 1795011530.1974075,
+    "radio_x_chilled": 1795011530.2004542,
+    "dreampop_radio": 1795011530.2035012,
+    "indie_select": 1795011530.2069407,
+    "dkfm_edge": 1795011530.2100077,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795011495.024791,
-    "dkfm_shoegaze": 1795011495.405252,
-    "dkfm_classic": 1795011495.4085915,
-    "egofm_rnb": 1795011495.4119391,
-    "egofm_chillout": 1795011495.4151745,
-    "dj_neihtul": 1795011495.4171863,
-    "gri_balkon": 1795011495.4189966,
-    "ignoreradio_shoegaze": 1795011495.4221244,
-    "radio_britannia": 1795011495.4251413,
-    "wbru": 1795011495.427855
+    "dark_edge": 1795011530.2140903,
+    "dkfm_shoegaze": 1795011530.2175677,
+    "dkfm_classic": 1795011530.2209632,
+    "egofm_rnb": 1795011530.2241566,
+    "egofm_chillout": 1795011530.2274413,
+    "dj_neihtul": 1795011530.2294273,
+    "gri_balkon": 1795011530.2312393,
+    "ignoreradio_shoegaze": 1795011530.2344089,
+    "radio_britannia": 1795011530.6168392,
+    "wbru": 1795011530.6196918
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -25154,6 +25154,7 @@
       "passenger|||it was gonna be you",
       "passenger|||wild love",
       "paul weller|||i woke up",
+      "paul weller|||lawdy rolla",
       "paul weller|||sunflower",
       "paul weller|||the attic",
       "paul weller|||this old town feat graham coxon",
@@ -25701,6 +25702,12 @@
       "title": "I'd Rather Be With You (Radio",
       "source": "dreampop_radio",
       "failed_at": 1795004664
+    },
+    "juliana hatfield|||somebody's waiting for me": {
+      "artist": "Juliana Hatfield",
+      "title": "Somebody's Waiting for Me",
+      "source": "dreampop_radio",
+      "failed_at": 1795011537
     }
   },
   "__v51_radio_unmatched": {
@@ -26460,11 +26467,11 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tash sultana|||notion",
-  "__last_radio_key_mellow_mix": "fran healy|||sing me to sleep w/ neko case",
+  "__last_radio_key_mellow_mix": "cowboy junkies|||anniversary song",
   "__last_radio_key_big_sonic_heaven": "trentemøller|||your love walks alone",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 25752,
-  "__v146_spotify_budget_slot": 1795011408.5361788,
+  "__v116_fifo_next_sequence": 25753,
+  "__v146_spotify_budget_slot": 1795011534.1135933,
   "__vuurland_active_playlist_count": 2567,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -96315,7 +96322,7 @@
     "joshua radin|||i'd rather be with you radio": 3,
     "the charlottes|||mad girl's love song album version": 1,
     "24 gone|||girl of colours": 1,
-    "juliana hatfield|||somebody's waiting for me": 2,
+    "juliana hatfield|||somebody's waiting for me": 3,
     "curve|||hung up": 1,
     "flora lux victoria|||let them devour me": 1,
     "holden girls|||a western": 1,
@@ -96938,7 +96945,8 @@
     "sunday girl|||love u more rac mix": 1,
     "donavon frankenreiter & jack johnson|||free": 1,
     "fink uk|||berlin sunrise": 1,
-    "joshua radin|||i'd rather be with you radio": 1
+    "joshua radin|||i'd rather be with you radio": 1,
+    "juliana hatfield|||somebody's waiting for me": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -139155,7 +139163,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "big_sonic_heaven",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -139167,7 +139175,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -139200,7 +139208,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "big_sonic_heaven",
+  "__v227_last_source_turn": "dreampop_radio",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -142441,7 +142449,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "matilda mann|||after the love",
+  "__last_radio_key_radio_britannia": "paul weller|||lawdy rolla",
   "__last_radio_key_wbru": "glass animals|||gooey",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -143742,7 +143750,7 @@
       "artist": "Juliana Hatfield",
       "title": "Somebody's Waiting for Me",
       "kind": "uncertain",
-      "variant": 1,
+      "variant": 2,
       "candidates": [],
       "status": "uncertain"
     }
@@ -144130,5 +144138,6 @@
   "__match_v35__fontaines d c|||marianne": "spotify:track:69rHKcrQpYGfToPThOV1UB",
   "__match_v35__el camino|||at jenny richee": "spotify:track:27ubO4UXJr6CBc8vPDsdyR",
   "__match_v35__talking heads|||nothing but flowers": "spotify:track:3tLolIaNbQSoIv6Usvhboh",
-  "__match_v35__shoestrings|||gone": "spotify:track:0j3T9Q0JB3W7i0IvdBxEqj"
+  "__match_v35__shoestrings|||gone": "spotify:track:0j3T9Q0JB3W7i0IvdBxEqj",
+  "__not_found_v35__juliana hatfield|||somebody's waiting for me": 1795011537
 }
