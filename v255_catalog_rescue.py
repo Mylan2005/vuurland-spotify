@@ -30,6 +30,10 @@ def catalog_metadata(artist, title):
         return "Jon Batiste feat. Zadie Smith", t
     if (a.casefold(), t.casefold()) == ("koffee", "pull up"):
         return "Original Koffee", t
+    # Verified 2023 London Grammar/SebastiAn recording: exact radio typo only.
+    # Never generalize missing title words or artist misspellings.
+    if (a.casefold(), t.casefold()) == ("london grammer", "dancing by the night"):
+        return "London Grammar", "Dancing By Night"
     # Preserve the exact edit: this is not the original or extended remix.
     if (a.casefold(), t.casefold()) == (
         "chicane vs. natasha bedingfield", "bruised water (michael woods edit)"
