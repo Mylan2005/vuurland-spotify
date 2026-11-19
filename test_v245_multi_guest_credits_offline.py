@@ -1,7 +1,7 @@
 """v245 regression: grouped radio guests map to separate Spotify artists."""
 import ast
 from pathlib import Path
-from v245_multi_guest_credits import split_explicit_multiword_guests as split, guest_credit_matches as matches
+from v245_multi_guest_credits import split_explicit_multiword_guests as split, guest_credit_matches as matches, split_full_collaborator_credit as collaborators, complete_collaboration_matches as same_collaborators
 
 assert split("Tom Hodge & Kathrin DeBoer") == ["Tom Hodge", "Kathrin DeBoer"]
 assert split("Tom Hodge and Kathrin deBoer") == ["Tom Hodge", "Kathrin deBoer"]
@@ -15,6 +15,22 @@ assert split("Tame Impala, SZA, King Gizzard & the Lizard Wizard") == ["Tame Imp
 assert matches("King Gizzard...", ["Justice", "King Gizzard & the Lizard Wizard"])
 assert not matches("King...", ["King Gizzard & the Lizard Wizard"])
 assert not matches("King Gizzard...", ["King Gizzard & the Lizard Wizard", "King Gizzard & Friends"])
+assert matches("Kenny Beats & Bakar", ["BENEE", "Kenny Beats", "Bakar"])
+assert matches("Kenny Beats and Bakar", ["BENEE", "Kenny Beats", "Bakar"])
+assert not matches("Kenny Beats & Bakar", ["BENEE", "Kenny Beats"])
+assert not matches("Kenny Beats & Bakar", ["BENEE", "Bakar"])
+assert matches("Earth Wind & Fire", ["BENEE", "Earth Wind & Fire"])
+assert collaborators("Dinner Party, Terrace Martin, Robert Glasper, 9th Wonder & Kamasi Washington") == [
+    "Dinner Party", "Terrace Martin", "Robert Glasper", "9th Wonder", "Kamasi Washington"
+]
+assert collaborators("Crosby, Stills & Nash") == []
+assert collaborators("Earth, Wind & Fire") == []
+assert same_collaborators(
+    "Dinner Party, Terrace Martin, Robert Glasper, 9th Wonder & Kamasi Washington",
+    ["Robert Glasper", "Dinner Party", "9th Wonder", "Kamasi Washington", "Terrace Martin"])
+assert not same_collaborators(
+    "Dinner Party, Terrace Martin, Robert Glasper, 9th Wonder & Kamasi Washington",
+    ["Robert Glasper", "Dinner Party", "9th Wonder", "Terrace Martin"])
 assert matches("SZA", ["Justice", "SZA"])
 assert not matches("SZA", ["Justice", "Sia"])
 # Require both independent Spotify artist-object credits; don't accept a solo.
@@ -32,6 +48,8 @@ assert locator[("max cooper", "trust ft. tom hodge & kathrin deboer")] == "7EWkE
 assert "for title_guest in split_explicit_multiword_guests(title_feature_artist)" in source
 assert "expanded.extend(split_explicit_multiword_guests(credit))" in source
 assert "guest_credit_matches(raw_feature, spotify_artists)" in source
+assert "complete_collaboration_matches(" in source
+assert "full_collaborator_names = split_full_collaborator_credit(artist)" in source
 assert "wanted_artists.append(normalized_title_feature)" in source
 assert "if missing_feature_count:" in source
 assert "if item.get(\"is_playable\") is False:" in source
