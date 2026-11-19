@@ -19,6 +19,10 @@ def catalog_metadata(artist, title):
     # Keep normal artist, title, edition and market checks.
     if (a.casefold(), t.casefold()) == ("cocteau twins", "pearly-dewdrops"):
         return a, "Pearly-Dewdrops' Drops"
+    # A full spelled-out catalog number is proven for this exact AIR song.
+    # Not a general "No.1" title replacement for arbitrary songs.
+    if (a.casefold(), t.casefold()) == ("air", "radio no.1"):
+        return a, "Radio Number 1"
     # Preserve the exact edit: this is not the original or extended remix.
     if (a.casefold(), t.casefold()) == (
         "chicane vs. natasha bedingfield", "bruised water (michael woods edit)"
