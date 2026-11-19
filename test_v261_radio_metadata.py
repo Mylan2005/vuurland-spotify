@@ -39,6 +39,56 @@ class RadioMetadataRegressionTests(unittest.TestCase):
             ("Just Emma feat. Matthias Wittmann", "Sunshine (Thomas Atzmann Remix)"),
         )
 
+    def test_short_radio_parenthesized_feature(self):
+        self.assertEqual(
+            normalize_radio_metadata("beabadoobee", "All I Did Was Dream of You (f The Marías)"),
+            ("beabadoobee feat. The Marías", "All I Did Was Dream of You"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("The Chemical Brothers", "Go (f Q-Tip)"),
+            ("The Chemical Brothers feat. Q-Tip", "Go"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("Charli xcx", "The girl, so confusing (f Lorde)"),
+            ("Charli xcx feat. Lorde", "The girl, so confusing"),
+        )
+
+    def test_broadcast_country_context_only(self):
+        self.assertEqual(
+            normalize_radio_metadata("Fink (UK)", "Berlin Sunrise"),
+            ("Fink", "Berlin Sunrise"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("Claire Holley (USA)", "Go Away Now"),
+            ("Claire Holley", "Go Away Now"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("Boards of Canada (Live)", "Test"),
+            ("Boards of Canada (Live)", "Test"),
+        )
+
+    def test_never_invent_song_or_strip_edition(self):
+        self.assertEqual(
+            normalize_radio_metadata("Hatchie", "August"),
+            ("Hatchie", "August"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("Birdy", "1901 (Phoenix Cover)"),
+            ("Birdy", "1901 (Phoenix Cover)"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("Swirlies", "Cousteau"),
+            ("Swirlies", "Cousteau"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("A.R. Kane", "Crack Up (Album Version)"),
+            ("A.R. Kane", "Crack Up (Album Version)"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata("Dead Can Dance", "Tristan / Sanvean"),
+            ("Dead Can Dance", "Tristan / Sanvean"),
+        )
+
     def test_cannot_invent_missing_word_or_merge_two_tracks(self):
         self.assertEqual(
             normalize_radio_metadata("Cosmic Cowboys", "If You Leave Tonigh ft. Lazarusman"),
