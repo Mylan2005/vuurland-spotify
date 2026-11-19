@@ -86,10 +86,11 @@ def normalize_radio_trailing_guest(artist, title):
     the main artist, all guests, full title, recording edition and market.
     Any named mix/remix must remain present for edition validation.
     """
-    raw = str(title or "").strip()
+    original_title = str(title or "")
+    raw = original_title.strip()
     artist_raw = str(artist or "").strip()
     if not artist_raw:
-        return artist, raw
+        return artist, original_title
 
     # A radio suffix '(Album)' is editorial when used AFTER a feat. marker;
     # keep real 'Album Version' editions intact.
@@ -116,11 +117,11 @@ def normalize_radio_trailing_guest(artist, title):
         raw, flags=re.I,
     )
     if not m:
-        return artist, raw
+        return artist, original_title
     core, guest, remix = m.groups()
     guest = guest.strip()
     if not core.strip() or not re.search(r"\w", guest) or re.search(r"\s[-–—]\s", guest):
-        return artist, raw
+        return artist, original_title
     return (artist_raw + " feat. " + guest,
             core.strip() + ((" " + remix.strip()) if remix else ""))
 
