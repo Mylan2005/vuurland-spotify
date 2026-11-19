@@ -54,6 +54,19 @@ class RadioMetadataRegressionTests(unittest.TestCase):
         self.assertEqual(catalog_metadata("Koffee", "Some Other Song"),
                          ("Koffee", "Some Other Song"))
 
+    def test_london_grammar_exact_radio_typo(self):
+        self.assertEqual(
+            catalog_metadata("London Grammer", "Dancing By The Night"),
+            ("London Grammar", "Dancing By Night"),
+        )
+        for artist, title in (
+            ("London Grammer", "Dancing By Night (Live)"),
+            ("London Grammer", "Dancing By The Night (Remix)"),
+            ("London Grammar", "Dancing By The Night (Extended Mix)"),
+            ("Other Artist", "Dancing By The Night"),
+        ):
+            self.assertEqual(catalog_metadata(artist, title), (artist, title))
+
     def test_short_radio_parenthesized_feature(self):
         self.assertEqual(
             normalize_radio_metadata("beabadoobee", "All I Did Was Dream of You (f The Marías)"),
