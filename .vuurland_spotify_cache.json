@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "slowdive|||the slab",
+      "solange|||cranes in the sky",
       "volcano choir|||byegone",
       "phoebe bridgers|||garden song",
       "nectar woode|||rivers end",
@@ -112,9 +114,7 @@
       "charles bradley|||you put the flame on it",
       "angus & julia stone|||karaoke bar",
       "the whitest boy alive|||1517",
-      "portland|||lucky clover",
-      "hannah jadagu|||warning sign",
-      "london grammar|||america"
+      "portland|||lucky clover"
     ],
     "mellow_mix": [
       "cat stevens|||hard headed woman",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "alt-j|||dissolve me",
       "rhys lewis|||better than today",
       "sure sure|||lie lie lie",
       "james blake|||before",
@@ -831,10 +832,10 @@
       "au revoir simone|||crazy",
       "blood cultures|||set it on fire",
       "radiohead|||high and dry",
-      "elbow|||grounds for divorce",
-      "graham coxon|||saturday night"
+      "elbow|||grounds for divorce"
     ],
     "dkfm_shoegaze": [
+      "shitakuchu|||junky",
       "colourway|||seeing blue",
       "ovlov|||the wishing well",
       "title fight|||your pain is mine",
@@ -933,10 +934,10 @@
       "xo|||falling",
       "lavender blush|||my pal k",
       "collapse|||drop",
-      "weedipus|||broken boy",
-      "spirit and the cosmic heart|||in between dream"
+      "weedipus|||broken boy"
     ],
     "dkfm_classic": [
+      "love spirals downwards|||el pedregal",
       "coaltar of the deepers|||unlimber",
       "adorable|||i'll be your saint",
       "catherine wheel|||bill and ben",
@@ -1035,10 +1036,10 @@
       "my bloody valentine|||several girls galore",
       "cotillion|||sabotage",
       "seefeel|||climatic phase 3",
-      "cocteau twins|||carolyn's fingers",
-      "mistle thrush|||51 pegasi: rocketship v 2"
+      "cocteau twins|||carolyn's fingers"
     ],
     "egofm_rnb": [
+      "gnarls barkley|||who cares",
       "tom misch|||sunshine",
       "roisin murphy|||something more",
       "olivier st louis|||fall in love",
@@ -1137,10 +1138,10 @@
       "masego & fkj|||tadow",
       "badbadnotgood & little dragon|||tried",
       "bobby womack|||across 110th street",
-      "the weeknd|||how do i make you love me?",
-      "cautious clay|||dying in the subtlety"
+      "the weeknd|||how do i make you love me?"
     ],
     "egofm_chillout": [
+      "cat power|||lord help the poor & needy",
       "mommy & philanthrope|||soupeddd! feat weird inside",
       "screen jazzmaster & viktor minsky|||rain dance",
       "lianne la havas|||green & gold",
@@ -1239,10 +1240,10 @@
       "apparat|||brandenburg",
       "p g six|||old man on the mountain",
       "gustav gustav|||hyacinth",
-      "julien dore|||barracuda ii",
-      "youth lagoon|||17"
+      "julien dore|||barracuda ii"
     ],
     "dj_neihtul": [
+      "vera blue|||overachiever",
       "alison goldfrapp|||neverstop",
       "goldfrapp|||faux suede drifter",
       "darkside|||golden arrow",
@@ -1341,8 +1342,7 @@
       "underworld|||nylon strung",
       "moby|||a dark cloud is coming",
       "christian loffler|||neo",
-      "little boots|||no pressure",
-      "alison goldfrapp|||it's your destiny"
+      "little boots|||no pressure"
     ],
     "gri_balkon": [
       "two lanes panama|||rolling back",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795116382.3085155,
-    "mellow_mix": 1795116382.3120072,
-    "big_sonic_heaven": 1795116382.314826,
-    "radio_x_chilled": 1795116382.317535,
-    "dreampop_radio": 1795116382.3203795,
-    "indie_select": 1795116382.323437,
-    "dkfm_edge": 1795116382.3262923,
+    "vuurland": 1795116464.3122594,
+    "mellow_mix": 1795116464.315697,
+    "big_sonic_heaven": 1795116464.3185346,
+    "radio_x_chilled": 1795116464.321279,
+    "dreampop_radio": 1795116464.3241465,
+    "indie_select": 1795116464.3271778,
+    "dkfm_edge": 1795116464.3300827,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795116382.330225,
-    "dkfm_shoegaze": 1795116382.3332438,
-    "dkfm_classic": 1795116382.3361046,
-    "egofm_rnb": 1795116382.339056,
-    "egofm_chillout": 1795116382.341965,
-    "dj_neihtul": 1795116382.3443418,
-    "gri_balkon": 1795116382.3464293,
-    "ignoreradio_shoegaze": 1795116382.3491058,
-    "radio_britannia": 1795116382.6204736,
-    "wbru": 1795116382.864519
+    "dark_edge": 1795116464.3342345,
+    "dkfm_shoegaze": 1795116464.3373654,
+    "dkfm_classic": 1795116464.3403687,
+    "egofm_rnb": 1795116464.3434348,
+    "egofm_chillout": 1795116464.3464732,
+    "dj_neihtul": 1795116464.3490343,
+    "gri_balkon": 1795116464.3511384,
+    "ignoreradio_shoegaze": 1795116464.3538592,
+    "radio_britannia": 1795116464.3568087,
+    "wbru": 1795116464.3591266
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12961,6 +12961,7 @@
       "alt-j|||3ww",
       "alt-j|||adeline",
       "alt-j|||breezeblocks",
+      "alt-j|||dissolve me",
       "alt-j|||every other freckle",
       "alt-j|||hard drive gold",
       "alt-j|||in cold blood",
@@ -28808,7 +28809,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "volcano choir|||byegone",
+  "__last_radio_key_vuurland": "slowdive|||the slab",
   "__last_radio_key_mellow_mix": "cat stevens|||hard headed woman",
   "__last_radio_key_big_sonic_heaven": "parannoul|||remaining",
   "__v181_vuurland_two_missing_recovered": true,
@@ -140568,8 +140569,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "cold gawd|||all my life my heart has yearned for a thing i cannot name",
-  "__last_radio_key_dkfm_shoegaze": "colourway|||seeing blue",
-  "__last_radio_key_dkfm_classic": "coaltar of the deepers|||unlimber",
+  "__last_radio_key_dkfm_shoegaze": "shitakuchu|||junky",
+  "__last_radio_key_dkfm_classic": "love spirals downwards|||el pedregal",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -140581,7 +140582,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "rhys lewis|||better than today",
+  "__last_radio_key_dark_edge": "alt-j|||dissolve me",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -145985,8 +145986,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "tom misch|||sunshine",
-  "__last_radio_key_egofm_chillout": "mommy & philanthrope|||soupeddd! feat weird inside",
+  "__last_radio_key_egofm_rnb": "gnarls barkley|||who cares",
+  "__last_radio_key_egofm_chillout": "cat power|||lord help the poor & needy",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -145995,7 +145996,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "alison goldfrapp|||neverstop",
+  "__last_radio_key_dj_neihtul": "vera blue|||overachiever",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
