@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "nectar woode|||rivers end",
+      "gabriel rios|||swing low",
       "michael kiwanuka|||you ain't the problem",
       "badbadnotgood|||in your eyes",
       "patrick watson|||love songs for robots",
@@ -112,9 +114,7 @@
       "hannah jadagu|||warning sign",
       "london grammar|||america",
       "aldous harding|||the barrel",
-      "novastar & piet goddaer|||never back down",
-      "the lemon twigs|||in my head",
-      "the haunted youth|||wake up"
+      "novastar & piet goddaer|||never back down"
     ],
     "mellow_mix": [
       "the cardigans|||no sleep",
@@ -423,6 +423,7 @@
       "vance joy|||riptide"
     ],
     "dreampop_radio": [
+      "air|||all i need",
       "bill callahan|||riding for the feeling",
       "lisa hannigan|||lille",
       "brookville|||nothing's meant to last",
@@ -521,8 +522,7 @@
       "marissa nadler|||was it a dream",
       "peasant|||bound for glory",
       "aimee mann|||high on sunday 51",
-      "little may|||hide",
-      "boy|||drive darling"
+      "little may|||hide"
     ],
     "indie_select": [
       "/- plus/minus|||all the light left behind",
@@ -627,6 +627,7 @@
       "the big pink|||give it up"
     ],
     "dkfm_edge": [
+      "seventh dose|||immerse",
       "future nostalgia|||stick around coming down",
       "mariin k|||face 2 face",
       "echodrone|||joy",
@@ -725,8 +726,7 @@
       "pills for tomorrow|||we'll be a light",
       "mental map|||snow in june",
       "newmoon|||eternal fall",
-      "cold gawd|||malibu beach house",
-      "rilev|||ノイス"
+      "cold gawd|||malibu beach house"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -937,6 +937,7 @@
       "lazy legs lacing|||slime 90s"
     ],
     "dkfm_classic": [
+      "bowery electric|||without stopping",
       "the verve|||virtual world",
       "pale saints|||shell",
       "february|||afterglow",
@@ -1035,8 +1036,7 @@
       "mistle thrush|||51 pegasi: rocketship v 2",
       "the curtain society|||september scar two",
       "bowery electric|||passages",
-      "the nightblooms|||59#2",
-      "boo radleys|||lazarus saint etienne remix"
+      "the nightblooms|||59#2"
     ],
     "egofm_rnb": [
       "olivier st louis|||fall in love",
@@ -1141,6 +1141,7 @@
       "dillon|||6abotage"
     ],
     "egofm_chillout": [
+      "modd & hosini|||swallow's nest",
       "inky & toby schay|||violet",
       "kalaman|||sol",
       "lav8|||i'm yours",
@@ -1239,8 +1240,7 @@
       "dexter francis mason|||deja vu",
       "rubies feat feist|||i feel electric tiedye remix",
       "blackbird blackbird|||all",
-      "dj yoda|||breathe feat lily james",
-      "thievery corporation feat perry farrell|||revolution solution"
+      "dj yoda|||breathe feat lily james"
     ],
     "dj_neihtul": [
       "moby|||the sorrow tree",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795115393.3116498,
-    "mellow_mix": 1795115393.3150275,
-    "big_sonic_heaven": 1795115393.3178978,
-    "radio_x_chilled": 1795115393.3205478,
-    "dreampop_radio": 1795115393.3233898,
-    "indie_select": 1795115393.3264048,
-    "dkfm_edge": 1795115393.329229,
+    "vuurland": 1795115475.7251623,
+    "mellow_mix": 1795115475.7286124,
+    "big_sonic_heaven": 1795115475.7314482,
+    "radio_x_chilled": 1795115475.73416,
+    "dreampop_radio": 1795115475.7371385,
+    "indie_select": 1795115475.7401555,
+    "dkfm_edge": 1795115475.7431839,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795115393.3331904,
-    "dkfm_shoegaze": 1795115393.33617,
-    "dkfm_classic": 1795115393.3389456,
-    "egofm_rnb": 1795115393.3418913,
-    "egofm_chillout": 1795115393.344772,
-    "dj_neihtul": 1795115393.3471644,
-    "gri_balkon": 1795115393.3492217,
-    "ignoreradio_shoegaze": 1795115393.3518057,
-    "radio_britannia": 1795115393.354659,
-    "wbru": 1795115393.3569732
+    "dark_edge": 1795115475.7471259,
+    "dkfm_shoegaze": 1795115475.7500634,
+    "dkfm_classic": 1795115475.7530286,
+    "egofm_rnb": 1795115475.7559626,
+    "egofm_chillout": 1795115475.7589169,
+    "dj_neihtul": 1795115475.7612932,
+    "gri_balkon": 1795115475.7633526,
+    "ignoreradio_shoegaze": 1795115475.7659955,
+    "radio_britannia": 1795115475.7689073,
+    "wbru": 1795115475.771242
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -28788,7 +28788,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "michael kiwanuka|||you ain't the problem",
+  "__last_radio_key_vuurland": "nectar woode|||rivers end",
   "__last_radio_key_mellow_mix": "the cardigans|||no sleep",
   "__last_radio_key_big_sonic_heaven": "deary|||alfie",
   "__v181_vuurland_two_missing_recovered": true,
@@ -139039,7 +139039,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "bill callahan|||riding for the feeling",
+  "__last_radio_key_dreampop_radio": "air|||all i need",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -140519,9 +140519,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "future nostalgia|||stick around coming down",
+  "__last_radio_key_dkfm_edge": "seventh dose|||immerse",
   "__last_radio_key_dkfm_shoegaze": "fleeting joys|||sunburst animals",
-  "__last_radio_key_dkfm_classic": "the verve|||virtual world",
+  "__last_radio_key_dkfm_classic": "bowery electric|||without stopping",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -145938,7 +145938,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "olivier st louis|||fall in love",
-  "__last_radio_key_egofm_chillout": "inky & toby schay|||violet",
+  "__last_radio_key_egofm_chillout": "modd & hosini|||swallow's nest",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
