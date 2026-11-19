@@ -4177,7 +4177,9 @@ def find_spotify_track(
         return compacted
 
     def artist_parts(value):
-        value = normalize(value)
+        # Keep a visible trailing ellipsis until the complete Spotify credit
+        # is checked. normalize() otherwise removes it prematurely.
+        value = str(value or "").strip()
 
         # &, "and" en komma's kunnen deel uitmaken van
         # één officiële artiestennaam:
@@ -4202,7 +4204,8 @@ def find_spotify_track(
                 guests = split_explicit_multiword_guests(credit)
                 expanded.extend(guests)
             parts = expanded
-        return [part.strip() for part in parts if part.strip()]
+        return [normalize(part) + ("..." if part.strip().endswith(("...", "…")) else "")
+                for part in parts if part.strip()]
 
     def title_identity(value):
         """
@@ -5331,8 +5334,9 @@ def find_spotify_track(
                 for spotify_artist in spotify_artist_compact
             )
 
-            if wanted_feature.endswith(("...", "…")):
-                if guest_credit_matches(wanted_feature, spotify_artists):
+            raw_feature = wanted_artists[1:][wanted_artist_compact[1:].index(wanted_feature)]
+            if raw_feature.endswith(("...", "…")):
+                if guest_credit_matches(raw_feature, spotify_artists):
                     matched_feature_count += 1
             elif feature_score >= 0.98 or any(
                 wanted_feature == spotify_artist
