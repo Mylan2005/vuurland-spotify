@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795074160.890831,
+  "__v150_next_spotify_round_at": 1795074281.792121,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "london grammar|||nightcall",
       "lana del rey|||watercolor eyes",
       "beck|||ride lonesome",
       "cass mccombs|||bum bum bum",
@@ -113,8 +114,7 @@
       "jordan rakei & jalen n'gonda|||what it gave me",
       "het zesde metaal|||ploegsteert",
       "jessie ware|||night light",
-      "hozier|||cherry wine",
-      "angus & julia stone|||karaoke bar"
+      "hozier|||cherry wine"
     ],
     "mellow_mix": [
       "patty griffin|||trapeze",
@@ -219,6 +219,7 @@
       "chris stapleton|||higher"
     ],
     "big_sonic_heaven": [
+      "mary in the junkyard|||mouse",
       "zola jesus|||siphon",
       "silk daisys|||little galaxy",
       "the smiths|||paint a vulgar picture",
@@ -317,10 +318,10 @@
       "there's talk|||watersignwave",
       "untitled halo|||how to make your love stay",
       "mazzy star|||blue light",
-      "slowdive|||kisses",
-      "encarta 98|||destello"
+      "slowdive|||kisses"
     ],
     "radio_x_chilled": [
+      "maximo park|||books from boxes",
       "the lumineers|||ophelia",
       "elbow|||one day like this",
       "guns n' roses|||knockin' on heaven's door",
@@ -419,8 +420,7 @@
       "editors|||smokers outside the hospital doors live for radio x",
       "the xx|||vcr",
       "kings of leon|||notion",
-      "jet|||look what you've done",
-      "the cure|||close to me"
+      "jet|||look what you've done"
     ],
     "dreampop_radio": [
       "lord huron|||lonesome dreams",
@@ -1549,6 +1549,7 @@
       "the morelings|||lyt"
     ],
     "radio_britannia": [
+      "feeder|||the healing",
       "rag n bone man|||as you are",
       "ed sheeran|||give me love",
       "glasvegas|||if",
@@ -1647,8 +1648,7 @@
       "do nothing|||the nail",
       "idlewild|||readers and writers",
       "suede|||so young",
-      "the duckworth lewis method|||meeting mr miandad",
-      "lucy rose|||whatever you want"
+      "the duckworth lewis method|||meeting mr miandad"
     ],
     "wbru": [
       "panchiko|||d>e>a>t>h>m>e>t>a>l",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795074123.3318212,
-    "mellow_mix": 1795074123.3413563,
-    "big_sonic_heaven": 1795074123.3456817,
-    "radio_x_chilled": 1795074123.3498433,
-    "dreampop_radio": 1795074123.3543234,
-    "indie_select": 1795074123.3591518,
-    "dkfm_edge": 1795074123.3640401,
+    "vuurland": 1795074160.8312304,
+    "mellow_mix": 1795074160.868178,
+    "big_sonic_heaven": 1795074160.8724976,
+    "radio_x_chilled": 1795074160.876729,
+    "dreampop_radio": 1795074160.8812065,
+    "indie_select": 1795074160.8857658,
+    "dkfm_edge": 1795074160.8905241,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795074123.369727,
-    "dkfm_shoegaze": 1795074123.6148286,
-    "dkfm_classic": 1795074123.6196764,
-    "egofm_rnb": 1795074123.6243825,
-    "egofm_chillout": 1795074123.6289425,
-    "dj_neihtul": 1795074123.6320813,
-    "gri_balkon": 1795074123.6347573,
-    "ignoreradio_shoegaze": 1795074123.639106,
-    "radio_britannia": 1795074123.6440089,
-    "wbru": 1795074123.6477742
+    "dark_edge": 1795074160.8962061,
+    "dkfm_shoegaze": 1795074160.9009907,
+    "dkfm_classic": 1795074160.9056103,
+    "egofm_rnb": 1795074160.9101586,
+    "egofm_chillout": 1795074160.9146576,
+    "dj_neihtul": 1795074160.917699,
+    "gri_balkon": 1795074160.9203842,
+    "ignoreradio_shoegaze": 1795074160.9246573,
+    "radio_britannia": 1795074161.162865,
+    "wbru": 1795074161.1659267
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -26059,6 +26059,7 @@
       "fat white family|||work",
       "feeder|||just the way im feeling",
       "feeder|||tender",
+      "feeder|||the healing",
       "feeder|||wall of silence",
       "feeder|||we are people",
       "feeder|||youth",
@@ -27928,12 +27929,12 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "lana del rey|||watercolor eyes",
+  "__last_radio_key_vuurland": "london grammar|||nightcall",
   "__last_radio_key_mellow_mix": "patty griffin|||trapeze",
-  "__last_radio_key_big_sonic_heaven": "zola jesus|||siphon",
+  "__last_radio_key_big_sonic_heaven": "mary in the junkyard|||mouse",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 26897,
-  "__v146_spotify_budget_slot": 1795074042.571371,
+  "__v116_fifo_next_sequence": 26898,
+  "__v146_spotify_budget_slot": 1795074163.4875965,
   "__vuurland_active_playlist_count": 2981,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -99507,7 +99508,7 @@
     "the beautiful south|||blitzkreig bop": 1,
     "ecstasy of saint theresa|||swoony": 1,
     "amusement ireland|||dum dum": 1,
-    "lights & motions|||all the way": 1,
+    "lights & motions|||all the way": 2,
     "adrian borland & the citizens|||brittle heaven": 1,
     "hollow coves|||heatwave": 1,
     "serena ryder|||the funeral": 1,
@@ -137043,7 +137044,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the lumineers|||ophelia",
+  "__last_radio_key_radio_x_chilled": "maximo park|||books from boxes",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -142320,7 +142321,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "big_sonic_heaven",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -142332,7 +142333,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -142365,7 +142366,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "big_sonic_heaven",
+  "__v227_last_source_turn": "dreampop_radio",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -145606,7 +145607,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "rag n bone man|||as you are",
+  "__last_radio_key_radio_britannia": "feeder|||the healing",
   "__last_radio_key_wbru": "panchiko|||d>e>a>t>h>m>e>t>a>l",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -147958,6 +147959,31 @@
         }
       ],
       "status": "uncertain"
+    },
+    "lights & motions|||all the way": {
+      "source": "dreampop_radio",
+      "artist": "Lights & Motions",
+      "title": "All The Way",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [
+        {
+          "artist": "Men I Trust",
+          "title": "Carried Away",
+          "spotify_id": "50ASFow3YrVJJpqdzaM1YD"
+        },
+        {
+          "artist": "Harry Styles",
+          "title": "Lights Up",
+          "spotify_id": "4jAIqgrPjKLTY9Gbez25Qb"
+        },
+        {
+          "artist": "The Microphones",
+          "title": "The Moon",
+          "spotify_id": "4pbEwQiDjPln3oYlijXuOE"
+        }
+      ],
+      "status": "low_relevance"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
