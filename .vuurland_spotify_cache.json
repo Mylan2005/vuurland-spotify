@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "badbadnotgood|||in your eyes",
       "patrick watson|||love songs for robots",
       "douglas firs|||shimmer & glow",
       "the national|||day i die",
@@ -113,10 +114,10 @@
       "novastar & piet goddaer|||never back down",
       "the lemon twigs|||in my head",
       "the haunted youth|||wake up",
-      "kids with buns|||stubborn mind",
-      "the war on drugs|||red eyes"
+      "kids with buns|||stubborn mind"
     ],
     "mellow_mix": [
+      "k d lang|||coming home",
       "hans nayna|||music for the soul",
       "agnes obel|||chord left",
       "sophie hunger|||le vent nous portera",
@@ -215,10 +216,10 @@
       "suzanne vega|||songs in red & gray",
       "fleet foxes|||white winter hymnal",
       "the moody blues|||voices in the sky",
-      "martinez & guthrie|||bye",
-      "gordon lightfoot|||race among the ruins"
+      "martinez & guthrie|||bye"
     ],
     "big_sonic_heaven": [
+      "deary|||alfie",
       "secret meadow|||to hold and not be held",
       "velvet|||circles",
       "van chamberlain|||miracle drug",
@@ -317,8 +318,7 @@
       "encarta 98|||destello",
       "postiljonen|||l i e",
       "deary|||seabird",
-      "bauhaus|||all we ever wanted was everything",
-      "throwing muses|||albatross"
+      "bauhaus|||all we ever wanted was everything"
     ],
     "radio_x_chilled": [
       "weezer|||island in the sun",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "houndmouth|||long as you're at home",
       "nils frahm|||sweet little lie",
       "michelle gurevich|||way you write",
       "weezer|||take on me",
@@ -831,8 +832,7 @@
       "travis|||where you stand",
       "julia stone feat matt berninger|||we all have",
       "yeasayer|||silly me",
-      "jw francis|||going home to a party",
-      "u2|||you're the best thing about me"
+      "jw francis|||going home to a party"
     ],
     "dkfm_shoegaze": [
       "dykehouse|||lost holiday",
@@ -1039,6 +1039,7 @@
       "flying saucer attack|||still"
     ],
     "egofm_rnb": [
+      "tom misch & yussef dayes|||last 100",
       "alunageorge|||attracting flies",
       "jorja smith|||rose rouge",
       "gabriels|||love and hate in a different time",
@@ -1137,8 +1138,7 @@
       "cautious clay|||dying in the subtlety",
       "mr jukes feat lalah hathaway|||from golden stars comes silver dew - physical version",
       "dillon|||6abotage",
-      "sohn|||tremors",
-      "sade|||hang on to your love"
+      "sohn|||tremors"
     ],
     "egofm_chillout": [
       "kalaman|||sol",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795115008.8347507,
-    "mellow_mix": 1795115008.8401446,
-    "big_sonic_heaven": 1795115008.8429852,
-    "radio_x_chilled": 1795115008.845681,
-    "dreampop_radio": 1795115008.8484802,
-    "indie_select": 1795115008.8514903,
-    "dkfm_edge": 1795115008.8544602,
+    "vuurland": 1795115090.2850883,
+    "mellow_mix": 1795115090.2904484,
+    "big_sonic_heaven": 1795115090.2933052,
+    "radio_x_chilled": 1795115090.2959037,
+    "dreampop_radio": 1795115090.2986453,
+    "indie_select": 1795115090.3016443,
+    "dkfm_edge": 1795115090.3044803,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795115008.8584378,
-    "dkfm_shoegaze": 1795115008.8614302,
-    "dkfm_classic": 1795115008.8643003,
-    "egofm_rnb": 1795115008.8672378,
-    "egofm_chillout": 1795115008.870136,
-    "dj_neihtul": 1795115008.8725567,
-    "gri_balkon": 1795115008.87459,
-    "ignoreradio_shoegaze": 1795115008.8772874,
-    "radio_britannia": 1795115008.8801355,
-    "wbru": 1795115008.882417
+    "dark_edge": 1795115090.5872314,
+    "dkfm_shoegaze": 1795115090.5902758,
+    "dkfm_classic": 1795115090.5931764,
+    "egofm_rnb": 1795115090.5963511,
+    "egofm_chillout": 1795115090.5993252,
+    "dj_neihtul": 1795115090.601737,
+    "gri_balkon": 1795115090.6038015,
+    "ignoreradio_shoegaze": 1795115090.606452,
+    "radio_britannia": 1795115090.609312,
+    "wbru": 1795115090.611639
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14463,6 +14463,7 @@
       "hot chip|||ready for the floor",
       "hot chip|||the warning",
       "hot flash heat wave|||glo ride",
+      "houndmouth|||long as you're at home",
       "houndmouth|||sedona",
       "houses|||endless spring",
       "hovvdy|||brave",
@@ -28781,11 +28782,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "patrick watson|||love songs for robots",
-  "__last_radio_key_mellow_mix": "hans nayna|||music for the soul",
-  "__last_radio_key_big_sonic_heaven": "secret meadow|||to hold and not be held",
+  "__last_radio_key_vuurland": "badbadnotgood|||in your eyes",
+  "__last_radio_key_mellow_mix": "k d lang|||coming home",
+  "__last_radio_key_big_sonic_heaven": "deary|||alfie",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 27593,
+  "__v116_fifo_next_sequence": 27594,
   "__v146_spotify_budget_slot": 1795115011.2928512,
   "__vuurland_active_playlist_count": 3242,
   "__vuurland_active_volume": 2,
@@ -140516,7 +140517,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "nils frahm|||sweet little lie",
+  "__last_radio_key_dark_edge": "houndmouth|||long as you're at home",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -145921,7 +145922,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "alunageorge|||attracting flies",
+  "__last_radio_key_egofm_rnb": "tom misch & yussef dayes|||last 100",
   "__last_radio_key_egofm_chillout": "kalaman|||sol",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
