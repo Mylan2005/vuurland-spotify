@@ -2,6 +2,7 @@
 import unittest
 
 from v233_general_radio_metadata import normalize_radio_metadata
+from v255_catalog_rescue import catalog_metadata
 
 
 class RadioMetadataRegressionTests(unittest.TestCase):
@@ -38,6 +39,20 @@ class RadioMetadataRegressionTests(unittest.TestCase):
             ),
             ("Just Emma feat. Matthias Wittmann", "Sunshine (Thomas Atzmann Remix)"),
         )
+
+    def test_verified_catalog_corrections_are_narrow(self):
+        self.assertEqual(catalog_metadata("Cocteau Twins", "Pearly-Dewdrops"),
+                         ("Cocteau Twins", "Pearly-Dewdrops' Drops"))
+        self.assertEqual(catalog_metadata("AIR", "Radio No.1"),
+                         ("AIR", "Radio Number 1"))
+        self.assertEqual(catalog_metadata("Beatsteakes", "Let Me In"),
+                         ("Beatsteaks", "Let Me In"))
+        self.assertEqual(catalog_metadata("Jon Batiste feat. Zazie Smith", "SHOW ME THE WAY"),
+                         ("Jon Batiste feat. Zadie Smith", "SHOW ME THE WAY"))
+        self.assertEqual(catalog_metadata("Koffee", "Pull Up"),
+                         ("Original Koffee", "Pull Up"))
+        self.assertEqual(catalog_metadata("Koffee", "Some Other Song"),
+                         ("Koffee", "Some Other Song"))
 
     def test_short_radio_parenthesized_feature(self):
         self.assertEqual(
