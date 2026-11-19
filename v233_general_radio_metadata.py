@@ -80,44 +80,62 @@ def normalize_radio_filename_and_number(title):
 
 
 def normalize_radio_trailing_guest(artist, title):
-    """Move an explicit *trailing* radio guest into the required artist credit.
+    """Turn unmistakable radio *guest notation* into a required credit.
 
-    Spotify still has to verify ALL credited performers and the entire song
-    title/edition. In particular, a named remix is never stripped.
+    This is NOT song matching. The ordinary candidate matcher still checks
+    the main artist, all guests, full title, recording edition and market.
+    Any named mix/remix must remain present for edition validation.
     """
     raw = str(title or "").strip()
-    # Radio station notation '(Album)' is not a named mix/edit and appears
-    # after an explicit guest in syndicated station metadata.
-    album_suffix = re.search(r"(?i)\s*\(album\)\s*$", raw)
-    if album_suffix and re.search(r"(?i)\s+(?:feat\.?|ft\.?|featuring)\s+",
-                                  raw[:album_suffix.start()]):
-        raw = raw[:album_suffix.start()].rstrip()
-
-    # Optional NAMED remix is retained as a required recording edition.
-    match = re.fullmatch(
-        r"(.+?)\s+(?:feat\.?|ft\.?|featuring)\s+"
-        r"([^()]{3,90}?)(\s*\([^()]*\bremix\))?\s*",
-        raw, flags=re.IGNORECASE,
-    )
-    if not match:
-        return artist, raw
-    core, guest, remix = match.groups()
-    guest = guest.strip()
-    # Avoid treating separators or malformed station noise as a performer.
-    if not core.strip() or not re.search(r"\w", guest) or re.search(r"\s[-–—]\s", guest):
-        return artist, raw
     artist_raw = str(artist or "").strip()
     if not artist_raw:
         return artist, raw
-    # The featured name remains mandatory for Spotify candidate validation.
-    updated_artist = artist_raw + " feat. " + guest
-    updated_title = core.strip() + ((" " + remix.strip()) if remix else "")
-    return updated_artist, updated_title
+
+    # A radio suffix '(Album)' is editorial when used AFTER a feat. marker;
+    # keep real 'Album Version' editions intact.
+    if re.search(r"(?i)\\s+(?:feat\\.?|ft\\.?|featuring)\\s+", raw):
+        raw = re.sub(r"(?i)\\s*\\(album\\)\\s*$", "", raw).strip()
+
+    # Explicit parenthesized radio credit: '(f Lorde)' or '(feat. Q-Tip)'.
+    # The full guest identity is mandatory. Never treat arbitrary parenthesis
+    # (such as '(Live)' or '(Radio Edit)') as artist metadata.
+    m = re.fullmatch(
+        r"(.+?)\\s+\\(\\s*(?:f|ft\\.?|feat\\.?|featuring)\\s+([^()]{2,100})\\s*\\)",
+        raw, flags=re.I,
+    )
+    if m:
+        core, guest = m.groups()
+        guest = guest.strip()
+        if re.search(r"[\\w]", guest) and not re.search(r"\\s[-–—]\\s", guest):
+            return artist_raw + " feat. " + guest, core.strip()
+
+    # Unparenthesized trailing guests, optionally followed by a NAMED remix.
+    m = re.fullmatch(
+        r"(.+?)\\s+(?:feat\\.?|ft\\.?|featuring)\\s+"
+        r"([^()]{3,90}?)(\\s*\\([^()]*\\bremix\\))?\\s*",
+        raw, flags=re.I,
+    )
+    if not m:
+        return artist, raw
+    core, guest, remix = m.groups()
+    guest = guest.strip()
+    if not core.strip() or not re.search(r"\\w", guest) or re.search(r"\\s[-–—]\\s", guest):
+        return artist, raw
+    return (artist_raw + " feat. " + guest,
+            core.strip() + ((" " + remix.strip()) if remix else ""))
+
+
+def normalize_radio_artist_context(artist):
+    """Remove known broadcaster country labels, not arbitrary artist suffixes."""
+    raw = str(artist or "").strip()
+    return re.sub(r"\\s+\\(\\s*(?:UK|USA)\\s*\\)$", "", raw, flags=re.I)
+
+
 
 def normalize_radio_metadata(artist, title):
     """Algemene, bewijsgestuurde metadata-opkuis (nooit fuzzy artiestmatching)."""
     artist_str = str(artist or "").strip()
-    corrected_artist = artist
+    corrected_artist = normalize_radio_artist_context(artist)
     # In een expliciete radiocredit 'A x B' is x een samenwerkingsscheiding,
     # geen deel van de artiestennaam. Deze vormcorrectie mag alleen met twee
     # volledige, niet-lege namen; de matcher verifieert nog beide credits.
