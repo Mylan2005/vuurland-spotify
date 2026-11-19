@@ -93,33 +93,33 @@ def normalize_radio_trailing_guest(artist, title):
 
     # A radio suffix '(Album)' is editorial when used AFTER a feat. marker;
     # keep real 'Album Version' editions intact.
-    if re.search(r"(?i)\\s+(?:feat\\.?|ft\\.?|featuring)\\s+", raw):
-        raw = re.sub(r"(?i)\\s*\\(album\\)\\s*$", "", raw).strip()
+    if re.search(r"(?i)\s+(?:feat\.?|ft\.?|featuring)\s+", raw):
+        raw = re.sub(r"(?i)\s*\(album\)\s*$", "", raw).strip()
 
     # Explicit parenthesized radio credit: '(f Lorde)' or '(feat. Q-Tip)'.
     # The full guest identity is mandatory. Never treat arbitrary parenthesis
     # (such as '(Live)' or '(Radio Edit)') as artist metadata.
     m = re.fullmatch(
-        r"(.+?)\\s+\\(\\s*(?:f|ft\\.?|feat\\.?|featuring)\\s+([^()]{2,100})\\s*\\)",
+        r"(.+?)\s+\(\s*(?:f|ft\.?|feat\.?|featuring)\s+([^()]{2,100})\s*\)",
         raw, flags=re.I,
     )
     if m:
         core, guest = m.groups()
         guest = guest.strip()
-        if re.search(r"[\\w]", guest) and not re.search(r"\\s[-–—]\\s", guest):
+        if re.search(r"[\w]", guest) and not re.search(r"\s[-–—]\s", guest):
             return artist_raw + " feat. " + guest, core.strip()
 
     # Unparenthesized trailing guests, optionally followed by a NAMED remix.
     m = re.fullmatch(
-        r"(.+?)\\s+(?:feat\\.?|ft\\.?|featuring)\\s+"
-        r"([^()]{3,90}?)(\\s*\\([^()]*\\bremix\\))?\\s*",
+        r"(.+?)\s+(?:feat\.?|ft\.?|featuring)\s+"
+        r"([^()]{3,90}?)(\s*\([^()]*\bremix\))?\s*",
         raw, flags=re.I,
     )
     if not m:
         return artist, raw
     core, guest, remix = m.groups()
     guest = guest.strip()
-    if not core.strip() or not re.search(r"\\w", guest) or re.search(r"\\s[-–—]\\s", guest):
+    if not core.strip() or not re.search(r"\w", guest) or re.search(r"\s[-–—]\s", guest):
         return artist, raw
     return (artist_raw + " feat. " + guest,
             core.strip() + ((" " + remix.strip()) if remix else ""))
@@ -128,7 +128,7 @@ def normalize_radio_trailing_guest(artist, title):
 def normalize_radio_artist_context(artist):
     """Remove known broadcaster country labels, not arbitrary artist suffixes."""
     raw = str(artist or "").strip()
-    return re.sub(r"\\s+\\(\\s*(?:UK|USA)\\s*\\)$", "", raw, flags=re.I)
+    return re.sub(r"\s+\(\s*(?:UK|USA)\s*\)$", "", raw, flags=re.I)
 
 
 
