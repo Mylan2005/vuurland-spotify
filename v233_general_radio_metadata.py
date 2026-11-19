@@ -97,6 +97,20 @@ def normalize_radio_trailing_guest(artist, title):
     if re.search(r"(?i)\s+(?:feat\.?|ft\.?|featuring)\s+", raw):
         raw = re.sub(r"(?i)\s*\(album\)\s*$", "", raw).strip()
 
+    # Publisher export tag '(single - feat. Artist)' is a release format,
+    # NOT a named mix or performance version. Preserve the entire guest
+    # credit as a mandatory artist; no other parenthetical form is removed.
+    single_feature = re.fullmatch(
+        r"(.+?)\\s+\\(\\s*single\\s*[-–—]\\s*"
+        r"(?:feat\\.?|ft\\.?|featuring)\\s+([^()]{2,100})\\s*\\)",
+        raw, flags=re.I,
+    )
+    if single_feature:
+        core, guest = (part.strip() for part in single_feature.groups())
+        if (core and re.search(r"\\w", guest)
+                and not re.search(r"\\s[-–—]\\s", guest)):
+            return artist_raw + " feat. " + guest, core
+
     # Explicit parenthesized radio credit: '(f Lorde)' or '(feat. Q-Tip)'.
     # The full guest identity is mandatory. Never treat arbitrary parenthesis
     # (such as '(Live)' or '(Radio Edit)') as artist metadata.
