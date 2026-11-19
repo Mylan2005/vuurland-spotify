@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795049716.3824687,
+  "__v150_next_spotify_round_at": 1795049844.6561396,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -219,6 +219,7 @@
       "mt joy|||roly poly"
     ],
     "big_sonic_heaven": [
+      "cocteau twins & harold budd|||sea swallow me",
       "whimsical|||teardrop massive attack",
       "rosa damask|||adore you",
       "the sundays|||you're not the only one i know",
@@ -317,8 +318,7 @@
       "zola jesus|||lost",
       "silk|||auralux",
       "soft blue shimmer|||sapphire door",
-      "poe|||angry johnny",
-      "flower face|||bad dream"
+      "poe|||angry johnny"
     ],
     "radio_x_chilled": [
       "jet|||look what you've done",
@@ -937,6 +937,7 @@
       "iris|||ultraviolet"
     ],
     "dkfm_classic": [
+      "cranes|||casa blanca",
       "eugenius|||down on me",
       "all natural lemon & lime flavors|||false from above",
       "slowdive|||celia's dream",
@@ -1035,10 +1036,10 @@
       "brian jonestown massacre|||records",
       "cranes|||inescapable",
       "galaxie 500|||victory garden",
-      "jesus & mary chain|||it's so hard",
-      "bleach|||tangle"
+      "jesus & mary chain|||it's so hard"
     ],
     "egofm_rnb": [
+      "salt-n-pepa feat en vogue|||whatta man",
       "robert glasper experiment feat snoop dogg lupe fiasco & luke james|||persevere",
       "mariah carey|||shake it off",
       "gabriel garzon-montano|||crawl",
@@ -1137,8 +1138,7 @@
       "ella mai|||gut feeling feat h e r",
       "sir feat schoolboy q|||something foreign",
       "olivier st louis|||fall in love",
-      "selah sue feat tobi|||hurray",
-      "tinashe & buddy|||pasadena"
+      "selah sue feat tobi|||hurray"
     ],
     "egofm_chillout": [
       "sugi wa|||after dark",
@@ -1549,6 +1549,7 @@
       "soda stereo|||luna roja"
     ],
     "radio_britannia": [
+      "the bug club|||appropriate emotions",
       "kasabian|||fire",
       "club smith|||lament",
       "florence the machine|||south london forever",
@@ -1647,8 +1648,7 @@
       "the joy formidable|||whirring",
       "cajun dance party|||the race",
       "elbow|||lippy kids",
-      "allo darlin|||dreaming",
-      "isaac gracie|||reverie"
+      "allo darlin|||dreaming"
     ],
     "wbru": [
       "almost monday|||no more regrets",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795049686.6831496,
-    "mellow_mix": 1795049686.6889267,
-    "big_sonic_heaven": 1795049686.693908,
-    "radio_x_chilled": 1795049686.6988106,
-    "dreampop_radio": 1795049686.704207,
-    "indie_select": 1795049686.7095327,
-    "dkfm_edge": 1795049686.7160492,
+    "vuurland": 1795049723.1909447,
+    "mellow_mix": 1795049723.1965327,
+    "big_sonic_heaven": 1795049723.2016068,
+    "radio_x_chilled": 1795049723.206383,
+    "dreampop_radio": 1795049723.2110689,
+    "indie_select": 1795049723.2160742,
+    "dkfm_edge": 1795049723.221521,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795049686.7245078,
-    "dkfm_shoegaze": 1795049686.7298696,
-    "dkfm_classic": 1795049686.7350812,
-    "egofm_rnb": 1795049686.7405443,
-    "egofm_chillout": 1795049686.7463856,
-    "dj_neihtul": 1795049686.7503805,
-    "gri_balkon": 1795049686.7539158,
-    "ignoreradio_shoegaze": 1795049686.7587972,
-    "radio_britannia": 1795049686.76429,
-    "wbru": 1795049686.7683759
+    "dark_edge": 1795049723.2294688,
+    "dkfm_shoegaze": 1795049723.2349663,
+    "dkfm_classic": 1795049723.2404466,
+    "egofm_rnb": 1795049723.2461526,
+    "egofm_chillout": 1795049723.2517776,
+    "dj_neihtul": 1795049723.2557855,
+    "gri_balkon": 1795049723.259373,
+    "ignoreradio_shoegaze": 1795049723.2642956,
+    "radio_britannia": 1795049723.6820219,
+    "wbru": 1795049723.6859903
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -26062,6 +26062,7 @@
       "the bolshoi|||tv man",
       "the boo radleys|||cmon kids",
       "the brothers movement|||standing still",
+      "the bug club|||appropriate emotions",
       "the charlatans|||just when youre thinkin things over",
       "the clash|||london calling",
       "the clockworks|||can i speak to a manager?",
@@ -27436,14 +27437,14 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "sampha|||treasure",
   "__last_radio_key_mellow_mix": "kt tunstall|||turned a light on",
-  "__last_radio_key_big_sonic_heaven": "whimsical|||teardrop massive attack",
+  "__last_radio_key_big_sonic_heaven": "cocteau twins & harold budd|||sea swallow me",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 26476,
-  "__v146_spotify_budget_slot": 1795049599.0200467,
-  "__vuurland_active_playlist_count": 2826,
+  "__v116_fifo_next_sequence": 26477,
+  "__v146_spotify_budget_slot": 1795049727.3534462,
+  "__vuurland_active_playlist_count": 2827,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
-  "__v164_playlist_count_checked_at": 1795046040,
+  "__v164_playlist_count_checked_at": 1795049728,
   "__playlist_keys": [
     "#1 dads|||freedom fighter",
     "&tilly & blaudiss|||you & them & missing",
@@ -39557,6 +39558,7 @@
     "thala|||i know when you care",
     "thala|||something in the water",
     "the 1975|||all i need to hear",
+    "the 1975|||girls",
     "the 1975|||medicine",
     "the 6ths with lloyd cole|||human featuring lloyd cole - the 6ths with lloyd cole",
     "the 6ths|||san diego zoo",
@@ -51126,6 +51128,7 @@
     "spotify:track:5WJpPF5PIUmrisr4mEQgrq",
     "spotify:track:5WMA8AmXGff8wo450I3Ecn",
     "spotify:track:5WNcfye4OMPI7Atu2errrL",
+    "spotify:track:5WSdMcWTKRdN1QYVJHJWxz",
     "spotify:track:5WSeS3eCD0dMrMPQ9hk19O",
     "spotify:track:5WTET2gnYJnFDEz4TnnIFd",
     "spotify:track:5WTL9XqGfGhvUrn7hd4yg1",
@@ -59666,6 +59669,7 @@
     "GBK3W1000015",
     "GBK3W1000025",
     "GBK3W1000158",
+    "GBK3W1000200",
     "GBK3W1000239",
     "GBK3W1000242",
     "GBK3W1000258",
@@ -79943,7 +79947,8 @@
     "spotify:track:1a9maLxqpx3cxjY1lTj62B": "GBAQH9600061",
     "spotify:track:7hpFRmmDuUayyeN3UKG19U": "UK9LA1600106",
     "spotify:track:6XtGxL9dXSfzWSRkZ0JyBO": "DEY471719837",
-    "spotify:track:0x3QZufCjNvP5yhItEcoIt": "QZHN81910452"
+    "spotify:track:0x3QZufCjNvP5yhItEcoIt": "QZHN81910452",
+    "spotify:track:5WSdMcWTKRdN1QYVJHJWxz": "GBK3W1000200"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -137493,7 +137498,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "paraphernalia|||date night",
   "__last_radio_key_dkfm_shoegaze": "attic ocean|||blue eyed lenny",
-  "__last_radio_key_dkfm_classic": "eugenius|||down on me",
+  "__last_radio_key_dkfm_classic": "cranes|||casa blanca",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -141184,7 +141189,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "ignoreradio_shoegaze",
+  "__v221_last_selected_source": "radio_britannia",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -141196,7 +141201,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "ignoreradio_shoegaze",
+  "__v224_last_spotify_opportunity_source": "radio_britannia",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -141229,7 +141234,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "ignoreradio_shoegaze",
+  "__v227_last_source_turn": "radio_britannia",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -142913,7 +142918,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "robert glasper experiment feat snoop dogg lupe fiasco & luke james|||persevere",
+  "__last_radio_key_egofm_rnb": "salt-n-pepa feat en vogue|||whatta man",
   "__last_radio_key_egofm_chillout": "sugi wa|||after dark",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -144470,7 +144475,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "kasabian|||fire",
+  "__last_radio_key_radio_britannia": "the bug club|||appropriate emotions",
   "__last_radio_key_wbru": "almost monday|||no more regrets",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -147026,5 +147031,6 @@
   "__match_v35__dj shadow|||midnight in a perfect world": "spotify:track:1a9maLxqpx3cxjY1lTj62B",
   "__match_v35__jean michel jarre/gary numan|||here for you": "spotify:track:7hpFRmmDuUayyeN3UKG19U",
   "__match_v35__deep dive corp|||the groove is you ft al agami & hush forever": "spotify:track:6XtGxL9dXSfzWSRkZ0JyBO",
-  "__match_v35__audiobaton|||what's more than this": "spotify:track:0x3QZufCjNvP5yhItEcoIt"
+  "__match_v35__audiobaton|||what's more than this": "spotify:track:0x3QZufCjNvP5yhItEcoIt",
+  "__match_v35__the 1975|||girls": "spotify:track:5WSdMcWTKRdN1QYVJHJWxz"
 }
