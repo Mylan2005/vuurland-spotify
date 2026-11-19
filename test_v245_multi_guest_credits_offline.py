@@ -30,7 +30,7 @@ locator = next(ast.literal_eval(n.value) for n in module.body
                        for t in n.targets))
 assert locator[("max cooper", "trust ft. tom hodge & kathrin deboer")] == "7EWkEIxfgg5cieKB6CJGws"
 assert "for title_guest in split_explicit_multiword_guests(title_feature_artist)" in source
-assert "guests = split_explicit_multiword_guests(credit)" in source
+assert "expanded.extend(split_explicit_multiword_guests(credit))" in source
 assert "guest_credit_matches(wanted_feature, spotify_artists)" in source
 assert "wanted_artists.append(normalized_title_feature)" in source
 assert "if missing_feature_count:" in source
