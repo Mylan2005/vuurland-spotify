@@ -23,6 +23,13 @@ def catalog_metadata(artist, title):
     # Not a general "No.1" title replacement for arbitrary songs.
     if (a.casefold(), t.casefold()) == ("air", "radio no.1"):
         return a, "Radio Number 1"
+    # Exact observed station spelling versus verified Spotify catalog credit.
+    if (a.casefold(), t.casefold()) == ("beatsteakes", "let me in"):
+        return "Beatsteaks", t
+    if (a.casefold(), t.casefold()) == ("jon batiste feat. zazie smith", "show me the way"):
+        return "Jon Batiste feat. Zadie Smith", t
+    if (a.casefold(), t.casefold()) == ("koffee", "pull up"):
+        return "Original Koffee", t
     # Preserve the exact edit: this is not the original or extended remix.
     if (a.casefold(), t.casefold()) == (
         "chicane vs. natasha bedingfield", "bruised water (michael woods edit)"
