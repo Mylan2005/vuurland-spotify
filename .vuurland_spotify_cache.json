@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "aldous harding|||the barrel",
+      "novastar & piet goddaer|||never back down",
       "the lemon twigs|||in my head",
       "the haunted youth|||wake up",
       "kids with buns|||stubborn mind",
@@ -112,9 +114,7 @@
       "elis floreen|||carver",
       "kurt vile|||zoom 97",
       "meskerem mees|||seasons shift",
-      "michael kiwanuka|||black man in a white world",
-      "aurora|||the flood",
-      "ciska ciska|||angel"
+      "michael kiwanuka|||black man in a white world"
     ],
     "mellow_mix": [
       "sade|||by your side",
@@ -627,6 +627,7 @@
       "korallreven|||as young as yesterday"
     ],
     "dkfm_edge": [
+      "mental map|||snow in june",
       "newmoon|||eternal fall",
       "cold gawd|||malibu beach house",
       "rilev|||ノイス",
@@ -725,8 +726,7 @@
       "animal ghosts|||closer",
       "dummy|||minus world",
       "glia|||turn",
-      "little oso|||i don't wanna make new friends",
-      "mood room|||hell behind the moon"
+      "little oso|||i don't wanna make new friends"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -835,6 +835,7 @@
       "white lies|||hold back your love"
     ],
     "dkfm_shoegaze": [
+      "lush|||tiny smiles",
       "arde pluton|||amor platonico",
       "sleeping in|||wouldn't mind converse rubber tracks",
       "the daysleepers|||summerdreamer",
@@ -933,8 +934,7 @@
       "green star|||you won't be long",
       "tannhauser orchestra|||spring reverb",
       "young prisms|||four hours",
-      "good personalities|||itch",
-      "yumi zouma|||december"
+      "good personalities|||itch"
     ],
     "dkfm_classic": [
       "catherine wheel|||shocking",
@@ -1039,6 +1039,7 @@
       "spiritualized|||shine a light"
     ],
     "egofm_rnb": [
+      "sade|||hang on to your love",
       "thundercat|||friend zone",
       "outlines|||our lives are too short",
       "whitney houston|||it's not right but it's okay",
@@ -1137,10 +1138,10 @@
       "lou asril feat avec|||when the lights go out",
       "nilufer yanya|||tears",
       "erykah badu|||woo",
-      "priya ragu|||lighthouse",
-      "dj shadow feat little dragon|||scale it back"
+      "priya ragu|||lighthouse"
     ],
     "egofm_chillout": [
+      "julien dore|||barracuda ii",
       "youth lagoon|||17",
       "dexter francis mason|||deja vu",
       "rubies feat feist|||i feel electric tiedye remix",
@@ -1239,8 +1240,7 @@
       "dinner party terrace martin robert glasper 9th wonder & kamasi washington|||the mighty tree",
       "aphex twin|||#20",
       "radwimps|||i i u",
-      "psalm trees & guillaume muschalle|||clocks forward",
-      "thomas strasser|||long steep walk"
+      "psalm trees & guillaume muschalle|||clocks forward"
     ],
     "dj_neihtul": [
       "hvob|||panama",
@@ -1719,24 +1719,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795092789.2892964,
-    "mellow_mix": 1795092789.2917488,
-    "big_sonic_heaven": 1795092789.293895,
-    "radio_x_chilled": 1795092789.295649,
-    "dreampop_radio": 1795092789.297545,
-    "indie_select": 1795092789.2997134,
-    "dkfm_edge": 1795092789.301609,
+    "vuurland": 1795092870.9761176,
+    "mellow_mix": 1795092870.9785235,
+    "big_sonic_heaven": 1795092870.9806101,
+    "radio_x_chilled": 1795092870.9823694,
+    "dreampop_radio": 1795092870.9843051,
+    "indie_select": 1795092870.986454,
+    "dkfm_edge": 1795092870.9884598,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795092789.3043494,
-    "dkfm_shoegaze": 1795092789.3066072,
-    "dkfm_classic": 1795092789.3087997,
-    "egofm_rnb": 1795092789.3107576,
-    "egofm_chillout": 1795092789.312725,
-    "dj_neihtul": 1795092789.3142169,
-    "gri_balkon": 1795092789.3155303,
-    "ignoreradio_shoegaze": 1795092789.3172748,
-    "radio_britannia": 1795092789.3191922,
-    "wbru": 1795092789.3207898
+    "dark_edge": 1795092870.9912145,
+    "dkfm_shoegaze": 1795092870.9936135,
+    "dkfm_classic": 1795092870.9956038,
+    "egofm_rnb": 1795092870.997635,
+    "egofm_chillout": 1795092870.9996583,
+    "dj_neihtul": 1795092871.001153,
+    "gri_balkon": 1795092871.0024204,
+    "ignoreradio_shoegaze": 1795092871.0041986,
+    "radio_britannia": 1795092871.0061066,
+    "wbru": 1795092871.0077114
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -28264,7 +28264,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "the lemon twigs|||in my head",
+  "__last_radio_key_vuurland": "aldous harding|||the barrel",
   "__last_radio_key_mellow_mix": "sade|||by your side",
   "__last_radio_key_big_sonic_heaven": "severed heads|||first steps",
   "__v181_vuurland_two_missing_recovered": true,
@@ -139446,8 +139446,8 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "newmoon|||eternal fall",
-  "__last_radio_key_dkfm_shoegaze": "arde pluton|||amor platonico",
+  "__last_radio_key_dkfm_edge": "mental map|||snow in june",
+  "__last_radio_key_dkfm_shoegaze": "lush|||tiny smiles",
   "__last_radio_key_dkfm_classic": "catherine wheel|||shocking",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -144867,8 +144867,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "thundercat|||friend zone",
-  "__last_radio_key_egofm_chillout": "youth lagoon|||17",
+  "__last_radio_key_egofm_rnb": "sade|||hang on to your love",
+  "__last_radio_key_egofm_chillout": "julien dore|||barracuda ii",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
