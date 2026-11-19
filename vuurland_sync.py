@@ -5323,7 +5323,7 @@ def find_spotify_track(
         # RadioBox ze expliciet vermeldt.
         matched_feature_count = 0
 
-        for wanted_feature in wanted_artist_compact[1:]:
+        for guest_index, wanted_feature in enumerate(wanted_artist_compact[1:], start=1):
 
             feature_score = max(
                 SequenceMatcher(
@@ -5334,7 +5334,7 @@ def find_spotify_track(
                 for spotify_artist in spotify_artist_compact
             )
 
-            raw_feature = wanted_artists[1:][wanted_artist_compact[1:].index(wanted_feature)]
+            raw_feature = wanted_artists[guest_index]
             if raw_feature.endswith(("...", "…")):
                 if guest_credit_matches(raw_feature, spotify_artists):
                     matched_feature_count += 1
