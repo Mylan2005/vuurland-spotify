@@ -67,6 +67,14 @@ class RadioMetadataRegressionTests(unittest.TestCase):
         ):
             self.assertEqual(catalog_metadata(artist, title), (artist, title))
 
+    def test_justice_truncated_multi_guest_not_dropped(self):
+        self.assertEqual(
+            normalize_radio_metadata(
+                "Justice", "Flower in a Hurricane (f Tame Impala, SZA, King Gizzard...)"
+            ),
+            ("Justice feat. Tame Impala, SZA, King Gizzard...", "Flower in a Hurricane"),
+        )
+
     def test_short_radio_parenthesized_feature(self):
         self.assertEqual(
             normalize_radio_metadata("beabadoobee", "All I Did Was Dream of You (f The Marías)"),
