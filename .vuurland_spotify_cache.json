@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "s10|||paris texas",
       "whitney|||memory",
       "lucy dacus|||planting tomatoes",
       "sylvie kreusch|||belle",
@@ -113,10 +114,10 @@
       "metronomy|||things will be fine",
       "phoebe bridgers|||kyoto",
       "coldplay|||in my place",
-      "jose gonzalez|||crosses",
-      "bon iver|||hey ma"
+      "jose gonzalez|||crosses"
     ],
     "mellow_mix": [
+      "patty griffin|||ohio",
       "neil young|||look out for my love",
       "the cactus blossoms|||hey baby",
       "the byrds|||my back pages",
@@ -215,8 +216,7 @@
       "bon iver|||s p e y s i d e",
       "erik scott|||peace on saturn",
       "tracy chapman|||talkin' bout a revolution",
-      "the head and the heart|||lost in my mind",
-      "the doobie brothers|||mamaloi"
+      "the head and the heart|||lost in my mind"
     ],
     "big_sonic_heaven": [
       "lush|||thoughtforms",
@@ -525,6 +525,8 @@
       "the sundays|||here's where the story ends"
     ],
     "indie_select": [
+      "so much 4 gravity|||gotta get out of this town",
+      "beach house|||all your yeahs",
       "the golden filter|||age of consent",
       "memory tapes|||green knight",
       "styrofoam featuring valerie trebeljahr alias|||misguided - styrofoam featuring valerie trebeljahr alias",
@@ -622,9 +624,7 @@
       "the cribs|||men's needs",
       "frightened rabbit|||death dream",
       "hard-fi|||hard to beat",
-      "the radio dept|||this thing was bound to happen",
-      "heaven 17|||temptation special dance mix",
-      "stars|||are you with me?"
+      "the radio dept|||this thing was bound to happen"
     ],
     "dkfm_edge": [
       "present|||all i ask",
@@ -1549,6 +1549,7 @@
       "spiritualized|||ladies and gentlemen we are floating in space"
     ],
     "radio_britannia": [
+      "elastica|||car song",
       "the vryll society|||a perfect rhythm",
       "the zutons|||pauline",
       "lambrini girls|||cult of celebrity",
@@ -1647,8 +1648,7 @@
       "muse|||compliance",
       "bat for lashes|||daniel",
       "johnny marr|||the last ride",
-      "divorce|||scratch your metal",
-      "the 1975|||the birthday party"
+      "divorce|||scratch your metal"
     ],
     "wbru": [
       "will paquin|||chandelier",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795123051.0574384,
-    "mellow_mix": 1795123051.0631478,
-    "big_sonic_heaven": 1795123051.066276,
-    "radio_x_chilled": 1795123051.069276,
-    "dreampop_radio": 1795123051.072473,
-    "indie_select": 1795123051.0757189,
-    "dkfm_edge": 1795123051.078915,
+    "vuurland": 1795123133.5947871,
+    "mellow_mix": 1795123133.6004374,
+    "big_sonic_heaven": 1795123133.6034825,
+    "radio_x_chilled": 1795123133.606437,
+    "dreampop_radio": 1795123133.6095955,
+    "indie_select": 1795123133.6133163,
+    "dkfm_edge": 1795123133.6164463,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795123051.0831764,
-    "dkfm_shoegaze": 1795123051.0866363,
-    "dkfm_classic": 1795123051.089802,
-    "egofm_rnb": 1795123051.0929794,
-    "egofm_chillout": 1795123051.096157,
-    "dj_neihtul": 1795123051.098721,
-    "gri_balkon": 1795123051.1009467,
-    "ignoreradio_shoegaze": 1795123051.1039295,
-    "radio_britannia": 1795123051.1071508,
-    "wbru": 1795123051.10955
+    "dark_edge": 1795123133.6206138,
+    "dkfm_shoegaze": 1795123133.6239676,
+    "dkfm_classic": 1795123133.6270804,
+    "egofm_rnb": 1795123133.6303403,
+    "egofm_chillout": 1795123133.6335378,
+    "dj_neihtul": 1795123133.635927,
+    "gri_balkon": 1795123133.6382113,
+    "ignoreradio_shoegaze": 1795123133.6411183,
+    "radio_britannia": 1795123133.8810902,
+    "wbru": 1795123133.8836849
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -26705,6 +26705,7 @@
       "editors|||you dont know love",
       "egyptian blue|||to be felt",
       "elanor moss|||sarah waiting in the car",
+      "elastica|||car song",
       "elastica|||connection",
       "elastica|||stutter",
       "elastica|||waking up",
@@ -28930,11 +28931,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "whitney|||memory",
-  "__last_radio_key_mellow_mix": "neil young|||look out for my love",
+  "__last_radio_key_vuurland": "s10|||paris texas",
+  "__last_radio_key_mellow_mix": "patty griffin|||ohio",
   "__last_radio_key_big_sonic_heaven": "lush|||thoughtforms",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 27718,
+  "__v116_fifo_next_sequence": 27719,
   "__v146_spotify_budget_slot": 1795123053.5415926,
   "__vuurland_active_playlist_count": 3279,
   "__vuurland_active_volume": 2,
@@ -139485,7 +139486,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the golden filter|||age of consent",
+  "__last_radio_key_indie_select": "so much 4 gravity|||gotta get out of this town",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -147822,7 +147823,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the vryll society|||a perfect rhythm",
+  "__last_radio_key_radio_britannia": "elastica|||car song",
   "__last_radio_key_wbru": "will paquin|||chandelier",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
