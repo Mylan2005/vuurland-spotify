@@ -15,6 +15,10 @@ def catalog_metadata(artist, title):
     # never "On a Day Like This". No similar title is generalized.
     if (a.casefold(), t.casefold()) == ("elbow", "on a day like this"):
         return a, "One Day Like This"
+    # Verified RadioBox shortening: full Spotify title is Pearly-Dewdrops' Drops.
+    # Keep normal artist, title, edition and market checks.
+    if (a.casefold(), t.casefold()) == ("cocteau twins", "pearly-dewdrops"):
+        return a, "Pearly-Dewdrops' Drops"
     # Preserve the exact edit: this is not the original or extended remix.
     if (a.casefold(), t.casefold()) == (
         "chicane vs. natasha bedingfield", "bruised water (michael woods edit)"
