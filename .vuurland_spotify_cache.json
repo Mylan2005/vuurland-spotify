@@ -423,6 +423,7 @@
       "stereophonics|||i wanna get lost with you acoustic"
     ],
     "dreampop_radio": [
+      "the late call|||pickpocket",
       "yuck|||rebirth",
       "matthew and the atlas|||on a midnight street - acoustic version",
       "air|||all i need",
@@ -521,8 +522,7 @@
       "melanie horsnell|||if we can't be together",
       "pascal pinon|||i wrote a song",
       "whitley|||i remember",
-      "marissa nadler|||was it a dream",
-      "peasant|||bound for glory"
+      "marissa nadler|||was it a dream"
     ],
     "indie_select": [
       "noel gallagher's high flying birds|||ballad of the mighty i",
@@ -835,6 +835,7 @@
       "red hot chili peppers|||tear"
     ],
     "dkfm_shoegaze": [
+      "ovlov|||the wishing well",
       "title fight|||your pain is mine",
       "weed|||promised rate",
       "orange yellow red|||the sea",
@@ -933,10 +934,10 @@
       "collapse|||drop",
       "weedipus|||broken boy",
       "spirit and the cosmic heart|||in between dream",
-      "eddyevvy|||not too fond",
-      "wyym|||эпплуаит"
+      "eddyevvy|||not too fond"
     ],
     "dkfm_classic": [
+      "coaltar of the deepers|||unlimber",
       "adorable|||i'll be your saint",
       "catherine wheel|||bill and ben",
       "bowery electric|||without stopping",
@@ -1035,8 +1036,7 @@
       "cotillion|||sabotage",
       "seefeel|||climatic phase 3",
       "cocteau twins|||carolyn's fingers",
-      "mistle thrush|||51 pegasi: rocketship v 2",
-      "the curtain society|||september scar two"
+      "mistle thrush|||51 pegasi: rocketship v 2"
     ],
     "egofm_rnb": [
       "tom misch|||sunshine",
@@ -1141,6 +1141,7 @@
       "cautious clay|||dying in the subtlety"
     ],
     "egofm_chillout": [
+      "screen jazzmaster & viktor minsky|||rain dance",
       "lianne la havas|||green & gold",
       "tim bowness|||borderline feat dylan howe & david longdon",
       "modd & hosini|||swallow's nest",
@@ -1239,8 +1240,7 @@
       "gustav gustav|||hyacinth",
       "julien dore|||barracuda ii",
       "youth lagoon|||17",
-      "dexter francis mason|||deja vu",
-      "rubies feat feist|||i feel electric tiedye remix"
+      "dexter francis mason|||deja vu"
     ],
     "dj_neihtul": [
       "goldfrapp|||faux suede drifter",
@@ -1345,6 +1345,7 @@
       "faithless|||synthesizer feat nathan ball"
     ],
     "gri_balkon": [
+      "deep dive corp|||the groove is you ft al agami & hush forever",
       "eli & fur|||something was real",
       "khruangbin|||texas sun ft leon bridges",
       "the acid|||basic instinct",
@@ -1443,8 +1444,7 @@
       "bob moses|||enough to believe",
       "pale|||rundown",
       "ry x|||to know",
-      "archaellum|||reflections",
-      "the blaze|||virile"
+      "archaellum|||reflections"
     ],
     "ignoreradio_shoegaze": [
       "mogwai|||you don't know jesus",
@@ -1549,6 +1549,7 @@
       "deerhunter|||basement scene"
     ],
     "radio_britannia": [
+      "heavy stereo|||sleep freak",
       "jake bugg|||theres a beast and we all feed it",
       "doves|||broken eyes",
       "suede|||attitude",
@@ -1647,8 +1648,7 @@
       "gurriers|||nobody's coming to save you",
       "the 1975|||happiness",
       "ben howard|||keep your head up",
-      "nilufer yanya|||cold heart",
-      "the fratellis|||henrietta"
+      "nilufer yanya|||cold heart"
     ],
     "wbru": [
       "steve lacy|||nothing",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795116100.7621248,
-    "mellow_mix": 1795116100.7655928,
-    "big_sonic_heaven": 1795116100.7684426,
-    "radio_x_chilled": 1795116100.7712202,
-    "dreampop_radio": 1795116100.77405,
-    "indie_select": 1795116100.7770667,
-    "dkfm_edge": 1795116100.7800024,
+    "vuurland": 1795116182.2483244,
+    "mellow_mix": 1795116182.2517333,
+    "big_sonic_heaven": 1795116182.254557,
+    "radio_x_chilled": 1795116182.2573187,
+    "dreampop_radio": 1795116182.2602675,
+    "indie_select": 1795116182.2632186,
+    "dkfm_edge": 1795116182.266055,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795116100.783968,
-    "dkfm_shoegaze": 1795116100.7869697,
-    "dkfm_classic": 1795116100.789811,
-    "egofm_rnb": 1795116100.792778,
-    "egofm_chillout": 1795116100.7956116,
-    "dj_neihtul": 1795116100.798069,
-    "gri_balkon": 1795116100.800156,
-    "ignoreradio_shoegaze": 1795116100.8027697,
-    "radio_britannia": 1795116100.8056636,
-    "wbru": 1795116100.8081322
+    "dark_edge": 1795116182.2699225,
+    "dkfm_shoegaze": 1795116182.524212,
+    "dkfm_classic": 1795116182.5272973,
+    "egofm_rnb": 1795116182.5303857,
+    "egofm_chillout": 1795116182.533397,
+    "dj_neihtul": 1795116182.5357647,
+    "gri_balkon": 1795116182.537925,
+    "ignoreradio_shoegaze": 1795116182.5405893,
+    "radio_britannia": 1795116182.7998602,
+    "wbru": 1795116182.8023074
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18825,6 +18825,7 @@
       "our girl|||sleeper",
       "ousel|||whispers",
       "ovlov|||feel the pain",
+      "ovlov|||the wishing well",
       "oxy|||don't you think the air is stuffy",
       "ozean|||fall",
       "ozean|||scenic",
@@ -26727,6 +26728,7 @@
       "happy mondays|||24 hour party people",
       "hard fi|||better do better",
       "hard fi|||bring it on",
+      "heavy stereo|||sleep freak",
       "heidi curtis|||river of spirit",
       "hello cosmos|||old friends know",
       "himalayas|||cave paintings",
@@ -28804,7 +28806,7 @@
   "__last_radio_key_mellow_mix": "mavis staples|||wrote a song for everyone",
   "__last_radio_key_big_sonic_heaven": "suurrr|||dissolve",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 27610,
+  "__v116_fifo_next_sequence": 27612,
   "__v146_spotify_budget_slot": 1795116103.1843157,
   "__vuurland_active_playlist_count": 3238,
   "__vuurland_active_volume": 2,
@@ -139071,7 +139073,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "yuck|||rebirth",
+  "__last_radio_key_dreampop_radio": "the late call|||pickpocket",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -140552,8 +140554,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "thistle|||magpies",
-  "__last_radio_key_dkfm_shoegaze": "title fight|||your pain is mine",
-  "__last_radio_key_dkfm_classic": "adorable|||i'll be your saint",
+  "__last_radio_key_dkfm_shoegaze": "ovlov|||the wishing well",
+  "__last_radio_key_dkfm_classic": "coaltar of the deepers|||unlimber",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -145970,7 +145972,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "tom misch|||sunshine",
-  "__last_radio_key_egofm_chillout": "lianne la havas|||green & gold",
+  "__last_radio_key_egofm_chillout": "screen jazzmaster & viktor minsky|||rain dance",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -145985,7 +145987,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "eli & fur|||something was real",
+  "__last_radio_key_gri_balkon": "deep dive corp|||the groove is you ft al agami & hush forever",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -147526,7 +147528,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "jake bugg|||theres a beast and we all feed it",
+  "__last_radio_key_radio_britannia": "heavy stereo|||sleep freak",
   "__last_radio_key_wbru": "steve lacy|||nothing",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
