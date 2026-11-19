@@ -137,6 +137,38 @@ class RadioMetadataRegressionTests(unittest.TestCase):
             ("Dead Can Dance", "The Carnival Is Over / Ariadne (Remastered)"),
         )
 
+    def test_publisher_single_with_required_guest(self):
+        self.assertEqual(
+            normalize_radio_metadata(
+                "Fin del Mundo",
+                "El día de las flores (single - feat. Eterna Inocencia)",
+            ),
+            ("Fin del Mundo feat. Eterna Inocencia", "El día de las flores"),
+        )
+        # Named editions are never silently dropped.
+        self.assertEqual(
+            normalize_radio_metadata(
+                "Fin del Mundo",
+                "El día de las flores (Live - feat. Eterna Inocencia)",
+            ),
+            ("Fin del Mundo",
+             "El día de las flores (Live - feat. Eterna Inocencia)"),
+        )
+        self.assertEqual(
+            normalize_radio_metadata(
+                "Other Artist", "Another Song (single - feat. Test Guest)"
+            ),
+            ("Other Artist feat. Test Guest", "Another Song"),
+        )
+
+    def test_benee_required_guest_credit(self):
+        self.assertEqual(
+            normalize_radio_metadata(
+                "BENEE feat. Kenny Beats & Bakar", "Night Garden"
+            ),
+            ("BENEE feat. Kenny Beats & Bakar", "Night Garden"),
+        )
+
     def test_existing_safe_labels_are_unchanged(self):
         self.assertEqual(
             normalize_radio_metadata("Donavon Frankenreiter & Jack Johnson", "Free"),
