@@ -4201,8 +4201,11 @@ def find_spotify_track(
         if len(parts) > 1:
             expanded = [parts[0]]
             for credit in parts[1:]:
-                guests = split_explicit_multiword_guests(credit)
-                expanded.extend(guests)
+                guests = v240_dual_feature(credit)
+                if guests:
+                    expanded.extend(guests)
+                else:
+                    expanded.extend(split_explicit_multiword_guests(credit))
             parts = expanded
         return [normalize(part) + ("..." if part.strip().endswith(("...", "…")) else "")
                 for part in parts if part.strip()]
