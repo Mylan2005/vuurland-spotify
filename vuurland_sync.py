@@ -4726,9 +4726,10 @@ def find_spotify_track(
     # Three or more explicitly listed full collaborator names are a
     # catalog collaboration, not one enormous Spotify artist identity.
     # Names must ALL match individual Spotify artist objects exactly.
+    wanted_artists = artist_parts(artist)
     full_collaborator_names = split_full_collaborator_credit(artist)
-    wanted_artists = ([normalize(name) for name in full_collaborator_names]
-                      if full_collaborator_names else artist_parts(artist))
+    if full_collaborator_names:
+        wanted_artists = [normalize(name) for name in full_collaborator_names]
 
     # v71: expliciet gecrediteerde gast in de radiotitel.
     with_credit = re.search(r'\(with\s+([^()]+)\)\s*$', str(title), flags=re.I)
