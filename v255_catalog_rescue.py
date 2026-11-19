@@ -43,6 +43,8 @@ _ALBUMS = {
     ("curve", "chinese burn"): "Come Clean",
     ("palace brothers", "you will miss me when i burn"): "Days in the Wake",
     ("beady eye", "for anyone"): "Different Gear, Still Speeding",
+    # Confirmed on Spotify original 2000 album; keep full artist/title gates.
+    ("sarah harmer", "lodestar"): "You Were Here",
 }
 
 
