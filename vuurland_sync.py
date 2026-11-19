@@ -24,7 +24,7 @@ from v258_matcher_triage import (classify_candidates as v258_classify, early_par
 from v250_cure_album_version import owner_approved_album_version
 from v252_unavailable_radio_x import skip_unavailable_radio_x_recording
 from v253_unavailable_dkfm_edge import skip_unavailable_dkfm_edge_recording
-from v245_multi_guest_credits import split_explicit_multiword_guests
+from v245_multi_guest_credits import split_explicit_multiword_guests, guest_credit_matches
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v254_verified_report_metadata import report_correction as v254_report_correction
 from v255_catalog_rescue import catalog_metadata as v255_catalog_metadata, safe_catalog_album_query as v255_catalog_album_query
@@ -4199,11 +4199,8 @@ def find_spotify_track(
         if len(parts) > 1:
             expanded = [parts[0]]
             for credit in parts[1:]:
-                guests = v240_dual_feature(credit)
-                if guests:
-                    expanded.extend(guests)
-                else:
-                    expanded.append(credit)
+                guests = split_explicit_multiword_guests(credit)
+                expanded.extend(guests)
             parts = expanded
         return [part.strip() for part in parts if part.strip()]
 
@@ -5334,7 +5331,10 @@ def find_spotify_track(
                 for spotify_artist in spotify_artist_compact
             )
 
-            if feature_score >= 0.98 or any(
+            if wanted_feature.endswith(("...", "…")):
+                if guest_credit_matches(wanted_feature, spotify_artists):
+                    matched_feature_count += 1
+            elif feature_score >= 0.98 or any(
                 wanted_feature == spotify_artist
                 for spotify_artist in spotify_artist_compact
             ):
@@ -5352,7 +5352,10 @@ def find_spotify_track(
         if missing_feature_count:
             # v210: de nieuwe v208-haakjesfeat is een expliciet gevraagde
             # volledige samenwerking, nooit een uitnodiging voor solo-fallback.
-            if _v208_had_explicit_parenthesized_guest or _v211_had_confirmed_guest:
+            if (_v208_had_explicit_parenthesized_guest
+                    or _v211_had_confirmed_guest
+                    or any(f.endswith(("...", "…"))
+                           for f in wanted_artists[1:])):
                 continue
             if (not primary_artist_exact
                     or len(spotify_artists) != 1):
