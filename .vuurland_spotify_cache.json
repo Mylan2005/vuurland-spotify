@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795179899.6048427,
+  "__v150_next_spotify_round_at": 1795180039.4052804,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -1039,6 +1039,7 @@
       "love spirals downwards|||mediterranea"
     ],
     "egofm_rnb": [
+      "beyonce|||sandcastles",
       "nxworries|||lyk dis",
       "lapsley|||falling short",
       "bobby womack|||across 110th street",
@@ -1137,8 +1138,7 @@
       "nao feat a k paul|||so good",
       "superorganism|||something for your m i n d",
       "gallant|||weight in gold",
-      "billie eilish|||ocean eyes",
-      "ginuwine|||pony"
+      "billie eilish|||ocean eyes"
     ],
     "egofm_chillout": [
       "sufjan stevens & angelo de augustine|||fictional california",
@@ -1724,24 +1724,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795179897.527797,
-    "mellow_mix": 1795179897.5303235,
-    "big_sonic_heaven": 1795179897.53243,
-    "radio_x_chilled": 1795179897.534286,
-    "dreampop_radio": 1795179897.5361474,
-    "indie_select": 1795179897.5385866,
-    "dkfm_edge": 1795179897.5405083,
+    "vuurland": 1795179918.6751187,
+    "mellow_mix": 1795179918.6776485,
+    "big_sonic_heaven": 1795179918.6797848,
+    "radio_x_chilled": 1795179918.6816509,
+    "dreampop_radio": 1795179918.6835258,
+    "indie_select": 1795179918.6856945,
+    "dkfm_edge": 1795179918.687637,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795179897.5433843,
-    "dkfm_shoegaze": 1795179897.5457523,
-    "dkfm_classic": 1795179897.5477748,
-    "egofm_rnb": 1795179897.5497477,
-    "egofm_chillout": 1795179897.551715,
-    "dj_neihtul": 1795179897.5533218,
-    "gri_balkon": 1795179897.5546474,
-    "ignoreradio_shoegaze": 1795179897.5567563,
-    "radio_britannia": 1795179897.5588465,
-    "wbru": 1795179897.5606306
+    "dark_edge": 1795179918.6905415,
+    "dkfm_shoegaze": 1795179918.692878,
+    "dkfm_classic": 1795179918.6949275,
+    "egofm_rnb": 1795179918.6970613,
+    "egofm_chillout": 1795179918.699073,
+    "dj_neihtul": 1795179918.7006826,
+    "gri_balkon": 1795179918.701973,
+    "ignoreradio_shoegaze": 1795179918.7039793,
+    "radio_britannia": 1795179918.7060611,
+    "wbru": 1795179918.7077873
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30049,6 +30049,14 @@
       "failed_at": 1795177687,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "eva & manu|||empty": {
+      "artist": "Eva & Manu",
+      "title": "Empty",
+      "source": "dreampop_radio",
+      "failed_at": 1795179922,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -30060,7 +30068,7 @@
   "__last_radio_key_big_sonic_heaven": "cigarettes for breakfast|||flowing",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 28639,
-  "__v146_spotify_budget_slot": 1795179781.4055915,
+  "__v146_spotify_budget_slot": 1795179921.1875298,
   "__vuurland_active_playlist_count": 3613,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -104039,7 +104047,7 @@
     "hazel saints|||over my head": 3,
     "tim burgess|||oh men 02 remix": 3,
     "the la's|||there she goes again": 5,
-    "eva & manu|||empty": 4,
+    "eva & manu|||empty": 5,
     "ultravivid scene|||mercy seat 12\"": 3,
     "pocket|||backwards from ten feat danny seim of menomena": 3,
     "the veldt|||morning june and yesterday single": 3,
@@ -147063,7 +147071,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "big_sonic_heaven",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -147075,7 +147083,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -147108,7 +147116,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "big_sonic_heaven",
+  "__v227_last_source_turn": "dreampop_radio",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -148792,7 +148800,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "nxworries|||lyk dis",
+  "__last_radio_key_egofm_rnb": "beyonce|||sandcastles",
   "__last_radio_key_egofm_chillout": "sufjan stevens & angelo de augustine|||fictional california",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -155016,6 +155024,21 @@
         }
       ],
       "status": "uncertain"
+    },
+    "eva & manu|||empty": {
+      "source": "dreampop_radio",
+      "artist": "Eva & Manu",
+      "title": "Empty",
+      "kind": "promising",
+      "variant": 1,
+      "candidates": [
+        {
+          "artist": "Eva + Manu",
+          "title": "Empty",
+          "spotify_id": "5VV5XVjBhYBnVzR2QnRkF2"
+        }
+      ],
+      "status": "review_guard"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
