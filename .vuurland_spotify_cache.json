@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "leif vollebekk|||transatlantic flight",
+      "midlake|||roscoe",
       "whitney & waxahatchee|||take me home country roads",
       "khruangbin|||people everywhere still alive",
       "nectar woode|||rivers end",
@@ -112,11 +114,10 @@
       "waxahatchee|||mud",
       "james blake|||i had a dream she took my hand",
       "eddie vedder|||rise",
-      "cigarettes after sex|||apocalypse",
-      "widowspeak|||the jacket",
-      "lana del rey|||ride"
+      "cigarettes after sex|||apocalypse"
     ],
     "mellow_mix": [
+      "bob dylan|||just like a woman",
       "kt tunstall|||beauty of uncertainty",
       "travis|||afterglow",
       "toad the wet sprocket|||good intentions",
@@ -215,8 +216,7 @@
       "gone gone beyond|||things are changing",
       "lee oskar|||sunshine keri",
       "suzanne vega|||angel's doorway",
-      "the beatles|||the fool on the hill",
-      "breathe|||london"
+      "the beatles|||the fool on the hill"
     ],
     "big_sonic_heaven": [
       "winter|||without you feat soccer mommy",
@@ -627,6 +627,7 @@
       "animi vox|||shared pain"
     ],
     "dkfm_edge": [
+      "fragile animals|||glass",
       "long distances|||skin to sea",
       "so totally|||doz roses",
       "animal ghosts|||swerve",
@@ -725,8 +726,7 @@
       "somesurprises|||why i stay",
       "theredone|||escape",
       "la lune|||despondent",
-      "sungazer|||mieste",
-      "pale waves|||perfume"
+      "sungazer|||mieste"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1039,6 +1039,7 @@
       "innocence mission|||spinning"
     ],
     "egofm_rnb": [
+      "ariel pink's haunted graffiti|||baby",
       "rosie lowe|||birdsong",
       "evan klar|||someone heaven",
       "maxwell|||help somebody",
@@ -1137,10 +1138,10 @@
       "fka twigs|||two weeks",
       "m i l k feat kesmar|||everybody is a summer body",
       "rosie lowe feat jay electronica|||the way",
-      "delilah holliday|||silent streets",
-      "two feet|||i feel like i'm drowning"
+      "delilah holliday|||silent streets"
     ],
     "egofm_chillout": [
+      "zeyn benji & nymano|||sunday brunch",
       "blnkspc|||quietly",
       "thom yorke|||suspirium",
       "fennesz|||grey scale",
@@ -1239,8 +1240,7 @@
       "xtc|||wrapped in grey",
       "rain tree crow|||blackwater",
       "olafur arnalds|||re:member",
-      "miscel|||inside",
-      "mmc|||make me cry feat ralph castelli"
+      "miscel|||inside"
     ],
     "dj_neihtul": [
       "r plus|||love makes me feel good",
@@ -1345,6 +1345,7 @@
       "kangding ray|||south"
     ],
     "gri_balkon": [
+      "deep dive corp|||my life is music",
       "borneland|||eyes ft line gøttsche extended version",
       "christian scott atunde adjuah|||ruler rebel x atunde adjuah remix",
       "nighthawks|||road to cartagena",
@@ -1443,8 +1444,7 @@
       "anja schneider|||all i see",
       "mop mop|||plato",
       "nhar|||the swallow",
-      "mop mop|||lunar love",
-      "baths|||orator"
+      "mop mop|||lunar love"
     ],
     "ignoreradio_shoegaze": [
       "the kvb|||white walls",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795209699.5793326,
-    "mellow_mix": 1795209699.5825772,
-    "big_sonic_heaven": 1795209699.585335,
-    "radio_x_chilled": 1795209699.58803,
-    "dreampop_radio": 1795209699.5906727,
-    "indie_select": 1795209699.5936363,
-    "dkfm_edge": 1795209699.5964186,
+    "vuurland": 1795209784.0970786,
+    "mellow_mix": 1795209784.1004446,
+    "big_sonic_heaven": 1795209784.1032841,
+    "radio_x_chilled": 1795209784.1059165,
+    "dreampop_radio": 1795209784.1084864,
+    "indie_select": 1795209784.111406,
+    "dkfm_edge": 1795209784.1142302,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795209699.9080012,
-    "dkfm_shoegaze": 1795209699.9113383,
-    "dkfm_classic": 1795209699.9143114,
-    "egofm_rnb": 1795209699.9172366,
-    "egofm_chillout": 1795209699.9200962,
-    "dj_neihtul": 1795209699.9227328,
-    "gri_balkon": 1795209699.9247565,
-    "ignoreradio_shoegaze": 1795209699.9276083,
-    "radio_britannia": 1795209699.9304996,
-    "wbru": 1795209699.9327466
+    "dark_edge": 1795209784.118012,
+    "dkfm_shoegaze": 1795209784.1211958,
+    "dkfm_classic": 1795209784.1240857,
+    "egofm_rnb": 1795209784.1271014,
+    "egofm_chillout": 1795209784.1300235,
+    "dj_neihtul": 1795209784.1327431,
+    "gri_balkon": 1795209784.1348643,
+    "ignoreradio_shoegaze": 1795209784.1376462,
+    "radio_britannia": 1795209784.1405272,
+    "wbru": 1795209784.1427739
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30721,8 +30721,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "whitney & waxahatchee|||take me home country roads",
-  "__last_radio_key_mellow_mix": "kt tunstall|||beauty of uncertainty",
+  "__last_radio_key_vuurland": "leif vollebekk|||transatlantic flight",
+  "__last_radio_key_mellow_mix": "bob dylan|||just like a woman",
   "__last_radio_key_big_sonic_heaven": "winter|||without you feat soccer mommy",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 29158,
@@ -144793,7 +144793,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "long distances|||skin to sea",
+  "__last_radio_key_dkfm_edge": "fragile animals|||glass",
   "__last_radio_key_dkfm_shoegaze": "hundredth|||leave yourself",
   "__last_radio_key_dkfm_classic": "blind mr jones|||please me",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -150207,8 +150207,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "rosie lowe|||birdsong",
-  "__last_radio_key_egofm_chillout": "blnkspc|||quietly",
+  "__last_radio_key_egofm_rnb": "ariel pink's haunted graffiti|||baby",
+  "__last_radio_key_egofm_chillout": "zeyn benji & nymano|||sunday brunch",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -150223,7 +150223,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "borneland|||eyes ft line gøttsche extended version",
+  "__last_radio_key_gri_balkon": "deep dive corp|||my life is music",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
