@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795197986.6032183,
+  "__v150_next_spotify_round_at": 1795198107.8826134,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -219,6 +219,7 @@
       "leon bridges|||river"
     ],
     "big_sonic_heaven": [
+      "the wolfgang press|||speakers don't speak",
       "chromatics|||cherry main fix",
       "bragolin & carrellee|||feel this flame unfold",
       "seasurfer|||a short term effect",
@@ -317,8 +318,7 @@
       "xymox|||clementina",
       "hammock|||chemicals make you small feat the flaming lips",
       "violet indiana|||close the world",
-      "carly hann|||alone",
-      "the cure|||the snakepit"
+      "carly hann|||alone"
     ],
     "radio_x_chilled": [
       "arctic monkeys|||i wanna be yours",
@@ -525,6 +525,7 @@
       "boy|||this is the beginning"
     ],
     "indie_select": [
+      "modest mouse|||the world at large",
       "friska viljor|||the cure",
       "kakkmaddafakka|||galapagos",
       "the rifles|||wall around your heart",
@@ -623,8 +624,7 @@
       "major lazer|||be together feat wild belle",
       "maximo park|||the undercurrents",
       "eastern conference champions|||offkilter",
-      "the slow show|||woven blue",
-      "new found land|||let go"
+      "the slow show|||woven blue"
     ],
     "dkfm_edge": [
       "devilish dear|||invisible man the breeders",
@@ -937,6 +937,8 @@
       "cocteau twins|||bluebeard"
     ],
     "dkfm_classic": [
+      "swirlies|||cousteau",
+      "wilma|||claudius",
       "spiritualized|||run",
       "slowdive|||spanish air",
       "orange|||feijoa",
@@ -1034,11 +1036,10 @@
       "moose|||soon is never soon enough",
       "pale saints|||way the world is",
       "boo radleys|||thinking of ways",
-      "bethany curve|||me voy",
-      "the verve|||endless life bonus track",
-      "cocteau twins|||ella megalast burls forever"
+      "bethany curve|||me voy"
     ],
     "egofm_rnb": [
+      "sir feat schoolboy q|||something foreign",
       "moonchild|||the list",
       "enny|||same old",
       "mykki blanco|||it's not my choice",
@@ -1137,8 +1138,7 @@
       "fkj feat bas|||risk",
       "elba|||sirens",
       "jamila woods|||holy",
-      "kwabs|||wrong or right",
-      "mr jukes feat lalah hathaway|||from golden stars comes silver dew - physical version"
+      "kwabs|||wrong or right"
     ],
     "egofm_chillout": [
       "sohn|||hue",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795197948.0864315,
-    "mellow_mix": 1795197948.0892222,
-    "big_sonic_heaven": 1795197948.0916467,
-    "radio_x_chilled": 1795197948.0937858,
-    "dreampop_radio": 1795197948.0960028,
-    "indie_select": 1795197948.0985107,
-    "dkfm_edge": 1795197948.1007597,
+    "vuurland": 1795197987.1467376,
+    "mellow_mix": 1795197987.1496348,
+    "big_sonic_heaven": 1795197987.1521788,
+    "radio_x_chilled": 1795197987.1543412,
+    "dreampop_radio": 1795197987.1565502,
+    "indie_select": 1795197987.1592894,
+    "dkfm_edge": 1795197987.161699,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795197948.104019,
-    "dkfm_shoegaze": 1795197948.1066725,
-    "dkfm_classic": 1795197948.1089978,
-    "egofm_rnb": 1795197948.1113024,
-    "egofm_chillout": 1795197948.1136377,
-    "dj_neihtul": 1795197948.3767245,
-    "gri_balkon": 1795197948.3785641,
-    "ignoreradio_shoegaze": 1795197948.6771357,
-    "radio_britannia": 1795197948.6796446,
-    "wbru": 1795197948.6816604
+    "dark_edge": 1795197987.1649785,
+    "dkfm_shoegaze": 1795197987.167657,
+    "dkfm_classic": 1795197987.1701565,
+    "egofm_rnb": 1795197987.1725965,
+    "egofm_chillout": 1795197987.1748767,
+    "dj_neihtul": 1795197987.1770194,
+    "gri_balkon": 1795197987.1787155,
+    "ignoreradio_shoegaze": 1795197987.181014,
+    "radio_britannia": 1795197987.183339,
+    "wbru": 1795197987.185291
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30444,6 +30444,15 @@
       "matching_version": 35,
       "failed_searches": 3,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "haruko|||autumn golden trees": {
+      "artist": "Haruko",
+      "title": "Autumn, Golden Trees",
+      "source": "dreampop_radio",
+      "failed_at": 1795197992,
+      "matching_version": 35,
+      "failed_searches": 3,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -30452,10 +30461,10 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "infinity song|||metamorphosis",
   "__last_radio_key_mellow_mix": "rising appalachia|||make magic",
-  "__last_radio_key_big_sonic_heaven": "chromatics|||cherry main fix",
+  "__last_radio_key_big_sonic_heaven": "the wolfgang press|||speakers don't speak",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 28955,
-  "__v146_spotify_budget_slot": 1795197868.4106863,
+  "__v146_spotify_budget_slot": 1795197989.6748273,
   "__vuurland_active_playlist_count": 3715,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -105167,7 +105176,7 @@
     "the boxer rebellion|||silentmovieinst": 1,
     "jj|||no one can touch us tonight": 1,
     "presents for sally|||say something": 1,
-    "haruko|||autumn golden trees": 2,
+    "haruko|||autumn golden trees": 3,
     "the charlottes|||venus album version": 1,
     "ecstasy of saint theresa|||pistacchio places": 1,
     "stereo mc's|||disconnected": 1,
@@ -142841,7 +142850,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "friska viljor|||the cure",
+  "__last_radio_key_indie_select": "modest mouse|||the world at large",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -144205,7 +144214,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "devilish dear|||invisible man the breeders",
   "__last_radio_key_dkfm_shoegaze": "blushing|||dream merchants",
-  "__last_radio_key_dkfm_classic": "spiritualized|||run",
+  "__last_radio_key_dkfm_classic": "swirlies|||cousteau",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -147888,7 +147897,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "radio_x_chilled",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -147900,7 +147909,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -147933,7 +147942,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "radio_x_chilled",
+  "__v227_last_source_turn": "dreampop_radio",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -149617,7 +149626,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "moonchild|||the list",
+  "__last_radio_key_egofm_rnb": "sir feat schoolboy q|||something foreign",
   "__last_radio_key_egofm_chillout": "sohn|||hue",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -156113,31 +156122,6 @@
       ],
       "status": "uncertain"
     },
-    "haruko|||autumn golden trees": {
-      "source": "dreampop_radio",
-      "artist": "Haruko",
-      "title": "Autumn, Golden Trees",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [
-        {
-          "artist": "Ola Gjeilo, The Choir of Royal Holloway, Rupert Gough",
-          "title": "Autumn",
-          "spotify_id": "2aggTc0WFmtRMx0iHi1Zhh"
-        },
-        {
-          "artist": "Hamatsuki",
-          "title": "Autumn",
-          "spotify_id": "6ci09cZoww85os2RoRWrrq"
-        },
-        {
-          "artist": "The Beauty of Gemina",
-          "title": "Whispers of the Seasons",
-          "spotify_id": "6ME5dGQYF3dbATB057HneP"
-        }
-      ],
-      "status": "low_relevance"
-    },
     "whitelands feat dottie|||tell me about it": {
       "source": "dkfm_edge",
       "artist": "Whitelands feat. Dottie",
@@ -156169,6 +156153,15 @@
       "title": "The Buildup",
       "kind": "weak",
       "variant": 0,
+      "candidates": [],
+      "status": "low_relevance"
+    },
+    "haruko|||autumn golden trees": {
+      "source": "dreampop_radio",
+      "artist": "Haruko",
+      "title": "Autumn, Golden Trees",
+      "kind": "weak",
+      "variant": 2,
       "candidates": [],
       "status": "low_relevance"
     }
