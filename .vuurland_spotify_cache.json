@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sigur ros|||hoppipolla",
       "the tallest man on earth|||king of spain",
       "the haunted youth|||wake up",
       "noir desir|||le vent nous portera",
@@ -113,10 +114,10 @@
       "wanthanee|||only shadows remain",
       "portland|||ally ally",
       "deus|||eternal woman",
-      "ben howard|||couldn't make it up",
-      "cigarettes after sex|||twizzler"
+      "ben howard|||couldn't make it up"
     ],
     "mellow_mix": [
+      "leonard cohen|||by the rivers dark",
       "madeleine peyroux|||dance me to the end of love",
       "marc scibilia|||more to this",
       "james mcmurtry|||walk between the raindrops",
@@ -215,8 +216,7 @@
       "sting|||all this time",
       "nadia reid|||oh canada",
       "phoebe snow|||every night",
-      "steve winwood|||i'm not drowning",
-      "taj mahal|||lovin' in my baby's eyes"
+      "steve winwood|||i'm not drowning"
     ],
     "big_sonic_heaven": [
       "tricky|||pumpkin",
@@ -321,6 +321,7 @@
       "parannoul|||remaining"
     ],
     "radio_x_chilled": [
+      "the beatles|||come together",
       "massive attack|||unfinished sympathy",
       "foo fighters|||big me",
       "villagers|||trick of the light",
@@ -419,8 +420,7 @@
       "badly drawn boy|||silent sigh",
       "radiohead|||no surprises",
       "turin brakes|||feeling oblivion",
-      "red hot chili peppers|||californication",
-      "coldplay|||see you soon"
+      "red hot chili peppers|||californication"
     ],
     "dreampop_radio": [
       "alanis morissette|||hands clean",
@@ -937,6 +937,7 @@
       "frankie rose|||red museum"
     ],
     "dkfm_classic": [
+      "half string|||slow engine kill over",
       "cocteau twins|||cherry-coloured funk",
       "the darling buds|||so close",
       "lush|||nothing natural",
@@ -1035,8 +1036,7 @@
       "the autumns|||relinquished",
       "smudge|||tenderfoot",
       "lovesliescrushing|||valerian her voice honeyed",
-      "bowery electric|||soul city",
-      "cocteau twins|||lorelei"
+      "bowery electric|||soul city"
     ],
     "egofm_rnb": [
       "madison mcferrin|||insane",
@@ -1141,6 +1141,7 @@
       "banks|||underdog"
     ],
     "egofm_chillout": [
+      "kreatev|||street glow",
       "smoke city|||underwater love",
       "flofilz/alfa mist|||uteki feat alfa mist",
       "damon albarn|||lonely press play",
@@ -1239,8 +1240,7 @@
       "saint wknd|||girls just wanna have sun",
       "monocular|||too much to hold",
       "leavv & philanthrope|||what was before",
-      "david sylvian|||taking the veil",
-      "khruangbin|||maria tambien"
+      "david sylvian|||taking the veil"
     ],
     "dj_neihtul": [
       "steve lawler|||21st century ketchup",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795143158.48685,
-    "mellow_mix": 1795143158.4941404,
-    "big_sonic_heaven": 1795143158.4982605,
-    "radio_x_chilled": 1795143158.502201,
-    "dreampop_radio": 1795143158.506522,
-    "indie_select": 1795143158.5113122,
-    "dkfm_edge": 1795143158.5159245,
+    "vuurland": 1795143241.6086519,
+    "mellow_mix": 1795143241.6160986,
+    "big_sonic_heaven": 1795143241.6202018,
+    "radio_x_chilled": 1795143241.6242256,
+    "dreampop_radio": 1795143241.6285481,
+    "indie_select": 1795143241.6330273,
+    "dkfm_edge": 1795143241.637578,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795143158.521687,
-    "dkfm_shoegaze": 1795143158.5262702,
-    "dkfm_classic": 1795143158.5306518,
-    "egofm_rnb": 1795143158.5349722,
-    "egofm_chillout": 1795143158.5394998,
-    "dj_neihtul": 1795143158.542363,
-    "gri_balkon": 1795143158.545188,
-    "ignoreradio_shoegaze": 1795143158.5491638,
-    "radio_britannia": 1795143158.5539455,
-    "wbru": 1795143158.5567987
+    "dark_edge": 1795143241.6432168,
+    "dkfm_shoegaze": 1795143241.6477728,
+    "dkfm_classic": 1795143241.6522348,
+    "egofm_rnb": 1795143241.6565583,
+    "egofm_chillout": 1795143241.6610596,
+    "dj_neihtul": 1795143241.6639469,
+    "gri_balkon": 1795143241.6667144,
+    "ignoreradio_shoegaze": 1795143241.6706657,
+    "radio_britannia": 1795143241.6753583,
+    "wbru": 1795143241.6781547
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29325,8 +29325,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "the tallest man on earth|||king of spain",
-  "__last_radio_key_mellow_mix": "madeleine peyroux|||dance me to the end of love",
+  "__last_radio_key_vuurland": "sigur ros|||hoppipolla",
+  "__last_radio_key_mellow_mix": "leonard cohen|||by the rivers dark",
   "__last_radio_key_big_sonic_heaven": "tricky|||pumpkin",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 28046,
@@ -140147,7 +140147,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "massive attack|||unfinished sympathy",
+  "__last_radio_key_radio_x_chilled": "the beatles|||come together",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -141733,7 +141733,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "schelper|||the grey skin in your eyes",
   "__last_radio_key_dkfm_shoegaze": "pastel dream|||silence",
-  "__last_radio_key_dkfm_classic": "cocteau twins|||cherry-coloured funk",
+  "__last_radio_key_dkfm_classic": "half string|||slow engine kill over",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -147149,7 +147149,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "madison mcferrin|||insane",
-  "__last_radio_key_egofm_chillout": "smoke city|||underwater love",
+  "__last_radio_key_egofm_chillout": "kreatev|||street glow",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
