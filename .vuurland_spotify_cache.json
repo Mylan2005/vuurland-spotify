@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795215436.955571,
+  "__v150_next_spotify_round_at": 1795215559.6428266,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -117,6 +117,7 @@
       "tamino|||you don't own me"
     ],
     "mellow_mix": [
+      "son volt|||windfall",
       "simon & garfunkel|||america",
       "dead can dance|||american dreaming",
       "george harrison|||here comes the sun live",
@@ -215,10 +216,10 @@
       "the slow show|||god only knows",
       "joan osborne|||what you are",
       "cowboy junkies|||anniversary song",
-      "jackson browne|||rock me on the water",
-      "the waifs|||beautiful you"
+      "jackson browne|||rock me on the water"
     ],
     "big_sonic_heaven": [
+      "blonde redhead|||blood spilled",
       "jahrund|||human essence",
       "pale saints|||a thousand stars burst open",
       "tombstones in their eyes|||fall",
@@ -317,10 +318,10 @@
       "bdrmm|||sat in the heat",
       "&tilly|||clearest blue",
       "rilev|||dias normales",
-      "tokyo shoegazer|||vega",
-      "majesty crush|||sunny pie"
+      "tokyo shoegazer|||vega"
     ],
     "radio_x_chilled": [
+      "pearl jam|||jeremy live mtv unplugged",
       "ben howard|||conrad",
       "the xx|||crystalised",
       "massive attack|||safe from harm",
@@ -419,8 +420,7 @@
       "alanis morissette|||thank u",
       "beck|||blue moon",
       "peter bjorn and john|||young folks",
-      "badly drawn boy|||silent sigh",
-      "sam fender|||two people"
+      "badly drawn boy|||silent sigh"
     ],
     "dreampop_radio": [
       "nina simone|||lilac wine the album leaf",
@@ -1039,6 +1039,7 @@
       "love spirals downwards|||eudaimonia"
     ],
     "egofm_rnb": [
+      "rudimental feat mnek & syron|||spoons",
       "selah sue feat tobi|||hurray",
       "jai paul|||jasmine demo",
       "ibeyi|||exhibit diaz",
@@ -1137,8 +1138,7 @@
       "skip marley & h e r|||slow down",
       "blood orange|||champagne coast",
       "sault|||wildfires",
-      "yuno|||fall in love",
-      "swindle feat poppy ajudha & daley|||darkest hour"
+      "yuno|||fall in love"
     ],
     "egofm_chillout": [
       "royksopp|||sparks",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795215401.9128287,
-    "mellow_mix": 1795215401.9163759,
-    "big_sonic_heaven": 1795215401.9193933,
-    "radio_x_chilled": 1795215401.9222577,
-    "dreampop_radio": 1795215401.9250517,
-    "indie_select": 1795215401.9282477,
-    "dkfm_edge": 1795215401.9312744,
+    "vuurland": 1795215438.877786,
+    "mellow_mix": 1795215438.8814363,
+    "big_sonic_heaven": 1795215438.8846018,
+    "radio_x_chilled": 1795215438.8875666,
+    "dreampop_radio": 1795215438.8904204,
+    "indie_select": 1795215438.8934872,
+    "dkfm_edge": 1795215438.8965106,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795215401.9352896,
-    "dkfm_shoegaze": 1795215401.9386814,
-    "dkfm_classic": 1795215401.9417138,
-    "egofm_rnb": 1795215401.944818,
-    "egofm_chillout": 1795215401.9501314,
-    "dj_neihtul": 1795215401.9529474,
-    "gri_balkon": 1795215401.955059,
-    "ignoreradio_shoegaze": 1795215402.2004068,
-    "radio_britannia": 1795215402.4629803,
-    "wbru": 1795215402.4654233
+    "dark_edge": 1795215438.9005418,
+    "dkfm_shoegaze": 1795215438.9038699,
+    "dkfm_classic": 1795215438.9069247,
+    "egofm_rnb": 1795215438.9100075,
+    "egofm_chillout": 1795215438.915188,
+    "dj_neihtul": 1795215438.917991,
+    "gri_balkon": 1795215438.9200988,
+    "ignoreradio_shoegaze": 1795215438.923173,
+    "radio_britannia": 1795215438.9263668,
+    "wbru": 1795215438.9286911
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30844,11 +30844,11 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tamino|||fascination",
-  "__last_radio_key_mellow_mix": "simon & garfunkel|||america",
-  "__last_radio_key_big_sonic_heaven": "jahrund|||human essence",
+  "__last_radio_key_mellow_mix": "son volt|||windfall",
+  "__last_radio_key_big_sonic_heaven": "blonde redhead|||blood spilled",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 29247,
-  "__v146_spotify_budget_slot": 1795215318.7767274,
+  "__v146_spotify_budget_slot": 1795215441.4631119,
   "__vuurland_active_playlist_count": 3832,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -106253,7 +106253,8 @@
     "tribez ; j lamotta|||flippin' feat j lamotta": 1,
     "fused|||twisted": 1,
     "bonnie raitt|||it's all over now baby blue": 1,
-    "the american analog set|||the postman styrofoam remix": 1
+    "the american analog set|||the postman styrofoam remix": 1,
+    "this mortal coil|||mr somewhere / andialu": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -143495,7 +143496,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "ben howard|||conrad",
+  "__last_radio_key_radio_x_chilled": "pearl jam|||jeremy live mtv unplugged",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -148764,7 +148765,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "mellow_mix",
+  "__v221_last_selected_source": "big_sonic_heaven",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -148776,7 +148777,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "mellow_mix",
+  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -148809,7 +148810,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "mellow_mix",
+  "__v227_last_source_turn": "big_sonic_heaven",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -150493,7 +150494,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "selah sue feat tobi|||hurray",
+  "__last_radio_key_egofm_rnb": "rudimental feat mnek & syron|||spoons",
   "__last_radio_key_egofm_chillout": "royksopp|||sparks",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -157383,6 +157384,31 @@
       "kind": "weak",
       "variant": 1,
       "candidates": [],
+      "status": "low_relevance"
+    },
+    "this mortal coil|||mr somewhere / andialu": {
+      "source": "big_sonic_heaven",
+      "artist": "This Mortal Coil",
+      "title": "Mr. Somewhere / Andialu",
+      "kind": "weak",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "DEADLETTER",
+          "title": "Mere Mortal",
+          "spotify_id": "5uxeLULB661hfKxxJvyCuO"
+        },
+        {
+          "artist": "Ghinzu",
+          "title": "When Other Worlds Await",
+          "spotify_id": "1HvcuVwBcxnt27FXGd3tMv"
+        },
+        {
+          "artist": "Darren Hanlon",
+          "title": "Freight Train from Kyogle",
+          "spotify_id": "5WEa0bw74Y9tePtlkdz5i1"
+        }
+      ],
       "status": "low_relevance"
     }
   },
