@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "arcade fire|||age of anxiety ii",
+      "royel otis|||sofa king",
       "ben howard|||rookery",
       "big thief|||incomprehensible",
       "hermanos gutierrez|||canto andino",
@@ -112,9 +114,7 @@
       "badbadnotgood|||in your eyes",
       "patrick watson|||love songs for robots",
       "douglas firs|||shimmer & glow",
-      "the national|||day i die",
-      "ry x|||untold",
-      "leon bridges feat lydia kitto|||all day all night"
+      "the national|||day i die"
     ],
     "mellow_mix": [
       "billie holiday|||god bless the child",
@@ -525,6 +525,7 @@
       "charlie simpson|||cemetery"
     ],
     "indie_select": [
+      "skids|||the saints are coming",
       "the bottom line|||def jam remix rick rubin",
       "comsat angels|||shiva descending",
       "the the|||that was the day",
@@ -623,8 +624,7 @@
       "world party|||ship of fools",
       "chvrches|||ii",
       "zoot woman|||memory",
-      "wolf alice|||freazy",
-      "the wombats|||let's dance to joy division"
+      "wolf alice|||freazy"
     ],
     "dkfm_edge": [
       "sleep keeper|||cling",
@@ -1345,6 +1345,7 @@
       "2raumwohnung|||bonjour cherie - nacht"
     ],
     "gri_balkon": [
+      "slackwax|||far away from home edit",
       "nicolas jaar|||wouh",
       "unicorn heads|||a trip around the moon",
       "kid loco|||relaxin' with cherry gak sato pre-echo mix",
@@ -1424,7 +1425,6 @@
       "jon hopkins|||sun harmonics",
       "feathered sun|||mysth ft acid pauli & nu & jo ke & raz ohara & chris schwarzwalder",
       "kokoroko|||abusey junction",
-      "slackwax|||far away from home edit",
       "jon hopkins|||lost in thought",
       "kadebostan|||vodka wedding",
       "touch & go|||straight to number one dreamcatcher's mix",
@@ -1549,6 +1549,7 @@
       "cheatahs|||fall"
     ],
     "radio_britannia": [
+      "dragonflies|||setting sun",
       "the seahorses|||you can talk to me",
       "radiohead|||if you say the word",
       "hms morris|||family souls",
@@ -1647,8 +1648,7 @@
       "suede|||attitude",
       "wild beasts|||hooting and howling",
       "demob happy|||voodoo science",
-      "feeder|||playing with fire",
-      "the big moon|||fun"
+      "feeder|||playing with fire"
     ],
     "wbru": [
       "leon bridges|||talk it over",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795137611.1217408,
-    "mellow_mix": 1795137611.1277514,
-    "big_sonic_heaven": 1795137611.131305,
-    "radio_x_chilled": 1795137611.1350753,
-    "dreampop_radio": 1795137611.1392088,
-    "indie_select": 1795137611.1434977,
-    "dkfm_edge": 1795137611.1477895,
+    "vuurland": 1795137647.9946098,
+    "mellow_mix": 1795137647.9992783,
+    "big_sonic_heaven": 1795137648.0027714,
+    "radio_x_chilled": 1795137648.0064924,
+    "dreampop_radio": 1795137648.0105038,
+    "indie_select": 1795137648.0149484,
+    "dkfm_edge": 1795137648.0191634,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795137611.4246662,
-    "dkfm_shoegaze": 1795137611.4289622,
-    "dkfm_classic": 1795137611.4329886,
-    "egofm_rnb": 1795137611.4372532,
-    "egofm_chillout": 1795137611.4415417,
-    "dj_neihtul": 1795137611.4442382,
-    "gri_balkon": 1795137611.4468887,
-    "ignoreradio_shoegaze": 1795137611.4506576,
-    "radio_britannia": 1795137611.4550087,
-    "wbru": 1795137611.4577167
+    "dark_edge": 1795137648.02455,
+    "dkfm_shoegaze": 1795137648.028819,
+    "dkfm_classic": 1795137648.032853,
+    "egofm_rnb": 1795137648.0369556,
+    "egofm_chillout": 1795137648.041158,
+    "dj_neihtul": 1795137648.0438612,
+    "gri_balkon": 1795137648.0464637,
+    "ignoreradio_shoegaze": 1795137648.050205,
+    "radio_britannia": 1795137648.3006787,
+    "wbru": 1795137648.3034105
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29211,11 +29211,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "ben howard|||rookery",
+  "__last_radio_key_vuurland": "arcade fire|||age of anxiety ii",
   "__last_radio_key_mellow_mix": "billie holiday|||god bless the child",
   "__last_radio_key_big_sonic_heaven": "searows|||in violet",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 27956,
+  "__v116_fifo_next_sequence": 27958,
   "__v146_spotify_budget_slot": 1795137531.9853904,
   "__vuurland_active_playlist_count": 3364,
   "__vuurland_active_volume": 2,
@@ -140123,7 +140123,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the bottom line|||def jam remix rick rubin",
+  "__last_radio_key_indie_select": "skids|||the saints are coming",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -146918,7 +146918,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "nicolas jaar|||wouh",
+  "__last_radio_key_gri_balkon": "slackwax|||far away from home edit",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -148459,7 +148459,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the seahorses|||you can talk to me",
+  "__last_radio_key_radio_britannia": "dragonflies|||setting sun",
   "__last_radio_key_wbru": "leon bridges|||talk it over",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
