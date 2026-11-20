@@ -117,6 +117,8 @@
       "snuggle|||woman lake"
     ],
     "mellow_mix": [
+      "peter gabriel|||love can heal",
+      "van morrison|||i will be there",
       "vance joy|||mess is mine",
       "arcade fire|||neighborhood #4 7 kettles",
       "elliott brood|||northern air",
@@ -214,11 +216,10 @@
       "elton john|||levon",
       "blitzen trapper|||don't be a stranger",
       "norah jones|||in the morning",
-      "van morrison|||cleaning windows",
-      "wilco|||if i ever was a child",
-      "feist|||mushaboom"
+      "van morrison|||cleaning windows"
     ],
     "big_sonic_heaven": [
+      "tricky|||chinese interlude",
       "velvet|||circles",
       "the cure|||and nothing is forever",
       "swallow|||lovesleep vocal version - 2026 remaster",
@@ -317,8 +318,7 @@
       "sigur ros|||klettur",
       "erasure|||crown of thorns",
       "lucid express|||stars in the car",
-      "hartfield|||blow away",
-      "golden cats|||sheer light"
+      "hartfield|||blow away"
     ],
     "radio_x_chilled": [
       "nirvana|||dumb unplugged in new york",
@@ -423,6 +423,7 @@
       "the xx|||islands"
     ],
     "dreampop_radio": [
+      "camera obscura|||tears for affairs",
       "the pieces of shit|||lay & love",
       "tame impala|||feels like we only go backwards",
       "shakespears sister|||hello turn your radio on",
@@ -521,10 +522,10 @@
       "belle and sebastian|||beautiful",
       "peter gallway|||i wish you everything",
       "polar|||bipolar dream",
-      "coldplay|||brothers and sisters",
-      "yumi zouma|||the brae"
+      "coldplay|||brothers and sisters"
     ],
     "indie_select": [
+      "indieselect|||indieselect-jingle-",
       "the sound|||one thousand reasons",
       "blackfield|||once",
       "london grammar|||californian soil maya jane coles remix",
@@ -623,8 +624,7 @@
       "tiger lou|||leap of love",
       "the weakerthans|||one great city!",
       "arcade fire|||it's never over oh orpheus",
-      "blink 182|||i miss you",
-      "tv on the radio|||family tree"
+      "blink 182|||i miss you"
     ],
     "dkfm_edge": [
       "diiv|||reflected",
@@ -1039,6 +1039,7 @@
       "curve|||perish"
     ],
     "egofm_rnb": [
+      "foushee|||enjoy the silence",
       "saint wknd & max|||survive",
       "olivia dean|||dive",
       "fabich feat simon jnr|||need somebody",
@@ -1137,8 +1138,7 @@
       "goldlink feat mya|||roll call",
       "alunageorge|||not above love",
       "nneka|||about guilt",
-      "cleo sol|||why don't you",
-      "homeshake|||give it to me"
+      "cleo sol|||why don't you"
     ],
     "egofm_chillout": [
       "sinnr|||cybele",
@@ -1447,6 +1447,7 @@
       "parra for cuva|||out here with us"
     ],
     "ignoreradio_shoegaze": [
+      "whipping boy|||twinkle",
       "sunlotus|||picturesque",
       "the sound|||winning",
       "walrus|||wade",
@@ -1545,8 +1546,7 @@
       "yo la tengo|||thin blue line swinger",
       "tamaryn|||coral flower",
       "ash|||shining light",
-      "neraneve|||quasi niente",
-      "mj guider|||simulus"
+      "neraneve|||quasi niente"
     ],
     "radio_britannia": [
       "general fiasco|||bad habits",
@@ -1651,6 +1651,7 @@
       "yungblud|||the funeral"
     ],
     "wbru": [
+      "faye webster|||kingston",
       "geese|||love takes miles cameron winter solo",
       "jungle|||the wave",
       "phoebe bridgers|||bobby",
@@ -1749,29 +1750,28 @@
       "jeff buckley|||hallelujah",
       "royel otis|||car",
       "keane|||somewhere only we know",
-      "billie eilish|||everything i wanted",
-      "phoebe bridgers|||lost boys"
+      "billie eilish|||everything i wanted"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795190289.4562128,
-    "mellow_mix": 1795190289.4591079,
-    "big_sonic_heaven": 1795190289.4616334,
-    "radio_x_chilled": 1795190289.463882,
-    "dreampop_radio": 1795190289.4662013,
-    "indie_select": 1795190289.4690115,
-    "dkfm_edge": 1795190289.4713829,
+    "vuurland": 1795190370.87969,
+    "mellow_mix": 1795190371.1554914,
+    "big_sonic_heaven": 1795190371.1581137,
+    "radio_x_chilled": 1795190371.1603563,
+    "dreampop_radio": 1795190371.1627216,
+    "indie_select": 1795190371.165504,
+    "dkfm_edge": 1795190371.167875,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795190289.4748247,
-    "dkfm_shoegaze": 1795190289.4776285,
-    "dkfm_classic": 1795190289.4800937,
-    "egofm_rnb": 1795190289.482595,
-    "egofm_chillout": 1795190289.4850733,
-    "dj_neihtul": 1795190289.487178,
-    "gri_balkon": 1795190289.4889653,
-    "ignoreradio_shoegaze": 1795190289.4913902,
-    "radio_britannia": 1795190289.4938211,
-    "wbru": 1795190289.4957674
+    "dark_edge": 1795190371.1712298,
+    "dkfm_shoegaze": 1795190371.1740317,
+    "dkfm_classic": 1795190371.1765168,
+    "egofm_rnb": 1795190371.1790938,
+    "egofm_chillout": 1795190371.1815212,
+    "dj_neihtul": 1795190371.183592,
+    "gri_balkon": 1795190371.1853914,
+    "ignoreradio_shoegaze": 1795190371.4393942,
+    "radio_britannia": 1795190371.4418442,
+    "wbru": 1795190371.4438722
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -27254,6 +27254,7 @@
       "weekend|||july",
       "weekend|||youth haunts",
       "weezer|||buddy holly",
+      "whipping boy|||twinkle",
       "whipping boy|||we don't need nobody else",
       "whipping boy|||when we were young",
       "whirr|||crush tones",
@@ -30302,10 +30303,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "the lumineers|||salt and the sea",
-  "__last_radio_key_mellow_mix": "vance joy|||mess is mine",
-  "__last_radio_key_big_sonic_heaven": "velvet|||circles",
+  "__last_radio_key_mellow_mix": "peter gabriel|||love can heal",
+  "__last_radio_key_big_sonic_heaven": "tricky|||chinese interlude",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 28816,
+  "__v116_fifo_next_sequence": 28818,
   "__v146_spotify_budget_slot": 1795190291.973816,
   "__vuurland_active_playlist_count": 3670,
   "__vuurland_active_volume": 2,
@@ -142389,7 +142390,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the pieces of shit|||lay & love",
+  "__last_radio_key_dreampop_radio": "camera obscura|||tears for affairs",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -142507,7 +142508,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the sound|||one thousand reasons",
+  "__last_radio_key_indie_select": "indieselect|||indieselect-jingle-",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -149283,7 +149284,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "saint wknd & max|||survive",
+  "__last_radio_key_egofm_rnb": "foushee|||enjoy the silence",
   "__last_radio_key_egofm_chillout": "sinnr|||cybele",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -149322,7 +149323,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "sunlotus|||picturesque",
+  "__last_radio_key_ignoreradio_shoegaze": "whipping boy|||twinkle",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -150846,7 +150847,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "general fiasco|||bad habits",
-  "__last_radio_key_wbru": "geese|||love takes miles cameron winter solo",
+  "__last_radio_key_wbru": "faye webster|||kingston",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
