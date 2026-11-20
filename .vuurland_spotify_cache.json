@@ -117,6 +117,7 @@
       "mount kimbie feat king krule|||empty and silent"
     ],
     "mellow_mix": [
+      "k d lang|||helpless",
       "barenaked ladies|||call and answer",
       "the mighty rootsmen|||i won't back down",
       "catie curtis|||troubled mind",
@@ -215,10 +216,10 @@
       "grateful dead|||ripple",
       "roo panes|||nightjar and the nightingale",
       "mumford & sons|||harvest",
-      "eddie vedder|||rise",
-      "jack johnson|||good people"
+      "eddie vedder|||rise"
     ],
     "big_sonic_heaven": [
+      "trentemøller|||terrified",
       "black box recorder|||goodnight kiss",
       "the twilight sad|||inhospitable/hospital",
       "lucid express|||take heart",
@@ -265,7 +266,6 @@
       "a sunny day in glasgow|||almost like emotion the drop",
       "black doldrums|||compulsion",
       "cigarettes for breakfast|||goodbye",
-      "trentemøller|||terrified",
       "tricky|||chinese interlude",
       "velvet|||circles",
       "the cure|||and nothing is forever",
@@ -627,6 +627,7 @@
       "steve queralt & emma anderson|||lonely town"
     ],
     "dkfm_edge": [
+      "wisp|||pandora",
       "dreamwheel|||bayou rouge",
       "long distances|||delicate surrender",
       "newmoon|||still",
@@ -725,8 +726,7 @@
       "self love club|||high by the beach",
       "manic sheep|||tawdry clip",
       "t a k e r|||dolls",
-      "orion lake|||rabbit",
-      "wires to the temples|||sleep paralysis"
+      "orion lake|||rabbit"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -937,6 +937,7 @@
       "alonekitty|||i'm wide awake"
     ],
     "dkfm_classic": [
+      "swervedriver|||sandblasted",
       "kitchens of distinction|||hypnogogic",
       "lovesliescrushing|||seesaw",
       "cranes|||dreamless",
@@ -1035,8 +1036,7 @@
       "the sundays|||you're not the only one i know",
       "cranes|||don't close your eyes",
       "chapterhouse|||sixteen years",
-      "lush|||stray",
-      "chimera|||let me be around"
+      "lush|||stray"
     ],
     "egofm_rnb": [
       "honne|||warm on a cold night",
@@ -1651,6 +1651,7 @@
       "the beta band|||out side"
     ],
     "wbru": [
+      "clarion|||hello juliet",
       "surf curse|||freaks",
       "cage the elephant|||beaches in tennessee",
       "leap|||exit signs",
@@ -1728,7 +1729,6 @@
       "balu brigada|||bedhead",
       "the smiths|||please please please let me get what i want",
       "fontaines d c|||japan",
-      "clarion|||hello juliet",
       "i don't know how but they found me|||choke",
       "mgmt|||kids",
       "the neighbourhood|||reflections",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795204936.719072,
-    "mellow_mix": 1795204936.7221742,
-    "big_sonic_heaven": 1795204936.7248151,
-    "radio_x_chilled": 1795204936.727205,
-    "dreampop_radio": 1795204936.729678,
-    "indie_select": 1795204936.7325888,
-    "dkfm_edge": 1795204936.7351522,
+    "vuurland": 1795205021.987972,
+    "mellow_mix": 1795205021.9912274,
+    "big_sonic_heaven": 1795205022.3558025,
+    "radio_x_chilled": 1795205022.3583302,
+    "dreampop_radio": 1795205022.360819,
+    "indie_select": 1795205022.3635979,
+    "dkfm_edge": 1795205022.366254,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795204936.7387156,
-    "dkfm_shoegaze": 1795204936.7416902,
-    "dkfm_classic": 1795204936.7442732,
-    "egofm_rnb": 1795204936.746914,
-    "egofm_chillout": 1795204936.749675,
-    "dj_neihtul": 1795204936.7521448,
-    "gri_balkon": 1795204936.7540264,
-    "ignoreradio_shoegaze": 1795204936.7567205,
-    "radio_britannia": 1795204936.75945,
-    "wbru": 1795204936.761659
+    "dark_edge": 1795205022.3697777,
+    "dkfm_shoegaze": 1795205022.3727355,
+    "dkfm_classic": 1795205022.3754597,
+    "egofm_rnb": 1795205022.3781269,
+    "egofm_chillout": 1795205022.3807535,
+    "dj_neihtul": 1795205022.383191,
+    "gri_balkon": 1795205022.3851595,
+    "ignoreradio_shoegaze": 1795205022.3878124,
+    "radio_britannia": 1795205022.3904576,
+    "wbru": 1795205022.3926013
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30615,8 +30615,8 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "phoebe bridgers|||that funny feeling",
-  "__last_radio_key_mellow_mix": "barenaked ladies|||call and answer",
-  "__last_radio_key_big_sonic_heaven": "black box recorder|||goodnight kiss",
+  "__last_radio_key_mellow_mix": "k d lang|||helpless",
+  "__last_radio_key_big_sonic_heaven": "trentemøller|||terrified",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 29073,
   "__v146_spotify_budget_slot": 1795204939.285163,
@@ -144552,9 +144552,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "dreamwheel|||bayou rouge",
+  "__last_radio_key_dkfm_edge": "wisp|||pandora",
   "__last_radio_key_dkfm_shoegaze": "lucid express|||faux sweetness",
-  "__last_radio_key_dkfm_classic": "kitchens of distinction|||hypnogogic",
+  "__last_radio_key_dkfm_classic": "swervedriver|||sandblasted",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -151530,7 +151530,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "arctic monkeys|||snap out of it",
-  "__last_radio_key_wbru": "surf curse|||freaks",
+  "__last_radio_key_wbru": "clarion|||hello juliet",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
