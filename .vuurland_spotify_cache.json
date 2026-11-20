@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795139463.2058291,
+  "__v150_next_spotify_round_at": 1795139583.4066992,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -525,6 +525,7 @@
       "passenger|||whispers"
     ],
     "indie_select": [
+      "stiff little fingers|||tin soldiers",
       "stars|||undertow",
       "innocent child|||ambient mix by andre shapps",
       "delphic|||submission",
@@ -623,8 +624,7 @@
       "now it's overhead|||let the sirens rest",
       "arctic monkeys|||one for the road",
       "electronic|||when she's gone",
-      "glasvegas|||later when the tv turns to static",
-      "13 & god|||perfect speed"
+      "glasvegas|||later when the tv turns to static"
     ],
     "dkfm_edge": [
       "sea lemon|||vaporized",
@@ -1549,6 +1549,7 @@
       "astrobrite|||hopefully"
     ],
     "radio_britannia": [
+      "fat dog|||heart of darkness",
       "nothing but thieves|||is everybody going crazy?",
       "damon albarn|||particles",
       "another sky|||uh oh!",
@@ -1647,8 +1648,7 @@
       "easy life|||beeswax",
       "foals|||looking high",
       "ash|||girl from mars",
-      "elbow|||fallen angel album version",
-      "panchiko|||one car hits another feat mei semones"
+      "elbow|||fallen angel album version"
     ],
     "wbru": [
       "robyn|||dancing on my own",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795139423.3962424,
-    "mellow_mix": 1795139423.4032044,
-    "big_sonic_heaven": 1795139423.406825,
-    "radio_x_chilled": 1795139423.4107618,
-    "dreampop_radio": 1795139423.4149592,
-    "indie_select": 1795139423.419208,
-    "dkfm_edge": 1795139423.4236467,
+    "vuurland": 1795139462.3861434,
+    "mellow_mix": 1795139462.3927343,
+    "big_sonic_heaven": 1795139462.3963416,
+    "radio_x_chilled": 1795139462.4001377,
+    "dreampop_radio": 1795139462.4043012,
+    "indie_select": 1795139462.40885,
+    "dkfm_edge": 1795139462.4131608,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795139423.705899,
-    "dkfm_shoegaze": 1795139423.9708884,
-    "dkfm_classic": 1795139423.9751318,
-    "egofm_rnb": 1795139423.979336,
-    "egofm_chillout": 1795139423.9836588,
-    "dj_neihtul": 1795139423.9864976,
-    "gri_balkon": 1795139423.9891834,
-    "ignoreradio_shoegaze": 1795139423.9930422,
-    "radio_britannia": 1795139423.9975626,
-    "wbru": 1795139424.00028
+    "dark_edge": 1795139462.4187093,
+    "dkfm_shoegaze": 1795139462.423092,
+    "dkfm_classic": 1795139462.4271955,
+    "egofm_rnb": 1795139462.431318,
+    "egofm_chillout": 1795139462.435678,
+    "dj_neihtul": 1795139462.438464,
+    "gri_balkon": 1795139462.441131,
+    "ignoreradio_shoegaze": 1795139462.4449806,
+    "radio_britannia": 1795139462.7111402,
+    "wbru": 1795139462.7140615
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -26951,6 +26951,7 @@
       "exit calm|||hearts and minds",
       "exit calm|||were on our own",
       "exmagician|||job done",
+      "fat dog|||heart of darkness",
       "fat dog|||shit love",
       "fat white family|||work",
       "feeder|||idaho",
@@ -29239,6 +29240,15 @@
       "matching_version": 35,
       "failed_searches": 3,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "torpus & the art directors|||the story's all the same": {
+      "artist": "Torpus & the Art Directors",
+      "title": "The story's all the same",
+      "source": "dreampop_radio",
+      "failed_at": 1795139466,
+      "matching_version": 35,
+      "failed_searches": 3,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -29249,8 +29259,8 @@
   "__last_radio_key_mellow_mix": "blitzen trapper|||furr",
   "__last_radio_key_big_sonic_heaven": "stefano guzzetti|||love's riddle feat emma anderson & heidi berry",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 27988,
-  "__v146_spotify_budget_slot": 1795139344.956868,
+  "__v116_fifo_next_sequence": 27989,
+  "__v146_spotify_budget_slot": 1795139465.1855357,
   "__vuurland_active_playlist_count": 3374,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -102460,7 +102470,7 @@
     "olympic swimmers|||apples and pears": 1,
     "fenech-soler|||lies original": 1,
     "arcana arcade|||clock said all aboard": 1,
-    "torpus & the art directors|||the story's all the same": 2,
+    "torpus & the art directors|||the story's all the same": 3,
     "grizzly bear|||boy from school hot chip cover": 1,
     "erik blood|||share your love": 1,
     "gallant feat sufjan stevens & rebecca sugar|||toogoodtobetrue": 1,
@@ -140199,7 +140209,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "stars|||undertow",
+  "__last_radio_key_indie_select": "stiff little fingers|||tin soldiers",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -145249,7 +145259,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "big_sonic_heaven",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -145261,7 +145271,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -145294,7 +145304,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "big_sonic_heaven",
+  "__v227_last_source_turn": "dreampop_radio",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -148535,7 +148545,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "nothing but thieves|||is everybody going crazy?",
+  "__last_radio_key_radio_britannia": "fat dog|||heart of darkness",
   "__last_radio_key_wbru": "robyn|||dancing on my own",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -152076,31 +152086,6 @@
       ],
       "status": "uncertain"
     },
-    "torpus & the art directors|||the story's all the same": {
-      "source": "dreampop_radio",
-      "artist": "Torpus & the Art Directors",
-      "title": "The story's all the same",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [
-        {
-          "artist": "Bluegirl",
-          "title": "Look At All The Happy People",
-          "spotify_id": "18o11AfvD5c8x6LjCSeCYG"
-        },
-        {
-          "artist": "Childish Gambino",
-          "title": "Heartbeat",
-          "spotify_id": "5AGQSF0ytihJyt96K5vW9d"
-        },
-        {
-          "artist": "dEUS",
-          "title": "The Architect",
-          "spotify_id": "4Me8qiJo2j9CZDMM2UxAJm"
-        }
-      ],
-      "status": "low_relevance"
-    },
     "fragile animals|||breathe out and in": {
       "source": "dkfm_edge",
       "artist": "Fragile Animals",
@@ -152174,6 +152159,15 @@
           "spotify_id": "7qhNiOVggMw2y3ypxAyyZT"
         }
       ],
+      "status": "low_relevance"
+    },
+    "torpus & the art directors|||the story's all the same": {
+      "source": "dreampop_radio",
+      "artist": "Torpus & the Art Directors",
+      "title": "The story's all the same",
+      "kind": "weak",
+      "variant": 2,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
