@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795204080.599905,
+  "__v150_next_spotify_round_at": 1795204202.5352893,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -423,6 +423,7 @@
       "soundgarden|||black hole sun acoustic"
     ],
     "dreampop_radio": [
+      "the comsat angels|||high tide",
       "the church|||under the milky way",
       "psychedelic furs|||the ghost in you",
       "the jesus and mary chain|||nine million rainy days",
@@ -521,10 +522,10 @@
       "still parade|||hunter",
       "christian kjellvander|||gallow",
       "real estate|||navigator",
-      "beachwood sparks|||canyon ride",
-      "posies the|||last crawl"
+      "beachwood sparks|||canyon ride"
     ],
     "indie_select": [
+      "heaven 17|||crushed by the wheels of industry parts one and two",
       "indieselect|||jingle 1",
       "newdad|||angel",
       "nick cave and the bad seeds|||abattoir blues",
@@ -623,8 +624,7 @@
       "steve queralt & emma anderson|||lonely town",
       "the postal service|||the district sleeps alone tonight",
       "two door cinema club|||costume party",
-      "florence the machine|||only if for a night",
-      "calluna roots|||wicked man sg-remix"
+      "florence the machine|||only if for a night"
     ],
     "dkfm_edge": [
       "the sewing club|||bite",
@@ -835,6 +835,7 @@
       "tame impala|||i don't really mind"
     ],
     "dkfm_shoegaze": [
+      "wild nothing|||only heather",
       "ecstasy of saint theresa|||what's",
       "golden gardens|||desert rose",
       "subterraneos|||'cause i love you",
@@ -933,8 +934,7 @@
       "alonekitty|||i'm wide awake",
       "luster|||forever",
       "the cherry wave|||blush",
-      "deafcult|||summertime",
-      "beverly|||victoria"
+      "deafcult|||summertime"
     ],
     "dkfm_classic": [
       "seefeel|||through you",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795204045.5061607,
-    "mellow_mix": 1795204045.5093384,
-    "big_sonic_heaven": 1795204045.511962,
-    "radio_x_chilled": 1795204045.514414,
-    "dreampop_radio": 1795204045.5168052,
-    "indie_select": 1795204045.5195487,
-    "dkfm_edge": 1795204045.522069,
+    "vuurland": 1795204081.781285,
+    "mellow_mix": 1795204081.784356,
+    "big_sonic_heaven": 1795204081.786996,
+    "radio_x_chilled": 1795204081.7892945,
+    "dreampop_radio": 1795204081.791844,
+    "indie_select": 1795204081.794902,
+    "dkfm_edge": 1795204081.797413,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795204045.7770839,
-    "dkfm_shoegaze": 1795204045.7801561,
-    "dkfm_classic": 1795204045.7827723,
-    "egofm_rnb": 1795204045.7853653,
-    "egofm_chillout": 1795204045.7879505,
-    "dj_neihtul": 1795204045.7903652,
-    "gri_balkon": 1795204045.79222,
-    "ignoreradio_shoegaze": 1795204045.7948034,
-    "radio_britannia": 1795204045.7974036,
-    "wbru": 1795204045.7995708
+    "dark_edge": 1795204081.8010259,
+    "dkfm_shoegaze": 1795204081.8040774,
+    "dkfm_classic": 1795204081.8066392,
+    "egofm_rnb": 1795204081.809215,
+    "egofm_chillout": 1795204081.8117886,
+    "dj_neihtul": 1795204081.8141594,
+    "gri_balkon": 1795204081.8160338,
+    "ignoreradio_shoegaze": 1795204081.8186128,
+    "radio_britannia": 1795204081.8212385,
+    "wbru": 1795204081.8233876
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -20338,6 +20338,7 @@
       "wild meadows|||stay for a while",
       "wild nothing|||letting go",
       "wild nothing|||live in dreams",
+      "wild nothing|||only heather",
       "wild signals|||home",
       "wildhoney|||horror movie",
       "wildhoney|||hurts to hear",
@@ -30579,6 +30580,15 @@
       "matching_version": 35,
       "failed_searches": 3,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "supertanker|||made of light": {
+      "artist": "Supertanker",
+      "title": "Made of Light",
+      "source": "dkfm_edge",
+      "failed_at": 1795204086,
+      "matching_version": 35,
+      "failed_searches": 3,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -30590,7 +30600,7 @@
   "__last_radio_key_big_sonic_heaven": "dave gahan kurt uenala & the raveonettes|||chains",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 29060,
-  "__v146_spotify_budget_slot": 1795203962.3970342,
+  "__v146_spotify_budget_slot": 1795204084.3616064,
   "__vuurland_active_playlist_count": 3754,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -105174,7 +105184,7 @@
     "snow patrol|||how to be dead cla mix": 3,
     "since always|||we still know how to dream": 3,
     "veldt|||end all to be all": 2,
-    "supertanker|||made of light": 2,
+    "supertanker|||made of light": 3,
     "the travelling band|||waterfall": 5,
     "wires to the temples|||smeared/aura": 1,
     "swirl|||2 eternity": 1,
@@ -143018,7 +143028,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the church|||under the milky way",
+  "__last_radio_key_dreampop_radio": "the comsat angels|||high tide",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -143136,7 +143146,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "indieselect|||jingle 1",
+  "__last_radio_key_indie_select": "heaven 17|||crushed by the wheels of industry parts one and two",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -144499,7 +144509,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "the sewing club|||bite",
-  "__last_radio_key_dkfm_shoegaze": "ecstasy of saint theresa|||what's",
+  "__last_radio_key_dkfm_shoegaze": "wild nothing|||only heather",
   "__last_radio_key_dkfm_classic": "seefeel|||through you",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -148183,7 +148193,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -148195,7 +148205,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -148228,7 +148238,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -156513,31 +156523,6 @@
       ],
       "status": "low_relevance"
     },
-    "supertanker|||made of light": {
-      "source": "dkfm_edge",
-      "artist": "Supertanker",
-      "title": "Made of Light",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [
-        {
-          "artist": "Beach House",
-          "title": "Beyond Love",
-          "spotify_id": "0fbKFguQCxauLvVZ262f4c"
-        },
-        {
-          "artist": "Opeth",
-          "title": "Windowpane",
-          "spotify_id": "4uJSCrI7r0usNJ3aaHAuC6"
-        },
-        {
-          "artist": "Meryem Aboulouafa",
-          "title": "Deeply",
-          "spotify_id": "4zIpKhIGG2p9uJgyvthVxQ"
-        }
-      ],
-      "status": "low_relevance"
-    },
     "aural planet|||are you humen": {
       "source": "dj_neihtul",
       "artist": "Aural Planet",
@@ -156611,6 +156596,15 @@
           "spotify_id": "4IBzgsoWHLsP8AMlO23iOF"
         }
       ],
+      "status": "low_relevance"
+    },
+    "supertanker|||made of light": {
+      "source": "dkfm_edge",
+      "artist": "Supertanker",
+      "title": "Made of Light",
+      "kind": "weak",
+      "variant": 2,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
