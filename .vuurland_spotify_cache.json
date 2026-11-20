@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "hozier|||work song",
+      "sylvie kreusch|||comic trip",
       "david kushner|||dead man",
       "declan mckenna|||slipping through my fingers",
       "eddie vedder|||save it for later",
@@ -112,9 +114,7 @@
       "the haunted youth|||wake up",
       "coldplay|||trouble",
       "camille camille|||in a song",
-      "slowdive|||the slab",
-      "solange|||cranes in the sky",
-      "volcano choir|||byegone"
+      "slowdive|||the slab"
     ],
     "mellow_mix": [
       "patty griffin|||one big love",
@@ -321,6 +321,7 @@
       "honey i'm home|||soon"
     ],
     "radio_x_chilled": [
+      "paolo nutini|||candy",
       "the streets|||dry your eyes",
       "ray lamontagne|||trouble",
       "travis|||writing to reach you",
@@ -419,8 +420,7 @@
       "weezer|||island in the sun",
       "nothing but thieves|||sorry acoustic",
       "kirsty maccoll|||days",
-      "richard ashcroft|||break the night with colour",
-      "shed seven|||chasing rainbows"
+      "richard ashcroft|||break the night with colour"
     ],
     "dreampop_radio": [
       "tahiti 80|||strange things",
@@ -835,6 +835,7 @@
       "alt-j|||dissolve me"
     ],
     "dkfm_shoegaze": [
+      "wildhoney|||hurts to hear",
       "petal head|||in my head",
       "clearbody|||scratch the color",
       "crystal canyon|||hindsight",
@@ -918,7 +919,6 @@
       "the shacks|||follow me",
       "the cordial sins|||hide",
       "cursetheknife|||high & dry",
-      "wildhoney|||hurts to hear",
       "piroshka|||village of the damned",
       "slow salvation|||wait around another day",
       "singinggum|||hollow",
@@ -937,6 +937,7 @@
       "deux visages|||afterthought"
     ],
     "dkfm_classic": [
+      "curve|||triumph",
       "february|||inside blue glass",
       "lush|||thoughtforms",
       "blind mr jones|||spook easy",
@@ -1035,8 +1036,7 @@
       "adorable|||i'll be your saint",
       "catherine wheel|||bill and ben",
       "bowery electric|||without stopping",
-      "the verve|||virtual world",
-      "pale saints|||shell"
+      "the verve|||virtual world"
     ],
     "egofm_rnb": [
       "bobby sparks ii|||forever mine feat donessa perry",
@@ -1141,6 +1141,7 @@
       "lava la rue|||magpie"
     ],
     "egofm_chillout": [
+      "sufjan stevens & angelo de augustine|||reach out",
       "gorje hewek & izhevski|||secret feat peter broderick",
       "massive attack|||paradise circus",
       "angelo badalament|||twin peaks theme instrumental",
@@ -1239,8 +1240,7 @@
       "air|||playground love",
       "g mills luke otwell & kyle mcevoy|||ocean view",
       "jim fletch|||burning",
-      "agnes obel|||familiar",
-      "hermanos gutierrez|||low sun"
+      "agnes obel|||familiar"
     ],
     "dj_neihtul": [
       "dubfire vs oliver huntemann|||diablo original",
@@ -1345,6 +1345,7 @@
       "gundelach|||spiders"
     ],
     "gri_balkon": [
+      "badbadnotgood|||time moves slow ft samuel t herring",
       "ras|||4:20",
       "robag wruhme|||ak-do 5",
       "four tet|||lion jamie xx remix",
@@ -1443,8 +1444,7 @@
       "gianni brezzo|||mental shower",
       "nosaj thing|||aquarium",
       "plaid|||zamami",
-      "rival consoles|||haunt",
-      "the blaze|||runaway"
+      "rival consoles|||haunt"
     ],
     "ignoreradio_shoegaze": [
       "sonic youth|||death valley '69 w/ lydia lunch",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795140292.213084,
-    "mellow_mix": 1795140292.2197187,
-    "big_sonic_heaven": 1795140292.223279,
-    "radio_x_chilled": 1795140292.2270796,
-    "dreampop_radio": 1795140292.2313514,
-    "indie_select": 1795140292.2357366,
-    "dkfm_edge": 1795140292.240085,
+    "vuurland": 1795140373.9962897,
+    "mellow_mix": 1795140374.0028691,
+    "big_sonic_heaven": 1795140374.0065641,
+    "radio_x_chilled": 1795140374.0105119,
+    "dreampop_radio": 1795140374.0147624,
+    "indie_select": 1795140374.0191271,
+    "dkfm_edge": 1795140374.0235717,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795140292.2456715,
-    "dkfm_shoegaze": 1795140292.2500618,
-    "dkfm_classic": 1795140292.2542431,
-    "egofm_rnb": 1795140292.258493,
-    "egofm_chillout": 1795140292.2628195,
-    "dj_neihtul": 1795140292.2656605,
-    "gri_balkon": 1795140292.26829,
-    "ignoreradio_shoegaze": 1795140292.27214,
-    "radio_britannia": 1795140292.276685,
-    "wbru": 1795140292.2793722
+    "dark_edge": 1795140374.0291297,
+    "dkfm_shoegaze": 1795140374.033556,
+    "dkfm_classic": 1795140374.0378535,
+    "egofm_rnb": 1795140374.0421135,
+    "egofm_chillout": 1795140374.0466008,
+    "dj_neihtul": 1795140374.0494454,
+    "gri_balkon": 1795140374.3231916,
+    "ignoreradio_shoegaze": 1795140374.3272264,
+    "radio_britannia": 1795140374.3318336,
+    "wbru": 1795140374.334661
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -24280,6 +24280,7 @@
       "b j smith|||hold on to it jonny nash remix",
       "baby alpaca|||sea of dreams turbotito remix",
       "badbadnotgood|||hedron",
+      "badbadnotgood|||time moves slow ft samuel t herring",
       "baril|||one more rush",
       "bar|||white noise shahrokh dini remix",
       "baths|||orator",
@@ -29271,11 +29272,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "david kushner|||dead man",
+  "__last_radio_key_vuurland": "hozier|||work song",
   "__last_radio_key_mellow_mix": "patty griffin|||one big love",
   "__last_radio_key_big_sonic_heaven": "trentemøller|||terrified",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 28004,
+  "__v116_fifo_next_sequence": 28005,
   "__v146_spotify_budget_slot": 1795140294.7196774,
   "__vuurland_active_playlist_count": 3378,
   "__vuurland_active_volume": 2,
@@ -140020,7 +140021,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the streets|||dry your eyes",
+  "__last_radio_key_radio_x_chilled": "paolo nutini|||candy",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -141605,8 +141606,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "keaper|||the painting",
-  "__last_radio_key_dkfm_shoegaze": "petal head|||in my head",
-  "__last_radio_key_dkfm_classic": "february|||inside blue glass",
+  "__last_radio_key_dkfm_shoegaze": "wildhoney|||hurts to hear",
+  "__last_radio_key_dkfm_classic": "curve|||triumph",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -147022,7 +147023,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "bobby sparks ii|||forever mine feat donessa perry",
-  "__last_radio_key_egofm_chillout": "gorje hewek & izhevski|||secret feat peter broderick",
+  "__last_radio_key_egofm_chillout": "sufjan stevens & angelo de augustine|||reach out",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -147037,7 +147038,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "ras|||4:20",
+  "__last_radio_key_gri_balkon": "badbadnotgood|||time moves slow ft samuel t herring",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
