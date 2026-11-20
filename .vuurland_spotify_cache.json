@@ -219,6 +219,8 @@
       "paul simon|||slip slidin' away"
     ],
     "big_sonic_heaven": [
+      "trentemøller|||to mist",
+      "clan of xymox|||back door",
       "actors|||left on read",
       "zola jesus|||skin",
       "fever ray|||north",
@@ -316,9 +318,7 @@
       "echo & the bunnymen|||we prayed in the dark",
       "m83|||skin of the night",
       "silverdeer|||will it break",
-      "jeff buckley|||opened once",
-      "washed out|||got your back",
-      "encarta 98|||destello"
+      "jeff buckley|||opened once"
     ],
     "radio_x_chilled": [
       "biffy clyro|||god only knows mtv unplugged live at roundhouse london",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "the doors|||riders on the storm",
       "choir of young believers|||action-reaction",
       "ana coman|||ce mi-ai spus",
       "circa waves|||sad happy",
@@ -831,8 +832,7 @@
       "skunk anansie|||hedonism just because you feel good",
       "the nicholas|||teardrops",
       "soley|||pretty face",
-      "teenage priest|||anymore",
-      "simple minds|||alive and kicking"
+      "teenage priest|||anymore"
     ],
     "dkfm_shoegaze": [
       "thelma's dream|||underwater",
@@ -937,6 +937,7 @@
       "ancient channels|||chimera"
     ],
     "dkfm_classic": [
+      "slowdive|||altogether",
       "my bloody valentine|||cigarette in your bed",
       "iress|||underneath",
       "stereolab|||french disko",
@@ -1035,8 +1036,7 @@
       "moose|||polly",
       "slowdive|||40 days",
       "swervedriver|||son of mustang ford",
-      "february|||angel bomb",
-      "cocteau twins|||the thinner the air"
+      "february|||angel bomb"
     ],
     "egofm_rnb": [
       "tlc|||unpretty",
@@ -1141,6 +1141,7 @@
       "ben khan|||ruby"
     ],
     "egofm_chillout": [
+      "roedelius & story|||crisscrossing",
       "thievery corporation|||lebanese blonde",
       "psalm trees & guillaume muschalle|||sombre",
       "the field tapes wowflower & ezzy|||cloud carpets",
@@ -1239,8 +1240,7 @@
       "gizmo varillas|||paraiso",
       "middle school aso & aviino|||canary forest",
       "goosetaf anbuu & philanthrope|||last night feat lead major",
-      "nina simone|||feel good skyphos",
-      "bon iver|||22 over soon"
+      "nina simone|||feel good skyphos"
     ],
     "dj_neihtul": [
       "naoki kenji|||ecoustic chapter 1",
@@ -1754,21 +1754,21 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795161518.3808928,
-    "mellow_mix": 1795161518.3884733,
-    "big_sonic_heaven": 1795161518.3928964,
-    "radio_x_chilled": 1795161518.39711,
-    "dreampop_radio": 1795161518.4018002,
-    "indie_select": 1795161518.4065776,
-    "dkfm_edge": 1795161518.411568,
+    "vuurland": 1795161602.048121,
+    "mellow_mix": 1795161602.0548325,
+    "big_sonic_heaven": 1795161602.0593145,
+    "radio_x_chilled": 1795161602.0635633,
+    "dreampop_radio": 1795161602.0681572,
+    "indie_select": 1795161602.0729694,
+    "dkfm_edge": 1795161602.0778499,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795161518.4176342,
-    "dkfm_shoegaze": 1795161518.422772,
-    "dkfm_classic": 1795161518.4274766,
-    "egofm_rnb": 1795161518.4320323,
-    "egofm_chillout": 1795161518.4367473,
-    "dj_neihtul": 1795161518.439811,
-    "gri_balkon": 1795161518.4427285,
+    "dark_edge": 1795161602.084016,
+    "dkfm_shoegaze": 1795161602.0890884,
+    "dkfm_classic": 1795161602.093839,
+    "egofm_rnb": 1795161602.0982668,
+    "egofm_chillout": 1795161602.1029682,
+    "dj_neihtul": 1795161602.1058934,
+    "gri_balkon": 1795161602.1087432,
     "ignoreradio_shoegaze": 1795161518.4471147,
     "radio_britannia": 1795161518.4521973,
     "wbru": 1795161518.4552126
@@ -29723,7 +29723,7 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "cat power|||stay",
   "__last_radio_key_mellow_mix": "ray lamontagne|||forever my friend",
-  "__last_radio_key_big_sonic_heaven": "actors|||left on read",
+  "__last_radio_key_big_sonic_heaven": "trentemøller|||to mist",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 28323,
   "__v146_spotify_budget_slot": 1795161520.9289134,
@@ -142567,7 +142567,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "newdad|||nosebleed",
   "__last_radio_key_dkfm_shoegaze": "thelma's dream|||underwater",
-  "__last_radio_key_dkfm_classic": "my bloody valentine|||cigarette in your bed",
+  "__last_radio_key_dkfm_classic": "slowdive|||altogether",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -142579,7 +142579,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "choir of young believers|||action-reaction",
+  "__last_radio_key_dark_edge": "the doors|||riders on the storm",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -147981,7 +147981,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "tlc|||unpretty",
-  "__last_radio_key_egofm_chillout": "thievery corporation|||lebanese blonde",
+  "__last_radio_key_egofm_chillout": "roedelius & story|||crisscrossing",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
