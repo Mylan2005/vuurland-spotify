@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "joep beving feat s10|||de leven",
+      "novastar|||velvet blue sky",
       "ise|||suitcase child",
       "first aid kit|||emmylou",
       "kurt vile|||zoom 97",
@@ -112,9 +114,7 @@
       "thomas azier|||year in a spiral",
       "radiohead|||knives out",
       "nathaniel rateliff|||time stands",
-      "adele|||i drink wine",
-      "celeste|||love is back",
-      "s10|||paris texas"
+      "adele|||i drink wine"
     ],
     "mellow_mix": [
       "jump little children|||sparrow",
@@ -423,6 +423,7 @@
       "the xx|||vcr"
     ],
     "dreampop_radio": [
+      "life in film|||carla",
       "wake owl|||gold",
       "oh wonder|||the rain",
       "graveyard club|||the night is mine",
@@ -521,8 +522,7 @@
       "the slow show|||hopeless town",
       "morrissey|||dear god please help me",
       "sleeping at last|||dark horse",
-      "eagle-eye cherry|||permanent tears",
-      "city and colour|||comin' home"
+      "eagle-eye cherry|||permanent tears"
     ],
     "indie_select": [
       "wolf alice|||silk",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "strongboy|||steady",
       "anderson paak feat q-tip|||cheers",
       "hong|||wake up",
       "bad suns|||daft pretty boys",
@@ -831,8 +832,7 @@
       "shivaree|||goodnight moon",
       "hird|||moving on",
       "public service broadcasting|||go!",
-      "theory of mind|||i felt the sun",
-      "the magic gang|||take back the track"
+      "theory of mind|||i felt the sun"
     ],
     "dkfm_shoegaze": [
       "the stargazer lilies|||ear candy & wine",
@@ -937,6 +937,7 @@
       "diiv|||the fountain"
     ],
     "dkfm_classic": [
+      "half string|||hue",
       "lush|||sweetness and light",
       "fauna|||songone",
       "rocketship|||friendships and love",
@@ -1035,8 +1036,7 @@
       "blind mr jones|||drop for days",
       "lush|||downer",
       "14 iced bears|||world i love",
-      "chimera|||tiago",
-      "the verve|||make it 'til monday"
+      "chimera|||tiago"
     ],
     "egofm_rnb": [
       "whitney houston|||my love is your love",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795147183.118587,
-    "mellow_mix": 1795147183.125094,
-    "big_sonic_heaven": 1795147183.1292326,
-    "radio_x_chilled": 1795147183.1331615,
-    "dreampop_radio": 1795147183.137656,
-    "indie_select": 1795147183.14225,
-    "dkfm_edge": 1795147183.1469343,
+    "vuurland": 1795147264.3484263,
+    "mellow_mix": 1795147264.353698,
+    "big_sonic_heaven": 1795147264.3578951,
+    "radio_x_chilled": 1795147264.3619099,
+    "dreampop_radio": 1795147264.3666496,
+    "indie_select": 1795147264.3714323,
+    "dkfm_edge": 1795147264.3762543,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795147183.1527448,
-    "dkfm_shoegaze": 1795147183.1575398,
-    "dkfm_classic": 1795147183.1619542,
-    "egofm_rnb": 1795147183.1662939,
-    "egofm_chillout": 1795147183.1708512,
-    "dj_neihtul": 1795147183.1737564,
-    "gri_balkon": 1795147183.1765525,
-    "ignoreradio_shoegaze": 1795147183.1806095,
-    "radio_britannia": 1795147183.1855245,
-    "wbru": 1795147183.188321
+    "dark_edge": 1795147264.3823583,
+    "dkfm_shoegaze": 1795147264.3871844,
+    "dkfm_classic": 1795147264.3918245,
+    "egofm_rnb": 1795147264.3962069,
+    "egofm_chillout": 1795147264.4008567,
+    "dj_neihtul": 1795147264.403788,
+    "gri_balkon": 1795147264.4066029,
+    "ignoreradio_shoegaze": 1795147264.4107864,
+    "radio_britannia": 1795147264.4158845,
+    "wbru": 1795147264.4188013
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29415,7 +29415,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "ise|||suitcase child",
+  "__last_radio_key_vuurland": "joep beving feat s10|||de leven",
   "__last_radio_key_mellow_mix": "jump little children|||sparrow",
   "__last_radio_key_big_sonic_heaven": "depeche mode|||ghosts again",
   "__v181_vuurland_two_missing_recovered": true,
@@ -140424,7 +140424,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "wake owl|||gold",
+  "__last_radio_key_dreampop_radio": "life in film|||carla",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -141906,7 +141906,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "wisp|||see you soon",
   "__last_radio_key_dkfm_shoegaze": "the stargazer lilies|||ear candy & wine",
-  "__last_radio_key_dkfm_classic": "lush|||sweetness and light",
+  "__last_radio_key_dkfm_classic": "half string|||hue",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -141918,7 +141918,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "anderson paak feat q-tip|||cheers",
+  "__last_radio_key_dark_edge": "strongboy|||steady",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
