@@ -53,10 +53,104 @@ def normalize_mixed_script_typos(title):
                   text, flags=re.UNICODE)
 
 
+
+def normalize_radio_filename_and_number(title):
+    """Remove *unambiguous* broadcast filename tags; preserve song identity.
+
+    Only a track number plus bit depth plus trailing date identifies a file
+    export. Ordinary numbers, dates and explicit song editions remain intact.
+    """
+    raw = str(title or "")
+    tagged = re.fullmatch(
+        r"\s*\d{1,2}\s+(.+?)\s+(?:16|24|32)bit\s+"
+        r"\d{1,2}[._-]\d{1,2}[._-]\d{2,4}\s*",
+        raw, flags=re.IGNORECASE,
+    )
+    if tagged:
+        raw = tagged.group(1).strip()
+        # English contraction from the file's de-punctuated name.
+        raw = re.sub(r"(?i)^im\b", "I'm", raw)
+    # 1.000 Times / 1,000 Times are the same integer, never a decimal
+    # only when followed by a word; standalone decimal titles stay unchanged.
+    raw = re.sub(
+        r"(?<!\d)([1-9]\d{0,2})[.,](\d{3})(?=\s+[A-Za-z])",
+        lambda m: m.group(1) + m.group(2), raw,
+    )
+    return raw
+
+
+def normalize_radio_trailing_guest(artist, title):
+    """Turn unmistakable radio *guest notation* into a required credit.
+
+    This is NOT song matching. The ordinary candidate matcher still checks
+    the main artist, all guests, full title, recording edition and market.
+    Any named mix/remix must remain present for edition validation.
+    """
+    original_title = str(title or "")
+    raw = original_title.strip()
+    artist_raw = str(artist or "").strip()
+    if not artist_raw:
+        return artist, original_title
+
+    # A radio suffix '(Album)' is editorial when used AFTER a feat. marker;
+    # keep real 'Album Version' editions intact.
+    if re.search(r"(?i)\s+(?:feat\.?|ft\.?|featuring)\s+", raw):
+        raw = re.sub(r"(?i)\s*\(album\)\s*$", "", raw).strip()
+
+    # Publisher export tag '(single - feat. Artist)' is a release format,
+    # NOT a named mix or performance version. Preserve the entire guest
+    # credit as a mandatory artist; no other parenthetical form is removed.
+    single_feature = re.fullmatch(
+        r"(.+?)\\s+\\(\\s*single\\s*[-–—]\\s*"
+        r"(?:feat\\.?|ft\\.?|featuring)\\s+([^()]{2,100})\\s*\\)",
+        raw, flags=re.I,
+    )
+    if single_feature:
+        core, guest = (part.strip() for part in single_feature.groups())
+        if (core and re.search(r"\\w", guest)
+                and not re.search(r"\\s[-–—]\\s", guest)):
+            return artist_raw + " feat. " + guest, core
+
+    # Explicit parenthesized radio credit: '(f Lorde)' or '(feat. Q-Tip)'.
+    # The full guest identity is mandatory. Never treat arbitrary parenthesis
+    # (such as '(Live)' or '(Radio Edit)') as artist metadata.
+    m = re.fullmatch(
+        r"(.+?)\s+\(\s*(?:f|ft\.?|feat\.?|featuring)\s+([^()]{2,100})\s*\)",
+        raw, flags=re.I,
+    )
+    if m:
+        core, guest = m.groups()
+        guest = guest.strip()
+        if re.search(r"[\w]", guest) and not re.search(r"\s[-–—]\s", guest):
+            return artist_raw + " feat. " + guest, core.strip()
+
+    # Unparenthesized trailing guests, optionally followed by a NAMED remix.
+    m = re.fullmatch(
+        r"(.+?)\s+(?:feat\.?|ft\.?|featuring)\s+"
+        r"([^()]{3,90}?)(\s*\([^()]*\bremix\))?\s*",
+        raw, flags=re.I,
+    )
+    if not m:
+        return artist, original_title
+    core, guest, remix = m.groups()
+    guest = guest.strip()
+    if not core.strip() or not re.search(r"\w", guest) or re.search(r"\s[-–—]\s", guest):
+        return artist, original_title
+    return (artist_raw + " feat. " + guest,
+            core.strip() + ((" " + remix.strip()) if remix else ""))
+
+
+def normalize_radio_artist_context(artist):
+    """Remove known broadcaster country labels, not arbitrary artist suffixes."""
+    raw = str(artist or "").strip()
+    return re.sub(r"\s+\(\s*(?:UK|USA)\s*\)$", "", raw, flags=re.I)
+
+
+
 def normalize_radio_metadata(artist, title):
     """Algemene, bewijsgestuurde metadata-opkuis (nooit fuzzy artiestmatching)."""
     artist_str = str(artist or "").strip()
-    corrected_artist = artist
+    corrected_artist = normalize_radio_artist_context(artist)
     # In een expliciete radiocredit 'A x B' is x een samenwerkingsscheiding,
     # geen deel van de artiestennaam. Deze vormcorrectie mag alleen met twee
     # volledige, niet-lege namen; de matcher verifieert nog beide credits.
@@ -74,4 +168,6 @@ def normalize_radio_metadata(artist, title):
         if prefix == wanted and match.group(2).strip():
             title_str = match.group(2).strip()
     title_str = normalize_mixed_script_typos(title_str)
+    title_str = normalize_radio_filename_and_number(title_str)
+    corrected_artist, title_str = normalize_radio_trailing_guest(corrected_artist, title_str)
     return corrected_artist, title_str

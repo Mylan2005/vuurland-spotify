@@ -21,6 +21,7 @@ ns = {
     "INDIE_SELECT_GERMAN_TRACKS": frozenset(),
     # Opzettelijk strenge stubs: gewone tracks zouden geweigerd worden.
     "v150_is_unwanted_language": lambda artist, title: True,
+    "v263_is_confirmed_turkish_vocal": lambda artist, title: False,
     "v148_block_confirmed_romanian": lambda artist, title: False,
     "v143_unwanted_title": lambda title: True,
     "v119_is_german_title": lambda title: title == "Ich liebe dich",

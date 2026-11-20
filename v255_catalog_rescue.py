@@ -15,6 +15,25 @@ def catalog_metadata(artist, title):
     # never "On a Day Like This". No similar title is generalized.
     if (a.casefold(), t.casefold()) == ("elbow", "on a day like this"):
         return a, "One Day Like This"
+    # Verified RadioBox shortening: full Spotify title is Pearly-Dewdrops' Drops.
+    # Keep normal artist, title, edition and market checks.
+    if (a.casefold(), t.casefold()) == ("cocteau twins", "pearly-dewdrops"):
+        return a, "Pearly-Dewdrops' Drops"
+    # A full spelled-out catalog number is proven for this exact AIR song.
+    # Not a general "No.1" title replacement for arbitrary songs.
+    if (a.casefold(), t.casefold()) == ("air", "radio no.1"):
+        return a, "Radio Number 1"
+    # Exact observed station spelling versus verified Spotify catalog credit.
+    if (a.casefold(), t.casefold()) == ("beatsteakes", "let me in"):
+        return "Beatsteaks", t
+    if (a.casefold(), t.casefold()) == ("jon batiste feat. zazie smith", "show me the way"):
+        return "Jon Batiste feat. Zadie Smith", t
+    if (a.casefold(), t.casefold()) == ("koffee", "pull up"):
+        return "Original Koffee", t
+    # Verified 2023 London Grammar/SebastiAn recording: exact radio typo only.
+    # Never generalize missing title words or artist misspellings.
+    if (a.casefold(), t.casefold()) == ("london grammer", "dancing by the night"):
+        return "London Grammar", "Dancing By Night"
     # Preserve the exact edit: this is not the original or extended remix.
     if (a.casefold(), t.casefold()) == (
         "chicane vs. natasha bedingfield", "bruised water (michael woods edit)"
@@ -28,6 +47,8 @@ _ALBUMS = {
     ("curve", "chinese burn"): "Come Clean",
     ("palace brothers", "you will miss me when i burn"): "Days in the Wake",
     ("beady eye", "for anyone"): "Different Gear, Still Speeding",
+    # Confirmed on Spotify original 2000 album; keep full artist/title gates.
+    ("sarah harmer", "lodestar"): "You Were Here",
 }
 
 
