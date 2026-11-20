@@ -423,6 +423,7 @@
       "radiohead|||street spirit"
     ],
     "dreampop_radio": [
+      "the swell season|||low rising",
       "allo darlin'|||if loneliness was art",
       "sun kil moon|||lost verses",
       "lemonheads|||ride with me",
@@ -521,8 +522,7 @@
       "heidi happy|||home",
       "dear reader|||way of the world",
       "maritime|||the window is the door",
-      "other lives|||2 pyramids",
-      "fleetwood mac|||everywhere"
+      "other lives|||2 pyramids"
     ],
     "indie_select": [
       "the raveonettes|||observations",
@@ -835,6 +835,7 @@
       "dope lemon|||hey little baby"
     ],
     "dkfm_shoegaze": [
+      "lo! peninsula|||song for the undead",
       "appi|||ukiyo",
       "trillion|||take it slow",
       "lush|||light from a dead star",
@@ -933,10 +934,11 @@
       "pinkshinyultrablast|||ravestar supreme",
       "color crush|||snowstorm",
       "the bilinda butchers|||careless teens",
-      "the veldt|||new blood",
-      "bad bloom|||broken"
+      "the veldt|||new blood"
     ],
     "dkfm_classic": [
+      "lovesliescrushing|||aquan 1",
+      "bethany curve|||drag",
       "lush|||scarlet",
       "swervedriver|||you find it everywhere",
       "mira|||something ventured",
@@ -1034,11 +1036,10 @@
       "spiritualized|||i want you",
       "blind mr jones|||see you again",
       "breathless|||compulsion",
-      "flying saucer attack|||still point",
-      "siddal|||italiano",
-      "moose|||soon is never soon enough"
+      "flying saucer attack|||still point"
     ],
     "egofm_rnb": [
+      "shura|||just once",
       "malky|||play",
       "mahalia|||sober",
       "laura mvula|||brighter dawn",
@@ -1137,10 +1138,10 @@
       "pharrell williams|||marilyn monroe",
       "maverick sabre feat jorja smith|||slow down",
       "the sellouts saint wknd & benjamin amaru|||stay",
-      "lie ning|||sirens",
-      "john legend & chance the rapper|||penthouse floor"
+      "lie ning|||sirens"
     ],
     "egofm_chillout": [
+      "dotan negrin prismatic mantis|||what a wonderful world",
       "montell fish|||imagination",
       "sepalot|||numbers - sepalot",
       "sumo feat soffie|||rak",
@@ -1239,8 +1240,7 @@
       "roedelius & arnold kasar|||rolling",
       "st germain|||la goutte d'or",
       "arcade fire & owen pallett|||song on the beach",
-      "kinderzimmer productions|||es kommt in wellen instrumental",
-      "no-man|||all sweet things remastered"
+      "kinderzimmer productions|||es kommt in wellen instrumental"
     ],
     "dj_neihtul": [
       "austra|||forgive me",
@@ -1549,6 +1549,7 @@
       "the besnard lakes|||glass printer"
     ],
     "radio_britannia": [
+      "placebo|||lifes what you make it",
       "the clockworks|||well well wellness",
       "travis|||where you stand",
       "manic street preachers|||its not war just the end of love",
@@ -1647,8 +1648,7 @@
       "ian brown|||little seed big tree",
       "my first time|||celebrity",
       "two door cinema club|||this is the life",
-      "friendly fires|||heaven let me in",
-      "blossoms|||if you think this is real life"
+      "friendly fires|||heaven let me in"
     ],
     "wbru": [
       "the war on drugs|||who's that",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795199328.6311684,
-    "mellow_mix": 1795199328.634002,
-    "big_sonic_heaven": 1795199328.6364732,
-    "radio_x_chilled": 1795199328.6388512,
-    "dreampop_radio": 1795199328.6410835,
-    "indie_select": 1795199328.643669,
-    "dkfm_edge": 1795199328.6459992,
+    "vuurland": 1795199415.4284618,
+    "mellow_mix": 1795199415.4313369,
+    "big_sonic_heaven": 1795199415.433842,
+    "radio_x_chilled": 1795199415.4360526,
+    "dreampop_radio": 1795199415.4384654,
+    "indie_select": 1795199415.4410348,
+    "dkfm_edge": 1795199415.4434273,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795199328.9128048,
-    "dkfm_shoegaze": 1795199328.9156973,
-    "dkfm_classic": 1795199328.9181361,
-    "egofm_rnb": 1795199328.9205666,
-    "egofm_chillout": 1795199328.922913,
-    "dj_neihtul": 1795199329.162372,
-    "gri_balkon": 1795199329.1642184,
-    "ignoreradio_shoegaze": 1795199329.1667087,
-    "radio_britannia": 1795199329.1691387,
-    "wbru": 1795199329.17129
+    "dark_edge": 1795199415.4468513,
+    "dkfm_shoegaze": 1795199415.4497201,
+    "dkfm_classic": 1795199415.4521897,
+    "egofm_rnb": 1795199415.4547064,
+    "egofm_chillout": 1795199415.4571826,
+    "dj_neihtul": 1795199415.4594786,
+    "gri_balkon": 1795199415.461268,
+    "ignoreradio_shoegaze": 1795199415.46372,
+    "radio_britannia": 1795199415.7404315,
+    "wbru": 1795199415.7426207
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -28259,6 +28259,7 @@
       "placebo|||happy birthday in the sky",
       "placebo|||infra red",
       "placebo|||jesus son",
+      "placebo|||lifes what you make it",
       "placebo|||meds feat alison mosshart",
       "placebo|||pure morning",
       "placebo|||slave to the wage",
@@ -30493,7 +30494,7 @@
   "__last_radio_key_mellow_mix": "ayla nereo|||lead with your bones",
   "__last_radio_key_big_sonic_heaven": "herbert & momoko|||babystar",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 28981,
+  "__v116_fifo_next_sequence": 28982,
   "__v146_spotify_budget_slot": 1795199331.6532712,
   "__vuurland_active_playlist_count": 3725,
   "__vuurland_active_volume": 2,
@@ -142802,7 +142803,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "allo darlin'|||if loneliness was art",
+  "__last_radio_key_dreampop_radio": "the swell season|||low rising",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -144283,8 +144284,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "still|||doomed",
-  "__last_radio_key_dkfm_shoegaze": "appi|||ukiyo",
-  "__last_radio_key_dkfm_classic": "lush|||scarlet",
+  "__last_radio_key_dkfm_shoegaze": "lo! peninsula|||song for the undead",
+  "__last_radio_key_dkfm_classic": "lovesliescrushing|||aquan 1",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -149696,8 +149697,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "malky|||play",
-  "__last_radio_key_egofm_chillout": "montell fish|||imagination",
+  "__last_radio_key_egofm_rnb": "shura|||just once",
+  "__last_radio_key_egofm_chillout": "dotan negrin prismatic mantis|||what a wonderful world",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -151258,7 +151259,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the clockworks|||well well wellness",
+  "__last_radio_key_radio_britannia": "placebo|||lifes what you make it",
   "__last_radio_key_wbru": "the war on drugs|||who's that",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
