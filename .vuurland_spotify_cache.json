@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795214094.7644155,
+  "__v150_next_spotify_round_at": 1795214216.1828158,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "camille camille|||in a song",
       "alt-j|||taro",
       "the radar station|||the giant",
       "iskander moon|||the city",
@@ -113,8 +114,7 @@
       "villagers|||nothing arrived",
       "hermanos gutierrez|||canto andino",
       "wasia project|||somebody come through",
-      "the broken circle breakdown bluegrass band|||if i needed you",
-      "holly humberstone|||dive"
+      "the broken circle breakdown bluegrass band|||if i needed you"
     ],
     "mellow_mix": [
       "edie brickell & new bohemians|||circle",
@@ -835,6 +835,7 @@
       "cake|||perhaps perhaps perhaps"
     ],
     "dkfm_shoegaze": [
+      "youth valley|||anchored",
       "starbelliedbug|||rocket",
       "ancient channels|||year of the rats",
       "vinyl williams|||inner space",
@@ -933,10 +934,10 @@
       "midscale|||braincrash",
       "taffy|||thantophobia",
       "angel aura|||samsara - single",
-      "yeahrs|||crimson ocean",
-      "the stargazer lilies|||ear candy & wine"
+      "yeahrs|||crimson ocean"
     ],
     "dkfm_classic": [
+      "sundial|||slow motion",
       "bailterspace|||orbit",
       "cocteau twins|||pepper-tree",
       "ride|||paralysed",
@@ -1035,8 +1036,7 @@
       "the chameleons|||ever after",
       "14 iced bears|||these are the things",
       "jesus & mary chain|||taste the floor",
-      "see see rider|||happy",
-      "the house of love|||shine on"
+      "see see rider|||happy"
     ],
     "egofm_rnb": [
       "madison mcferrin|||try",
@@ -1345,6 +1345,7 @@
       "little boots|||motorway"
     ],
     "gri_balkon": [
+      "movement|||ivory",
       "khruangbin|||august 10",
       "robag wruhme|||ak-do 5",
       "unicorn heads|||a trip around the moon",
@@ -1443,8 +1444,7 @@
       "recondite|||jim jams",
       "lemongrass|||blue skies in your eyes",
       "40 winks|||melancholia",
-      "royksopp|||i just don't understand you lost tapes",
-      "bedouin|||wastelands"
+      "royksopp|||i just don't understand you lost tapes"
     ],
     "ignoreradio_shoegaze": [
       "guitar|||sunkissed",
@@ -1549,6 +1549,7 @@
       "the brian jonestown massacre|||that girl suicide"
     ],
     "radio_britannia": [
+      "picture parlour|||norwegian wood",
       "pj harvey|||the camp feat ramy essam",
       "everything everything|||poison pop",
       "sports team|||fishing",
@@ -1647,10 +1648,10 @@
       "primal scream|||deep dark waters",
       "lambrini girls|||bang bang bang",
       "fontaines dc|||starburster",
-      "the boxer rebellion|||keep moving",
-      "oasis|||cigarettes and alcohol"
+      "the boxer rebellion|||keep moving"
     ],
     "wbru": [
+      "clarion|||hello juliet",
       "eyedress|||jealous",
       "slow pulp|||better man",
       "the cure|||in between days",
@@ -1690,7 +1691,6 @@
       "the war on drugs|||red eyes",
       "noah kahan|||willing and able",
       "daft punk|||one more time",
-      "clarion|||hello juliet",
       "surf curse|||freaks",
       "cage the elephant|||beaches in tennessee",
       "leap|||exit signs",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795214058.9815128,
-    "mellow_mix": 1795214058.9848325,
-    "big_sonic_heaven": 1795214058.9877431,
-    "radio_x_chilled": 1795214058.9904714,
-    "dreampop_radio": 1795214058.9932153,
-    "indie_select": 1795214058.9961994,
-    "dkfm_edge": 1795214058.9991028,
+    "vuurland": 1795214095.1581273,
+    "mellow_mix": 1795214095.1615477,
+    "big_sonic_heaven": 1795214095.1645155,
+    "radio_x_chilled": 1795214095.1672873,
+    "dreampop_radio": 1795214095.1700659,
+    "indie_select": 1795214095.1730773,
+    "dkfm_edge": 1795214095.176006,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795214059.0029697,
-    "dkfm_shoegaze": 1795214059.006229,
-    "dkfm_classic": 1795214059.0091462,
-    "egofm_rnb": 1795214059.0121794,
-    "egofm_chillout": 1795214059.0151498,
-    "dj_neihtul": 1795214059.0178227,
-    "gri_balkon": 1795214059.019875,
-    "ignoreradio_shoegaze": 1795214059.0242097,
-    "radio_britannia": 1795214059.0272446,
-    "wbru": 1795214059.029494
+    "dark_edge": 1795214095.1799219,
+    "dkfm_shoegaze": 1795214095.1832676,
+    "dkfm_classic": 1795214095.186277,
+    "egofm_rnb": 1795214095.1892037,
+    "egofm_chillout": 1795214095.192223,
+    "dj_neihtul": 1795214095.1949396,
+    "gri_balkon": 1795214095.1984358,
+    "ignoreradio_shoegaze": 1795214095.2013524,
+    "radio_britannia": 1795214095.477524,
+    "wbru": 1795214095.4810033
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -28483,6 +28483,7 @@
       "peter doherty|||whos been having you over",
       "peter doherty|||you can't keep it from me forever",
       "philip selway|||check for signs of life",
+      "picture parlour|||norwegian wood",
       "picture parlour|||talk about it",
       "picture parlour|||the travelling show",
       "pillow queens|||be by your side",
@@ -30821,13 +30822,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "alt-j|||taro",
+  "__last_radio_key_vuurland": "camille camille|||in a song",
   "__last_radio_key_mellow_mix": "edie brickell & new bohemians|||circle",
   "__last_radio_key_big_sonic_heaven": "club 8|||the sweetness of honey",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 29220,
-  "__v146_spotify_budget_slot": 1795213976.593756,
-  "__vuurland_active_playlist_count": 3821,
+  "__v116_fifo_next_sequence": 29221,
+  "__v146_spotify_budget_slot": 1795214097.9824486,
+  "__vuurland_active_playlist_count": 3822,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1795211168,
@@ -42336,6 +42337,7 @@
     "secret shine|||sun warmed water",
     "secret treehouse|||ice turns to ash",
     "secrets of the third planet|||arabeska",
+    "see through dresses|||pretty police",
     "seefeel|||through you",
     "seekae|||monster",
     "seelenluft|||horse with no name",
@@ -57852,6 +57854,7 @@
     "spotify:track:6RQFcX1l58wIlv0HLZl9mj",
     "spotify:track:6RS7shVcL3wHbSxaUwW7Ne",
     "spotify:track:6RSGFXLYZ4Ll0FYA9M3oAe",
+    "spotify:track:6RTSKCMKWKp3d6j6JiY0TS",
     "spotify:track:6RUUrq7KSOnLIdovHpAbkf",
     "spotify:track:6RWw6s0yGwDEslUdAUtRqy",
     "spotify:track:6RZXoNtHnqKVqafp697FjK",
@@ -67807,6 +67810,7 @@
     "QMYSP1100009",
     "QMYYE1100007",
     "QMZPB1600152",
+    "QMZPB1700184",
     "QT2DN2400001",
     "QT2DN2400002",
     "QT2DN2400004",
@@ -87388,7 +87392,8 @@
     "spotify:track:3ey2Lbv2YOjgUYKTAIopNS": "TCADF1795049",
     "spotify:track:18pCwJ9N2kLMcu5m4OMsDq": "GBFFS0300023",
     "spotify:track:5kEcXZZS97TSNXc6174Ed6": "USWB10101662",
-    "spotify:track:5f7LgDe5qmzyhCCjvpHChj": "QZ9Y21751015"
+    "spotify:track:5f7LgDe5qmzyhCCjvpHChj": "QZ9Y21751015",
+    "spotify:track:6RTSKCMKWKp3d6j6JiY0TS": "QMZPB1700184"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -145014,8 +145019,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "wall drugs|||ghost",
-  "__last_radio_key_dkfm_shoegaze": "starbelliedbug|||rocket",
-  "__last_radio_key_dkfm_classic": "bailterspace|||orbit",
+  "__last_radio_key_dkfm_shoegaze": "youth valley|||anchored",
+  "__last_radio_key_dkfm_classic": "sundial|||slow motion",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -148698,7 +148703,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dark_edge",
+  "__v221_last_selected_source": "dkfm_shoegaze",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -148710,7 +148715,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dark_edge",
+  "__v224_last_spotify_opportunity_source": "dkfm_shoegaze",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -148743,7 +148748,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dark_edge",
+  "__v227_last_source_turn": "dkfm_shoegaze",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -150443,7 +150448,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "khruangbin|||august 10",
+  "__last_radio_key_gri_balkon": "movement|||ivory",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -151995,8 +152000,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "pj harvey|||the camp feat ramy essam",
-  "__last_radio_key_wbru": "eyedress|||jealous",
+  "__last_radio_key_radio_britannia": "picture parlour|||norwegian wood",
+  "__last_radio_key_wbru": "clarion|||hello juliet",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -158976,5 +158981,6 @@
   "__match_v35__clairo|||pretty girl": "spotify:track:3ey2Lbv2YOjgUYKTAIopNS",
   "__match_v35__the earlies|||wayward song": "spotify:track:18pCwJ9N2kLMcu5m4OMsDq",
   "__match_v35__julee cruise|||the nightingale": "spotify:track:5kEcXZZS97TSNXc6174Ed6",
-  "__match_v35__zach schimpf|||foresight gone haywire": "spotify:track:5f7LgDe5qmzyhCCjvpHChj"
+  "__match_v35__zach schimpf|||foresight gone haywire": "spotify:track:5f7LgDe5qmzyhCCjvpHChj",
+  "__match_v35__see through dresses|||pretty police": "spotify:track:6RTSKCMKWKp3d6j6JiY0TS"
 }
