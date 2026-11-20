@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "jjerome87|||track and field",
       "westerman|||confirmation",
       "berre|||not going anywhere",
       "infinity song|||metamorphosis",
@@ -113,10 +114,10 @@
       "florence the machine|||dream girl evil",
       "rhye|||open",
       "bear's den|||auld wives",
-      "ben howard|||keep your head up",
-      "death cab for cutie|||love song"
+      "ben howard|||keep your head up"
     ],
     "mellow_mix": [
+      "lizz wright|||hit the ground",
       "the rolling stones|||moonlight mile",
       "rising appalachia|||make magic",
       "broken bells|||love on the run",
@@ -215,8 +216,7 @@
       "ray lamontagne|||be here now",
       "jefferson airplane|||good shepherd",
       "10 000 maniacs|||like the weather",
-      "neil young|||only love can break your heart",
-      "kaleo|||i want more"
+      "neil young|||only love can break your heart"
     ],
     "big_sonic_heaven": [
       "møaa|||exist",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "josef salvat|||open season",
       "cocoon|||middle finger",
       "charlotte gainsbourg|||heaven can wait",
       "aim feat kate rogers|||the girl who fell through the ice",
@@ -831,8 +832,7 @@
       "beck|||morning",
       "small black|||no stranger",
       "john mayer|||dear marie",
-      "the dandy warhols|||you are killing me",
-      "counting crows|||colorblind"
+      "the dandy warhols|||you are killing me"
     ],
     "dkfm_shoegaze": [
       "soundpool|||the divides of march",
@@ -1039,6 +1039,7 @@
       "bethany curve|||me voy"
     ],
     "egofm_rnb": [
+      "ella eyre|||deeper",
       "evann mcintosh|||nobody else",
       "sir feat schoolboy q|||something foreign",
       "moonchild|||the list",
@@ -1137,8 +1138,7 @@
       "benee feat kenny beats & bakar|||night garden",
       "rosalia|||de aqui no sales cap 4 disputa",
       "fkj feat bas|||risk",
-      "elba|||sirens",
-      "jamila woods|||holy"
+      "elba|||sirens"
     ],
     "egofm_chillout": [
       "moderat|||rusty nails",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795198352.0333316,
-    "mellow_mix": 1795198352.0361552,
-    "big_sonic_heaven": 1795198352.038584,
-    "radio_x_chilled": 1795198352.040746,
-    "dreampop_radio": 1795198352.0429108,
-    "indie_select": 1795198352.0454156,
-    "dkfm_edge": 1795198352.047791,
+    "vuurland": 1795198436.6010408,
+    "mellow_mix": 1795198436.6039307,
+    "big_sonic_heaven": 1795198436.6063945,
+    "radio_x_chilled": 1795198436.6085207,
+    "dreampop_radio": 1795198436.6107106,
+    "indie_select": 1795198436.6132436,
+    "dkfm_edge": 1795198436.615526,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795198352.0510426,
-    "dkfm_shoegaze": 1795198352.0537186,
-    "dkfm_classic": 1795198352.0560842,
-    "egofm_rnb": 1795198352.0584111,
-    "egofm_chillout": 1795198352.0607407,
-    "dj_neihtul": 1795198352.0629005,
-    "gri_balkon": 1795198352.0645754,
-    "ignoreradio_shoegaze": 1795198352.0669131,
-    "radio_britannia": 1795198352.0692477,
-    "wbru": 1795198352.0712376
+    "dark_edge": 1795198436.8869343,
+    "dkfm_shoegaze": 1795198436.8897438,
+    "dkfm_classic": 1795198436.8921342,
+    "egofm_rnb": 1795198436.8946483,
+    "egofm_chillout": 1795198436.8970006,
+    "dj_neihtul": 1795198436.8991904,
+    "gri_balkon": 1795198436.900926,
+    "ignoreradio_shoegaze": 1795198436.9032693,
+    "radio_britannia": 1795198436.9056263,
+    "wbru": 1795198436.9076278
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -14927,6 +14927,7 @@
       "jose gonzalez|||step out",
       "josef salvat|||every night",
       "josef salvat|||hustler",
+      "josef salvat|||open season",
       "josef salvat|||the drum",
       "josh fudge|||second date",
       "josh fudge|||when she's gone",
@@ -30468,11 +30469,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "westerman|||confirmation",
-  "__last_radio_key_mellow_mix": "the rolling stones|||moonlight mile",
+  "__last_radio_key_vuurland": "jjerome87|||track and field",
+  "__last_radio_key_mellow_mix": "lizz wright|||hit the ground",
   "__last_radio_key_big_sonic_heaven": "møaa|||exist",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 28962,
+  "__v116_fifo_next_sequence": 28963,
   "__v146_spotify_budget_slot": 1795198354.5628471,
   "__vuurland_active_playlist_count": 3717,
   "__vuurland_active_volume": 2,
@@ -144243,7 +144244,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "cocoon|||middle finger",
+  "__last_radio_key_dark_edge": "josef salvat|||open season",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -149643,7 +149644,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "evann mcintosh|||nobody else",
+  "__last_radio_key_egofm_rnb": "ella eyre|||deeper",
   "__last_radio_key_egofm_chillout": "moderat|||rusty nails",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
