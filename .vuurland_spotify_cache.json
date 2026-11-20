@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the cure|||alone",
+      "nathaniel rateliff|||i am",
       "half moon run|||full circle",
       "tom odell|||heal",
       "hozier|||work song",
@@ -112,11 +114,10 @@
       "big thief|||love in mine",
       "wilco|||how to fight loneliness",
       "beck|||everybody's got to learn sometime",
-      "hollow coves|||see you soon",
-      "the haunted youth|||wake up",
-      "coldplay|||trouble"
+      "hollow coves|||see you soon"
     ],
     "mellow_mix": [
+      "u2|||in a little while",
       "jackson browne|||these days",
       "blind pilot|||half moon",
       "shawn colvin|||diamond in the rough",
@@ -215,8 +216,7 @@
       "simon & garfunkel|||american tune",
       "mumford & sons|||awake my soul",
       "zaz|||que vendra",
-      "crowded house|||private universe",
-      "cat stevens|||hard headed woman"
+      "crowded house|||private universe"
     ],
     "big_sonic_heaven": [
       "johnny marr|||that feeling",
@@ -423,6 +423,7 @@
       "weezer|||island in the sun"
     ],
     "dreampop_radio": [
+      "the staves|||tongue behind my teeth",
       "rocky votolato|||what waited for me",
       "the good morning diary|||the day i turned into a ghost",
       "pure bathing culture|||dream the dare",
@@ -521,8 +522,7 @@
       "matthew and the atlas|||on a midnight street - acoustic version",
       "air|||all i need",
       "bill callahan|||riding for the feeling",
-      "lisa hannigan|||lille",
-      "brookville|||nothing's meant to last"
+      "lisa hannigan|||lille"
     ],
     "indie_select": [
       "ultra vivid scene|||mercy seat 12\"",
@@ -627,6 +627,7 @@
       "now it's overhead|||let the sirens rest"
     ],
     "dkfm_edge": [
+      "temple of angels|||torment",
       "attic ocean|||young again",
       "mo dotti|||whirling sad",
       "leavs|||in a time",
@@ -725,8 +726,7 @@
       "blush|||february again",
       "fawn|||follow",
       "soft science|||grip",
-      "sea lemon|||3a",
-      "day aches|||arreis"
+      "sea lemon|||3a"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1039,6 +1039,7 @@
       "adorable|||i'll be your saint"
     ],
     "egofm_rnb": [
+      "marvin gaye|||let's get it on",
       "santigold|||shooting arrows at the sky",
       "tei shi|||go slow",
       "quinn christopherson|||evelene",
@@ -1137,10 +1138,10 @@
       "fkj feat jordan rakei|||learn to fly",
       "mariah carey|||shake it off",
       "bernhoft|||we have a dream",
-      "rationale|||palms",
-      "yellowstraps; sam wise|||flowin feat sam wise"
+      "rationale|||palms"
     ],
     "egofm_chillout": [
+      "ry x & olafur arnalds|||oceans",
       "asgeir|||going home",
       "yellow days|||what's it all for",
       "sufjan stevens & angelo de augustine|||reach out",
@@ -1239,8 +1240,7 @@
       "sepalot|||numbers - sepalot",
       "art of noise|||moments in love 7 inch version",
       "illiterate|||and forever",
-      "air|||playground love",
-      "g mills luke otwell & kyle mcevoy|||ocean view"
+      "air|||playground love"
     ],
     "dj_neihtul": [
       "martin eyerer & oliver klein|||babylon",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795141098.5967164,
-    "mellow_mix": 1795141098.6037016,
-    "big_sonic_heaven": 1795141098.607696,
-    "radio_x_chilled": 1795141098.6117926,
-    "dreampop_radio": 1795141098.6160133,
-    "indie_select": 1795141098.62035,
-    "dkfm_edge": 1795141098.6247683,
+    "vuurland": 1795141180.295627,
+    "mellow_mix": 1795141180.3019257,
+    "big_sonic_heaven": 1795141180.3059294,
+    "radio_x_chilled": 1795141180.3097522,
+    "dreampop_radio": 1795141180.314075,
+    "indie_select": 1795141180.3184419,
+    "dkfm_edge": 1795141180.32294,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795141098.8925738,
-    "dkfm_shoegaze": 1795141098.8972921,
-    "dkfm_classic": 1795141098.9017253,
-    "egofm_rnb": 1795141098.906029,
-    "egofm_chillout": 1795141098.9104455,
-    "dj_neihtul": 1795141098.9133759,
-    "gri_balkon": 1795141098.9161525,
-    "ignoreradio_shoegaze": 1795141098.9200065,
-    "radio_britannia": 1795141099.183093,
-    "wbru": 1795141099.1861129
+    "dark_edge": 1795141180.3285074,
+    "dkfm_shoegaze": 1795141180.3329322,
+    "dkfm_classic": 1795141180.3371298,
+    "egofm_rnb": 1795141180.3414154,
+    "egofm_chillout": 1795141180.3458648,
+    "dj_neihtul": 1795141180.3487053,
+    "gri_balkon": 1795141180.3514276,
+    "ignoreradio_shoegaze": 1795141180.355305,
+    "radio_britannia": 1795141180.3598588,
+    "wbru": 1795141180.3626318
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29287,8 +29287,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "half moon run|||full circle",
-  "__last_radio_key_mellow_mix": "jackson browne|||these days",
+  "__last_radio_key_vuurland": "the cure|||alone",
+  "__last_radio_key_mellow_mix": "u2|||in a little while",
   "__last_radio_key_big_sonic_heaven": "johnny marr|||that feeling",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 28016,
@@ -140161,7 +140161,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "rocky votolato|||what waited for me",
+  "__last_radio_key_dreampop_radio": "the staves|||tongue behind my teeth",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -141641,7 +141641,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "attic ocean|||young again",
+  "__last_radio_key_dkfm_edge": "temple of angels|||torment",
   "__last_radio_key_dkfm_shoegaze": "bloody knives|||new machines",
   "__last_radio_key_dkfm_classic": "my bloody valentine|||moon song",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -147058,8 +147058,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "santigold|||shooting arrows at the sky",
-  "__last_radio_key_egofm_chillout": "asgeir|||going home",
+  "__last_radio_key_egofm_rnb": "marvin gaye|||let's get it on",
+  "__last_radio_key_egofm_chillout": "ry x & olafur arnalds|||oceans",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
