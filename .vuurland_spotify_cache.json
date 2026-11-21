@@ -117,6 +117,7 @@
       "suki waterhouse|||good looking"
     ],
     "mellow_mix": [
+      "pearl jam|||off he goes",
       "aukai|||azure",
       "genesis|||the carpet crawlers",
       "jill sobule|||houdini's box",
@@ -215,8 +216,7 @@
       "sting|||fragile",
       "richard houghten|||garden of emotion",
       "steve miller band|||wild mountain honey",
-      "folk bitch trio|||cathode ray",
-      "tom waits|||san diego serenade"
+      "folk bitch trio|||cathode ray"
     ],
     "big_sonic_heaven": [
       "attic ocean|||could it be you",
@@ -321,6 +321,7 @@
       "bragolin & carrellee|||feel this flame unfold"
     ],
     "radio_x_chilled": [
+      "the flaming lips|||do you realise?",
       "blur|||the universal",
       "bombay bicycle club|||eat sleep wake",
       "kaiser chiefs|||love's not a competition but i'm winning",
@@ -419,8 +420,7 @@
       "starsailor|||alcoholic",
       "the cranberries|||zombie acoustic",
       "sam fender|||spit of you",
-      "the war on drugs|||pain",
-      "the streets|||dry your eyes"
+      "the war on drugs|||pain"
     ],
     "dreampop_radio": [
       "the mynabirds|||one foot",
@@ -525,6 +525,7 @@
       "allo darlin'|||if loneliness was art"
     ],
     "indie_select": [
+      "the horrors|||la runaway",
       "syml|||chariot",
       "the radio dept|||you fear the wrong thing baby",
       "tracey thorn|||late in the afternoon",
@@ -623,8 +624,7 @@
       "beatsteakes|||let me in",
       "the new pornographers|||unguided",
       "the haunted youth|||shadows",
-      "modest mouse|||the world at large",
-      "friska viljor|||the cure"
+      "modest mouse|||the world at large"
     ],
     "dkfm_edge": [
       "local authority|||wonder",
@@ -835,6 +835,8 @@
       "persona 749|||live order pt 2"
     ],
     "dkfm_shoegaze": [
+      "tstt|||blurred",
+      "crystal canyon|||mrs connelly",
       "spider|||j4j testing",
       "waves crashing|||stars single",
       "fleeting colours|||autumn",
@@ -932,9 +934,7 @@
       "golden gardens|||desert rose",
       "subterraneos|||'cause i love you",
       "closeout|||soothe",
-      "puppy teeth|||melatonin",
-      "sleepwalk|||sandbox",
-      "dharmacide|||horses/divorces"
+      "puppy teeth|||melatonin"
     ],
     "dkfm_classic": [
       "galaxie 500|||sorry",
@@ -1243,6 +1243,7 @@
       "mommy & philanthrope|||soupeddd! feat weird inside"
     ],
     "dj_neihtul": [
+      "amelie lens|||follow original mix",
       "andhim|||amene frankey & sandrino remix",
       "bebetta|||herr kapellmeister",
       "solee boss axis|||still here solee club re-edit",
@@ -1341,8 +1342,7 @@
       "lykke li|||never gonna love again",
       "sono|||flames get higher extended mix",
       "ry x|||berlin",
-      "r plus|||my boy meduza remix - edit",
-      "tricky|||diving away"
+      "r plus|||my boy meduza remix - edit"
     ],
     "gri_balkon": [
       "nicolas jaar|||wouh",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795226400.1753333,
-    "mellow_mix": 1795226400.1835127,
-    "big_sonic_heaven": 1795226400.1887174,
-    "radio_x_chilled": 1795226400.1941261,
-    "dreampop_radio": 1795226400.1991742,
-    "indie_select": 1795226400.2045212,
-    "dkfm_edge": 1795226400.2105217,
+    "vuurland": 1795226493.2537892,
+    "mellow_mix": 1795226493.2622316,
+    "big_sonic_heaven": 1795226493.2673237,
+    "radio_x_chilled": 1795226493.2729924,
+    "dreampop_radio": 1795226493.2780478,
+    "indie_select": 1795226493.2836149,
+    "dkfm_edge": 1795226493.2895489,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795226400.6391764,
-    "dkfm_shoegaze": 1795226400.6454494,
-    "dkfm_classic": 1795226400.6511662,
-    "egofm_rnb": 1795226400.6570628,
-    "egofm_chillout": 1795226400.663178,
-    "dj_neihtul": 1795226400.6679556,
-    "gri_balkon": 1795226400.671748,
-    "ignoreradio_shoegaze": 1795226400.6771286,
-    "radio_britannia": 1795226400.6833227,
-    "wbru": 1795226400.6873755
+    "dark_edge": 1795226493.296659,
+    "dkfm_shoegaze": 1795226493.3029907,
+    "dkfm_classic": 1795226493.308602,
+    "egofm_rnb": 1795226493.3144639,
+    "egofm_chillout": 1795226493.320451,
+    "dj_neihtul": 1795226493.766758,
+    "gri_balkon": 1795226493.770585,
+    "ignoreradio_shoegaze": 1795226493.7759602,
+    "radio_britannia": 1795226493.7821112,
+    "wbru": 1795226493.786155
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -23595,6 +23595,7 @@
       "alt-j|||tessellate",
       "alunageorge|||your drums your love",
       "amanda lear|||follow me 12-inch 1978",
+      "amelie lens|||follow original mix",
       "amon tobin|||the lighthouse",
       "amy shark|||adore",
       "amy shark|||weekends",
@@ -31099,10 +31100,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "king hannah|||davey says",
-  "__last_radio_key_mellow_mix": "aukai|||azure",
+  "__last_radio_key_mellow_mix": "pearl jam|||off he goes",
   "__last_radio_key_big_sonic_heaven": "attic ocean|||could it be you",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 29431,
+  "__v116_fifo_next_sequence": 29432,
   "__v146_spotify_budget_slot": 1795226404.5726092,
   "__vuurland_active_playlist_count": 3897,
   "__vuurland_active_volume": 2,
@@ -144031,7 +144032,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "blur|||the universal",
+  "__last_radio_key_radio_x_chilled": "the flaming lips|||do you realise?",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -144253,7 +144254,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "syml|||chariot",
+  "__last_radio_key_indie_select": "the horrors|||la runaway",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -145616,7 +145617,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "local authority|||wonder",
-  "__last_radio_key_dkfm_shoegaze": "spider|||j4j testing",
+  "__last_radio_key_dkfm_shoegaze": "tstt|||blurred",
   "__last_radio_key_dkfm_classic": "galaxie 500|||sorry",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -151039,7 +151040,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "andhim|||amene frankey & sandrino remix",
+  "__last_radio_key_dj_neihtul": "amelie lens|||follow original mix",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
