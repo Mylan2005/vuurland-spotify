@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "snocaps|||wasteland",
+      "thomas azier|||year in a spiral",
       "man-made sunshine|||life's gonna kill you if you let it",
       "death cab for cutie|||i will follow you into the dark",
       "low|||lullaby",
@@ -112,11 +114,10 @@
       "lucy dacus|||planting tomatoes",
       "bjork|||stonemilker",
       "james blake|||limit to your love",
-      "beabadoobee|||glue song",
-      "king krule|||border line",
-      "matt berninger & rosanne cash|||who loves the sun"
+      "beabadoobee|||glue song"
     ],
     "mellow_mix": [
+      "jill sobule|||houdini's box",
       "the decemberists|||the crane wife 3",
       "the band|||the weight w/ the staples family",
       "robert plant|||killing the blues",
@@ -215,8 +216,7 @@
       "folk bitch trio|||cathode ray",
       "tom waits|||san diego serenade",
       "the church|||to be in your eyes",
-      "fairport convention|||i'll keep it with mine",
-      "israel kamakawiwo'ole|||somewhere/wonderful"
+      "fairport convention|||i'll keep it with mine"
     ],
     "big_sonic_heaven": [
       "bug teeth|||thin circle",
@@ -937,6 +937,7 @@
       "hideous towns|||don't forget"
     ],
     "dkfm_classic": [
+      "lovesliescrushing|||mother of pearl",
       "medicine|||miss drugstore",
       "スーハーカー|||greenage",
       "blind mr jones|||hey",
@@ -1035,8 +1036,7 @@
       "mistle thrush|||sha sha",
       "adorable|||sistine chapel ceiling",
       "teen idle|||love is a matchstick",
-      "band of susans|||because of you",
-      "cocteau twins|||quisquose"
+      "band of susans|||because of you"
     ],
     "egofm_rnb": [
       "erykah badu|||that hump",
@@ -1447,6 +1447,7 @@
       "chymera|||fathoms esteble dive deep remix ft beatunique on hang"
     ],
     "ignoreradio_shoegaze": [
+      "film school|||crushin",
       "hymbeats|||welcome to texas",
       "blankenberge|||falling stars",
       "17????????|||a flower of the ground",
@@ -1545,8 +1546,7 @@
       "barry peak|||alien eyes",
       "beacon|||anthem",
       "ovlov|||baby shea",
-      "bedroom eyes|||wonder",
-      "citrus|||when you sleep"
+      "bedroom eyes|||wonder"
     ],
     "radio_britannia": [
       "coldplay|||my universe feat bts",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795225508.5380125,
-    "mellow_mix": 1795225508.546055,
-    "big_sonic_heaven": 1795225508.5510693,
-    "radio_x_chilled": 1795225508.5564065,
-    "dreampop_radio": 1795225508.5613086,
-    "indie_select": 1795225508.5665054,
-    "dkfm_edge": 1795225508.572257,
+    "vuurland": 1795225601.4722168,
+    "mellow_mix": 1795225601.4805965,
+    "big_sonic_heaven": 1795225601.4856184,
+    "radio_x_chilled": 1795225601.4911363,
+    "dreampop_radio": 1795225601.496123,
+    "indie_select": 1795225601.5013328,
+    "dkfm_edge": 1795225601.5071805,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795225508.9769704,
-    "dkfm_shoegaze": 1795225508.983047,
-    "dkfm_classic": 1795225508.9882927,
-    "egofm_rnb": 1795225508.994128,
-    "egofm_chillout": 1795225509.0000837,
-    "dj_neihtul": 1795225509.0047214,
-    "gri_balkon": 1795225509.0084462,
-    "ignoreradio_shoegaze": 1795225509.013677,
-    "radio_britannia": 1795225509.0197241,
-    "wbru": 1795225509.0237675
+    "dark_edge": 1795225601.5141437,
+    "dkfm_shoegaze": 1795225601.520171,
+    "dkfm_classic": 1795225601.525551,
+    "egofm_rnb": 1795225601.5314465,
+    "egofm_chillout": 1795225601.537348,
+    "dj_neihtul": 1795225601.5420365,
+    "gri_balkon": 1795225601.5457635,
+    "ignoreradio_shoegaze": 1795225601.9434822,
+    "radio_britannia": 1795225601.9497933,
+    "wbru": 1795225601.9538102
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -26243,6 +26243,7 @@
       "felt|||primitive painters",
       "fennesz|||a year in a minute",
       "film school|||bright to death",
+      "film school|||crushin",
       "film school|||ms connection",
       "film school|||superperfection",
       "film school|||tape rewind",
@@ -31074,11 +31075,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "man-made sunshine|||life's gonna kill you if you let it",
-  "__last_radio_key_mellow_mix": "the decemberists|||the crane wife 3",
+  "__last_radio_key_vuurland": "snocaps|||wasteland",
+  "__last_radio_key_mellow_mix": "jill sobule|||houdini's box",
   "__last_radio_key_big_sonic_heaven": "bug teeth|||thin circle",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 29416,
+  "__v116_fifo_next_sequence": 29417,
   "__v146_spotify_budget_slot": 1795225512.9454854,
   "__vuurland_active_playlist_count": 3892,
   "__vuurland_active_volume": 2,
@@ -145573,7 +145574,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "a shoreline dream and mark gardener|||hollow crown",
   "__last_radio_key_dkfm_shoegaze": "juliet mission|||her name is grey",
-  "__last_radio_key_dkfm_classic": "medicine|||miss drugstore",
+  "__last_radio_key_dkfm_classic": "lovesliescrushing|||mother of pearl",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -151024,7 +151025,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "hymbeats|||welcome to texas",
+  "__last_radio_key_ignoreradio_shoegaze": "film school|||crushin",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
