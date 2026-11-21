@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795226011.8360062,
+  "__v150_next_spotify_round_at": 1795226140.692393,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -321,6 +321,7 @@
       "faithless|||evergreen feat zoe johnston"
     ],
     "radio_x_chilled": [
+      "bombay bicycle club|||eat sleep wake",
       "kaiser chiefs|||love's not a competition but i'm winning",
       "wolf alice|||the last man on earth",
       "longpigs|||lost myself",
@@ -419,8 +420,7 @@
       "sam fender|||spit of you",
       "the war on drugs|||pain",
       "the streets|||dry your eyes",
-      "semisonic|||secret smile",
-      "oasis|||she is love"
+      "semisonic|||secret smile"
     ],
     "dreampop_radio": [
       "sea wolf|||you're a wolf",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795225989.1174855,
-    "mellow_mix": 1795225989.1273916,
-    "big_sonic_heaven": 1795225989.132479,
-    "radio_x_chilled": 1795225989.1378422,
-    "dreampop_radio": 1795225989.1430473,
-    "indie_select": 1795225989.1486807,
-    "dkfm_edge": 1795225989.1545632,
+    "vuurland": 1795226019.50195,
+    "mellow_mix": 1795226019.5127065,
+    "big_sonic_heaven": 1795226019.518136,
+    "radio_x_chilled": 1795226019.5240748,
+    "dreampop_radio": 1795226019.5294077,
+    "indie_select": 1795226019.535071,
+    "dkfm_edge": 1795226019.5413716,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795225989.161574,
-    "dkfm_shoegaze": 1795225989.5558052,
-    "dkfm_classic": 1795225989.5612476,
-    "egofm_rnb": 1795225989.5673637,
-    "egofm_chillout": 1795225989.5733225,
-    "dj_neihtul": 1795225989.5780315,
-    "gri_balkon": 1795225989.5819314,
-    "ignoreradio_shoegaze": 1795225989.5873716,
-    "radio_britannia": 1795225989.5936193,
-    "wbru": 1795225989.5977967
+    "dark_edge": 1795226019.5487638,
+    "dkfm_shoegaze": 1795226019.5553522,
+    "dkfm_classic": 1795226019.5610983,
+    "egofm_rnb": 1795226019.5674858,
+    "egofm_chillout": 1795226019.5737782,
+    "dj_neihtul": 1795226019.5787764,
+    "gri_balkon": 1795226019.5828037,
+    "ignoreradio_shoegaze": 1795226019.5884814,
+    "radio_britannia": 1795226019.5949306,
+    "wbru": 1795226019.5992115
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -31078,6 +31078,14 @@
       "matching_version": 35,
       "failed_searches": 3,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "joshua radin|||i'd rather be with you radio": {
+      "artist": "Joshua Radin",
+      "title": "I'd Rather Be With You (Radio",
+      "source": "dreampop_radio",
+      "failed_at": 1795226026,
+      "matching_version": 35,
+      "failed_searches": 5
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -31089,7 +31097,7 @@
   "__last_radio_key_big_sonic_heaven": "dead can dance|||summoning of the muse remastered",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 29425,
-  "__v146_spotify_budget_slot": 1795225894.6835384,
+  "__v146_spotify_budget_slot": 1795226023.5521533,
   "__vuurland_active_playlist_count": 3895,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -106334,7 +106342,7 @@
     "t r a c e s|||conceal": 1,
     "dog is dead|||get low": 1,
     "soundpool|||florida blue": 1,
-    "joshua radin|||i'd rather be with you radio": 4,
+    "joshua radin|||i'd rather be with you radio": 5,
     "the charlottes|||mad girl's love song album version": 1,
     "24 gone|||girl of colours": 1,
     "juliana hatfield|||somebody's waiting for me": 4,
@@ -144009,7 +144017,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "kaiser chiefs|||love's not a competition but i'm winning",
+  "__last_radio_key_radio_x_chilled": "bombay bicycle club|||eat sleep wake",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -149278,7 +149286,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "big_sonic_heaven",
+  "__v221_last_selected_source": "dreampop_radio",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -149290,7 +149298,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "dreampop_radio",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -149323,7 +149331,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "big_sonic_heaven",
+  "__v227_last_source_turn": "dreampop_radio",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -155253,31 +155261,6 @@
       ],
       "status": "uncertain"
     },
-    "joshua radin|||i'd rather be with you radio": {
-      "source": "dreampop_radio",
-      "artist": "Joshua Radin",
-      "title": "I'd Rather Be With You (Radio",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [
-        {
-          "artist": "Ethel Cain",
-          "title": "Crush - Stripped",
-          "spotify_id": "0doTgRQa7qyw5JYPfwhPcK"
-        },
-        {
-          "artist": "Phantogram",
-          "title": "When I'm Small",
-          "spotify_id": "1eRZ7SYPW54ghVSVOljr5l"
-        },
-        {
-          "artist": "Childish Gambino",
-          "title": "3005",
-          "spotify_id": "2X6b7zLdIxCejd6GqVcQ9M"
-        }
-      ],
-      "status": "low_relevance"
-    },
     "shoegazer|||who i am": {
       "source": "dkfm_edge",
       "artist": "SHOEGAZER",
@@ -158072,6 +158055,31 @@
           "artist": "Roedelius, Tim Story",
           "title": "Crisscrossing",
           "spotify_id": "6OTJzugjPth9AnAn4wdEzI"
+        }
+      ],
+      "status": "uncertain"
+    },
+    "joshua radin|||i'd rather be with you radio": {
+      "source": "dreampop_radio",
+      "artist": "Joshua Radin",
+      "title": "I'd Rather Be With You (Radio",
+      "kind": "uncertain",
+      "variant": 1,
+      "candidates": [
+        {
+          "artist": "Joshua Radin",
+          "title": "I'd Rather Be With You",
+          "spotify_id": "7G2LrUhaD9VO66zvg0Tqf4"
+        },
+        {
+          "artist": "Ethel Cain",
+          "title": "Crush",
+          "spotify_id": "0nsIevK1SeDfZzDOi6Si75"
+        },
+        {
+          "artist": "Joshua Radin",
+          "title": "I'd Rather Be with You (Live)",
+          "spotify_id": "4DCT33RmewTK7XuKdc75jF"
         }
       ],
       "status": "uncertain"
