@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795222078.4615443,
+  "__v150_next_spotify_round_at": 1795222204.7337806,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -219,6 +219,7 @@
       "lizz wright|||hit the ground"
     ],
     "big_sonic_heaven": [
+      "the sewing club|||complicated",
       "keep shelly in athens|||madmen love",
       "night swimming|||dark clouds",
       "bluhm|||i don't care i want you now",
@@ -317,8 +318,7 @@
       "the awakening|||until the dawn",
       "kai tak|||villains in my mind feat foie gras",
       "love & rockets|||an american dream",
-      "yello|||you and me feat heidi happy",
-      "letting up despite great faults|||color filter ft soft blue shimmer"
+      "yello|||you and me feat heidi happy"
     ],
     "radio_x_chilled": [
       "lana del rey|||summertime sadness",
@@ -423,6 +423,7 @@
       "arctic monkeys|||i wanna be yours"
     ],
     "dreampop_radio": [
+      "kodaline|||high hopes - filous remix",
       "i have a tribe|||yellow raincoats frank wiedemann radio remix",
       "x ambassadors|||unsteady erich lee gravity remix",
       "m83|||skin of the night",
@@ -521,8 +522,7 @@
       "hollow coves|||heatwave",
       "travis|||driftwood",
       "marlon williams|||dark child",
-      "washed out|||eyes be closed",
-      "syml|||where's my love"
+      "washed out|||eyes be closed"
     ],
     "indie_select": [
       "two door cinema club|||cigarettes in the theatre",
@@ -835,6 +835,7 @@
       "josef salvat|||open season"
     ],
     "dkfm_shoegaze": [
+      "olympic swimmers|||knots",
       "the daysleepers|||creation single mix",
       "ned's atomic dustbin|||grey cell green",
       "sea of tranquility|||seize the light",
@@ -933,10 +934,10 @@
       "appi|||ukiyo",
       "trillion|||take it slow",
       "lush|||light from a dead star",
-      "memoryhouse|||arizona",
-      "soundpool|||the divides of march"
+      "memoryhouse|||arizona"
     ],
     "dkfm_classic": [
+      "14 iced bears|||in the morning",
       "the belltower|||solstice",
       "cranes|||jewel",
       "revolver|||nothing without you",
@@ -1035,8 +1036,7 @@
       "spiritualized|||run",
       "slowdive|||spanish air",
       "orange|||feijoa",
-      "chapterhouse|||treasure",
-      "closedown|||red oval"
+      "chapterhouse|||treasure"
     ],
     "egofm_rnb": [
       "fieh|||glu",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795222049.3256853,
-    "mellow_mix": 1795222049.333305,
-    "big_sonic_heaven": 1795222049.3383677,
-    "radio_x_chilled": 1795222049.3435166,
-    "dreampop_radio": 1795222049.3482764,
-    "indie_select": 1795222049.3533835,
-    "dkfm_edge": 1795222049.358953,
+    "vuurland": 1795222083.557419,
+    "mellow_mix": 1795222083.564735,
+    "big_sonic_heaven": 1795222083.569755,
+    "radio_x_chilled": 1795222083.574718,
+    "dreampop_radio": 1795222083.5798337,
+    "indie_select": 1795222083.5848541,
+    "dkfm_edge": 1795222083.5903647,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795222049.3653653,
-    "dkfm_shoegaze": 1795222049.3708792,
-    "dkfm_classic": 1795222049.3759577,
-    "egofm_rnb": 1795222049.3816516,
-    "egofm_chillout": 1795222049.3873224,
-    "dj_neihtul": 1795222049.3919156,
-    "gri_balkon": 1795222049.395724,
-    "ignoreradio_shoegaze": 1795222049.8230515,
-    "radio_britannia": 1795222049.828923,
-    "wbru": 1795222049.8330812
+    "dark_edge": 1795222083.5966833,
+    "dkfm_shoegaze": 1795222083.6022816,
+    "dkfm_classic": 1795222083.6073797,
+    "egofm_rnb": 1795222083.6130667,
+    "egofm_chillout": 1795222083.6186485,
+    "dj_neihtul": 1795222083.623174,
+    "gri_balkon": 1795222083.6267412,
+    "ignoreradio_shoegaze": 1795222083.6317122,
+    "radio_britannia": 1795222083.6374562,
+    "wbru": 1795222083.6413372
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -31002,10 +31002,10 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "city of the sun|||under the same sky",
   "__last_radio_key_mellow_mix": "the melodians|||rivers of babylon",
-  "__last_radio_key_big_sonic_heaven": "keep shelly in athens|||madmen love",
+  "__last_radio_key_big_sonic_heaven": "the sewing club|||complicated",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 29358,
-  "__v146_spotify_budget_slot": 1795221961.2911854,
+  "__v146_spotify_budget_slot": 1795222087.6237824,
   "__vuurland_active_playlist_count": 3871,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -106095,7 +106095,7 @@
     "winter sun|||somewhere else": 3,
     "springloader|||nothing i want more": 3,
     "third eye blind|||if there ever was a time": 1,
-    "glia|||see through you": 1,
+    "glia|||see through you": 2,
     "andy bell feat dot allison and michael rother|||i'm in love": 1,
     "lorelei|||sometimesmethinks": 1,
     "ultra vivid scene|||mercy seat 12\" version": 1,
@@ -143924,7 +143924,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "i have a tribe|||yellow raincoats frank wiedemann radio remix",
+  "__last_radio_key_dreampop_radio": "kodaline|||high hopes - filous remix",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -145405,8 +145405,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "magic shoppe|||have you seen bella?",
-  "__last_radio_key_dkfm_shoegaze": "the daysleepers|||creation single mix",
-  "__last_radio_key_dkfm_classic": "the belltower|||solstice",
+  "__last_radio_key_dkfm_shoegaze": "olympic swimmers|||knots",
+  "__last_radio_key_dkfm_classic": "14 iced bears|||in the morning",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -149089,7 +149089,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -149101,7 +149101,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -149134,7 +149134,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -157802,6 +157802,31 @@
         }
       ],
       "status": "uncertain"
+    },
+    "glia|||see through you": {
+      "source": "dkfm_edge",
+      "artist": "Glia",
+      "title": "See Through You",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [
+        {
+          "artist": "Stereo MC's",
+          "title": "Connected",
+          "spotify_id": "1ZoE2naC9ySlPLdBZhS1rM"
+        },
+        {
+          "artist": "Staind",
+          "title": "Outside",
+          "spotify_id": "5D6rk7Zr7FRy5m2fDte5fp"
+        },
+        {
+          "artist": "Florence + The Machine, The xx, Jamie xx",
+          "title": "You've Got The Love - Jamie xx Rework",
+          "spotify_id": "59Y2GLn55BVjX3UTMUDtTP"
+        }
+      ],
+      "status": "low_relevance"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
