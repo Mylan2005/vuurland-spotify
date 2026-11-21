@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "warhaus|||kreusch",
+      "jorja smith|||february 3rd",
       "sevens|||bloom",
       "rhye|||summer song",
       "greentea peng|||look to him",
@@ -112,9 +114,7 @@
       "ethel cain|||fuck me eyes",
       "feist|||hiding out in the open",
       "vampire weekend|||capricorn",
-      "radiohead|||weird fishes / arpeggi",
-      "lucy dacus|||planting tomatoes",
-      "phoebe bridgers|||sidelines"
+      "radiohead|||weird fishes / arpeggi"
     ],
     "mellow_mix": [
       "mark ambor|||good to be",
@@ -219,6 +219,7 @@
       "alexi murdoch|||breathe"
     ],
     "big_sonic_heaven": [
+      "dead can dance|||in power we entrust the love advocated",
       "hunter as a horse|||here's to all the ones",
       "the radio dept|||keen on boys",
       "echo & the bunnymen|||the light that surrounds you",
@@ -317,8 +318,7 @@
       "hannes kretzer|||devotion & decay",
       "prepare my glider|||breathe",
       "hooverphonic|||the united states of amnesia",
-      "frazier chorus|||sloppy heart",
-      "attic ocean|||love spells"
+      "frazier chorus|||sloppy heart"
     ],
     "radio_x_chilled": [
       "dma's|||delete",
@@ -525,6 +525,7 @@
       "vetiver|||strictly rule"
     ],
     "indie_select": [
+      "big country|||all fall together giant remix",
       "styrofoam featuring valerie trebeljahr alias|||misguided - styrofoam featuring valerie trebeljahr alias",
       "marble sounds|||an emotional high",
       "grimes|||delete forever",
@@ -623,8 +624,7 @@
       "the wombats|||our perfect disease",
       "stars|||fluorescent light",
       "the asteroids galaxy tour|||around the bend",
-      "gary numan|||lost",
-      "chvrches|||the mother we share - errors rmx"
+      "gary numan|||lost"
     ],
     "dkfm_edge": [
       "makeout city|||everytime",
@@ -1039,6 +1039,7 @@
       "ecstasy of saint theresa|||to alison"
     ],
     "egofm_rnb": [
+      "king princess|||for my friends",
       "kindness feat robyn|||who do you love",
       "jon batiste|||sing",
       "robert glasper feat musiq soulchild & chrisette michel|||ah yeah",
@@ -1137,10 +1138,10 @@
       "outlines|||our lives are too short",
       "pip millett|||do well",
       "tlc|||waterfalls",
-      "bj the chicago kid|||turnin' me up",
-      "jungle|||casio"
+      "bj the chicago kid|||turnin' me up"
     ],
     "egofm_chillout": [
+      "jon hopkins|||immunity",
       "dj badou|||smooth & sweet",
       "sly & robbie meet nils petter molvaer feat eivind aarset and vladislav delay|||if i gave you my love",
       "mansionair|||hold me down",
@@ -1239,8 +1240,7 @@
       "the field tapes azula stan forebee & francis|||harbor",
       "julee cruise|||falling",
       "y-files|||the sky is high",
-      "billie eilish|||everything i wanted",
-      "morcheeba feat benjamin biolay|||paris sur mer"
+      "billie eilish|||everything i wanted"
     ],
     "dj_neihtul": [
       "information society|||run away",
@@ -1549,6 +1549,7 @@
       "electric youth|||the seeker"
     ],
     "radio_britannia": [
+      "the verve|||sonnet",
       "spector|||celestine",
       "jake bugg|||gimme the love",
       "alison goldfrapp|||so hard so hot",
@@ -1647,8 +1648,7 @@
       "pj harvey|||the wind",
       "bloc party|||mercury",
       "the futureheads|||the beginning of the twist",
-      "florence the machine|||mermaids",
-      "lime garden|||moving target"
+      "florence the machine|||mermaids"
     ],
     "wbru": [
       "the paradox|||i kinda like that",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795280041.8390024,
-    "mellow_mix": 1795280041.8418071,
-    "big_sonic_heaven": 1795280041.8443515,
-    "radio_x_chilled": 1795280041.8464727,
-    "dreampop_radio": 1795280041.8486092,
-    "indie_select": 1795280041.8509936,
-    "dkfm_edge": 1795280041.8532088,
+    "vuurland": 1795280126.5426745,
+    "mellow_mix": 1795280126.5454693,
+    "big_sonic_heaven": 1795280126.5479238,
+    "radio_x_chilled": 1795280126.550318,
+    "dreampop_radio": 1795280126.5524933,
+    "indie_select": 1795280126.5551908,
+    "dkfm_edge": 1795280126.5574126,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795280041.8566244,
-    "dkfm_shoegaze": 1795280041.8593426,
-    "dkfm_classic": 1795280041.8617702,
-    "egofm_rnb": 1795280041.8641224,
-    "egofm_chillout": 1795280041.8663938,
-    "dj_neihtul": 1795280041.8686824,
-    "gri_balkon": 1795280041.8704865,
-    "ignoreradio_shoegaze": 1795280041.8730242,
-    "radio_britannia": 1795280041.87579,
-    "wbru": 1795280041.8776996
+    "dark_edge": 1795280126.560872,
+    "dkfm_shoegaze": 1795280126.563434,
+    "dkfm_classic": 1795280126.5660372,
+    "egofm_rnb": 1795280126.5685122,
+    "egofm_chillout": 1795280126.5708005,
+    "dj_neihtul": 1795280126.572847,
+    "gri_balkon": 1795280126.5745373,
+    "ignoreradio_shoegaze": 1795280126.5769963,
+    "radio_britannia": 1795280126.5794885,
+    "wbru": 1795280126.5816429
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29864,6 +29864,7 @@
       "the verve|||lucky man",
       "the verve|||on your own",
       "the verve|||slide away",
+      "the verve|||sonnet",
       "the verve|||the drugs dont work",
       "the verve|||this is music",
       "the verve|||valium skies",
@@ -32109,9 +32110,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "sevens|||bloom",
+  "__last_radio_key_vuurland": "warhaus|||kreusch",
   "__last_radio_key_mellow_mix": "mark ambor|||good to be",
-  "__last_radio_key_big_sonic_heaven": "hunter as a horse|||here's to all the ones",
+  "__last_radio_key_big_sonic_heaven": "dead can dance|||in power we entrust the love advocated",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30214,
   "__v146_spotify_budget_slot": 1795280044.6677234,
@@ -146716,7 +146717,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "styrofoam featuring valerie trebeljahr alias|||misguided - styrofoam featuring valerie trebeljahr alias",
+  "__last_radio_key_indie_select": "big country|||all fall together giant remix",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -153492,8 +153493,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "kindness feat robyn|||who do you love",
-  "__last_radio_key_egofm_chillout": "dj badou|||smooth & sweet",
+  "__last_radio_key_egofm_rnb": "king princess|||for my friends",
+  "__last_radio_key_egofm_chillout": "jon hopkins|||immunity",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -155060,7 +155061,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "spector|||celestine",
+  "__last_radio_key_radio_britannia": "the verve|||sonnet",
   "__last_radio_key_wbru": "the paradox|||i kinda like that",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
