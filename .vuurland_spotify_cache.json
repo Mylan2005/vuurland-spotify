@@ -423,6 +423,7 @@
       "arctic monkeys|||riot van"
     ],
     "dreampop_radio": [
+      "feist|||graveyard",
       "olgwi|||rusty kind of soul",
       "kings of convenience|||i don't know what i can save you from",
       "tom klose|||goodnight",
@@ -521,8 +522,7 @@
       "andrew bird|||oh no",
       "roo panes|||tiger striped sky",
       "frazey ford|||one more cup of coffee",
-      "temples|||the guesser",
-      "kina grannis|||chandelier"
+      "temples|||the guesser"
     ],
     "indie_select": [
       "the lonely forest|||coyote",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "james blunt|||courtney's song",
       "kt tunstall|||black horse and the cherry tree",
       "james bay|||hold back the river",
       "slackwax|||close to my fire",
@@ -831,10 +832,11 @@
       "amfm|||wednesday",
       "two feet|||i feel like i'm drowning",
       "robin and the backstabbers|||spnzrtr",
-      "born ruffians|||chrysanthemums",
-      "her|||a change is gonna come"
+      "born ruffians|||chrysanthemums"
     ],
     "dkfm_shoegaze": [
+      "after daylight|||the death of everthing",
+      "moon cowboy & krissy vanderwoude|||baby's coming home",
       "funus|||between futures and shadows",
       "raw blue|||numb to everything",
       "alonekitty|||i'm wide awake",
@@ -932,11 +934,10 @@
       "momma|||sunrise",
       "puppy teeth|||that time",
       "encarta 98|||lucero",
-      "entre las nubes|||demasiada juventud",
-      "the foams|||mind slower",
-      "alonekitty|||save me"
+      "entre las nubes|||demasiada juventud"
     ],
     "dkfm_classic": [
+      "slowdive|||avalyn 1",
       "the telescopes|||ocean drive",
       "seefeel|||polyfusion",
       "bethany curve|||serene and smiling",
@@ -1035,10 +1036,10 @@
       "ozean|||scenic",
       "ride|||twisterella",
       "pale saints|||hair shoes",
-      "jesus & mary chain|||you trip me up",
-      "catherine wheel|||heal 2"
+      "jesus & mary chain|||you trip me up"
     ],
     "egofm_rnb": [
+      "ariel pink|||another weekend",
       "honne|||back on top feat griff",
       "superorganism|||something for your m i n d",
       "tom misch & yussef dayes|||last 100",
@@ -1137,8 +1138,7 @@
       "frank ocean|||thinkin bout you",
       "sir|||d'evils",
       "thundercat feat steve lacy & steve arrington|||black qualls",
-      "james blake|||retrograde",
-      "joy denalane feat bj the chicago kid|||i believe"
+      "james blake|||retrograde"
     ],
     "egofm_chillout": [
       "sugi wa|||after dark",
@@ -1447,6 +1447,7 @@
       "burial and four tet ft thom yorke|||ego"
     ],
     "ignoreradio_shoegaze": [
+      "a sunny day in glasgow|||in love with useless the timeless geometry in the tradition of passing",
       "asobi seksu|||little house of savages",
       "dean blunt|||heavy",
       "velveteen|||if you could",
@@ -1545,8 +1546,7 @@
       "trpp|||furykawa",
       "mogwai|||rano pano",
       "lazy legs|||silkworm",
-      "trauma ray|||liftoff",
-      "tom waits|||goin' out west"
+      "trauma ray|||liftoff"
     ],
     "radio_britannia": [
       "the long blondes|||once and never again",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795305079.802522,
-    "mellow_mix": 1795305079.8096113,
-    "big_sonic_heaven": 1795305079.8142626,
-    "radio_x_chilled": 1795305079.819273,
-    "dreampop_radio": 1795305079.8240478,
-    "indie_select": 1795305079.8291016,
-    "dkfm_edge": 1795305079.8341634,
+    "vuurland": 1795305170.690383,
+    "mellow_mix": 1795305170.6973152,
+    "big_sonic_heaven": 1795305170.701993,
+    "radio_x_chilled": 1795305170.7069426,
+    "dreampop_radio": 1795305170.7118964,
+    "indie_select": 1795305170.7170463,
+    "dkfm_edge": 1795305170.7220802,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795305079.8411603,
-    "dkfm_shoegaze": 1795305079.8460786,
-    "dkfm_classic": 1795305079.8509655,
-    "egofm_rnb": 1795305079.8565516,
-    "egofm_chillout": 1795305079.8616068,
-    "dj_neihtul": 1795305079.8658388,
-    "gri_balkon": 1795305079.8694053,
-    "ignoreradio_shoegaze": 1795305079.8745883,
-    "radio_britannia": 1795305079.8804255,
-    "wbru": 1795305079.8844335
+    "dark_edge": 1795305171.167345,
+    "dkfm_shoegaze": 1795305171.172468,
+    "dkfm_classic": 1795305171.1774752,
+    "egofm_rnb": 1795305171.1831505,
+    "egofm_chillout": 1795305171.1880798,
+    "dj_neihtul": 1795305171.1923323,
+    "gri_balkon": 1795305171.1959283,
+    "ignoreradio_shoegaze": 1795305171.8526742,
+    "radio_britannia": 1795305171.8585567,
+    "wbru": 1795305171.8625326
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15013,6 +15013,7 @@
       "james blake|||radio silence",
       "james blake|||retrograde",
       "james blunt|||1973",
+      "james blunt|||courtney's song",
       "james hunter|||carina",
       "james morrison|||wonderful world",
       "james morrison|||you give me something",
@@ -26129,6 +26130,7 @@
       "a shoreline dream|||neverchanger feat ulrich schnauss",
       "a silver mt zion|||13 angels standing guard ?round the side of your bed",
       "a sunny day in glasgow|||drink drank drunk",
+      "a sunny day in glasgow|||in love with useless the timeless geometry in the tradition of passing",
       "a sunny day in glasgow|||the best summer ever",
       "abul mogard|||london south",
       "acid ghost|||ayce's song",
@@ -32593,7 +32595,7 @@
   "__last_radio_key_mellow_mix": "crowded house|||don't dream it's over",
   "__last_radio_key_big_sonic_heaven": "dream pop|||sound of your heart",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 30597,
+  "__v116_fifo_next_sequence": 30599,
   "__v146_spotify_budget_slot": 1795305083.8526778,
   "__vuurland_active_playlist_count": 4410,
   "__vuurland_active_volume": 2,
@@ -147745,7 +147747,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "olgwi|||rusty kind of soul",
+  "__last_radio_key_dreampop_radio": "feist|||graveyard",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -149226,8 +149228,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "deary|||the moth",
-  "__last_radio_key_dkfm_shoegaze": "funus|||between futures and shadows",
-  "__last_radio_key_dkfm_classic": "the telescopes|||ocean drive",
+  "__last_radio_key_dkfm_shoegaze": "after daylight|||the death of everthing",
+  "__last_radio_key_dkfm_classic": "slowdive|||avalyn 1",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -149239,7 +149241,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "kt tunstall|||black horse and the cherry tree",
+  "__last_radio_key_dark_edge": "james blunt|||courtney's song",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -154639,7 +154641,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "honne|||back on top feat griff",
+  "__last_radio_key_egofm_rnb": "ariel pink|||another weekend",
   "__last_radio_key_egofm_chillout": "sugi wa|||after dark",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -154678,7 +154680,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "asobi seksu|||little house of savages",
+  "__last_radio_key_ignoreradio_shoegaze": "a sunny day in glasgow|||in love with useless the timeless geometry in the tradition of passing",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
