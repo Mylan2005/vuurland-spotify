@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795294043.084161,
+  "__v150_next_spotify_round_at": 1795294164.0957224,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "beabadoobee|||the perfect pair",
       "the haunted youth|||wake up",
       "nick cave & warren ellis|||carnage",
       "lianne la havas|||bittersweet",
@@ -113,10 +114,10 @@
       "portland|||aftermath",
       "teddy swims|||bad dreams",
       "cigarettes after sex|||pistol",
-      "noah kahan|||porch light",
-      "beach house|||ppp"
+      "noah kahan|||porch light"
     ],
     "mellow_mix": [
+      "beck|||morning",
       "jackson browne|||jamaica say you will",
       "pieta brown|||dreamin' of",
       "john craigie|||i am california feat gregory alan isakov",
@@ -215,8 +216,7 @@
       "peter gabriel|||don't give up",
       "the boxer rebellion|||love yourself",
       "tamino|||babylon",
-      "michael kiwanuka|||floating parade",
-      "stan getz|||desafinado"
+      "michael kiwanuka|||floating parade"
     ],
     "big_sonic_heaven": [
       "primal scream|||come together 7\" version",
@@ -835,6 +835,7 @@
       "mazzy star|||halah"
     ],
     "dkfm_shoegaze": [
+      "sennen|||here it comes",
       "sidewave|||big whisper",
       "soft science|||sand",
       "slowwves|||killed by egoistic disease",
@@ -933,10 +934,10 @@
       "fleeting colours|||crystal",
       "paper lady|||cellsword",
       "funsover|||dizzy",
-      "venetian blinds|||debt collector",
-      "starbelliedbug|||rocket"
+      "venetian blinds|||debt collector"
     ],
     "dkfm_classic": [
+      "adorable|||crash site",
       "chapterhouse|||falling down",
       "bowery electric|||fear of flying",
       "cocteau twins|||i wear your ring",
@@ -1035,8 +1036,7 @@
       "the nightblooms|||butterfly girl",
       "brian jonestown massacre|||end of the day",
       "half string|||numbers and fingers",
-      "chapterhouse|||something",
-      "moose|||the whistling song"
+      "chapterhouse|||something"
     ],
     "egofm_rnb": [
       "kllo|||candid",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795294005.8056755,
-    "mellow_mix": 1795294005.8090727,
-    "big_sonic_heaven": 1795294005.8118756,
-    "radio_x_chilled": 1795294005.8146398,
-    "dreampop_radio": 1795294005.817533,
-    "indie_select": 1795294005.8205152,
-    "dkfm_edge": 1795294005.8234751,
+    "vuurland": 1795294043.2784786,
+    "mellow_mix": 1795294043.2822528,
+    "big_sonic_heaven": 1795294043.285218,
+    "radio_x_chilled": 1795294043.288022,
+    "dreampop_radio": 1795294043.290904,
+    "indie_select": 1795294043.2939065,
+    "dkfm_edge": 1795294043.2967825,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795294006.0943823,
-    "dkfm_shoegaze": 1795294006.0976253,
-    "dkfm_classic": 1795294006.1005187,
-    "egofm_rnb": 1795294006.1034472,
-    "egofm_chillout": 1795294006.1062298,
-    "dj_neihtul": 1795294006.108659,
-    "gri_balkon": 1795294006.1106527,
-    "ignoreradio_shoegaze": 1795294006.11365,
-    "radio_britannia": 1795294006.116806,
-    "wbru": 1795294006.4323883
+    "dark_edge": 1795294043.3008928,
+    "dkfm_shoegaze": 1795294043.3040595,
+    "dkfm_classic": 1795294043.3070953,
+    "egofm_rnb": 1795294043.310122,
+    "egofm_chillout": 1795294043.3129263,
+    "dj_neihtul": 1795294043.315392,
+    "gri_balkon": 1795294043.3174722,
+    "ignoreradio_shoegaze": 1795294043.3205538,
+    "radio_britannia": 1795294043.3236868,
+    "wbru": 1795294043.3259654
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32386,13 +32386,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "the haunted youth|||wake up",
-  "__last_radio_key_mellow_mix": "jackson browne|||jamaica say you will",
+  "__last_radio_key_vuurland": "beabadoobee|||the perfect pair",
+  "__last_radio_key_mellow_mix": "beck|||morning",
   "__last_radio_key_big_sonic_heaven": "primal scream|||come together 7\" version",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30438,
-  "__v146_spotify_budget_slot": 1795293925.10944,
-  "__vuurland_active_playlist_count": 4340,
+  "__v146_spotify_budget_slot": 1795294046.0016894,
+  "__vuurland_active_playlist_count": 4341,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1795291459,
@@ -40435,6 +40435,7 @@
     "love spirals downwards|||depression glass",
     "love spirals downwards|||drops rain and sea",
     "love spirals downwards|||el pedregal",
+    "love spirals downwards|||illusory me",
     "love spirals downwards|||kykeon",
     "love spirals downwards|||mediterranea",
     "love spirals downwards|||noumena of spirit",
@@ -59834,6 +59835,7 @@
     "spotify:track:68JSm45CpaQTbGJXMwOjjX",
     "spotify:track:68JX90DFYbGnKeq6eVT43G",
     "spotify:track:68KeHI8K2HZa3v8ZE42dHn",
+    "spotify:track:68KsdOjFquTlApwPL7f6Cr",
     "spotify:track:68L3VV39beAv1sAQzvxlwO",
     "spotify:track:68X0BTWvkY5U0swxLgRenl",
     "spotify:track:68XrxZWCbAknUJkW4ClvEJ",
@@ -74601,6 +74603,7 @@
     "USHF31609803",
     "USHF31911410",
     "USHF32215903",
+    "USHK90703601",
     "USHK90703602",
     "USHK90703604",
     "USHK90703608",
@@ -91065,7 +91068,8 @@
     "spotify:track:56xHMIfQPoe0prrSi3BGhf": "USUG12307028",
     "spotify:track:5D8SzvASRr7V7ZrrXsh6SY": "GBF089500689",
     "spotify:track:6RMOMyYzOaNBlKvRc3dOBm": "DEAL30801356",
-    "spotify:track:1t4pPnbkOjzoA5RvsDjvUU": "USRC11802708"
+    "spotify:track:1t4pPnbkOjzoA5RvsDjvUU": "USRC11802708",
+    "spotify:track:68KsdOjFquTlApwPL7f6Cr": "USHK90703601"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -148735,8 +148739,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "little oso|||metaphorical ohio",
-  "__last_radio_key_dkfm_shoegaze": "sidewave|||big whisper",
-  "__last_radio_key_dkfm_classic": "chapterhouse|||falling down",
+  "__last_radio_key_dkfm_shoegaze": "sennen|||here it comes",
+  "__last_radio_key_dkfm_classic": "adorable|||crash site",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -152419,7 +152423,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dkfm_shoegaze",
+  "__v221_last_selected_source": "dkfm_classic",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -152431,7 +152435,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dkfm_shoegaze",
+  "__v224_last_spotify_opportunity_source": "dkfm_classic",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -152464,7 +152468,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dkfm_shoegaze",
+  "__v227_last_source_turn": "dkfm_classic",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -163524,5 +163528,6 @@
   "__match_v35__olivia rodrigo|||can't catch me now": "spotify:track:56xHMIfQPoe0prrSi3BGhf",
   "__match_v35__cocteau twins|||serpentskirt": "spotify:track:5D8SzvASRr7V7ZrrXsh6SY",
   "__match_v35__dirk darmstaedter|||top of the world": "spotify:track:6RMOMyYzOaNBlKvRc3dOBm",
-  "__match_v35__brockhampton|||1999 wildfire": "spotify:track:1t4pPnbkOjzoA5RvsDjvUU"
+  "__match_v35__brockhampton|||1999 wildfire": "spotify:track:1t4pPnbkOjzoA5RvsDjvUU",
+  "__match_v35__love spirals downwards|||illusory me": "spotify:track:68KsdOjFquTlApwPL7f6Cr"
 }
