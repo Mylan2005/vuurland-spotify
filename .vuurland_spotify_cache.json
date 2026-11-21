@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "lizzy mcalpine|||ceilings",
+      "angus and julia stone|||big jet plane",
       "city of the sun|||under the same sky",
       "kurt vile|||zoom 97",
       "kids with buns|||waiting room",
@@ -112,9 +114,7 @@
       "thomas azier|||year in a spiral",
       "novastar|||mars needs woman",
       "het zesde metaal|||dien blik",
-      "the indien|||sleep when i'm with you",
-      "the war on drugs|||thinking of a place",
-      "syml|||girl"
+      "the indien|||sleep when i'm with you"
     ],
     "mellow_mix": [
       "cult with no name|||not stranger than fiction",
@@ -321,6 +321,7 @@
       "love & rockets|||an american dream"
     ],
     "radio_x_chilled": [
+      "neil young|||my my hey hey out of the blue",
       "the goo goo dolls|||iris",
       "lana del rey|||summertime sadness",
       "empire of the sun|||we are the people",
@@ -419,8 +420,7 @@
       "blossoms|||the keeper acoustic",
       "massive attack|||protection",
       "jose gonzalez|||heartbeats",
-      "paul weller|||wild wood",
-      "kings of leon|||pyro"
+      "paul weller|||wild wood"
     ],
     "dreampop_radio": [
       "gavin friday|||angel",
@@ -1141,6 +1141,7 @@
       "tirzah|||holding on"
     ],
     "egofm_chillout": [
+      "meat beat manifesto|||lurker",
       "iamalex azula & dayle|||meadow",
       "bonobo feat o'flynn|||otomo",
       "frieder nagel feat mima|||obey",
@@ -1239,8 +1240,7 @@
       "neneh cherry|||kong",
       "chromonicci|||oceania",
       "mueller roedelius|||fractured being",
-      "the sellouts saint wknd & benjamin amaru|||stay",
-      "federico albanese|||by the deep sea"
+      "the sellouts saint wknd & benjamin amaru|||stay"
     ],
     "dj_neihtul": [
       "enrico sangiuliano|||moon rocks",
@@ -1345,6 +1345,7 @@
       "iamx|||eternity"
     ],
     "gri_balkon": [
+      "the dining rooms|||existentialism milano dub mix",
       "norken deer|||remember that feeling",
       "afterlife|||cry brown bear mix",
       "jimi jules|||too young for me ft jaw",
@@ -1443,8 +1444,7 @@
       "pional|||casualty",
       "maricopa|||this way forever",
       "mystic diversions mike francis|||josephine",
-      "plaid|||zamami",
-      "royksopp|||compulsion ft jamie irrepressible"
+      "plaid|||zamami"
     ],
     "ignoreradio_shoegaze": [
       "lilys|||the first half second",
@@ -1651,6 +1651,7 @@
       "the wombats|||our perfect disease"
     ],
     "wbru": [
+      "leon bridges|||talk it over",
       "flume|||the difference f toro y moi",
       "ivri|||tower of memories",
       "phoebe bridgers|||bobby",
@@ -1679,7 +1680,6 @@
       "the war on drugs|||who's that",
       "radiohead|||fake plastic trees",
       "lana del rey|||lies with zach bryan",
-      "leon bridges|||talk it over",
       "the killers|||the man",
       "beabadoobee|||all i did was dream of you f the marias",
       "phoebe bridgers|||kill me",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795222463.7294724,
-    "mellow_mix": 1795222463.7372277,
-    "big_sonic_heaven": 1795222463.742124,
-    "radio_x_chilled": 1795222463.7470992,
-    "dreampop_radio": 1795222463.7519057,
-    "indie_select": 1795222463.7569706,
-    "dkfm_edge": 1795222463.7626162,
+    "vuurland": 1795222555.2510095,
+    "mellow_mix": 1795222555.2571478,
+    "big_sonic_heaven": 1795222555.2620554,
+    "radio_x_chilled": 1795222555.2671165,
+    "dreampop_radio": 1795222555.2718377,
+    "indie_select": 1795222555.276913,
+    "dkfm_edge": 1795222555.2824345,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795222463.7689707,
-    "dkfm_shoegaze": 1795222463.7745728,
-    "dkfm_classic": 1795222463.7802718,
-    "egofm_rnb": 1795222463.7859957,
-    "egofm_chillout": 1795222463.7916584,
-    "dj_neihtul": 1795222463.7962348,
-    "gri_balkon": 1795222463.799879,
-    "ignoreradio_shoegaze": 1795222463.8049273,
-    "radio_britannia": 1795222463.8106775,
-    "wbru": 1795222463.8145752
+    "dark_edge": 1795222555.2888389,
+    "dkfm_shoegaze": 1795222555.2944694,
+    "dkfm_classic": 1795222555.2995622,
+    "egofm_rnb": 1795222555.305274,
+    "egofm_chillout": 1795222555.311035,
+    "dj_neihtul": 1795222555.3155797,
+    "gri_balkon": 1795222555.3193219,
+    "ignoreradio_shoegaze": 1795222555.3243375,
+    "radio_britannia": 1795222555.3301024,
+    "wbru": 1795222555.336091
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -31009,7 +31009,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "city of the sun|||under the same sky",
+  "__last_radio_key_vuurland": "lizzy mcalpine|||ceilings",
   "__last_radio_key_mellow_mix": "cult with no name|||not stranger than fiction",
   "__last_radio_key_big_sonic_heaven": "peter murphy|||dragnet drag",
   "__v181_vuurland_two_missing_recovered": true,
@@ -143838,7 +143838,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the goo goo dolls|||iris",
+  "__last_radio_key_radio_x_chilled": "neil young|||my my hey hey out of the blue",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -150837,7 +150837,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "the neighbourhood|||daddy issues",
-  "__last_radio_key_egofm_chillout": "iamalex azula & dayle|||meadow",
+  "__last_radio_key_egofm_chillout": "meat beat manifesto|||lurker",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -150852,7 +150852,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "norken deer|||remember that feeling",
+  "__last_radio_key_gri_balkon": "the dining rooms|||existentialism milano dub mix",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -152405,7 +152405,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "elle milano|||meanwhile in hollywood",
-  "__last_radio_key_wbru": "flume|||the difference f toro y moi",
+  "__last_radio_key_wbru": "leon bridges|||talk it over",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
