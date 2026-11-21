@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "elbow|||magnificent she says",
       "florence the machine|||never let me go",
       "horse jumper of love|||wink",
       "jjerome87|||track and field",
@@ -113,8 +114,7 @@
       "mac demarco|||still beating",
       "dotan|||let you go",
       "the slow show|||hey lover",
-      "edward sharpe & the magnetic zeros|||home",
-      "oh wonder|||lose it"
+      "edward sharpe & the magnetic zeros|||home"
     ],
     "mellow_mix": [
       "the mavericks|||blue moon",
@@ -423,6 +423,7 @@
       "blur|||she's so high"
     ],
     "dreampop_radio": [
+      "jose gonzalez|||heartbeats filous & mount remix",
       "the golden filter|||solid gold",
       "sally shapiro|||find my soul",
       "fred falke|||9 09 pm at the beach",
@@ -521,8 +522,7 @@
       "benjamin francis leftwich|||some other arms",
       "bat for lashes|||if i knew",
       "yo la tengo|||my heart's not in it",
-      "chvrches|||make them gold",
-      "the war on drugs|||holding on"
+      "chvrches|||make them gold"
     ],
     "indie_select": [
       "ten fe|||born slippy nuxx",
@@ -1141,6 +1141,7 @@
       "viceroy feat k flay|||back at the start"
     ],
     "egofm_chillout": [
+      "lost fate|||winter in paris",
       "sven wegner|||can't take my soul",
       "frou frou|||let go",
       "aphex twin|||#20",
@@ -1239,10 +1240,10 @@
       "hz epifania & mondo loops|||sunburst",
       "xtc|||wrapped in grey",
       "now vs now|||silkworm society",
-      "dj shadow|||organ donor extended overhaul",
-      "surf mesa|||ily i love you baby"
+      "dj shadow|||organ donor extended overhaul"
     ],
     "dj_neihtul": [
+      "miike snow|||silvia",
       "death in vegas|||animatrix ost hands around my throat",
       "lowe|||face to face",
       "goldfrapp|||ride a white horse serge santiago remix",
@@ -1341,10 +1342,10 @@
       "iamx|||stardust",
       "hvob|||capture casa",
       "allie x ft verite|||casanova",
-      "moderat|||undo redo",
-      "royksopp feat astrid s|||breathe"
+      "moderat|||undo redo"
     ],
     "gri_balkon": [
+      "nightmares on wax|||so here we are",
       "flevans|||a distant view",
       "blondish|||shy grass",
       "seekae|||monster",
@@ -1443,8 +1444,7 @@
       "hnny|||boy",
       "moby|||whispering wind",
       "four tet|||locked",
-      "kolsch|||14",
-      "40 winks|||melancholia"
+      "kolsch|||14"
     ],
     "ignoreradio_shoegaze": [
       "astrobrite|||lollipop",
@@ -1651,6 +1651,7 @@
       "the vaccines|||bad mood"
     ],
     "wbru": [
+      "leon bridges|||talk it over",
       "the beaches|||blame brett",
       "father john misty|||real love baby",
       "phoebe bridgers|||lost boys",
@@ -1749,29 +1750,28 @@
       "young the giant|||mind over matter",
       "cage the elephant|||beaches in tennessee",
       "beabadoobee|||write me a letter",
-      "paramore|||still into you",
-      "leon bridges|||talk it over"
+      "paramore|||still into you"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795288896.8878539,
-    "mellow_mix": 1795288896.8911223,
-    "big_sonic_heaven": 1795288896.893864,
-    "radio_x_chilled": 1795288896.8966424,
-    "dreampop_radio": 1795288896.8992128,
-    "indie_select": 1795288896.9023736,
-    "dkfm_edge": 1795288896.9051101,
+    "vuurland": 1795288983.0534616,
+    "mellow_mix": 1795288983.0566566,
+    "big_sonic_heaven": 1795288983.0593028,
+    "radio_x_chilled": 1795288983.0618415,
+    "dreampop_radio": 1795288983.408121,
+    "indie_select": 1795288983.4108393,
+    "dkfm_edge": 1795288983.413699,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795288896.909192,
-    "dkfm_shoegaze": 1795288896.9121385,
-    "dkfm_classic": 1795288896.9148705,
-    "egofm_rnb": 1795288896.917904,
-    "egofm_chillout": 1795288896.9205506,
-    "dj_neihtul": 1795288896.9235888,
-    "gri_balkon": 1795288896.9255881,
-    "ignoreradio_shoegaze": 1795288896.9285934,
-    "radio_britannia": 1795288896.9317462,
-    "wbru": 1795288896.9340866
+    "dark_edge": 1795288983.4173813,
+    "dkfm_shoegaze": 1795288983.4208817,
+    "dkfm_classic": 1795288983.4233825,
+    "egofm_rnb": 1795288983.426003,
+    "egofm_chillout": 1795288983.4284868,
+    "dj_neihtul": 1795288983.4307053,
+    "gri_balkon": 1795288983.4325728,
+    "ignoreradio_shoegaze": 1795288983.4356332,
+    "radio_britannia": 1795288983.4383526,
+    "wbru": 1795288983.4406881
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -24834,6 +24834,7 @@
       "mihalis safras|||interafrica the glitz remix",
       "miike snow|||black & blue",
       "miike snow|||cult logic",
+      "miike snow|||silvia",
       "mike ease|||double door",
       "mike mago & dragonette|||secret stash original mix",
       "mike mago and dragonette|||outlines",
@@ -32298,11 +32299,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "florence the machine|||never let me go",
+  "__last_radio_key_vuurland": "elbow|||magnificent she says",
   "__last_radio_key_mellow_mix": "the mavericks|||blue moon",
   "__last_radio_key_big_sonic_heaven": "my bloody valentine|||don't ask why",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 30360,
+  "__v116_fifo_next_sequence": 30361,
   "__v146_spotify_budget_slot": 1795288899.635476,
   "__vuurland_active_playlist_count": 4310,
   "__vuurland_active_volume": 2,
@@ -147042,7 +147043,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the golden filter|||solid gold",
+  "__last_radio_key_dreampop_radio": "jose gonzalez|||heartbeats filous & mount remix",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -153937,7 +153938,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "jxn feat reyanna maria|||nintendo",
-  "__last_radio_key_egofm_chillout": "sven wegner|||can't take my soul",
+  "__last_radio_key_egofm_chillout": "lost fate|||winter in paris",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -153946,13 +153947,13 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "death in vegas|||animatrix ost hands around my throat",
+  "__last_radio_key_dj_neihtul": "miike snow|||silvia",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "flevans|||a distant view",
+  "__last_radio_key_gri_balkon": "nightmares on wax|||so here we are",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -155505,7 +155506,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "the twilight sad|||seven years of letters",
-  "__last_radio_key_wbru": "the beaches|||blame brett",
+  "__last_radio_key_wbru": "leon bridges|||talk it over",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
