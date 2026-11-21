@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "tom misch & loyle carner|||colourblind",
+      "adele|||chasing pavements",
       "snow patrol|||don't give in",
       "thomas azier|||year in a spiral",
       "nick cave & the bad seeds|||bright horses",
@@ -112,9 +114,7 @@
       "leon bridges feat lydia kitto|||all day all night",
       "ben howard|||the wolves",
       "hiqpy|||something",
-      "beck|||ride lonesome",
-      "arcade fire|||speaking in tongues",
-      "adele|||someone like you"
+      "beck|||ride lonesome"
     ],
     "mellow_mix": [
       "gracie abrams|||hit the wall",
@@ -314,6 +314,7 @@
       "trentemøller|||terrified"
     ],
     "radio_x_chilled": [
+      "future islands|||a dream of you and me",
       "r e m|||everybody hurts",
       "wolf alice|||delicious things",
       "metronomy|||the look",
@@ -412,10 +413,10 @@
       "blossoms|||i can't stand it acoustic",
       "red hot chili peppers|||under the bridge",
       "laura marling|||ghosts",
-      "coldplay|||trouble",
-      "r e m|||losing my religion"
+      "coldplay|||trouble"
     ],
     "dreampop_radio": [
+      "holmes|||wake up",
       "sia|||beautiful calm driving",
       "iron & wine|||naked as we came",
       "the head and the heart|||another story",
@@ -514,8 +515,7 @@
       "barr brothers|||come in the water",
       "luke sital-singh|||letting you go",
       "dylan mondegreen|||come with me to albuquerque",
-      "the good morning diary|||the day i turned into a ghost",
-      "eva & manu|||empty"
+      "the good morning diary|||the day i turned into a ghost"
     ],
     "indie_select": [
       "the temper trap|||sweet disposition",
@@ -828,6 +828,7 @@
       "born gold|||i want to be naked"
     ],
     "dkfm_shoegaze": [
+      "cathedral bells|||put me to sleep",
       "sky is alright|||argue for sunlight",
       "midi memory|||forever lost",
       "bosses|||thread",
@@ -926,8 +927,7 @@
       "tiger! shit! tiger! tiger!|||blurred",
       "midsommar|||only for a week",
       "deux visages|||call it goodbye",
-      "kindsight|||mine till death",
-      "youth valley|||just friends"
+      "kindsight|||mine till death"
     ],
     "dkfm_classic": [
       "my bloody valentine|||soon",
@@ -1520,6 +1520,7 @@
       "janedriver|||mirage"
     ],
     "radio_britannia": [
+      "the molotovs|||urbia",
       "the charlatans|||my foolish pride",
       "chalk|||longer",
       "new order|||crystal",
@@ -1618,8 +1619,7 @@
       "the kooks|||beautiful world",
       "oasis|||some might say",
       "boy kill boy|||ivy parker",
-      "the heartbreaks|||delay delay",
-      "bombay bicycle club|||lights out words gone"
+      "the heartbreaks|||delay delay"
     ],
     "wbru": [
       "phoebe bridgers|||bobby",
@@ -1725,24 +1725,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795276424.426511,
-    "mellow_mix": 1795276424.4290895,
-    "big_sonic_heaven": 1795276424.431081,
-    "radio_x_chilled": 1795276424.4329288,
-    "dreampop_radio": 1795276424.4348044,
-    "indie_select": 1795276424.4369836,
-    "dkfm_edge": 1795276424.4388893,
+    "vuurland": 1795276513.2194495,
+    "mellow_mix": 1795276513.2218146,
+    "big_sonic_heaven": 1795276513.2238398,
+    "radio_x_chilled": 1795276513.2258086,
+    "dreampop_radio": 1795276513.2277536,
+    "indie_select": 1795276513.229932,
+    "dkfm_edge": 1795276513.2318377,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795276424.4421332,
-    "dkfm_shoegaze": 1795276424.444491,
-    "dkfm_classic": 1795276424.4464962,
-    "egofm_rnb": 1795276424.4484882,
-    "egofm_chillout": 1795276424.4505029,
-    "dj_neihtul": 1795276424.45227,
-    "gri_balkon": 1795276424.4535992,
-    "ignoreradio_shoegaze": 1795276424.455744,
-    "radio_britannia": 1795276424.457883,
-    "wbru": 1795276424.4596043
+    "dark_edge": 1795276513.2350457,
+    "dkfm_shoegaze": 1795276513.23752,
+    "dkfm_classic": 1795276513.2394884,
+    "egofm_rnb": 1795276513.241442,
+    "egofm_chillout": 1795276513.2433748,
+    "dj_neihtul": 1795276513.2451653,
+    "gri_balkon": 1795276513.2464707,
+    "ignoreradio_shoegaze": 1795276513.2486582,
+    "radio_britannia": 1795276513.504077,
+    "wbru": 1795276513.5057874
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32000,11 +32000,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "snow patrol|||don't give in",
+  "__last_radio_key_vuurland": "tom misch & loyle carner|||colourblind",
   "__last_radio_key_mellow_mix": "gracie abrams|||hit the wall",
   "__last_radio_key_big_sonic_heaven": "simple minds|||beginner boys",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 30149,
+  "__v116_fifo_next_sequence": 30150,
   "__v146_spotify_budget_slot": 1795276427.0356598,
   "__vuurland_active_playlist_count": 4227,
   "__vuurland_active_volume": 2,
@@ -146297,7 +146297,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "r e m|||everybody hurts",
+  "__last_radio_key_radio_x_chilled": "future islands|||a dream of you and me",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -146401,7 +146401,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "sia|||beautiful calm driving",
+  "__last_radio_key_dreampop_radio": "holmes|||wake up",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -147882,7 +147882,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "bloom effect|||armour",
-  "__last_radio_key_dkfm_shoegaze": "sky is alright|||argue for sunlight",
+  "__last_radio_key_dkfm_shoegaze": "cathedral bells|||put me to sleep",
   "__last_radio_key_dkfm_classic": "my bloody valentine|||soon",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -154863,7 +154863,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the charlatans|||my foolish pride",
+  "__last_radio_key_radio_britannia": "the molotovs|||urbia",
   "__last_radio_key_wbru": "phoebe bridgers|||bobby",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
