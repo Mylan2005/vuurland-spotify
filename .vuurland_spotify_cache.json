@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795299391.8334167,
+  "__v150_next_spotify_round_at": 1795299513.1498263,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -525,6 +525,7 @@
       "stephen duffy & the lilac time|||so far away"
     ],
     "indie_select": [
+      "nick cave & neko case|||she's not there from \"true blood\" vol 3",
       "errors|||the village",
       "nada surf|||where is my mind? - nada surf",
       "flunk|||blue monday",
@@ -623,8 +624,7 @@
       "lcd soundsystem|||all my friends",
       "yeah yeah yeahs|||spitting off the edge of the world feat perfume genius",
       "de stijl|||on the run feat peter hook",
-      "the hundred in the hands|||red eyes rising",
-      "the kissaway trail|||cuts of youth razor love"
+      "the hundred in the hands|||red eyes rising"
     ],
     "dkfm_edge": [
       "drab majesty|||vanity feat rachel goswell",
@@ -1039,6 +1039,7 @@
       "pale saints|||gesture of a fear"
     ],
     "egofm_rnb": [
+      "bibio|||before",
       "ider|||cross yourself",
       "børns|||10 000 emerald pools",
       "jai paul|||btstu",
@@ -1137,8 +1138,7 @@
       "mac demarco|||on the level",
       "amber mark|||foreign things",
       "clairo|||amoeba",
-      "daniel caesar feat koffee|||cyanide remix",
-      "gabriel garzon-montano|||crawl"
+      "daniel caesar feat koffee|||cyanide remix"
     ],
     "egofm_chillout": [
       "youth novels feat frank wiedemann|||2nite",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795299355.5943544,
-    "mellow_mix": 1795299355.6006882,
-    "big_sonic_heaven": 1795299355.898761,
-    "radio_x_chilled": 1795299355.9018242,
-    "dreampop_radio": 1795299355.904965,
-    "indie_select": 1795299355.9080958,
-    "dkfm_edge": 1795299355.920313,
+    "vuurland": 1795299392.3196704,
+    "mellow_mix": 1795299392.3248308,
+    "big_sonic_heaven": 1795299392.327807,
+    "radio_x_chilled": 1795299392.3308847,
+    "dreampop_radio": 1795299392.3339689,
+    "indie_select": 1795299392.3374588,
+    "dkfm_edge": 1795299392.3408916,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795299356.212282,
-    "dkfm_shoegaze": 1795299356.215676,
-    "dkfm_classic": 1795299356.2192776,
-    "egofm_rnb": 1795299356.223801,
-    "egofm_chillout": 1795299356.2268856,
-    "dj_neihtul": 1795299356.2307885,
-    "gri_balkon": 1795299356.233012,
-    "ignoreradio_shoegaze": 1795299356.2361932,
-    "radio_britannia": 1795299356.2407775,
-    "wbru": 1795299356.2436955
+    "dark_edge": 1795299392.3452759,
+    "dkfm_shoegaze": 1795299392.348451,
+    "dkfm_classic": 1795299392.3515186,
+    "egofm_rnb": 1795299392.3550527,
+    "egofm_chillout": 1795299392.3583784,
+    "dj_neihtul": 1795299392.361003,
+    "gri_balkon": 1795299392.3632193,
+    "ignoreradio_shoegaze": 1795299392.3664577,
+    "radio_britannia": 1795299392.3700082,
+    "wbru": 1795299392.3724785
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32480,6 +32480,15 @@
       "matching_version": 35,
       "failed_searches": 3,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "seablite|||melancholly molly": {
+      "artist": "Seablite",
+      "title": "Melancholly Molly",
+      "source": "dkfm_edge",
+      "failed_at": 1795299397,
+      "matching_version": 35,
+      "failed_searches": 3,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -32491,7 +32500,7 @@
   "__last_radio_key_big_sonic_heaven": "love & rockets|||haunted when the minutes drag",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30519,
-  "__v146_spotify_budget_slot": 1795299273.7708337,
+  "__v146_spotify_budget_slot": 1795299395.114768,
   "__vuurland_active_playlist_count": 4374,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -109889,7 +109898,7 @@
     "brooke combe|||broken stones live at on the beach": 2,
     "the veldt|||angel heart": 1,
     "elsa|||for a change": 1,
-    "seablite|||melancholly molly": 2,
+    "seablite|||melancholly molly": 3,
     "olgwi|||rusty kind of soul": 3,
     "little dragon|||a": 1,
     "hvob|||the anxierty to please": 1,
@@ -147611,7 +147620,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "errors|||the village",
+  "__last_radio_key_indie_select": "nick cave & neko case|||she's not there from \"true blood\" vol 3",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -152658,7 +152667,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -152670,7 +152679,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -152703,7 +152712,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -154387,7 +154396,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "ider|||cross yourself",
+  "__last_radio_key_egofm_rnb": "bibio|||before",
   "__last_radio_key_egofm_chillout": "youth novels feat frank wiedemann|||2nite",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -161485,15 +161494,6 @@
       "candidates": [],
       "status": "low_relevance"
     },
-    "seablite|||melancholly molly": {
-      "source": "dkfm_edge",
-      "artist": "Seablite",
-      "title": "Melancholly Molly",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [],
-      "status": "low_relevance"
-    },
     "chris liebing|||so then": {
       "source": "dj_neihtul",
       "artist": "Chris Liebing",
@@ -161540,6 +161540,15 @@
       "title": "New Work",
       "kind": "weak",
       "variant": 0,
+      "candidates": [],
+      "status": "low_relevance"
+    },
+    "seablite|||melancholly molly": {
+      "source": "dkfm_edge",
+      "artist": "Seablite",
+      "title": "Melancholly Molly",
+      "kind": "weak",
+      "variant": 2,
       "candidates": [],
       "status": "low_relevance"
     }
