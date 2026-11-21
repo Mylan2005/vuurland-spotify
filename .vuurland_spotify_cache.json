@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "indigo de souza|||younger & dumber",
+      "angus & julia stone|||karaoke bar",
       "tucker zimmerman feat big thief twain & iji|||burial at sea",
       "london grammar|||hey now",
       "king hannah|||davey says",
@@ -112,9 +114,7 @@
       "phoebe bridgers|||that funny feeling",
       "slowdive|||alife",
       "lana del rey|||video games",
-      "eddie vedder|||long way",
-      "rhye|||summer song",
-      "waxahatchee feat mj lenderman|||right back to it"
+      "eddie vedder|||long way"
     ],
     "mellow_mix": [
       "manassas|||so begins the task",
@@ -423,6 +423,7 @@
       "the cranberries|||zombie acoustic"
     ],
     "dreampop_radio": [
+      "kings of convenience|||parallel lines",
       "mikal cronin|||peace of mind",
       "junip|||always",
       "the mynabirds|||one foot",
@@ -521,8 +522,7 @@
       "the cure|||lovesong",
       "the lonely wild|||buried in the murder",
       "seapony|||prove to me",
-      "the war on drugs|||under the pressure",
-      "nick drake|||northern sky"
+      "the war on drugs|||under the pressure"
     ],
     "indie_select": [
       "the national|||slipped",
@@ -733,6 +733,8 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "liminanas ; garnier|||saul",
+      "natalie imbruglia|||torn",
       "nic clay|||colours of you",
       "royel otis|||oysters in my pocket",
       "juniore|||les heros de barbes",
@@ -830,9 +832,7 @@
       "james|||lose control",
       "mystery jets|||two doors down",
       "lifehouse|||you and me",
-      "the lumineers|||leader of the landslide",
-      "rainbow kitten surprise|||holy war",
-      "phantogram|||cruel world"
+      "the lumineers|||leader of the landslide"
     ],
     "dkfm_shoegaze": [
       "soft science|||fade",
@@ -1141,6 +1141,7 @@
       "powfu feat beabadoobee|||death bed coffee for your head"
     ],
     "egofm_chillout": [
+      "pieter nooten|||theme minimaliste ii",
       "pj harvey & lily james|||the moth feat lily james",
       "centrozoon|||ten versions of america",
       "kai otten|||in clouds",
@@ -1239,8 +1240,7 @@
       "james vincent mcmorrow|||we don't eat nisse nilson edit",
       "seed to tree|||seed to tree - rip off game",
       "federico albanese|||your spell",
-      "alt-j|||dissolve me marlais remix",
-      "tricky|||hell is round the corner"
+      "alt-j|||dissolve me marlais remix"
     ],
     "dj_neihtul": [
       "da emperor|||work that shit /digital punk remix",
@@ -1345,6 +1345,7 @@
       "ry x|||berlin"
     ],
     "gri_balkon": [
+      "yokoo & retza|||tarantism",
       "l'imperatrice|||odyssee",
       "nicolas jaar|||wouh",
       "nohan|||four walls lost desert remix",
@@ -1417,7 +1418,6 @@
       "plaid|||ralome",
       "laurence guy|||bamboo",
       "rival consoles|||them is us",
-      "yokoo & retza|||tarantism",
       "downtown party network|||space me out jody wisternoff james grant edit",
       "phoria|||atomic",
       "n grandjean|||the first picture rocknrolla soundsystem remix",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795227034.2162747,
-    "mellow_mix": 1795227034.2245324,
-    "big_sonic_heaven": 1795227034.2297652,
-    "radio_x_chilled": 1795227034.2354114,
-    "dreampop_radio": 1795227034.2405322,
-    "indie_select": 1795227034.2459803,
-    "dkfm_edge": 1795227034.2519977,
+    "vuurland": 1795227126.8997588,
+    "mellow_mix": 1795227126.908061,
+    "big_sonic_heaven": 1795227126.9133744,
+    "radio_x_chilled": 1795227126.919093,
+    "dreampop_radio": 1795227126.924483,
+    "indie_select": 1795227126.9299283,
+    "dkfm_edge": 1795227126.935948,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795227034.2592454,
-    "dkfm_shoegaze": 1795227034.2655551,
-    "dkfm_classic": 1795227034.2713668,
-    "egofm_rnb": 1795227034.2773569,
-    "egofm_chillout": 1795227034.2834234,
-    "dj_neihtul": 1795227034.28829,
-    "gri_balkon": 1795227034.2921648,
-    "ignoreradio_shoegaze": 1795227034.7201416,
-    "radio_britannia": 1795227034.726477,
-    "wbru": 1795227034.7306437
+    "dark_edge": 1795227127.771046,
+    "dkfm_shoegaze": 1795227127.7774203,
+    "dkfm_classic": 1795227127.7834675,
+    "egofm_rnb": 1795227127.7895107,
+    "egofm_chillout": 1795227127.7957528,
+    "dj_neihtul": 1795227127.8007028,
+    "gri_balkon": 1795227127.8046196,
+    "ignoreradio_shoegaze": 1795227127.8103201,
+    "radio_britannia": 1795227127.8166451,
+    "wbru": 1795227127.8208084
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15300,6 +15300,7 @@
       "lilly wood & the prick|||prayer in c robin schulz",
       "lily allen|||not fair",
       "lily allen|||the fear acoustic",
+      "liminanas ; garnier|||saul",
       "linda messerklinger|||enjoy the silence moments in love",
       "lior feat sia|||i'll forget you",
       "lisa loeb & nine stories|||stay i missed you",
@@ -31111,11 +31112,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "tucker zimmerman feat big thief twain & iji|||burial at sea",
+  "__last_radio_key_vuurland": "indigo de souza|||younger & dumber",
   "__last_radio_key_mellow_mix": "manassas|||so begins the task",
   "__last_radio_key_big_sonic_heaven": "tears runs rings|||happiness 3",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 29439,
+  "__v116_fifo_next_sequence": 29441,
   "__v146_spotify_budget_slot": 1795227038.6648774,
   "__vuurland_active_playlist_count": 3902,
   "__vuurland_active_volume": 2,
@@ -144168,7 +144169,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "mikal cronin|||peace of mind",
+  "__last_radio_key_dreampop_radio": "kings of convenience|||parallel lines",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -145662,7 +145663,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "nic clay|||colours of you",
+  "__last_radio_key_dark_edge": "liminanas ; garnier|||saul",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -151063,7 +151064,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "the sellouts saint wknd & benjamin amaru|||stay",
-  "__last_radio_key_egofm_chillout": "pj harvey & lily james|||the moth feat lily james",
+  "__last_radio_key_egofm_chillout": "pieter nooten|||theme minimaliste ii",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -151078,7 +151079,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "l'imperatrice|||odyssee",
+  "__last_radio_key_gri_balkon": "yokoo & retza|||tarantism",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
