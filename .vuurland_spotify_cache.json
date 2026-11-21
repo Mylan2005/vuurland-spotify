@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795232613.5193872,
+  "__v150_next_spotify_round_at": 1795232740.320012,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -219,6 +219,7 @@
       "eliza gilkyson|||promises to keep"
     ],
     "big_sonic_heaven": [
+      "cocteau twins|||donimo",
       "klimt 1918|||dream core",
       "marlophone|||i promise it all to you",
       "al cologne|||milk teeth",
@@ -317,8 +318,7 @@
       "dave gahan kurt uenala & the raveonettes|||chains",
       "slowdive|||golden hair live",
       "gergana dimitrova & lisa gerrard|||jovano",
-      "washed out|||don't give up",
-      "the giraffe told me in my dream|||drop"
+      "washed out|||don't give up"
     ],
     "radio_x_chilled": [
       "arlo parks|||black dog",
@@ -627,6 +627,8 @@
       "interpol|||anywhere"
     ],
     "dkfm_edge": [
+      "crystal canyon|||sierra",
+      "wednesday|||turkey vultures",
       "seablite|||frozen strawberries",
       "sophie and me|||it won't belong",
       "bosses|||dogwoods",
@@ -724,9 +726,7 @@
       "mo dotti|||ever",
       "bright like stars|||star dust",
       "meltway|||disarray",
-      "fragile animals|||glass",
-      "long distances|||skin to sea",
-      "so totally|||doz roses"
+      "fragile animals|||glass"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1651,6 +1651,7 @@
       "thirteen senses|||the loneliest star"
     ],
     "wbru": [
+      "feist|||my moon my man",
       "dexter and the moonrocks|||freakin' out",
       "leon bridges|||talk it over",
       "clairo|||bags",
@@ -1725,7 +1726,6 @@
       "dominic fike|||mona lisa",
       "beach bunny|||vinegar",
       "vampire weekend|||a-punk",
-      "feist|||my moon my man",
       "eyedress|||jealous",
       "the cure|||in between days",
       "gorillaz|||new gold f tame impala & bootie brown",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795232584.8290238,
-    "mellow_mix": 1795232584.8381076,
-    "big_sonic_heaven": 1795232584.843553,
-    "radio_x_chilled": 1795232584.8495429,
-    "dreampop_radio": 1795232584.855598,
-    "indie_select": 1795232584.8618238,
-    "dkfm_edge": 1795232584.8683276,
+    "vuurland": 1795232619.1337547,
+    "mellow_mix": 1795232619.142323,
+    "big_sonic_heaven": 1795232619.1478252,
+    "radio_x_chilled": 1795232619.1535623,
+    "dreampop_radio": 1795232619.1593451,
+    "indie_select": 1795232619.165412,
+    "dkfm_edge": 1795232619.1720812,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795232584.876087,
-    "dkfm_shoegaze": 1795232584.8827636,
-    "dkfm_classic": 1795232584.889318,
-    "egofm_rnb": 1795232584.895683,
-    "egofm_chillout": 1795232584.902145,
-    "dj_neihtul": 1795232584.9072175,
-    "gri_balkon": 1795232584.9112484,
-    "ignoreradio_shoegaze": 1795232584.917352,
-    "radio_britannia": 1795232585.3647618,
-    "wbru": 1795232585.369132
+    "dark_edge": 1795232619.1797698,
+    "dkfm_shoegaze": 1795232619.1864202,
+    "dkfm_classic": 1795232619.1926165,
+    "egofm_rnb": 1795232619.1987848,
+    "egofm_chillout": 1795232619.2050657,
+    "dj_neihtul": 1795232619.2100377,
+    "gri_balkon": 1795232619.2140303,
+    "ignoreradio_shoegaze": 1795232619.220113,
+    "radio_britannia": 1795232619.2267106,
+    "wbru": 1795232619.230809
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -31235,6 +31235,15 @@
       "matching_version": 35,
       "failed_searches": 2,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "flu flu|||307": {
+      "artist": "Flu Flu",
+      "title": "307",
+      "source": "dkfm_edge",
+      "failed_at": 1795232625,
+      "matching_version": 35,
+      "failed_searches": 3,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -31243,10 +31252,10 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "ethel cain|||fuck me eyes",
   "__last_radio_key_mellow_mix": "te vaka|||te namo",
-  "__last_radio_key_big_sonic_heaven": "klimt 1918|||dream core",
+  "__last_radio_key_big_sonic_heaven": "cocteau twins|||donimo",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 29527,
-  "__v146_spotify_budget_slot": 1795232496.347409,
+  "__v146_spotify_budget_slot": 1795232623.1425972,
   "__vuurland_active_playlist_count": 3933,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -106611,7 +106620,7 @@
     "sarah harmer|||don't get your back up": 1,
     "the national|||sunshine on my back": 1,
     "catherine wheel|||she's my friend wilde club version": 1,
-    "flu flu|||307": 2,
+    "flu flu|||307": 3,
     "belle and sebastian|||i didna": 1,
     "virgins|||slowly long": 1,
     "ecstasy of saint theresa|||absinth": 1,
@@ -145906,7 +145915,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "seablite|||frozen strawberries",
+  "__last_radio_key_dkfm_edge": "crystal canyon|||sierra",
   "__last_radio_key_dkfm_shoegaze": "gill|||tired",
   "__last_radio_key_dkfm_classic": "the chameleons|||john i'm only dancing",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -149591,7 +149600,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -149603,7 +149612,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -149636,7 +149645,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -152889,7 +152898,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "the bluetones|||pretty ballerina",
-  "__last_radio_key_wbru": "dexter and the moonrocks|||freakin' out",
+  "__last_radio_key_wbru": "feist|||my moon my man",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -158422,15 +158431,6 @@
       ],
       "status": "uncertain"
     },
-    "flu flu|||307": {
-      "source": "dkfm_edge",
-      "artist": "Flu Flu",
-      "title": "307",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [],
-      "status": "low_relevance"
-    },
     "t r a c e s|||water table": {
       "source": "dkfm_shoegaze",
       "artist": "T R A C E S",
@@ -158463,6 +158463,15 @@
           "spotify_id": "7ds5ZCFvvUOO4LfhjzsgLH"
         }
       ],
+      "status": "low_relevance"
+    },
+    "flu flu|||307": {
+      "source": "dkfm_edge",
+      "artist": "Flu Flu",
+      "title": "307",
+      "kind": "weak",
+      "variant": 2,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
