@@ -117,6 +117,7 @@
       "tamino|||fascination"
     ],
     "mellow_mix": [
+      "aurora|||dreams",
       "turin brakes|||self help",
       "grateful dead|||box of rain",
       "the national|||fake empire",
@@ -215,8 +216,7 @@
       "norah jones|||the long way home",
       "the waterboys|||strange boat",
       "chrissie hynde|||adding the blue",
-      "edie brickell & new bohemians|||circle",
-      "indigo girls|||second time around"
+      "edie brickell & new bohemians|||circle"
     ],
     "big_sonic_heaven": [
       "blonde redhead|||if",
@@ -627,6 +627,7 @@
       "scanners|||salvation don diablo dub remix"
     ],
     "dkfm_edge": [
+      "distressor|||haunt",
       "lozenge|||radio song",
       "mop|||blue clay",
       "spywell|||all around you",
@@ -725,8 +726,7 @@
       "sunlotus|||last night i dreamt that somebody loved me the smiths cover",
       "frown line|||knowing you",
       "miners|||sapphire",
-      "vitesse x|||way i luv",
-      "trauma ray|||breath"
+      "vitesse x|||way i luv"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -835,6 +835,8 @@
       "chain wallet|||abroad"
     ],
     "dkfm_shoegaze": [
+      "everything recently|||lost ground",
+      "cold gawd|||steel",
       "otsyuda|||as above so below",
       "essencer|||shine",
       "mia joy|||comet feat peel dream magazine",
@@ -932,9 +934,7 @@
       "bathrobe|||mori",
       "trauma ray|||nuhevan",
       "silver bars|||marching song",
-      "get violet|||june solstice",
-      "lacing|||rift bonus track",
-      "panda riot|||serious radical girls"
+      "get violet|||june solstice"
     ],
     "dkfm_classic": [
       "cranes|||jewel 12 inch mix",
@@ -1447,6 +1447,8 @@
       "plaid|||ralome"
     ],
     "ignoreradio_shoegaze": [
+      "sin tierra discos|||when you sleep el club audiovisual",
+      "diiv|||druun pt ii",
       "true widow|||jakyl",
       "the dead texan|||glen's goo",
       "everything else|||asleep",
@@ -1544,9 +1546,7 @@
       "they are gutting a body of water|||slo crostic",
       "marconi union|||weightless part 5",
       "sunshy|||dissolve",
-      "yume bitsu|||i wait for you",
-      "rocket|||another second chance",
-      "hole|||loaded"
+      "yume bitsu|||i wait for you"
     ],
     "radio_britannia": [
       "peter murphy|||seesaw sway",
@@ -1651,6 +1651,7 @@
       "wings of desire|||overtime"
     ],
     "wbru": [
+      "beabadoobee|||write me a letter",
       "fall out boy|||thnks fr th mmrs",
       "steve lacy|||oh yeah?",
       "chappell roan|||good luck babe!",
@@ -1749,29 +1750,28 @@
       "lucy dacus|||night shift",
       "temper city|||self aware",
       "the avalanches|||can't get over losing you f portraits of tracy",
-      "sum 41|||in too deep",
-      "panchiko|||d>e>a>t>h>m>e>t>a>l"
+      "sum 41|||in too deep"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795237832.2812078,
-    "mellow_mix": 1795237832.2922394,
-    "big_sonic_heaven": 1795237832.298007,
-    "radio_x_chilled": 1795237832.3040364,
-    "dreampop_radio": 1795237832.310114,
-    "indie_select": 1795237832.3166344,
-    "dkfm_edge": 1795237832.3233476,
+    "vuurland": 1795237925.3344858,
+    "mellow_mix": 1795237925.3443704,
+    "big_sonic_heaven": 1795237925.349997,
+    "radio_x_chilled": 1795237925.3561232,
+    "dreampop_radio": 1795237925.362375,
+    "indie_select": 1795237925.36896,
+    "dkfm_edge": 1795237925.3760836,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795237832.3313115,
-    "dkfm_shoegaze": 1795237832.3384292,
-    "dkfm_classic": 1795237832.3450427,
-    "egofm_rnb": 1795237832.3516138,
-    "egofm_chillout": 1795237832.3581889,
-    "dj_neihtul": 1795237832.3632696,
-    "gri_balkon": 1795237832.3673751,
-    "ignoreradio_shoegaze": 1795237832.373716,
-    "radio_britannia": 1795237832.3808775,
-    "wbru": 1795237832.3851857
+    "dark_edge": 1795237925.3843052,
+    "dkfm_shoegaze": 1795237925.3917553,
+    "dkfm_classic": 1795237925.3983238,
+    "egofm_rnb": 1795237925.404704,
+    "egofm_chillout": 1795237925.4113073,
+    "dj_neihtul": 1795237925.4164433,
+    "gri_balkon": 1795237925.4205751,
+    "ignoreradio_shoegaze": 1795237926.348672,
+    "radio_britannia": 1795237926.3558097,
+    "wbru": 1795237926.3603327
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -26198,6 +26198,7 @@
       "dick stusso|||modern music",
       "diiv|||acheron",
       "diiv|||blankenship",
+      "diiv|||druun pt ii",
       "diiv|||home",
       "diiv|||like before you were born",
       "diiv|||like before you were born demo",
@@ -27261,6 +27262,7 @@
       "simon scott|||for martha",
       "sin tierra discos|||loomer nostronomo",
       "sin tierra discos|||sometimes montegrande",
+      "sin tierra discos|||when you sleep el club audiovisual",
       "siouxsie and the banshees|||cities in dust",
       "sky h1|||bird strike",
       "sky h1|||blade",
@@ -31360,10 +31362,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "wet leg|||obvious",
-  "__last_radio_key_mellow_mix": "turin brakes|||self help",
+  "__last_radio_key_mellow_mix": "aurora|||dreams",
   "__last_radio_key_big_sonic_heaven": "blonde redhead|||if",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 29602,
+  "__v116_fifo_next_sequence": 29604,
   "__v146_spotify_budget_slot": 1795237836.291898,
   "__vuurland_active_playlist_count": 3967,
   "__vuurland_active_volume": 2,
@@ -146164,8 +146166,8 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "lozenge|||radio song",
-  "__last_radio_key_dkfm_shoegaze": "otsyuda|||as above so below",
+  "__last_radio_key_dkfm_edge": "distressor|||haunt",
+  "__last_radio_key_dkfm_shoegaze": "everything recently|||lost ground",
   "__last_radio_key_dkfm_classic": "cranes|||jewel 12 inch mix",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -151617,7 +151619,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "true widow|||jakyl",
+  "__last_radio_key_ignoreradio_shoegaze": "sin tierra discos|||when you sleep el club audiovisual",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -153147,7 +153149,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "peter murphy|||seesaw sway",
-  "__last_radio_key_wbru": "fall out boy|||thnks fr th mmrs",
+  "__last_radio_key_wbru": "beabadoobee|||write me a letter",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
