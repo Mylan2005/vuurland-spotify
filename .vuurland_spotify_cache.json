@@ -423,6 +423,7 @@
       "alanis morissette|||hand in my pocket acoustic"
     ],
     "dreampop_radio": [
+      "by the sea|||eveline",
       "poor moon|||birds",
       "wallis bird|||measuring cities",
       "chorus grant|||o everyone",
@@ -521,8 +522,7 @@
       "x ambassadors|||unsteady erich lee gravity remix",
       "m83|||skin of the night",
       "hurts|||wonderful life",
-      "small black|||only a shadow",
-      "el ten eleven|||11 lullaby d33j remix"
+      "small black|||only a shadow"
     ],
     "indie_select": [
       "polica|||matty",
@@ -835,6 +835,8 @@
       "travis|||love will come through"
     ],
     "dkfm_shoegaze": [
+      "novanta|||midnight",
+      "bosses|||grace",
       "midsommar|||too soon",
       "desperate journalist|||dust",
       "wormboys|||dirt",
@@ -932,11 +934,10 @@
       "rose haze|||they are here",
       "glassmanet|||vaporize",
       "the sewing club|||alright ok",
-      "atmos bloom|||feel",
-      "funsover|||ten",
-      "youth valley|||sunday oh monday"
+      "atmos bloom|||feel"
     ],
     "dkfm_classic": [
+      "medicine|||sweet explosion",
       "all natural lemon & lime flavors|||when things come falling",
       "cocteau twins|||oomingmak",
       "the belltower|||plastic man",
@@ -1035,8 +1036,7 @@
       "shallow|||light saber and the video game",
       "band of susans|||child of the moon",
       "sixpence none the richer|||bleeding",
-      "14 iced bears|||in the morning",
-      "the belltower|||solstice"
+      "14 iced bears|||in the morning"
     ],
     "egofm_rnb": [
       "alina baraz & galimatias|||fantasy",
@@ -1141,6 +1141,7 @@
       "mayer hawthorne|||cosmic love"
     ],
     "egofm_chillout": [
+      "zero 7|||aurora feat jose gonzalez",
       "jamie xx|||girl",
       "koki nakano|||near-perfect synchronization",
       "everything but the girl|||before today",
@@ -1239,10 +1240,10 @@
       "tim bowness|||borderline feat dylan howe & david longdon",
       "sworn|||keep going",
       "grandbrothers|||shorelines",
-      "isfar sarabski|||i break again feat dihaj",
-      "stuart a staples|||willow tindersticks feat robert pattinson"
+      "isfar sarabski|||i break again feat dihaj"
     ],
     "dj_neihtul": [
+      "roisin murphy|||let me know",
       "chris zippel|||mirror dawn",
       "the orb|||the dream",
       "gotan project|||triptico pk's trip de luxe",
@@ -1341,8 +1342,7 @@
       "mø|||waste of time",
       "madonna|||little star",
       "lykke li|||love me like i'm not made of stone",
-      "jens buchert|||arcticon",
-      "phantogram|||fall in love"
+      "jens buchert|||arcticon"
     ],
     "gri_balkon": [
       "bedouin|||whistleman",
@@ -1549,6 +1549,7 @@
       "my bloody valentine|||soon andy weatherall mix"
     ],
     "radio_britannia": [
+      "yungblud|||medication",
       "clean cut kid|||we used to be in love",
       "embrace|||the finish line",
       "porij|||unpredictable",
@@ -1647,10 +1648,10 @@
       "muse|||something human",
       "the boy least likely to|||faith",
       "belle and sebastian|||poor boy",
-      "coldplay|||my universe feat bts",
-      "billy nomates|||plans"
+      "coldplay|||my universe feat bts"
     ],
     "wbru": [
+      "the black keys|||gold on the ceiling",
       "noah kahan|||willing and able",
       "steve lacy|||the feeling",
       "justice|||flower in a hurricane f tame impala sza king gizzard",
@@ -1749,29 +1750,28 @@
       "lana del rey|||lies with zach bryan",
       "flume|||the difference f toro y moi",
       "ivri|||tower of memories",
-      "duffy|||mercy",
-      "almost monday|||no more regrets"
+      "duffy|||mercy"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795247361.3285205,
-    "mellow_mix": 1795247361.6484563,
-    "big_sonic_heaven": 1795247361.6543899,
-    "radio_x_chilled": 1795247361.6600018,
-    "dreampop_radio": 1795247361.665812,
-    "indie_select": 1795247361.6719632,
-    "dkfm_edge": 1795247361.6784623,
+    "vuurland": 1795247453.9847698,
+    "mellow_mix": 1795247453.9940677,
+    "big_sonic_heaven": 1795247453.999833,
+    "radio_x_chilled": 1795247454.005433,
+    "dreampop_radio": 1795247454.012025,
+    "indie_select": 1795247454.0183082,
+    "dkfm_edge": 1795247454.0248053,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795247361.6867573,
-    "dkfm_shoegaze": 1795247361.6934826,
-    "dkfm_classic": 1795247361.6997516,
-    "egofm_rnb": 1795247361.7057064,
-    "egofm_chillout": 1795247361.7117465,
-    "dj_neihtul": 1795247361.7167082,
-    "gri_balkon": 1795247361.720408,
-    "ignoreradio_shoegaze": 1795247361.7266846,
-    "radio_britannia": 1795247361.7334845,
-    "wbru": 1795247361.7374587
+    "dark_edge": 1795247454.0328414,
+    "dkfm_shoegaze": 1795247454.3799024,
+    "dkfm_classic": 1795247454.3865252,
+    "egofm_rnb": 1795247454.3924341,
+    "egofm_chillout": 1795247454.398723,
+    "dj_neihtul": 1795247454.4038153,
+    "gri_balkon": 1795247454.4075391,
+    "ignoreradio_shoegaze": 1795247454.4138024,
+    "radio_britannia": 1795247454.745938,
+    "wbru": 1795247454.7500231
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -19468,6 +19468,7 @@
       "nothing|||say less",
       "nothing|||toothless coal",
       "nothing|||zero day",
+      "novanta|||midnight",
       "novella|||land gone",
       "novella|||sentences",
       "novella|||younger than yesterday",
@@ -29557,6 +29558,7 @@
       "yungblud|||i love you will you marry me",
       "yungblud|||lowlife",
       "yungblud|||mars",
+      "yungblud|||medication",
       "yungblud|||the funeral"
     ],
     "wbru": [
@@ -30142,6 +30144,7 @@
       "the backseat lovers|||kilby girl",
       "the beaches|||edge of the earth",
       "the black keys|||fever",
+      "the black keys|||gold on the ceiling",
       "the black keys|||lonely boy",
       "the breeders|||cannonball",
       "the chemical brothers|||go f q-tip",
@@ -31548,7 +31551,7 @@
   "__last_radio_key_mellow_mix": "led zeppelin|||that's the way live",
   "__last_radio_key_big_sonic_heaven": "dubstar|||st swithin's day",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 29750,
+  "__v116_fifo_next_sequence": 29752,
   "__v146_spotify_budget_slot": 1795247365.2209756,
   "__vuurland_active_playlist_count": 4030,
   "__vuurland_active_volume": 2,
@@ -145132,7 +145135,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "poor moon|||birds",
+  "__last_radio_key_dreampop_radio": "by the sea|||eveline",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -146613,8 +146616,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "animal ghosts|||swallow",
-  "__last_radio_key_dkfm_shoegaze": "midsommar|||too soon",
-  "__last_radio_key_dkfm_classic": "all natural lemon & lime flavors|||when things come falling",
+  "__last_radio_key_dkfm_shoegaze": "novanta|||midnight",
+  "__last_radio_key_dkfm_classic": "medicine|||sweet explosion",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -152027,7 +152030,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "alina baraz & galimatias|||fantasy",
-  "__last_radio_key_egofm_chillout": "jamie xx|||girl",
+  "__last_radio_key_egofm_chillout": "zero 7|||aurora feat jose gonzalez",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -152036,7 +152039,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "chris zippel|||mirror dawn",
+  "__last_radio_key_dj_neihtul": "roisin murphy|||let me know",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -153594,8 +153597,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "clean cut kid|||we used to be in love",
-  "__last_radio_key_wbru": "noah kahan|||willing and able",
+  "__last_radio_key_radio_britannia": "yungblud|||medication",
+  "__last_radio_key_wbru": "the black keys|||gold on the ceiling",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
