@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795318902.5341945,
+  "__v150_next_spotify_round_at": 1795319028.516522,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -321,6 +321,7 @@
       "stereolab|||perversion 2018 remaster"
     ],
     "radio_x_chilled": [
+      "jimmy eat world|||hear you me",
       "london grammar|||strong",
       "blur|||to the end",
       "the bees|||i love you",
@@ -419,8 +420,7 @@
       "r e m|||nightswimming",
       "death cab for cutie|||i will follow you into the dark",
       "blossoms|||there's a reason why i never returned your calls acoustic",
-      "bob dylan|||knockin' on heaven's door",
-      "badly drawn boy|||something to talk about"
+      "bob dylan|||knockin' on heaven's door"
     ],
     "dreampop_radio": [
       "kristofer astrom|||for you",
@@ -1039,6 +1039,7 @@
       "bowery electric|||fear of flying"
     ],
     "egofm_rnb": [
+      "gabriels|||love and hate in a different time",
       "lava la rue|||angel feat deb never",
       "sza|||snooze",
       "two feet|||i feel like i'm drowning",
@@ -1137,8 +1138,7 @@
       "alina baraz & galimatias|||make you feel",
       "rosalia|||malamente",
       "ay wing|||out of your head shuko remix",
-      "joesef|||moment",
-      "ne-hi feat jamila woods|||the times i'm not there"
+      "joesef|||moment"
     ],
     "egofm_chillout": [
       "masked man|||coupe 90",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795318871.4955583,
-    "mellow_mix": 1795318871.504197,
-    "big_sonic_heaven": 1795318871.50962,
-    "radio_x_chilled": 1795318871.5156822,
-    "dreampop_radio": 1795318871.5218933,
-    "indie_select": 1795318871.5283134,
-    "dkfm_edge": 1795318871.5348608,
+    "vuurland": 1795318907.3012002,
+    "mellow_mix": 1795318907.3096724,
+    "big_sonic_heaven": 1795318907.315074,
+    "radio_x_chilled": 1795318907.3213174,
+    "dreampop_radio": 1795318907.3274236,
+    "indie_select": 1795318907.3338726,
+    "dkfm_edge": 1795318907.3404095,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795318871.5432112,
-    "dkfm_shoegaze": 1795318871.5486019,
-    "dkfm_classic": 1795318871.554827,
-    "egofm_rnb": 1795318871.5613139,
-    "egofm_chillout": 1795318871.5674806,
-    "dj_neihtul": 1795318871.5725074,
-    "gri_balkon": 1795318871.5765753,
-    "ignoreradio_shoegaze": 1795318871.5831184,
-    "radio_britannia": 1795318871.5901756,
-    "wbru": 1795318871.5946295
+    "dark_edge": 1795318907.348715,
+    "dkfm_shoegaze": 1795318907.3541095,
+    "dkfm_classic": 1795318907.360297,
+    "egofm_rnb": 1795318907.3669808,
+    "egofm_chillout": 1795318907.3730528,
+    "dj_neihtul": 1795318907.378081,
+    "gri_balkon": 1795318907.3821652,
+    "ignoreradio_shoegaze": 1795318907.388663,
+    "radio_britannia": 1795318907.395738,
+    "wbru": 1795318907.4009495
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32836,6 +32836,15 @@
       "matching_version": 35,
       "failed_searches": 2,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "hotline tnt|||history channel": {
+      "artist": "Hotline TNT",
+      "title": "History Channel",
+      "source": "dkfm_edge",
+      "failed_at": 1795318913,
+      "matching_version": 35,
+      "failed_searches": 2,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -32847,7 +32856,7 @@
   "__last_radio_key_big_sonic_heaven": "deary|||alfie",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30786,
-  "__v146_spotify_budget_slot": 1795318785.4251585,
+  "__v146_spotify_budget_slot": 1795318911.3974612,
   "__vuurland_active_playlist_count": 4492,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -110836,7 +110845,7 @@
     "swervedriver|||kill the superheroes": 1,
     "lorelei|||the bitter air": 1,
     "roy montgomery|||soundcheck for adrian borland": 1,
-    "hotline tnt|||history channel": 1,
+    "hotline tnt|||history channel": 2,
     "beatsteakes|||let me in": 1,
     "lopsha|||bright noise": 1,
     "jon batiste feat zazie smith|||show me the way": 1,
@@ -148239,7 +148248,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "london grammar|||strong",
+  "__last_radio_key_radio_x_chilled": "jimmy eat world|||hear you me",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -153508,7 +153517,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -153520,7 +153529,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -153553,7 +153562,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -155237,7 +155246,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "lava la rue|||angel feat deb never",
+  "__last_radio_key_egofm_rnb": "gabriels|||love and hate in a different time",
   "__last_radio_key_egofm_chillout": "masked man|||coupe 90",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -157065,31 +157074,6 @@
           "artist": "Marble Sounds",
           "title": "Catch It Alive",
           "spotify_id": "39Paf49sqth47VyFiE09my"
-        }
-      ],
-      "status": "low_relevance"
-    },
-    "hotline tnt|||history channel": {
-      "source": "dkfm_edge",
-      "artist": "Hotline TNT",
-      "title": "History Channel",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [
-        {
-          "artist": "Zita Swoon",
-          "title": "Hot Hotter Hottest",
-          "spotify_id": "7G2j3lR0cJgwjVgh4xOBDj"
-        },
-        {
-          "artist": "Thunderball",
-          "title": "Bonzai Channel One - Original Remastered Mix",
-          "spotify_id": "1pdoK6VJe8wwp86SrfByx0"
-        },
-        {
-          "artist": "The Van Jets",
-          "title": "Danger Zone - Radio Edit",
-          "spotify_id": "6cIae2Gv0q737y0nIyR1Wf"
         }
       ],
       "status": "low_relevance"
@@ -162370,6 +162354,15 @@
           "spotify_id": "08twlX0G9SbnMUUcZQ9XOX"
         }
       ],
+      "status": "low_relevance"
+    },
+    "hotline tnt|||history channel": {
+      "source": "dkfm_edge",
+      "artist": "Hotline TNT",
+      "title": "History Channel",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
