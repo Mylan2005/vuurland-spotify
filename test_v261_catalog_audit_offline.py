@@ -58,4 +58,11 @@ with tempfile.TemporaryDirectory() as d:
     assert fake.calls == 2
     assert len(target.read_text().splitlines()) == 2
 
+# The complete historical inventory must be permanent and have no duplicates.
+inventory = []
+for part in (1, 2, 3):
+    source = Path(__file__).parent / "data" / f"v261_historical_misses_part{part}.json"
+    inventory.extend(json.loads(source.read_text(encoding="utf-8"))["tracks"])
+assert len(inventory) == 1131, len(inventory)
+assert len({(x["artist"].casefold(), x["title"].casefold()) for x in inventory}) == 1131
 print("Read-only catalog audit offline tests passed.")
