@@ -3510,8 +3510,8 @@
   },
   "total_recovered": 8,
   "complete": false,
-  "last_checked_at_utc": "2026-11-22T09:53:05.485855+00:00",
-  "last_batch_verified": 3,
+  "last_checked_at_utc": "2026-11-22T20:45:55.395322+00:00",
+  "last_batch_verified": 0,
   "last_batch_recovered": 0,
-  "last_error": "Aflevering 251 niet bevestigd: ValueError: Duyster aflevering 251 ontbreekt of is onvolledig"
+  "last_error": "Aflevering 835 niet bevestigd: ReadTimeout: HTTPSConnectionPool(host='duyster-online.be', port=443): Read timed out. (read timeout=15)"
 }
