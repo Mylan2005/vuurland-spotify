@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795375121.8669794,
+  "__v150_next_spotify_round_at": 1795375244.3160958,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -117,6 +117,7 @@
       "sigur ros|||hljomalind"
     ],
     "mellow_mix": [
+      "tori amos|||winter",
       "simon & garfunkel|||the sound of silence",
       "bonnie raitt|||silver lining",
       "burlap to cashmere|||seasons",
@@ -215,8 +216,7 @@
       "lucinda williams|||out of touch",
       "dido|||don't leave home",
       "jimmy cliff|||the harder they come",
-      "annie lennox|||waiting in vain",
-      "elephant revival|||feathers rise"
+      "annie lennox|||waiting in vain"
     ],
     "big_sonic_heaven": [
       "midsommar|||too soon",
@@ -525,6 +525,7 @@
       "monsters of folk|||ahead of the curve"
     ],
     "indie_select": [
+      "trophy wife|||heavy touch",
       "the horrors|||sea within a sea",
       "chvrches|||the mother we share - errors rmx",
       "emily b tls orchestra tls choir|||i'm not ready to go - emily b tls orchestra tls choir",
@@ -623,8 +624,7 @@
       "apparat|||bad kingdom lulu's version",
       "frank black|||monkey gone to heaven",
       "so much 4 gravity|||i know a place",
-      "the twilight sad|||leave the house",
-      "wild nothing|||dial tone"
+      "the twilight sad|||leave the house"
     ],
     "dkfm_edge": [
       "astronomies|||discoloured",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "garbage|||the world is not enough u n k l e remix",
       "men without hats|||the safety dance",
       "hælos|||cloud nine",
       "rhye|||phoenix",
@@ -831,10 +832,10 @@
       "mando diao|||you can't steal my love",
       "ezra vine|||celeste",
       "phoria|||emanate",
-      "chinese american bear|||?? dumpling",
-      "gregory alan isakov|||amsterdam"
+      "chinese american bear|||?? dumpling"
     ],
     "dkfm_shoegaze": [
+      "starbelliedbug|||reverence",
       "singinggum|||unlovable",
       "momma|||christian brothers",
       "marina yozora|||snow heat",
@@ -933,8 +934,7 @@
       "pieces|||mark time",
       "venetian blinds|||debt collector",
       "droem|||i want less",
-      "cold gawd|||miracle",
-      "youth valley|||sunday oh monday"
+      "cold gawd|||miracle"
     ],
     "dkfm_classic": [
       "my bloody valentine|||honey power",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795375086.5273466,
-    "mellow_mix": 1795375086.5302682,
-    "big_sonic_heaven": 1795375086.5329196,
-    "radio_x_chilled": 1795375086.535316,
-    "dreampop_radio": 1795375086.5377467,
-    "indie_select": 1795375086.5404403,
-    "dkfm_edge": 1795375086.5429723,
+    "vuurland": 1795375123.1586962,
+    "mellow_mix": 1795375123.1618023,
+    "big_sonic_heaven": 1795375123.1643436,
+    "radio_x_chilled": 1795375123.1667504,
+    "dreampop_radio": 1795375123.1692388,
+    "indie_select": 1795375123.172141,
+    "dkfm_edge": 1795375123.174659,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795375086.5468225,
-    "dkfm_shoegaze": 1795375086.5494952,
-    "dkfm_classic": 1795375086.5519924,
-    "egofm_rnb": 1795375086.5544348,
-    "egofm_chillout": 1795375086.5569391,
-    "dj_neihtul": 1795375086.5592046,
-    "gri_balkon": 1795375086.561017,
-    "ignoreradio_shoegaze": 1795375086.8817134,
-    "radio_britannia": 1795375086.884637,
-    "wbru": 1795375086.8868341
+    "dark_edge": 1795375123.5343273,
+    "dkfm_shoegaze": 1795375123.5372822,
+    "dkfm_classic": 1795375123.5399225,
+    "egofm_rnb": 1795375123.5424948,
+    "egofm_chillout": 1795375123.5451734,
+    "dj_neihtul": 1795375123.547409,
+    "gri_balkon": 1795375123.5492523,
+    "ignoreradio_shoegaze": 1795375123.5518806,
+    "radio_britannia": 1795375123.5546873,
+    "wbru": 1795375123.5568342
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -33950,11 +33950,11 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "gregory porter|||no love dying",
-  "__last_radio_key_mellow_mix": "simon & garfunkel|||the sound of silence",
+  "__last_radio_key_mellow_mix": "tori amos|||winter",
   "__last_radio_key_big_sonic_heaven": "midsommar|||too soon",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 31572,
-  "__v146_spotify_budget_slot": 1795375003.767513,
+  "__v116_fifo_next_sequence": 31573,
+  "__v146_spotify_budget_slot": 1795375126.207158,
   "__vuurland_active_playlist_count": 4857,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -113615,7 +113615,8 @@
     "primal scream|||come together 7\" version": 1,
     "paul smith & the intimations|||the deep end": 1,
     "ecstasy of saint theresa|||to alison": 1,
-    "bleach|||surround": 1
+    "bleach|||surround": 1,
+    "the charlottes|||be my release album version": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -151080,7 +151081,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the horrors|||sea within a sea",
+  "__last_radio_key_indie_select": "trophy wife|||heavy touch",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -152443,7 +152444,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "astronomies|||discoloured",
-  "__last_radio_key_dkfm_shoegaze": "singinggum|||unlovable",
+  "__last_radio_key_dkfm_shoegaze": "starbelliedbug|||reverence",
   "__last_radio_key_dkfm_classic": "my bloody valentine|||honey power",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -152456,7 +152457,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "men without hats|||the safety dance",
+  "__last_radio_key_dark_edge": "garbage|||the world is not enough u n k l e remix",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -156127,7 +156128,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dkfm_shoegaze",
+  "__v221_last_selected_source": "dkfm_classic",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -156139,7 +156140,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dkfm_shoegaze",
+  "__v224_last_spotify_opportunity_source": "dkfm_classic",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -156172,7 +156173,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dkfm_shoegaze",
+  "__v227_last_source_turn": "dkfm_classic",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -159456,31 +159457,6 @@
   "__match_v35__kt tunstall|||white bird": "spotify:track:61qnl6ZTZDFKu2bNQ7Evla",
   "__match_v35__the cure|||cut here": "spotify:track:1SuAd1VNCDpM2ovs1ic9tN",
   "__v258_matcher_triage": {
-    "the young punx & cagedbaby feat dtale|||loving you baby": {
-      "source": "egofm_rnb",
-      "artist": "The Young Punx & Cagedbaby feat. Dtale",
-      "title": "Loving You Baby",
-      "kind": "uncertain",
-      "variant": 0,
-      "candidates": [
-        {
-          "artist": "The Young Punx, Cagedbaby, DTale",
-          "title": "Loving You Baby",
-          "spotify_id": "1Y7u4vDBYUqGClwy917MUm"
-        },
-        {
-          "artist": "The Tribe Of Good",
-          "title": "Loving You Baby - The Young Punx & Cagedbaby Mix",
-          "spotify_id": "3FBRrm8huRmzdOF0waMXa5"
-        },
-        {
-          "artist": "The Young Punx, Cagedbaby, MofoHifi",
-          "title": "Loving You Baby - Mofohifi Edit",
-          "spotify_id": "40Lu8ARQxlcfeo22iRzYiT"
-        }
-      ],
-      "status": "uncertain"
-    },
     "fleet foxes|||electric feel mgmt cover": {
       "source": "dreampop_radio",
       "artist": "Fleet Foxes",
@@ -164959,6 +164935,31 @@
       "kind": "weak",
       "variant": 1,
       "candidates": [],
+      "status": "low_relevance"
+    },
+    "the charlottes|||be my release album version": {
+      "source": "dkfm_classic",
+      "artist": "The Charlottes",
+      "title": "Be My Release (Album Version)",
+      "kind": "weak",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "Charlotte Adigéry, Bolis Pupul, Charlotte Adigéry & Bolis Pupul",
+          "title": "From Healer to Dealer",
+          "spotify_id": "4tupi3syMO0U4kcElaaiaY"
+        },
+        {
+          "artist": "Arcando, Charlotte Haining",
+          "title": "Release Me",
+          "spotify_id": "27DXQ1nIW0tbdkUM5f0X07"
+        },
+        {
+          "artist": "Push, Charlotte de Witte",
+          "title": "Universal Nation - Charlotte de Witte Rework",
+          "spotify_id": "4OrY514bfwTTtykP7s049a"
+        }
+      ],
       "status": "low_relevance"
     }
   },
