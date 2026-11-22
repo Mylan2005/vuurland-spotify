@@ -99,6 +99,8 @@ ARTIST_ALIASES = {
     "fink uk": ["Fink"],
     # The duo Gypsy & The Cat formally rebranded as GATC.
     "gypsy and the cat": ["GATC"],
+    # The same Belgian group is listed with 4 / for in radio/catalog metadata.
+    "so much 4 gravity": ["So Much for Gravity"],
     "the twerps": ["Twerps"],  # Verified Spotify catalog name for Dreamin
     # v101: officiële artiestcredits die RadioBox onder een andere naam toont.
     "hybris": ["Postiljonen"],
