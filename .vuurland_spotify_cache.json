@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "daniel caesar|||let me go",
+      "paolo nutini|||through the echoes",
       "sufjan stevens|||casimir pulaski day",
       "michael kiwanuka|||tell me a tale",
       "big thief|||los angeles",
@@ -112,9 +114,7 @@
       "eefje de visser|||scheef",
       "kurt vile|||zoom 97",
       "horsegirl|||julie",
-      "paolo nutini|||shine a light",
-      "camille camille|||in a song",
-      "milan w|||days in my arms"
+      "paolo nutini|||shine a light"
     ],
     "mellow_mix": [
       "love spells|||don't touch",
@@ -219,6 +219,8 @@
       "norah jones|||come away with me"
     ],
     "big_sonic_heaven": [
+      "shoreline stories|||ride",
+      "nightbus|||angles mortz",
       "this mortal coil|||waves become wings / barramundi",
       "mint julep hollie kenniff & helios|||this time tomorrow",
       "bathe alone|||the silence",
@@ -316,11 +318,10 @@
       "the wolfgang press|||a girl like you",
       "the damned|||the shadow of love",
       "liquorice|||blew it",
-      "erasure|||piano song",
-      "propaganda|||dr mabuse",
-      "lush|||500 shake baby shake"
+      "erasure|||piano song"
     ],
     "radio_x_chilled": [
+      "courteeners|||what took you so long? acoustic",
       "massive attack|||unfinished sympathy",
       "mgmt|||electric feel",
       "the doors|||riders on the storm",
@@ -419,8 +420,7 @@
       "the beatles|||while my guitar gently weeps",
       "florence the machine|||shake it out acoustic",
       "travis|||writing to reach you",
-      "empire of the sun|||walking on a dream",
-      "semisonic|||secret smile"
+      "empire of the sun|||walking on a dream"
     ],
     "dreampop_radio": [
       "the verve|||valium skies",
@@ -1141,6 +1141,7 @@
       "the marias|||all i really want is you"
     ],
     "egofm_chillout": [
+      "sohn|||hue",
       "melanie de biasio|||your freedom is the end of me",
       "orbit|||time in the afternoon",
       "martin kohlstedt|||martin kohlstedt - vim",
@@ -1239,10 +1240,10 @@
       "dj koze feat jose gonzalez|||music on my teeth",
       "robag wruhme feat dehlia|||ktb",
       "asta|||my heart is on fire marius horsturz edit",
-      "bonobo feat jamila woods|||tides",
-      "mounika|||20"
+      "bonobo feat jamila woods|||tides"
     ],
     "dj_neihtul": [
+      "rob dougan|||clubbed to death la funk mob variation",
       "sneaker pimps|||venus as aboy",
       "yonderboi|||eyes for you",
       "stereo mc's|||connected",
@@ -1341,8 +1342,7 @@
       "death in vegas|||animatrix ost hands around my throat",
       "lowe|||face to face",
       "goldfrapp|||ride a white horse serge santiago remix",
-      "medina|||gutter",
-      "martin solveig|||hello feat dragonette"
+      "medina|||gutter"
     ],
     "gri_balkon": [
       "chris joss|||tune down",
@@ -1651,6 +1651,7 @@
       "paul weller|||movin on"
     ],
     "wbru": [
+      "the killers|||somebody told me",
       "leon bridges|||talk it over",
       "cigarettes after sex|||sweet",
       "beabadoobee|||all i did was dream of you f the marias",
@@ -1749,29 +1750,28 @@
       "yeah yeah yeahs|||maps",
       "kaleo|||way down we go",
       "lyn lapid|||in my mind",
-      "steve lacy|||the feeling",
-      "the killers|||all these things that i've done"
+      "steve lacy|||the feeling"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795320417.2767365,
-    "mellow_mix": 1795320417.2853858,
-    "big_sonic_heaven": 1795320417.2908566,
-    "radio_x_chilled": 1795320417.297028,
-    "dreampop_radio": 1795320417.303311,
-    "indie_select": 1795320417.3099115,
-    "dkfm_edge": 1795320417.3166597,
+    "vuurland": 1795320508.9136646,
+    "mellow_mix": 1795320508.9222155,
+    "big_sonic_heaven": 1795320508.9278796,
+    "radio_x_chilled": 1795320508.934126,
+    "dreampop_radio": 1795320508.9403167,
+    "indie_select": 1795320508.946869,
+    "dkfm_edge": 1795320508.9534488,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795320417.3251674,
-    "dkfm_shoegaze": 1795320417.330638,
-    "dkfm_classic": 1795320417.3369956,
-    "egofm_rnb": 1795320417.3435886,
-    "egofm_chillout": 1795320417.349805,
-    "dj_neihtul": 1795320417.3548615,
-    "gri_balkon": 1795320417.358941,
-    "ignoreradio_shoegaze": 1795320417.8966997,
-    "radio_britannia": 1795320417.9038503,
-    "wbru": 1795320417.9082665
+    "dark_edge": 1795320508.9618654,
+    "dkfm_shoegaze": 1795320508.9673305,
+    "dkfm_classic": 1795320508.9736228,
+    "egofm_rnb": 1795320508.9801211,
+    "egofm_chillout": 1795320508.986391,
+    "dj_neihtul": 1795320509.5271468,
+    "gri_balkon": 1795320509.5312924,
+    "ignoreradio_shoegaze": 1795320509.537898,
+    "radio_britannia": 1795320509.544978,
+    "wbru": 1795320509.549529
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -25214,6 +25214,7 @@
       "ripperton|||10a",
       "ripperton|||l'ardo",
       "rjd2|||act 2",
+      "rob dougan|||clubbed to death la funk mob variation",
       "rob dougan|||i'm not driving anymore",
       "robert armani|||up",
       "robert babicz|||afterhourbasar",
@@ -32871,11 +32872,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "sufjan stevens|||casimir pulaski day",
+  "__last_radio_key_vuurland": "daniel caesar|||let me go",
   "__last_radio_key_mellow_mix": "love spells|||don't touch",
-  "__last_radio_key_big_sonic_heaven": "this mortal coil|||waves become wings / barramundi",
+  "__last_radio_key_big_sonic_heaven": "shoreline stories|||ride",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 30807,
+  "__v116_fifo_next_sequence": 30808,
   "__v146_spotify_budget_slot": 1795320421.9498088,
   "__vuurland_active_playlist_count": 4504,
   "__vuurland_active_volume": 2,
@@ -148318,7 +148319,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "massive attack|||unfinished sympathy",
+  "__last_radio_key_radio_x_chilled": "courteeners|||what took you so long? acoustic",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -155317,7 +155318,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "lou asril feat avec|||when the lights go out",
-  "__last_radio_key_egofm_chillout": "melanie de biasio|||your freedom is the end of me",
+  "__last_radio_key_egofm_chillout": "sohn|||hue",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -155326,7 +155327,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "sneaker pimps|||venus as aboy",
+  "__last_radio_key_dj_neihtul": "rob dougan|||clubbed to death la funk mob variation",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -156885,7 +156886,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "the ks|||sarajevo",
-  "__last_radio_key_wbru": "leon bridges|||talk it over",
+  "__last_radio_key_wbru": "the killers|||somebody told me",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
