@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795324980.3019247,
+  "__v150_next_spotify_round_at": 1795325107.5594778,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "jamie xx feat romy|||loud places",
       "eddie vedder|||guaranteed",
       "lianne la havas|||green & gold",
       "ciska ciska|||angel",
@@ -113,8 +114,7 @@
       "hermanos gutierrez|||barrio hustle",
       "gigi perez|||sailor song",
       "ben howard|||life in the time",
-      "bear's den|||agape",
-      "jose gonzalez|||step out"
+      "bear's den|||agape"
     ],
     "mellow_mix": [
       "t‐bone burnett|||river of love",
@@ -423,6 +423,7 @@
       "ocean colour scene|||the circle acoustic"
     ],
     "dreampop_radio": [
+      "charlie simpson|||cemetery",
       "joshua radin|||underwater",
       "ryan adams|||am i safe",
       "heather nova|||heart and shoulder",
@@ -521,8 +522,7 @@
       "the cure|||pictures of you",
       "vance joy|||play with fire",
       "josh rouse|||my love has gone",
-      "eels|||blinking lights for me",
-      "shearwater|||my good deed"
+      "eels|||blinking lights for me"
     ],
     "indie_select": [
       "noel gallagher's high flying birds|||i wanna live in a dream in my record machine",
@@ -1039,6 +1039,7 @@
       "swallow|||head in a cave"
     ],
     "egofm_rnb": [
+      "janet jackson feat q-tip & joni mitchell|||got 'til it's gone",
       "janelle monae feat erykah badu|||q u e e n",
       "jill scott|||lighthouse",
       "jamila woods|||holy",
@@ -1137,8 +1138,7 @@
       "tom misch & yussef dayes|||last 100",
       "lauryn hill|||nothing even matters",
       "yellowstraps; sam wise|||flowin feat sam wise",
-      "arlo parks|||eugene",
-      "pip millett|||heavenly mother"
+      "arlo parks|||eugene"
     ],
     "egofm_chillout": [
       "bon iver|||holocene",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795324951.534603,
-    "mellow_mix": 1795324951.5453088,
-    "big_sonic_heaven": 1795324951.5517988,
-    "radio_x_chilled": 1795324951.5585263,
-    "dreampop_radio": 1795324951.5653741,
-    "indie_select": 1795324951.5727246,
-    "dkfm_edge": 1795324951.5802217,
+    "vuurland": 1795324986.3299077,
+    "mellow_mix": 1795324986.3401165,
+    "big_sonic_heaven": 1795324986.3467202,
+    "radio_x_chilled": 1795324986.3536305,
+    "dreampop_radio": 1795324986.3608084,
+    "indie_select": 1795324986.3683085,
+    "dkfm_edge": 1795324986.3758464,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795324952.0178816,
-    "dkfm_shoegaze": 1795324952.0240614,
-    "dkfm_classic": 1795324952.031403,
-    "egofm_rnb": 1795324952.0387669,
-    "egofm_chillout": 1795324952.045717,
-    "dj_neihtul": 1795324952.0514889,
-    "gri_balkon": 1795324952.0562372,
-    "ignoreradio_shoegaze": 1795324952.0635214,
-    "radio_britannia": 1795324952.0716574,
-    "wbru": 1795324952.076548
+    "dark_edge": 1795324986.3853483,
+    "dkfm_shoegaze": 1795324986.391317,
+    "dkfm_classic": 1795324986.3985395,
+    "egofm_rnb": 1795324986.4058886,
+    "egofm_chillout": 1795324986.4129896,
+    "dj_neihtul": 1795324986.4186494,
+    "gri_balkon": 1795324986.4230905,
+    "ignoreradio_shoegaze": 1795324986.4303355,
+    "radio_britannia": 1795324986.4384155,
+    "wbru": 1795324986.4432135
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32960,18 +32960,27 @@
       "matching_version": 35,
       "failed_searches": 5,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "take it easy|||bluelies": {
+      "artist": "Take it Easy",
+      "title": "Bluelies",
+      "source": "dkfm_edge",
+      "failed_at": 1795324992,
+      "matching_version": 35,
+      "failed_searches": 5,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "eddie vedder|||guaranteed",
+  "__last_radio_key_vuurland": "jamie xx feat romy|||loud places",
   "__last_radio_key_mellow_mix": "t‐bone burnett|||river of love",
   "__last_radio_key_big_sonic_heaven": "plastic milk|||wax tongue",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30873,
-  "__v146_spotify_budget_slot": 1795324863.130904,
+  "__v146_spotify_budget_slot": 1795324990.3886921,
   "__vuurland_active_playlist_count": 4527,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -110578,7 +110587,7 @@
     "nick cave|||evil - 'silver alert' remix featuring matt berninger": 4,
     "shoegazer|||spiral": 5,
     "t a k e r|||taker - jackalope": 5,
-    "take it easy|||bluelies": 4,
+    "take it easy|||bluelies": 5,
     "julia a noack|||things break": 5,
     "the black keys|||go": 3,
     "sevonaurs|||genuine almost killed rmx": 4,
@@ -148614,7 +148623,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "joshua radin|||underwater",
+  "__last_radio_key_dreampop_radio": "charlie simpson|||cemetery",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -153779,7 +153788,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -153791,7 +153800,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -153824,7 +153833,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -155508,7 +155517,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "janelle monae feat erykah badu|||q u e e n",
+  "__last_radio_key_egofm_rnb": "janet jackson feat q-tip & joni mitchell|||got 'til it's gone",
   "__last_radio_key_egofm_chillout": "bon iver|||holocene",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -157382,15 +157391,6 @@
           "spotify_id": "1sjo4XUtjaYdBDrhykMC7I"
         }
       ],
-      "status": "low_relevance"
-    },
-    "take it easy|||bluelies": {
-      "source": "dkfm_edge",
-      "artist": "Take it Easy",
-      "title": "Bluelies",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [],
       "status": "low_relevance"
     },
     "sway|||what i know": {
@@ -162610,6 +162610,15 @@
         }
       ],
       "status": "uncertain"
+    },
+    "take it easy|||bluelies": {
+      "source": "dkfm_edge",
+      "artist": "Take it Easy",
+      "title": "Bluelies",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [],
+      "status": "low_relevance"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
