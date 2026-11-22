@@ -46,4 +46,15 @@ assert '"da ze": ["Daze"]' in src
 assert '"fink uk": ["Fink"]' in src
 assert '"gypsy and the cat": ["GATC"]' in src
 assert '"so much 4 gravity": ["So Much for Gravity"]' in src
-print("v261 integrated offline matcher tests passed")
+# Historical recovery is source-proven, bounded by the EXISTING v203 6h gate.
+from v203_matcher_upgrade_requeue import applicable_rules
+assert "v261_ambiguous_ill_title" in applicable_rules("The Indelicates", "Ill")
+assert "v261_abbreviated_required_guest" in applicable_rules("Wallows", "Are You Bored Yet? (f Clairo)")
+assert "v261_verified_catalog_alias" in applicable_rules("DA/ZE", "Mellow")
+assert "v261_verified_catalog_alias" in applicable_rules("Fink (UK)", "Berlin Sunrise")
+assert "v261_verified_catalog_alias" in applicable_rules("Gypsy & The Cat", "Broken Kites")
+assert "v261_verified_catalog_alias" in applicable_rules("So Much 4 Gravity", "Gotta Get Out of This Town")
+assert "v261_ambiguous_ill_title" not in applicable_rules("Example", "Will")
+assert "v261_abbreviated_required_guest" not in applicable_rules("Example", "Song (Live)")
+assert "v261_verified_catalog_alias" not in applicable_rules("Unknown Band", "Mellow")
+print("v261 integrated offline matcher and bounded retry tests passed")
