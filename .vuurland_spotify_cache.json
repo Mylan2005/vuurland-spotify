@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795316887.9446821,
+  "__v150_next_spotify_round_at": 1795317014.7556095,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "beirut|||vagabond",
       "moby|||like a motherless child",
       "papertwin|||alkaline",
       "jose gonzalez|||heartbeats",
@@ -831,8 +832,7 @@
       "the cinematic orchestra|||to build a home",
       "jake bugg|||lightning bolt",
       "johnny cash|||hurt",
-      "lorde|||yellow flicker beat",
-      "coldplay|||don't panic"
+      "lorde|||yellow flicker beat"
     ],
     "dkfm_shoegaze": [
       "new age healers|||the fastest slow",
@@ -1549,6 +1549,7 @@
       "jesu|||terminus"
     ],
     "radio_britannia": [
+      "hot chip|||random violence",
       "the holloways|||sinners and winners",
       "brett anderson|||back to you",
       "another sky|||the cracks",
@@ -1647,10 +1648,10 @@
       "we cut corners|||blue",
       "editors|||a ton of love",
       "republica|||drop dead gorgeous",
-      "the last dinner party|||this town ain't big enough for both of us",
-      "dave rowntree|||devil's island"
+      "the last dinner party|||this town ain't big enough for both of us"
     ],
     "wbru": [
+      "red hot chili peppers|||otherside",
       "remi wolf|||bottle",
       "tv girl|||taking what's not yours",
       "weezer|||go away f best coast",
@@ -1749,29 +1750,28 @@
       "my chemical romance|||welcome to the black parade",
       "boa|||duvet",
       "dominic fike|||phone numbers",
-      "the xx|||angels",
-      "jungle|||the wave"
+      "the xx|||angels"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795316858.0220964,
-    "mellow_mix": 1795316858.0304997,
-    "big_sonic_heaven": 1795316858.0359237,
-    "radio_x_chilled": 1795316858.0419486,
-    "dreampop_radio": 1795316858.0478597,
-    "indie_select": 1795316858.054094,
-    "dkfm_edge": 1795316858.0604017,
+    "vuurland": 1795316893.1503656,
+    "mellow_mix": 1795316893.1587243,
+    "big_sonic_heaven": 1795316893.1640363,
+    "radio_x_chilled": 1795316893.1699812,
+    "dreampop_radio": 1795316893.1760128,
+    "indie_select": 1795316893.1822143,
+    "dkfm_edge": 1795316893.1885228,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795316858.0685437,
-    "dkfm_shoegaze": 1795316858.0739684,
-    "dkfm_classic": 1795316858.0800233,
-    "egofm_rnb": 1795316858.086359,
-    "egofm_chillout": 1795316858.092423,
-    "dj_neihtul": 1795316858.097307,
-    "gri_balkon": 1795316858.1012926,
-    "ignoreradio_shoegaze": 1795316858.107616,
-    "radio_britannia": 1795316858.1143973,
-    "wbru": 1795316858.1186938
+    "dark_edge": 1795316893.5851452,
+    "dkfm_shoegaze": 1795316893.5905945,
+    "dkfm_classic": 1795316893.5966742,
+    "egofm_rnb": 1795316893.603044,
+    "egofm_chillout": 1795316893.6090512,
+    "dj_neihtul": 1795316893.6140401,
+    "gri_balkon": 1795316893.6180358,
+    "ignoreradio_shoegaze": 1795316893.6243918,
+    "radio_britannia": 1795316893.6313343,
+    "wbru": 1795316893.6357694
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -13450,6 +13450,7 @@
       "beirut|||no no no",
       "beirut|||perth",
       "beirut|||the rip tide",
+      "beirut|||vagabond",
       "beirut|||when i die",
       "bel plaine|||lifeboat",
       "bel plaine|||lifeboat version francaise",
@@ -32798,6 +32799,15 @@
       "matching_version": 35,
       "failed_searches": 3,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "hotline tnt|||protocol": {
+      "artist": "Hotline TNT",
+      "title": "Protocol",
+      "source": "dkfm_edge",
+      "failed_at": 1795316900,
+      "matching_version": 35,
+      "failed_searches": 2,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -32808,8 +32818,8 @@
   "__last_radio_key_mellow_mix": "allison russell|||you're not alone",
   "__last_radio_key_big_sonic_heaven": "johnny marr|||ophelia",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 30757,
-  "__v146_spotify_budget_slot": 1795316770.8695416,
+  "__v116_fifo_next_sequence": 30758,
+  "__v146_spotify_budget_slot": 1795316897.6919389,
   "__vuurland_active_playlist_count": 4481,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -110740,7 +110750,7 @@
     "siddal|||lighthouse wreckage": 1,
     "pete rock & c l smooth|||back on the blocks dj krush remix": 1,
     "charli xcx|||the girl so confusing f lorde": 1,
-    "hotline tnt|||protocol": 1,
+    "hotline tnt|||protocol": 2,
     "terranova & coco|||never": 1,
     "iris|||clementine": 1,
     "shura|||just once": 1,
@@ -149751,7 +149761,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "moby|||like a motherless child",
+  "__last_radio_key_dark_edge": "beirut|||vagabond",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -153422,7 +153432,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -153434,7 +153444,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -153467,7 +153477,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -156719,8 +156729,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the holloways|||sinners and winners",
-  "__last_radio_key_wbru": "remi wolf|||bottle",
+  "__last_radio_key_radio_britannia": "hot chip|||random violence",
+  "__last_radio_key_wbru": "red hot chili peppers|||otherside",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -156807,15 +156817,6 @@
       "title": "Wunderbar",
       "kind": "weak",
       "variant": 1,
-      "candidates": [],
-      "status": "low_relevance"
-    },
-    "hotline tnt|||protocol": {
-      "source": "dkfm_edge",
-      "artist": "Hotline TNT",
-      "title": "Protocol",
-      "kind": "weak",
-      "variant": 0,
       "candidates": [],
       "status": "low_relevance"
     },
@@ -162268,6 +162269,15 @@
           "spotify_id": "2VCgXl6dU4VEDrDjoKWTlp"
         }
       ],
+      "status": "low_relevance"
+    },
+    "hotline tnt|||protocol": {
+      "source": "dkfm_edge",
+      "artist": "Hotline TNT",
+      "title": "Protocol",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
