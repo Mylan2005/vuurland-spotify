@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "marble sounds|||the ever after",
+      "alexandra savior|||unforgivable",
       "ise|||suitcase child",
       "dermot kennedy|||refuge",
       "ethel cain|||fuck me eyes",
@@ -112,11 +114,10 @@
       "lana del rey|||chemtrails over the country club",
       "arlo parks|||hope",
       "porcelain id|||vlaanderen",
-      "unknown mortal orchestra|||hunnybee",
-      "ben howard|||conrad",
-      "death cab for cutie|||pepper"
+      "unknown mortal orchestra|||hunnybee"
     ],
     "mellow_mix": [
+      "beck|||blue moon",
       "shawn mullins|||blue as you",
       "danny o'keefe|||good time charlie's got the blues",
       "the decemberists|||shiny",
@@ -215,10 +216,10 @@
       "iron & wine|||passing afternoon",
       "led zeppelin|||going to california",
       "bon iver|||things behind things behind things",
-      "sierra ferrell|||in dreams",
-      "vince guaraldi|||charlie brown theme"
+      "sierra ferrell|||in dreams"
     ],
     "big_sonic_heaven": [
+      "bathe alone|||in deep",
       "now always fades|||rem feat lili hall",
       "deary|||beauty in all blue satin",
       "lisa gerrard|||largo",
@@ -317,8 +318,7 @@
       "sigur ros|||gold",
       "dead can dance|||in power we entrust the love advocated",
       "hunter as a horse|||here's to all the ones",
-      "the radio dept|||keen on boys",
-      "echo & the bunnymen|||the light that surrounds you"
+      "the radio dept|||keen on boys"
     ],
     "radio_x_chilled": [
       "catfish & the bottlemen|||pacifier acoustic",
@@ -525,6 +525,7 @@
       "turin brakes|||underdog save me"
     ],
     "indie_select": [
+      "arctic monkeys|||cornerstone",
       "the vaccines|||a lack of understanding",
       "morrissey|||you're the one for me fatty",
       "smashing pumpkins|||tom tom",
@@ -623,8 +624,7 @@
       "the xx|||shelter",
       "bat for lashes|||all your gold",
       "the stills|||i'm with you",
-      "frightened rabbit|||swim until you cana",
-      "alt-j|||nara"
+      "frightened rabbit|||swim until you cana"
     ],
     "dkfm_edge": [
       "dottie|||cherry",
@@ -1141,6 +1141,7 @@
       "elba|||sirens"
     ],
     "egofm_chillout": [
+      "middle school aso & aviino|||cap's cafe",
       "gundelach|||duck hunting",
       "makzo|||longing",
       "no spirit|||reliving",
@@ -1239,10 +1240,10 @@
       "arbour & aarigod|||sundown",
       "adriano koch|||i love you sadness",
       "nils frahm|||familiar",
-      "nicolas jaar|||america! i'm for the birds",
-      "the xx|||you've got the love florence and the machine cover"
+      "nicolas jaar|||america! i'm for the birds"
     ],
     "dj_neihtul": [
+      "2raumwohnung|||das herz irrt nie - nacht",
       "ben bohmer monolink|||black hole",
       "jamie xx|||stranger in a room",
       "sohn|||hard liquor",
@@ -1341,8 +1342,7 @@
       "keinemusik massh & adam port feat ninae|||all i got",
       "ben bohmer featuring erin lecount|||faithless",
       "roisin murphy|||murphy's law",
-      "romy|||the sea",
-      "kid francescoli|||the player"
+      "romy|||the sea"
     ],
     "gri_balkon": [
       "leafar legov|||cenote",
@@ -1651,6 +1651,7 @@
       "pj harvey|||this is love"
     ],
     "wbru": [
+      "tv girl|||the blonde",
       "angine de poitrine|||fabienk",
       "fontaines d c|||where is gone? with rosalia",
       "yellowcard|||ocean avenue",
@@ -1749,29 +1750,28 @@
       "haim|||now i'm in it",
       "red hot chili peppers|||californication",
       "simple minds|||alive and kicking",
-      "collective soul|||gel",
-      "radiohead|||you"
+      "collective soul|||gel"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795309220.6936867,
-    "mellow_mix": 1795309220.7012863,
-    "big_sonic_heaven": 1795309220.7061949,
-    "radio_x_chilled": 1795309220.711744,
-    "dreampop_radio": 1795309220.7167785,
-    "indie_select": 1795309220.722148,
-    "dkfm_edge": 1795309220.7278707,
+    "vuurland": 1795309312.4052985,
+    "mellow_mix": 1795309312.412976,
+    "big_sonic_heaven": 1795309312.4180655,
+    "radio_x_chilled": 1795309312.4235775,
+    "dreampop_radio": 1795309312.428637,
+    "indie_select": 1795309312.4342291,
+    "dkfm_edge": 1795309312.4400952,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795309221.1565063,
-    "dkfm_shoegaze": 1795309221.1616518,
-    "dkfm_classic": 1795309221.1668127,
-    "egofm_rnb": 1795309221.172687,
-    "egofm_chillout": 1795309221.1778154,
-    "dj_neihtul": 1795309221.182289,
-    "gri_balkon": 1795309221.1859863,
-    "ignoreradio_shoegaze": 1795309221.1914687,
-    "radio_britannia": 1795309221.1976926,
-    "wbru": 1795309221.20182
+    "dark_edge": 1795309312.4475992,
+    "dkfm_shoegaze": 1795309312.4526746,
+    "dkfm_classic": 1795309312.4578059,
+    "egofm_rnb": 1795309312.463676,
+    "egofm_chillout": 1795309312.468836,
+    "dj_neihtul": 1795309312.473358,
+    "gri_balkon": 1795309312.4770002,
+    "ignoreradio_shoegaze": 1795309312.4823878,
+    "radio_britannia": 1795309312.4891248,
+    "wbru": 1795309312.493277
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32658,9 +32658,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "ise|||suitcase child",
-  "__last_radio_key_mellow_mix": "shawn mullins|||blue as you",
-  "__last_radio_key_big_sonic_heaven": "now always fades|||rem feat lili hall",
+  "__last_radio_key_vuurland": "marble sounds|||the ever after",
+  "__last_radio_key_mellow_mix": "beck|||blue moon",
+  "__last_radio_key_big_sonic_heaven": "bathe alone|||in deep",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30646,
   "__v146_spotify_budget_slot": 1795309225.2835503,
@@ -148045,7 +148045,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the vaccines|||a lack of understanding",
+  "__last_radio_key_indie_select": "arctic monkeys|||cornerstone",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -154822,7 +154822,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "yuno|||fall in love",
-  "__last_radio_key_egofm_chillout": "gundelach|||duck hunting",
+  "__last_radio_key_egofm_chillout": "middle school aso & aviino|||cap's cafe",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -154831,7 +154831,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "ben bohmer monolink|||black hole",
+  "__last_radio_key_dj_neihtul": "2raumwohnung|||das herz irrt nie - nacht",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -156390,7 +156390,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "heidi curtis|||river of spirit",
-  "__last_radio_key_wbru": "angine de poitrine|||fabienk",
+  "__last_radio_key_wbru": "tv girl|||the blonde",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
