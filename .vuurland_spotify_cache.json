@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795315004.500345,
+  "__v150_next_spotify_round_at": 1795315129.8830786,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -423,6 +423,7 @@
       "the cure|||pictures of you"
     ],
     "dreampop_radio": [
+      "the pierces|||it will not be forgotten",
       "sia|||breathe me",
       "the late call|||sleep some",
       "st lucia|||call me up",
@@ -521,8 +522,7 @@
       "small black|||sophie",
       "active child|||high priestess cfcf remix",
       "me and my drummer|||heavy weight freedarich remix",
-      "morning parade|||under the stars wilkinson remix",
-      "yello feat heidi happy|||stay"
+      "morning parade|||under the stars wilkinson remix"
     ],
     "indie_select": [
       "grouplove|||let me in",
@@ -1549,6 +1549,7 @@
       "chapterhouse|||too late demo"
     ],
     "radio_britannia": [
+      "foals|||2001",
       "flamingods|||olympia",
       "royal blood|||pull me through",
       "do nothing|||smile",
@@ -1647,8 +1648,7 @@
       "do nothing|||act natural",
       "the charlatans|||love is the key",
       "the beta band|||human being",
-      "stereophonics|||forever",
-      "the amazons|||love is a dog from hell"
+      "stereophonics|||forever"
     ],
     "wbru": [
       "tame impala|||new person same old mistakes",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795314974.728941,
-    "mellow_mix": 1795314974.737119,
-    "big_sonic_heaven": 1795314974.742288,
-    "radio_x_chilled": 1795314974.7482278,
-    "dreampop_radio": 1795314974.7540674,
-    "indie_select": 1795314974.7603102,
-    "dkfm_edge": 1795314974.766633,
+    "vuurland": 1795315008.2995753,
+    "mellow_mix": 1795315008.3076994,
+    "big_sonic_heaven": 1795315008.3128693,
+    "radio_x_chilled": 1795315008.319529,
+    "dreampop_radio": 1795315008.3255684,
+    "indie_select": 1795315008.331697,
+    "dkfm_edge": 1795315008.33785,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795314974.7749522,
-    "dkfm_shoegaze": 1795314974.780373,
-    "dkfm_classic": 1795314974.7864873,
-    "egofm_rnb": 1795314974.7926698,
-    "egofm_chillout": 1795314974.7987294,
-    "dj_neihtul": 1795314974.803532,
-    "gri_balkon": 1795314974.8076096,
-    "ignoreradio_shoegaze": 1795314974.8138988,
-    "radio_britannia": 1795314974.8206482,
-    "wbru": 1795314974.8250697
+    "dark_edge": 1795315008.3458414,
+    "dkfm_shoegaze": 1795315008.3511248,
+    "dkfm_classic": 1795315008.357036,
+    "egofm_rnb": 1795315008.3632145,
+    "egofm_chillout": 1795315008.3690875,
+    "dj_neihtul": 1795315008.37386,
+    "gri_balkon": 1795315008.377808,
+    "ignoreradio_shoegaze": 1795315008.3840106,
+    "radio_britannia": 1795315008.7562716,
+    "wbru": 1795315008.760596
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29216,6 +29216,7 @@
       "florence the machine|||south london forever",
       "florence the machine|||stand by me",
       "florentenes|||the news",
+      "foals|||2001",
       "foals|||exits",
       "foals|||in degrees",
       "foals|||into the surf",
@@ -32757,6 +32758,15 @@
       "matching_version": 35,
       "failed_searches": 2,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "hatchie|||august": {
+      "artist": "Hatchie",
+      "title": "August",
+      "source": "dkfm_edge",
+      "failed_at": 1795315015,
+      "matching_version": 35,
+      "failed_searches": 3,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -32767,8 +32777,8 @@
   "__last_radio_key_mellow_mix": "tom waits|||long way home",
   "__last_radio_key_big_sonic_heaven": "the churchhill garden|||sleepless",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 30729,
-  "__v146_spotify_budget_slot": 1795314887.3816633,
+  "__v116_fifo_next_sequence": 30730,
+  "__v146_spotify_budget_slot": 1795315012.7959075,
   "__vuurland_active_playlist_count": 4469,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -110640,7 +110650,7 @@
     "the horrors|||your love subtitulada": 1,
     "uffie|||add suv ft pharell williams": 1,
     "aytun & can menek|||everywhere home ft dj daddy e": 1,
-    "hatchie|||august": 2,
+    "hatchie|||august": 3,
     "swirlies|||cousteau": 1,
     "the charlottes|||we're going wrong album version": 1,
     "the chemical brothers|||go f q-tip": 1,
@@ -148166,7 +148176,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "sia|||breathe me",
+  "__last_radio_key_dreampop_radio": "the pierces|||it will not be forgotten",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -153331,7 +153341,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -153343,7 +153353,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -153376,7 +153386,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -156628,7 +156638,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "flamingods|||olympia",
+  "__last_radio_key_radio_britannia": "foals|||2001",
   "__last_radio_key_wbru": "tame impala|||new person same old mistakes",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -162066,15 +162076,6 @@
       "candidates": [],
       "status": "low_relevance"
     },
-    "hatchie|||august": {
-      "source": "dkfm_edge",
-      "artist": "Hatchie",
-      "title": "August",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [],
-      "status": "low_relevance"
-    },
     "sleepy|||flowers": {
       "source": "dkfm_shoegaze",
       "artist": "Sleepy",
@@ -162177,6 +162178,15 @@
           "spotify_id": "4qzoHxgp42ylb18ga1SWTL"
         }
       ],
+      "status": "low_relevance"
+    },
+    "hatchie|||august": {
+      "source": "dkfm_edge",
+      "artist": "Hatchie",
+      "title": "August",
+      "kind": "weak",
+      "variant": 2,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
