@@ -95,6 +95,10 @@ ARTIST_ALIASES = {
     # RadioBox writes DA/ZE; catalog uses Daze for the same shoegaze project.
     # The ordinary track/title/version checks still apply.
     "da ze": ["Daze"],
+    # Fink (UK) is the same singer-songwriter as Spotify artist Fink.
+    "fink uk": ["Fink"],
+    # The duo Gypsy & The Cat formally rebranded as GATC.
+    "gypsy and the cat": ["GATC"],
     "the twerps": ["Twerps"],  # Verified Spotify catalog name for Dreamin
     # v101: officiële artiestcredits die RadioBox onder een andere naam toont.
     "hybris": ["Postiljonen"],
