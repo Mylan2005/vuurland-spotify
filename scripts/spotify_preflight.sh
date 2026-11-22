@@ -38,6 +38,7 @@ python3 test_v253_dkfm_edge_skip_offline.py
 python3 test_v254_verified_report_metadata_offline.py
 python3 test_v255_catalog_rescue_offline.py
 python3 test_v256_station_activation_offline.py
+python3 test_v261_matcher_metadata_offline.py
 python3 test_v258_matcher_triage_offline.py
 python3 test_v236_spotify_403_diagnostics_offline.py
 python3 test_dark_edge_filter_offline.py
