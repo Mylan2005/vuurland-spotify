@@ -117,6 +117,7 @@
       "kids with buns|||1712"
     ],
     "mellow_mix": [
+      "the moody blues|||voices in the sky",
       "the avett brothers|||february seven",
       "jump little children|||words of wisdom",
       "tom waits|||san diego serenade",
@@ -215,8 +216,7 @@
       "anna ternheim|||lovers dream",
       "1 giant leap|||the way you dream",
       "calexico|||crystal frontier acoustic",
-      "steve forbert|||song for katrina",
-      "bonnie raitt|||have a heart"
+      "steve forbert|||song for katrina"
     ],
     "big_sonic_heaven": [
       "deary|||selene",
@@ -835,6 +835,7 @@
       "matthew dear feat tegan and sara|||bad ones"
     ],
     "dkfm_shoegaze": [
+      "berzica|||sink into",
       "soundpool|||florida blue",
       "shutdown shipyard|||reprisal",
       "miyaxx|||go easy",
@@ -933,8 +934,7 @@
       "after daylight|||the death of everthing",
       "moon cowboy & krissy vanderwoude|||baby's coming home",
       "funus|||between futures and shadows",
-      "raw blue|||numb to everything",
-      "the sewing club|||losing me now"
+      "raw blue|||numb to everything"
     ],
     "dkfm_classic": [
       "band of susans|||sermon on competition part 2",
@@ -1039,6 +1039,7 @@
       "the telescopes|||ocean drive"
     ],
     "egofm_rnb": [
+      "marvin gaye|||let's get it on",
       "kaina|||apple",
       "bondax|||gold",
       "mac miller|||once a day",
@@ -1137,10 +1138,10 @@
       "hiatus kaiyote|||chivalry is not dead",
       "cleo sol|||why don't you",
       "easy life|||daydreams",
-      "mary j blige|||family affair",
-      "tora|||jaigantic"
+      "mary j blige|||family affair"
     ],
     "egofm_chillout": [
+      "groove armada|||at the river",
       "tricky|||hell is round the corner",
       "the doppelgangaz|||lake placid",
       "khruangbin & leon bridges|||texas sun",
@@ -1239,8 +1240,7 @@
       "ceeys|||hiddensee",
       "fever ray|||keep the streets empty for me",
       "damon albarn|||lonely press play",
-      "sugi wa|||after dark",
-      "moderat|||rusty nails"
+      "sugi wa|||after dark"
     ],
     "dj_neihtul": [
       "alejandro de pinedo|||golden sunset",
@@ -1345,6 +1345,7 @@
       "steve angello|||knas"
     ],
     "gri_balkon": [
+      "hiatus|||we can be ghosts now",
       "thylacine|||volver",
       "jacob gurevitsch|||secret sorrows",
       "hvob|||turn a rope round its axis",
@@ -1443,8 +1444,7 @@
       "weval|||ways to go",
       "axel boman|||fantastic piano",
       "knot|||sunstream",
-      "new jackson|||the night mail",
-      "new jackson margie jean lewis|||there will always be this love"
+      "new jackson|||the night mail"
     ],
     "ignoreradio_shoegaze": [
       "the smashing pumpkins|||jackboot",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795329061.8098073,
-    "mellow_mix": 1795329061.8201542,
-    "big_sonic_heaven": 1795329061.8267767,
-    "radio_x_chilled": 1795329061.833836,
-    "dreampop_radio": 1795329061.8411062,
-    "indie_select": 1795329061.8488567,
-    "dkfm_edge": 1795329061.8567846,
+    "vuurland": 1795329155.173028,
+    "mellow_mix": 1795329155.1837726,
+    "big_sonic_heaven": 1795329155.1904688,
+    "radio_x_chilled": 1795329155.1974556,
+    "dreampop_radio": 1795329155.204708,
+    "indie_select": 1795329155.212364,
+    "dkfm_edge": 1795329155.2200732,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795329062.3346322,
-    "dkfm_shoegaze": 1795329062.3411987,
-    "dkfm_classic": 1795329062.3486607,
-    "egofm_rnb": 1795329062.3559132,
-    "egofm_chillout": 1795329062.362923,
-    "dj_neihtul": 1795329062.3691144,
-    "gri_balkon": 1795329062.3737354,
-    "ignoreradio_shoegaze": 1795329062.381307,
-    "radio_britannia": 1795329062.3897552,
-    "wbru": 1795329062.39469
+    "dark_edge": 1795329155.2297769,
+    "dkfm_shoegaze": 1795329155.2364266,
+    "dkfm_classic": 1795329155.243888,
+    "egofm_rnb": 1795329155.2513094,
+    "egofm_chillout": 1795329155.2583537,
+    "dj_neihtul": 1795329155.2645898,
+    "gri_balkon": 1795329155.2692719,
+    "ignoreradio_shoegaze": 1795329155.276894,
+    "radio_britannia": 1795329155.2852857,
+    "wbru": 1795329155.2901714
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -33061,7 +33061,7 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "howling|||signs",
-  "__last_radio_key_mellow_mix": "the avett brothers|||february seven",
+  "__last_radio_key_mellow_mix": "the moody blues|||voices in the sky",
   "__last_radio_key_big_sonic_heaven": "deary|||selene",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30938,
@@ -150292,7 +150292,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "school girl complex|||希 nozomi",
-  "__last_radio_key_dkfm_shoegaze": "soundpool|||florida blue",
+  "__last_radio_key_dkfm_shoegaze": "berzica|||sink into",
   "__last_radio_key_dkfm_classic": "band of susans|||sermon on competition part 2",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -155705,8 +155705,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "kaina|||apple",
-  "__last_radio_key_egofm_chillout": "tricky|||hell is round the corner",
+  "__last_radio_key_egofm_rnb": "marvin gaye|||let's get it on",
+  "__last_radio_key_egofm_chillout": "groove armada|||at the river",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -155721,7 +155721,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "thylacine|||volver",
+  "__last_radio_key_gri_balkon": "hiatus|||we can be ghosts now",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
