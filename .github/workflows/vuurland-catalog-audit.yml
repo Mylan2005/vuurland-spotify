@@ -1,6 +1,10 @@
 name: Vuurland historische Spotify-cataloguscontrole (alleen lezen)
 
 on:
+  push:
+    branches: [audit/v261-safe-matcher-2026-11-22]
+    paths:
+      - 'data/v261_catalog_audit_trigger.txt'
   workflow_dispatch:
     inputs:
       max_queries:
@@ -57,8 +61,8 @@ jobs:
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
-          MAX_QUERIES: ${{ inputs.max_queries }}
-          DELAY_SECONDS: ${{ inputs.delay_seconds }}
+          MAX_QUERIES: ${{ inputs.max_queries || '5' }}
+          DELAY_SECONDS: ${{ inputs.delay_seconds || '20' }}
         run: |
           set -euo pipefail
           case "$MAX_QUERIES" in ''|*[!0-9]*) echo 'Ongeldige max_queries'; exit 1;; esac
