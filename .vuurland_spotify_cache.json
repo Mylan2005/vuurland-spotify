@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "mogwai|||kids will be skeletons",
       "leon bridges feat lydia kitto|||all day all night",
       "maggie rogers|||so sick of dreaming",
       "charles bradley|||ain't it a sin",
@@ -113,8 +114,7 @@
       "dope lemon|||streets of your town",
       "jordan rakei & tom mcfarland|||easy to love",
       "sam de nef & camille camille|||waving",
-      "portland|||pouring rain",
-      "radical face|||welcome home"
+      "portland|||pouring rain"
     ],
     "mellow_mix": [
       "the national|||your mind is not your friend",
@@ -417,6 +417,7 @@
       "foo fighters|||times like these acoustic"
     ],
     "dreampop_radio": [
+      "brookville|||nothing's meant to last",
       "real estate|||navigator",
       "posies the|||last crawl",
       "beachwood sparks|||canyon ride",
@@ -515,10 +516,10 @@
       "this wild life|||pull me out",
       "dustin tebbutt|||the breach",
       "alvvays|||atop a cake",
-      "nick mulvey|||fever to the form",
-      "guided by voices|||girls of wild strawberries"
+      "nick mulvey|||fever to the form"
     ],
     "indie_select": [
+      "new order|||let's go",
       "chilly gonzales|||advantage points",
       "memory tapes|||run out",
       "fink|||shakespeare",
@@ -617,8 +618,7 @@
       "shout out louds|||fall hard",
       "the rifles|||go lucky",
       "delphic|||the sun also rises",
-      "stars|||hold on when you get love and let go when you give it",
-      "kindest lines|||hazy haze"
+      "stars|||hold on when you get love and let go when you give it"
     ],
     "dkfm_edge": [
       "diffident daffodils|||hold on tight",
@@ -931,6 +931,7 @@
       "nax|||so lost in you"
     ],
     "dkfm_classic": [
+      "the darling buds|||please yourself",
       "catherine wheel|||strange fruit",
       "bowery electric|||looped",
       "february|||trace",
@@ -1029,10 +1030,10 @@
       "spiritualized|||run",
       "love spirals downwards|||promises",
       "the wedding present|||dare",
-      "sundial|||sunstroke",
-      "cranes|||trumpet song"
+      "sundial|||sunstroke"
     ],
     "egofm_rnb": [
+      "nevi|||westside",
       "kwabs|||wrong or right",
       "kadhja bonet|||nobody other",
       "smerz|||oh my my",
@@ -1131,10 +1132,10 @@
       "steve lacy|||sunshine",
       "shungudzo|||paper",
       "jono mccleery|||tomorrow",
-      "tei shi|||bassically",
-      "panama|||how we feel"
+      "tei shi|||bassically"
     ],
     "egofm_chillout": [
+      "strehlow & chris mazuera|||lagoons",
       "slow magic|||bear dance",
       "morcheeba feat benjamin biolay|||paris sur mer",
       "tora|||metanoia",
@@ -1233,8 +1234,7 @@
       "de phazz|||dancing with my hands",
       "sadtoi|||les vacances",
       "ry x & olafur arnalds|||oceans",
-      "julee cruise|||falling",
-      "julien dore|||barracuda ii"
+      "julee cruise|||falling"
     ],
     "dj_neihtul": [
       "cut copy|||visions",
@@ -1713,24 +1713,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795362498.5979056,
-    "mellow_mix": 1795362498.600275,
-    "big_sonic_heaven": 1795362498.6023088,
-    "radio_x_chilled": 1795362498.6041522,
-    "dreampop_radio": 1795362498.6059937,
-    "indie_select": 1795362498.6081944,
-    "dkfm_edge": 1795362498.6102262,
+    "vuurland": 1795362585.6769311,
+    "mellow_mix": 1795362585.6793592,
+    "big_sonic_heaven": 1795362585.6813998,
+    "radio_x_chilled": 1795362585.6832294,
+    "dreampop_radio": 1795362585.6852207,
+    "indie_select": 1795362585.687669,
+    "dkfm_edge": 1795362585.6896281,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795362498.6135342,
-    "dkfm_shoegaze": 1795362498.6158986,
-    "dkfm_classic": 1795362498.6179442,
-    "egofm_rnb": 1795362498.6198769,
-    "egofm_chillout": 1795362498.6218233,
-    "dj_neihtul": 1795362498.623512,
-    "gri_balkon": 1795362498.6247895,
-    "ignoreradio_shoegaze": 1795362498.626861,
-    "radio_britannia": 1795362498.6290736,
-    "wbru": 1795362498.6308103
+    "dark_edge": 1795362585.6929216,
+    "dkfm_shoegaze": 1795362585.6952899,
+    "dkfm_classic": 1795362585.6974452,
+    "egofm_rnb": 1795362585.6994467,
+    "egofm_chillout": 1795362585.7015083,
+    "dj_neihtul": 1795362585.7031448,
+    "gri_balkon": 1795362585.7044575,
+    "ignoreradio_shoegaze": 1795362585.7065446,
+    "radio_britannia": 1795362585.708761,
+    "wbru": 1795362585.7105255
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -33621,7 +33621,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "leon bridges feat lydia kitto|||all day all night",
+  "__last_radio_key_vuurland": "mogwai|||kids will be skeletons",
   "__last_radio_key_mellow_mix": "the national|||your mind is not your friend",
   "__last_radio_key_big_sonic_heaven": "kiara ngl|||in the deep",
   "__v181_vuurland_two_missing_recovered": true,
@@ -150282,7 +150282,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "real estate|||navigator",
+  "__last_radio_key_dreampop_radio": "brookville|||nothing's meant to last",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -150400,7 +150400,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "chilly gonzales|||advantage points",
+  "__last_radio_key_indie_select": "new order|||let's go",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -151764,7 +151764,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "diffident daffodils|||hold on tight",
   "__last_radio_key_dkfm_shoegaze": "drauve|||backslid",
-  "__last_radio_key_dkfm_classic": "catherine wheel|||strange fruit",
+  "__last_radio_key_dkfm_classic": "the darling buds|||please yourself",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -157176,8 +157176,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "kwabs|||wrong or right",
-  "__last_radio_key_egofm_chillout": "slow magic|||bear dance",
+  "__last_radio_key_egofm_rnb": "nevi|||westside",
+  "__last_radio_key_egofm_chillout": "strehlow & chris mazuera|||lagoons",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
