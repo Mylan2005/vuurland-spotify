@@ -18,4 +18,6 @@ src = Path("vuurland_sync.py").read_text(encoding="utf-8")
 assert "abbreviated_title_feature(raw)" in src
 assert "safe_contraction_replacement(part, contractions.get(key))" in src
 assert '"da ze": ["Daze"]' in src
+assert '"fink uk": ["Fink"]' in src
+assert '"gypsy and the cat": ["GATC"]' in src
 print("v261 safe metadata tests passed")
