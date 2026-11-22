@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sufjan stevens|||chicago",
+      "eddie vedder|||long way",
       "maya hawke|||bring home my man",
       "ane brun|||make you feel my love",
       "the radar station|||the giant",
@@ -112,9 +114,7 @@
       "bear's den|||spiders",
       "damien rice|||the blower's daughter",
       "elbow|||the seldom seen kid",
-      "spinvis|||icarus",
-      "dotan|||let you go",
-      "strand of oaks|||somewhere in chicago"
+      "spinvis|||icarus"
     ],
     "mellow_mix": [
       "grateful dead|||dire wolf live",
@@ -219,6 +219,7 @@
       "enigma|||return to innocence"
     ],
     "big_sonic_heaven": [
+      "yndling|||it's almost like you're here",
       "the cure|||open",
       "fleeting colours|||crystal",
       "lisa gerrard & jules maxwell|||deshta forever",
@@ -317,8 +318,7 @@
       "the telescopes|||vanishing lines",
       "echo & the bunnymen|||can't be sold",
       "air formation|||only so much light",
-      "sigur ros|||svefn-g-englar",
-      "kalia vandever|||holding"
+      "sigur ros|||svefn-g-englar"
     ],
     "radio_x_chilled": [
       "radiohead|||karma police",
@@ -525,6 +525,7 @@
       "the war on drugs|||an ocean in between the waves"
     ],
     "indie_select": [
+      "metric|||the police and the private",
       "the national|||this is the last time",
       "british sea power|||bad bohemian",
       "banks & steelz|||wild season featuring florence welch",
@@ -623,8 +624,7 @@
       "comsat angels|||you move me",
       "spk|||metal dance",
       "psychedelic furs|||heaven",
-      "hattie cooke|||i get by",
-      "metric|||dressed to suppress"
+      "hattie cooke|||i get by"
     ],
     "dkfm_edge": [
       "dead leaf echo|||dream orphans",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "orchestral manoeuvres in the dark|||so in love",
       "radiohead|||lotus flower",
       "christian leave|||your life your time",
       "her|||queens feat zefire",
@@ -831,8 +832,7 @@
       "muse|||resistance",
       "sohn|||lessons",
       "brumby|||leave a light on",
-      "theory of mind|||underneath",
-      "so many wizards|||lose your mind"
+      "theory of mind|||underneath"
     ],
     "dkfm_shoegaze": [
       "gloss|||rosary",
@@ -1243,6 +1243,7 @@
       "mara simpson|||home"
     ],
     "dj_neihtul": [
+      "de vos tom|||bunkin",
       "deli/demetreus|||better love artificial soul",
       "lamb|||angelica",
       "julius vincent|||gate 24",
@@ -1341,8 +1342,7 @@
       "ko-wreck technique|||metro dade plaid mix",
       "spooky|||bambou - original mix",
       "ian brown|||the gravy train n o w instrumental remix",
-      "bola|||whoblo",
-      "caribou|||after hours"
+      "bola|||whoblo"
     ],
     "gri_balkon": [
       "jullian gomes bobby|||love song 28",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795379756.028695,
-    "mellow_mix": 1795379756.0319088,
-    "big_sonic_heaven": 1795379756.034543,
-    "radio_x_chilled": 1795379756.037078,
-    "dreampop_radio": 1795379756.0396934,
-    "indie_select": 1795379756.0425704,
-    "dkfm_edge": 1795379756.045265,
+    "vuurland": 1795379842.0126288,
+    "mellow_mix": 1795379842.0157254,
+    "big_sonic_heaven": 1795379842.0184813,
+    "radio_x_chilled": 1795379842.0210612,
+    "dreampop_radio": 1795379842.0236025,
+    "indie_select": 1795379842.0266612,
+    "dkfm_edge": 1795379842.02936,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795379756.0494087,
-    "dkfm_shoegaze": 1795379756.0523367,
-    "dkfm_classic": 1795379756.0549982,
-    "egofm_rnb": 1795379756.057872,
-    "egofm_chillout": 1795379756.0605834,
-    "dj_neihtul": 1795379756.0629616,
-    "gri_balkon": 1795379756.0648358,
-    "ignoreradio_shoegaze": 1795379756.0677116,
-    "radio_britannia": 1795379756.4277725,
-    "wbru": 1795379756.430214
+    "dark_edge": 1795379842.3724027,
+    "dkfm_shoegaze": 1795379842.3753364,
+    "dkfm_classic": 1795379842.378048,
+    "egofm_rnb": 1795379842.3807852,
+    "egofm_chillout": 1795379842.3834589,
+    "dj_neihtul": 1795379842.6495593,
+    "gri_balkon": 1795379842.6515899,
+    "ignoreradio_shoegaze": 1795379842.654423,
+    "radio_britannia": 1795379842.6574821,
+    "wbru": 1795379842.6597266
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -24640,6 +24640,7 @@
       "david lynch|||angelo badalamenti - mulholland drive",
       "david morales with tamra keenan|||here i am kaskade",
       "daybehavior|||silent dawn parralox remix",
+      "de vos tom|||bunkin",
       "de/vision|||dress me when i bleed",
       "deadmau 5|||faxing berlin chris lake remix",
       "death in vegas|||animatrix ost hands around my throat",
@@ -34029,11 +34030,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "maya hawke|||bring home my man",
+  "__last_radio_key_vuurland": "sufjan stevens|||chicago",
   "__last_radio_key_mellow_mix": "grateful dead|||dire wolf live",
-  "__last_radio_key_big_sonic_heaven": "the cure|||open",
+  "__last_radio_key_big_sonic_heaven": "yndling|||it's almost like you're here",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 31635,
+  "__v116_fifo_next_sequence": 31637,
   "__v146_spotify_budget_slot": 1795379759.087516,
   "__vuurland_active_playlist_count": 4889,
   "__vuurland_active_volume": 2,
@@ -151292,7 +151293,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the national|||this is the last time",
+  "__last_radio_key_indie_select": "metric|||the police and the private",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -152668,7 +152669,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "radiohead|||lotus flower",
+  "__last_radio_key_dark_edge": "orchestral manoeuvres in the dark|||so in love",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -158078,7 +158079,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "deli/demetreus|||better love artificial soul",
+  "__last_radio_key_dj_neihtul": "de vos tom|||bunkin",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
