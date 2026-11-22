@@ -28,3 +28,17 @@ def safe_contraction_replacement(original_token, proposed):
     if str(original_token or "").casefold().strip() == "ill":
         return None
     return proposed
+
+def verified_daze_album_alias(title, candidate):
+    """DA/ZE -> Daze requires independently known song AND split-album credit.
+
+    DAZE is a short, non-unique name. Never infer all songs by every artist
+    called Daze belong to the RadioBox shoegaze project.
+    """
+    if str(title or "").strip().casefold() != "mellow":
+        return False
+    if not isinstance(candidate, dict):
+        return False
+    album = str((candidate.get("album") or {}).get("name") or "").casefold()
+    album_words = " ".join(re.findall(r"[a-z0-9]+", album))
+    return album_words == "da ze glia split"
