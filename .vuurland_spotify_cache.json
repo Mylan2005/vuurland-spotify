@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sigur ros|||svefn-g-englar",
       "james blake|||i had a dream she took my hand",
       "wanthanee|||only shadows remain",
       "phoebe bridgers|||kyoto",
@@ -113,10 +114,10 @@
       "billie marten|||this is how we move",
       "lucy dacus|||planting tomatoes",
       "london grammar|||what a day",
-      "girl in red|||we fell in love in october",
-      "volcano choir|||byegone"
+      "girl in red|||we fell in love in october"
     ],
     "mellow_mix": [
+      "tracy chapman|||heaven's here on earth",
       "jack johnson|||sitting waiting wishing",
       "sophie zelmani|||so long",
       "j s ondara|||an alien in minneapolis",
@@ -215,8 +216,7 @@
       "marc cohn|||valley of the kings",
       "ivan & alyosha|||running for cover",
       "roxy music|||more than this",
-      "neil halstead|||full moon rising",
-      "jenny lewis|||the charging sky w/ the watson twins"
+      "neil halstead|||full moon rising"
     ],
     "big_sonic_heaven": [
       "johan agebjorn|||filled me up feat bunny x",
@@ -1445,6 +1445,7 @@
       "beacon|||pulse"
     ],
     "ignoreradio_shoegaze": [
+      "mark peters|||may mill",
       "blood estate|||secret",
       "cryalot|||hell is here",
       "after care|||goodnight moon",
@@ -1543,8 +1544,7 @@
       "trementina|||hazy youth",
       "modern charms|||someday",
       "pia fraus|||japanese heart software",
-      "broadcast|||unchanging window / chord simple",
-      "verity den|||unsolved mystery"
+      "broadcast|||unchanging window / chord simple"
     ],
     "radio_britannia": [
       "stereophonics|||since i told you its over",
@@ -1649,6 +1649,7 @@
       "morrissey|||in the future when all's well"
     ],
     "wbru": [
+      "counting crows|||mr jones",
       "enya|||orinoco flow",
       "pearl jam|||yellow ledbetter",
       "oasis|||live forever",
@@ -1747,29 +1748,28 @@
       "ivri|||tower of memories",
       "tame impala|||eventually",
       "cocteau twins|||cico buff",
-      "the smiths|||heaven knows i'm miserable now",
-      "steve lacy|||nothing"
+      "the smiths|||heaven knows i'm miserable now"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795368781.583439,
-    "mellow_mix": 1795368781.5860176,
-    "big_sonic_heaven": 1795368781.5882714,
-    "radio_x_chilled": 1795368781.5903797,
-    "dreampop_radio": 1795368781.5925612,
-    "indie_select": 1795368781.5950146,
-    "dkfm_edge": 1795368781.5973737,
+    "vuurland": 1795368870.6114442,
+    "mellow_mix": 1795368870.6141732,
+    "big_sonic_heaven": 1795368870.6164386,
+    "radio_x_chilled": 1795368870.6185834,
+    "dreampop_radio": 1795368870.6207132,
+    "indie_select": 1795368870.62313,
+    "dkfm_edge": 1795368870.625348,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795368781.6009982,
-    "dkfm_shoegaze": 1795368781.6036205,
-    "dkfm_classic": 1795368781.605907,
-    "egofm_rnb": 1795368781.6081455,
-    "egofm_chillout": 1795368781.6105025,
-    "dj_neihtul": 1795368781.6125433,
-    "gri_balkon": 1795368781.6142404,
-    "ignoreradio_shoegaze": 1795368781.6166122,
-    "radio_britannia": 1795368781.61911,
-    "wbru": 1795368781.6210701
+    "dark_edge": 1795368870.628975,
+    "dkfm_shoegaze": 1795368870.6315897,
+    "dkfm_classic": 1795368870.633925,
+    "egofm_rnb": 1795368870.6362145,
+    "egofm_chillout": 1795368870.6384172,
+    "dj_neihtul": 1795368870.6404228,
+    "gri_balkon": 1795368870.6421235,
+    "ignoreradio_shoegaze": 1795368870.9158893,
+    "radio_britannia": 1795368870.9185658,
+    "wbru": 1795368870.920694
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -27935,6 +27935,7 @@
       "mark peters|||feat : dot allison - sundowning",
       "mark peters|||gabriel's ladder",
       "mark peters|||mann island",
+      "mark peters|||may mill",
       "mark peters|||shaley brow",
       "mark peters|||tamaroa",
       "mark peters|||twenty bridges",
@@ -33800,11 +33801,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "james blake|||i had a dream she took my hand",
-  "__last_radio_key_mellow_mix": "jack johnson|||sitting waiting wishing",
+  "__last_radio_key_vuurland": "sigur ros|||svefn-g-englar",
+  "__last_radio_key_mellow_mix": "tracy chapman|||heaven's here on earth",
   "__last_radio_key_big_sonic_heaven": "johan agebjorn|||filled me up feat bunny x",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 31474,
+  "__v116_fifo_next_sequence": 31475,
   "__v146_spotify_budget_slot": 1795368784.2657416,
   "__vuurland_active_playlist_count": 4812,
   "__vuurland_active_volume": 2,
@@ -157561,7 +157562,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "blood estate|||secret",
+  "__last_radio_key_ignoreradio_shoegaze": "mark peters|||may mill",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -159091,7 +159092,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "stereophonics|||since i told you its over",
-  "__last_radio_key_wbru": "enya|||orinoco flow",
+  "__last_radio_key_wbru": "counting crows|||mr jones",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
