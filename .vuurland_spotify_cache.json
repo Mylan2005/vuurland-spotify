@@ -219,6 +219,7 @@
       "neil young|||dont let it bring you down"
     ],
     "big_sonic_heaven": [
+      "fleeting colours|||crystal",
       "lisa gerrard & jules maxwell|||deshta forever",
       "portishead|||strangers",
       "perpetual void|||tree house",
@@ -317,10 +318,10 @@
       "air formation|||only so much light",
       "sigur ros|||svefn-g-englar",
       "kalia vandever|||holding",
-      "actors|||like suicide",
-      "autoregulate|||double sky"
+      "actors|||like suicide"
     ],
     "radio_x_chilled": [
+      "elbow|||the bones of you",
       "the fratellis|||whistle for the choir",
       "wet leg|||obvious",
       "the verve|||bitter sweet symphony",
@@ -419,8 +420,7 @@
       "the kooks|||she moves in her own way acoustic",
       "the horrors|||still life",
       "r e m|||nightswimming",
-      "travis|||driftwood",
-      "fleetwood mac|||silver springs"
+      "travis|||driftwood"
     ],
     "dreampop_radio": [
       "angus and julia stone|||the beast",
@@ -627,6 +627,7 @@
       "laut fm|||laut fm - pssst"
     ],
     "dkfm_edge": [
+      "the joy formidable|||cut your face",
       "echo ladies|||coming home",
       "trauma ray|||halley",
       "elemantra|||the problem",
@@ -725,8 +726,7 @@
       "drop nineteens|||another one another",
       "rilev|||suenos",
       "kairo|||how nice",
-      "soft science|||low",
-      "funeral commercial|||vanish"
+      "soft science|||low"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -835,6 +835,8 @@
       "stagecoach|||hieroglyphics"
     ],
     "dkfm_shoegaze": [
+      "new age healers|||the fastest slow",
+      "butterfly explosion|||the blood we draw",
       "shades of violette|||kinetic",
       "bad bloom|||emergent architecture",
       "pieces|||mark time",
@@ -881,7 +883,6 @@
       "shades of violette|||just like yellow",
       "рябь|||вои",
       "the giraffe told me in my dream|||mirror",
-      "butterfly explosion|||the blood we draw",
       "essencer|||shine",
       "singinggum|||hollow",
       "no joy|||big life big leaf",
@@ -933,10 +934,10 @@
       "eyecolour|||clean",
       "theoryphobia|||celestial",
       "mystic tea party|||limerence",
-      "deux visages|||afterthought",
-      "yumi jun|||as the snow fades my name"
+      "deux visages|||afterthought"
     ],
     "dkfm_classic": [
+      "bleach|||decadence",
       "raspberry jam|||oceanic",
       "スーハーカー|||my way",
       "adorable|||crash sight",
@@ -1035,10 +1036,10 @@
       "boo radleys|||cracked lips homesick",
       "curve|||no escape from heaven",
       "majesty crush|||penny for love",
-      "luna|||23 minutes in brussels",
-      "flying saucer attack|||the season is ours"
+      "luna|||23 minutes in brussels"
     ],
     "egofm_rnb": [
+      "kelela|||rewind",
       "ant antic|||wasting time",
       "tourist feat lianne la havas|||patterns",
       "smino feat nos|||i deserve",
@@ -1137,8 +1138,7 @@
       "princess nokia|||green eggs & ham",
       "moses sumney|||virile",
       "celeste|||love is back",
-      "madison mcferrin|||insane",
-      "bonobo feat bajka|||walk in the sky"
+      "madison mcferrin|||insane"
     ],
     "egofm_chillout": [
       "dj yoda|||breathe feat lily james",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795379146.8252323,
-    "mellow_mix": 1795379146.8283734,
-    "big_sonic_heaven": 1795379146.8310256,
-    "radio_x_chilled": 1795379146.8335772,
-    "dreampop_radio": 1795379146.836096,
-    "indie_select": 1795379146.8389518,
-    "dkfm_edge": 1795379146.8415778,
+    "vuurland": 1795379231.4119923,
+    "mellow_mix": 1795379231.4151096,
+    "big_sonic_heaven": 1795379231.4177947,
+    "radio_x_chilled": 1795379231.4204187,
+    "dreampop_radio": 1795379231.423086,
+    "indie_select": 1795379231.4259436,
+    "dkfm_edge": 1795379231.4286544,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795379147.0981696,
-    "dkfm_shoegaze": 1795379147.10114,
-    "dkfm_classic": 1795379147.10386,
-    "egofm_rnb": 1795379147.1065168,
-    "egofm_chillout": 1795379147.1093307,
-    "dj_neihtul": 1795379147.111682,
-    "gri_balkon": 1795379147.1135738,
-    "ignoreradio_shoegaze": 1795379147.1163545,
-    "radio_britannia": 1795379147.1192944,
-    "wbru": 1795379147.121542
+    "dark_edge": 1795379231.4328055,
+    "dkfm_shoegaze": 1795379231.7302632,
+    "dkfm_classic": 1795379231.7332256,
+    "egofm_rnb": 1795379231.7360423,
+    "egofm_chillout": 1795379231.738776,
+    "dj_neihtul": 1795379231.7411675,
+    "gri_balkon": 1795379231.7430992,
+    "ignoreradio_shoegaze": 1795379231.7459083,
+    "radio_britannia": 1795379231.748966,
+    "wbru": 1795379231.7512326
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -34025,9 +34025,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "the radar station|||the giant",
   "__last_radio_key_mellow_mix": "jose gonzalez|||crosses",
-  "__last_radio_key_big_sonic_heaven": "lisa gerrard & jules maxwell|||deshta forever",
+  "__last_radio_key_big_sonic_heaven": "fleeting colours|||crystal",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 31628,
+  "__v116_fifo_next_sequence": 31629,
   "__v146_spotify_budget_slot": 1795379149.7964766,
   "__vuurland_active_playlist_count": 4884,
   "__vuurland_active_volume": 2,
@@ -151044,7 +151044,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "the fratellis|||whistle for the choir",
+  "__last_radio_key_radio_x_chilled": "elbow|||the bones of you",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -152628,9 +152628,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "echo ladies|||coming home",
-  "__last_radio_key_dkfm_shoegaze": "shades of violette|||kinetic",
-  "__last_radio_key_dkfm_classic": "raspberry jam|||oceanic",
+  "__last_radio_key_dkfm_edge": "the joy formidable|||cut your face",
+  "__last_radio_key_dkfm_shoegaze": "new age healers|||the fastest slow",
+  "__last_radio_key_dkfm_classic": "bleach|||decadence",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -158042,7 +158042,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "ant antic|||wasting time",
+  "__last_radio_key_egofm_rnb": "kelela|||rewind",
   "__last_radio_key_egofm_chillout": "dj yoda|||breathe feat lily james",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
