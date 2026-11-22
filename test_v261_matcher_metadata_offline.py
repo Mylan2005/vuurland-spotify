@@ -2,7 +2,7 @@
 import ast
 import re
 from pathlib import Path
-from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement
+from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement, verified_daze_album_alias
 
 assert abbreviated_title_feature("Are You Bored Yet? (f Clairo)") == ("Are You Bored Yet?", "Clairo")
 assert abbreviated_title_feature("flowin (feat. Sam Wise)") is None  # existing full-credit parser
@@ -54,6 +54,16 @@ assert "v261_verified_catalog_alias" in applicable_rules("DA/ZE", "Mellow")
 assert "v261_verified_catalog_alias" in applicable_rules("Fink (UK)", "Berlin Sunrise")
 assert "v261_verified_catalog_alias" in applicable_rules("Gypsy & The Cat", "Broken Kites")
 assert "v261_verified_catalog_alias" in applicable_rules("So Much 4 Gravity", "Gotta Get Out of This Town")
+assert verified_daze_album_alias("Mellow", {
+    "album": {"name": "Da/ze & Glia Split"},
+}) is True
+assert verified_daze_album_alias("Mellow", {
+    "album": {"name": "Greatest Hits"},
+}) is False
+assert verified_daze_album_alias("Sometimes", {
+    "album": {"name": "Da/ze & Glia Split"},
+}) is False
+assert "verified_daze_album_alias(title, item)" in src
 assert "v261_ambiguous_ill_title" not in applicable_rules("Example", "Will")
 assert "v261_abbreviated_required_guest" not in applicable_rules("Example", "Song (Live)")
 assert "v261_verified_catalog_alias" not in applicable_rules("Unknown Band", "Mellow")
