@@ -20,4 +20,5 @@ assert "safe_contraction_replacement(part, contractions.get(key))" in src
 assert '"da ze": ["Daze"]' in src
 assert '"fink uk": ["Fink"]' in src
 assert '"gypsy and the cat": ["GATC"]' in src
+assert '"so much 4 gravity": ["So Much for Gravity"]' in src
 print("v261 safe metadata tests passed")
