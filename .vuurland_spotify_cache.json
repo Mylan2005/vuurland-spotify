@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795323071.5859098,
+  "__v150_next_spotify_round_at": 1795323199.2486048,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -219,6 +219,7 @@
       "otis redding|||sittin' on the dock of the bay"
     ],
     "big_sonic_heaven": [
+      "unkle|||exodus / revisited feat eska",
       "nonsense rats|||dead end generation",
       "lanterns on the lake|||real life",
       "the cure|||breathe",
@@ -317,8 +318,7 @@
       "hooverphonic|||inhaler",
       "julee cruise|||floating",
       "cranes|||everywhere",
-      "joy division|||disorder",
-      "peter murphy|||deep ocean vast sea"
+      "joy division|||disorder"
     ],
     "radio_x_chilled": [
       "kings of leon|||revelry",
@@ -835,6 +835,7 @@
       "the moood|||stay right"
     ],
     "dkfm_shoegaze": [
+      "osaka sun|||only in your dreams",
       "bike crash lovers|||in another life",
       "the sewing club|||alright ok",
       "the foams|||what would i do",
@@ -933,10 +934,10 @@
       "mystic tea party|||honey",
       "fern murphy|||hanging moon",
       "stella stella|||pure air",
-      "echo servants|||snow & honey",
-      "seventeen years|||sundown"
+      "echo servants|||snow & honey"
     ],
     "dkfm_classic": [
+      "the telescopes|||and",
       "bleach|||push",
       "swirlies|||upstairs",
       "piano magic|||crown estate",
@@ -1035,8 +1036,7 @@
       "all natural lemon and lime flavors|||blue balloons",
       "adorable|||cut #2",
       "cranes|||everywhere",
-      "curve|||clipped",
-      "catherine wheel|||fizzy love"
+      "curve|||clipped"
     ],
     "egofm_rnb": [
       "yaya bay|||alright",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795323043.146518,
-    "mellow_mix": 1795323043.1567924,
-    "big_sonic_heaven": 1795323043.1632032,
-    "radio_x_chilled": 1795323043.169839,
-    "dreampop_radio": 1795323043.1766841,
-    "indie_select": 1795323043.184192,
-    "dkfm_edge": 1795323043.1916947,
+    "vuurland": 1795323077.5955112,
+    "mellow_mix": 1795323077.605497,
+    "big_sonic_heaven": 1795323078.0340397,
+    "radio_x_chilled": 1795323078.0409276,
+    "dreampop_radio": 1795323078.0478878,
+    "indie_select": 1795323078.055291,
+    "dkfm_edge": 1795323078.062725,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795323043.2010288,
-    "dkfm_shoegaze": 1795323043.2068973,
-    "dkfm_classic": 1795323043.2138975,
-    "egofm_rnb": 1795323043.2211156,
-    "egofm_chillout": 1795323043.2279222,
-    "dj_neihtul": 1795323043.7066238,
-    "gri_balkon": 1795323043.7112956,
-    "ignoreradio_shoegaze": 1795323043.7187052,
-    "radio_britannia": 1795323043.7269409,
-    "wbru": 1795323043.7317016
+    "dark_edge": 1795323078.071973,
+    "dkfm_shoegaze": 1795323078.0780299,
+    "dkfm_classic": 1795323078.085085,
+    "egofm_rnb": 1795323078.0921166,
+    "egofm_chillout": 1795323078.0987656,
+    "dj_neihtul": 1795323078.1042945,
+    "gri_balkon": 1795323078.1086795,
+    "ignoreradio_shoegaze": 1795323078.115822,
+    "radio_britannia": 1795323078.1236832,
+    "wbru": 1795323078.128334
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -7848,6 +7848,7 @@
       "unkle feat 3d|||twilight",
       "unkle feat ian brown|||be there",
       "unkle|||ever rest feat joel cadbury",
+      "unkle|||exodus / revisited feat eska",
       "unkle|||the runaway feat elle j",
       "untitled halo|||how to make your love stay",
       "van chamberlain|||miracle drug",
@@ -32923,6 +32924,15 @@
       "matching_version": 35,
       "failed_searches": 5,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "t a k e r|||taker - jackalope": {
+      "artist": "T A K E R",
+      "title": "TAKER - Jackalope",
+      "source": "dkfm_edge",
+      "failed_at": 1795323084,
+      "matching_version": 35,
+      "failed_searches": 5,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -32931,10 +32941,10 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "bear's den|||above the clouds of pompeii",
   "__last_radio_key_mellow_mix": "beth orton|||state of grace",
-  "__last_radio_key_big_sonic_heaven": "nonsense rats|||dead end generation",
+  "__last_radio_key_big_sonic_heaven": "unkle|||exodus / revisited feat eska",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 30849,
-  "__v146_spotify_budget_slot": 1795322954.4017763,
+  "__v116_fifo_next_sequence": 30850,
+  "__v146_spotify_budget_slot": 1795323082.172776,
   "__vuurland_active_playlist_count": 4517,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -110500,7 +110510,7 @@
     "we were promised jetpacks|||the walls are wearing thin": 4,
     "nick cave|||evil - 'silver alert' remix featuring matt berninger": 4,
     "shoegazer|||spiral": 5,
-    "t a k e r|||taker - jackalope": 4,
+    "t a k e r|||taker - jackalope": 5,
     "take it easy|||bluelies": 4,
     "julia a noack|||things break": 5,
     "the black keys|||go": 3,
@@ -150015,8 +150025,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "devilish dear|||invisible man the breeders",
-  "__last_radio_key_dkfm_shoegaze": "bike crash lovers|||in another life",
-  "__last_radio_key_dkfm_classic": "bleach|||push",
+  "__last_radio_key_dkfm_shoegaze": "osaka sun|||only in your dreams",
+  "__last_radio_key_dkfm_classic": "the telescopes|||and",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -153699,7 +153709,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -153711,7 +153721,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -153744,7 +153754,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -157324,31 +157334,6 @@
           "artist": "The Sands, Guy Van Nueten",
           "title": "April & June",
           "spotify_id": "0W3LwoVkRZEcyBxzZ2cs90"
-        }
-      ],
-      "status": "low_relevance"
-    },
-    "t a k e r|||taker - jackalope": {
-      "source": "dkfm_edge",
-      "artist": "T A K E R",
-      "title": "TAKER - Jackalope",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [
-        {
-          "artist": "Weezer",
-          "title": "Say It Ain't So - Original Mix",
-          "spotify_id": "6VoIBz0VhCyz7OdEoRYDiA"
-        },
-        {
-          "artist": "Weezer",
-          "title": "Say It Ain't So",
-          "spotify_id": "56MEbUIvvfEEkLIl51wxGD"
-        },
-        {
-          "artist": "Weezer",
-          "title": "Say It Ain't So - 2024 Remaster",
-          "spotify_id": "0J9PAXxCZqFplANb0MPjT9"
         }
       ],
       "status": "low_relevance"
@@ -162529,6 +162514,15 @@
           "spotify_id": "7qsha6TIhRT8659zKHPfso"
         }
       ],
+      "status": "low_relevance"
+    },
+    "t a k e r|||taker - jackalope": {
+      "source": "dkfm_edge",
+      "artist": "T A K E R",
+      "title": "TAKER - Jackalope",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
