@@ -1,0 +1,84 @@
+name: Vuurland historische Spotify-cataloguscontrole (alleen lezen)
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_queries:
+        description: "Maximaal nieuwe Spotify Search-verzoeken in deze run (1-100)"
+        required: true
+        default: "25"
+      delay_seconds:
+        description: "Pauze in seconden tussen searches (minimaal 20)"
+        required: true
+        default: "20"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: vuurland-catalog-audit
+  cancel-in-progress: false
+
+jobs:
+  catalog-review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dependencies
+        run: python3 -m pip install -r requirements.txt
+      - name: Assemble exact 1131 historical misses without changing sync state
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          rows = []
+          for n in (1, 2, 3):
+              rows += json.loads(Path(f"data/v261_historical_misses_part{n}.json").read_text())["tracks"]
+          assert len(rows) == 1131
+          assert len({(x["artist"].casefold(), x["title"].casefold()) for x in rows}) == 1131
+          Path("historical_catalog_input.json").write_text(json.dumps({"tracks": rows}, ensure_ascii=False))
+          PY
+      - name: Resume last uploaded checkpoint if it exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          previous=$(gh run list --workflow "vuurland-catalog-audit.yml" --limit 30 --json databaseId,conclusion,status \
+            --jq '[.[] | select(.status == "completed" and .databaseId != (env.GITHUB_RUN_ID | tonumber))][0].databaseId // empty' || true)
+          if [ -n "$previous" ]; then
+            gh run download "$previous" --name vuurland-catalog-audit-checkpoint --dir . || true
+          fi
+      - name: Validate rate limits and perform read-only catalog searches
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          MAX_QUERIES: ${{ inputs.max_queries }}
+          DELAY_SECONDS: ${{ inputs.delay_seconds }}
+        run: |
+          set -euo pipefail
+          case "$MAX_QUERIES" in ''|*[!0-9]*) echo 'Ongeldige max_queries'; exit 1;; esac
+          if [ "$MAX_QUERIES" -lt 1 ] || [ "$MAX_QUERIES" -gt 100 ]; then exit 1; fi
+          python3 - <<'PY'
+          import os
+          delay = float(os.environ["DELAY_SECONDS"])
+          assert 20 <= delay <= 120
+          PY
+          python3 scripts/vuurland_catalog_audit.py \
+            --input historical_catalog_input.json \
+            --output vuurland_catalog_audit.jsonl \
+            --max-queries "$MAX_QUERIES" \
+            --delay "$DELAY_SECONDS" \
+            --market BE
+      - name: Preserve read-only checkpoint even on Spotify rate limit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-catalog-audit-checkpoint
+          path: vuurland_catalog_audit.jsonl
+          if-no-files-found: ignore
+          retention-days: 90
