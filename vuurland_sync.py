@@ -17,6 +17,7 @@ from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v256_station_hygiene import non_music_fragment as v256_non_music_fragment, britannia_heavy_caution as v256_britannia_heavy_caution
+from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
@@ -91,6 +92,9 @@ PLAYLIST_ID = os.environ.get("VUURLAND_PLAYLIST_ID", "555lFTvdRswe9ukybmOM8T")
 #
 # De normale titelcontrole blijft volledig actief.
 ARTIST_ALIASES = {
+    # RadioBox writes DA/ZE; catalog uses Daze for the same shoegaze project.
+    # The ordinary track/title/version checks still apply.
+    "da ze": ["Daze"],
     "the twerps": ["Twerps"],  # Verified Spotify catalog name for Dreamin
     # v101: officiële artiestcredits die RadioBox onder een andere naam toont.
     "hybris": ["Postiljonen"],
@@ -3128,6 +3132,12 @@ def find_spotify_track(
         """
         raw = str(value or "").strip()
 
+        # v261: a short `(f Artist)` is an explicit REQUIRED guest credit.
+        # The normal Spotify artist-object checks below remain mandatory.
+        abbreviated = abbreviated_title_feature(raw)
+        if abbreviated:
+            return abbreviated
+
         explicit = re.search(
             r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+"
             r"([^\(\)\[\]]+?)\)?\s*$",
@@ -3332,7 +3342,7 @@ def find_spotify_track(
         rebuilt = []
         for part in parts:
             key = re.sub(r"[^a-z]", "", part.casefold())
-            replacement = contractions.get(key)
+            replacement = safe_contraction_replacement(part, contractions.get(key))
             if replacement and part.strip():
                 if part[:1].isupper():
                     replacement = replacement[:1].upper() + replacement[1:]
