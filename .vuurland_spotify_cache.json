@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795320916.9386728,
+  "__v150_next_spotify_round_at": 1795321042.4946432,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "angus & julia stone|||karaoke bar",
       "daniel caesar|||let me go",
       "paolo nutini|||through the echoes",
       "sufjan stevens|||casimir pulaski day",
@@ -113,8 +114,7 @@
       "beck|||everybody's got to learn sometime",
       "eefje de visser|||scheef",
       "kurt vile|||zoom 97",
-      "horsegirl|||julie",
-      "paolo nutini|||shine a light"
+      "horsegirl|||julie"
     ],
     "mellow_mix": [
       "lana del rey|||say yes to heaven",
@@ -219,6 +219,7 @@
       "meshell ndegeocello|||don't you want me with cat power"
     ],
     "big_sonic_heaven": [
+      "cocteau twins|||sultitan itan",
       "shoreline stories|||ride",
       "nightbus|||angles mortz",
       "this mortal coil|||waves become wings / barramundi",
@@ -317,8 +318,7 @@
       "primal scream|||come together 7\" version",
       "the wolfgang press|||a girl like you",
       "the damned|||the shadow of love",
-      "liquorice|||blew it",
-      "erasure|||piano song"
+      "liquorice|||blew it"
     ],
     "radio_x_chilled": [
       "red hot chili peppers|||soul to squeeze",
@@ -1345,6 +1345,7 @@
       "goldfrapp|||ride a white horse serge santiago remix"
     ],
     "gri_balkon": [
+      "africa express|||johannesburg feat gruff rhys morena leraba radio 123 & sibot",
       "matanza & oceanvs orientalis|||la luna y el lobo jhon montoya expedition",
       "chris joss|||tune down",
       "radiophobia|||if you ever change your mind",
@@ -1443,8 +1444,7 @@
       "federico albanese|||mauer blues",
       "tosca|||supersunday",
       "jetlag esther|||walk with me",
-      "dolphin boy|||handsome as ever",
-      "trippin jaguar|||duat ft raffaello visconti"
+      "dolphin boy|||handsome as ever"
     ],
     "ignoreradio_shoegaze": [
       "jaguwar|||wendy",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795320887.5028749,
-    "mellow_mix": 1795320887.5115132,
-    "big_sonic_heaven": 1795320887.5169857,
-    "radio_x_chilled": 1795320887.5230875,
-    "dreampop_radio": 1795320887.5293055,
-    "indie_select": 1795320887.5358453,
-    "dkfm_edge": 1795320887.5425751,
+    "vuurland": 1795320921.273067,
+    "mellow_mix": 1795320921.2816749,
+    "big_sonic_heaven": 1795320921.2872875,
+    "radio_x_chilled": 1795320921.2934208,
+    "dreampop_radio": 1795320921.2996662,
+    "indie_select": 1795320921.3062878,
+    "dkfm_edge": 1795320921.3128884,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795320887.9839237,
-    "dkfm_shoegaze": 1795320887.9894109,
-    "dkfm_classic": 1795320887.9958594,
-    "egofm_rnb": 1795320888.0024555,
-    "egofm_chillout": 1795320888.008629,
-    "dj_neihtul": 1795320888.0138147,
-    "gri_balkon": 1795320888.0179524,
-    "ignoreradio_shoegaze": 1795320888.398732,
-    "radio_britannia": 1795320888.4076324,
-    "wbru": 1795320888.4120686
+    "dark_edge": 1795320921.3214123,
+    "dkfm_shoegaze": 1795320921.326882,
+    "dkfm_classic": 1795320921.3332877,
+    "egofm_rnb": 1795320921.339832,
+    "egofm_chillout": 1795320921.3460114,
+    "dj_neihtul": 1795320921.3511052,
+    "gri_balkon": 1795320921.3553963,
+    "ignoreradio_shoegaze": 1795320921.3621204,
+    "radio_britannia": 1795320921.36934,
+    "wbru": 1795320921.3737557
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32873,18 +32873,27 @@
       "matching_version": 35,
       "failed_searches": 2,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "shoegazer|||spiral": {
+      "artist": "SHOEGAZER",
+      "title": "spiral",
+      "source": "dkfm_edge",
+      "failed_at": 1795320927,
+      "matching_version": 35,
+      "failed_searches": 5,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "daniel caesar|||let me go",
+  "__last_radio_key_vuurland": "angus & julia stone|||karaoke bar",
   "__last_radio_key_mellow_mix": "lana del rey|||say yes to heaven",
-  "__last_radio_key_big_sonic_heaven": "shoreline stories|||ride",
+  "__last_radio_key_big_sonic_heaven": "cocteau twins|||sultitan itan",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 30815,
-  "__v146_spotify_budget_slot": 1795320799.954629,
+  "__v146_spotify_budget_slot": 1795320925.372677,
   "__vuurland_active_playlist_count": 4506,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -110405,7 +110414,7 @@
     "so much 4 gravity|||go": 4,
     "we were promised jetpacks|||the walls are wearing thin": 4,
     "nick cave|||evil - 'silver alert' remix featuring matt berninger": 4,
-    "shoegazer|||spiral": 4,
+    "shoegazer|||spiral": 5,
     "t a k e r|||taker - jackalope": 4,
     "take it easy|||bluelies": 4,
     "julia a noack|||things break": 5,
@@ -153603,7 +153612,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -153615,7 +153624,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -153648,7 +153657,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -155348,7 +155357,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "matanza & oceanvs orientalis|||la luna y el lobo jhon montoya expedition",
+  "__last_radio_key_gri_balkon": "africa express|||johannesburg feat gruff rhys morena leraba radio 123 & sibot",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -157187,15 +157196,6 @@
           "spotify_id": "5YSI1311X8t31PBjkBG4CZ"
         }
       ],
-      "status": "low_relevance"
-    },
-    "shoegazer|||spiral": {
-      "source": "dkfm_edge",
-      "artist": "SHOEGAZER",
-      "title": "spiral",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [],
       "status": "low_relevance"
     },
     "lopsha|||bright noise": {
@@ -162446,6 +162446,15 @@
       "source": "dkfm_edge",
       "artist": "Hotline TNT",
       "title": "History Channel",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [],
+      "status": "low_relevance"
+    },
+    "shoegazer|||spiral": {
+      "source": "dkfm_edge",
+      "artist": "SHOEGAZER",
+      "title": "spiral",
       "kind": "weak",
       "variant": 1,
       "candidates": [],
