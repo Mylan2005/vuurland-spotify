@@ -1,0 +1,71 @@
+name: Vuurland volledige historische Spotify-catalogusaudit (alleen lezen)
+
+on:
+  push:
+    branches: [audit/v261-safe-matcher-2026-11-22]
+    paths:
+      - 'data/v261_full_catalog_trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vuurland-full-readonly-catalog-audit
+  cancel-in-progress: false
+
+jobs:
+  catalog-search:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python3 -m pip install -r requirements.txt
+      - name: Verify exact inventory and construct nonoverlapping shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          rows = []
+          for part in (1, 2, 3):
+              rows.extend(json.loads(Path(f"data/v261_historical_misses_part{part}.json").read_text(encoding="utf-8"))["tracks"])
+          assert len(rows) == 1131, f"Expected 1131; got {len(rows)}"
+          assert len({(row["artist"].casefold(), row["title"].casefold()) for row in rows}) == 1131
+          shard = int(os.environ["SHARD"])
+          assert 0 <= shard <= 11
+          chunk = rows[shard*100:(shard+1)*100]
+          assert 1 <= len(chunk) <= 100
+          Path("audit_input.json").write_text(json.dumps({"tracks": chunk}, ensure_ascii=False), encoding="utf-8")
+          print(f"Preparing shard {shard}: {len(chunk)} distinct tracks; read-only Spotify Search")
+          PY
+      - name: Read-only Spotify catalog verification (Belgian market)
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: |
+          python3 scripts/vuurland_catalog_audit.py \
+            --input audit_input.json \
+            --output catalog_audit_shard.jsonl \
+            --max-queries 100 \
+            --delay 20 \
+            --market BE
+      - name: Upload exact evidence even if Spotify rate-limits a shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vuurland-catalog-evidence-shard-${{ matrix.shard }}
+          path: catalog_audit_shard.jsonl
+          if-no-files-found: ignore
+          retention-days: 90
