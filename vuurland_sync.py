@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v256_station_hygiene import non_music_fragment as v256_non_music_fragment, britannia_heavy_caution as v256_britannia_heavy_caution
-from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement
+from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement, verified_daze_album_alias
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
@@ -4772,6 +4772,17 @@ def find_spotify_track(
     candidates = []
 
     for item in items:
+        # v261: the short catalog artist name Daze has unrelated namesakes.
+        # Only the independently verified DA/ZE/Glia split album can
+        # authorize this spelling alias; ordinary DA/ZE credits are unchanged.
+        if normalized_primary == "da ze":
+            catalog_names = [
+                str(x.get("name") or "") for x in item.get("artists", [])
+                if isinstance(x, dict)
+            ]
+            if any(alias_key(name) == "daze" for name in catalog_names):
+                if not verified_daze_album_alias(title, item):
+                    continue
         if v88_radio_key == ("manassas", "colorado"):
             # Catalogus van Stephen Stills bevat veel Colorado-opnames.
             # RadioBox vraagt de opname uit het album Manassas.
