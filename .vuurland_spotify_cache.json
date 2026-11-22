@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795365359.4683266,
+  "__v150_next_spotify_round_at": 1795365482.244527,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -733,6 +733,8 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "jungle|||keep moving",
+      "max romeo|||wet dream",
       "beck|||can't help falling in love",
       "tom odell|||constellations",
       "dope lemon|||how many times",
@@ -830,11 +832,10 @@
       "pearl jam|||alive",
       "max future|||till you let go",
       "local natives|||when am i gonna lose you",
-      "illusion|||something",
-      "two door cinema club|||what you know",
-      "the war on drugs|||pain"
+      "illusion|||something"
     ],
     "dkfm_shoegaze": [
+      "appi|||ukiyo",
       "ancient channels|||chimera",
       "funsover|||ten",
       "snowflake dynamite|||fortunate delirium",
@@ -933,10 +934,10 @@
       "butterfly explosion|||the blood we draw",
       "youth valley|||pills",
       "dazzled|||soft focus",
-      "angles|||sundry",
-      "hazy waters|||take me home"
+      "angles|||sundry"
     ],
     "dkfm_classic": [
+      "boo radleys|||if you want it take it",
       "the verve|||already there",
       "closedown|||empyreal",
       "see see rider|||stolen heart",
@@ -1035,8 +1036,7 @@
       "riverside|||galaxie",
       "cocteau twins|||blue bell knoll",
       "the boo radleys|||how i feel",
-      "spindrift|||surround sound",
-      "lush|||bitter"
+      "spindrift|||surround sound"
     ],
     "egofm_rnb": [
       "fka twigs|||careless feat daniel caesar",
@@ -1243,6 +1243,7 @@
       "sinan mercenk feat patricia solis|||don't walk away"
     ],
     "dj_neihtul": [
+      "unkle|||rabbit in your headlights 3d mix reverse light instrumental",
       "terranova|||tokyo tower avenue a remix",
       "burial|||etched headplate",
       "red snapper|||strike one",
@@ -1633,6 +1634,7 @@
       "coldplay|||true love"
     ],
     "wbru": [
+      "the 1975|||about you",
       "cage the elephant|||dying in reverse",
       "radiohead|||let down",
       "lana del rey|||lies with zach bryan",
@@ -1731,29 +1733,28 @@
       "slow pulp|||better man",
       "the smashing pumpkins|||1979",
       "vampire weekend|||harmony hall",
-      "coldplay|||viva la vida",
-      "balu brigada|||backseat"
+      "coldplay|||viva la vida"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795365323.3126733,
-    "mellow_mix": 1795365323.315298,
-    "big_sonic_heaven": 1795365323.317613,
-    "radio_x_chilled": 1795365323.3196278,
-    "dreampop_radio": 1795365323.321708,
-    "indie_select": 1795365323.3240404,
-    "dkfm_edge": 1795365323.3260846,
+    "vuurland": 1795365360.7748234,
+    "mellow_mix": 1795365360.7773514,
+    "big_sonic_heaven": 1795365360.779666,
+    "radio_x_chilled": 1795365360.7817013,
+    "dreampop_radio": 1795365360.7837136,
+    "indie_select": 1795365360.7861097,
+    "dkfm_edge": 1795365360.7882137,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795365323.3294733,
-    "dkfm_shoegaze": 1795365323.3319228,
-    "dkfm_classic": 1795365323.3341138,
-    "egofm_rnb": 1795365323.3363242,
-    "egofm_chillout": 1795365323.3383958,
-    "dj_neihtul": 1795365323.3402073,
-    "gri_balkon": 1795365323.3416414,
-    "ignoreradio_shoegaze": 1795365323.6279416,
-    "radio_britannia": 1795365323.630501,
-    "wbru": 1795365323.6323974
+    "dark_edge": 1795365361.0701401,
+    "dkfm_shoegaze": 1795365361.072867,
+    "dkfm_classic": 1795365361.0752575,
+    "egofm_rnb": 1795365361.077378,
+    "egofm_chillout": 1795365361.079499,
+    "dj_neihtul": 1795365361.471484,
+    "gri_balkon": 1795365361.473087,
+    "ignoreradio_shoegaze": 1795365361.4754598,
+    "radio_britannia": 1795365361.4778998,
+    "wbru": 1795365361.479893
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15291,6 +15292,7 @@
       "jungle|||drops",
       "jungle|||house in la",
       "jungle|||julia",
+      "jungle|||keep moving",
       "jungle|||mama oh no",
       "jungle|||son of a gun",
       "jungle|||truth",
@@ -25821,6 +25823,7 @@
       "unkle featuring richard ashcroft|||lonely soul",
       "unkle|||arms length feat elliott power mink & callum finn",
       "unkle|||follow me down feat sleepy sun",
+      "unkle|||rabbit in your headlights 3d mix reverse light instrumental",
       "unkle|||sunrise always comes around feat liela moss",
       "unn|||one week",
       "van bellen|||aan zee",
@@ -33691,6 +33694,15 @@
       "failed_at": 1795363535,
       "matching_version": 35,
       "failed_searches": 5
+    },
+    "loom|||slowmotion": {
+      "artist": "Loom",
+      "title": "Slowmotion",
+      "source": "dkfm_edge",
+      "failed_at": 1795365365,
+      "matching_version": 35,
+      "failed_searches": 5,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -33701,8 +33713,8 @@
   "__last_radio_key_mellow_mix": "dead can dance|||american dreaming",
   "__last_radio_key_big_sonic_heaven": "tycho & sea lemon|||anotherwave",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 31416,
-  "__v146_spotify_budget_slot": 1795365241.379297,
+  "__v116_fifo_next_sequence": 31418,
+  "__v146_spotify_budget_slot": 1795365364.1769788,
   "__vuurland_active_playlist_count": 4788,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -112400,7 +112412,7 @@
     "hatchie|||eyes without a face": 5,
     "comsat angels|||shiva descending": 3,
     "ultra vivid scene|||mercy seat 12\"": 3,
-    "loom|||slowmotion": 4,
+    "loom|||slowmotion": 5,
     "more earth than sea|||alone again": 4,
     "she her her hers|||vital": 3,
     "hans zimmer & lisa gerrard|||elysium honor him now we are free": 4,
@@ -151903,8 +151915,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "vivid bloom|||out of focus",
-  "__last_radio_key_dkfm_shoegaze": "ancient channels|||chimera",
-  "__last_radio_key_dkfm_classic": "the verve|||already there",
+  "__last_radio_key_dkfm_shoegaze": "appi|||ukiyo",
+  "__last_radio_key_dkfm_classic": "boo radleys|||if you want it take it",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -151916,7 +151928,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "beck|||can't help falling in love",
+  "__last_radio_key_dark_edge": "jungle|||keep moving",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -155587,7 +155599,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -155599,7 +155611,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -155632,7 +155644,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -157326,7 +157338,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "terranova|||tokyo tower avenue a remix",
+  "__last_radio_key_dj_neihtul": "unkle|||rabbit in your headlights 3d mix reverse light instrumental",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -158885,7 +158897,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "peace|||swimming with dolphins",
-  "__last_radio_key_wbru": "cage the elephant|||dying in reverse",
+  "__last_radio_key_wbru": "the 1975|||about you",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -159666,15 +159678,6 @@
       "title": "Boy From School (Hot Chip Cover)",
       "kind": "weak",
       "variant": 2,
-      "candidates": [],
-      "status": "low_relevance"
-    },
-    "loom|||slowmotion": {
-      "source": "dkfm_edge",
-      "artist": "Loom",
-      "title": "Slowmotion",
-      "kind": "weak",
-      "variant": 0,
       "candidates": [],
       "status": "low_relevance"
     },
@@ -164440,6 +164443,15 @@
           "spotify_id": "6idUFJt8AeyH5qWEAfffTI"
         }
       ],
+      "status": "low_relevance"
+    },
+    "loom|||slowmotion": {
+      "source": "dkfm_edge",
+      "artist": "Loom",
+      "title": "Slowmotion",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
