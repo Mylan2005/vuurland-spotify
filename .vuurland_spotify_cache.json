@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795376705.1775117,
+  "__v150_next_spotify_round_at": 1795376827.8138106,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -117,6 +117,7 @@
       "elis floreen|||panther"
     ],
     "mellow_mix": [
+      "patty griffin|||luminous places",
       "john fogerty|||river is waiting",
       "rosanne cash|||a feather's not a bird",
       "j j cale|||midnight in memphis",
@@ -215,8 +216,7 @@
       "patty griffin|||cold as it gets",
       "sofi tukker|||what a wonderful world",
       "norah jones|||even though",
-      "goo goo dolls|||name",
-      "tori amos|||tear in your hand"
+      "goo goo dolls|||name"
     ],
     "big_sonic_heaven": [
       "tycho|||small sanctuary",
@@ -627,6 +627,7 @@
       "we were promised jetpacks|||impossible"
     ],
     "dkfm_edge": [
+      "glia|||she's so gone",
       "decay|||how it feels",
       "mad honey|||concentration",
       "bathe alone|||gemini edit",
@@ -725,8 +726,7 @@
       "diiv|||reflected",
       "wednesday|||quarry",
       "tannhauser orchestra|||spring reverb",
-      "head sound|||home",
-      "jared martin|||longing"
+      "head sound|||home"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1549,6 +1549,7 @@
       "bardo pond|||limerick"
     ],
     "radio_britannia": [
+      "ist ist|||obligations",
       "muse|||hyper music",
       "tom odell|||magnetised live",
       "ride|||all i want",
@@ -1647,8 +1648,7 @@
       "gaz coombes|||deep pockets",
       "muse|||supermassive black hole",
       "orlando weeks|||bigger",
-      "bloc party|||truth",
-      "ellur|||disintegrate"
+      "bloc party|||truth"
     ],
     "wbru": [
       "feist|||my moon my man",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795376669.6795492,
-    "mellow_mix": 1795376669.68252,
-    "big_sonic_heaven": 1795376669.6850722,
-    "radio_x_chilled": 1795376669.6874235,
-    "dreampop_radio": 1795376669.689889,
-    "indie_select": 1795376669.692589,
-    "dkfm_edge": 1795376669.695151,
+    "vuurland": 1795376706.738475,
+    "mellow_mix": 1795376706.7416115,
+    "big_sonic_heaven": 1795376706.7441387,
+    "radio_x_chilled": 1795376706.7466078,
+    "dreampop_radio": 1795376706.7490468,
+    "indie_select": 1795376706.7517605,
+    "dkfm_edge": 1795376706.7544076,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795376670.0380645,
-    "dkfm_shoegaze": 1795376670.041168,
-    "dkfm_classic": 1795376670.0439262,
-    "egofm_rnb": 1795376670.0466073,
-    "egofm_chillout": 1795376670.0492258,
-    "dj_neihtul": 1795376670.051651,
-    "gri_balkon": 1795376670.0535204,
-    "ignoreradio_shoegaze": 1795376670.3691535,
-    "radio_britannia": 1795376670.3721745,
-    "wbru": 1795376670.3744254
+    "dark_edge": 1795376706.7583609,
+    "dkfm_shoegaze": 1795376706.7611265,
+    "dkfm_classic": 1795376706.7637286,
+    "egofm_rnb": 1795376706.7662652,
+    "egofm_chillout": 1795376706.7688098,
+    "dj_neihtul": 1795376706.7711327,
+    "gri_balkon": 1795376706.7729635,
+    "ignoreradio_shoegaze": 1795376706.7756045,
+    "radio_britannia": 1795376707.0513203,
+    "wbru": 1795376707.0536807
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30092,6 +30092,7 @@
       "isaac gracie|||show me love",
       "isaac gracie|||something inside me",
       "ist ist|||no mercy",
+      "ist ist|||obligations",
       "ist ist|||the kiss",
       "jack kaye|||dora",
       "jack kaye|||the weight",
@@ -33961,6 +33962,15 @@
       "matching_version": 35,
       "failed_searches": 5,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "dream pop|||you went away": {
+      "artist": "DREAM POP",
+      "title": "You Went Away",
+      "source": "dkfm_edge",
+      "failed_at": 1795376712,
+      "matching_version": 35,
+      "failed_searches": 5,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -33968,11 +33978,11 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "jealous of the birds|||dandelion",
-  "__last_radio_key_mellow_mix": "john fogerty|||river is waiting",
+  "__last_radio_key_mellow_mix": "patty griffin|||luminous places",
   "__last_radio_key_big_sonic_heaven": "tycho|||small sanctuary",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 31589,
-  "__v146_spotify_budget_slot": 1795376587.1060014,
+  "__v116_fifo_next_sequence": 31590,
+  "__v146_spotify_budget_slot": 1795376709.7467892,
   "__vuurland_active_playlist_count": 4868,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -113018,7 +113028,7 @@
     "first aid kit|||tiger mountain peasant song": 5,
     "melody gardot|||yemanja": 3,
     "clear season|||don't take too long": 5,
-    "dream pop|||you went away": 4,
+    "dream pop|||you went away": 5,
     "dream pop|||sound of your heart": 4,
     "gammy origami|||now that you got me thinking | english": 3,
     "ceramic|||kingdoms": 4,
@@ -152506,7 +152516,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "decay|||how it feels",
+  "__last_radio_key_dkfm_edge": "glia|||she's so gone",
   "__last_radio_key_dkfm_shoegaze": "trentemøller|||swerve",
   "__last_radio_key_dkfm_classic": "sundial|||never fade",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -156191,7 +156201,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -156203,7 +156213,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -156236,7 +156246,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -159488,7 +159498,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "muse|||hyper music",
+  "__last_radio_key_radio_britannia": "ist ist|||obligations",
   "__last_radio_key_wbru": "feist|||my moon my man",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -160519,31 +160529,6 @@
         }
       ],
       "status": "uncertain"
-    },
-    "dream pop|||you went away": {
-      "source": "dkfm_edge",
-      "artist": "DREAM POP",
-      "title": "You Went Away",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [
-        {
-          "artist": "The Stranglers",
-          "title": "Since You Went Away",
-          "spotify_id": "1MH9tTYa13Knr9YuFaUXch"
-        },
-        {
-          "artist": "Das Pop",
-          "title": "You",
-          "spotify_id": "67OhebffET8jFxLApBgddq"
-        },
-        {
-          "artist": "M2M",
-          "title": "The Day You Went Away (2025)",
-          "spotify_id": "6Q5XdlLglWeAi32UtgEMMe"
-        }
-      ],
-      "status": "low_relevance"
     },
     "zeyn benji & nymano|||sunday brunch": {
       "source": "egofm_chillout",
@@ -165023,6 +165008,31 @@
       "kind": "weak",
       "variant": 0,
       "candidates": [],
+      "status": "low_relevance"
+    },
+    "dream pop|||you went away": {
+      "source": "dkfm_edge",
+      "artist": "DREAM POP",
+      "title": "You Went Away",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [
+        {
+          "artist": "Harry Nilsson",
+          "title": "One",
+          "spotify_id": "7Ci3Yc9H2YliGFc1czyqI1"
+        },
+        {
+          "artist": "The Stranglers",
+          "title": "Since You Went Away",
+          "spotify_id": "1MH9tTYa13Knr9YuFaUXch"
+        },
+        {
+          "artist": "Das Pop",
+          "title": "You",
+          "spotify_id": "67OhebffET8jFxLApBgddq"
+        }
+      ],
       "status": "low_relevance"
     }
   },
