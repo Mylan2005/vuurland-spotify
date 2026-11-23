@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "jjerome87|||track and field",
       "tom odell|||don't let me go",
       "johnny cash|||hurt",
       "yot club|||human nature",
@@ -113,8 +114,7 @@
       "snuggle|||woman lake",
       "eels|||mistakes of my youth",
       "dotan|||let you go",
-      "suki waterhouse|||my fun",
-      "ben howard|||keep your head up"
+      "suki waterhouse|||my fun"
     ],
     "mellow_mix": [
       "the breeders|||drivin' on 9",
@@ -321,6 +321,7 @@
       "deary|||blue ribbon"
     ],
     "radio_x_chilled": [
+      "the rolling stones|||wild horses",
       "catfish & the bottlemen|||kathleen acoustic",
       "green day|||time of your life good riddance",
       "tori amos|||cornflake girl",
@@ -419,8 +420,7 @@
       "noel gallagher's high flying birds|||if i had a gun",
       "laura marling|||ghosts",
       "depeche mode|||personal jesus acoustic",
-      "hozier|||jackie & wilson",
-      "razorlight|||america"
+      "hozier|||jackie & wilson"
     ],
     "dreampop_radio": [
       "city and colour|||body in a box",
@@ -525,6 +525,7 @@
       "gregory alan isakov|||if i go i'm goin'"
     ],
     "indie_select": [
+      "the smiths|||there is a light that never goes out",
       "belfegore|||all that i wanted",
       "comsat angels|||driving",
       "white lies|||unfinished business",
@@ -623,8 +624,7 @@
       "faithless|||mass destruction",
       "stars|||sleep tonight",
       "tv on the radio|||no future shock",
-      "r e m|||near wild heaven",
-      "the armoury show|||castles in spain wubb dug mix"
+      "r e m|||near wild heaven"
     ],
     "dkfm_edge": [
       "kablamo|||pay for it",
@@ -937,6 +937,7 @@
       "a beacon school|||cut thru"
     ],
     "dkfm_classic": [
+      "ecstasy of saint theresa|||pistacchio places",
       "teenage fanclub|||sidewinder",
       "the darling buds|||the end of the beginning",
       "adorable|||vendetta",
@@ -1035,8 +1036,7 @@
       "bowery electric|||psalms of survival",
       "band of susans|||thorn in my side",
       "bethany curve|||follow from swallow",
-      "adorable|||glorious",
-      "the ocean blue|||questions of travel"
+      "adorable|||glorious"
     ],
     "egofm_rnb": [
       "mayer hawthorne|||the great divine",
@@ -1243,6 +1243,7 @@
       "gorje hewek & izhevski|||secret feat peter broderick"
     ],
     "dj_neihtul": [
+      "roisin murphy|||jealousy",
       "moby|||this wild darkness",
       "moderat|||a new error",
       "alison goldfrapp|||astral invitation",
@@ -1341,8 +1342,7 @@
       "jens buchert|||elfinhouse",
       "el perro del mar|||breadandbutter",
       "hvob|||capture casa",
-      "kid francescoli|||gnossienne no 1 kid francescoli rework fragments / erik satie",
-      "zola jesus|||exhumed"
+      "kid francescoli|||gnossienne no 1 kid francescoli rework fragments / erik satie"
     ],
     "gri_balkon": [
       "norken deer|||remember that feeling",
@@ -1651,6 +1651,7 @@
       "florence the machine|||hunger"
     ],
     "wbru": [
+      "cage the elephant|||dying in reverse",
       "the clash|||should i stay or should i go",
       "lana del rey|||lies with zach bryan",
       "ashe|||stop the wedding!",
@@ -1749,29 +1750,28 @@
       "george ezra|||budapest",
       "balu brigada|||bedhead",
       "radiohead|||no surprises",
-      "billie eilish|||tv",
-      "muse|||supermassive black hole"
+      "billie eilish|||tv"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795469372.9068773,
-    "mellow_mix": 1795469372.912868,
-    "big_sonic_heaven": 1795469372.916718,
-    "radio_x_chilled": 1795469372.920492,
-    "dreampop_radio": 1795469372.924351,
-    "indie_select": 1795469372.9283493,
-    "dkfm_edge": 1795469372.9324572,
+    "vuurland": 1795469459.4054983,
+    "mellow_mix": 1795469459.4114594,
+    "big_sonic_heaven": 1795469459.4153566,
+    "radio_x_chilled": 1795469459.4192781,
+    "dreampop_radio": 1795469459.423229,
+    "indie_select": 1795469459.4274254,
+    "dkfm_edge": 1795469459.431399,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795469372.9378695,
-    "dkfm_shoegaze": 1795469372.9422216,
-    "dkfm_classic": 1795469372.946114,
-    "egofm_rnb": 1795469372.9506752,
-    "egofm_chillout": 1795469372.954585,
-    "dj_neihtul": 1795469372.958127,
-    "gri_balkon": 1795469372.960996,
-    "ignoreradio_shoegaze": 1795469372.9651375,
-    "radio_britannia": 1795469372.9699833,
-    "wbru": 1795469372.9731202
+    "dark_edge": 1795469459.4368312,
+    "dkfm_shoegaze": 1795469459.4412494,
+    "dkfm_classic": 1795469459.4453576,
+    "egofm_rnb": 1795469459.4498794,
+    "egofm_chillout": 1795469459.453841,
+    "dj_neihtul": 1795469459.4574347,
+    "gri_balkon": 1795469459.460308,
+    "ignoreradio_shoegaze": 1795469459.4644153,
+    "radio_britannia": 1795469459.4692867,
+    "wbru": 1795469459.4725997
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -35393,7 +35393,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "tom odell|||don't let me go",
+  "__last_radio_key_vuurland": "jjerome87|||track and field",
   "__last_radio_key_mellow_mix": "the breeders|||drivin' on 9",
   "__last_radio_key_big_sonic_heaven": "hammock|||deconstructing",
   "__v181_vuurland_two_missing_recovered": true,
@@ -153384,7 +153384,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "catfish & the bottlemen|||kathleen acoustic",
+  "__last_radio_key_radio_x_chilled": "the rolling stones|||wild horses",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -153606,7 +153606,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "belfegore|||all that i wanted",
+  "__last_radio_key_indie_select": "the smiths|||there is a light that never goes out",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -154970,7 +154970,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "kablamo|||pay for it",
   "__last_radio_key_dkfm_shoegaze": "modern daze|||sewn on",
-  "__last_radio_key_dkfm_classic": "teenage fanclub|||sidewinder",
+  "__last_radio_key_dkfm_classic": "ecstasy of saint theresa|||pistacchio places",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -160392,7 +160392,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "moby|||this wild darkness",
+  "__last_radio_key_dj_neihtul": "roisin murphy|||jealousy",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -161956,7 +161956,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "sam fender|||spit of you",
-  "__last_radio_key_wbru": "the clash|||should i stay or should i go",
+  "__last_radio_key_wbru": "cage the elephant|||dying in reverse",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
