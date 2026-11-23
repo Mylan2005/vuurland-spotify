@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "vance joy|||riptide",
+      "billie marten|||la lune",
       "balthazar|||blood like wine",
       "justin vernon|||hazelton",
       "ethel cain|||fuck me eyes",
@@ -112,9 +114,7 @@
       "arcade fire|||speaking in tongues",
       "whitney|||no woman",
       "grian chatten|||last time every time forever",
-      "the haunted youth|||wake up",
-      "man-made sunshine|||life's gonna kill you if you let it",
-      "tash sultana|||jungle"
+      "the haunted youth|||wake up"
     ],
     "mellow_mix": [
       "10 000 maniacs|||everyday is like sunday",
@@ -525,6 +525,7 @@
       "bellman|||this is life"
     ],
     "indie_select": [
+      "mumford & sons|||ditmas",
       "wolf alice|||bros",
       "school of seven bells|||open your eyes",
       "new order|||nothing but a fool extended mix 2",
@@ -623,8 +624,7 @@
       "the rifles|||sometimes",
       "new order|||run",
       "revenge|||big bang",
-      "billy bragg|||walk away renee",
-      "school of seven bells|||lafaye"
+      "billy bragg|||walk away renee"
     ],
     "dkfm_edge": [
       "hazel english|||there she goes",
@@ -1141,6 +1141,7 @@
       "tinashe & buddy|||pasadena"
     ],
     "egofm_chillout": [
+      "draper|||higher",
       "de phazz|||dancing with my hands",
       "blue wednesday & shopan|||home court",
       "mei river|||her",
@@ -1239,8 +1240,7 @@
       "olafur arnalds & nanna bryndis hilmarsdottir|||particles",
       "toonorth|||far from home",
       "miscel|||inside",
-      "terranova|||hotel amour feat everybody",
-      "youth novels feat frank wiedemann|||2nite"
+      "terranova|||hotel amour feat everybody"
     ],
     "dj_neihtul": [
       "m83|||go!",
@@ -1345,6 +1345,7 @@
       "iamx|||stardust"
     ],
     "gri_balkon": [
+      "jkriv & free magic|||emmanuel",
       "ulrike haage|||fingerprints a florian rietze's malte edit",
       "ron basejam|||into my life",
       "fila brazillia|||harmonicas are shite",
@@ -1443,8 +1444,7 @@
       "talaboman|||loser's hymn",
       "levitation|||more than ever people ft cathy battistessa late night mix",
       "eli & fur|||otherside",
-      "pantha du prince|||pius in tacet",
-      "hvob|||tender skin"
+      "pantha du prince|||pius in tacet"
     ],
     "ignoreradio_shoegaze": [
       "the besnard lakes|||the clouds are casting shadows from the sunlight",
@@ -1651,6 +1651,7 @@
       "south|||wasted"
     ],
     "wbru": [
+      "leon bridges|||talk it over",
       "thxsomch|||spit in my face!",
       "phoebe bridgers|||the governor's waltz",
       "royel otis|||murder on the dance floor",
@@ -1698,7 +1699,6 @@
       "a ben cunningham eileen|||today's top indie is on spotify & apple music",
       "nirvana|||lake of fire",
       "remi wolf|||champagne",
-      "leon bridges|||talk it over",
       "the marias|||run your mouth",
       "olivia rodrigo|||the cure",
       "feist|||my moon my man",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795467669.1367292,
-    "mellow_mix": 1795467669.141235,
-    "big_sonic_heaven": 1795467669.1451194,
-    "radio_x_chilled": 1795467669.149034,
-    "dreampop_radio": 1795467669.5604692,
-    "indie_select": 1795467669.5644798,
-    "dkfm_edge": 1795467669.568545,
+    "vuurland": 1795467760.8226478,
+    "mellow_mix": 1795467760.8271546,
+    "big_sonic_heaven": 1795467760.8310328,
+    "radio_x_chilled": 1795467760.8347907,
+    "dreampop_radio": 1795467760.8386614,
+    "indie_select": 1795467760.8442347,
+    "dkfm_edge": 1795467760.8482041,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795467669.5740273,
-    "dkfm_shoegaze": 1795467669.90628,
-    "dkfm_classic": 1795467669.9102752,
-    "egofm_rnb": 1795467669.914791,
-    "egofm_chillout": 1795467669.918718,
-    "dj_neihtul": 1795467669.9223142,
-    "gri_balkon": 1795467669.9251451,
-    "ignoreradio_shoegaze": 1795467669.9291656,
-    "radio_britannia": 1795467669.9336498,
-    "wbru": 1795467669.9368095
+    "dark_edge": 1795467760.853587,
+    "dkfm_shoegaze": 1795467760.8579922,
+    "dkfm_classic": 1795467760.8618667,
+    "egofm_rnb": 1795467760.8663735,
+    "egofm_chillout": 1795467760.8703582,
+    "dj_neihtul": 1795467760.8738685,
+    "gri_balkon": 1795467760.8768542,
+    "ignoreradio_shoegaze": 1795467760.8808784,
+    "radio_britannia": 1795467760.885262,
+    "wbru": 1795467760.8904095
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -1956,6 +1956,7 @@
       "billie eilish|||what was i made for?",
       "billie marten|||cartoon people",
       "billie marten|||i can't get my head around you",
+      "billie marten|||la lune",
       "billie marten|||swing",
       "billie marten|||this is how we move",
       "birame|||the worst parts of you",
@@ -35373,7 +35374,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "balthazar|||blood like wine",
+  "__last_radio_key_vuurland": "vance joy|||riptide",
   "__last_radio_key_mellow_mix": "10 000 maniacs|||everyday is like sunday",
   "__last_radio_key_big_sonic_heaven": "lita lores & tricky|||because i don't know lita lores version",
   "__v181_vuurland_two_missing_recovered": true,
@@ -153530,7 +153531,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "wolf alice|||bros",
+  "__last_radio_key_indie_select": "mumford & sons|||ditmas",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -160307,7 +160308,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "alunageorge|||attracting flies",
-  "__last_radio_key_egofm_chillout": "de phazz|||dancing with my hands",
+  "__last_radio_key_egofm_chillout": "draper|||higher",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -160322,7 +160323,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "ulrike haage|||fingerprints a florian rietze's malte edit",
+  "__last_radio_key_gri_balkon": "jkriv & free magic|||emmanuel",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -161880,7 +161881,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "gurriers|||nothing happens twice",
-  "__last_radio_key_wbru": "thxsomch|||spit in my face!",
+  "__last_radio_key_wbru": "leon bridges|||talk it over",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
