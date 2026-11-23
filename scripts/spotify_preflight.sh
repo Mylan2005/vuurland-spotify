@@ -40,6 +40,7 @@ python3 test_v255_catalog_rescue_offline.py
 python3 test_v256_station_activation_offline.py
 python3 test_v261_matcher_metadata_offline.py
 python3 test_v262_single_x_project_offline.py
+python3 test_v263_catalog_title_equivalence_offline.py
 python3 test_v258_matcher_triage_offline.py
 python3 test_v236_spotify_403_diagnostics_offline.py
 python3 test_dark_edge_filter_offline.py
