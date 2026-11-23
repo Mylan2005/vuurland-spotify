@@ -65,6 +65,7 @@ MATCHER_RETRY_RULES = (
     "v261_abbreviated_required_guest",
     "v261_verified_catalog_alias",
     "v262_exact_single_x_project",
+    "v263_complete_title_spelling",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -169,6 +170,13 @@ def applicable_rules(artist, title):
         "stimming x lambert", "edelweiss",
     ):
         hits.append("v262_exact_single_x_project")
+    # v263: only genuine previously observed catalog spelling misses
+    # receive ONE bounded source-proven retry after the matcher improvement.
+    if (artist.strip().casefold(), title.strip().casefold()) in {
+        ("jamie t", "sticks and stones"),
+        ("dum dum girls", "are you ok?"),
+    }:
+        hits.append("v263_complete_title_spelling")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
