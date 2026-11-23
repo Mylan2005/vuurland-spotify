@@ -66,6 +66,7 @@ MATCHER_RETRY_RULES = (
     "v261_verified_catalog_alias",
     "v262_exact_single_x_project",
     "v263_complete_title_spelling",
+    "v264_complete_leading_artist_number",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -177,6 +178,10 @@ def applicable_rules(artist, title):
         ("dum dum girls", "are you ok?"),
     }:
         hits.append("v263_complete_title_spelling")
+    if (artist.strip().casefold(), title.strip().casefold()) == (
+        "12 drummers drumming", "shower of love",
+    ):
+        hits.append("v264_complete_leading_artist_number")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
