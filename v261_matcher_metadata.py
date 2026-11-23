@@ -86,3 +86,34 @@ def equivalent_catalog_connector_title(source_title, catalog_title):
     return bool(len(left) >= 2 and left == right
                 and str(source_title or "").casefold().strip()
                     != str(catalog_title or "").casefold().strip())
+
+
+def equivalent_leading_number_artist(requested, catalog):
+    """Same FULL artist credit with a leading 0-20 number written in words.
+
+    Never accept a partial artist name, a different number, a trailing
+    credit change, or a fuzzy match. For one complete artist object only.
+    This is ONLY artist metadata, not song/edition/playlist approval.
+    """
+    numbers = (
+        "zero", "one", "two", "three", "four", "five", "six", "seven",
+        "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+        "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
+        "nineteen", "twenty",
+    )
+    def identity(value):
+        raw = str(value or "").casefold().strip()
+        tokens = re.findall(r"[a-z0-9]+", raw)
+        if len(tokens) < 3:
+            return None
+        first = tokens[0]
+        if first.isdigit() and int(first) <= 20:
+            first = numbers[int(first)]
+        if first not in numbers:
+            return None
+        # Remaining words must be complete, unchanged proper-name tokens.
+        return (first, tuple(tokens[1:]))
+    left, right = identity(requested), identity(catalog)
+    return bool(left and right and left == right
+                and str(requested or "").casefold().strip()
+                    != str(catalog or "").casefold().strip())
