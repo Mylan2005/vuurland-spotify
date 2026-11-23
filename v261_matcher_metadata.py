@@ -42,3 +42,21 @@ def verified_daze_album_alias(title, candidate):
     album = str((candidate.get("album") or {}).get("name") or "").casefold()
     album_words = " ".join(re.findall(r"[a-z0-9]+", album))
     return album_words == "da ze glia split"
+
+
+def exact_single_x_project_credit(source_artist, catalog_artist_names):
+    """Accept a literal full 'A x B' project as ONE catalog artist.
+
+    Some official Spotify artist profiles use the exact full project credit
+    instead of separate A and B artist objects. This must NEVER accept an
+    A-only or B-only release, reordered artists, fuzzy names, or extra artists.
+    All title/version/market checks are performed by the calling matcher.
+    """
+    radio = " ".join(str(source_artist or "").strip().split())
+    match = re.fullmatch(r"(.{2,}?)\s+x\s+(.{2,}?)", radio)
+    if not match or not isinstance(catalog_artist_names, (tuple, list)):
+        return False
+    if len(catalog_artist_names) != 1:
+        return False
+    catalog = " ".join(str(catalog_artist_names[0] or "").strip().split())
+    return bool(catalog and catalog.casefold() == radio.casefold())
