@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795452097.5802546,
+  "__v150_next_spotify_round_at": 1795452220.9873316,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -423,6 +423,7 @@
       "editors|||smokers outside the hospital doors live for radio x"
     ],
     "dreampop_radio": [
+      "sara lov|||just my heart talkin'",
       "coldplay|||always in my head",
       "nathaniel rateliff|||nothing to show for",
       "dylan leblanc|||if the creek don't rise",
@@ -521,10 +522,10 @@
       "seapony|||prove to me",
       "the sun days|||don't need to be them",
       "twin limb|||long shadow",
-      "little may|||hide",
-      "allo darlin'|||if loneliness was art"
+      "little may|||hide"
     ],
     "indie_select": [
+      "yeasayer|||madder red",
       "carter the unstoppable sex machine|||sheriff fatman",
       "the ocean blue|||peace of mind",
       "the american analog set|||the postman styrofoam remix",
@@ -623,8 +624,7 @@
       "die vision|||love by wire",
       "the sisters of mercy|||alice",
       "fischerspooner|||the best revenge",
-      "the go-betweens|||was there anything i could do ?",
-      "death cab for cutie|||bixby canyon bridge"
+      "the go-betweens|||was there anything i could do ?"
     ],
     "dkfm_edge": [
       "feeble little horse|||sweet",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795452066.3382933,
-    "mellow_mix": 1795452066.3419354,
-    "big_sonic_heaven": 1795452066.3451476,
-    "radio_x_chilled": 1795452066.3481717,
-    "dreampop_radio": 1795452066.3511157,
-    "indie_select": 1795452066.3542953,
-    "dkfm_edge": 1795452066.357384,
+    "vuurland": 1795452099.8816857,
+    "mellow_mix": 1795452099.8854651,
+    "big_sonic_heaven": 1795452099.8886561,
+    "radio_x_chilled": 1795452099.891578,
+    "dreampop_radio": 1795452099.894838,
+    "indie_select": 1795452099.898345,
+    "dkfm_edge": 1795452099.9014108,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795452066.3621957,
-    "dkfm_shoegaze": 1795452066.7249253,
-    "dkfm_classic": 1795452066.72827,
-    "egofm_rnb": 1795452066.7315784,
-    "egofm_chillout": 1795452066.7346168,
-    "dj_neihtul": 1795452066.7376854,
-    "gri_balkon": 1795452066.7401562,
-    "ignoreradio_shoegaze": 1795452066.7435029,
-    "radio_britannia": 1795452066.7470899,
-    "wbru": 1795452066.7497625
+    "dark_edge": 1795452099.9062428,
+    "dkfm_shoegaze": 1795452099.9100225,
+    "dkfm_classic": 1795452099.9139493,
+    "egofm_rnb": 1795452099.9170594,
+    "egofm_chillout": 1795452099.9200492,
+    "dj_neihtul": 1795452099.923061,
+    "gri_balkon": 1795452099.925502,
+    "ignoreradio_shoegaze": 1795452099.9287696,
+    "radio_britannia": 1795452099.9323514,
+    "wbru": 1795452099.9350204
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -35087,6 +35087,15 @@
       "matching_version": 35,
       "failed_searches": 5,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "virgins|||disappearer": {
+      "artist": "Virgins",
+      "title": "Disappearer",
+      "source": "dkfm_edge",
+      "failed_at": 1795452106,
+      "matching_version": 35,
+      "failed_searches": 5,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -35098,7 +35107,7 @@
   "__last_radio_key_big_sonic_heaven": "velveteen|||shoot me down",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 32532,
-  "__v146_spotify_budget_slot": 1795451980.23589,
+  "__v146_spotify_budget_slot": 1795452103.6197462,
   "__vuurland_active_playlist_count": 5041,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -114836,7 +114845,7 @@
     "bjork|||wanderlust ratatat mix": 3,
     "indoor voices|||past present": 5,
     "blank & jones|||the hardest heart featuring anne clark hardest soul remix": 3,
-    "virgins|||disappearer": 4,
+    "virgins|||disappearer": 5,
     "tori amos|||i'm on fire": 3,
     "momma narrow head|||medicine": 4,
     "sarah harmer|||basement apartment": 3,
@@ -152810,7 +152819,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "coldplay|||always in my head",
+  "__last_radio_key_dreampop_radio": "sara lov|||just my heart talkin'",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -152928,7 +152937,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "carter the unstoppable sex machine|||sheriff fatman",
+  "__last_radio_key_indie_select": "yeasayer|||madder red",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -157975,7 +157984,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -157987,7 +157996,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -158020,7 +158029,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -162604,15 +162613,6 @@
       "candidates": [],
       "status": "low_relevance"
     },
-    "virgins|||disappearer": {
-      "source": "dkfm_edge",
-      "artist": "Virgins",
-      "title": "Disappearer",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [],
-      "status": "low_relevance"
-    },
     "wait to be seated||||john glenn": {
       "source": "indie_select",
       "artist": "Wait to be seated",
@@ -166845,6 +166845,15 @@
         }
       ],
       "status": "uncertain"
+    },
+    "virgins|||disappearer": {
+      "source": "dkfm_edge",
+      "artist": "Virgins",
+      "title": "Disappearer",
+      "kind": "weak",
+      "variant": 1,
+      "candidates": [],
+      "status": "low_relevance"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
