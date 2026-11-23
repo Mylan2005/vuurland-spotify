@@ -1152,12 +1152,6 @@
     "_v116_fifo_seq": 10341
   },
   {
-    "artist": "Adele",
-    "title": "Rolling in the deep - Villa Remix",
-    "source": "indie_select",
-    "_v116_fifo_seq": 10342
-  },
-  {
     "artist": "Oscar and The Wolf",
     "title": "Moonshine",
     "source": "duyster",
@@ -113661,12 +113655,6 @@
     "_v116_fifo_seq": 32509
   },
   {
-    "artist": "XYMOX",
-    "title": "Imagination",
-    "source": "indie_select",
-    "_v116_fifo_seq": 32510
-  },
-  {
     "artist": "COLLECTORS ITEM",
     "title": "Before I Go",
     "source": "dark_edge",
@@ -114335,12 +114323,6 @@
     "_v34_retry_at": 1795462206
   },
   {
-    "artist": "Joy Division",
-    "title": "Twenty Four Hours",
-    "source": "indie_select",
-    "_v116_fifo_seq": 32618
-  },
-  {
     "artist": "BELLE AND SEBASTIAN",
     "title": "I Want The World To Stop",
     "source": "dark_edge",
@@ -114377,5 +114359,13 @@
     "title": "Sunrise",
     "source": "dkfm_shoegaze",
     "_v116_fifo_seq": 32622
+  },
+  {
+    "artist": "Adele",
+    "title": "Rolling in the deep - Villa Remix",
+    "source": "indie_select",
+    "_v116_fifo_seq": 10342,
+    "_v34_search_variant": 1,
+    "_v34_retry_at": 1795459956
   }
 ]
