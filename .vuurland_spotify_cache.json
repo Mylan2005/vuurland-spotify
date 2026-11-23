@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795463212.0655487,
+  "__v150_next_spotify_round_at": 1795463336.9883409,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -117,6 +117,7 @@
       "mogwai|||take me somewhere nice"
     ],
     "mellow_mix": [
+      "the decemberists|||rise to me",
       "lloyd cole|||late night early town",
       "nick drake|||hangin on a star",
       "tindersticks|||medicine",
@@ -215,8 +216,7 @@
       "marion rampal|||de beaux dimanches",
       "k d lang|||save me",
       "cowboy junkies|||sweet jane live",
-      "bob seger|||against the wind",
-      "bastille|||the soprano & midnight wonderings w/ bim"
+      "bob seger|||against the wind"
     ],
     "big_sonic_heaven": [
       "velveteen|||unanswered",
@@ -1243,6 +1243,7 @@
       "sohn|||the chase"
     ],
     "dj_neihtul": [
+      "bonobo|||grains",
       "philip george & dragonette|||feel this way",
       "alison goldfrapp|||gateaux & gelato",
       "anna of the north|||lovers",
@@ -1341,8 +1342,7 @@
       "santigold|||run the road",
       "vera blue|||pedestal/cover me",
       "efterklang|||living other lives",
-      "iamx|||alive in new light",
-      "nicolas jaar|||history lesson"
+      "iamx|||alive in new light"
     ],
     "gri_balkon": [
       "leaks|||often it's you",
@@ -1549,6 +1549,7 @@
       "blank realm|||gold"
     ],
     "radio_britannia": [
+      "paul weller|||long long road",
       "gwen|||achub yr iaith",
       "stereophonics|||dakota",
       "johnny marr|||spiral cities",
@@ -1647,8 +1648,7 @@
       "kate nash|||foundations",
       "joseph j jones|||gospel truth",
       "inspiral carpets|||this is how it feels",
-      "the verve|||love is noise",
-      "the charlatans|||just when youre thinkin things over"
+      "the verve|||love is noise"
     ],
     "wbru": [
       "panchiko|||d>e>a>t>h>m>e>t>a>l",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795463181.6374815,
-    "mellow_mix": 1795463181.6439042,
-    "big_sonic_heaven": 1795463181.6476324,
-    "radio_x_chilled": 1795463181.6510553,
-    "dreampop_radio": 1795463181.6546166,
-    "indie_select": 1795463181.6583421,
-    "dkfm_edge": 1795463181.6619837,
+    "vuurland": 1795463215.4672992,
+    "mellow_mix": 1795463215.4738166,
+    "big_sonic_heaven": 1795463215.4775064,
+    "radio_x_chilled": 1795463215.4809513,
+    "dreampop_radio": 1795463215.484538,
+    "indie_select": 1795463215.4882612,
+    "dkfm_edge": 1795463215.491882,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795463181.6674585,
-    "dkfm_shoegaze": 1795463182.04327,
-    "dkfm_classic": 1795463182.047059,
-    "egofm_rnb": 1795463182.0508926,
-    "egofm_chillout": 1795463182.0544472,
-    "dj_neihtul": 1795463182.0578787,
-    "gri_balkon": 1795463182.0605974,
-    "ignoreradio_shoegaze": 1795463182.4902048,
-    "radio_britannia": 1795463182.4945524,
-    "wbru": 1795463182.4976797
+    "dark_edge": 1795463215.4975145,
+    "dkfm_shoegaze": 1795463215.5019207,
+    "dkfm_classic": 1795463215.505776,
+    "egofm_rnb": 1795463215.5096028,
+    "egofm_chillout": 1795463215.513258,
+    "dj_neihtul": 1795463215.5168326,
+    "gri_balkon": 1795463215.5195742,
+    "ignoreradio_shoegaze": 1795463215.5234892,
+    "radio_britannia": 1795463215.912517,
+    "wbru": 1795463215.915693
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -31533,6 +31533,7 @@
       "paul weller|||change what you can",
       "paul weller|||i woke up",
       "paul weller|||lawdy rolla",
+      "paul weller|||long long road",
       "paul weller|||movin on",
       "paul weller|||rise up singing",
       "paul weller|||rockets",
@@ -35286,6 +35287,15 @@
       "matching_version": 35,
       "failed_searches": 5,
       "v258_reason": "two_low_relevance_searches"
+    },
+    "virgins|||gliss": {
+      "artist": "VIRGINS",
+      "title": "Gliss",
+      "source": "dkfm_edge",
+      "failed_at": 1795463222,
+      "matching_version": 35,
+      "failed_searches": 5,
+      "v258_reason": "two_low_relevance_searches"
     }
   },
   "__v71_six_matcher_retries_released": true,
@@ -35293,11 +35303,11 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "porcelain id|||vlaanderen",
-  "__last_radio_key_mellow_mix": "lloyd cole|||late night early town",
+  "__last_radio_key_mellow_mix": "the decemberists|||rise to me",
   "__last_radio_key_big_sonic_heaven": "velveteen|||unanswered",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 32674,
-  "__v146_spotify_budget_slot": 1795463094.714614,
+  "__v116_fifo_next_sequence": 32675,
+  "__v146_spotify_budget_slot": 1795463219.6462011,
   "__vuurland_active_playlist_count": 5088,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -115235,7 +115245,7 @@
     "the concept|||d-d-dance": 3,
     "crux of faith|||turbulence": 5,
     "a r kane|||pop short version": 3,
-    "virgins|||gliss": 4,
+    "virgins|||gliss": 5,
     "all get out|||time and place": 5,
     "snow patrol|||how to be dead cla mix": 3,
     "since always|||we still know how to dream": 3,
@@ -158372,7 +158382,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "indie_select",
+  "__v221_last_selected_source": "dkfm_edge",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -158384,7 +158394,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "indie_select",
+  "__v224_last_spotify_opportunity_source": "dkfm_edge",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -158417,7 +158427,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "indie_select",
+  "__v227_last_source_turn": "dkfm_edge",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -160111,7 +160121,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "philip george & dragonette|||feel this way",
+  "__last_radio_key_dj_neihtul": "bonobo|||grains",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -161669,7 +161679,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "gwen|||achub yr iaith",
+  "__last_radio_key_radio_britannia": "paul weller|||long long road",
   "__last_radio_key_wbru": "panchiko|||d>e>a>t>h>m>e>t>a>l",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -162892,15 +162902,6 @@
       "title": "Autumn, Golden Trees",
       "kind": "weak",
       "variant": 2,
-      "candidates": [],
-      "status": "low_relevance"
-    },
-    "virgins|||gliss": {
-      "source": "dkfm_edge",
-      "artist": "VIRGINS",
-      "title": "Gliss",
-      "kind": "weak",
-      "variant": 0,
       "candidates": [],
       "status": "low_relevance"
     },
@@ -167229,6 +167230,15 @@
       "title": "Kilobit",
       "kind": "weak",
       "variant": 0,
+      "candidates": [],
+      "status": "low_relevance"
+    },
+    "virgins|||gliss": {
+      "source": "dkfm_edge",
+      "artist": "VIRGINS",
+      "title": "Gliss",
+      "kind": "weak",
+      "variant": 1,
       "candidates": [],
       "status": "low_relevance"
     }
