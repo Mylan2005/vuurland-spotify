@@ -219,6 +219,8 @@
       "mogwai|||get to france"
     ],
     "big_sonic_heaven": [
+      "dead can dance|||nada",
+      "the raveonettes|||night comes out",
       "attic ocean|||could it be you",
       "head sound|||home",
       "the jesus & mary chain|||april skies",
@@ -316,9 +318,7 @@
       "fever ray|||wanna sip version",
       "doublespeak benge vince clarke & blancmange|||the visitors",
       "leathers|||crash",
-      "cocteau twins|||bluebeard",
-      "club 8|||the sweetness of honey",
-      "school of seven bells|||the night"
+      "cocteau twins|||bluebeard"
     ],
     "radio_x_chilled": [
       "foals|||london thunder",
@@ -627,6 +627,7 @@
       "clap your hands say yeah|||underwater you and me"
     ],
     "dkfm_edge": [
+      "neverless am|||will i ever?",
       "pure hex|||infinity spin",
       "pink mexico|||junkie smile",
       "human colonies|||kintsukuroi",
@@ -725,8 +726,7 @@
       "diffident daffodils|||what we've lost",
       "world smasher|||what's left behind",
       "yeahrs|||smokescreen",
-      "wisp|||see you soon",
-      "sunshy|||poison"
+      "wisp|||see you soon"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -937,6 +937,7 @@
       "winter|||dreaming"
     ],
     "dkfm_classic": [
+      "seefeel|||climatic phase 3",
       "bethany curve|||cygnus x-1",
       "amusement ireland|||dum dum",
       "ecstasy of saint theresa|||swoony",
@@ -1035,10 +1036,10 @@
       "my bloody valentine|||touched",
       "a r kane|||sado-masochism is a must",
       "band of susans|||the last temptation of susan",
-      "adorable|||sunburnt",
-      "the charlottes|||cold album version"
+      "adorable|||sunburnt"
     ],
     "egofm_rnb": [
+      "bernhoft|||stop/shut up",
       "teyana taylor|||hurry feat kanye west",
       "king princess|||for my friends",
       "joy denalane feat bj the chicago kid|||i believe",
@@ -1137,10 +1138,10 @@
       "evan klar|||someone heaven",
       "rosie lowe|||no idea",
       "kennedy ryon|||fire",
-      "thomas dybdahl feat beharie|||treat me so bad",
-      "h e r|||damage"
+      "thomas dybdahl feat beharie|||treat me so bad"
     ],
     "egofm_chillout": [
+      "sufjan stevens & angelo de augustine|||fictional california",
       "centrozoon|||ten versions of america",
       "tangerine dream|||love on a real train",
       "royksopp|||sparks",
@@ -1239,10 +1240,10 @@
       "orbit|||time in the afternoon",
       "art of noise|||moments in love 7 inch version",
       "damian marhulets|||less than a year",
-      "surprise chef|||spiky boi",
-      "psalm trees|||santiago feat moods"
+      "surprise chef|||spiky boi"
     ],
     "dj_neihtul": [
+      "frankie knuckles|||your love feat jamie principle",
       "marbert rocel|||hold on deetron dub",
       "zola jesus|||wiseblood",
       "kacy hill|||arm's length",
@@ -1341,8 +1342,7 @@
       "yello|||limbo",
       "moby|||the tired and the hurt",
       "nation of language|||on division st",
-      "maggie rogers|||on off",
-      "goldfrapp|||ocean feat dave gahan"
+      "maggie rogers|||on off"
     ],
     "gri_balkon": [
       "tor|||let me down",
@@ -1651,6 +1651,7 @@
       "wolf alice|||the beach"
     ],
     "wbru": [
+      "the womack sisters|||if i let you",
       "beabadoobee|||sun has set",
       "justice|||flower in a hurricane f tame impala sza king gizzard",
       "cults|||gilded lily",
@@ -1749,29 +1750,28 @@
       "semisonic|||closing time",
       "carolesdaughter|||violent",
       "almost monday|||no more regrets",
-      "gnarls barkley|||crazy",
-      "mild high club|||homage"
+      "gnarls barkley|||crazy"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795466337.653937,
-    "mellow_mix": 1795466337.6586058,
-    "big_sonic_heaven": 1795466337.662517,
-    "radio_x_chilled": 1795466337.666192,
-    "dreampop_radio": 1795466337.6699853,
-    "indie_select": 1795466337.674209,
-    "dkfm_edge": 1795466337.6779587,
+    "vuurland": 1795466428.1561747,
+    "mellow_mix": 1795466428.1607437,
+    "big_sonic_heaven": 1795466428.5244768,
+    "radio_x_chilled": 1795466428.5282452,
+    "dreampop_radio": 1795466428.5320098,
+    "indie_select": 1795466428.5359077,
+    "dkfm_edge": 1795466428.539914,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795466337.6836522,
-    "dkfm_shoegaze": 1795466337.6880863,
-    "dkfm_classic": 1795466337.6919494,
-    "egofm_rnb": 1795466337.6959646,
-    "egofm_chillout": 1795466337.699781,
-    "dj_neihtul": 1795466337.7033217,
-    "gri_balkon": 1795466337.7062287,
-    "ignoreradio_shoegaze": 1795466337.710298,
-    "radio_britannia": 1795466337.7147298,
-    "wbru": 1795466337.7179072
+    "dark_edge": 1795466428.5455806,
+    "dkfm_shoegaze": 1795466428.5500975,
+    "dkfm_classic": 1795466428.554045,
+    "egofm_rnb": 1795466428.9127927,
+    "egofm_chillout": 1795466428.916849,
+    "dj_neihtul": 1795466428.9205747,
+    "gri_balkon": 1795466428.9234128,
+    "ignoreradio_shoegaze": 1795466428.9274642,
+    "radio_britannia": 1795466428.9318008,
+    "wbru": 1795466428.935042
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -23392,6 +23392,7 @@
       "benny sings|||sunny afternoon",
       "bernhoft|||all my loving",
       "bernhoft|||come around with me",
+      "bernhoft|||stop/shut up",
       "bernhoft|||visceral",
       "bernhoft|||we have a dream",
       "beyonce|||all night",
@@ -35355,9 +35356,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "sharon van etten|||leonard",
   "__last_radio_key_mellow_mix": "faye webster|||wanna quit all the time",
-  "__last_radio_key_big_sonic_heaven": "attic ocean|||could it be you",
+  "__last_radio_key_big_sonic_heaven": "dead can dance|||nada",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 32715,
+  "__v116_fifo_next_sequence": 32716,
   "__v146_spotify_budget_slot": 1795466341.4913554,
   "__vuurland_active_playlist_count": 5111,
   "__vuurland_active_volume": 2,
@@ -154842,9 +154843,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "pure hex|||infinity spin",
+  "__last_radio_key_dkfm_edge": "neverless am|||will i ever?",
   "__last_radio_key_dkfm_shoegaze": "puppy teeth|||melatonin",
-  "__last_radio_key_dkfm_classic": "bethany curve|||cygnus x-1",
+  "__last_radio_key_dkfm_classic": "seefeel|||climatic phase 3",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -160256,8 +160257,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "teyana taylor|||hurry feat kanye west",
-  "__last_radio_key_egofm_chillout": "centrozoon|||ten versions of america",
+  "__last_radio_key_egofm_rnb": "bernhoft|||stop/shut up",
+  "__last_radio_key_egofm_chillout": "sufjan stevens & angelo de augustine|||fictional california",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -160266,7 +160267,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "marbert rocel|||hold on deetron dub",
+  "__last_radio_key_dj_neihtul": "frankie knuckles|||your love feat jamie principle",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -161830,7 +161831,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "romy|||loveher",
-  "__last_radio_key_wbru": "beabadoobee|||sun has set",
+  "__last_radio_key_wbru": "the womack sisters|||if i let you",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
