@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "abby sage|||backwards directions",
       "amy winehouse|||back to black",
       "david kushner|||dead man",
       "camille camille|||in a song",
@@ -113,8 +114,7 @@
       "absynthe minded|||envoi",
       "lennert coorevits & pieter van dessel|||albatros",
       "thomas azier|||year in a spiral",
-      "iskander moon|||saturday silence",
-      "lana del rey|||ride"
+      "iskander moon|||saturday silence"
     ],
     "mellow_mix": [
       "foo fighters|||what if i do",
@@ -423,6 +423,7 @@
       "travis|||driftwood"
     ],
     "dreampop_radio": [
+      "dylan mondegreen|||come with me to albuquerque",
       "the good morning diary|||the day i turned into a ghost",
       "the staves|||tongue behind my teeth",
       "sun kil moon|||carry me ohio",
@@ -521,10 +522,10 @@
       "lily & madeleine|||i've got freedom",
       "boy|||hit my heart",
       "sumie|||let you go",
-      "camera obscura|||tougher than the rest",
-      "marissa nadler|||was it a dream"
+      "camera obscura|||tougher than the rest"
     ],
     "indie_select": [
+      "joy division|||digital",
       "editors|||lullaby the cure cover",
       "bradford|||gang of one",
       "altered images|||happy birthday",
@@ -623,8 +624,7 @@
       "the the|||dogs of lust germicide mix",
       "frazier chorus|||ski-head",
       "mum|||finally we are no one",
-      "joy division|||love will tear us apart",
-      "bloc party|||i still remember"
+      "joy division|||love will tear us apart"
     ],
     "dkfm_edge": [
       "crystal canyon|||penelope the odyssey",
@@ -835,6 +835,7 @@
       "vita de vie|||praf de stele acustic"
     ],
     "dkfm_shoegaze": [
+      "pure bathing culture|||dreams",
       "deep cut|||dead inside your heart",
       "warm human|||better than who",
       "lovesliescrushing|||darklit and crow",
@@ -933,10 +934,10 @@
       "she's green|||silhouette",
       "blood pick me|||inside/out",
       "with brevity|||street lights",
-      "vida eterna|||had to let you know",
-      "diiv|||the crash"
+      "vida eterna|||had to let you know"
     ],
     "dkfm_classic": [
+      "cranes|||beautiful friend",
       "breathless|||into the fire",
       "the sundays|||on earth",
       "pale saints|||ordeal",
@@ -1035,8 +1036,7 @@
       "the suncharms|||sparkle",
       "band of susans|||it's locked away",
       "love spirals downwards|||ladonna dissima",
-      "cranes|||beach mover",
-      "the honey smugglers|||good afternoon"
+      "cranes|||beach mover"
     ],
     "egofm_rnb": [
       "flying lotus feat devin tracy|||the room",
@@ -1447,6 +1447,7 @@
       "trippin jaguar|||duat ft raffaello visconti"
     ],
     "ignoreradio_shoegaze": [
+      "helicon|||in the end",
       "the ecstasy of saint theresa|||absinth",
       "the radio dept|||you're lookin' at my guy",
       "entidad animada|||camino de cromo",
@@ -1545,10 +1546,10 @@
       "the besnard lakes|||carried it all around",
       "laveda|||better now",
       "day aches|||solace",
-      "japancakes|||heaven or las vegas",
-      "weekend|||coma summer"
+      "japancakes|||heaven or las vegas"
     ],
     "radio_britannia": [
+      "crawlers|||kills me to be kind",
       "idles|||war",
       "jack kaye|||dora",
       "placebo|||20th century boy",
@@ -1647,8 +1648,7 @@
       "bernard butler|||living the dream",
       "wolf alice|||more than this",
       "desperate journalist|||dust",
-      "courting|||jumper",
-      "keane|||tear up this town"
+      "courting|||jumper"
     ],
     "wbru": [
       "smerz|||you got time and i got money",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795449581.2573822,
-    "mellow_mix": 1795449581.2611642,
-    "big_sonic_heaven": 1795449581.2642715,
-    "radio_x_chilled": 1795449581.267041,
-    "dreampop_radio": 1795449581.2699966,
-    "indie_select": 1795449581.27314,
-    "dkfm_edge": 1795449581.2760139,
+    "vuurland": 1795449676.0155816,
+    "mellow_mix": 1795449676.019185,
+    "big_sonic_heaven": 1795449676.0222888,
+    "radio_x_chilled": 1795449676.02504,
+    "dreampop_radio": 1795449676.028073,
+    "indie_select": 1795449676.03147,
+    "dkfm_edge": 1795449676.034321,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795449581.2807717,
-    "dkfm_shoegaze": 1795449581.2843874,
-    "dkfm_classic": 1795449581.2873878,
-    "egofm_rnb": 1795449581.2906113,
-    "egofm_chillout": 1795449581.2934773,
-    "dj_neihtul": 1795449581.2962604,
-    "gri_balkon": 1795449581.2985516,
-    "ignoreradio_shoegaze": 1795449581.3017428,
-    "radio_britannia": 1795449581.3051121,
-    "wbru": 1795449581.3076823
+    "dark_edge": 1795449676.039019,
+    "dkfm_shoegaze": 1795449676.0428493,
+    "dkfm_classic": 1795449676.0459883,
+    "egofm_rnb": 1795449676.0491157,
+    "egofm_chillout": 1795449676.0520175,
+    "dj_neihtul": 1795449676.0548694,
+    "gri_balkon": 1795449676.0571592,
+    "ignoreradio_shoegaze": 1795449676.4160185,
+    "radio_britannia": 1795449676.419747,
+    "wbru": 1795449676.4223409
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -28118,6 +28118,7 @@
       "helen|||allison",
       "helen|||felt this way",
       "helen|||motorcycle",
+      "helicon|||in the end",
       "hellens|||spacelight",
       "helvetia|||so sick with it",
       "herrmann kleine|||dagger",
@@ -35053,11 +35054,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "amy winehouse|||back to black",
+  "__last_radio_key_vuurland": "abby sage|||backwards directions",
   "__last_radio_key_mellow_mix": "foo fighters|||what if i do",
   "__last_radio_key_big_sonic_heaven": "bodywash|||come and go",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 32505,
+  "__v116_fifo_next_sequence": 32506,
   "__v146_spotify_budget_slot": 1795449585.020471,
   "__vuurland_active_playlist_count": 5024,
   "__vuurland_active_volume": 2,
@@ -152700,7 +152701,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the good morning diary|||the day i turned into a ghost",
+  "__last_radio_key_dreampop_radio": "dylan mondegreen|||come with me to albuquerque",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -152818,7 +152819,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "editors|||lullaby the cure cover",
+  "__last_radio_key_indie_select": "joy division|||digital",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -154181,8 +154182,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "crystal canyon|||penelope the odyssey",
-  "__last_radio_key_dkfm_shoegaze": "deep cut|||dead inside your heart",
-  "__last_radio_key_dkfm_classic": "breathless|||into the fire",
+  "__last_radio_key_dkfm_shoegaze": "pure bathing culture|||dreams",
+  "__last_radio_key_dkfm_classic": "cranes|||beautiful friend",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -159633,7 +159634,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "the ecstasy of saint theresa|||absinth",
+  "__last_radio_key_ignoreradio_shoegaze": "helicon|||in the end",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -161162,7 +161163,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "idles|||war",
+  "__last_radio_key_radio_britannia": "crawlers|||kills me to be kind",
   "__last_radio_key_wbru": "smerz|||you got time and i got money",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
