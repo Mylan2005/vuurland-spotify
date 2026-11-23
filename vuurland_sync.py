@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v256_station_hygiene import non_music_fragment as v256_non_music_fragment, britannia_heavy_caution as v256_britannia_heavy_caution
-from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement, verified_daze_album_alias, exact_single_x_project_credit, equivalent_catalog_connector_title
+from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement, verified_daze_album_alias, exact_single_x_project_credit, equivalent_catalog_connector_title, equivalent_leading_number_artist
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
@@ -4927,6 +4927,15 @@ def find_spotify_track(
         # artist name, rather than two separate objects. Keep all
         # normal song, version, market and duplicate checks.
         if v262_single_x_project_credit:
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+        # v264: full proper-name words are identical, only the initial
+        # decimal number differs from its spelled-out form on Spotify.
+        # A single official artist object is mandatory.
+        if (not primary_artist_exact and len(spotify_artist_objects) == 1
+                and equivalent_leading_number_artist(
+                    wanted_artists[0], spotify_artist_objects[0].get("name", "")
+                )):
             primary_artist_exact = True
             primary_artist_score = 1.0
         # v194: & / + / 'and' zijn identieke expliciete verbindingswoorden
