@@ -525,6 +525,7 @@
       "wake owl|||gold"
     ],
     "indie_select": [
+      "lcd soundsystem|||you wanted a hit",
       "blackfield|||once",
       "little nemo|||l'heure d'hiver",
       "1000 mexicans|||the last pop song",
@@ -623,10 +624,10 @@
       "luka bloom|||i need love",
       "smith & burrows|||only you",
       "midge ure|||no regrets",
-      "bat for lashes|||a forest for invisible children",
-      "anni rossi|||inbetween days"
+      "bat for lashes|||a forest for invisible children"
     ],
     "dkfm_edge": [
+      "last videotape|||nuevos departamentos",
       "tanukichan|||circles",
       "more earth than sea|||desolation",
       "gift|||later",
@@ -725,8 +726,7 @@
       "blue smiley|||pond",
       "sea lemon|||breakdown",
       "murmure|||exagere",
-      "mint julep|||mint julep - all that we'll ever be",
-      "swiss portrait|||always"
+      "mint julep|||mint julep - all that we'll ever be"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1039,6 +1039,7 @@
       "for against|||svengali"
     ],
     "egofm_rnb": [
+      "maxwell|||reunion",
       "justin nozuka|||after tonight",
       "lauryn hill|||guarding the gates",
       "madison mcferrin|||no time to lose",
@@ -1137,8 +1138,7 @@
       "bj the chicago kid & ari lennox|||time today remix",
       "dominic fike|||whats for dinner?",
       "whitney houston|||my love is your love",
-      "jacob banks|||worthy",
-      "kllo|||candid"
+      "jacob banks|||worthy"
     ],
     "egofm_chillout": [
       "loop schrauber & dennisivnvc|||reversed",
@@ -1549,6 +1549,8 @@
       "woodbine|||tony portrait of a serial grafitti artist"
     ],
     "radio_britannia": [
+      "jjerome87|||green velvet",
+      "the staves|||winter trees",
       "david bowie|||rebel rebel",
       "ghosts|||stay the nights",
       "the vaccines|||post break-up sex",
@@ -1646,11 +1648,10 @@
       "everything everything|||planets",
       "the futureheads|||hounds of love",
       "sam fender|||hypersonic missiles",
-      "django django|||year of the snake",
-      "james|||coming home pt 2",
-      "the academic|||easy on the eyes"
+      "django django|||year of the snake"
     ],
     "wbru": [
+      "nirvana|||heart-shaped box",
       "remi wolf|||champagne",
       "the beaches|||edge of the earth",
       "the revivalists|||wish i knew you",
@@ -1749,29 +1750,28 @@
       "fontaines d c|||japan",
       "boygenius|||cool about it",
       "two door cinema club|||what you know",
-      "dominic fike|||3 nights",
-      "temper city|||self aware"
+      "dominic fike|||3 nights"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795418804.2271798,
-    "mellow_mix": 1795418804.2339168,
-    "big_sonic_heaven": 1795418804.2375107,
-    "radio_x_chilled": 1795418804.241731,
-    "dreampop_radio": 1795418804.246353,
-    "indie_select": 1795418804.2510412,
-    "dkfm_edge": 1795418804.255798,
+    "vuurland": 1795418828.7858918,
+    "mellow_mix": 1795418828.7923481,
+    "big_sonic_heaven": 1795418828.7959368,
+    "radio_x_chilled": 1795418828.800061,
+    "dreampop_radio": 1795418828.8046432,
+    "indie_select": 1795418828.8095603,
+    "dkfm_edge": 1795418828.8144083,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795418804.262129,
-    "dkfm_shoegaze": 1795418804.2663383,
-    "dkfm_classic": 1795418804.2708323,
-    "egofm_rnb": 1795418804.2751849,
-    "egofm_chillout": 1795418804.2797294,
-    "dj_neihtul": 1795418804.2835171,
-    "gri_balkon": 1795418804.2864187,
-    "ignoreradio_shoegaze": 1795418804.2912629,
-    "radio_britannia": 1795418804.2965221,
-    "wbru": 1795418804.2995207
+    "dark_edge": 1795418828.820634,
+    "dkfm_shoegaze": 1795418828.8248274,
+    "dkfm_classic": 1795418828.8293283,
+    "egofm_rnb": 1795418828.833834,
+    "egofm_chillout": 1795418828.8383572,
+    "dj_neihtul": 1795418828.8421507,
+    "gri_balkon": 1795418828.8449864,
+    "ignoreradio_shoegaze": 1795418828.8497756,
+    "radio_britannia": 1795418829.403393,
+    "wbru": 1795418829.406553
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30595,6 +30595,7 @@
       "jez williams|||hollow man",
       "jj72|||october swimmer",
       "jjerome87|||brush me like a horse",
+      "jjerome87|||green velvet",
       "jjerome87|||mr alligator",
       "john cale|||shark shark",
       "johnny marr|||armatopia",
@@ -31720,6 +31721,7 @@
       "the staves|||mexico",
       "the staves|||satisfied",
       "the staves|||she's leaving home",
+      "the staves|||winter trees",
       "the stone roses|||all for one",
       "the stone roses|||beautiful thing",
       "the stone roses|||begging you",
@@ -34597,7 +34599,7 @@
   "__last_radio_key_mellow_mix": "george harrison|||beware of darkness",
   "__last_radio_key_big_sonic_heaven": "l'rain|||elmyra",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 32136,
+  "__v116_fifo_next_sequence": 32138,
   "__v146_spotify_budget_slot": 1795385042.6434083,
   "__vuurland_active_playlist_count": 4922,
   "__vuurland_active_volume": 2,
@@ -151990,7 +151992,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "blackfield|||once",
+  "__last_radio_key_indie_select": "lcd soundsystem|||you wanted a hit",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -153352,7 +153354,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "tanukichan|||circles",
+  "__last_radio_key_dkfm_edge": "last videotape|||nuevos departamentos",
   "__last_radio_key_dkfm_shoegaze": "prisms|||dream awake",
   "__last_radio_key_dkfm_classic": "curve|||fait accompli",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -158766,7 +158768,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "justin nozuka|||after tonight",
+  "__last_radio_key_egofm_rnb": "maxwell|||reunion",
   "__last_radio_key_egofm_chillout": "loop schrauber & dennisivnvc|||reversed",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -160334,8 +160336,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "david bowie|||rebel rebel",
-  "__last_radio_key_wbru": "remi wolf|||champagne",
+  "__last_radio_key_radio_britannia": "jjerome87|||green velvet",
+  "__last_radio_key_wbru": "nirvana|||heart-shaped box",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
