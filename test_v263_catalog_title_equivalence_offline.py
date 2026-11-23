@@ -23,4 +23,9 @@ assert "and missing_feature_count == 0" in source
 assert "and wanted_version == spotify_version" in source
 assert "and not solo_collab_fallback" in source
 assert "or v241_plurals_match" in source
+from v203_matcher_upgrade_requeue import applicable_rules
+assert "v263_complete_title_spelling" in applicable_rules("Jamie T", "Sticks and stones")
+assert "v263_complete_title_spelling" in applicable_rules("Dum Dum Girls", "Are You OK?")
+assert "v263_complete_title_spelling" not in applicable_rules("Jamie T", "Sticks 'N' Stones - Live")
+assert "v263_complete_title_spelling" not in applicable_rules("Wrong Artist", "Are You OK?")
 print("v263 safe full-title catalog spelling tests passed")
