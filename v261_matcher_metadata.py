@@ -71,13 +71,14 @@ def equivalent_catalog_connector_title(source_title, catalog_title):
     """
     def words(value):
         raw = str(value or "").casefold().replace("’", "'")
-        raw = re.sub(r"(?<=\\w)'n'(?=\\w)", " n ", raw)
-        raw = re.sub(r"(?<=\\s)'n'(?=\\s)", " n ", raw)
-        tokens = re.findall(r"[a-z0-9]+", raw)
+        # Only apostrophe-marked 'N' is shorthand for and. A bare N may
+        # be a meaningful letter in a song title and must stay distinct.
+        raw = re.sub(r"(?<![a-z0-9])'n'(?![a-z0-9])", " _and_ ", raw)
+        tokens = re.findall(r"_and_|[a-z0-9]+", raw)
         if not tokens:
             return ()
         return tuple(
-            "and" if word == "n" else "ok" if word == "okay" else word
+            "and" if word == "_and_" else "ok" if word == "okay" else word
             for word in tokens
         )
     left, right = words(source_title), words(catalog_title)
