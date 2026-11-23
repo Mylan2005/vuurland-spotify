@@ -7,7 +7,7 @@
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "c8cd44668fa9d94f16d9e600cfec64da46805997827e42a449a2156bf97fbedb",
-      "checked_at_utc": "2026-11-22T09:53:03.523257+00:00"
+      "checked_at_utc": "2026-11-23T10:53:44.278941+00:00"
     },
     "832": {
       "source_tracks": 24,
@@ -3499,19 +3499,19 @@
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "5268fad03d7108c0351ebeff12167b7e8cdd428afec0fcc74906aba9acf867c0",
-      "checked_at_utc": "2026-11-22T09:53:01.885173+00:00"
+      "checked_at_utc": "2026-11-23T10:53:42.523452+00:00"
     },
     "835": {
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "7143ed29748f5ee0e5a3a04396d09614808b2e9144c1351aebb0229ff88f0e85",
-      "checked_at_utc": "2026-11-22T09:53:00.231460+00:00"
+      "checked_at_utc": "2026-11-23T10:53:40.813817+00:00"
     }
   },
   "total_recovered": 8,
   "complete": false,
-  "last_checked_at_utc": "2026-11-22T20:45:55.395322+00:00",
-  "last_batch_verified": 0,
+  "last_checked_at_utc": "2026-11-23T10:53:46.380944+00:00",
+  "last_batch_verified": 3,
   "last_batch_recovered": 0,
-  "last_error": "Aflevering 835 niet bevestigd: ReadTimeout: HTTPSConnectionPool(host='duyster-online.be', port=443): Read timed out. (read timeout=15)"
+  "last_error": "Aflevering 251 niet bevestigd: ValueError: Duyster aflevering 251 ontbreekt of is onvolledig"
 }
