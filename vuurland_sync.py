@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v256_station_hygiene import non_music_fragment as v256_non_music_fragment, britannia_heavy_caution as v256_britannia_heavy_caution
-from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement, verified_daze_album_alias, exact_single_x_project_credit
+from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement, verified_daze_album_alias, exact_single_x_project_credit, equivalent_catalog_connector_title
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
@@ -5711,8 +5711,22 @@ def find_spotify_track(
             wanted_version=wanted_version,
             catalog_version=spotify_version,
         )
+        # v263: complete title differences only; never drop edition labels.
+        # Require full artist identity, all requested guests and the SAME
+        # version family before accepting connector/OK spelling variants.
+        v263_catalog_title_equivalent = bool(
+            primary_artist_exact
+            and missing_feature_count == 0
+            and not guest_only_catalog_match
+            and not solo_collab_fallback
+            and wanted_version == spotify_version
+            and equivalent_catalog_connector_title(
+                wanted_title_for_match, item.get("name", "")
+            )
+        )
         structural_title_match = (
-            v241_plurals_match
+            v263_catalog_title_equivalent
+            or v241_plurals_match
             or v239_title_equivalent(
                 wanted_title_for_match, item.get("name", ""),
                 primary_artist_exact=primary_artist_exact,
