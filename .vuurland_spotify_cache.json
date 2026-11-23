@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "kings of leon|||my whole world",
       "badbadnotgood|||time moves slow feat sam herring",
       "fleet foxes|||mykonos",
       "haim feat taylor swift|||gasoline",
@@ -113,8 +114,7 @@
       "warhaus|||open window",
       "kings of convenience|||i'd rather dance with you",
       "lucy dacus|||planting tomatoes",
-      "ry x|||untold",
-      "tom odell|||best day of my life"
+      "ry x|||untold"
     ],
     "mellow_mix": [
       "sarah mclachlan|||ice",
@@ -423,6 +423,7 @@
       "coldplay|||see you soon"
     ],
     "dreampop_radio": [
+      "la sera|||hour of the dawn",
       "marissa nadler|||rosary",
       "axel flovent|||dancers",
       "bear's den|||sophie",
@@ -521,10 +522,10 @@
       "jessie baylin|||i'll cry for the both of us",
       "emily wells|||passenger",
       "dear reader|||release me",
-      "julien baker|||everybody does",
-      "intergalactic lovers|||islands"
+      "julien baker|||everybody does"
     ],
     "indie_select": [
+      "lightspeed champion|||i could have done this myself",
       "plus/minus|||snowblind",
       "moev|||i bend",
       "the essence|||drifting",
@@ -623,8 +624,7 @@
       "popsicle|||third opinion",
       "lightspeed champion|||marlene",
       "third eye blind|||how's it going to be",
-      "frazier chorus|||cloud 8",
-      "mint julep|||time is distance"
+      "frazier chorus|||cloud 8"
     ],
     "dkfm_edge": [
       "fragile animals|||lonely in the sun",
@@ -1141,6 +1141,7 @@
       "benny sings feat mac demarco|||rolled up"
     ],
     "egofm_chillout": [
+      "vargo|||get back to serenity",
       "flofilz/alfa mist|||uteki feat alfa mist",
       "arcade fire & owen pallett|||song on the beach",
       "obli|||it'll all be oki",
@@ -1239,8 +1240,7 @@
       "federico albanese|||a story yet to be told",
       "koni|||el sol",
       "boozoo bajou|||night over manaus",
-      "thievery corporation|||the glass bead game",
-      "jono mccleery|||moonlit parade"
+      "thievery corporation|||the glass bead game"
     ],
     "dj_neihtul": [
       "allie x|||that's so us",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795455630.5700145,
-    "mellow_mix": 1795455630.573933,
-    "big_sonic_heaven": 1795455630.5772843,
-    "radio_x_chilled": 1795455630.5803237,
-    "dreampop_radio": 1795455630.5835469,
-    "indie_select": 1795455630.5869818,
-    "dkfm_edge": 1795455630.590343,
+    "vuurland": 1795455659.2871385,
+    "mellow_mix": 1795455659.2909882,
+    "big_sonic_heaven": 1795455659.2943788,
+    "radio_x_chilled": 1795455659.2975693,
+    "dreampop_radio": 1795455659.3009362,
+    "indie_select": 1795455659.3046887,
+    "dkfm_edge": 1795455659.307852,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795455630.5954292,
-    "dkfm_shoegaze": 1795455630.599293,
-    "dkfm_classic": 1795455630.6026556,
-    "egofm_rnb": 1795455630.6060257,
-    "egofm_chillout": 1795455630.6092098,
-    "dj_neihtul": 1795455630.6125016,
-    "gri_balkon": 1795455630.614996,
-    "ignoreradio_shoegaze": 1795455631.3240488,
-    "radio_britannia": 1795455631.3280177,
-    "wbru": 1795455631.3308637
+    "dark_edge": 1795455659.3128927,
+    "dkfm_shoegaze": 1795455659.3168628,
+    "dkfm_classic": 1795455659.3201532,
+    "egofm_rnb": 1795455659.3235888,
+    "egofm_chillout": 1795455659.3269362,
+    "dj_neihtul": 1795455659.3301427,
+    "gri_balkon": 1795455659.3326821,
+    "ignoreradio_shoegaze": 1795455659.3362157,
+    "radio_britannia": 1795455659.3400407,
+    "wbru": 1795455659.3429575
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -35168,7 +35168,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "badbadnotgood|||time moves slow feat sam herring",
+  "__last_radio_key_vuurland": "kings of leon|||my whole world",
   "__last_radio_key_mellow_mix": "sarah mclachlan|||ice",
   "__last_radio_key_big_sonic_heaven": "postcards|||i stand corrected",
   "__v181_vuurland_two_missing_recovered": true,
@@ -152962,7 +152962,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "marissa nadler|||rosary",
+  "__last_radio_key_dreampop_radio": "la sera|||hour of the dawn",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -153080,7 +153080,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "plus/minus|||snowblind",
+  "__last_radio_key_indie_select": "lightspeed champion|||i could have done this myself",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -159857,7 +159857,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "bastille feat ella eyre|||no angels the xx vs tlc",
-  "__last_radio_key_egofm_chillout": "flofilz/alfa mist|||uteki feat alfa mist",
+  "__last_radio_key_egofm_chillout": "vargo|||get back to serenity",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
