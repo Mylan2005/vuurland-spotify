@@ -219,6 +219,7 @@
       "sixpence none the richer|||a million parachutes"
     ],
     "big_sonic_heaven": [
+      "beach house|||holiday house",
       "tombstones in their eyes|||fall",
       "asobi seksu|||nefi & girly",
       "deary|||smile",
@@ -317,10 +318,10 @@
       "blankenberge|||summer morning",
       "bug teeth|||thin circle",
       "peter murphy|||marlene dietrich's favourite poem",
-      "bluhm|||low light",
-      "trentemøller|||terrified"
+      "bluhm|||low light"
     ],
     "radio_x_chilled": [
+      "coldplay|||warning sign",
       "lana del rey|||summertime sadness",
       "black rebel motorcycle club|||fault line",
       "nirvana|||dumb unplugged in new york",
@@ -419,8 +420,7 @@
       "stereophonics|||mr writer",
       "arctic monkeys|||four out of five",
       "noah & the whale|||five years time",
-      "nirvana|||all apologies unplugged in new york",
-      "wolf alice|||don't delete the kisses"
+      "nirvana|||all apologies unplugged in new york"
     ],
     "dreampop_radio": [
       "the barr brothers|||even the darkness has arms",
@@ -525,6 +525,8 @@
       "dan mangan|||road regrets"
     ],
     "indie_select": [
+      "m83|||outro",
+      "kaiser chiefs|||coming home",
       "the joy formidable|||fog black windows",
       "banks & steelz|||giant",
       "courteeners|||the 17th",
@@ -622,11 +624,10 @@
       "this mortal coil|||i want to live",
       "editors|||fall",
       "new order|||every little counts",
-      "gary numan|||are friends electric",
-      "tv on the radio|||shout me out",
-      "infadels|||play blind"
+      "gary numan|||are friends electric"
     ],
     "dkfm_edge": [
+      "virgins|||slowly long",
       "leavs|||to be here to stay here",
       "deary|||selene",
       "tanukichan|||low",
@@ -725,8 +726,7 @@
       "fern murphy|||the pleasure of slowness",
       "magic shoppe|||something hollow",
       "sparkler|||trip hazard",
-      "makeout city|||everytime",
-      "local authority|||wonder"
+      "makeout city|||everytime"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -937,6 +937,7 @@
       "dottie|||cherry"
     ],
     "dkfm_classic": [
+      "love spirals downwards|||avincenna",
       "jesus & mary chain|||in a hole",
       "the house of love|||road",
       "the boo radleys|||swansong",
@@ -1035,10 +1036,10 @@
       "14 iced bears|||blue suit",
       "swervedriver|||feel so real",
       "the sundays|||wild horses",
-      "the ocean blue|||breezing up",
-      "love spirals downwards|||kykeon"
+      "the ocean blue|||breezing up"
     ],
     "egofm_rnb": [
+      "nxworries|||lyk dis",
       "daniel caesar feat koffee|||cyanide remix",
       "kelis|||midnight snacks",
       "emma beko|||mhs",
@@ -1137,8 +1138,7 @@
       "iamddb|||silver lines",
       "the marias|||all i really want is you",
       "saint wknd & max|||survive",
-      "chance the rapper|||same drugs",
-      "nevi|||westside"
+      "chance the rapper|||same drugs"
     ],
     "egofm_chillout": [
       "evil needle|||opiate",
@@ -1651,6 +1651,7 @@
       "milburn|||what will you do when the money goes"
     ],
     "wbru": [
+      "the beaches|||edge of the earth",
       "sam fender|||rein me in with olivia dean",
       "beabadoobee|||memories",
       "kate bush|||babooshka",
@@ -1716,7 +1717,6 @@
       "young the giant|||cough syrup",
       "temper city|||reverse psychology",
       "jungle|||the wave",
-      "the beaches|||edge of the earth",
       "george ezra|||budapest",
       "balu brigada|||bedhead",
       "radiohead|||no surprises",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795462717.0204556,
-    "mellow_mix": 1795462717.0246816,
-    "big_sonic_heaven": 1795462717.0283182,
-    "radio_x_chilled": 1795462717.0317168,
-    "dreampop_radio": 1795462717.0352123,
-    "indie_select": 1795462717.0389068,
-    "dkfm_edge": 1795462717.0424218,
+    "vuurland": 1795462805.9190965,
+    "mellow_mix": 1795462805.923427,
+    "big_sonic_heaven": 1795462805.9272773,
+    "radio_x_chilled": 1795462805.9308672,
+    "dreampop_radio": 1795462805.934486,
+    "indie_select": 1795462805.9387195,
+    "dkfm_edge": 1795462806.3087988,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795462717.0477831,
-    "dkfm_shoegaze": 1795462717.0520272,
-    "dkfm_classic": 1795462717.055715,
-    "egofm_rnb": 1795462717.0594707,
-    "egofm_chillout": 1795462717.06329,
-    "dj_neihtul": 1795462717.0672925,
-    "gri_balkon": 1795462717.0700014,
-    "ignoreradio_shoegaze": 1795462717.0738862,
-    "radio_britannia": 1795462717.0780907,
-    "wbru": 1795462717.0810978
+    "dark_edge": 1795462806.314313,
+    "dkfm_shoegaze": 1795462806.3186498,
+    "dkfm_classic": 1795462806.3226078,
+    "egofm_rnb": 1795462806.3265505,
+    "egofm_chillout": 1795462806.3301847,
+    "dj_neihtul": 1795462806.3336334,
+    "gri_balkon": 1795462806.3363202,
+    "ignoreradio_shoegaze": 1795462806.3401978,
+    "radio_britannia": 1795462806.3443785,
+    "wbru": 1795462806.3474934
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -35286,7 +35286,7 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "daniel caesar|||who knows",
   "__last_radio_key_mellow_mix": "nick drake|||hangin on a star",
-  "__last_radio_key_big_sonic_heaven": "tombstones in their eyes|||fall",
+  "__last_radio_key_big_sonic_heaven": "beach house|||holiday house",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 32668,
   "__v146_spotify_budget_slot": 1795462720.8993134,
@@ -153083,7 +153083,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "lana del rey|||summertime sadness",
+  "__last_radio_key_radio_x_chilled": "coldplay|||warning sign",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -153305,7 +153305,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the joy formidable|||fog black windows",
+  "__last_radio_key_indie_select": "m831|||outro",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -154667,9 +154667,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "leavs|||to be here to stay here",
+  "__last_radio_key_dkfm_edge": "virgins|||slowly long",
   "__last_radio_key_dkfm_shoegaze": "momma|||cross your heart",
-  "__last_radio_key_dkfm_classic": "jesus & mary chain|||in a hole",
+  "__last_radio_key_dkfm_classic": "love spirals downwards|||avincenna",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -160081,7 +160081,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "daniel caesar feat koffee|||cyanide remix",
+  "__last_radio_key_egofm_rnb": "nxworries|||lyk dis",
   "__last_radio_key_egofm_chillout": "evil needle|||opiate",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -161650,7 +161650,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "johnny marr|||spiral cities",
-  "__last_radio_key_wbru": "sam fender|||rein me in with olivia dean",
+  "__last_radio_key_wbru": "the beaches|||edge of the earth",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
