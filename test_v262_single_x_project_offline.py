@@ -29,4 +29,8 @@ assert "if _v238_radio_duo and not v262_single_x_project_credit:" in source
 assert "if v262_single_x_project_credit:\n            primary_artist_exact = True" in source
 assert 'if item.get("is_playable") is False:' in source
 assert 'if (item.get("restrictions") or {}).get("reason") == "market":' in source
+from v203_matcher_upgrade_requeue import applicable_rules
+assert "v262_exact_single_x_project" in applicable_rules("Stimming x Lambert", "Edelweiss")
+assert "v262_exact_single_x_project" not in applicable_rules("Stimming x Lambert", "Different Track")
+assert "v262_exact_single_x_project" not in applicable_rules("Other Artist x Another", "Edelweiss")
 print("v262 exact single-project artist gate regressions passed")
