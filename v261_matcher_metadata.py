@@ -60,3 +60,28 @@ def exact_single_x_project_credit(source_artist, catalog_artist_names):
         return False
     catalog = " ".join(str(catalog_artist_names[0] or "").strip().split())
     return bool(catalog and catalog.casefold() == radio.casefold())
+
+
+def equivalent_catalog_connector_title(source_title, catalog_title):
+    """Exact title words with only typographic 'and' / 'n' and OK/Okay variance.
+
+    Strictly a full-title comparison. Edition/version markers are never
+    removed here; original candidate gates still enforce versions.
+    Neither arbitrary word spelling corrections nor title prefixes qualify.
+    """
+    def words(value):
+        raw = str(value or "").casefold().replace("’", "'")
+        raw = re.sub(r"(?<=\\w)'n'(?=\\w)", " n ", raw)
+        raw = re.sub(r"(?<=\\s)'n'(?=\\s)", " n ", raw)
+        tokens = re.findall(r"[a-z0-9]+", raw)
+        if not tokens:
+            return ()
+        return tuple(
+            "and" if word == "n" else "ok" if word == "okay" else word
+            for word in tokens
+        )
+    left, right = words(source_title), words(catalog_title)
+    # Avoid accepting a one-word coincidence or punctuation-only title.
+    return bool(len(left) >= 2 and left == right
+                and str(source_title or "").casefold().strip()
+                    != str(catalog_title or "").casefold().strip())
