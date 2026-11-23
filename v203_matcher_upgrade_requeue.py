@@ -64,6 +64,7 @@ MATCHER_RETRY_RULES = (
     "v261_ambiguous_ill_title",
     "v261_abbreviated_required_guest",
     "v261_verified_catalog_alias",
+    "v262_exact_single_x_project",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -163,6 +164,11 @@ def applicable_rules(artist, title):
         "da/ze", "fink (uk)", "gypsy & the cat", "so much 4 gravity",
     }:
         hits.append("v261_verified_catalog_alias")
+    # v262: recheck the observed exact project-credit mismatch only.
+    if (artist.strip().casefold(), title.strip().casefold()) == (
+        "stimming x lambert", "edelweiss",
+    ):
+        hits.append("v262_exact_single_x_project")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
