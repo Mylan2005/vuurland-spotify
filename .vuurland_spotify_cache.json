@@ -117,6 +117,7 @@
       "local natives|||dark days"
     ],
     "mellow_mix": [
+      "harry manx|||only then will your house be blessed",
       "roxy music|||dance away",
       "john hiatt|||feels like rain",
       "lou reed|||what's good",
@@ -215,10 +216,10 @@
       "bonnie raitt|||it's all over now baby blue",
       "dave alvin|||king of california",
       "reed foehl|||goodbye world",
-      "eels|||packing blankets",
-      "patty larkin|||who holds your hand"
+      "eels|||packing blankets"
     ],
     "big_sonic_heaven": [
+      "phosphene|||wire",
       "this love is deadly|||vertigo",
       "mg x cd jl = martin gore & cliff damavandi|||cross whisper",
       "my bloody valentine|||blown a wish",
@@ -317,8 +318,7 @@
       "tycho|||pink & blue feat saint sinner",
       "throwing muses|||albatross",
       "toothpaste|||hazlewood",
-      "lush|||thoughtforms",
-      "hunter as a horse|||here's to all the ones"
+      "lush|||thoughtforms"
     ],
     "radio_x_chilled": [
       "james|||laid live atlanta 1994",
@@ -627,6 +627,7 @@
       "giana factory|||i live at night"
     ],
     "dkfm_edge": [
+      "deafcult|||sleep",
       "diffident daffodils|||missed chances",
       "softlightsymphony|||circling",
       "deary|||the moth",
@@ -725,14 +726,14 @@
       "lilliana villines|||yours",
       "softcult|||shortest fuse",
       "eli's ladder|||burning circle",
-      "coming up roses|||don't let it break your heart",
-      "the fauns|||shake your hair"
+      "coming up roses|||don't let it break your heart"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
       "suede|||trash"
     ],
     "dark_edge": [
+      "theory of mind|||maggie",
       "ex:re|||i can't keep you",
       "massive attack|||protection",
       "thomas headon lizzy mcalpine|||bored",
@@ -831,8 +832,7 @@
       "deftones|||cherry waves",
       "starsailor|||tell me it's not over",
       "the temper trap|||science of fear",
-      "the verve|||love is noise",
-      "everyone you know|||when the sun comes up"
+      "the verve|||love is noise"
     ],
     "dkfm_shoegaze": [
       "hyla|||deserve",
@@ -937,6 +937,7 @@
       "mellowtone|||masterpiece"
     ],
     "dkfm_classic": [
+      "coaltar of the deepers|||taste",
       "14 iced bears|||moths",
       "the sundays|||blood on my hands",
       "curve|||coming up roses",
@@ -1035,8 +1036,7 @@
       "piano magic|||waking up",
       "swervedriver|||for seeking heat",
       "galaxie 500|||way up high",
-      "the sundays|||i feel",
-      "boo radleys|||lazarus augustus pablo mix"
+      "the sundays|||i feel"
     ],
     "egofm_rnb": [
       "jacob collier feat mahalia ty dolla $ign|||all i need",
@@ -1345,6 +1345,7 @@
       "guardner|||the mesh"
     ],
     "gri_balkon": [
+      "fila brazillia|||harmonicas are shite",
       "choir of young believers|||hollow talk jody wisternoff james grant lane 8 remix",
       "real lies|||north circular",
       "monkey safari|||hi life cheeky bold cover",
@@ -1443,8 +1444,7 @@
       "boerd|||gem",
       "nils frahm|||sunson",
       "tom misch & yussef dayes|||what kinda music",
-      "dzihan & kamien|||homebase",
-      "gaussian curve|||ride"
+      "dzihan & kamien|||homebase"
     ],
     "ignoreradio_shoegaze": [
       "the daysleepers|||moonfrost",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795533865.403244,
-    "mellow_mix": 1795533865.4066508,
-    "big_sonic_heaven": 1795533865.4095726,
-    "radio_x_chilled": 1795533865.4123437,
-    "dreampop_radio": 1795533865.415188,
-    "indie_select": 1795533865.4185488,
-    "dkfm_edge": 1795533865.4214797,
+    "vuurland": 1795533951.327606,
+    "mellow_mix": 1795533951.3311276,
+    "big_sonic_heaven": 1795533951.6559649,
+    "radio_x_chilled": 1795533951.6587493,
+    "dreampop_radio": 1795533951.661442,
+    "indie_select": 1795533951.6645346,
+    "dkfm_edge": 1795533951.6675096,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795533865.4257944,
-    "dkfm_shoegaze": 1795533865.4292243,
-    "dkfm_classic": 1795533865.4320397,
-    "egofm_rnb": 1795533865.4350755,
-    "egofm_chillout": 1795533865.4381242,
-    "dj_neihtul": 1795533865.4407089,
-    "gri_balkon": 1795533865.442867,
-    "ignoreradio_shoegaze": 1795533865.446049,
-    "radio_britannia": 1795533865.4494355,
-    "wbru": 1795533865.4519062
+    "dark_edge": 1795533951.67221,
+    "dkfm_shoegaze": 1795533951.6758652,
+    "dkfm_classic": 1795533951.6787753,
+    "egofm_rnb": 1795533951.6818063,
+    "egofm_chillout": 1795533951.684714,
+    "dj_neihtul": 1795533951.6873043,
+    "gri_balkon": 1795533951.6895974,
+    "ignoreradio_shoegaze": 1795533951.69276,
+    "radio_britannia": 1795533951.6960313,
+    "wbru": 1795533951.6984792
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -36341,8 +36341,8 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "novastar & piet goddaer|||never back down",
-  "__last_radio_key_mellow_mix": "roxy music|||dance away",
-  "__last_radio_key_big_sonic_heaven": "this love is deadly|||vertigo",
+  "__last_radio_key_mellow_mix": "harry manx|||only then will your house be blessed",
+  "__last_radio_key_big_sonic_heaven": "phosphene|||wire",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 33575,
   "__v146_spotify_budget_slot": 1795533868.7785823,
@@ -157823,9 +157823,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "diffident daffodils|||missed chances",
+  "__last_radio_key_dkfm_edge": "deafcult|||sleep",
   "__last_radio_key_dkfm_shoegaze": "hyla|||deserve",
-  "__last_radio_key_dkfm_classic": "14 iced bears|||moths",
+  "__last_radio_key_dkfm_classic": "coaltar of the deepers|||taste",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -157837,7 +157837,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "ex:re|||i can't keep you",
+  "__last_radio_key_dark_edge": "theory of mind|||maggie",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -163252,7 +163252,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "choir of young believers|||hollow talk jody wisternoff james grant lane 8 remix",
+  "__last_radio_key_gri_balkon": "fila brazillia|||harmonicas are shite",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
