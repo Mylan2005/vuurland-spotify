@@ -117,6 +117,7 @@
       "the tallest man on earth|||the dreamer"
     ],
     "mellow_mix": [
+      "neil young|||dont let it bring you down",
       "london grammar|||hey now",
       "baswod|||sleep",
       "t‐bone burnett|||over you",
@@ -215,8 +216,7 @@
       "the tragically hip|||bobcaygeon",
       "van morrison|||precious time",
       "talking heads|||nothing but flowers",
-      "nick mulvey|||mountain to move",
-      "elton john|||daniel"
+      "nick mulvey|||mountain to move"
     ],
     "big_sonic_heaven": [
       "acrylics|||counting sheep",
@@ -423,6 +423,7 @@
       "the coral|||jacqueline"
     ],
     "dreampop_radio": [
+      "george ezra|||barcelona",
       "the clientele|||i can't seem to make you mine",
       "the helio sequence|||the measure",
       "hello saferide|||x telling me about the loss of something dear at age 16",
@@ -521,8 +522,7 @@
       "cass mccombs|||medusa's outhouse",
       "the weepies|||does not bear repeating",
       "balthazar|||bunker",
-      "l'aupaire|||uptown diva",
-      "paperwhite|||get away"
+      "l'aupaire|||uptown diva"
     ],
     "indie_select": [
       "marble sounds|||an emotional high",
@@ -627,6 +627,7 @@
       "the whitest boy alive|||burning"
     ],
     "dkfm_edge": [
+      "cling ring|||you're a shadow",
       "ride|||light in a quiet room",
       "glitterspitter|||end times",
       "linebeck|||give us a try",
@@ -725,8 +726,7 @@
       "pia fraus|||we melt",
       "swallowtail|||spring guillotine",
       "pure hex|||spare me",
-      "share|||somewhere without language",
-      "bad light|||lorena"
+      "share|||somewhere without language"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1447,6 +1447,7 @@
       "raubermukke|||vogelfutter le vold remix"
     ],
     "ignoreradio_shoegaze": [
+      "ruby haunt|||video dreams",
       "sunbeam sound machine|||two summers",
       "hotline tnt|||out of town",
       "diiv|||lorelei",
@@ -1545,10 +1546,10 @@
       "white flowers|||underwater",
       "my bloody valentine|||how do you do it",
       "fog|||space space space shuttle",
-      "pixies|||allison",
-      "forsaken autumn|||wallow"
+      "pixies|||allison"
     ],
     "radio_britannia": [
+      "airways|||reckless tongue",
       "the last dinner party|||caesar on a tv screen",
       "george ezra|||anyone for you",
       "amber run|||stranger",
@@ -1647,8 +1648,7 @@
       "palace|||nightmares and ice cream",
       "pulp|||razzmatazz",
       "shed seven|||stand together",
-      "the coral|||million eyes",
-      "paul weller|||i woke up"
+      "the coral|||million eyes"
     ],
     "wbru": [
       "mother mother|||hayloft",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795539678.5890887,
-    "mellow_mix": 1795539678.5927145,
-    "big_sonic_heaven": 1795539678.5960214,
-    "radio_x_chilled": 1795539678.599144,
-    "dreampop_radio": 1795539678.6020749,
-    "indie_select": 1795539678.6053994,
-    "dkfm_edge": 1795539678.608547,
+    "vuurland": 1795539764.318853,
+    "mellow_mix": 1795539764.3227162,
+    "big_sonic_heaven": 1795539764.3261743,
+    "radio_x_chilled": 1795539764.329188,
+    "dreampop_radio": 1795539764.33228,
+    "indie_select": 1795539764.3356748,
+    "dkfm_edge": 1795539764.3389492,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795539678.9687881,
-    "dkfm_shoegaze": 1795539678.9724996,
-    "dkfm_classic": 1795539678.9756045,
-    "egofm_rnb": 1795539678.9788814,
-    "egofm_chillout": 1795539678.9820058,
-    "dj_neihtul": 1795539678.9847388,
-    "gri_balkon": 1795539678.9870417,
-    "ignoreradio_shoegaze": 1795539678.990446,
-    "radio_britannia": 1795539678.9940052,
-    "wbru": 1795539678.996575
+    "dark_edge": 1795539764.3435752,
+    "dkfm_shoegaze": 1795539764.3472266,
+    "dkfm_classic": 1795539764.3503008,
+    "egofm_rnb": 1795539764.3536654,
+    "egofm_chillout": 1795539764.3568907,
+    "dj_neihtul": 1795539764.3596864,
+    "gri_balkon": 1795539764.3619893,
+    "ignoreradio_shoegaze": 1795539764.7132978,
+    "radio_britannia": 1795539765.051552,
+    "wbru": 1795539765.054231
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29997,6 +29997,7 @@
       "ruby haunt|||glider",
       "ruby haunt|||it will happen the next time around",
       "ruby haunt|||laughing heart",
+      "ruby haunt|||video dreams",
       "rumskib|||crucial love games",
       "rumskib|||ferris wheel blackout",
       "rumskib|||girl afraid",
@@ -36435,10 +36436,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "tom odell|||ugly",
-  "__last_radio_key_mellow_mix": "london grammar|||hey now",
+  "__last_radio_key_mellow_mix": "neil young|||dont let it bring you down",
   "__last_radio_key_big_sonic_heaven": "acrylics|||counting sheep",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 33659,
+  "__v116_fifo_next_sequence": 33661,
   "__v146_spotify_budget_slot": 1795539682.3437312,
   "__vuurland_active_playlist_count": 5643,
   "__vuurland_active_volume": 2,
@@ -156605,7 +156606,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the clientele|||i can't seem to make you mine",
+  "__last_radio_key_dreampop_radio": "george ezra|||barcelona",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -158085,7 +158086,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "ride|||light in a quiet room",
+  "__last_radio_key_dkfm_edge": "cling ring|||you're a shadow",
   "__last_radio_key_dkfm_shoegaze": "blankenberge|||fragile",
   "__last_radio_key_dkfm_classic": "14 iced bears|||like a dolphin",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -163537,7 +163538,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "sunbeam sound machine|||two summers",
+  "__last_radio_key_ignoreradio_shoegaze": "ruby haunt|||video dreams",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -165071,7 +165072,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the last dinner party|||caesar on a tv screen",
+  "__last_radio_key_radio_britannia": "airways|||reckless tongue",
   "__last_radio_key_wbru": "mother mother|||hayloft",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
