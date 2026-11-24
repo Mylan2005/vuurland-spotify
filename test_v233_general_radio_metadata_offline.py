@@ -63,7 +63,8 @@ assert matcher.index("v233_radio_metadata(artist, title)") < matcher.index("v232
 assert matcher.index("v232_radio_metadata(artist, title)") < matcher.index("v194_canonical_artist(artist)")
 assert "v81_catalog_locator(*v101_original_key)" in matcher
 assert "primary_artist_exact" in matcher
-assert "if _v238_radio_duo:" in matcher
+assert "if _v238_radio_duo and not v262_single_x_project_credit:" in matcher
+assert "exact_single_x_project_credit(" in matcher
 assert "credited != required" in matcher
 assert "len(spotify_artists) != 2" in matcher
 assert "SPOTIFY_SEARCH_HTTP_LIMIT = 1" in source

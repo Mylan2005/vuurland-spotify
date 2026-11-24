@@ -17,6 +17,7 @@ from bs4 import BeautifulSoup
 from dark_edge_filter import dark_edge_reject_reason
 from vuurland_music_policy import global_music_reject_reason
 from v256_station_hygiene import non_music_fragment as v256_non_music_fragment, britannia_heavy_caution as v256_britannia_heavy_caution
+from v261_matcher_metadata import abbreviated_title_feature, safe_contraction_replacement, verified_daze_album_alias, exact_single_x_project_credit, equivalent_catalog_connector_title, equivalent_leading_number_artist
 from v214_processed_history import preserve_processed_playlist_history
 from v215_multi_version_guard import has_unrequested_performance_modifiers
 from v243_remix_fallback import safe_remix_original_fallback
@@ -91,6 +92,15 @@ PLAYLIST_ID = os.environ.get("VUURLAND_PLAYLIST_ID", "555lFTvdRswe9ukybmOM8T")
 #
 # De normale titelcontrole blijft volledig actief.
 ARTIST_ALIASES = {
+    # RadioBox writes DA/ZE; catalog uses Daze for the same shoegaze project.
+    # The ordinary track/title/version checks still apply.
+    "da ze": ["Daze"],
+    # Fink (UK) is the same singer-songwriter as Spotify artist Fink.
+    "fink uk": ["Fink"],
+    # The duo Gypsy & The Cat formally rebranded as GATC.
+    "gypsy and the cat": ["GATC"],
+    # The same Belgian group is listed with 4 / for in radio/catalog metadata.
+    "so much 4 gravity": ["So Much for Gravity"],
     "the twerps": ["Twerps"],  # Verified Spotify catalog name for Dreamin
     # v101: officiële artiestcredits die RadioBox onder een andere naam toont.
     "hybris": ["Postiljonen"],
@@ -3128,6 +3138,12 @@ def find_spotify_track(
         """
         raw = str(value or "").strip()
 
+        # v261: a short `(f Artist)` is an explicit REQUIRED guest credit.
+        # The normal Spotify artist-object checks below remain mandatory.
+        abbreviated = abbreviated_title_feature(raw)
+        if abbreviated:
+            return abbreviated
+
         explicit = re.search(
             r"(?:\s+|\s*\()\s*(?:feat\.?|ft\.?|featuring|w/)\s+"
             r"([^\(\)\[\]]+?)\)?\s*$",
@@ -3332,7 +3348,7 @@ def find_spotify_track(
         rebuilt = []
         for part in parts:
             key = re.sub(r"[^a-z]", "", part.casefold())
-            replacement = contractions.get(key)
+            replacement = safe_contraction_replacement(part, contractions.get(key))
             if replacement and part.strip():
                 if part[:1].isupper():
                     replacement = replacement[:1].upper() + replacement[1:]
@@ -4756,6 +4772,17 @@ def find_spotify_track(
     candidates = []
 
     for item in items:
+        # v261: the short catalog artist name Daze has unrelated namesakes.
+        # Only the independently verified DA/ZE/Glia split album can
+        # authorize this spelling alias; ordinary DA/ZE credits are unchanged.
+        if normalized_primary == "da ze":
+            catalog_names = [
+                str(x.get("name") or "") for x in item.get("artists", [])
+                if isinstance(x, dict)
+            ]
+            if any(alias_key(name) == "daze" for name in catalog_names):
+                if not verified_daze_album_alias(title, item):
+                    continue
         if v88_radio_key == ("manassas", "colorado"):
             # Catalogus van Stephen Stills bevat veel Colorado-opnames.
             # RadioBox vraagt de opname uit het album Manassas.
@@ -4789,7 +4816,13 @@ def find_spotify_track(
         # v238: bij A x B moet Spotify precies de twee VOLLEDIGE artiesten
         # als afzonderlijke artist objects hebben. Geen solo-fallback en
         # geen ontbrekende featuring-credits, ongeacht de titelscore.
-        if _v238_radio_duo:
+        v262_single_x_project_credit = bool(
+            _v238_radio_duo and exact_single_x_project_credit(
+                f"{_v238_radio_duo.group(1).strip()} x {_v238_radio_duo.group(2).strip()}",
+                [a.get("name", "") for a in spotify_artist_objects],
+            )
+        )
+        if _v238_radio_duo and not v262_single_x_project_credit:
             required = {
                 alias_key(_v238_radio_duo.group(1).strip()),
                 alias_key(_v238_radio_duo.group(2).strip()),
@@ -4890,6 +4923,21 @@ def find_spotify_track(
             primary_wanted_artist
             == spotify_primary_compact
         )
+        # v262: original A x B credit is literally the sole catalog
+        # artist name, rather than two separate objects. Keep all
+        # normal song, version, market and duplicate checks.
+        if v262_single_x_project_credit:
+            primary_artist_exact = True
+            primary_artist_score = 1.0
+        # v264: full proper-name words are identical, only the initial
+        # decimal number differs from its spelled-out form on Spotify.
+        # A single official artist object is mandatory.
+        if (not primary_artist_exact and len(spotify_artist_objects) == 1
+                and equivalent_leading_number_artist(
+                    wanted_artists[0], spotify_artist_objects[0].get("name", "")
+                )):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
         # v194: & / + / 'and' zijn identieke expliciete verbindingswoorden
         # tussen dezelfde VOLLEDIGE artiestnamen; nooit een prefix/substring.
         if (not primary_artist_exact and
@@ -5672,8 +5720,22 @@ def find_spotify_track(
             wanted_version=wanted_version,
             catalog_version=spotify_version,
         )
+        # v263: complete title differences only; never drop edition labels.
+        # Require full artist identity, all requested guests and the SAME
+        # version family before accepting connector/OK spelling variants.
+        v263_catalog_title_equivalent = bool(
+            primary_artist_exact
+            and missing_feature_count == 0
+            and not guest_only_catalog_match
+            and not solo_collab_fallback
+            and wanted_version == spotify_version
+            and equivalent_catalog_connector_title(
+                wanted_title_for_match, item.get("name", "")
+            )
+        )
         structural_title_match = (
-            v241_plurals_match
+            v263_catalog_title_equivalent
+            or v241_plurals_match
             or v239_title_equivalent(
                 wanted_title_for_match, item.get("name", ""),
                 primary_artist_exact=primary_artist_exact,

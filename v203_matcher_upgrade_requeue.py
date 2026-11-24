@@ -27,6 +27,7 @@ from v209_verified_source_title import verified_emily_live_source_title
 from v216_report_metadata import has_report_correction
 from v254_verified_report_metadata import has_report_correction as has_v254_report_correction
 from v255_catalog_rescue import catalog_verified_retry as v255_catalog_verified_retry
+from v261_matcher_metadata import abbreviated_title_feature
 from v217_report_search import has_report_search_rescue
 from v207_verified_matcher_metadata import (
     verified_artist_search_name,
@@ -60,6 +61,12 @@ MATCHER_RETRY_RULES = (
     "v239_reported_source_retry",
     "v242_reported_source_retry",
     "v241_final_plural_title",
+    "v261_ambiguous_ill_title",
+    "v261_abbreviated_required_guest",
+    "v261_verified_catalog_alias",
+    "v262_exact_single_x_project",
+    "v263_complete_title_spelling",
+    "v264_complete_leading_artist_number",
 )
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
@@ -149,6 +156,32 @@ def applicable_rules(artist, title):
         hits.append("v239_reported_source_retry")
     if reported_v242_track(artist, title):
         hits.append("v242_reported_source_retry")
+    # v261: requeue ONLY real historically failed items affected by tested
+    # generic search changes. A requeue never authorizes a Spotify match.
+    if title.strip().casefold() == "ill":
+        hits.append("v261_ambiguous_ill_title")
+    if abbreviated_title_feature(title):
+        hits.append("v261_abbreviated_required_guest")
+    if artist.strip().casefold() in {
+        "da/ze", "fink (uk)", "gypsy & the cat", "so much 4 gravity",
+    }:
+        hits.append("v261_verified_catalog_alias")
+    # v262: recheck the observed exact project-credit mismatch only.
+    if (artist.strip().casefold(), title.strip().casefold()) == (
+        "stimming x lambert", "edelweiss",
+    ):
+        hits.append("v262_exact_single_x_project")
+    # v263: only genuine previously observed catalog spelling misses
+    # receive ONE bounded source-proven retry after the matcher improvement.
+    if (artist.strip().casefold(), title.strip().casefold()) in {
+        ("jamie t", "sticks and stones"),
+        ("dum dum girls", "are you ok?"),
+    }:
+        hits.append("v263_complete_title_spelling")
+    if (artist.strip().casefold(), title.strip().casefold()) == (
+        "12 drummers drumming", "shower of love",
+    ):
+        hits.append("v264_complete_leading_artist_number")
     return tuple(rule for rule in MATCHER_RETRY_RULES if rule in hits)
 
 
