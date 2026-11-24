@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "wilsen|||final",
+      "kurt vile|||zoom 97",
       "ben howard|||what a day",
       "spinvis|||bagagedrager",
       "suki waterhouse|||back in love",
@@ -112,9 +114,7 @@
       "soccer mommy|||circle the drain",
       "tamino|||babylon",
       "japanese breakfast|||mega circuit",
-      "camille camille|||in a song",
-      "maru maru|||the conversation",
-      "sault|||i just want to dance"
+      "camille camille|||in a song"
     ],
     "mellow_mix": [
       "rene aubry|||la grande cascade",
@@ -937,6 +937,7 @@
       "deserta|||hide"
     ],
     "dkfm_classic": [
+      "all about eve|||yesterday goodbye",
       "the suncharms|||reflections",
       "curve|||i speak your every word",
       "bowery electric|||without stopping",
@@ -1035,8 +1036,7 @@
       "cocteau twins|||because of whirl-jack",
       "chapterhouse|||feel the same",
       "whipped cream|||explosion",
-      "band of susans|||trouble spot",
-      "my bloody valentine|||moon song"
+      "band of susans|||trouble spot"
     ],
     "egofm_rnb": [
       "kwabs|||wrong or right",
@@ -1447,6 +1447,7 @@
       "mathieu & florzinho|||the indian"
     ],
     "ignoreradio_shoegaze": [
+      "the besnard lakes|||chemin de la baie ghost mix",
       "david holmes|||sick city",
       "yves tumor|||and loyalty is a nuisance child",
       "sun bruised|||to here knows when",
@@ -1545,8 +1546,7 @@
       "michael brook|||hybrid",
       "sounds like sunset|||undone",
       "flavor crystals|||moon patrol",
-      "drop nineteens|||pentatonic / another summer",
-      "beastie boys|||i don't know"
+      "drop nineteens|||pentatonic / another summer"
     ],
     "radio_britannia": [
       "english teacher|||r&b",
@@ -1651,6 +1651,7 @@
       "amble|||last rites"
     ],
     "wbru": [
+      "dominic fike|||small town",
       "noah kahan|||doors",
       "justice|||flower in a hurricane f tame impala sza king gizzard",
       "sufjan stevens|||fourth of july",
@@ -1748,11 +1749,11 @@
       "oasis|||champagne supernova",
       "jungle|||someday somewhere",
       "cage the elephant|||social cues",
-      "dominic fike|||small town",
       "lorde|||royals",
       "mgmt|||little dark age"
     ],
     "indie_x_fm": [
+      "flesh for lulu|||i go crazy",
       "edward sharpe & the magnetic zeros|||home",
       "friday pilots club|||yup!",
       "we are scientists|||less from you",
@@ -1851,30 +1852,29 @@
       "kasabian|||coming back to me good",
       "blancmange|||living on the ceiling",
       "ya tseen|||ixwsiteen i see you",
-      "m83|||blister sunrise",
-      "burning sensations|||belly of the whale"
+      "m83|||blister sunrise"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795560279.4170613,
-    "mellow_mix": 1795560279.4205053,
-    "big_sonic_heaven": 1795560279.4235418,
-    "radio_x_chilled": 1795560279.4263756,
-    "dreampop_radio": 1795560279.429104,
-    "indie_select": 1795560279.4322724,
-    "dkfm_edge": 1795560279.4352891,
+    "vuurland": 1795560367.182601,
+    "mellow_mix": 1795560367.1861086,
+    "big_sonic_heaven": 1795560367.1891158,
+    "radio_x_chilled": 1795560367.1919186,
+    "dreampop_radio": 1795560367.1946373,
+    "indie_select": 1795560367.197817,
+    "dkfm_edge": 1795560367.2007694,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795560279.4398894,
-    "dkfm_shoegaze": 1795560279.4435549,
-    "dkfm_classic": 1795560279.4465733,
-    "egofm_rnb": 1795560279.449643,
-    "egofm_chillout": 1795560279.4528036,
-    "dj_neihtul": 1795560279.4554102,
-    "gri_balkon": 1795560279.4576268,
-    "ignoreradio_shoegaze": 1795560279.460956,
-    "radio_britannia": 1795560279.4644241,
-    "wbru": 1795560279.466844,
-    "indie_x_fm": 1795560279.4696746
+    "dark_edge": 1795560367.2052982,
+    "dkfm_shoegaze": 1795560367.2088091,
+    "dkfm_classic": 1795560367.2118719,
+    "egofm_rnb": 1795560367.2148917,
+    "egofm_chillout": 1795560367.2178962,
+    "dj_neihtul": 1795560367.2204852,
+    "gri_balkon": 1795560367.2226706,
+    "ignoreradio_shoegaze": 1795560367.5896766,
+    "radio_britannia": 1795560367.5933669,
+    "wbru": 1795560367.595922,
+    "indie_x_fm": 1795560367.895501
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30787,6 +30787,7 @@
       "the besnard lakes|||carried it all around",
       "the besnard lakes|||carried it all around ghost mix",
       "the besnard lakes|||chemin de la baie",
+      "the besnard lakes|||chemin de la baie ghost mix",
       "the besnard lakes|||colour yr lights in",
       "the besnard lakes|||devastation",
       "the besnard lakes|||for agent 13",
@@ -35051,6 +35052,7 @@
       "fat dog|||cancel me i'm tired",
       "father john misty|||the old law",
       "fitz and the tantrums|||kiss the sky",
+      "flesh for lulu|||i go crazy",
       "frankie cosmos|||on the lips",
       "franz ferdinand|||take me out",
       "friday pilots club|||yup!",
@@ -37051,11 +37053,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "ben howard|||what a day",
+  "__last_radio_key_vuurland": "wilsen|||final",
   "__last_radio_key_mellow_mix": "rene aubry|||la grande cascade",
   "__last_radio_key_big_sonic_heaven": "siouxsie|||sea of tranquility",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 33944,
+  "__v116_fifo_next_sequence": 33946,
   "__v146_spotify_budget_slot": 1795560282.2769382,
   "__vuurland_active_playlist_count": 5749,
   "__vuurland_active_volume": 2,
@@ -159138,7 +159140,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "cold morning colors|||floating",
   "__last_radio_key_dkfm_shoegaze": "onira|||luster",
-  "__last_radio_key_dkfm_classic": "the suncharms|||reflections",
+  "__last_radio_key_dkfm_classic": "all about eve|||yesterday goodbye",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -164588,7 +164590,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "david holmes|||sick city",
+  "__last_radio_key_ignoreradio_shoegaze": "the besnard lakes|||chemin de la baie ghost mix",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -166123,7 +166125,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "english teacher|||r&b",
-  "__last_radio_key_wbru": "noah kahan|||doors",
+  "__last_radio_key_wbru": "dominic fike|||small town",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -175325,7 +175327,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "edward sharpe & the magnetic zeros|||home",
+  "__last_radio_key_indie_x_fm": "flesh for lulu|||i go crazy",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
