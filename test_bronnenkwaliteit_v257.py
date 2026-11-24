@@ -6,9 +6,9 @@ from bronnenkwaliteit_v257 import LIVE_SOURCES, build_report, markdown
 
 
 class QualityTests(unittest.TestCase):
-    def test_all_17_sources_and_archive(self):
-        self.assertEqual(len(LIVE_SOURCES), 17)
-        self.assertEqual(len(set(LIVE_SOURCES)), 17)
+    def test_all_18_sources_and_archive(self):
+        self.assertEqual(len(LIVE_SOURCES), 18)
+        self.assertEqual(len(set(LIVE_SOURCES)), 18)
         data = [
             {"source": "radio_britannia", "artist": "A", "title": "B", "_v116_fifo_seq": 1},
             {"source": "radio_britannia", "artist": " a ", "title": "b", "_v116_fifo_seq": 2},
@@ -17,7 +17,7 @@ class QualityTests(unittest.TestCase):
         original = copy.deepcopy(data)
         result = build_report(data, timestamp="2026-11-17T00:00:00Z")
         self.assertEqual(data, original)
-        self.assertEqual(len(result["sources"]), 18)
+        self.assertEqual(len(result["sources"]), 19)
         britannia = next(x for x in result["sources"] if x["source"] == "radio_britannia")
         self.assertEqual((britannia["pending"], britannia["unique_pending_titles"],
                           britannia["duplicate_pending_titles"]), (2, 1, 1))
