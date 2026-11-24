@@ -22,6 +22,17 @@ GLOBAL_LEGACY_BLOCKED_ARTISTS = frozenset({
     "black flag", "circle jerks", "suicidal tendencies", "bad brains",
     "turnstile", "ministry", "idles", "amyl and the sniffers",
     "sprints", "starcrawler", "a place to bury strangers",
+    # Clearly established hardcore punk, extreme metal and metalcore acts.
+    "minor threat", "dead kennedys", "agnostic front", "madball",
+    "cro-mags", "discharge", "the exploited", "gbh", "negative approach",
+    "germs", "fear", "poison idea", "the casualties", "sick of it all",
+    "hatebreed", "converge", "terror", "knocked loose", "earth crisis",
+    "napalm death", "cannibal corpse", "slayer", "death", "obituary",
+    "deicide", "morbid angel", "carcass", "mayhem", "darkthrone",
+    "immortal", "emperor", "behemoth", "meshuggah", "lamb of god",
+    "whitechapel", "suicide silence", "lorna shore", "thy art is murder",
+    "parkway drive", "killswitch engage", "as i lay dying",
+    "bullet for my valentine", "asking alexandria", "motionless in white",
     # Commerciële, duidelijk hitparadegerichte pop: uitsluitend Dark Edge.
     "ed sheeran", "justin bieber", "shawn mendes", "charlie puth",
     "maroon 5", "meghan trainor", "katy perry", "ariana grande",
