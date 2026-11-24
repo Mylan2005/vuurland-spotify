@@ -219,6 +219,7 @@
       "trace bundy|||porch swing"
     ],
     "big_sonic_heaven": [
+      "depeche mode|||nothing",
       "lisa gerrard|||adrift",
       "kilbey kennedy|||serafina",
       "nation of language|||i'm not ready for the change",
@@ -317,10 +318,10 @@
       "nation of language|||inept apollo",
       "echo & the bunnymen|||can't be sold",
       "bat for lashes|||peach sky",
-      "dr horsehead|||stay",
-      "the false dawns|||the robot girl psychiatrist"
+      "dr horsehead|||stay"
     ],
     "radio_x_chilled": [
+      "the cure|||lullaby acoustic",
       "phoenix|||long distance call",
       "oasis|||sad song",
       "coldplay|||yellow",
@@ -419,8 +420,7 @@
       "starsailor|||alcoholic",
       "sam fender|||dead boys",
       "foo fighters|||aurora",
-      "athlete|||you got the style",
-      "ben howard|||promise"
+      "athlete|||you got the style"
     ],
     "dreampop_radio": [
       "kid decker|||where it lies",
@@ -835,6 +835,7 @@
       "major murphy|||attention"
     ],
     "dkfm_shoegaze": [
+      "devotions|||excess",
       "mandarinaduck|||never never",
       "strangers in my house|||undefined",
       "vibragun|||my secret history",
@@ -933,10 +934,10 @@
       "sleep leaps 碎梦飞跃|||summer noise pool",
       "atmos bloom|||thorns",
       "sphere|||coda",
-      "weed|||thousand pounds",
-      "rew|||quiet all the time"
+      "weed|||thousand pounds"
     ],
     "dkfm_classic": [
+      "the nightblooms|||one weak moment",
       "band of susans|||bad timing",
       "cocteau twins|||heaven or las vegas",
       "loop|||blood",
@@ -1035,8 +1036,7 @@
       "catherine wheel|||painful thing",
       "revolver|||molasses",
       "boo radleys|||zoom",
-      "blind mr jones|||unforgettable waltz",
-      "slowdive|||she calls"
+      "blind mr jones|||unforgettable waltz"
     ],
     "egofm_rnb": [
       "unknown mortal orchestra|||hunnybee",
@@ -1345,6 +1345,7 @@
       "depeche mode|||my cosmos is mine"
     ],
     "gri_balkon": [
+      "bedouin|||walk away",
       "slime ft vondelpark|||2 player demo version",
       "kill emil|||62 moments ft ettin & manu",
       "musto & rietze|||caving",
@@ -1443,8 +1444,7 @@
       "pale|||fearing faces",
       "baril|||one more rush",
       "moby|||mistake",
-      "gorje hewek|||vecher",
-      "sohn|||lights"
+      "gorje hewek|||vecher"
     ],
     "ignoreradio_shoegaze": [
       "raymond scott woolson|||jubilate dio",
@@ -1754,24 +1754,24 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795546511.2085233,
-    "mellow_mix": 1795546511.2126012,
-    "big_sonic_heaven": 1795546511.216039,
-    "radio_x_chilled": 1795546511.2194142,
-    "dreampop_radio": 1795546511.2226887,
-    "indie_select": 1795546511.226343,
-    "dkfm_edge": 1795546511.2298572,
+    "vuurland": 1795546597.7959309,
+    "mellow_mix": 1795546597.8000493,
+    "big_sonic_heaven": 1795546597.8036666,
+    "radio_x_chilled": 1795546598.0846057,
+    "dreampop_radio": 1795546598.0880013,
+    "indie_select": 1795546598.091756,
+    "dkfm_edge": 1795546598.0953364,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795546511.2350106,
-    "dkfm_shoegaze": 1795546511.239072,
-    "dkfm_classic": 1795546511.2424867,
-    "egofm_rnb": 1795546511.246222,
-    "egofm_chillout": 1795546511.2499273,
-    "dj_neihtul": 1795546511.252972,
-    "gri_balkon": 1795546511.2555919,
-    "ignoreradio_shoegaze": 1795546511.2593656,
-    "radio_britannia": 1795546511.6250172,
-    "wbru": 1795546511.6279745
+    "dark_edge": 1795546598.1002533,
+    "dkfm_shoegaze": 1795546598.4273236,
+    "dkfm_classic": 1795546598.4309464,
+    "egofm_rnb": 1795546598.4347491,
+    "egofm_chillout": 1795546598.4382777,
+    "dj_neihtul": 1795546598.4412854,
+    "gri_balkon": 1795546598.44393,
+    "ignoreradio_shoegaze": 1795546598.4476948,
+    "radio_britannia": 1795546598.4516795,
+    "wbru": 1795546598.4545755
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -19775,6 +19775,7 @@
       "deux visages|||paint myself blue",
       "deux visages|||pixelate",
       "deux visages|||silhouette",
+      "devotions|||excess",
       "dharmacide|||horses/divorces",
       "dhatura|||spiral apple",
       "dianas|||did ya",
@@ -36539,9 +36540,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "eddie vedder|||save it for later",
   "__last_radio_key_mellow_mix": "los lobos|||one time one night",
-  "__last_radio_key_big_sonic_heaven": "lisa gerrard|||adrift",
+  "__last_radio_key_big_sonic_heaven": "depeche mode|||nothing",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 33745,
+  "__v116_fifo_next_sequence": 33746,
   "__v146_spotify_budget_slot": 1795546514.9575784,
   "__vuurland_active_playlist_count": 5669,
   "__vuurland_active_volume": 2,
@@ -156709,7 +156710,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "phoenix|||long distance call",
+  "__last_radio_key_radio_x_chilled": "the cure|||lullaby acoustic",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -158294,8 +158295,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "letting up despite great faults|||swirl",
-  "__last_radio_key_dkfm_shoegaze": "mandarinaduck|||never never",
-  "__last_radio_key_dkfm_classic": "band of susans|||bad timing",
+  "__last_radio_key_dkfm_shoegaze": "devotions|||excess",
+  "__last_radio_key_dkfm_classic": "the nightblooms|||one weak moment",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -163722,7 +163723,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "slime ft vondelpark|||2 player demo version",
+  "__last_radio_key_gri_balkon": "bedouin|||walk away",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
