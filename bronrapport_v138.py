@@ -22,7 +22,10 @@ ACTIVE_SOURCES = {
  'ignoreradio_shoegaze':'Ignoreradio Shoegaze',
  'radio_britannia':'Radio Britannia',
  'wbru':'WBRU',
- 'duyster':'Duyster archief',
+}
+# Duyster is a separate archive workflow, not a live RadioBox feed.
+ARCHIVE_SOURCES = {
+ 'duyster':'Duyster archief (aparte workflow)',
 }
 # Retain old queue labels for visibility, but never present them as active feeds.
 LEGACY_SOURCES = {
@@ -30,7 +33,7 @@ LEGACY_SOURCES = {
  'championship_vinyl':'Championship Vinyl (historische wachtrij)',
  'radio_indie_alternative':'Radio Indie Alternative (historische wachtrij)',
 }
-SOURCES = {**ACTIVE_SOURCES, **LEGACY_SOURCES}
+SOURCES = {**ACTIVE_SOURCES, **ARCHIVE_SOURCES, **LEGACY_SOURCES}
 SELECT=re.compile(r'(?:gezamenlijke FIFO|v221 bronrotatie): (?:FIFO-)?volgnummer\s+\d+\s+geselecteerd\s*\(bron:\s*([a-z_]+)\)')
 SEARCH=re.compile(r'v224 Spotify-zoekbeurt:\s*([a-z_]+)')
 ADD_SOURCE=re.compile(r'v224 Spotify-toevoegbeurt:\s*([a-z_]+)')
@@ -79,7 +82,12 @@ def assess(log, queue):
         '| Radiobron | Status | Controle gestart | Titels gevonden (rondes) | Spotify Search | Geen match | Spotify toegevoegd | Nu in queue |',
         '|---|---|---:|---:|---:|---:|---:|---:|']
     for key,name in SOURCES.items():
-        status = 'Actief' if key in ACTIVE_SOURCES else 'Historisch/uitgeschakeld'
+        if key in ACTIVE_SOURCES:
+            status = 'Actief'
+        elif key in ARCHIVE_SOURCES:
+            status = 'Archief (aparte workflow)'
+        else:
+            status = 'Historisch/uitgeschakeld'
         out.append(f'| {name} | {status} | {seen[name]} | {ok[name]} | {searched[key]} | {misses[key]} | {added[key]} | {counts[key]} |')
     out.extend(['',warning,'',
       '⚠️ Spotify Search telt echte zoekbeurten, niet geslaagde nummers. Bij een volle wachtrij zonder zoekbeurten moet de bronselectie onderzocht worden. ',
@@ -87,7 +95,7 @@ def assess(log, queue):
       'De wachtrij en duplicaatfilter kunnen alle uitzendingen al kennen.',
       '⚠️ Deze rapportage telt regels in het log. Een netwerkfout of ontbrekende log kan een onvolledig beeld geven.',''])
     if rounds >= 3:
-        missing=[name for name in SOURCES.values() if ok[name]==0]
+        missing=[name for name in ACTIVE_SOURCES.values() if ok[name]==0]
         if missing: out.extend(['', '⚠️ Geen succesvolle muzieklijsten bevestigd tijdens deze runner: '+', '.join(missing)])
     pathlib.Path('vuurland_brongezondheid.md').write_text('\n'.join(out),encoding='utf-8')
     print('📊 Brongezondheid opgesteld (alleen-lezen).')
