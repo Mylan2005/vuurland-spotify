@@ -33,6 +33,12 @@ GLOBAL_LEGACY_BLOCKED_ARTISTS = frozenset({
     "whitechapel", "suicide silence", "lorna shore", "thy art is murder",
     "parkway drive", "killswitch engage", "as i lay dying",
     "bullet for my valentine", "asking alexandria", "motionless in white",
+    # Additional explicit heavy music exclusions, exact artist identities only.
+    "anthrax", "testament", "exodus", "overkill", "kreator", "sodom", "destruction", "sepultura", "sacred reich", "nuclear assault", "municipal waste", "havok", "warbringer", "voivod",
+    "iron maiden", "judas priest", "manowar", "accept", "saxon", "hammerfall", "blind guardian", "dragonforce", "sabaton", "powerwolf", "helloween", "running wild", "gloryhammer", "beast in black", "iron savior",
+    "cryptopsy", "dying fetus", "suffocation", "nile", "decapitated", "aborted", "bloodbath", "benighted", "cattle decapitation", "belphegor", "marduk", "gorgoroth", "1349", "watain", "satyricon", "dark funeral",
+    "the ghost inside", "august burns red", "miss may i", "unearthed", "all that remains", "bleeding through", "bury tomorrow", "fit for an autopsy", "chelsea grin", "oceano", "despised icon", "carnifex", "spite", "enterprise earth",
+    "strife", "snapcase", "comeback kid", "bane", "have heart", "gallows", "the bronx", "the varukers", "chaos uk", "anti cimex", "disfear", "tragedy", "doom", "extreme noise terror", "subhumans",
     # Commerciële, duidelijk hitparadegerichte pop: uitsluitend Dark Edge.
     "ed sheeran", "justin bieber", "shawn mendes", "charlie puth",
     "maroon 5", "meghan trainor", "katy perry", "ariana grande",
