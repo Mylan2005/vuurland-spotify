@@ -7,7 +7,7 @@
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "c8cd44668fa9d94f16d9e600cfec64da46805997827e42a449a2156bf97fbedb",
-      "checked_at_utc": "2026-11-24T18:50:21.330455+00:00"
+      "checked_at_utc": "2026-11-24T18:52:23.071342+00:00"
     },
     "832": {
       "source_tracks": 24,
@@ -3499,21 +3499,21 @@
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "5268fad03d7108c0351ebeff12167b7e8cdd428afec0fcc74906aba9acf867c0",
-      "checked_at_utc": "2026-11-24T18:50:19.552328+00:00"
+      "checked_at_utc": "2026-11-24T18:52:21.381861+00:00"
     },
     "835": {
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "7143ed29748f5ee0e5a3a04396d09614808b2e9144c1351aebb0229ff88f0e85",
-      "checked_at_utc": "2026-11-24T18:50:17.787049+00:00"
+      "checked_at_utc": "2026-11-24T18:52:19.707439+00:00"
     }
   },
   "total_recovered": 8,
   "complete": false,
-  "last_checked_at_utc": "2026-11-24T18:50:23.507862+00:00",
+  "last_checked_at_utc": "2026-11-24T18:52:25.040355+00:00",
   "last_batch_verified": 3,
   "last_batch_recovered": 0,
-  "last_error": "Aflevering 251 niet bevestigd [source_missing_or_parse_mismatch]: DuysterEpisodeValidationError: Duyster aflevering 251: bron gaf geen aflevering terug (404, lege pagina of parser kon het afleveringsnummer niet bevestigen)",
+  "last_error": "Aflevering 251 niet bevestigd [parser_pid_not_confirmed]: DuysterEpisodeSourceError: Duyster aflevering 251: geen exacte bronbevestiging (genummerde URL: HTTP 200, aflevering 251 niet bevestigd; actuele playlist: HTTP 200, aflevering 251 niet bevestigd)",
   "last_error_pid": 251,
-  "last_error_code": "source_missing_or_parse_mismatch"
+  "last_error_code": "parser_pid_not_confirmed"
 }
