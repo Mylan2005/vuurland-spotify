@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795563854.0102565,
+  "__v150_next_spotify_round_at": 1795563977.531845,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -525,6 +525,7 @@
       "over the rhine|||i want you to be my love"
     ],
     "indie_select": [
+      "nouvelle vague|||the american",
       "ten fe|||born slippy nuxx",
       "chromatics|||ceremony new order cover",
       "anothers blood|||lonesome tonight",
@@ -623,8 +624,7 @@
       "ok go|||the writing's on the wall",
       "the pains of being pure at heart|||beautiful you",
       "clancy|||overdue edit",
-      "whomadewho|||every minute alone",
-      "beirut|||landslide"
+      "whomadewho|||every minute alone"
     ],
     "dkfm_edge": [
       "affection to rent|||if we fall",
@@ -1447,6 +1447,7 @@
       "oskar offermann|||heading out"
     ],
     "ignoreradio_shoegaze": [
+      "sonic youth|||do you believe in rapture?",
       "orange juice|||rip it up",
       "walrus|||dyed",
       "health|||men today",
@@ -1545,8 +1546,7 @@
       "diiv|||lorelei",
       "mint julep|||longshore drift",
       "janedriver|||ballad of the bumble bee",
-      "rocket|||crossing fingers",
-      "hiro kone|||infinite regress"
+      "rocket|||crossing fingers"
     ],
     "radio_britannia": [
       "the snuts|||pts",
@@ -1753,6 +1753,7 @@
       "rex orange county|||loving is easy"
     ],
     "indie_x_fm": [
+      "cut copy|||belong to you feat kate bollinger",
       "the b-52's|||dance this mess around",
       "nothing but thieves|||impossible",
       "phoenix|||long distance call",
@@ -1851,30 +1852,29 @@
       "franz ferdinand|||take me out",
       "cosmetique|||drink and jive",
       "morrissey|||without music the world dies",
-      "bdrmm|||infinity peaking",
-      "johnny thunders|||chinese rocks"
+      "bdrmm|||infinity peaking"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795563820.2983193,
-    "mellow_mix": 1795563820.3018541,
-    "big_sonic_heaven": 1795563820.3050966,
-    "radio_x_chilled": 1795563820.3080816,
-    "dreampop_radio": 1795563820.3108895,
-    "indie_select": 1795563820.314121,
-    "dkfm_edge": 1795563820.3172731,
+    "vuurland": 1795563856.0706923,
+    "mellow_mix": 1795563856.0742714,
+    "big_sonic_heaven": 1795563856.0774367,
+    "radio_x_chilled": 1795563856.080298,
+    "dreampop_radio": 1795563856.0831432,
+    "indie_select": 1795563856.086722,
+    "dkfm_edge": 1795563856.0898573,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795563820.3219914,
-    "dkfm_shoegaze": 1795563820.3256307,
-    "dkfm_classic": 1795563820.3287158,
-    "egofm_rnb": 1795563820.333517,
-    "egofm_chillout": 1795563820.336614,
-    "dj_neihtul": 1795563820.339353,
-    "gri_balkon": 1795563820.3416388,
-    "ignoreradio_shoegaze": 1795563820.3450425,
-    "radio_britannia": 1795563820.3486726,
-    "wbru": 1795563820.351064,
-    "indie_x_fm": 1795563820.3539634
+    "dark_edge": 1795563856.0944908,
+    "dkfm_shoegaze": 1795563856.098168,
+    "dkfm_classic": 1795563856.1032882,
+    "egofm_rnb": 1795563856.1065826,
+    "egofm_chillout": 1795563856.1096692,
+    "dj_neihtul": 1795563856.112391,
+    "gri_balkon": 1795563856.114634,
+    "ignoreradio_shoegaze": 1795563856.4498277,
+    "radio_britannia": 1795563856.4536746,
+    "wbru": 1795563856.4561653,
+    "indie_x_fm": 1795563856.7466483
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -30536,6 +30536,7 @@
       "sonic flower|||feedback summer",
       "sonic youth|||bull in the heather",
       "sonic youth|||death valley '69 w/ lydia lunch",
+      "sonic youth|||do you believe in rapture?",
       "sonic youth|||drunken butterfly",
       "sonic youth|||hendrix necro",
       "sonic youth|||i got a catholic block",
@@ -35095,6 +35096,7 @@
       "courtney barnett|||mantis",
       "crocodiles|||i wanna kill",
       "cure for youth|||scars",
+      "cut copy|||belong to you feat kate bollinger",
       "dan auerbach|||king of a one horse town",
       "datarock|||computer camp love",
       "dead kennedys|||california uber alles",
@@ -37123,8 +37125,8 @@
   "__last_radio_key_mellow_mix": "jump little children|||sparrow",
   "__last_radio_key_big_sonic_heaven": "encarta 98|||nada va a cambiar",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 34006,
-  "__v146_spotify_budget_slot": 1795563736.0147233,
+  "__v116_fifo_next_sequence": 34008,
+  "__v146_spotify_budget_slot": 1795563859.5055614,
   "__vuurland_active_playlist_count": 5751,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -120476,7 +120478,8 @@
     "mike mago & dragonette|||secret stash original mix": 1,
     "jah one|||morning friends ft dinar": 1,
     "kenny beats|||02 kenny beats parenthesis": 1,
-    "isolee|||pisco original mix": 1
+    "isolee|||pisco original mix": 1,
+    "lang lang|||fur elise ludwig van beethoven 1810": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -157940,7 +157943,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "ten fe|||born slippy nuxx",
+  "__last_radio_key_indie_select": "nouvelle vague|||the american",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -162986,7 +162989,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "duyster",
+  "__v221_last_selected_source": "mellow_mix",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -162998,7 +163001,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "duyster",
+  "__v224_last_spotify_opportunity_source": "mellow_mix",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -163031,7 +163034,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "duyster",
+  "__v227_last_source_turn": "mellow_mix",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -164754,7 +164757,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "orange juice|||rip it up",
+  "__last_radio_key_ignoreradio_shoegaze": "sonic youth|||do you believe in rapture?",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -166320,31 +166323,6 @@
   "__match_v35__kt tunstall|||white bird": "spotify:track:61qnl6ZTZDFKu2bNQ7Evla",
   "__match_v35__the cure|||cut here": "spotify:track:1SuAd1VNCDpM2ovs1ic9tN",
   "__v258_matcher_triage": {
-    "crazy p|||wecanonlybewhoweare - wolf & lamb ft slow hands mix": {
-      "source": "gri_balkon",
-      "artist": "Crazy P",
-      "title": "Wecanonlybewhoweare - Wolf & Lamb ft. Slow Hands mix",
-      "kind": "promising",
-      "variant": 0,
-      "candidates": [
-        {
-          "artist": "Crazy P, Wolf + Lamb, Slow Hands",
-          "title": "Wecanonlybewhoweare - Wolf & lamb feat. Slow Hands mix",
-          "spotify_id": "48Pp8rcjPMfYhmE9TgcjUu"
-        },
-        {
-          "artist": "Crazy P, Wolf + Lamb, Slow Hands",
-          "title": "Wecanonlybewhoweare - Wolf & lamb feat. Slow Hands mix",
-          "spotify_id": "2Yokpgwhrs4CFtO84VSQFr"
-        },
-        {
-          "artist": "Warhaus",
-          "title": "Simple Pleasures",
-          "spotify_id": "1VajE1Bb1LR4khUWRsaYUV"
-        }
-      ],
-      "status": "review_guard"
-    },
     "the la's|||there she goes again": {
       "source": "dreampop_radio",
       "artist": "The La's",
@@ -172008,6 +171986,31 @@
         }
       ],
       "status": "review_guard"
+    },
+    "lang lang|||fur elise ludwig van beethoven 1810": {
+      "source": "mellow_mix",
+      "artist": "Lang Lang",
+      "title": "Für Elise (Ludwig van Beethoven, 1810)",
+      "kind": "uncertain",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "Ludwig van Beethoven, Lang Lang",
+          "title": "Für Elise, Bagatelle in A Minor, WoO 59",
+          "spotify_id": "0H2VhGUC3P3hvwz8rdGIpC"
+        },
+        {
+          "artist": "makko, The Chainsmokers",
+          "title": "Inundauswendig",
+          "spotify_id": "1DOVkuzAdnyHgDJXbp92Wq"
+        },
+        {
+          "artist": "Ludwig van Beethoven, Lang Lang",
+          "title": "Für Elise, Bagatelle in A Minor, WoO 59",
+          "spotify_id": "5PYkhnP4NZQqJqw3xruLym"
+        }
+      ],
+      "status": "uncertain"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
@@ -175523,7 +175526,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "the b-52's|||dance this mess around",
+  "__last_radio_key_indie_x_fm": "cut copy|||belong to you feat kate bollinger",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
