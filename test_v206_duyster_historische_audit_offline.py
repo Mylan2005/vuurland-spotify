@@ -154,7 +154,7 @@ with tempfile.TemporaryDirectory() as gap_tmp:
     audit_gap = root_gap / "audit_gap.json"
     manifest_gap = root_gap / "gaps.json"
     imported_gap.write_text('{"next_pid":835,"last_imported_pid":834}', encoding="utf-8")
-    archive_gap.write_text("artist,title,first_seen_pid,seen_in\\n", encoding="utf-8")
+    archive_gap.write_text("artist,title,first_seen_pid,seen_in\n", encoding="utf-8")
     manifest_gap.write_text(json.dumps({
         "format": "v206-duyster-source-gaps-v1",
         "gaps": [{
