@@ -1,9 +1,23 @@
 """Zero-network checks; strictly no Spotify operations."""
-import pathlib, tempfile, json
-from bronrapport_v138 import assess, SOURCES
+import pathlib, tempfile, json, ast
+from bronrapport_v138 import assess, SOURCES, ACTIVE_SOURCES, ARCHIVE_SOURCES, LEGACY_SOURCES
 
 def run():
-    assert len(SOURCES)==12 and 'dkfm_classic' in SOURCES
+    assert 'dkfm_classic' in ACTIVE_SOURCES
+    sync_source=pathlib.Path('vuurland_sync.py').read_text(encoding='utf-8')
+    tree=ast.parse(sync_source)
+    order_node=next(
+        node for node in tree.body
+        if isinstance(node, ast.Assign)
+        and any(isinstance(target, ast.Name) and target.id=='RADIO_SOURCE_ORDER'
+                for target in node.targets)
+    )
+    expected_active=set(ast.literal_eval(order_node.value))
+    assert set(ACTIVE_SOURCES)==expected_active
+    assert set(ARCHIVE_SOURCES)=={'duyster'}
+    assert set(LEGACY_SOURCES)=={'radio_x_main','championship_vinyl','radio_indie_alternative'}
+    assert set(ACTIVE_SOURCES).isdisjoint(LEGACY_SOURCES)
+    assert set(SOURCES)==set(ACTIVE_SOURCES) | set(ARCHIVE_SOURCES) | set(LEGACY_SOURCES)
     with tempfile.TemporaryDirectory() as root:
         p=pathlib.Path(root)
         (p/'log').write_text('📻 Vuurland sync\n📻 DKFM Classic wordt gecontroleerd...\n DKFM Classic: 100 nummers gevonden.\n🔢 v120 gezamenlijke FIFO: volgnummer 2000 geselecteerd (bron: dkfm_classic)\n✅ Toegevoegd: Test - Song\n',encoding='utf-8')
@@ -21,7 +35,6 @@ def run():
     assert 'def get_active_volume_playlist(cache):' in s
     assert 'def v129_restore_volume_dedupe(cache, active_volume_number):' in s
     # Execute only two explicitly selected AST functions with offline fakes.
-    import ast
     tree=ast.parse(s)
     funcs=[node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name in ('get_active_volume_playlist','v129_restore_volume_dedupe')]
     assert len(funcs)==2

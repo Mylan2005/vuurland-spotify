@@ -2,14 +2,38 @@
 """Read-only runner report: station heartbeat, queue health, and per-source additions."""
 import collections, json, pathlib, re, sys
 
-SOURCES = {
- 'vuurland':'Studio Brussel Vuurland','mellow_mix':'Radio Paradise Mellow Mix',
- 'big_sonic_heaven':'Big Sonic Heaven Radio','radio_x_chilled':'Radio X Chilled',
- 'indie_select':'Indie Select','championship_vinyl':'Championship Vinyl',
- 'dark_edge':'Dark Edge Radio','dreampop_radio':'Dreampop Radio',
- 'radio_indie_alternative':'Radio Indie Alternative','dkfm_edge':'DKFM Edge',
- 'dkfm_shoegaze':'DKFM Shoegaze Radio','dkfm_classic':'DKFM Classic',
- 'duyster':'Duyster archief'}
+# Must match vuurland_sync.RADIO_SOURCE_ORDER plus the separate Duyster archive.
+# This is the full active feed set, not a hand-maintained subset.
+ACTIVE_SOURCES = {
+ 'vuurland':'Studio Brussel Vuurland',
+ 'mellow_mix':'Radio Paradise Mellow Mix',
+ 'big_sonic_heaven':'Big Sonic Heaven Radio',
+ 'radio_x_chilled':'Radio X Chilled',
+ 'dreampop_radio':'Dreampop Radio',
+ 'indie_select':'Indie Select',
+ 'dkfm_edge':'DKFM Edge',
+ 'dark_edge':'Dark Edge Radio',
+ 'dkfm_shoegaze':'DKFM Shoegaze Radio',
+ 'dkfm_classic':'DKFM Classic',
+ 'egofm_rnb':'egoFM R&B',
+ 'egofm_chillout':'egoFM Chillout',
+ 'dj_neihtul':'DJ Neihtul',
+ 'gri_balkon':'Gri Balkon',
+ 'ignoreradio_shoegaze':'Ignoreradio Shoegaze',
+ 'radio_britannia':'Radio Britannia',
+ 'wbru':'WBRU',
+}
+# Duyster is a separate archive workflow, not a live RadioBox feed.
+ARCHIVE_SOURCES = {
+ 'duyster':'Duyster archief (aparte workflow)',
+}
+# Retain old queue labels for visibility, but never present them as active feeds.
+LEGACY_SOURCES = {
+ 'radio_x_main':'Radio X (uitgeschakeld)',
+ 'championship_vinyl':'Championship Vinyl (historische wachtrij)',
+ 'radio_indie_alternative':'Radio Indie Alternative (historische wachtrij)',
+}
+SOURCES = {**ACTIVE_SOURCES, **ARCHIVE_SOURCES, **LEGACY_SOURCES}
 SELECT=re.compile(r'(?:gezamenlijke FIFO|v221 bronrotatie): (?:FIFO-)?volgnummer\s+\d+\s+geselecteerd\s*\(bron:\s*([a-z_]+)\)')
 SEARCH=re.compile(r'v224 Spotify-zoekbeurt:\s*([a-z_]+)')
 ADD_SOURCE=re.compile(r'v224 Spotify-toevoegbeurt:\s*([a-z_]+)')
@@ -55,17 +79,23 @@ def assess(log, queue):
         entries=[];counts=collections.Counter();warning=f'⚠️ Wachtrij kon niet gelezen worden: {exc}'
     out=['# 📻 Vuurland — gezondheid per bron','',
         f'**{rounds} syncronde(s) in deze runner** — dit is géén 24-uursstatistiek.','',
-        '| Radiobron | Controle gestart | Titels gevonden (rondes) | Spotify Search | Geen match | Spotify toegevoegd | Nu in queue |',
-        '|---|---:|---:|---:|---:|---:|---:|']
+        '| Radiobron | Status | Controle gestart | Titels gevonden (rondes) | Spotify Search | Geen match | Spotify toegevoegd | Nu in queue |',
+        '|---|---|---:|---:|---:|---:|---:|---:|']
     for key,name in SOURCES.items():
-        out.append(f'| {name} | {seen[name]} | {ok[name]} | {searched[key]} | {misses[key]} | {added[key]} | {counts[key]} |')
+        if key in ACTIVE_SOURCES:
+            status = 'Actief'
+        elif key in ARCHIVE_SOURCES:
+            status = 'Archief (aparte workflow)'
+        else:
+            status = 'Historisch/uitgeschakeld'
+        out.append(f'| {name} | {status} | {seen[name]} | {ok[name]} | {searched[key]} | {misses[key]} | {added[key]} | {counts[key]} |')
     out.extend(['',warning,'',
       '⚠️ Spotify Search telt echte zoekbeurten, niet geslaagde nummers. Bij een volle wachtrij zonder zoekbeurten moet de bronselectie onderzocht worden. ',
       '⚠️ Een bron die wel gecontroleerd is maar geen nummers toevoegt, is niet per se defect. '
       'De wachtrij en duplicaatfilter kunnen alle uitzendingen al kennen.',
       '⚠️ Deze rapportage telt regels in het log. Een netwerkfout of ontbrekende log kan een onvolledig beeld geven.',''])
     if rounds >= 3:
-        missing=[name for name in SOURCES.values() if ok[name]==0]
+        missing=[name for name in ACTIVE_SOURCES.values() if ok[name]==0]
         if missing: out.extend(['', '⚠️ Geen succesvolle muzieklijsten bevestigd tijdens deze runner: '+', '.join(missing)])
     pathlib.Path('vuurland_brongezondheid.md').write_text('\n'.join(out),encoding='utf-8')
     print('📊 Brongezondheid opgesteld (alleen-lezen).')

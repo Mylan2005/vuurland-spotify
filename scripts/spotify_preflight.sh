@@ -6,6 +6,7 @@ python3 -m compileall -q .
 python3 -m py_compile vuurland_sync.py
 python3 test_v85_offline.py
 python3 test_v86_offline.py
+python3 test_v138_offline.py
 python3 test_v158_routing_offline.py
 python3 test_v221_source_round_robin_offline.py
 python3 test_v224_fair_spotify_opportunities_offline.py
