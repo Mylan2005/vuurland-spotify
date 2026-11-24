@@ -40,6 +40,6 @@ jobs:
       - name: Compile Duyster modules
         run: python -m py_compile duyster_historische_audit.py duyster_weekly_update.py duyster_archive_fifo.py
       - name: Test weekly archive importer
-        run: python -m unittest -v test_duyster_weekly_update_offline.py
+        run: python test_duyster_weekly_update_offline.py
       - name: Test complete historical audit
-        run: python -m unittest -v test_v206_duyster_historische_audit_offline.py
+        run: python test_v206_duyster_historische_audit_offline.py
