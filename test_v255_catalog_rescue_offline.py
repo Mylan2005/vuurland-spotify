@@ -14,6 +14,7 @@ for artist, title, album in (
     ("Curve", "Chinese Burn", "Come Clean"),
     ("Palace Brothers", "You Will Miss Me When I Burn", "Days in the Wake"),
     ("Beady Eye", "For Anyone", "Different Gear, Still Speeding"),
+    ("Sarah Harmer", "Lodestar", "You Were Here"),
 ):
     assert query(artist, title, 0) is None
     assert query(artist, title, 1) == f'"{artist}" "{title}" "{album}"'
@@ -23,6 +24,8 @@ for artist, title in (
     ("Curve", "Chinese Burn (Live)"),
     ("Other Band", "Chinese Burn"),
     ("Beady Eye", "For Anyone (Remix)"),
+    ("Sarah Harmer", "Lodestar (Live)"),
+    ("Donavon Frankenreiter & Jack Johnson", "Free"),
     ("Palace Brothers", "You Will Miss Me When I Burn (Live)"),
     ("Martin Kohlstedt", "ELL (Other Rework)"),
     ("Elbow", "One Day Like This"),

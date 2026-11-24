@@ -24,7 +24,7 @@ from v258_matcher_triage import (classify_candidates as v258_classify, early_par
 from v250_cure_album_version import owner_approved_album_version
 from v252_unavailable_radio_x import skip_unavailable_radio_x_recording
 from v253_unavailable_dkfm_edge import skip_unavailable_dkfm_edge_recording
-from v245_multi_guest_credits import split_explicit_multiword_guests
+from v245_multi_guest_credits import split_explicit_multiword_guests, guest_credit_matches, split_full_collaborator_credit, complete_collaboration_matches
 from v216_report_metadata import report_metadata_correction as v216_report_correction
 from v254_verified_report_metadata import report_correction as v254_report_correction
 from v255_catalog_rescue import catalog_metadata as v255_catalog_metadata, safe_catalog_album_query as v255_catalog_album_query
@@ -1873,6 +1873,19 @@ def v148_block_confirmed_romanian(artist, title):
            t.startswith('dezorientat '))
 
 
+# Verified sung language, NOT an artist nationality or a guessed title script.
+# Add future Turkish-vocal recordings only with independently checked lyrics/audio.
+V263_CONFIRMED_TURKISH_VOCALS = frozenset({
+    ("sren", "bozuk"),  # Confirmed Turkish lyrics on the artist's release.
+})
+
+
+def v263_is_confirmed_turkish_vocal(artist, title):
+    a = " ".join(str(artist or "").casefold().split())
+    t = " ".join(str(title or "").casefold().split())
+    return (a, t) in V263_CONFIRMED_TURKISH_VOCALS
+
+
 # v150: taalfilter en duurzame Spotify-quota-bescherming.
 # Alleen sterke titelsignalen en BEVESTIGDE opnames. Geen nationaliteitsblokkade.
 def v150_is_unwanted_language(artist, title):
@@ -1922,6 +1935,8 @@ def v150_is_unwanted_language(artist, title):
 
 
 def v140_is_unwanted_language_title(title, artist=""):
+    if v263_is_confirmed_turkish_vocal(artist, title):
+        return True
     if v191_is_german_vocal_risk(artist, title):
         return True
     if v190_is_language_exempt_artist(artist):
@@ -2007,6 +2022,8 @@ def v106_language_decision(artist, title):
     import csv
     from pathlib import Path
 
+    if v263_is_confirmed_turkish_vocal(artist, title):
+        return "block"
     if v191_is_german_vocal_risk(artist, title):
         return "block"
     if v190_is_language_exempt_artist(artist):
@@ -2030,7 +2047,7 @@ def v106_language_decision(artist, title):
                 status = str(row.get("beslissing", "")).strip().casefold()
                 if status in ("toestaan", "allow", "ok"):
                     return "allow"
-                if status in ("blokkeren", "block", "duits"):
+                if status in ("blokkeren", "block", "duits", "turks", "turkish"):
                     return "block"
                 return "review"
 
@@ -4177,7 +4194,9 @@ def find_spotify_track(
         return compacted
 
     def artist_parts(value):
-        value = normalize(value)
+        # Keep a visible trailing ellipsis until the complete Spotify credit
+        # is checked. normalize() otherwise removes it prematurely.
+        value = str(value or "").strip()
 
         # &, "and" en komma's kunnen deel uitmaken van
         # één officiële artiestennaam:
@@ -4203,9 +4222,10 @@ def find_spotify_track(
                 if guests:
                     expanded.extend(guests)
                 else:
-                    expanded.append(credit)
+                    expanded.extend(split_explicit_multiword_guests(credit))
             parts = expanded
-        return [part.strip() for part in parts if part.strip()]
+        return [normalize(part) + ("..." if part.strip().endswith(("...", "…")) else "")
+                for part in parts if part.strip()]
 
     def title_identity(value):
         """
@@ -4703,7 +4723,13 @@ def find_spotify_track(
     wanted_title_base = title_base(title)
     wanted_version = requested_version(title)
 
+    # Three or more explicitly listed full collaborator names are a
+    # catalog collaboration, not one enormous Spotify artist identity.
+    # Names must ALL match individual Spotify artist objects exactly.
     wanted_artists = artist_parts(artist)
+    full_collaborator_names = split_full_collaborator_credit(artist)
+    if full_collaborator_names:
+        wanted_artists = [normalize(name) for name in full_collaborator_names]
 
     # v71: expliciet gecrediteerde gast in de radiotitel.
     with_credit = re.search(r'\(with\s+([^()]+)\)\s*$', str(title), flags=re.I)
@@ -4890,6 +4916,12 @@ def find_spotify_track(
             primary_wanted_artist
             == spotify_primary_compact
         )
+        # Spotify may list every project collaborator in a different order.
+        # Only exact complete artist-object SET equality can rescue this.
+        if (full_collaborator_names and complete_collaboration_matches(
+                ", ".join(full_collaborator_names), spotify_artists)):
+            primary_artist_exact = True
+            primary_artist_score = 1.0
         # v194: & / + / 'and' zijn identieke expliciete verbindingswoorden
         # tussen dezelfde VOLLEDIGE artiestnamen; nooit een prefix/substring.
         if (not primary_artist_exact and
@@ -5323,7 +5355,7 @@ def find_spotify_track(
         # RadioBox ze expliciet vermeldt.
         matched_feature_count = 0
 
-        for wanted_feature in wanted_artist_compact[1:]:
+        for guest_index, wanted_feature in enumerate(wanted_artist_compact[1:], start=1):
 
             feature_score = max(
                 SequenceMatcher(
@@ -5334,7 +5366,13 @@ def find_spotify_track(
                 for spotify_artist in spotify_artist_compact
             )
 
-            if feature_score >= 0.98 or any(
+            raw_feature = wanted_artists[guest_index]
+            if raw_feature.endswith(("...", "…")):
+                if guest_credit_matches(raw_feature, spotify_artists):
+                    matched_feature_count += 1
+            elif guest_credit_matches(raw_feature, spotify_artists):
+                matched_feature_count += 1
+            elif feature_score >= 0.98 or any(
                 wanted_feature == spotify_artist
                 for spotify_artist in spotify_artist_compact
             ):
@@ -5352,6 +5390,12 @@ def find_spotify_track(
         if missing_feature_count:
             # v210: de nieuwe v208-haakjesfeat is een expliciet gevraagde
             # volledige samenwerking, nooit een uitnodiging voor solo-fallback.
+            # An explicitly grouped A & B guest credit is never a license
+            # to choose a solo/incorrect guest recording.
+            if any(" and " in f for f in wanted_artists[1:]):
+                continue
+            if any(f.endswith(("...", "…")) for f in wanted_artists[1:]):
+                continue
             if _v208_had_explicit_parenthesized_guest or _v211_had_confirmed_guest:
                 continue
             if (not primary_artist_exact

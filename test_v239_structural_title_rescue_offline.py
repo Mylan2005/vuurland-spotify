@@ -47,4 +47,4 @@ from pathlib import Path
 source = Path(__file__).with_name("vuurland_sync.py").read_text("utf-8")
 assert "guests = v240_dual_feature(credit)" in source
 assert "expanded.extend(guests)" in source
-assert "for wanted_feature in wanted_artist_compact[1:]" in source
+assert "for guest_index, wanted_feature in enumerate(wanted_artist_compact[1:], start=1):" in source
