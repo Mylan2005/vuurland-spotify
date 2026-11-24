@@ -835,6 +835,7 @@
       "metric|||succexy"
     ],
     "dkfm_shoegaze": [
+      "neon wire|||fade",
       "closeout|||soothe",
       "bathe alone|||curbside",
       "beverly kills|||chaos in colour",
@@ -933,10 +934,10 @@
       "800beloved|||some kind of distortion",
       "blankenberge|||together single",
       "miniatures|||what you want",
-      "tombstones in their eyes|||bad clouds",
-      "attic ocean|||august"
+      "tombstones in their eyes|||bad clouds"
     ],
     "dkfm_classic": [
+      "lush|||downer",
       "submarine|||chemical tester",
       "pale saints|||shell",
       "hollowphonic|||sad to feel",
@@ -1035,8 +1036,7 @@
       "stereolab|||fluorescences",
       "drop nineteens|||baby wonder's gone",
       "lorelei|||mostly i sleep",
-      "slowdive|||altogether",
-      "february|||comfy"
+      "slowdive|||altogether"
     ],
     "egofm_rnb": [
       "destiny's child|||independent women pt 1",
@@ -1345,6 +1345,7 @@
       "adam port stryv camila cabello keinemusik malachiii orso|||move"
     ],
     "gri_balkon": [
+      "nicolas jaar|||marquises",
       "seb wildblood|||the one with the emoticon",
       "almunia|||one time",
       "eli & fur|||walk the line",
@@ -1443,10 +1444,10 @@
       "fulltone|||only solution",
       "badbadnotgood|||time moves slow ft samuel t herring",
       "moby|||shot in the back of the head",
-      "feathered sun|||miraflores ft raz ohara & nu & christopher schwarzwalder",
-      "dj couza|||traffic ft page"
+      "feathered sun|||miraflores ft raz ohara & nu & christopher schwarzwalder"
     ],
     "ignoreradio_shoegaze": [
+      "oeil|||dracaena sanderiana",
       "blur|||won't do it",
       "chapterhouse|||we are the beautiful spooky extravaganja mix",
       "swervedriver|||sci-flyer",
@@ -1545,8 +1546,7 @@
       "the radio dept|||could you be the one",
       "a place to bury strangers|||i need you",
       "emma anderson|||inter light",
-      "???|||loomer",
-      "a shoreline dream with ulrich schnauss|||london"
+      "???|||loomer"
     ],
     "radio_britannia": [
       "alt j|||uandme",
@@ -1651,6 +1651,7 @@
       "travis|||everything at once"
     ],
     "wbru": [
+      "depeche mode|||enjoy the silence",
       "modern english|||i melt with you",
       "the cardigans|||lovefool",
       "david bowie|||starman",
@@ -1749,29 +1750,28 @@
       "jungle|||the wave",
       "sam fender|||people watching",
       "pixies|||monkey gone to heaven",
-      "courtney barnett|||avant gardener",
-      "peter bjorn and john|||young folks"
+      "courtney barnett|||avant gardener"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795541551.2861338,
-    "mellow_mix": 1795541551.2898908,
-    "big_sonic_heaven": 1795541551.2930706,
-    "radio_x_chilled": 1795541551.296173,
-    "dreampop_radio": 1795541551.2992187,
-    "indie_select": 1795541551.302656,
-    "dkfm_edge": 1795541551.3059306,
+    "vuurland": 1795541575.9386387,
+    "mellow_mix": 1795541575.9423816,
+    "big_sonic_heaven": 1795541575.9456193,
+    "radio_x_chilled": 1795541575.9487135,
+    "dreampop_radio": 1795541575.9517982,
+    "indie_select": 1795541575.955188,
+    "dkfm_edge": 1795541575.958466,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795541551.3105946,
-    "dkfm_shoegaze": 1795541551.3143585,
-    "dkfm_classic": 1795541551.3175771,
-    "egofm_rnb": 1795541551.3210642,
-    "egofm_chillout": 1795541551.3243527,
-    "dj_neihtul": 1795541551.3272743,
-    "gri_balkon": 1795541551.3296826,
-    "ignoreradio_shoegaze": 1795541551.3332074,
-    "radio_britannia": 1795541551.3369615,
-    "wbru": 1795541551.3396668
+    "dark_edge": 1795541575.9631262,
+    "dkfm_shoegaze": 1795541575.966965,
+    "dkfm_classic": 1795541575.9702146,
+    "egofm_rnb": 1795541575.9736788,
+    "egofm_chillout": 1795541575.976953,
+    "dj_neihtul": 1795541575.9797943,
+    "gri_balkon": 1795541575.9822645,
+    "ignoreradio_shoegaze": 1795541576.328872,
+    "radio_britannia": 1795541576.3326259,
+    "wbru": 1795541576.3353915
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29706,6 +29706,7 @@
       "nuclear daisies|||sarafem",
       "odd nosdam|||sisters boards of canada remix",
       "odd nosdam|||untitled three",
+      "oeil|||dracaena sanderiana",
       "oeil|||memories of the past",
       "oeil|||owl moon shadow",
       "oeil|||perfect",
@@ -36467,7 +36468,7 @@
   "__last_radio_key_mellow_mix": "paul simon|||something so right",
   "__last_radio_key_big_sonic_heaven": "belly|||feed the tree",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 33685,
+  "__v116_fifo_next_sequence": 33686,
   "__v146_spotify_budget_slot": 1795541016.6845667,
   "__vuurland_active_playlist_count": 5653,
   "__vuurland_active_volume": 2,
@@ -158156,8 +158157,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "crystal canyon|||dreamray",
-  "__last_radio_key_dkfm_shoegaze": "closeout|||soothe",
-  "__last_radio_key_dkfm_classic": "submarine|||chemical tester",
+  "__last_radio_key_dkfm_shoegaze": "neon wire|||fade",
+  "__last_radio_key_dkfm_classic": "lush|||downer",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -163584,7 +163585,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "seb wildblood|||the one with the emoticon",
+  "__last_radio_key_gri_balkon": "nicolas jaar|||marquises",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -163607,7 +163608,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "blur|||won't do it",
+  "__last_radio_key_ignoreradio_shoegaze": "oeil|||dracaena sanderiana",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -165142,7 +165143,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "alt j|||uandme",
-  "__last_radio_key_wbru": "modern english|||i melt with you",
+  "__last_radio_key_wbru": "depeche mode|||enjoy the silence",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
