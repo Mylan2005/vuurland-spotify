@@ -10,6 +10,7 @@ from pathlib import Path
 from duyster_historische_audit import (
     audit_archief, _valid_episode, DuysterEpisodeValidationError,
 )
+from duyster_weekly_update import DuysterEpisodeSourceError
 
 
 with tempfile.TemporaryDirectory() as tmp:
@@ -142,5 +143,62 @@ expect_validation_error(
     251, "invalid_track_metadata",
 )
 assert len(_valid_episode({"pid": 251, "songs": valid_five}, 251)) == 5
+
+    # An independently documented empty official-site placeholder can be
+    # recorded as a source gap so the deep scan continues, but it is never
+    # counted as a verified episode or as a fully complete archive.
+    imported_gap = root / "import_gap.json"
+    archive_gap = root / "archive_gap.csv"
+    audit_gap = root / "audit_gap.json"
+    manifest_gap = root / "gaps.json"
+    imported_gap.write_text('{"last_imported_pid":3}', encoding="utf-8")
+    archive_gap.write_text("artist,title,first_seen_pid,seen_in\\n", encoding="utf-8")
+    manifest_gap.write_text(json.dumps({
+        "format": "v206-duyster-source-gaps-v1",
+        "gaps": [{
+            "pid": 2,
+            "status": "official_site_empty_record",
+            "reason": "Official page shell has no playlist number, date or tracks.",
+            "evidence_urls": [
+                "https://www.duyster-online.be/playlist.php?pid=251"
+            ],
+        }],
+    }), encoding="utf-8")
+    def with_known_gap(pid):
+        if pid == 2:
+            raise DuysterEpisodeSourceError("parser_pid_not_confirmed", "empty official page")
+        return {"pid": pid, "songs": [(f"Artist {pid}-{i}", f"Track {i}") for i in range(5)]}
+    gap_result = audit_archief(
+        archive=archive_gap, import_state=imported_gap, audit_state=audit_gap,
+        fetch_page=with_known_gap, batch=3, pause=0, gap_manifest=manifest_gap,
+    )
+    assert gap_result["next_pid"] == 0
+    assert gap_result["scan_finished"] is True
+    assert gap_result["complete"] is False
+    assert gap_result["complete_with_known_gaps"] is True
+    assert set(gap_result["verified_episodes"]) == {"1", "3"}
+    assert set(gap_result["source_gaps"]) == {"2"}
+    assert gap_result["last_batch_verified"] == 2
+    assert gap_result["last_batch_source_gaps"] == 1
+
+    # The same manifest may NOT waive a different failure class (e.g. 404).
+    audit_gap2 = root / "audit_gap2.json"
+    def wrong_gap_error(pid):
+        if pid == 2:
+            raise DuysterEpisodeSourceError("source_http_gone", "HTTP 404")
+        return with_known_gap(pid)
+    try:
+        audit_archief(
+            archive=archive_gap, import_state=imported_gap, audit_state=audit_gap2,
+            fetch_page=wrong_gap_error, batch=3, pause=0, gap_manifest=manifest_gap,
+        )
+    except RuntimeError:
+        pass
+    else:
+        raise AssertionError("A source-gap manifest must not waive HTTP 404")
+    blocked = json.loads(audit_gap2.read_text(encoding="utf-8"))
+    assert blocked["next_pid"] == 2
+    assert "2" not in blocked.get("source_gaps", {})
+    assert blocked["complete"] is False
 
 print("✅ v206: recente bronmissers, historische cursor, geen dubbele items of vals volledige audit.")
