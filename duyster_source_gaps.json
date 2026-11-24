@@ -1,0 +1,15 @@
+{
+  "format": "v206-duyster-source-gaps-v1",
+  "gaps": [
+    {
+      "pid": 251,
+      "status": "official_site_empty_record",
+      "reason": "The official site returns a generic empty playlist shell for pid 251: no playlist number, date or tracks. The neighboring official records pid 250 (27-11-2005) and pid 252 (04-12-2005) contain complete tracklists. This records an absent source record, not proof that no broadcast took place.",
+      "evidence_urls": [
+        "https://www.duyster-online.be/playlist.php?pid=250",
+        "https://www.duyster-online.be/playlist.php?pid=251",
+        "https://www.duyster-online.be/playlist.php?pid=252"
+      ]
+    }
+  ]
+}
