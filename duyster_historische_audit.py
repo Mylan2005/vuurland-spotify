@@ -28,6 +28,7 @@ from duyster_weekly_update import (
 
 ROOT = Path(__file__).resolve().parent
 AUDIT_STATE = ROOT / "duyster_historische_audit_state.json"
+GAP_MANIFEST = ROOT / "duyster_source_gaps.json"
 LATEST_PRIORITY_COUNT = 3
 DEFAULT_BATCH = 60
 MAX_BATCH = 80
@@ -99,6 +100,35 @@ def _valid_episode(episode, pid):
     return unique
 
 
+
+
+def _load_source_gap_manifest(path):
+    """Load explicit, evidence-backed source gaps; never infer or auto-skip IDs."""
+    path = Path(path)
+    if not path.exists():
+        return {}
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    if (not isinstance(raw, dict)
+            or raw.get("format") != "v206-duyster-source-gaps-v1"
+            or not isinstance(raw.get("gaps"), list)):
+        raise ValueError("Ongeldig Duyster-brongatenmanifest; cursor blijft onveranderd")
+    gaps = {}
+    for entry in raw["gaps"]:
+        if not isinstance(entry, dict) or type(entry.get("pid")) is not int or entry["pid"] < 1:
+            raise ValueError("Ongeldige pid in Duyster-brongatenmanifest")
+        if entry.get("status") != "official_site_empty_record":
+            raise ValueError(f"Niet-toegestane bronuitzondering voor pid {entry.get('pid')}")
+        if not isinstance(entry.get("reason"), str) or not entry["reason"].strip():
+            raise ValueError(f"Geen onderbouwing voor bronuitzondering pid {entry['pid']}")
+        urls = entry.get("evidence_urls")
+        if (not isinstance(urls, list) or not urls
+                or not all(isinstance(url, str) and url.startswith("https://") for url in urls)):
+            raise ValueError(f"Geen officiële bewijs-URL's voor bronuitzondering pid {entry['pid']}")
+        if entry["pid"] in gaps:
+            raise ValueError(f"Dubbele bronuitzondering voor pid {entry['pid']}")
+        gaps[entry["pid"]] = entry
+    return gaps
+
 def _load_audit(path, newest, *, now=None):
     now = time.time() if now is None else float(now)
     if not Path(path).exists():
@@ -138,7 +168,7 @@ def _load_audit(path, newest, *, now=None):
 def audit_archief(
     *, archive=ARCHIVE, import_state=STATE, audit_state=AUDIT_STATE,
     fetch_page=get_episode, batch=DEFAULT_BATCH, pause=MIN_DELAY_SECONDS,
-    sleep=time.sleep, now=None,
+    sleep=time.sleep, now=None, gap_manifest=GAP_MANIFEST,
 ):
     if type(batch) is not int or not (1 <= batch <= MAX_BATCH):
         raise ValueError("Auditbatch moet 1..80 afleveringen zijn")
@@ -150,7 +180,12 @@ def audit_archief(
         raise ValueError("Geen betrouwbaar geïmporteerde Duyster-afleveringen")
     rows, lookup = read_archive(archive)
     audit = _load_audit(audit_state, newest, now=now)
+    known_source_gaps = _load_source_gap_manifest(gap_manifest)
+    if not isinstance(audit.get("source_gaps", {}), dict):
+        raise ValueError("Ongeldige opgeslagen bron-gaten; archief onveranderd")
+    audit.setdefault("source_gaps", {})
     checked_now, recovered_now = 0, 0
+    source_gaps_now, processed_now = 0, 0
     first_error = None
     error_pid = None
     error_code = None
@@ -177,6 +212,26 @@ def audit_archief(
             songs = _valid_episode(episode, pid)
         except Exception as exc:
             error_code = getattr(exc, "code", "source_fetch_error")
+            gap = known_source_gaps.get(pid)
+            if gap is not None and error_code == "parser_pid_not_confirmed":
+                # This exact ID is independently documented as an empty
+                # official-site placeholder. Record a gap, not a verified show.
+                audit["source_gaps"][str(pid)] = {
+                    "status": gap["status"],
+                    "reason": gap["reason"],
+                    "evidence_urls": gap["evidence_urls"],
+                    "checked_at_utc": _utc_now(),
+                    "source_error_code": error_code,
+                }
+                if pid == audit["next_pid"]:
+                    audit["next_pid"] -= 1
+                source_gaps_now += 1
+                processed_now += 1
+                print(f"ℹ️ Duyster pid {pid}: expliciet geregistreerde lege bronpagina; "
+                      "niet als aflevering geverifieerd.")
+                if pause and processed_now < len(targets):
+                    sleep(pause)
+                continue
             first_error = f"Aflevering {pid} niet bevestigd [{error_code}]: {type(exc).__name__}: {exc}"
             error_pid = pid
             print("⚠️ " + first_error)
@@ -202,25 +257,34 @@ def audit_archief(
             "checked_at_utc": _utc_now(),
         }
         checked_now += 1
+        processed_now += 1
         # The deep cursor never advances past an unchecked episode.
         if pid == audit["next_pid"]:
             audit["next_pid"] -= 1
         # Note: recent checks may be ahead of the deep cursor; the deep loop
         # deliberately re-verifies those when it reaches them.
-        if pause and checked_now < len(targets):
+        if pause and processed_now < len(targets):
             sleep(pause)
 
     audit["total_recovered"] = int(audit.get("total_recovered", 0)) + recovered_now
     audit["last_checked_at_utc"] = _utc_now()
     audit["last_batch_verified"] = checked_now
+    audit["last_batch_source_gaps"] = source_gaps_now
+    audit["last_batch_processed"] = processed_now
     audit["last_batch_recovered"] = recovered_now
     audit["last_error"] = first_error
     audit["last_error_pid"] = error_pid
     audit["last_error_code"] = error_code
-    audit["complete"] = bool(
+    resolved = set(audit["verified_episodes"]) | set(audit["source_gaps"])
+    audit["scan_finished"] = bool(
         audit["next_pid"] <= 0
-        and all(str(pid) in audit["verified_episodes"] for pid in range(1, newest + 1))
-        and first_error is None
+        and all(str(pid) in resolved for pid in range(1, newest + 1))
+    )
+    audit["complete"] = bool(
+        audit["scan_finished"] and not audit["source_gaps"] and first_error is None
+    )
+    audit["complete_with_known_gaps"] = bool(
+        audit["scan_finished"] and audit["source_gaps"] and first_error is None
     )
     if audit["complete"]:
         audit["completed_at_utc"] = _utc_now()
@@ -235,7 +299,9 @@ def audit_archief(
     print(f"📚 Duyster-audit: {checked_now} afleveringen vergeleken; "
           f"{recovered_now} ontbrekende nummers hersteld; "
           f"historische cursor {audit['next_pid']}; "
-          f"volledig gecontroleerd={'JA' if audit['complete'] else 'NEE'}")
+          f"bekende lege bronpagina's={len(audit['source_gaps'])}; "
+          f"scan afgerond={'JA' if audit['scan_finished'] else 'NEE'}; "
+          f"volledig bron-gecontroleerd={'JA' if audit['complete'] else 'NEE'}")
     if first_error:
         # The runner should remain visibly FAILED even if it was able to
         # persist a valid partial repair. The workflow uses always() to
