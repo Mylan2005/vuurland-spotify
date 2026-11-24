@@ -35,8 +35,8 @@ with tempfile.TemporaryDirectory() as folder:
     assert added["indie_select"] == 1, added
     assert added["dkfm_classic"] == 1, added
     assert added["dreampop_radio"] == 0, added
-    assert "| Dreampop Radio | 0 | 0 | 1 | 1 | 0 | 1 |" in report
-    assert "| DKFM Classic | 0 | 0 | 1 | 1 | 1 | 1 |" in report
-    assert "| Indie Select | 0 | 0 | 1 | 0 | 1 | 1 |" in report
+    assert "| Dreampop Radio | Actief | 0 | 0 | 1 | 1 | 0 | 1 |" in report
+    assert "| DKFM Classic | Actief | 0 | 0 | 1 | 1 | 1 | 1 |" in report
+    assert "| Indie Select | Actief | 0 | 0 | 1 | 0 | 1 | 1 |" in report
 
 print("✅ v225: juiste bron bij Search, mislukking en succesvolle toevoeging.")
