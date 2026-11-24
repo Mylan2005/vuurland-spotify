@@ -1,0 +1,45 @@
+name: Duyster audit offline tests
+
+on:
+  pull_request:
+    paths:
+      - 'duyster_historische_audit.py'
+      - 'duyster_weekly_update.py'
+      - 'duyster_archive_fifo.py'
+      - 'test_v206_duyster_historische_audit_offline.py'
+      - 'test_duyster_weekly_update_offline.py'
+      - '.github/workflows/duyster-audit-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'duyster_historische_audit.py'
+      - 'duyster_weekly_update.py'
+      - 'duyster_archive_fifo.py'
+      - 'test_v206_duyster_historische_audit_offline.py'
+      - 'test_duyster_weekly_update_offline.py'
+      - '.github/workflows/duyster-audit-tests.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: duyster-audit-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies
+        run: python -m pip install requests beautifulsoup4
+      - name: Compile Duyster modules
+        run: python -m py_compile duyster_historische_audit.py duyster_weekly_update.py duyster_archive_fifo.py
+      - name: Test weekly archive importer
+        run: python -m unittest -v test_duyster_weekly_update_offline.py
+      - name: Test complete historical audit
+        run: python -m unittest -v test_v206_duyster_historische_audit_offline.py
