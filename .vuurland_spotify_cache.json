@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "noah kahan|||doors",
       "beirut|||postcards from italy",
       "amy winehouse|||stronger than me",
       "wilco|||one sunday morning",
@@ -113,8 +114,7 @@
       "the shadow machine|||disengaged",
       "my morning jacket|||golden",
       "silversun pickups|||lazy eye",
-      "lana del rey|||tulsa jesus freak",
-      "broken social scene|||hey amanda"
+      "lana del rey|||tulsa jesus freak"
     ],
     "mellow_mix": [
       "the heptones|||book of rules",
@@ -525,6 +525,7 @@
       "stealing sheep|||the garden"
     ],
     "indie_select": [
+      "placebo|||wouldn't it be good",
       "robert owens mike gill|||it's my life bonus track",
       "snow patrol|||if there's a rocket tie me to it",
       "the shins|||turn on me",
@@ -623,8 +624,7 @@
       "the honey ryders|||julia",
       "the national|||walk it back",
       "the charlatans|||so oh",
-      "tiesto feat kele okereke|||it's not the things you say - tiesto feat kele okereke",
-      "selebrities|||night heat"
+      "tiesto feat kele okereke|||it's not the things you say - tiesto feat kele okereke"
     ],
     "dkfm_edge": [
       "jared martin|||longing",
@@ -1039,6 +1039,7 @@
       "boo radleys|||lazarus"
     ],
     "egofm_rnb": [
+      "chiiild|||sleepwalking",
       "leon bridges|||steam",
       "q|||wonder",
       "sepalot feat malva|||visions",
@@ -1137,8 +1138,7 @@
       "roisin murphy|||if we're in love",
       "solange|||things i imagined",
       "tuxedo|||do it",
-      "hiatus kaiyote feat arthur verocai|||get sun",
-      "shungudzo|||paper"
+      "hiatus kaiyote feat arthur verocai|||get sun"
     ],
     "egofm_chillout": [
       "chilly gonzales & jarvis cocker|||tearjerker",
@@ -1549,6 +1549,7 @@
       "trpp|||higher than the sun"
     ],
     "radio_britannia": [
+      "suede|||what im trying to tell you",
       "chalk|||heaven feat phantogram and cosign",
       "maximo park|||apply some pressure",
       "space|||female of the species",
@@ -1647,8 +1648,7 @@
       "field studies|||listener",
       "the good the bad and the queen|||kingdom of doom",
       "royal blood|||typhoons",
-      "blood red shoes|||i am not you",
-      "airways|||reckless tongue"
+      "blood red shoes|||i am not you"
     ],
     "wbru": [
       "beabadoobee|||memories",
@@ -1753,6 +1753,7 @@
       "cafune|||tek it"
     ],
     "indie_x_fm": [
+      "star moles|||born again",
       "fat white family|||what's that you say",
       "bob marley & the wailers robin schulz|||sun is shining",
       "china crisis|||king in a catholic style wake up",
@@ -1775,7 +1776,6 @@
       "red flag|||if i ever",
       "fitz and the tantrums|||kiss the sky",
       "rostam|||hardy feat clairo",
-      "star moles|||born again",
       "the linda lindas|||everybody told me",
       "earl slick|||believe with robert smith",
       "sea lemon|||cynical",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795561879.3176265,
-    "mellow_mix": 1795561879.3211591,
-    "big_sonic_heaven": 1795561879.324259,
-    "radio_x_chilled": 1795561879.3270426,
-    "dreampop_radio": 1795561879.329797,
-    "indie_select": 1795561879.3330636,
-    "dkfm_edge": 1795561879.3360674,
+    "vuurland": 1795561963.494289,
+    "mellow_mix": 1795561963.497897,
+    "big_sonic_heaven": 1795561963.5010378,
+    "radio_x_chilled": 1795561963.503924,
+    "dreampop_radio": 1795561963.5068073,
+    "indie_select": 1795561963.5103707,
+    "dkfm_edge": 1795561963.5134778,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795561879.340735,
-    "dkfm_shoegaze": 1795561879.344329,
-    "dkfm_classic": 1795561879.3473446,
-    "egofm_rnb": 1795561879.3504875,
-    "egofm_chillout": 1795561879.353504,
-    "dj_neihtul": 1795561879.3561945,
-    "gri_balkon": 1795561879.3583488,
-    "ignoreradio_shoegaze": 1795561879.361762,
-    "radio_britannia": 1795561879.3652885,
-    "wbru": 1795561879.3677764,
-    "indie_x_fm": 1795561879.3707237
+    "dark_edge": 1795561963.5181773,
+    "dkfm_shoegaze": 1795561963.5217822,
+    "dkfm_classic": 1795561963.5249634,
+    "egofm_rnb": 1795561963.5282474,
+    "egofm_chillout": 1795561963.5313654,
+    "dj_neihtul": 1795561963.5341456,
+    "gri_balkon": 1795561963.5363688,
+    "ignoreradio_shoegaze": 1795561963.539791,
+    "radio_britannia": 1795561963.8614118,
+    "wbru": 1795561963.8640876,
+    "indie_x_fm": 1795561963.867803
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -33353,6 +33353,7 @@
       "suede|||the only way i can love you",
       "suede|||trance state",
       "suede|||wastelands",
+      "suede|||what im trying to tell you",
       "suki waterhouse|||notting hill",
       "sulk|||flowers",
       "sulk|||wishes",
@@ -37087,11 +37088,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "beirut|||postcards from italy",
+  "__last_radio_key_vuurland": "noah kahan|||doors",
   "__last_radio_key_mellow_mix": "the heptones|||book of rules",
   "__last_radio_key_big_sonic_heaven": "night tapes|||pacifico",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 33977,
+  "__v116_fifo_next_sequence": 33978,
   "__v146_spotify_budget_slot": 1795561882.1829665,
   "__vuurland_active_playlist_count": 5738,
   "__vuurland_active_volume": 2,
@@ -157855,7 +157856,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "robert owens mike gill|||it's my life bonus track",
+  "__last_radio_key_indie_select": "placebo|||wouldn't it be good",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -164630,7 +164631,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "leon bridges|||steam",
+  "__last_radio_key_egofm_rnb": "chiiild|||sleepwalking",
   "__last_radio_key_egofm_chillout": "chilly gonzales & jarvis cocker|||tearjerker",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -166203,7 +166204,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "chalk|||heaven feat phantogram and cosign",
+  "__last_radio_key_radio_britannia": "suede|||what im trying to tell you",
   "__last_radio_key_wbru": "beabadoobee|||memories",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -175406,7 +175407,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "fat white family|||what's that you say",
+  "__last_radio_key_indie_x_fm": "star moles|||born again",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
