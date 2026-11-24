@@ -39,25 +39,63 @@ def _utc_now():
     return datetime.now(timezone.utc).isoformat()
 
 
+class DuysterEpisodeValidationError(ValueError):
+    """Een aflevering faalt een expliciete bron-/metadata-validatiepoort."""
+
+    def __init__(self, code, message):
+        super().__init__(message)
+        self.code = code
+
+
 def _valid_episode(episode, pid):
-    if not isinstance(episode, dict) or episode.get("pid") != pid:
-        raise ValueError(f"Duyster aflevering {pid} ontbreekt of is onvolledig")
+    if episode is None:
+        raise DuysterEpisodeValidationError(
+            "source_missing_or_parse_mismatch",
+            f"Duyster aflevering {pid}: bron gaf geen aflevering terug "
+            "(404, lege pagina of parser kon het afleveringsnummer niet bevestigen)",
+        )
+    if not isinstance(episode, dict):
+        raise DuysterEpisodeValidationError(
+            "invalid_episode_payload",
+            f"Duyster aflevering {pid}: bronantwoord is geen geldig object",
+        )
+    actual_pid = episode.get("pid")
+    if actual_pid != pid:
+        raise DuysterEpisodeValidationError(
+            "wrong_episode_id",
+            f"Duyster aflevering {pid}: bron bevestigde aflevering {actual_pid!r}",
+        )
     songs = episode.get("songs")
-    if not isinstance(songs, list) or len(songs) < 5:
-        raise ValueError(f"Duyster aflevering {pid} heeft geen betrouwbare tracklijst")
+    if not isinstance(songs, list):
+        raise DuysterEpisodeValidationError(
+            "missing_tracklist",
+            f"Duyster aflevering {pid}: tracklijst ontbreekt of heeft verkeerd formaat",
+        )
+    if len(songs) < 5:
+        raise DuysterEpisodeValidationError(
+            "too_few_raw_tracks",
+            f"Duyster aflevering {pid}: slechts {len(songs)} ruwe tracks; minimaal 5 vereist",
+        )
     unique = []
     seen = set()
-    for song in songs:
+    for index, song in enumerate(songs, start=1):
         if (not isinstance(song, (tuple, list)) or len(song) != 2
                 or not all(isinstance(value, str) and value.strip() for value in song)):
-            raise ValueError(f"Duyster aflevering {pid} bevat ongeldige metadata")
+            raise DuysterEpisodeValidationError(
+                "invalid_track_metadata",
+                f"Duyster aflevering {pid}: ongeldige artiest/titel op trackpositie {index}",
+            )
         key = song_key(song[0], song[1])
         if not key or key in seen:
             continue
         seen.add(key)
         unique.append((song[0].strip(), song[1].strip(), key))
     if len(unique) < 5:
-        raise ValueError(f"Duyster aflevering {pid} heeft te weinig unieke nummers")
+        raise DuysterEpisodeValidationError(
+            "too_few_unique_tracks",
+            f"Duyster aflevering {pid}: {len(unique)} unieke tracks uit {len(songs)} "
+            "ruwe vermeldingen; minimaal 5 vereist",
+        )
     return unique
 
 
@@ -114,6 +152,8 @@ def audit_archief(
     audit = _load_audit(audit_state, newest, now=now)
     checked_now, recovered_now = 0, 0
     first_error = None
+    error_pid = None
+    error_code = None
 
     # ALWAYS refresh the last three episodes; this catches recent gaps even if
     # the deep cursor takes many days to pass the whole archive.
@@ -136,7 +176,9 @@ def audit_archief(
             episode = fetch_page(pid)
             songs = _valid_episode(episode, pid)
         except Exception as exc:
-            first_error = f"Aflevering {pid} niet bevestigd: {type(exc).__name__}: {exc}"
+            error_code = getattr(exc, "code", "source_fetch_error")
+            first_error = f"Aflevering {pid} niet bevestigd [{error_code}]: {type(exc).__name__}: {exc}"
+            error_pid = pid
             print("⚠️ " + first_error)
             break
         added_for_episode = 0
@@ -173,6 +215,8 @@ def audit_archief(
     audit["last_batch_verified"] = checked_now
     audit["last_batch_recovered"] = recovered_now
     audit["last_error"] = first_error
+    audit["last_error_pid"] = error_pid
+    audit["last_error_code"] = error_code
     audit["complete"] = bool(
         audit["next_pid"] <= 0
         and all(str(pid) in audit["verified_episodes"] for pid in range(1, newest + 1))
