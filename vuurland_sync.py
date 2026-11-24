@@ -182,7 +182,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru", "indie_x_fm", "pinguin_radio")  # Negentien live bronnen; Radio X main blijft uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru", "indie_x_fm")  # Achttien live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -7659,7 +7659,6 @@ def sync():
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "wbru": ("WBRU", get_wbru_tracks, "__last_radio_key_wbru"),
         "indie_x_fm": ("INDIE X FM", get_indie_x_fm_tracks, "__last_radio_key_indie_x_fm"),
-        "pinguin_radio": ("Pinguin Radio", get_pinguin_radio_tracks, "__last_radio_key_pinguin_radio"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
         "radio_x_main": ("Radio X", get_radio_x_main_tracks, "__last_radio_key_radio_x_main"),
