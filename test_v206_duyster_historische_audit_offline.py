@@ -153,40 +153,40 @@ with tempfile.TemporaryDirectory() as gap_tmp:
     archive_gap = root_gap / "archive_gap.csv"
     audit_gap = root_gap / "audit_gap.json"
     manifest_gap = root_gap / "gaps.json"
-    imported_gap.write_text('{"next_pid":4,"last_imported_pid":3}', encoding="utf-8")
+    imported_gap.write_text('{"next_pid":835,"last_imported_pid":834}', encoding="utf-8")
     archive_gap.write_text("artist,title,first_seen_pid,seen_in\\n", encoding="utf-8")
     manifest_gap.write_text(json.dumps({
         "format": "v206-duyster-source-gaps-v1",
         "gaps": [{
-            "pid": 2,
+            "pid": 833,
             "status": "official_site_empty_record",
             "reason": "Official page shell has no playlist number, date or tracks.",
             "evidence_urls": [
-                "https://www.duyster-online.be/playlist.php?pid=251"
+                "https://www.duyster-online.be/playlist.php?pid=833"
             ],
         }],
     }), encoding="utf-8")
     def with_known_gap(pid):
-        if pid == 2:
+        if pid == 833:
             raise DuysterEpisodeSourceError("parser_pid_not_confirmed", "empty official page")
         return {"pid": pid, "songs": [(f"Artist {pid}-{i}", f"Track {i}") for i in range(5)]}
     gap_result = audit_archief(
         archive=archive_gap, import_state=imported_gap, audit_state=audit_gap,
         fetch_page=with_known_gap, batch=3, pause=0, gap_manifest=manifest_gap,
     )
-    assert gap_result["next_pid"] == 0
-    assert gap_result["scan_finished"] is True
+    assert gap_result["next_pid"] == 831
+    assert gap_result["scan_finished"] is False
     assert gap_result["complete"] is False
-    assert gap_result["complete_with_known_gaps"] is True
-    assert set(gap_result["verified_episodes"]) == {"1", "3"}
-    assert set(gap_result["source_gaps"]) == {"2"}
+    assert gap_result["complete_with_known_gaps"] is False
+    assert set(gap_result["verified_episodes"]) == {"834", "832"}
+    assert set(gap_result["source_gaps"]) == {"833"}
     assert gap_result["last_batch_verified"] == 2
     assert gap_result["last_batch_source_gaps"] == 1
     
     # The same manifest may NOT waive a different failure class (e.g. 404).
     audit_gap2 = root_gap / "audit_gap2.json"
     def wrong_gap_error(pid):
-        if pid == 2:
+        if pid == 833:
             raise DuysterEpisodeSourceError("source_http_gone", "HTTP 404")
         return with_known_gap(pid)
     try:
@@ -199,8 +199,8 @@ with tempfile.TemporaryDirectory() as gap_tmp:
     else:
         raise AssertionError("A source-gap manifest must not waive HTTP 404")
     blocked = json.loads(audit_gap2.read_text(encoding="utf-8"))
-    assert blocked["next_pid"] == 2
-    assert "2" not in blocked.get("source_gaps", {})
+    assert blocked["next_pid"] == 833
+    assert "833" not in blocked.get("source_gaps", {})
     assert blocked["complete"] is False
     
 print("✅ v206: recente bronmissers, historische cursor, geen dubbele items of vals volledige audit.")
