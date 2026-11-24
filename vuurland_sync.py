@@ -167,6 +167,8 @@ GRI_BALKON_SOURCE_URL = "https://onlineradiobox.com/tr/gribalcon/playlist/?lang=
 IGNORERADIO_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ie/ignoreland/playlist/?lang=nl"
 BIG_SONIC_HEAVEN_SOURCE_URL = "https://onlineradiobox.com/us/bigsonicheaven/playlist/?lang=nl"
 RADIO_BRITANNIA_SOURCE_URL = "https://onlineradiobox.com/ar/britannia/playlist/?lang=nl"
+INDIE_X_FM_SOURCE_URL = "https://onlineradiobox.com/us/indiex/playlist/?lang=nl"
+PINGUIN_RADIO_SOURCE_URL = "https://onlineradiobox.com/nl/pinguinr/playlist/?lang=nl"
 WBRU_SOURCE_URL = "https://onlineradiobox.com/us/wbru/playlist/?lang=nl"
 RADIO_X_CHILLED_SOURCE_URL = "https://onlineradiobox.com/uk/radioxchilled/playlist/?lang=nl"
 RADIO_X_MAIN_SOURCE_URL = "https://onlineradiobox.com/uk/radiox/playlist/?lang=nl"
@@ -180,7 +182,7 @@ DKFM_SHOEGAZE_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmshoegazeradio/play
 DKFM_CLASSIC_SOURCE_URL = "https://onlineradiobox.com/ca/dkfmclassic/playlist/?lang=nl"
 
 # Zelfde volgorde voor live-queue, lege rondes en eerlijke v97-fallback.
-RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru")  # Zeventien live bronnen; Radio X main blijft uit.
+RADIO_SOURCE_ORDER = ("vuurland", "mellow_mix", "big_sonic_heaven", "radio_x_chilled", "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge", "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru", "indie_x_fm", "pinguin_radio")  # Negentien live bronnen; Radio X main blijft uit.
 # Duyster is een archief, geen negende live radiofeed.
 FIFO_SOURCE_ORDER = RADIO_SOURCE_ORDER + ("duyster",)
 
@@ -1217,6 +1219,10 @@ def get_radiobox_tracks(
     }
 
     rows = []
+    if source_name == "Pinguin Radio":
+        from datetime import datetime
+        from zoneinfo import ZoneInfo
+        local_day = datetime.now(ZoneInfo("Europe/Brussels")).weekday()
 
     for element in soup.find_all(["tr", "li"]):
         row_text = " ".join(
@@ -1238,6 +1244,10 @@ def get_radiobox_tracks(
             continue
 
         entry_lower = entry.lower().strip()
+
+        # Current-day RadioBox playlist: reject the entire Friday metal slot.
+        if source_name == "Pinguin Radio" and local_day == 4 and int(time_value.split(":")[0]) >= 22:
+            continue
 
         if entry_lower in program_labels:
             continue
@@ -1554,6 +1564,20 @@ def get_wbru_tracks():
         WBRU_SOURCE_URL, "WBRU"
     ) if not v256_non_music_fragment("wbru", artist, title)]
 
+
+
+def get_indie_x_fm_tracks():
+    return [(a, t) for a, t in get_radiobox_tracks(INDIE_X_FM_SOURCE_URL, "INDIE X FM")
+            if a.strip().casefold() not in {"indie x fm", "postcards from the underground"}]
+
+
+def get_pinguin_radio_tracks():
+    import re
+    blocked = {"hatebreed", "insomnium", "forbidden", "hatesphere", "darkest hour", "tony iommi", "prong", "xentrix", "cirith ungol", "iron savior", "yngwie malmsteen", "beast in black", "seventh wonder", "mason hill", "broken by the scream", "bombus", "disfear", "wolf", "rattlesnakes"}
+    return [(a, t) for a, t in get_radiobox_tracks(PINGUIN_RADIO_SOURCE_URL, "Pinguin Radio")
+            if not re.match(r"^(?:pinguin|aardschok|pr graadmeter|musisum spotlight|\(c\) 2026)", a.strip(), re.I)
+            and a.strip().casefold() not in blocked
+            and not global_music_reject_reason(a, t)]
 
 
 def get_radio_x_chilled_tracks():
@@ -7634,6 +7658,8 @@ def sync():
         "ignoreradio_shoegaze": ("Ignoreradio Shoegaze", get_ignoreradio_shoegaze_tracks, "__last_radio_key_ignoreradio_shoegaze"),
         "radio_britannia": ("Radio Britannia", get_radio_britannia_tracks, "__last_radio_key_radio_britannia"),
         "wbru": ("WBRU", get_wbru_tracks, "__last_radio_key_wbru"),
+        "indie_x_fm": ("INDIE X FM", get_indie_x_fm_tracks, "__last_radio_key_indie_x_fm"),
+        "pinguin_radio": ("Pinguin Radio", get_pinguin_radio_tracks, "__last_radio_key_pinguin_radio"),
         "big_sonic_heaven": ("Big Sonic Heaven Radio", get_big_sonic_heaven_tracks, "__last_radio_key_big_sonic_heaven"),
         "radio_x_chilled": ("Radio X Chilled", get_radio_x_chilled_tracks, "__last_radio_key_radio_x_chilled"),
         "radio_x_main": ("Radio X", get_radio_x_main_tracks, "__last_radio_key_radio_x_main"),
@@ -7774,6 +7800,12 @@ def sync():
             cache.setdefault("__v174_radio_snapshot_times", {}).pop(sid, None)
             cache.setdefault("__v47_radio_discovered", {}).pop(sid, None)
         cache["__v256_new_radio_baseline_20261117"] = True
+        save_cache(cache)
+    if not cache.get("__new_indie_pinguin_baseline_20261124"):
+        for sid in ("indie_x_fm", "pinguin_radio"):
+            for key in ("__v96_radio_snapshots", "__v174_radio_snapshot_times", "__v47_radio_discovered"):
+                cache.setdefault(key, {}).pop(sid, None)
+        cache["__new_indie_pinguin_baseline_20261124"] = True
         save_cache(cache)
     # DKFM Edge bij eerste activering nulmeten, zodat oude RadioBox-historiek
     # niet in één keer de bestaande FIFO vult. Alle andere state blijft intact.
