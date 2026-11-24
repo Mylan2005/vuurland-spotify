@@ -7,7 +7,9 @@ import json
 import tempfile
 from pathlib import Path
 
-from duyster_historische_audit import audit_archief
+from duyster_historische_audit import (
+    audit_archief, _valid_episode, DuysterEpisodeValidationError,
+)
 
 
 with tempfile.TemporaryDirectory() as tmp:
@@ -84,6 +86,9 @@ with tempfile.TemporaryDirectory() as tmp:
     assert after["next_pid"] == 828, after["next_pid"]
     assert after["complete"] is False and after["last_error"]
     assert "828" not in after["verified_episodes"]
+    assert after["last_error_pid"] == 828
+    assert after["last_error_code"] == "source_missing_or_parse_mismatch"
+    assert "[source_missing_or_parse_mismatch]" in after["last_error"]
 
     # Even an unreadable JSON audit file must not reset an active scan.
     audit_state.write_text("{garbled", encoding="utf-8")
@@ -110,5 +115,32 @@ with tempfile.TemporaryDirectory() as tmp:
     )
     assert done["next_pid"] == 0 and done["complete"] is False
     assert "1" in done["verified_episodes"]
+
+# Precise failure classes make a blocked historic cursor diagnosable without
+# weakening the fail-closed rule or silently skipping an episode.
+def expect_validation_error(payload, pid, expected_code):
+    try:
+        _valid_episode(payload, pid)
+    except DuysterEpisodeValidationError as exc:
+        assert exc.code == expected_code, (exc.code, expected_code)
+        assert str(pid) in str(exc)
+    else:
+        raise AssertionError(f"Expected {expected_code} for episode {pid}")
+
+valid_five = [(f"Artist {i}", f"Track {i}") for i in range(5)]
+expect_validation_error(None, 251, "source_missing_or_parse_mismatch")
+expect_validation_error([], 251, "invalid_episode_payload")
+expect_validation_error({"pid": 250, "songs": valid_five}, 251, "wrong_episode_id")
+expect_validation_error({"pid": 251}, 251, "missing_tracklist")
+expect_validation_error({"pid": 251, "songs": valid_five[:4]}, 251, "too_few_raw_tracks")
+expect_validation_error(
+    {"pid": 251, "songs": [("Artist", "Track")] * 5},
+    251, "too_few_unique_tracks",
+)
+expect_validation_error(
+    {"pid": 251, "songs": valid_five[:4] + [("", "Bad")]},
+    251, "invalid_track_metadata",
+)
+assert len(_valid_episode({"pid": 251, "songs": valid_five}, 251)) == 5
 
 print("✅ v206: recente bronmissers, historische cursor, geen dubbele items of vals volledige audit.")
