@@ -18,6 +18,10 @@ GLOBAL_LEGACY_BLOCKED_ARTISTS = frozenset({
     "sam smith",
     # Persoonlijke uitsluiting: Lambrini Girls uit alle bronnen weren.
     "lambrini girls",
+    # Explicit user exclusions: punk, hardcore and abrasive alternative.
+    "black flag", "circle jerks", "suicidal tendencies", "bad brains",
+    "turnstile", "ministry", "idles", "amyl and the sniffers",
+    "sprints", "starcrawler", "a place to bury strangers",
     # Commerciële, duidelijk hitparadegerichte pop: uitsluitend Dark Edge.
     "ed sheeran", "justin bieber", "shawn mendes", "charlie puth",
     "maroon 5", "meghan trainor", "katy perry", "ariana grande",
