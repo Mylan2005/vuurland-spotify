@@ -72,40 +72,81 @@ def parse_episode(html, pid):
             "skipped_non_music": raw_count - len(songs)}
 
 
-def get_episode(pid, *, request_get=requests.get):
-    """Controleer de genummerde URL; probeer anders de actuele playlist.
+class DuysterEpisodeSourceError(RuntimeError):
+    """Bronfout met een stabiele code voor de historische audit."""
 
-    De Duyster-site kan de laatste uitzending wel via /playlist.php tonen,
-    terwijl ?pid=N geen bruikbare pagina geeft. De fallback mag uitsluitend
-    dezelfde exacte pid accepteren. Nooit een andere aflevering onder het
-    gevraagde nummer importeren en nooit een cursor overslaan.
+    def __init__(self, code, message):
+        super().__init__(message)
+        self.code = code
+
+
+def get_episode(pid, *, request_get=requests.get, strict=False):
+    """Controleer de genummerde URL en daarna de actuele playlist.
+
+    De fallback mag uitsluitend dezelfde exacte pid accepteren. In de
+    standaardmodus blijft een niet-beschikbare nieuwe aflevering None
+    teruggeven voor de wekelijkse importer. strict=True is voor historische
+    audits: die krijgen een onderscheid tussen 404/410, parser-mismatch en
+    echte requestfouten, zonder ooit een cursor over te slaan.
     """
+    attempts = []
     error = None
-    try:
-        response = request_get(BASE + str(pid), headers=HEADERS, timeout=15)
-        if response.status_code not in (404, 410):
-            response.raise_for_status()
-            episode = parse_episode(response.text, pid)
-            if episode is not None:
-                return episode
-    except requests.RequestException as exc:
-        error = exc
 
-    # Alleen de laatste playlist is via deze route beschikbaar; een oudere
-    # verdwenen aflevering kan hierdoor NOOIT stilzwijgend worden overgeslagen.
-    try:
-        response = request_get("https://duyster-online.be/playlist.php",
-                               headers=HEADERS, timeout=15)
-        if response.status_code not in (404, 410):
+    def fetch_and_parse(url, label):
+        nonlocal error
+        try:
+            response = request_get(url, headers=HEADERS, timeout=15)
+        except requests.RequestException as exc:
+            if error is None:
+                error = exc
+            attempts.append(f"{label}: {type(exc).__name__}: {exc}")
+            return None
+
+        status = getattr(response, "status_code", None)
+        if status in (404, 410):
+            attempts.append(f"{label}: HTTP {status}")
+            return None
+        try:
             response.raise_for_status()
-            episode = parse_episode(response.text, pid)
-            if episode is not None:
-                print(f"📚 Duyster aflevering {pid} gevonden op actuele playlist-URL.")
-                return episode
-    except requests.RequestException:
+        except requests.RequestException as exc:
+            if error is None:
+                error = exc
+            attempts.append(f"{label}: {type(exc).__name__}: {exc}")
+            return None
+
+        episode = parse_episode(response.text, pid)
+        if episode is None:
+            attempts.append(f"{label}: HTTP {status}, aflevering {pid} niet bevestigd")
+        return episode
+
+    episode = fetch_and_parse(BASE + str(pid), "genummerde URL")
+    if episode is not None:
+        return episode
+
+    # Alleen de actuele playlist kan sommige genummerde URL's aanvullen.
+    episode = fetch_and_parse("https://duyster-online.be/playlist.php", "actuele playlist")
+    if episode is not None:
+        print(f"📚 Duyster aflevering {pid} gevonden op actuele playlist-URL.")
+        return episode
+
+    if strict:
+        detail = "; ".join(attempts) or "geen bruikbaar bronantwoord"
         if error is not None:
-            raise error
-        raise
+            raise DuysterEpisodeSourceError(
+                "source_request_error",
+                f"Duyster aflevering {pid}: bronverzoek mislukt ({detail})",
+            ) from error
+        if attempts and all(
+            attempt.endswith("HTTP 404") or attempt.endswith("HTTP 410")
+            for attempt in attempts
+        ):
+            code = "source_http_gone"
+        else:
+            code = "parser_pid_not_confirmed"
+        raise DuysterEpisodeSourceError(
+            code, f"Duyster aflevering {pid}: geen exacte bronbevestiging ({detail})"
+        )
+
     if error is not None:
         raise error
     return None

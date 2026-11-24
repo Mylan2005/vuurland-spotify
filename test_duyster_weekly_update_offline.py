@@ -9,7 +9,9 @@ from urllib.parse import urlencode
 import requests
 
 from duyster_archive_fifo import is_non_music_title, canonical_duyster_title
-from duyster_weekly_update import get_episode, update_archive, read_archive
+from duyster_weekly_update import (
+    get_episode, update_archive, read_archive, DuysterEpisodeSourceError,
+)
 
 
 def page(pid, songs, date="02-11-2026"):
@@ -84,6 +86,25 @@ assert get_episode(835, request_get=lambda url, **kwargs:
 
 assert get_episode(834, request_get=lambda *_args, **_kwargs:
                    Response(200, page(833, playlist_834))) is None
+# Historical audits use strict source diagnostics; the weekly importer keeps
+# the legacy None behavior for not-yet-published episodes.
+def strict_error(fetch, expected_code):
+    try:
+        get_episode(251, request_get=fetch, strict=True)
+    except DuysterEpisodeSourceError as exc:
+        assert exc.code == expected_code, (exc.code, expected_code)
+        assert "251" in str(exc)
+    else:
+        raise AssertionError(f"Expected strict source error {expected_code}")
+
+strict_error(lambda *_args, **_kwargs: Response(404), "source_http_gone")
+strict_error(lambda *_args, **_kwargs: Response(200, page(250, playlist_834)),
+             "parser_pid_not_confirmed")
+def timeout_source(*_args, **_kwargs):
+    raise requests.Timeout("simulated timeout")
+strict_error(timeout_source, "source_request_error")
+assert get_episode(251, request_get=lambda *_args, **_kwargs: Response(404)) is None
+
 for entry in ("Interview", "Sessie", "Interview + Sessie", "interview & sessie"):
     assert is_non_music_title(entry)
 assert is_non_music_title("Radio 1 Sessie")
