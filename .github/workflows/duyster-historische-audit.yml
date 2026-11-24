@@ -82,8 +82,8 @@ jobs:
           print("Historische cursor:",a.get("next_pid"))
           print("Ontbrekende nummers hersteld (deze audit):",a.get("total_recovered"))
           print("Historische scan afgerond:", "JA" if a.get("scan_finished") else "NEE")
-print("Volledig bron-gecontroleerd:", "JA" if a.get("complete") else "NEE")
-print("Bekende lege bronpagina's:", len(a.get("source_gaps", {})))
+          print("Volledig bron-gecontroleerd:", "JA" if a.get("complete") else "NEE")
+          print("Bekende lege bronpagina's:", len(a.get("source_gaps", {})))
           if a.get("last_error"):
               print("Laatste blokkering:",a["last_error"])
           PY
