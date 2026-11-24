@@ -35,7 +35,6 @@ def run():
     assert 'def get_active_volume_playlist(cache):' in s
     assert 'def v129_restore_volume_dedupe(cache, active_volume_number):' in s
     # Execute only two explicitly selected AST functions with offline fakes.
-    import ast
     tree=ast.parse(s)
     funcs=[node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name in ('get_active_volume_playlist','v129_restore_volume_dedupe')]
     assert len(funcs)==2
