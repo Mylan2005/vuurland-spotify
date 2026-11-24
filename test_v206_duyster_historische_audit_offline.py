@@ -144,13 +144,15 @@ expect_validation_error(
 )
 assert len(_valid_episode({"pid": 251, "songs": valid_five}, 251)) == 5
 
+with tempfile.TemporaryDirectory() as gap_tmp:
+    root_gap = Path(gap_tmp)
     # An independently documented empty official-site placeholder can be
     # recorded as a source gap so the deep scan continues, but it is never
     # counted as a verified episode or as a fully complete archive.
-    imported_gap = root / "import_gap.json"
-    archive_gap = root / "archive_gap.csv"
-    audit_gap = root / "audit_gap.json"
-    manifest_gap = root / "gaps.json"
+    imported_gap = root_gap / "import_gap.json"
+    archive_gap = root_gap / "archive_gap.csv"
+    audit_gap = root_gap / "audit_gap.json"
+    manifest_gap = root_gap / "gaps.json"
     imported_gap.write_text('{"last_imported_pid":3}', encoding="utf-8")
     archive_gap.write_text("artist,title,first_seen_pid,seen_in\\n", encoding="utf-8")
     manifest_gap.write_text(json.dumps({
@@ -180,9 +182,9 @@ assert len(_valid_episode({"pid": 251, "songs": valid_five}, 251)) == 5
     assert set(gap_result["source_gaps"]) == {"2"}
     assert gap_result["last_batch_verified"] == 2
     assert gap_result["last_batch_source_gaps"] == 1
-
+    
     # The same manifest may NOT waive a different failure class (e.g. 404).
-    audit_gap2 = root / "audit_gap2.json"
+    audit_gap2 = root_gap / "audit_gap2.json"
     def wrong_gap_error(pid):
         if pid == 2:
             raise DuysterEpisodeSourceError("source_http_gone", "HTTP 404")
@@ -200,5 +202,5 @@ assert len(_valid_episode({"pid": 251, "songs": valid_five}, 251)) == 5
     assert blocked["next_pid"] == 2
     assert "2" not in blocked.get("source_gaps", {})
     assert blocked["complete"] is False
-
+    
 print("✅ v206: recente bronmissers, historische cursor, geen dubbele items of vals volledige audit.")
