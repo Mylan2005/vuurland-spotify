@@ -249,7 +249,11 @@ def main():
     parser.add_argument("--batch", type=int, default=DEFAULT_BATCH)
     parser.add_argument("--pause", type=float, default=MIN_DELAY_SECONDS)
     args = parser.parse_args()
-    audit_archief(batch=args.batch, pause=args.pause)
+    audit_archief(
+        batch=args.batch,
+        pause=args.pause,
+        fetch_page=lambda pid: get_episode(pid, strict=True),
+    )
 
 
 if __name__ == "__main__":
