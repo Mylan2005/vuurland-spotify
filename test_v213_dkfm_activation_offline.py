@@ -8,9 +8,9 @@ assignment = next(node for node in tree.body if isinstance(node, ast.Assign)
                   and any(isinstance(t, ast.Name) and t.id == "RADIO_SOURCE_ORDER"
                           for t in node.targets))
 sources = ast.literal_eval(assignment.value)
-assert len(sources) == 17
+assert len(sources) == 18
 assert sources[8:10] == ("dkfm_shoegaze", "dkfm_classic")
-assert sources[10:] == ("egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru")
+assert sources[10:] == ("egofm_rnb", "egofm_chillout", "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze", "radio_britannia", "wbru", "indie_x_fm")
 assert "duyster" not in sources
 assert "radio_x_main" not in sources
 
