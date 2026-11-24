@@ -16,11 +16,14 @@ class RemixRescueTests(unittest.TestCase):
             'Sunday Girl "Love U More"',
         )
 
+    def test_original_mix(self):
+        self.assertEqual(hint("Mike Mago & Dragonette", "Secret Stash (Original Mix)", "Mike Mago & Dragonette"), 'Mike Mago & Dragonette "Secret Stash"')
+
     def test_no_broad_remix_or_unrelated_version_rescues(self):
         for title in (
             "Oh Sailor", "Oh Sailor (Remix)", "Oh Sailor (Live)",
             "Oh Sailor (Acoustic)", "Oh Sailor (Studio Version)",
-            "Oh Sailor (Album Mix)", "Oh Sailor (Original Mix)",
+            "Oh Sailor (Album Mix)", "Oh Sailor (Original Remix)",
             "Oh Sailor (Radio Mix)", "Oh Sailor (Club Mix)",
             "Oh Sailor (Extended Mix)", "Oh Sailor (Strange Talk Remix) Extra",
             "A (RAC Remix)",
