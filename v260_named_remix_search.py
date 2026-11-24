@@ -20,8 +20,10 @@ def original_search_hint(artist, title, spotify_search_artist):
     # bare '(Remix)' or ordinary album/version/editorial suffixes.
     if not base.strip() or len(re.sub(r"[^a-z0-9]", "", base.casefold())) < 5:
         return None
+    if remixer.casefold() == "original" and m.group(3).casefold() != "mix":
+        return None
     if not remixer.strip() or remixer.casefold() in {
-        "original", "album", "single", "radio", "extended", "club",
+        "album", "single", "radio", "extended", "club",
     }:
         return None
     name = str(spotify_search_artist or "").replace('"', " ").strip()
