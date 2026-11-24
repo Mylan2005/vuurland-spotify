@@ -1,6 +1,6 @@
 """Zero-network checks; strictly no Spotify operations."""
 import pathlib, tempfile, json, ast
-from bronrapport_v138 import assess, SOURCES, ACTIVE_SOURCES, LEGACY_SOURCES
+from bronrapport_v138 import assess, SOURCES, ACTIVE_SOURCES, ARCHIVE_SOURCES, LEGACY_SOURCES
 
 def run():
     assert 'dkfm_classic' in ACTIVE_SOURCES
@@ -12,11 +12,12 @@ def run():
         and any(isinstance(target, ast.Name) and target.id=='RADIO_SOURCE_ORDER'
                 for target in node.targets)
     )
-    expected_active=set(ast.literal_eval(order_node.value)) | {'duyster'}
+    expected_active=set(ast.literal_eval(order_node.value))
     assert set(ACTIVE_SOURCES)==expected_active
+    assert set(ARCHIVE_SOURCES)=={'duyster'}
     assert set(LEGACY_SOURCES)=={'radio_x_main','championship_vinyl','radio_indie_alternative'}
     assert set(ACTIVE_SOURCES).isdisjoint(LEGACY_SOURCES)
-    assert set(SOURCES)==set(ACTIVE_SOURCES) | set(LEGACY_SOURCES)
+    assert set(SOURCES)==set(ACTIVE_SOURCES) | set(ARCHIVE_SOURCES) | set(LEGACY_SOURCES)
     with tempfile.TemporaryDirectory() as root:
         p=pathlib.Path(root)
         (p/'log').write_text('📻 Vuurland sync\n📻 DKFM Classic wordt gecontroleerd...\n DKFM Classic: 100 nummers gevonden.\n🔢 v120 gezamenlijke FIFO: volgnummer 2000 geselecteerd (bron: dkfm_classic)\n✅ Toegevoegd: Test - Song\n',encoding='utf-8')
