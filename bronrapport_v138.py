@@ -22,6 +22,7 @@ ACTIVE_SOURCES = {
  'ignoreradio_shoegaze':'Ignoreradio Shoegaze',
  'radio_britannia':'Radio Britannia',
  'wbru':'WBRU',
+ 'indie_x_fm':'INDIE X FM',
 }
 # Duyster is a separate archive workflow, not a live RadioBox feed.
 ARCHIVE_SOURCES = {
