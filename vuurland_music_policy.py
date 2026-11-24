@@ -39,7 +39,7 @@ GLOBAL_LEGACY_BLOCKED_ARTISTS = frozenset({
     "whiplash", "razor", "onslaught", "violator",
     # Explicit user exclusions: punk, hardcore and abrasive alternative.
     "black flag", "circle jerks", "suicidal tendencies", "bad brains",
-    "turnstile", "ministry", "idles", "amyl and the sniffers",
+    "turnstile", "ministry", "amyl and the sniffers",
     "sprints", "starcrawler", "a place to bury strangers",
     # Clearly established hardcore punk, extreme metal and metalcore acts.
     "minor threat", "dead kennedys", "agnostic front", "madball",
