@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""v257: read-only quality snapshot for Vuurland's 17 live sources and Duyster.
+"""v257: read-only quality snapshot for Vuurland's 18 live sources and Duyster.
 
 Never imports the sync engine, accesses Spotify, or writes to existing state.
 Queue is a CURRENT snapshot, not historical intake or Spotify match statistics.
@@ -15,7 +15,7 @@ LIVE_SOURCES = (
     "dreampop_radio", "indie_select", "dkfm_edge", "dark_edge",
     "dkfm_shoegaze", "dkfm_classic", "egofm_rnb", "egofm_chillout",
     "dj_neihtul", "gri_balkon", "ignoreradio_shoegaze",
-    "radio_britannia", "wbru",
+    "radio_britannia", "wbru", "indie_x_fm",
 )
 LABELS = {
     "vuurland": "Studio Brussel Vuurland", "mellow_mix": "Mellow Mix",
@@ -26,7 +26,7 @@ LABELS = {
     "egofm_rnb": "egoFM R&B", "egofm_chillout": "egoFM Chillout",
     "dj_neihtul": "DJ Neihtul", "gri_balkon": "GRI Balkon",
     "ignoreradio_shoegaze": "IgnoreRadio Shoegaze",
-    "radio_britannia": "Radio Britannia", "wbru": "WBRU",
+    "radio_britannia": "Radio Britannia", "wbru": "WBRU", "indie_x_fm": "INDIE X FM",
     "duyster": "Duyster (archief)",
 }
 
