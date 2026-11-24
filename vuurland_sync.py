@@ -3337,6 +3337,13 @@ def find_spotify_track(
         niet losser.
         """
         text = _numbered_title_equivalent(value).replace("’", "'")
+        # Dotted initialisms: M.O.R. -> MOR, without changing ordinary words.
+        # Require at least three single letters and a complete token.
+        text = re.sub(
+            r"(?<![\w.])(?:[A-Za-z]\.){2,}[A-Za-z]\.?(?![\w.])",
+            lambda match: match.group(0).replace(".", ""),
+            text,
+        )
 
         contractions = {
             "dont": "don't", "cant": "can't", "wont": "won't",
