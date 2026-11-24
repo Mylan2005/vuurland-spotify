@@ -25,6 +25,7 @@ BRONNEN = {
     'dkfm_edge': 'DKFM Edge',
     'dkfm_shoegaze': 'DKFM Shoegaze Radio',
     'dkfm_classic': 'DKFM Classic',
+    'indie_x_fm': 'INDIE X FM',
 }
 SELECTIE = re.compile(r'(?:gezamenlijke FIFO:|bronrotatie:).*?\(bron:\s*([a-z0-9_]+)\)')
 ZOEKBEURT = re.compile(r'v224 Spotify-zoekbeurt:\s*([a-z0-9_]+)')
