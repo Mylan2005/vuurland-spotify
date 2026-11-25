@@ -4,7 +4,7 @@
 - Geen Spotify-/netwerkvragen en geen automatische playlistinventaris.
 - Willekeurige, reproduceerbare volgorde uit alle Duyster-afleveringen.
 - Aflevering 833 staat in het archief maar krijgt geen oneerlijke voorrang.
-- Backpressure blijft bestaan, maar de vroegere 100/3600-limieten\n  blokkeerden het volledige Duyster-archief ten onrechte.\n- Maximaal 9000 wachtende Duyster-nummers en 14000 totale FIFO-items;\n  voldoende capaciteit voor het huidige unieke archief zonder queue-reset.
+- Geen maximum voor wachtende Duyster-nummers of totale FIFO-grootte.
 - Alle bestaande radio-items en hun volgorde blijven onaangeroerd.
 """
 import csv
@@ -16,8 +16,6 @@ import secrets
 import time
 
 DUYSTER_ENQUEUE_INTERVAL_SECONDS = 120
-DUYSTER_MAX_PENDING = 9000
-DUYSTER_MAX_TOTAL_QUEUE = 14000
 _CURSOR = "__v192_duyster_archive_cursor"
 _NEXT = "__v192_duyster_next_enqueue_at"
 _SHAPE = "__v192_duyster_archive_shape"
@@ -87,14 +85,8 @@ def enqueue_one(cache, live_queue, seen, *, data_dir, key_func,
     now = time.time() if now is None else float(now)
     if now < float(cache.get(_NEXT, 0) or 0):
         return None
-    if len(live_queue) >= DUYSTER_MAX_TOTAL_QUEUE:
-        print("⏸️ Duyster: totale FIFO-limiet; geen nieuwe archiefitems.")
-        return None
     pending = sum(1 for x in live_queue if isinstance(x, dict)
                   and x.get("source") == "duyster")
-    if pending >= DUYSTER_MAX_PENDING:
-        print(f"⏸️ Duyster: {pending} wachtende archiefitems; rustig pauzeren.")
-        return None
 
     try:
         candidates = _load_candidates(data_dir, key_func)
