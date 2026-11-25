@@ -43,7 +43,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          # Shallow initial checkout; deepen only if ancestry is unavailable.
+          ref: main
+          fetch-depth: 1
 
       - name: Python
         uses: actions/setup-python@v5
@@ -80,6 +82,18 @@ jobs:
             echo "⚠️ Lokale state als herstelartifact bewaard; niet geforceerd gepusht."
           }
 
+          fetch_main_safely() {
+            git fetch origin main || return 1
+            # Normal updates share the previous tip. If shallow history hides
+            # the common ancestor, restore full history before merge/rebase.
+            if ! git merge-base HEAD origin/main >/dev/null 2>&1; then
+              if [ "$(git rev-parse --is-shallow-repository)" = true ]; then
+                git fetch --unshallow origin main || return 1
+              fi
+            fi
+            git merge-base HEAD origin/main >/dev/null 2>&1
+          }
+
           push_state() {
             git add \
               vuurland_seen.json \
@@ -97,7 +111,10 @@ jobs:
             for attempt in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
               echo "🔄 Push-poging $attempt/15..."
 
-              git fetch origin main
+              if ! fetch_main_safely; then
+                save_recovery
+                return 1
+              fi
 
               if ! git rebase origin/main; then
                 echo "❌ Rebase-conflict tijdens opslaan sync-state."
@@ -141,7 +158,7 @@ jobs:
               # Bij blijvende fout stoppen vóór Spotify (nooit verouderde state gebruiken).
               V86_FETCH_OK=0
               for V86_FETCH_ATTEMPT in 1 2 3; do
-                if git fetch origin main; then
+                if fetch_main_safely; then
                   V86_FETCH_OK=1
                   break
                 fi
