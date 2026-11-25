@@ -7,7 +7,7 @@
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "c8cd44668fa9d94f16d9e600cfec64da46805997827e42a449a2156bf97fbedb",
-      "checked_at_utc": "2026-11-25T08:02:46.077729+00:00"
+      "checked_at_utc": "2026-11-25T11:26:12.909429+00:00"
     },
     "832": {
       "source_tracks": 24,
@@ -3499,13 +3499,13 @@
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "5268fad03d7108c0351ebeff12167b7e8cdd428afec0fcc74906aba9acf867c0",
-      "checked_at_utc": "2026-11-25T08:02:44.171050+00:00"
+      "checked_at_utc": "2026-11-25T11:26:11.273457+00:00"
     },
     "835": {
       "source_tracks": 25,
       "recovered": 0,
       "source_sha256": "7143ed29748f5ee0e5a3a04396d09614808b2e9144c1351aebb0229ff88f0e85",
-      "checked_at_utc": "2026-11-25T08:02:42.275666+00:00"
+      "checked_at_utc": "2026-11-25T11:26:09.629439+00:00"
     },
     "250": {
       "source_tracks": 21,
@@ -5010,8 +5010,8 @@
   },
   "total_recovered": 8,
   "complete": false,
-  "last_checked_at_utc": "2026-11-25T08:03:30.175099+00:00",
-  "last_batch_verified": 26,
+  "last_checked_at_utc": "2026-11-25T11:26:12.909449+00:00",
+  "last_batch_verified": 3,
   "last_batch_recovered": 0,
   "last_error": null,
   "last_error_pid": null,
@@ -5030,7 +5030,7 @@
     }
   },
   "last_batch_source_gaps": 0,
-  "last_batch_processed": 26,
+  "last_batch_processed": 3,
   "scan_finished": true,
   "complete_with_known_gaps": true
 }
