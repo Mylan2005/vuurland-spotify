@@ -10,7 +10,6 @@ import tempfile
 from pathlib import Path
 from duyster_archive_fifo import (
     enqueue_one, DUYSTER_ENQUEUE_INTERVAL_SECONDS,
-    DUYSTER_MAX_PENDING, DUYSTER_MAX_TOTAL_QUEUE,
     _CURSOR, _NEXT, _SEED, _load_candidates, is_non_music_title, canonical_duyster_title,
 )
 from dark_edge_filter import dark_edge_reject_reason
@@ -132,8 +131,6 @@ with tempfile.TemporaryDirectory() as tmp:
     # Regressie: oude harde limiet 100 en totaallimiet 3600 mogen de
     # archiefaanvoer niet stilleggen. Simuleer reeds opgebouwde achterstand
     # zonder bestaande records, volgorde of 120s-slot te veranderen.
-    assert DUYSTER_MAX_PENDING > 8316
-    assert DUYSTER_MAX_TOTAL_QUEUE > 3000 + 8316
     backlog = [
         {"artist": "Historical Duyster", "title": f"Old {i}", "source": "duyster"}
         for i in range(100)
@@ -155,15 +152,15 @@ with tempfile.TemporaryDirectory() as tmp:
     assert enqueue_one(fresh_cache, backlog, set(), now=base + 120, **kwargs)
     assert len(backlog) == len(backlog_before) + 2
 
-    # FIFO remmen als er al veel Duyster-nummers wachten.
+    # Even above both former caps, archive ingestion must continue.
     full_duyster = [{"artist": "X", "title": str(i), "source": "duyster"}
-                    for i in range(DUYSTER_MAX_PENDING)]
-    assert enqueue_one({}, full_duyster, set(), now=base, **kwargs) is None
-    assert len(full_duyster) == DUYSTER_MAX_PENDING
+                    for i in range(9001)]
+    assert enqueue_one({}, full_duyster, set(), now=base, **kwargs) is not None
+    assert len(full_duyster) == 9002
     huge_queue = [{"artist": "X", "title": str(i), "source": "vuurland"}
-                  for i in range(DUYSTER_MAX_TOTAL_QUEUE)]
-    assert enqueue_one({}, huge_queue, set(), now=base, **kwargs) is None
-    assert len(huge_queue) == DUYSTER_MAX_TOTAL_QUEUE
+                  for i in range(20000)]
+    assert enqueue_one({}, huge_queue, set(), now=base, **kwargs) is not None
+    assert len(huge_queue) == 20001
 
 # Historische Radio 1-sessie wordt uitsluitend als studioversie beschouwd.
 # Ook dubbels tussen aflevering 833 en de hoofd-CSV krijgen slechts één key.
