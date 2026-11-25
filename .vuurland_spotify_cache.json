@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "london grammar|||nightcall",
       "luke sital-singh|||greatest lovers",
       "maya hawke|||bring home my man",
       "greentea peng|||look to him",
@@ -113,8 +114,7 @@
       "saya gray|||shell of a man",
       "adele|||turning tables",
       "nick cave & the bad seeds|||long dark night",
-      "ry x feat hermanos gutierrez|||you",
-      "cigarettes after sex|||twizzler"
+      "ry x feat hermanos gutierrez|||you"
     ],
     "mellow_mix": [
       "stephen sanchez|||until i found you",
@@ -937,6 +937,7 @@
       "cranes|||everywhere"
     ],
     "dkfm_classic": [
+      "shallow|||light saber and the video game",
       "veldt|||daisy chain",
       "ride|||paralysed",
       "piano magic|||birdymachine",
@@ -1035,10 +1036,10 @@
       "boo radleys|||peachy keen",
       "catherine wheel|||broken head",
       "sixpence none the richer|||bleeding",
-      "bowery electric|||inside out",
-      "the sundays|||life & soul"
+      "bowery electric|||inside out"
     ],
     "egofm_rnb": [
+      "waterbaby|||airforce blue",
       "amber mark|||foreign things",
       "sia|||bird set free",
       "twin shadow|||when you're wrong",
@@ -1137,8 +1138,7 @@
       "robert glasper feat musiq soulchild & chrisette michel|||ah yeah",
       "beabadoobee|||if you want to",
       "viceroy feat k flay|||back at the start",
-      "jamie lidell|||walk right back",
-      "fka twigs|||careless feat daniel caesar"
+      "jamie lidell|||walk right back"
     ],
     "egofm_chillout": [
       "engelwood & iamalex|||cruisin",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795632001.1702287,
-    "mellow_mix": 1795632001.1738362,
-    "big_sonic_heaven": 1795632001.17672,
-    "radio_x_chilled": 1795632001.1795156,
-    "dreampop_radio": 1795632001.1821852,
-    "indie_select": 1795632001.1853023,
-    "dkfm_edge": 1795632001.1881495,
+    "vuurland": 1795632032.695009,
+    "mellow_mix": 1795632032.6984618,
+    "big_sonic_heaven": 1795632032.701336,
+    "radio_x_chilled": 1795632032.7040715,
+    "dreampop_radio": 1795632032.706808,
+    "indie_select": 1795632032.709963,
+    "dkfm_edge": 1795632032.712797,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795632001.192672,
-    "dkfm_shoegaze": 1795632001.1960826,
-    "dkfm_classic": 1795632001.1988983,
-    "egofm_rnb": 1795632001.2018192,
-    "egofm_chillout": 1795632001.2046442,
-    "dj_neihtul": 1795632001.2071242,
-    "gri_balkon": 1795632001.209284,
-    "ignoreradio_shoegaze": 1795632001.212454,
-    "radio_britannia": 1795632001.2158556,
-    "wbru": 1795632001.2182777,
-    "indie_x_fm": 1795632001.2209508
+    "dark_edge": 1795632032.7174206,
+    "dkfm_shoegaze": 1795632032.7208898,
+    "dkfm_classic": 1795632032.723937,
+    "egofm_rnb": 1795632032.727045,
+    "egofm_chillout": 1795632032.7299995,
+    "dj_neihtul": 1795632032.7325015,
+    "gri_balkon": 1795632032.7346346,
+    "ignoreradio_shoegaze": 1795632032.7378626,
+    "radio_britannia": 1795632032.7412512,
+    "wbru": 1795632032.7436829,
+    "indie_x_fm": 1795632032.7463908
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38288,11 +38288,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "luke sital-singh|||greatest lovers",
+  "__last_radio_key_vuurland": "london grammar|||nightcall",
   "__last_radio_key_mellow_mix": "stephen sanchez|||until i found you",
   "__last_radio_key_big_sonic_heaven": "tamaryn|||love fade",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 35277,
+  "__v116_fifo_next_sequence": 35278,
   "__v146_spotify_budget_slot": 1795630526.5823624,
   "__vuurland_active_playlist_count": 6206,
   "__vuurland_active_volume": 2,
@@ -162307,7 +162307,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "dottie|||cherry",
   "__last_radio_key_dkfm_shoegaze": "otsyuda|||honey",
-  "__last_radio_key_dkfm_classic": "veldt|||daisy chain",
+  "__last_radio_key_dkfm_classic": "shallow|||light saber and the video game",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -163054,8 +163054,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 1268,
-  "__v192_duyster_next_enqueue_at": 1795632034.7943335,
+  "__v192_duyster_archive_cursor": 1270,
+  "__v192_duyster_next_enqueue_at": 1795632161.7762249,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -167717,7 +167717,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "amber mark|||foreign things",
+  "__last_radio_key_egofm_rnb": "waterbaby|||airforce blue",
   "__last_radio_key_egofm_chillout": "engelwood & iamalex|||cruisin",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
