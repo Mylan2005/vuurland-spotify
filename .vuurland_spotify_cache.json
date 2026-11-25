@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "boy & bear|||southern sun",
+      "whitney|||no woman",
       "ben howard|||sorry kid",
       "kurt vile|||zoom 97",
       "michael kiwanuka|||love & hate",
@@ -112,9 +114,7 @@
       "leon bridges feat lydia kitto|||all day all night",
       "sherman|||you were in for more",
       "novastar|||the best is yet to come",
-      "girl in red|||i wanna be your girlfriend",
-      "dotan|||let you go",
-      "ane brun|||make you feel my love"
+      "girl in red|||i wanna be your girlfriend"
     ],
     "mellow_mix": [
       "steve miller band|||wild mountain honey",
@@ -219,6 +219,7 @@
       "joni mitchell|||chelsea morning"
     ],
     "big_sonic_heaven": [
+      "molly|||the golden age",
       "new order|||dreams never end",
       "atmos bloom|||it's enough",
       "future islands|||cave",
@@ -317,8 +318,7 @@
       "good day father|||sonic amadea",
       "the smiths|||back to the old house",
       "sea lemon|||change your face",
-      "cocteau twins|||ribbed and veined",
-      "in inertia|||what remains is beautiful feat niskala"
+      "cocteau twins|||ribbed and veined"
     ],
     "radio_x_chilled": [
       "elbow|||lippy kids",
@@ -1549,6 +1549,7 @@
       "secret shine|||ember"
     ],
     "radio_britannia": [
+      "editors|||formaldehyde",
       "the subways|||rock and roll queen",
       "radiohead|||nude",
       "public service broadcasting|||electra",
@@ -1647,10 +1648,10 @@
       "villagers|||that golden time",
       "bloc party|||love bombs",
       "geneva|||tranquillizer",
-      "stereophonics|||youre my star",
-      "alex amor|||as above so below"
+      "stereophonics|||youre my star"
     ],
     "wbru": [
+      "noah kahan|||doors",
       "the paradox|||i kinda like that",
       "the dandy warhols|||bohemian like you",
       "beabadoobee|||write me a letter",
@@ -1749,8 +1750,7 @@
       "cage the elephant|||beaches in tennessee",
       "beach bunny|||vinegar",
       "phoenix|||lisztomania",
-      "buffalo traffic jam|||fool's gold",
-      "mitski|||me and my husband"
+      "buffalo traffic jam|||fool's gold"
     ],
     "indie_x_fm": [
       "johnny goth|||everybody just wants to",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795636508.602385,
-    "mellow_mix": 1795636508.6055114,
-    "big_sonic_heaven": 1795636508.6082067,
-    "radio_x_chilled": 1795636508.61064,
-    "dreampop_radio": 1795636508.6131046,
-    "indie_select": 1795636508.6161735,
-    "dkfm_edge": 1795636508.6187873,
+    "vuurland": 1795636604.730534,
+    "mellow_mix": 1795636604.733741,
+    "big_sonic_heaven": 1795636604.7365723,
+    "radio_x_chilled": 1795636604.7390654,
+    "dreampop_radio": 1795636604.7414951,
+    "indie_select": 1795636604.7443793,
+    "dkfm_edge": 1795636604.747007,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795636508.6230268,
-    "dkfm_shoegaze": 1795636508.6262307,
-    "dkfm_classic": 1795636508.6288502,
-    "egofm_rnb": 1795636508.6316123,
-    "egofm_chillout": 1795636508.6342247,
-    "dj_neihtul": 1795636508.6364813,
-    "gri_balkon": 1795636508.638491,
-    "ignoreradio_shoegaze": 1795636508.6414485,
-    "radio_britannia": 1795636508.6444595,
-    "wbru": 1795636508.6467304,
-    "indie_x_fm": 1795636508.990982
+    "dark_edge": 1795636604.7512748,
+    "dkfm_shoegaze": 1795636604.754535,
+    "dkfm_classic": 1795636604.7571416,
+    "egofm_rnb": 1795636604.759846,
+    "egofm_chillout": 1795636604.7624578,
+    "dj_neihtul": 1795636604.76478,
+    "gri_balkon": 1795636604.7667577,
+    "ignoreradio_shoegaze": 1795636604.7696846,
+    "radio_britannia": 1795636604.772821,
+    "wbru": 1795636604.7751706,
+    "indie_x_fm": 1795636604.777732
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38355,11 +38355,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "ben howard|||sorry kid",
+  "__last_radio_key_vuurland": "boy & bear|||southern sun",
   "__last_radio_key_mellow_mix": "steve miller band|||wild mountain honey",
-  "__last_radio_key_big_sonic_heaven": "new order|||dreams never end",
+  "__last_radio_key_big_sonic_heaven": "molly|||the golden age",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 35372,
+  "__v116_fifo_next_sequence": 35373,
   "__v146_spotify_budget_slot": 1795636520.5375412,
   "__vuurland_active_playlist_count": 6221,
   "__vuurland_active_volume": 2,
@@ -163184,8 +163184,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 1447,
-  "__v192_duyster_next_enqueue_at": 1795636601.6469026,
+  "__v192_duyster_archive_cursor": 1457,
+  "__v192_duyster_next_enqueue_at": 1795636733.7848344,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -169420,8 +169420,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "the subways|||rock and roll queen",
-  "__last_radio_key_wbru": "the paradox|||i kinda like that",
+  "__last_radio_key_radio_britannia": "editors|||formaldehyde",
+  "__last_radio_key_wbru": "noah kahan|||doors",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
