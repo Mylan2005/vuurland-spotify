@@ -6,7 +6,6 @@ No network calls, no cache-wide resets, no fabricated source or song.
 """
 import time
 
-from duyster_archive_fifo import DUYSTER_MAX_PENDING, DUYSTER_MAX_TOTAL_QUEUE
 
 from v194_matcher_metadata import canonical_artist, canonical_title
 from v200_verified_catalog_titles import verified_catalog_title
@@ -64,7 +63,8 @@ MATCHER_RETRY_RULES = (
 _RULE_HISTORY = "__v203_matcher_upgrade_retried_rules"
 _LAST_RELEASE = "__v203_matcher_upgrade_last_release"
 _MIN_GAP = 6 * 3600  # At most one matcher-upgrade recovery every six hours.
-# Reuse the archive FIFO backpressure limits: never revive the obsolete 100/3600 caps.
+# Preserve radio retry backpressure; Duyster archive retries have no queue-size cap.
+RADIO_RETRY_MAX_TOTAL_QUEUE = 14000
 
 
 def applicable_rules(artist, title):
@@ -251,12 +251,7 @@ def release_for_matcher_upgrades(
             cache[_RULE_HISTORY] = retry_history
             continue
 
-        if len(live_queue) >= DUYSTER_MAX_TOTAL_QUEUE:
-            break
-        if source == "duyster" and sum(
-            1 for item in live_queue if isinstance(item, dict)
-            and item.get("source") == "duyster"
-        ) >= DUYSTER_MAX_PENDING:
+        if source != "duyster" and len(live_queue) >= RADIO_RETRY_MAX_TOTAL_QUEUE:
             continue
         if appended >= max_per_round:
             break
