@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "noah kahan|||porch light",
+      "widowspeak|||the jacket",
       "solange|||cranes in the sky",
       "the paper kites|||bloom",
       "lisa hannigan|||snow",
@@ -112,11 +114,10 @@
       "lianne la havas|||hey that's no way to say goodbye",
       "villagers|||i want what i don't need",
       "jjerome87|||track and field",
-      "leith ross|||you on my arm",
-      "eefje de visser|||zwarte zon",
-      "coldplay|||feelslikeimfallinginlove"
+      "leith ross|||you on my arm"
     ],
     "mellow_mix": [
+      "bob marley|||three little birds",
       "gren bartley|||tall wooden walls",
       "rosanne cash|||the wheel",
       "the shins|||those to come",
@@ -215,8 +216,7 @@
       "neil young|||old man",
       "k d lang|||after the gold rush",
       "air|||left bank",
-      "toad the wet sprocket|||windmills",
-      "john hiatt|||crossing muddy waters"
+      "toad the wet sprocket|||windmills"
     ],
     "big_sonic_heaven": [
       "herbert & momoko|||babystar",
@@ -1141,6 +1141,7 @@
       "ty dolla $ign|||famous"
     ],
     "egofm_chillout": [
+      "tycho|||easy",
       "julee cruise|||falling",
       "saint wknd|||girls just wanna have sun",
       "pieter nooten and michael brook|||searching",
@@ -1239,8 +1240,7 @@
       "cigarettes after sex|||sunsetz",
       "hior chronik feat anna-maria marjamaki|||make sense",
       "jesper munk|||yesterdaze",
-      "tim bowness|||borderline feat dylan howe & david longdon",
-      "farhot|||kishmish"
+      "tim bowness|||borderline feat dylan howe & david longdon"
     ],
     "dj_neihtul": [
       "fka twigs|||how's that",
@@ -1447,6 +1447,7 @@
       "fila brazillia|||airlock homes"
     ],
     "ignoreradio_shoegaze": [
+      "wulven|||sunlite yellow overdrive",
       "fleeting joys|||everything you're running to",
       "the sleep healer|||sleep lightly",
       "zoon|||a language disappears",
@@ -1545,8 +1546,7 @@
       "harold budd|||sea swallow me",
       "the ecstasy of saint theresa|||pistaccio places",
       "massage|||lane lines",
-      "fernando motta|||nostalgia",
-      "klimt 1918|||the hunger strike"
+      "fernando motta|||nostalgia"
     ],
     "radio_britannia": [
       "palma violets|||step up for the cool cats",
@@ -1651,6 +1651,7 @@
       "everything everything|||poison pop"
     ],
     "wbru": [
+      "cocteau twins|||cico buff",
       "elliott smith|||between the bars",
       "fontaines d c|||japan",
       "jungle|||someday somewhere",
@@ -1727,7 +1728,6 @@
       "noah kahan|||porch light",
       "the beaches|||edge of the earth",
       "vance joy|||riptide",
-      "cocteau twins|||cico buff",
       "the smashing pumpkins|||today",
       "cage the elephant|||make it easy",
       "hozier|||someone",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795624055.6979363,
-    "mellow_mix": 1795624055.7009583,
-    "big_sonic_heaven": 1795624055.7035203,
-    "radio_x_chilled": 1795624055.7058847,
-    "dreampop_radio": 1795624055.7082596,
-    "indie_select": 1795624055.7110498,
-    "dkfm_edge": 1795624055.7135475,
+    "vuurland": 1795624147.3328173,
+    "mellow_mix": 1795624147.3359053,
+    "big_sonic_heaven": 1795624147.338566,
+    "radio_x_chilled": 1795624147.3409693,
+    "dreampop_radio": 1795624147.3433282,
+    "indie_select": 1795624147.346117,
+    "dkfm_edge": 1795624147.3485918,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795624055.7176552,
-    "dkfm_shoegaze": 1795624055.7207823,
-    "dkfm_classic": 1795624055.723487,
-    "egofm_rnb": 1795624055.7262602,
-    "egofm_chillout": 1795624055.7288883,
-    "dj_neihtul": 1795624055.7311828,
-    "gri_balkon": 1795624055.7331452,
-    "ignoreradio_shoegaze": 1795624055.7360113,
-    "radio_britannia": 1795624055.7390177,
-    "wbru": 1795624055.741147,
-    "indie_x_fm": 1795624055.743639
+    "dark_edge": 1795624147.352797,
+    "dkfm_shoegaze": 1795624147.3559334,
+    "dkfm_classic": 1795624147.358475,
+    "egofm_rnb": 1795624147.3611026,
+    "egofm_chillout": 1795624147.3638036,
+    "dj_neihtul": 1795624147.366009,
+    "gri_balkon": 1795624147.3679693,
+    "ignoreradio_shoegaze": 1795624147.6863778,
+    "radio_britannia": 1795624147.6894908,
+    "wbru": 1795624147.6916578,
+    "indie_x_fm": 1795624147.6940844
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32025,6 +32025,7 @@
       "wulven|||crush",
       "wulven|||lie in place",
       "wulven|||little death feat blood estate",
+      "wulven|||sunlite yellow overdrive",
       "wulven|||the devil is alive feat blood estate",
       "wulven|||this earth is consuming us",
       "wussy|||pulverized",
@@ -38148,11 +38149,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "solange|||cranes in the sky",
-  "__last_radio_key_mellow_mix": "gren bartley|||tall wooden walls",
+  "__last_radio_key_vuurland": "noah kahan|||porch light",
+  "__last_radio_key_mellow_mix": "bob marley|||three little birds",
   "__last_radio_key_big_sonic_heaven": "herbert & momoko|||babystar",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 35092,
+  "__v116_fifo_next_sequence": 35093,
   "__v146_spotify_budget_slot": 1795624067.456046,
   "__vuurland_active_playlist_count": 6166,
   "__vuurland_active_volume": 2,
@@ -167409,7 +167410,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "rosalia|||pienso en tu mira cap 3 celos",
-  "__last_radio_key_egofm_chillout": "julee cruise|||falling",
+  "__last_radio_key_egofm_chillout": "tycho|||easy",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -167447,7 +167448,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "fleeting joys|||everything you're running to",
+  "__last_radio_key_ignoreradio_shoegaze": "wulven|||sunlite yellow overdrive",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -168982,7 +168983,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "palma violets|||step up for the cool cats",
-  "__last_radio_key_wbru": "elliott smith|||between the bars",
+  "__last_radio_key_wbru": "cocteau twins|||cico buff",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
