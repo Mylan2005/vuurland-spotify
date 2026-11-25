@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "this is lorelei|||box for buddy box for star",
       "kings of leon|||my whole world",
       "sylvie kreusch|||walk walk",
       "chartreuse|||three days",
@@ -113,8 +114,7 @@
       "spinvis|||bagagedrager",
       "suki waterhouse|||back in love",
       "cigarettes after sex|||twizzler",
-      "maro|||to grieve you",
-      "zach bryan|||plastic cigarette"
+      "maro|||to grieve you"
     ],
     "mellow_mix": [
       "john coltrane|||naima",
@@ -219,6 +219,7 @@
       "the lumineers|||salt and the sea"
     ],
     "big_sonic_heaven": [
+      "last leaf down|||ghost trails",
       "she's green|||empty house",
       "the chameleons|||tears full arrangement",
       "the secret french postcards|||blush",
@@ -317,10 +318,10 @@
       "encarta 98|||destello",
       "lucid express|||something blue",
       "silk daisys|||little galaxy",
-      "rainsong|||fifteen",
-      "royksopp|||what else is there?"
+      "rainsong|||fifteen"
     ],
     "radio_x_chilled": [
+      "ben howard|||only love",
       "empire of the sun|||we are the people",
       "london grammar|||strong",
       "the coral|||jacqueline",
@@ -419,8 +420,7 @@
       "nothing but thieves|||if i get high",
       "foo fighters|||next year",
       "r e m|||nightswimming",
-      "milky chance|||stolen dance acoustic",
-      "the goo goo dolls|||iris"
+      "milky chance|||stolen dance acoustic"
     ],
     "dreampop_radio": [
       "neko case|||people got a lotta nerve",
@@ -525,6 +525,7 @@
       "kings of convenience|||gold in the air of summer"
     ],
     "indie_select": [
+      "moderat|||porc #2",
       "lamb|||we fall in love",
       "minor victories|||a hundred ropes",
       "british sea power|||all in it",
@@ -623,8 +624,7 @@
       "my tiger my timing|||i am the sound - my tiger my timing",
       "the jam|||that's entertainment",
       "ghost of tom joad|||into the wild",
-      "the beat|||save it for later",
-      "bran van 3000|||astounded feat curtis mayfield"
+      "the beat|||save it for later"
     ],
     "dkfm_edge": [
       "bean king|||eagle death",
@@ -1549,6 +1549,7 @@
       "yuko imada|||untitled years slipped past"
     ],
     "radio_britannia": [
+      "wolf alice|||the sofa",
       "god help the girl|||im in love with the city",
       "novo amor|||birthplace",
       "keane|||is it any wonder?",
@@ -1647,8 +1648,7 @@
       "english teacher|||r&b",
       "foals|||this orient",
       "django django|||year of the snake",
-      "muse|||muscle museum",
-      "chilli jesson|||white room"
+      "muse|||muscle museum"
     ],
     "wbru": [
       "fountains of wayne|||stacy's mom",
@@ -1753,6 +1753,7 @@
       "will paquin|||chandelier"
     ],
     "indie_x_fm": [
+      "idles lcd soundsystem|||dancer",
       "local natives|||dark days",
       "lloyd cole and the commotions|||perfect skin",
       "breeze|||own the place",
@@ -1851,30 +1852,29 @@
       "friday pilots club|||yup!",
       "we are scientists|||less from you",
       "pool girl|||melancholic beach town",
-      "camouflage|||love is a shield",
-      "the cure|||a fragile thing"
+      "camouflage|||love is a shield"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795582054.0744386,
-    "mellow_mix": 1795582054.084675,
-    "big_sonic_heaven": 1795582054.0912192,
-    "radio_x_chilled": 1795582054.0978763,
-    "dreampop_radio": 1795582054.1048346,
-    "indie_select": 1795582054.1121929,
-    "dkfm_edge": 1795582054.1198792,
+    "vuurland": 1795582148.2446253,
+    "mellow_mix": 1795582148.2545664,
+    "big_sonic_heaven": 1795582148.2613623,
+    "radio_x_chilled": 1795582148.2682016,
+    "dreampop_radio": 1795582148.2751474,
+    "indie_select": 1795582148.282842,
+    "dkfm_edge": 1795582148.2904794,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795582054.129534,
-    "dkfm_shoegaze": 1795582054.1375425,
-    "dkfm_classic": 1795582054.1446786,
-    "egofm_rnb": 1795582054.152006,
-    "egofm_chillout": 1795582054.1595457,
-    "dj_neihtul": 1795582054.164932,
-    "gri_balkon": 1795582054.16955,
-    "ignoreradio_shoegaze": 1795582054.1771798,
-    "radio_britannia": 1795582054.1855652,
-    "wbru": 1795582054.1903012,
-    "indie_x_fm": 1795582054.1972935
+    "dark_edge": 1795582148.3000405,
+    "dkfm_shoegaze": 1795582148.3080652,
+    "dkfm_classic": 1795582148.3152282,
+    "egofm_rnb": 1795582148.3225238,
+    "egofm_chillout": 1795582148.3299344,
+    "dj_neihtul": 1795582148.335358,
+    "gri_balkon": 1795582148.3398967,
+    "ignoreradio_shoegaze": 1795582148.347532,
+    "radio_britannia": 1795582148.3561554,
+    "wbru": 1795582148.3609548,
+    "indie_x_fm": 1795582148.8489306
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -37470,11 +37470,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "kings of leon|||my whole world",
+  "__last_radio_key_vuurland": "this is lorelei|||box for buddy box for star",
   "__last_radio_key_mellow_mix": "john coltrane|||naima",
-  "__last_radio_key_big_sonic_heaven": "she's green|||empty house",
+  "__last_radio_key_big_sonic_heaven": "last leaf down|||ghost trails",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 34276,
+  "__v116_fifo_next_sequence": 34277,
   "__v146_spotify_budget_slot": 1795582058.5435677,
   "__vuurland_active_playlist_count": 5875,
   "__vuurland_active_volume": 2,
@@ -158582,7 +158582,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "empire of the sun|||we are the people",
+  "__last_radio_key_radio_x_chilled": "ben howard|||only love",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -158804,7 +158804,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "lamb|||we fall in love",
+  "__last_radio_key_indie_select": "moderat|||porc #2",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -167152,7 +167152,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "god help the girl|||im in love with the city",
+  "__last_radio_key_radio_britannia": "wolf alice|||the sofa",
   "__last_radio_key_wbru": "fountains of wayne|||stacy's mom",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -176445,7 +176445,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "local natives|||dark days",
+  "__last_radio_key_indie_x_fm": "idles lcd soundsystem|||dancer",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
