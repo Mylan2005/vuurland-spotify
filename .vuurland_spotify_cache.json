@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sam fender|||seventeen going under",
       "jamie xx feat oliver sim|||stranger in a room",
       "the haunted youth|||wake up",
       "lana del rey|||fuck it i love you",
@@ -113,8 +114,7 @@
       "admiral freebee|||digital blues",
       "rhye|||summer song",
       "daughter|||candles",
-      "michael kiwanuka|||cold little heart",
-      "jungle|||dominoes"
+      "michael kiwanuka|||cold little heart"
     ],
     "mellow_mix": [
       "the be good tanyas|||ootischenia",
@@ -525,6 +525,7 @@
       "seabear|||libraries"
     ],
     "indie_select": [
+      "the hundred in the hands|||red eyes rising",
       "the kissaway trail|||cuts of youth razor love",
       "yeah yeah yeahs|||spitting off the edge of the world feat perfume genius",
       "metric|||breathing underwater",
@@ -623,8 +624,7 @@
       "grian chatten|||fairlies",
       "let's buy happiness|||woodrings",
       "the joy formidable|||llaw = wall",
-      "frightened rabbit|||late march death march",
-      "art school girlfriend|||measures"
+      "frightened rabbit|||late march death march"
     ],
     "dkfm_edge": [
       "pia fraus|||confidential information",
@@ -1039,6 +1039,7 @@
       "veldt|||juicy sandwich"
     ],
     "egofm_rnb": [
+      "toro y moi|||new house",
       "enny|||same old",
       "ay wing|||out of your head shuko remix",
       "benny sings|||sunny afternoon",
@@ -1137,10 +1138,10 @@
       "superorganism|||something for your m i n d",
       "bonobo feat bajka|||walk in the sky",
       "beyonce|||hold up",
-      "smino feat nos|||i deserve",
-      "jon batiste feat zazie smith|||show me the way"
+      "smino feat nos|||i deserve"
     ],
     "egofm_chillout": [
+      "sampha|||no one knows me like the piano",
       "may & robot koch|||gold",
       "bigott|||the reno poem",
       "hayden thorpe|||diviner",
@@ -1239,8 +1240,7 @@
       "dirty art club|||angeldust",
       "aphex twin|||aisatsana",
       "chet faker|||talk is cheap",
-      "mommy & philanthrope|||soupeddd! feat weird inside",
-      "aso|||window"
+      "mommy & philanthrope|||soupeddd! feat weird inside"
     ],
     "dj_neihtul": [
       "alan mean|||fantasy sambox lounge mix",
@@ -1549,6 +1549,7 @@
       "lilys|||high writer at home"
     ],
     "radio_britannia": [
+      "the rooks|||falling down",
       "elastica|||car song",
       "bombay bicycle club|||diving feat holly humberstone",
       "rat boy|||revolution",
@@ -1647,8 +1648,7 @@
       "tom odell|||another love",
       "radiohead|||bodysnatchers",
       "the kills|||list of demands reparations",
-      "liam gallagher|||better days",
-      "james|||how was it for you?"
+      "liam gallagher|||better days"
     ],
     "wbru": [
       "noah kahan|||orbiter",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795622112.1922448,
-    "mellow_mix": 1795622112.1951568,
-    "big_sonic_heaven": 1795622112.19766,
-    "radio_x_chilled": 1795622112.2000277,
-    "dreampop_radio": 1795622112.2022853,
-    "indie_select": 1795622112.2049952,
-    "dkfm_edge": 1795622112.2074423,
+    "vuurland": 1795622205.481362,
+    "mellow_mix": 1795622205.4842868,
+    "big_sonic_heaven": 1795622205.486851,
+    "radio_x_chilled": 1795622205.489199,
+    "dreampop_radio": 1795622205.4915016,
+    "indie_select": 1795622205.4945192,
+    "dkfm_edge": 1795622205.4969232,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795622112.2115395,
-    "dkfm_shoegaze": 1795622112.2145178,
-    "dkfm_classic": 1795622112.217037,
-    "egofm_rnb": 1795622112.2195327,
-    "egofm_chillout": 1795622112.222041,
-    "dj_neihtul": 1795622112.224204,
-    "gri_balkon": 1795622112.2261388,
-    "ignoreradio_shoegaze": 1795622112.2288914,
-    "radio_britannia": 1795622112.2318177,
-    "wbru": 1795622112.2338748,
-    "indie_x_fm": 1795622112.236154
+    "dark_edge": 1795622205.5010302,
+    "dkfm_shoegaze": 1795622205.5040243,
+    "dkfm_classic": 1795622205.5064816,
+    "egofm_rnb": 1795622205.5091093,
+    "egofm_chillout": 1795622205.5116813,
+    "dj_neihtul": 1795622205.513903,
+    "gri_balkon": 1795622205.515782,
+    "ignoreradio_shoegaze": 1795622205.518531,
+    "radio_britannia": 1795622205.5215168,
+    "wbru": 1795622205.5236366,
+    "indie_x_fm": 1795622205.5260434
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38126,7 +38126,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "jamie xx feat oliver sim|||stranger in a room",
+  "__last_radio_key_vuurland": "sam fender|||seventeen going under",
   "__last_radio_key_mellow_mix": "the be good tanyas|||ootischenia",
   "__last_radio_key_big_sonic_heaven": "sugarcubes|||sick for toys",
   "__v181_vuurland_two_missing_recovered": true,
@@ -160558,7 +160558,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the kissaway trail|||cuts of youth razor love",
+  "__last_radio_key_indie_select": "the hundred in the hands|||red eyes rising",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -167332,8 +167332,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "enny|||same old",
-  "__last_radio_key_egofm_chillout": "may & robot koch|||gold",
+  "__last_radio_key_egofm_rnb": "toro y moi|||new house",
+  "__last_radio_key_egofm_chillout": "sampha|||no one knows me like the piano",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -168905,7 +168905,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "elastica|||car song",
+  "__last_radio_key_radio_britannia": "the rooks|||falling down",
   "__last_radio_key_wbru": "noah kahan|||orbiter",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
