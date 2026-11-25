@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795650688.5747373,
+  "__v150_next_spotify_round_at": 1795650821.5435271,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "coldplay|||fix you",
       "dope lemon|||streets of your town",
       "the haunted youth|||wake up",
       "mooneye|||fix the heater",
@@ -113,8 +114,7 @@
       "hazel english|||off my mind",
       "camille camille|||in a song",
       "the tallest man on earth|||love is all",
-      "alt-j|||matilda",
-      "hannah jadagu|||warning sign"
+      "alt-j|||matilda"
     ],
     "mellow_mix": [
       "aretha franklin|||i say a little prayer",
@@ -321,6 +321,7 @@
       "laveda|||f***"
     ],
     "radio_x_chilled": [
+      "vance joy|||riptide",
       "radiohead|||fake plastic trees",
       "florence the machine|||free acoustic",
       "bright eyes|||first day of my life",
@@ -419,8 +420,7 @@
       "stereophonics|||traffic",
       "florence the machine|||my boy builds coffins acoustic",
       "bon iver|||skinny love",
-      "massive attack|||safe from harm",
-      "mazzy star|||into dust"
+      "massive attack|||safe from harm"
     ],
     "dreampop_radio": [
       "kolkhorst|||dieser traum",
@@ -1345,6 +1345,7 @@
       "moby|||the tired and the hurt"
     ],
     "gri_balkon": [
+      "pistolpuma rebekka b maeland|||teardrops",
       "no pia no|||pyjama",
       "trippin jaguar|||duat ft raffaello visconti",
       "pale|||fearing faces",
@@ -1443,8 +1444,7 @@
       "dj koze|||muddy funster",
       "royksopp|||compulsion ft jamie irrepressible",
       "olefonken|||ubuntu tutu",
-      "tim deluxe|||love is",
-      "agoria|||for one hour ft scalde"
+      "tim deluxe|||love is"
     ],
     "ignoreradio_shoegaze": [
       "jesu|||alone",
@@ -1651,6 +1651,7 @@
       "do nothing|||smile"
     ],
     "wbru": [
+      "of monsters and men|||dirty paws",
       "wolf parade|||i'll believe in anything",
       "clarion|||hello juliet",
       "phoebe bridgers|||the governor's waltz",
@@ -1749,8 +1750,7 @@
       "white town|||your woman",
       "green day|||she",
       "tv|||the rick pitino show open 1987",
-      "pavement|||cut your hair",
-      "nirvana|||all apologies"
+      "pavement|||cut your hair"
     ],
     "indie_x_fm": [
       "dummy|||full spectrum dominance",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795650655.9149187,
-    "mellow_mix": 1795650655.9188385,
-    "big_sonic_heaven": 1795650655.922171,
-    "radio_x_chilled": 1795650655.925162,
-    "dreampop_radio": 1795650655.9281647,
-    "indie_select": 1795650655.931526,
-    "dkfm_edge": 1795650655.9348135,
+    "vuurland": 1795650692.0084612,
+    "mellow_mix": 1795650692.0123112,
+    "big_sonic_heaven": 1795650692.0155585,
+    "radio_x_chilled": 1795650692.018741,
+    "dreampop_radio": 1795650692.0218318,
+    "indie_select": 1795650692.0251725,
+    "dkfm_edge": 1795650692.0283327,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795650656.2419662,
-    "dkfm_shoegaze": 1795650656.246058,
-    "dkfm_classic": 1795650656.2492542,
-    "egofm_rnb": 1795650656.252535,
-    "egofm_chillout": 1795650656.2557583,
-    "dj_neihtul": 1795650656.25869,
-    "gri_balkon": 1795650656.2610989,
-    "ignoreradio_shoegaze": 1795650656.2646053,
-    "radio_britannia": 1795650656.2683432,
-    "wbru": 1795650656.2710207,
-    "indie_x_fm": 1795650656.2741327
+    "dark_edge": 1795650692.04008,
+    "dkfm_shoegaze": 1795650692.0437944,
+    "dkfm_classic": 1795650692.046944,
+    "egofm_rnb": 1795650692.0501637,
+    "egofm_chillout": 1795650692.0533848,
+    "dj_neihtul": 1795650692.0561388,
+    "gri_balkon": 1795650692.0585995,
+    "ignoreradio_shoegaze": 1795650692.062123,
+    "radio_britannia": 1795650692.0659075,
+    "wbru": 1795650692.0686386,
+    "indie_x_fm": 1795650692.071769
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38576,13 +38576,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "dope lemon|||streets of your town",
+  "__last_radio_key_vuurland": "coldplay|||fix you",
   "__last_radio_key_mellow_mix": "aretha franklin|||i say a little prayer",
   "__last_radio_key_big_sonic_heaven": "slowdive|||40 days",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 35684,
-  "__v146_spotify_budget_slot": 1795650570.699213,
-  "__vuurland_active_playlist_count": 6313,
+  "__v146_spotify_budget_slot": 1795650703.6635711,
+  "__vuurland_active_playlist_count": 6314,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1795648988,
@@ -41441,6 +41441,7 @@
     "chapel club|||blind",
     "chappaqua wrestling|||wide asleep",
     "chappaqua wrestling|||wide asleep live at on the beach",
+    "chappell roan|||red wine supernova",
     "chapterhouse|||come heaven",
     "chapterhouse|||feel demo",
     "chapterhouse|||feel the same",
@@ -71918,6 +71919,7 @@
     "spotify:track:7FMXSSzIRW8aJwUPfzXsa2",
     "spotify:track:7FMu9T2UwCvlMK2YrdqUzA",
     "spotify:track:7FNqD0gR84UhwRjM5eLeUI",
+    "spotify:track:7FOgcfdz9Nx5V9lCNXdBYv",
     "spotify:track:7FP5y5nA6F7eIjc3cPGQiz",
     "spotify:track:7FPlu9xdYY6b3hdpp7EhOy",
     "spotify:track:7FS8URfbyqoy7uGpMx0gW5",
@@ -88415,6 +88417,7 @@
     "USUG12209350",
     "USUG12300472",
     "USUG12300473",
+    "USUG12301845",
     "USUG12305745",
     "USUG12305747",
     "USUG12305749",
@@ -105192,7 +105195,8 @@
     "spotify:track:27lIIiBrBkNvi5FY4VZ4KX": "FRUM72100920",
     "spotify:track:37bhGWCBAb8pbfJhb8R0MW": "SEWCE2200012",
     "spotify:track:1dYM5FPrZSKgtx2xsdW5Xs": "GBAFL1000180",
-    "spotify:track:45zchKchb6CEkAOIO4JMsO": "USC4R2555838"
+    "spotify:track:45zchKchb6CEkAOIO4JMsO": "USC4R2555838",
+    "spotify:track:7FOgcfdz9Nx5V9lCNXdBYv": "USUG12301845"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -161453,7 +161457,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "radiohead|||fake plastic trees",
+  "__last_radio_key_radio_x_chilled": "vance joy|||riptide",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -166720,7 +166724,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "radio_britannia",
+  "__v221_last_selected_source": "wbru",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -166732,7 +166736,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "radio_britannia",
+  "__v224_last_spotify_opportunity_source": "wbru",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -166765,7 +166769,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "radio_britannia",
+  "__v227_last_source_turn": "wbru",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -168465,7 +168469,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "no pia no|||pyjama",
+  "__last_radio_key_gri_balkon": "pistolpuma rebekka b maeland|||teardrops",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -170023,7 +170027,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "sports team|||the drop",
-  "__last_radio_key_wbru": "wolf parade|||i'll believe in anything",
+  "__last_radio_key_wbru": "of monsters and men|||dirty paws",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -180017,5 +180021,6 @@
   "__match_v35__m i l k feat kesmar|||everybody is a summer body": "spotify:track:27lIIiBrBkNvi5FY4VZ4KX",
   "__match_v35__fever ray|||carbon dioxide": "spotify:track:37bhGWCBAb8pbfJhb8R0MW",
   "__match_v35__deerhunter|||don't cry": "spotify:track:1dYM5FPrZSKgtx2xsdW5Xs",
-  "__match_v35__miles kane|||always in over my head": "spotify:track:45zchKchb6CEkAOIO4JMsO"
+  "__match_v35__miles kane|||always in over my head": "spotify:track:45zchKchb6CEkAOIO4JMsO",
+  "__match_v35__chappell roan|||red wine supernova": "spotify:track:7FOgcfdz9Nx5V9lCNXdBYv"
 }
