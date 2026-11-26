@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "noah kahan|||doors",
       "monsters of folk|||dear god sincerely mof",
       "berre|||how beautiful this life is",
       "tamino|||crocodile",
@@ -113,10 +114,10 @@
       "hope sandoval & the warm inventions|||drop",
       "dermot kennedy|||turnstile",
       "leon bridges|||river",
-      "jan verstraeten|||goodbye world",
-      "kurt vile|||zoom 97"
+      "jan verstraeten|||goodbye world"
     ],
     "mellow_mix": [
+      "jesse cook|||virtue",
       "the national|||90-mile water wall",
       "josh ritter|||you don't make it easy babe",
       "sade|||by your side",
@@ -215,8 +216,7 @@
       "my morning jacket|||golden",
       "the beatles|||hey jude",
       "mavis staples|||you are not alone",
-      "bob dylan|||simple twist of fate",
-      "leonard cohen|||so long marianne"
+      "bob dylan|||simple twist of fate"
     ],
     "big_sonic_heaven": [
       "future bible heroes|||death opened a boutique",
@@ -414,6 +414,7 @@
       "the national|||i need my girl"
     ],
     "dreampop_radio": [
+      "turin brakes|||rome",
       "ten fe|||elodie",
       "still parade|||fields",
       "heather nova|||heart and shoulder",
@@ -512,8 +513,7 @@
       "nick drake|||northern sky",
       "feist|||one evening",
       "the war on drugs|||under the pressure",
-      "the verve|||lucky man",
-      "the national|||start a war"
+      "the verve|||lucky man"
     ],
     "indie_select": [
       "polica|||matty",
@@ -1030,6 +1030,7 @@
       "swirlies|||cousteau"
     ],
     "egofm_rnb": [
+      "freekind|||happiness",
       "jon batiste|||sing",
       "jacob collier feat mahalia ty dolla $ign|||all i need",
       "lava la rue|||angel feat deb never",
@@ -1128,8 +1129,7 @@
       "prince|||the most beautiful girl in the world",
       "nevi|||westside",
       "hiatus kaiyote|||nakamarra",
-      "mariah carey|||shake it off",
-      "kennedy ryon|||fire"
+      "mariah carey|||shake it off"
     ],
     "egofm_chillout": [
       "bonobo|||kong",
@@ -1234,6 +1234,7 @@
       "mount kimbie|||carbonated"
     ],
     "dj_neihtul": [
+      "the xx|||on hold jamie xx remix",
       "flume|||hyperreal",
       "warpaint|||new song",
       "moby|||the sorrow tree",
@@ -1332,8 +1333,7 @@
       "little dragon|||gravity",
       "whomadewho|||dynasty",
       "moby|||a dark cloud is coming",
-      "christian loffler|||neo",
-      "underworld|||nylon strung"
+      "christian loffler|||neo"
     ],
     "gri_balkon": [
       "laura misch|||night drive",
@@ -1847,25 +1847,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795709410.7049813,
-    "mellow_mix": 1795709410.7081192,
-    "big_sonic_heaven": 1795709410.7105198,
-    "radio_x_chilled": 1795709410.7130048,
-    "dreampop_radio": 1795709410.7154486,
-    "indie_select": 1795709410.7182815,
-    "dkfm_edge": 1795709410.7208936,
+    "vuurland": 1795709514.013579,
+    "mellow_mix": 1795709514.016798,
+    "big_sonic_heaven": 1795709514.0191844,
+    "radio_x_chilled": 1795709514.0218647,
+    "dreampop_radio": 1795709514.024508,
+    "indie_select": 1795709514.027407,
+    "dkfm_edge": 1795709514.0300763,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795709410.7250621,
-    "dkfm_shoegaze": 1795709410.7282894,
-    "dkfm_classic": 1795709410.7309728,
-    "egofm_rnb": 1795709410.733674,
-    "egofm_chillout": 1795709410.7362518,
-    "dj_neihtul": 1795709410.7387023,
-    "gri_balkon": 1795709410.7407484,
-    "ignoreradio_shoegaze": 1795709411.0818634,
-    "radio_britannia": 1795709411.0851715,
-    "wbru": 1795709411.0874429,
-    "indie_x_fm": 1795709411.0900245
+    "dark_edge": 1795709514.0343235,
+    "dkfm_shoegaze": 1795709514.0376222,
+    "dkfm_classic": 1795709514.0403304,
+    "egofm_rnb": 1795709514.043191,
+    "egofm_chillout": 1795709514.0457892,
+    "dj_neihtul": 1795709514.0483704,
+    "gri_balkon": 1795709514.0504405,
+    "ignoreradio_shoegaze": 1795709514.0534317,
+    "radio_britannia": 1795709514.0567539,
+    "wbru": 1795709514.0592484,
+    "indie_x_fm": 1795709514.0619931
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -39422,8 +39422,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "monsters of folk|||dear god sincerely mof",
-  "__last_radio_key_mellow_mix": "the national|||90-mile water wall",
+  "__last_radio_key_vuurland": "noah kahan|||doors",
+  "__last_radio_key_mellow_mix": "jesse cook|||virtue",
   "__last_radio_key_big_sonic_heaven": "future bible heroes|||death opened a boutique",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 36845,
@@ -163927,7 +163927,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "ten fe|||elodie",
+  "__last_radio_key_dreampop_radio": "turin brakes|||rome",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -170819,7 +170819,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "jon batiste|||sing",
+  "__last_radio_key_egofm_rnb": "freekind|||happiness",
   "__last_radio_key_egofm_chillout": "bonobo|||kong",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -170829,7 +170829,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "flume|||hyperreal",
+  "__last_radio_key_dj_neihtul": "the xx|||on hold jamie xx remix",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
