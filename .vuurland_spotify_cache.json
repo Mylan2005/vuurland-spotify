@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "father john misty|||goodbye mr blue",
       "radiohead|||knives out",
       "eefje de visser|||heimwee",
       "mac demarco|||my kind of woman",
@@ -113,8 +114,7 @@
       "tom odell|||heal",
       "boygenius|||afraid of heights",
       "olivia dean|||i've seen it",
-      "mogwai|||ritchie sacramento",
-      "mitski|||heat lightning"
+      "mogwai|||ritchie sacramento"
     ],
     "mellow_mix": [
       "elton john|||amoreena",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "private agenda|||instinct",
       "beck|||colors",
       "arcade fire|||rebellion lies",
       "jose gonzalez|||swing",
@@ -831,10 +832,11 @@
       "u2|||lemon jeep mix",
       "noble son|||elvis",
       "hot chip|||one pure thought",
-      "the amsterdams|||sunology",
-      "hurts|||wish"
+      "the amsterdams|||sunology"
     ],
     "dkfm_shoegaze": [
+      "alonekitty|||nothing i can tell you",
+      "tender tones|||red lovers",
       "shady bug|||blow",
       "heals|||wave",
       "night school|||memories",
@@ -932,9 +934,7 @@
       "soul blind|||falling asleep",
       "ohio mark|||frida",
       "otsyuda|||honey",
-      "just penelope|||after",
-      "deafcult|||sentimental mistake",
-      "basement revolver|||bread & wine"
+      "just penelope|||after"
     ],
     "dkfm_classic": [
       "cranes|||i hope",
@@ -1651,6 +1651,7 @@
       "stereophonics|||all in one night"
     ],
     "wbru": [
+      "the goo goo dolls|||iris",
       "remi wolf|||champagne",
       "jungle|||someday somewhere",
       "khruangbin|||texas sun w leon bridges",
@@ -1749,10 +1750,10 @@
       "phoebe bridgers|||garden song",
       "noah kahan|||porch light",
       "steve lacy|||nothing",
-      "the strokes|||last nite",
-      "ben folds five|||brick"
+      "the strokes|||last nite"
     ],
     "indie_x_fm": [
+      "new constellations|||hot blooded",
       "no car garage|||for you",
       "ramones|||the kkk took my baby away",
       "the voidz|||alien crime lord",
@@ -1851,30 +1852,29 @@
       "johnny thunders|||chinese rocks",
       "the frights|||you are going to hate this",
       "poolside|||getting there from here",
-      "belle and sebastian|||the boy with the arab strap",
-      "interpol|||darling thoughts"
+      "belle and sebastian|||the boy with the arab strap"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795656231.0867884,
-    "mellow_mix": 1795656231.092651,
-    "big_sonic_heaven": 1795656231.0958977,
-    "radio_x_chilled": 1795656231.0989637,
-    "dreampop_radio": 1795656231.1022,
-    "indie_select": 1795656231.1055646,
-    "dkfm_edge": 1795656231.109168,
+    "vuurland": 1795656292.434442,
+    "mellow_mix": 1795656292.4431117,
+    "big_sonic_heaven": 1795656292.4468038,
+    "radio_x_chilled": 1795656292.4504776,
+    "dreampop_radio": 1795656292.4543045,
+    "indie_select": 1795656292.4581132,
+    "dkfm_edge": 1795656292.4622545,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795656231.1144285,
-    "dkfm_shoegaze": 1795656231.1182442,
-    "dkfm_classic": 1795656231.121443,
-    "egofm_rnb": 1795656231.125034,
-    "egofm_chillout": 1795656231.1283548,
-    "dj_neihtul": 1795656231.1311042,
-    "gri_balkon": 1795656231.1335258,
-    "ignoreradio_shoegaze": 1795656231.137127,
-    "radio_britannia": 1795656231.1412828,
-    "wbru": 1795656231.143934,
-    "indie_x_fm": 1795656231.1473424
+    "dark_edge": 1795656292.774912,
+    "dkfm_shoegaze": 1795656293.0905619,
+    "dkfm_classic": 1795656293.0947511,
+    "egofm_rnb": 1795656293.0989513,
+    "egofm_chillout": 1795656293.1031637,
+    "dj_neihtul": 1795656293.1063595,
+    "gri_balkon": 1795656293.109119,
+    "ignoreradio_shoegaze": 1795656293.113444,
+    "radio_britannia": 1795656293.1181746,
+    "wbru": 1795656293.1212292,
+    "indie_x_fm": 1795656293.4426737
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -17553,6 +17553,7 @@
       "principles of geometry feat alessi brothers|||streamsters",
       "prinze george|||airborne",
       "priory|||weekend",
+      "private agenda|||instinct",
       "pro teens|||mona 2",
       "promises ltd|||days of lavender",
       "protomartyr|||why does it shake",
@@ -22500,6 +22501,7 @@
       "temple of angels|||star-shaped eyes",
       "temple of angels|||tangled in joy",
       "temple of angels|||waving to the wind",
+      "tender tones|||red lovers",
       "tennis system|||here we go",
       "tennis system|||i want it all",
       "tennis system|||lackluster",
@@ -38667,11 +38669,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "radiohead|||knives out",
+  "__last_radio_key_vuurland": "father john misty|||goodbye mr blue",
   "__last_radio_key_mellow_mix": "elton john|||amoreena",
   "__last_radio_key_big_sonic_heaven": "the hope blister|||dagger",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 35803,
+  "__v116_fifo_next_sequence": 35806,
   "__v146_spotify_budget_slot": 1795656242.5116866,
   "__vuurland_active_playlist_count": 6350,
   "__vuurland_active_volume": 2,
@@ -163282,7 +163284,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "tanukichan|||circles",
-  "__last_radio_key_dkfm_shoegaze": "shady bug|||blow",
+  "__last_radio_key_dkfm_shoegaze": "alonekitty|||nothing i can tell you",
   "__last_radio_key_dkfm_classic": "cranes|||i hope",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -163295,7 +163297,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "beck|||colors",
+  "__last_radio_key_dark_edge": "private agenda|||instinct",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -170267,7 +170269,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "nothing but thieves|||if i get high",
-  "__last_radio_key_wbru": "remi wolf|||champagne",
+  "__last_radio_key_wbru": "the goo goo dolls|||iris",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -179611,7 +179613,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "no car garage|||for you",
+  "__last_radio_key_indie_x_fm": "new constellations|||hot blooded",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
