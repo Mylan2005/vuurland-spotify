@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "beirut|||gallipoli",
+      "bleachers|||you and forever",
       "arcade fire|||speaking in tongues",
       "the radar station|||subtle science",
       "damien rice|||i don't want to change you",
@@ -112,11 +114,10 @@
       "the whitest boy alive|||1517",
       "tamino|||tummy",
       "maru maru|||remedy",
-      "king hannah|||new york let's do nothing",
-      "angus and julia stone|||paper aeroplane",
-      "florence the machine|||never let me go"
+      "king hannah|||new york let's do nothing"
     ],
     "mellow_mix": [
+      "anna ternheim|||lovers dream",
       "antonio carlos jobim|||corcovado",
       "stevie wonder|||i believe",
       "daniel lanois|||jolie louise",
@@ -215,10 +216,10 @@
       "sorcha richardson|||dog's best man",
       "noir desir|||le vent nous portera",
       "billie eilish|||lovely w/ khalid",
-      "patty griffin|||goodbye",
-      "the melodians|||rivers of babylon"
+      "patty griffin|||goodbye"
     ],
     "big_sonic_heaven": [
+      "joy division|||decades",
       "massive attack|||hymn of the big wheel",
       "throwing muses|||fish",
       "severed heads|||first steps",
@@ -317,8 +318,7 @@
       "new order|||dreams never end",
       "atmos bloom|||it's enough",
       "future islands|||cave",
-      "bragolin & carrellee|||feel this flame unfold",
-      "state of grace|||diamonds in the sand"
+      "bragolin & carrellee|||feel this flame unfold"
     ],
     "radio_x_chilled": [
       "courteeners|||bide your time",
@@ -937,6 +937,7 @@
       "soft shadows|||a soft night"
     ],
     "dkfm_classic": [
+      "swervedriver|||harry & maggie",
       "catherine wheel|||heal 2",
       "my bloody valentine|||when you sleep",
       "innocence mission|||there",
@@ -1035,10 +1036,10 @@
       "chimera|||let me be around",
       "blind mr jones|||one watt above darkness",
       "the house of love|||man to child",
-      "a r kane|||pop long version",
-      "love spirals downwards|||above the lone"
+      "a r kane|||pop long version"
     ],
     "egofm_rnb": [
+      "blood orange|||champagne coast",
       "dj shadow feat little dragon|||scale it back",
       "lizzo|||special",
       "girl in red|||two queens in a king sized bed",
@@ -1137,8 +1138,7 @@
       "hiatus kaiyote|||molasses",
       "feng suave|||people wither",
       "iamddb|||silver lines",
-      "marvin gaye|||let's get it on",
-      "ider|||you've got your whole life ahead of you baby"
+      "marvin gaye|||let's get it on"
     ],
     "egofm_chillout": [
       "psalm trees & guillaume muschalle|||rain",
@@ -1651,6 +1651,7 @@
       "fatherson|||better friend"
     ],
     "wbru": [
+      "roar|||christmas kids",
       "jungle|||sunshine",
       "green day|||american idiot",
       "ashe|||stop the wedding!",
@@ -1749,8 +1750,7 @@
       "yeah yeah yeahs|||heads will roll",
       "lizzy mcalpine|||ceilings",
       "maia toakley|||everything on fire",
-      "foster the people|||houdini",
-      "phoebe bridgers|||lost boys"
+      "foster the people|||houdini"
     ],
     "indie_x_fm": [
       "angel olsen|||shut up kiss me",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795666401.1799006,
-    "mellow_mix": 1795666401.189562,
-    "big_sonic_heaven": 1795666401.1938665,
-    "radio_x_chilled": 1795666401.198206,
-    "dreampop_radio": 1795666401.2026548,
-    "indie_select": 1795666401.2076287,
-    "dkfm_edge": 1795666401.212482,
+    "vuurland": 1795666498.4591215,
+    "mellow_mix": 1795666498.4688015,
+    "big_sonic_heaven": 1795666498.4733167,
+    "radio_x_chilled": 1795666498.4777343,
+    "dreampop_radio": 1795666498.4823709,
+    "indie_select": 1795666498.4871244,
+    "dkfm_edge": 1795666498.4921045,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795666401.2190402,
-    "dkfm_shoegaze": 1795666401.542932,
-    "dkfm_classic": 1795666401.547842,
-    "egofm_rnb": 1795666401.5525181,
-    "egofm_chillout": 1795666401.5573266,
-    "dj_neihtul": 1795666401.561115,
-    "gri_balkon": 1795666401.5642972,
-    "ignoreradio_shoegaze": 1795666401.5695744,
-    "radio_britannia": 1795666401.575322,
-    "wbru": 1795666401.5787039,
-    "indie_x_fm": 1795666401.5833383
+    "dark_edge": 1795666498.4989772,
+    "dkfm_shoegaze": 1795666498.5044491,
+    "dkfm_classic": 1795666498.5092874,
+    "egofm_rnb": 1795666498.514085,
+    "egofm_chillout": 1795666498.5188122,
+    "dj_neihtul": 1795666498.522344,
+    "gri_balkon": 1795666498.525442,
+    "ignoreradio_shoegaze": 1795666498.5307167,
+    "radio_britannia": 1795666498.536342,
+    "wbru": 1795666498.5397196,
+    "indie_x_fm": 1795666498.5442958
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38841,9 +38841,9 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "arcade fire|||speaking in tongues",
-  "__last_radio_key_mellow_mix": "antonio carlos jobim|||corcovado",
-  "__last_radio_key_big_sonic_heaven": "massive attack|||hymn of the big wheel",
+  "__last_radio_key_vuurland": "beirut|||gallipoli",
+  "__last_radio_key_mellow_mix": "anna ternheim|||lovers dream",
+  "__last_radio_key_big_sonic_heaven": "joy division|||decades",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 36031,
   "__v146_spotify_budget_slot": 1795666414.7438903,
@@ -163738,7 +163738,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "sunsick daisy|||away from me",
   "__last_radio_key_dkfm_shoegaze": "ether aura|||about you",
-  "__last_radio_key_dkfm_classic": "catherine wheel|||heal 2",
+  "__last_radio_key_dkfm_classic": "swervedriver|||harry & maggie",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -169148,7 +169148,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "dj shadow feat little dragon|||scale it back",
+  "__last_radio_key_egofm_rnb": "blood orange|||champagne coast",
   "__last_radio_key_egofm_chillout": "psalm trees & guillaume muschalle|||rain",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -170722,7 +170722,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "beady eye|||second bite of the apple",
-  "__last_radio_key_wbru": "jungle|||sunshine",
+  "__last_radio_key_wbru": "roar|||christmas kids",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
