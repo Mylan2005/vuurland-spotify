@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "milo meskens|||something to lose",
       "michael kiwanuka|||i'll get along",
       "birame|||the worst parts of you",
       "jjerome87|||track and field",
@@ -113,10 +114,10 @@
       "camille camille|||in a song",
       "wilco|||impossible germany",
       "cigarettes after sex|||k",
-      "gregory porter|||no love dying",
-      "eels|||sweet smile"
+      "gregory porter|||no love dying"
     ],
     "mellow_mix": [
+      "neil halstead|||full moon rising",
       "pink floyd|||fearless",
       "the decemberists|||the crane wife 3",
       "neko case|||buckets of rain",
@@ -215,10 +216,10 @@
       "elton john|||where to now st peter",
       "sophie hunger|||le vent nous portera",
       "eels|||woman driving man sleeping",
-      "steve miller band|||journey from eden",
-      "paul winter|||icarus"
+      "steve miller band|||journey from eden"
     ],
     "big_sonic_heaven": [
+      "love & rockets|||all in my mind acoustic version",
       "kristin hersh|||me and my charms",
       "spiritualized|||lay back in the sun",
       "slowdive|||souvlaki space station",
@@ -317,8 +318,7 @@
       "slowdive|||avalyn 1",
       "mojave 3|||tomorrow's taken",
       "ivy|||this is the day",
-      "cranes|||jewel",
-      "craig armstrong|||this love feat elizabeth fraser"
+      "cranes|||jewel"
     ],
     "radio_x_chilled": [
       "blur|||the narcissist",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "litany|||bedroom",
       "foster the people|||pumped up kicks",
       "foals|||birch tree",
       "lambchop|||the december-ish you",
@@ -831,8 +832,7 @@
       "noah and the whale|||give it all back",
       "stereophonics|||all in one night",
       "kings of leon|||comeback story",
-      "balthazar|||passing through",
-      "finneas|||i lost a friend"
+      "balthazar|||passing through"
     ],
     "dkfm_shoegaze": [
       "luster|||forever",
@@ -1039,6 +1039,7 @@
       "love spirals downwards|||ipomoea"
     ],
     "egofm_rnb": [
+      "chiiild|||sleepwalking",
       "banks|||this is not about us",
       "nevi|||westside",
       "easy life|||ocean view",
@@ -1137,8 +1138,7 @@
       "m i l k|||vcr",
       "priya ragu|||lighthouse",
       "h e r feat kaytranada & thundercat|||bloody waters",
-      "jamie woon|||lady luck",
-      "dominic fike|||cancel me"
+      "jamie woon|||lady luck"
     ],
     "egofm_chillout": [
       "sufjan stevens & lowell brams|||what it takes",
@@ -1753,6 +1753,7 @@
       "dominic fike|||small town"
     ],
     "indie_x_fm": [
+      "the vapors|||turning japanese",
       "cold cave|||promised land",
       "the foreign resort|||resound",
       "the war on drugs|||red eyes",
@@ -1851,30 +1852,29 @@
       "the bird and the bee|||love letter to japan",
       "nation of language|||spare me the decision",
       "makthaverskan|||louie",
-      "grimes & vadakin|||accelerando",
-      "matt berninger|||distant axis"
+      "grimes & vadakin|||accelerando"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795736214.2032535,
-    "mellow_mix": 1795736214.2111976,
-    "big_sonic_heaven": 1795736214.2150986,
-    "radio_x_chilled": 1795736214.219667,
-    "dreampop_radio": 1795736214.2241964,
-    "indie_select": 1795736214.228653,
-    "dkfm_edge": 1795736214.2335954,
+    "vuurland": 1795736315.1365516,
+    "mellow_mix": 1795736315.144886,
+    "big_sonic_heaven": 1795736315.247072,
+    "radio_x_chilled": 1795736315.2518163,
+    "dreampop_radio": 1795736315.2563953,
+    "indie_select": 1795736315.2609127,
+    "dkfm_edge": 1795736315.2657893,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795736214.2402258,
-    "dkfm_shoegaze": 1795736214.2453215,
-    "dkfm_classic": 1795736214.2495332,
-    "egofm_rnb": 1795736214.2545044,
-    "egofm_chillout": 1795736214.2592611,
-    "dj_neihtul": 1795736214.2626078,
-    "gri_balkon": 1795736214.2656887,
-    "ignoreradio_shoegaze": 1795736214.2703724,
-    "radio_britannia": 1795736214.2760081,
-    "wbru": 1795736214.279187,
-    "indie_x_fm": 1795736214.2837005
+    "dark_edge": 1795736315.6022184,
+    "dkfm_shoegaze": 1795736315.6074603,
+    "dkfm_classic": 1795736315.6117513,
+    "egofm_rnb": 1795736315.6169128,
+    "egofm_chillout": 1795736315.6216776,
+    "dj_neihtul": 1795736315.6250908,
+    "gri_balkon": 1795736315.628208,
+    "ignoreradio_shoegaze": 1795736315.632923,
+    "radio_britannia": 1795736315.6385553,
+    "wbru": 1795736315.641925,
+    "indie_x_fm": 1795736315.646616
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -16518,6 +16518,7 @@
       "lisa loeb & nine stories|||stay i missed you",
       "lisa mitchell|||coin laundry",
       "lissie|||everywhere i go",
+      "litany|||bedroom",
       "little dragon|||klapp klapp",
       "little dragon|||ritual union",
       "little dragon|||strobe light",
@@ -39823,11 +39824,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "michael kiwanuka|||i'll get along",
-  "__last_radio_key_mellow_mix": "pink floyd|||fearless",
-  "__last_radio_key_big_sonic_heaven": "kristin hersh|||me and my charms",
+  "__last_radio_key_vuurland": "milo meskens|||something to lose",
+  "__last_radio_key_mellow_mix": "neil halstead|||full moon rising",
+  "__last_radio_key_big_sonic_heaven": "love & rockets|||all in my mind acoustic version",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 37372,
+  "__v116_fifo_next_sequence": 37373,
   "__v146_spotify_budget_slot": 1795736229.1140716,
   "__vuurland_active_playlist_count": 7012,
   "__vuurland_active_volume": 2,
@@ -166511,7 +166512,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "foster the people|||pumped up kicks",
+  "__last_radio_key_dark_edge": "litany|||bedroom",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -171909,7 +171910,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "banks|||this is not about us",
+  "__last_radio_key_egofm_rnb": "chiiild|||sleepwalking",
   "__last_radio_key_egofm_chillout": "sufjan stevens & lowell brams|||what it takes",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -183069,7 +183070,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "cold cave|||promised land",
+  "__last_radio_key_indie_x_fm": "the vapors|||turning japanese",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
