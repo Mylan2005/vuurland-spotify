@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "alt-j|||nara",
+      "thomas azier|||year in a spiral",
       "editors|||no sound but the wind",
       "chet faker|||talk is cheap",
       "beck|||ride lonesome",
@@ -112,9 +114,7 @@
       "deus|||1989",
       "tash sultana|||jungle",
       "camille camille|||in a song",
-      "cordelia|||little life",
-      "bon iver|||8 circle",
-      "daniel caesar|||let me go"
+      "cordelia|||little life"
     ],
     "mellow_mix": [
       "tim buckley|||morning glory",
@@ -613,6 +613,7 @@
       "animi vox|||my place"
     ],
     "dkfm_edge": [
+      "mint julep|||mint julep - all that we'll ever be",
       "bright arc|||cedars",
       "beach vacation|||stuck here",
       "rinse|||kiss me kill me",
@@ -711,8 +712,7 @@
       "stillfilms|||fader",
       "francis of delirium|||blue tuesday",
       "casino hearts|||ice in mouth",
-      "pure hex|||not animal",
-      "crate|||julia"
+      "pure hex|||not animal"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1025,6 +1025,7 @@
       "teenage fanclub|||is this music"
     ],
     "egofm_rnb": [
+      "kindness feat robyn|||the warning",
       "akua naru feat cody chesnutt|||canary dreams",
       "emotional oranges feat biig piig|||body & soul",
       "girl in red|||i need to be alone",
@@ -1123,8 +1124,7 @@
       "skip marley & h e r|||slow down",
       "steve lacy|||dark red",
       "moglii & palmaria|||desert",
-      "thomas dybdahl feat beharie|||treat me so bad",
-      "tei shi|||go slow"
+      "thomas dybdahl feat beharie|||treat me so bad"
     ],
     "egofm_chillout": [
       "ugly mac beer|||dolce vita",
@@ -1229,6 +1229,7 @@
       "luca d'alberto|||blessed messenger"
     ],
     "dj_neihtul": [
+      "everything but the girl|||forever",
       "little boots|||get things done",
       "trentemøller|||complicated",
       "alison goldfrapp|||neverstop",
@@ -1327,8 +1328,7 @@
       "anne clark|||the healing aural float treatment",
       "george pallikaris|||woman",
       "chris zippel|||hd archives",
-      "mum|||the ballad of the broken birdie records ruxpin rmx ii",
-      "jens buchert|||smooth department"
+      "mum|||the ballad of the broken birdie records ruxpin rmx ii"
     ],
     "gri_balkon": [
       "islandman|||hold your breath",
@@ -1429,6 +1429,7 @@
       "downtown party network|||space me out jody wisternoff james grant edit"
     ],
     "ignoreradio_shoegaze": [
+      "slint|||glenn",
       "caution|||love's a high bow",
       "the meeting places|||two more hours",
       "pink turns blue|||i gonna be a star",
@@ -1527,8 +1528,7 @@
       "my bloody valentine|||please lose yourself in me",
       "eliminadorzinho|||lar",
       "boards of canada|||wouldn't you like to be free?",
-      "ensemble economique|||radiate through me",
-      "my morning jacket|||lowdown"
+      "ensemble economique|||radiate through me"
     ],
     "radio_britannia": [
       "arab strap|||the turning of our bones",
@@ -1838,25 +1838,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795708151.5033045,
-    "mellow_mix": 1795708151.5064795,
-    "big_sonic_heaven": 1795708151.5085912,
-    "radio_x_chilled": 1795708151.510989,
-    "dreampop_radio": 1795708151.5134778,
-    "indie_select": 1795708151.516466,
-    "dkfm_edge": 1795708151.5193594,
+    "vuurland": 1795708254.2252703,
+    "mellow_mix": 1795708254.2282841,
+    "big_sonic_heaven": 1795708254.23041,
+    "radio_x_chilled": 1795708254.2328048,
+    "dreampop_radio": 1795708254.235215,
+    "indie_select": 1795708254.237962,
+    "dkfm_edge": 1795708254.6828105,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795708151.8812573,
-    "dkfm_shoegaze": 1795708151.8844986,
-    "dkfm_classic": 1795708151.8870974,
-    "egofm_rnb": 1795708151.8897066,
-    "egofm_chillout": 1795708151.8921995,
-    "dj_neihtul": 1795708151.8945696,
-    "gri_balkon": 1795708151.8965068,
-    "ignoreradio_shoegaze": 1795708151.8993745,
-    "radio_britannia": 1795708151.9024289,
-    "wbru": 1795708151.9048758,
-    "indie_x_fm": 1795708152.2997665
+    "dark_edge": 1795708254.6872323,
+    "dkfm_shoegaze": 1795708254.6905463,
+    "dkfm_classic": 1795708254.6931956,
+    "egofm_rnb": 1795708254.69597,
+    "egofm_chillout": 1795708254.6985095,
+    "dj_neihtul": 1795708254.701045,
+    "gri_balkon": 1795708254.702957,
+    "ignoreradio_shoegaze": 1795708254.7059405,
+    "radio_britannia": 1795708254.70911,
+    "wbru": 1795708254.7114408,
+    "indie_x_fm": 1795708254.7139816
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -31728,6 +31728,7 @@
       "sleepwalk|||bumblebee",
       "sleigh bells|||comeback kid",
       "slint|||breadcrumb trail",
+      "slint|||glenn",
       "slint|||washer",
       "slow crush|||aid and abet",
       "slow crush|||biglip",
@@ -39396,11 +39397,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "editors|||no sound but the wind",
+  "__last_radio_key_vuurland": "alt-j|||nara",
   "__last_radio_key_mellow_mix": "tim buckley|||morning glory",
   "__last_radio_key_big_sonic_heaven": "love & rockets|||all in my mind",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 36822,
+  "__v116_fifo_next_sequence": 36823,
   "__v146_spotify_budget_slot": 1795708166.7330942,
   "__vuurland_active_playlist_count": 6841,
   "__vuurland_active_volume": 2,
@@ -165349,7 +165350,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "bright arc|||cedars",
+  "__last_radio_key_dkfm_edge": "mint julep|||mint julep - all that we'll ever be",
   "__last_radio_key_dkfm_shoegaze": "castlebeat|||christmastime",
   "__last_radio_key_dkfm_classic": "my bloody valentine|||emptiness inside",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -170761,7 +170762,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "akua naru feat cody chesnutt|||canary dreams",
+  "__last_radio_key_egofm_rnb": "kindness feat robyn|||the warning",
   "__last_radio_key_egofm_chillout": "ugly mac beer|||dolce vita",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -170771,7 +170772,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "little boots|||get things done",
+  "__last_radio_key_dj_neihtul": "everything but the girl|||forever",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -170800,7 +170801,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "caution|||love's a high bow",
+  "__last_radio_key_ignoreradio_shoegaze": "slint|||glenn",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
