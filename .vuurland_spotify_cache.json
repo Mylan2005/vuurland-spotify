@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795656228.5426996,
+  "__v150_next_spotify_round_at": 1795656360.4768982,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "radiohead|||knives out",
       "eefje de visser|||heimwee",
       "mac demarco|||my kind of woman",
       "nectar woode|||rivers end",
@@ -113,8 +114,7 @@
       "boygenius|||afraid of heights",
       "olivia dean|||i've seen it",
       "mogwai|||ritchie sacramento",
-      "mitski|||heat lightning",
-      "nick cave and the bad seeds|||frogs"
+      "mitski|||heat lightning"
     ],
     "mellow_mix": [
       "elton john|||amoreena",
@@ -423,6 +423,7 @@
       "richard ashcroft|||they don't own me"
     ],
     "dreampop_radio": [
+      "emiliana torrini|||fireheads",
       "run river north|||run river run",
       "the sand band|||set me free",
       "admiral fallow|||subbuteo",
@@ -521,8 +522,7 @@
       "rocky votolato|||what waited for me",
       "wilco|||far far away",
       "ollie brown|||don't change a thing",
-      "eva & manu|||empty",
-      "by the sea|||eveline"
+      "eva & manu|||empty"
     ],
     "indie_select": [
       "the futureheads|||acapella",
@@ -1141,6 +1141,7 @@
       "hawa|||wake up"
     ],
     "egofm_chillout": [
+      "nils frahm|||ambre",
       "blue wednesday|||cloud dance feat ian ewing",
       "iwamizu|||edo",
       "stuart a staples|||willow tindersticks feat robert pattinson",
@@ -1239,8 +1240,7 @@
       "flume feat andrew wyatt|||some minds",
       "engelwood & iamalex|||cruisin",
       "sly & robbie meet nils petter molvaer feat eivind aarset and vladislav delay|||if i gave you my love",
-      "sufjan stevens|||casimir pulaski day",
-      "bonobo|||cirrus"
+      "sufjan stevens|||casimir pulaski day"
     ],
     "dj_neihtul": [
       "traversable wormhole|||closed timelike curve original",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795656196.632682,
-    "mellow_mix": 1795656196.640101,
-    "big_sonic_heaven": 1795656196.6434543,
-    "radio_x_chilled": 1795656196.6466947,
-    "dreampop_radio": 1795656196.6498232,
-    "indie_select": 1795656196.653382,
-    "dkfm_edge": 1795656196.6570916,
+    "vuurland": 1795656231.0867884,
+    "mellow_mix": 1795656231.092651,
+    "big_sonic_heaven": 1795656231.0958977,
+    "radio_x_chilled": 1795656231.0989637,
+    "dreampop_radio": 1795656231.1022,
+    "indie_select": 1795656231.1055646,
+    "dkfm_edge": 1795656231.109168,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795656196.6623592,
-    "dkfm_shoegaze": 1795656196.6662223,
-    "dkfm_classic": 1795656196.6695077,
-    "egofm_rnb": 1795656196.6731627,
-    "egofm_chillout": 1795656196.6763988,
-    "dj_neihtul": 1795656196.6791437,
-    "gri_balkon": 1795656196.6815832,
-    "ignoreradio_shoegaze": 1795656196.6851778,
-    "radio_britannia": 1795656196.6894047,
-    "wbru": 1795656196.6920507,
-    "indie_x_fm": 1795656196.6954503
+    "dark_edge": 1795656231.1144285,
+    "dkfm_shoegaze": 1795656231.1182442,
+    "dkfm_classic": 1795656231.121443,
+    "egofm_rnb": 1795656231.125034,
+    "egofm_chillout": 1795656231.1283548,
+    "dj_neihtul": 1795656231.1311042,
+    "gri_balkon": 1795656231.1335258,
+    "ignoreradio_shoegaze": 1795656231.137127,
+    "radio_britannia": 1795656231.1412828,
+    "wbru": 1795656231.143934,
+    "indie_x_fm": 1795656231.1473424
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38667,13 +38667,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "eefje de visser|||heimwee",
+  "__last_radio_key_vuurland": "radiohead|||knives out",
   "__last_radio_key_mellow_mix": "elton john|||amoreena",
   "__last_radio_key_big_sonic_heaven": "the hope blister|||dagger",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 35803,
-  "__v146_spotify_budget_slot": 1795656110.5795665,
-  "__vuurland_active_playlist_count": 6349,
+  "__v146_spotify_budget_slot": 1795656242.5116866,
+  "__vuurland_active_playlist_count": 6350,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1795652700,
@@ -51659,6 +51659,7 @@
     "royksopp feat jamie irrepressible|||something in my heart",
     "royksopp feat pixx|||how the flowers grow",
     "royksopp|||compulsion ft jamie irrepressible",
+    "royksopp|||control",
     "royksopp|||daddy's groove",
     "royksopp|||denimclad baboons",
     "royksopp|||gentle movement",
@@ -66663,6 +66664,7 @@
     "spotify:track:4ZkucCORUDgJmkDMRSowAN",
     "spotify:track:4Zm79UYiYJDRNpccg3DZKx",
     "spotify:track:4ZmLpDM2Iq9bBQjMoVG6NL",
+    "spotify:track:4Zo9X74JIGBF6773xzBhm8",
     "spotify:track:4ZoFvqTqjzNoWW5Y7IwWS2",
     "spotify:track:4Zq5hFt7ujE87yb7184POm",
     "spotify:track:4ZsAfDIXltivHhnf3UrTHs",
@@ -80722,6 +80724,7 @@
     "GBW232100111",
     "GBW232100113",
     "GBW232100114",
+    "GBW232100115",
     "GBW7D1100014",
     "GBWCF0900008",
     "GBWCF0900011",
@@ -105428,7 +105431,8 @@
     "spotify:track:20vhHZXJT9r09bfZwWHk6M": "USLZJ2660488",
     "spotify:track:22sZPcEARaZ6ELKbBap6BC": "GBBBM9202066",
     "spotify:track:41nT1Sp6ChR65FbsdLlFHW": "USSM10102677",
-    "spotify:track:6WqshVlAnnCERlaDpry0jj": "NL1LE2102511"
+    "spotify:track:6WqshVlAnnCERlaDpry0jj": "NL1LE2102511",
+    "spotify:track:4Zo9X74JIGBF6773xzBhm8": "GBW232100115"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -161797,7 +161801,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "run river north|||run river run",
+  "__last_radio_key_dreampop_radio": "emiliana torrini|||fireheads",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -166960,7 +166964,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "egofm_chillout",
+  "__v221_last_selected_source": "dj_neihtul",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -166972,7 +166976,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "egofm_chillout",
+  "__v224_last_spotify_opportunity_source": "dj_neihtul",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -167005,7 +167009,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "egofm_chillout",
+  "__v227_last_source_turn": "dj_neihtul",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -168690,7 +168694,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "suff daddy|||suff gucci",
-  "__last_radio_key_egofm_chillout": "blue wednesday|||cloud dance feat ian ewing",
+  "__last_radio_key_egofm_chillout": "nils frahm|||ambre",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -180299,5 +180303,6 @@
   "__match_v35__velveteen|||my dreams are changing": "spotify:track:20vhHZXJT9r09bfZwWHk6M",
   "__match_v35__the darling buds|||wave": "spotify:track:22sZPcEARaZ6ELKbBap6BC",
   "__match_v35__destiny's child|||bootylicious": "spotify:track:41nT1Sp6ChR65FbsdLlFHW",
-  "__match_v35__screen jazzmaster & viktor minsky|||rain dance": "spotify:track:6WqshVlAnnCERlaDpry0jj"
+  "__match_v35__screen jazzmaster & viktor minsky|||rain dance": "spotify:track:6WqshVlAnnCERlaDpry0jj",
+  "__match_v35__royksopp|||control": "spotify:track:4Zo9X74JIGBF6773xzBhm8"
 }
