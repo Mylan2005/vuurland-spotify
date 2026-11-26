@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795670104.7263997,
+  "__v150_next_spotify_round_at": 1795670237.7185612,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -117,6 +117,7 @@
       "berre|||break 'em all"
     ],
     "mellow_mix": [
+      "leo kottke|||morning is the long way home",
       "jimmy cliff|||the harder they come",
       "lucinda williams|||which will",
       "the swell season|||low rising",
@@ -215,8 +216,7 @@
       "syml|||basement beds",
       "ben folds|||annie waits",
       "a fine frenzy|||come on come out",
-      "billy bragg & wilco|||when the roses bloom again",
-      "penguin cafe orchestra|||air a danser"
+      "billy bragg & wilco|||when the roses bloom again"
     ],
     "big_sonic_heaven": [
       "the darling buds|||it makes no difference",
@@ -1039,6 +1039,7 @@
       "moose|||suzanne"
     ],
     "egofm_rnb": [
+      "tlc|||joy ride",
       "dominic fike|||3 nights",
       "biig piig|||lavender",
       "koffee|||pull up",
@@ -1137,8 +1138,7 @@
       "malva|||second floor",
       "jungle|||casio",
       "m i l k feat kesmar|||everybody is a summer body",
-      "sepalot feat malva|||visions",
-      "sebastian feat gallant|||run for me"
+      "sepalot feat malva|||visions"
     ],
     "egofm_chillout": [
       "shlohmo|||places",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795670071.146775,
-    "mellow_mix": 1795670071.1563594,
-    "big_sonic_heaven": 1795670071.161056,
-    "radio_x_chilled": 1795670071.1657374,
-    "dreampop_radio": 1795670071.1707513,
-    "indie_select": 1795670071.1758144,
-    "dkfm_edge": 1795670071.181287,
+    "vuurland": 1795670107.1218398,
+    "mellow_mix": 1795670107.1319652,
+    "big_sonic_heaven": 1795670107.136446,
+    "radio_x_chilled": 1795670107.1408882,
+    "dreampop_radio": 1795670107.1456845,
+    "indie_select": 1795670107.1505704,
+    "dkfm_edge": 1795670107.1557238,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795670071.5370026,
-    "dkfm_shoegaze": 1795670071.5431116,
-    "dkfm_classic": 1795670071.5481896,
-    "egofm_rnb": 1795670071.5531545,
-    "egofm_chillout": 1795670071.5583138,
-    "dj_neihtul": 1795670071.5621674,
-    "gri_balkon": 1795670071.5655959,
-    "ignoreradio_shoegaze": 1795670071.5710087,
-    "radio_britannia": 1795670071.576981,
-    "wbru": 1795670071.580499,
-    "indie_x_fm": 1795670071.9359639
+    "dark_edge": 1795670107.1626458,
+    "dkfm_shoegaze": 1795670107.1681955,
+    "dkfm_classic": 1795670107.173052,
+    "egofm_rnb": 1795670107.1779883,
+    "egofm_chillout": 1795670107.1827857,
+    "dj_neihtul": 1795670107.1864061,
+    "gri_balkon": 1795670107.189514,
+    "ignoreradio_shoegaze": 1795670107.1947386,
+    "radio_britannia": 1795670107.200599,
+    "wbru": 1795670107.203985,
+    "indie_x_fm": 1795670107.2086773
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38908,11 +38908,11 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "dotan|||let you go",
-  "__last_radio_key_mellow_mix": "jimmy cliff|||the harder they come",
+  "__last_radio_key_mellow_mix": "leo kottke|||morning is the long way home",
   "__last_radio_key_big_sonic_heaven": "the darling buds|||it makes no difference",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 36112,
-  "__v146_spotify_budget_slot": 1795669987.0658455,
+  "__v116_fifo_next_sequence": 36113,
+  "__v146_spotify_budget_slot": 1795670120.0415988,
   "__vuurland_active_playlist_count": 6445,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -125087,7 +125087,8 @@
     "sundial|||easy for you": 1,
     "feathered sun|||mysth ft acid pauli & nu & jo ke & raz ohara & chris schwarzwalder": 1,
     "nick lowe|||when i write the book": 1,
-    "sun shines cold|||winters edge": 1
+    "sun shines cold|||winters edge": 1,
+    "highspire|||take a drive with me": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -164661,8 +164662,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 2474,
-  "__v192_duyster_next_enqueue_at": 1795670103.8730648,
+  "__v192_duyster_archive_cursor": 2475,
+  "__v192_duyster_next_enqueue_at": 1795670236.9066625,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -167595,7 +167596,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "dark_edge",
+  "__v221_last_selected_source": "dkfm_shoegaze",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -167607,7 +167608,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "dark_edge",
+  "__v224_last_spotify_opportunity_source": "dkfm_shoegaze",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -167640,7 +167641,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "dark_edge",
+  "__v227_last_source_turn": "dkfm_shoegaze",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -169324,7 +169325,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "dominic fike|||3 nights",
+  "__last_radio_key_egofm_rnb": "tlc|||joy ride",
   "__last_radio_key_egofm_chillout": "shlohmo|||places",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -170929,31 +170930,6 @@
   "__match_v35__kt tunstall|||white bird": "spotify:track:61qnl6ZTZDFKu2bNQ7Evla",
   "__match_v35__the cure|||cut here": "spotify:track:1SuAd1VNCDpM2ovs1ic9tN",
   "__v258_matcher_triage": {
-    "tv|||i've fallen and i can't get up!": {
-      "source": "wbru",
-      "artist": "TV",
-      "title": "I've fallen and I can't get up!",
-      "kind": "weak",
-      "variant": 0,
-      "candidates": [
-        {
-          "artist": "DMX",
-          "title": "Slippin'",
-          "spotify_id": "740gNyGWKk98gy8nJLhHrv"
-        },
-        {
-          "artist": "Remi Wolf",
-          "title": "Bottle",
-          "spotify_id": "0j0Xae7CpwZHoC1QFhIpFb"
-        },
-        {
-          "artist": "Mýa",
-          "title": "Fallen",
-          "spotify_id": "59D1ABymMZNQLxBHYsfaq0"
-        }
-      ],
-      "status": "low_relevance"
-    },
     "jakob ogawa feat clairo|||you might be sleeping": {
       "source": "egofm_rnb",
       "artist": "Jakob Ogawa feat. Clairo",
@@ -176722,6 +176698,31 @@
       "kind": "weak",
       "variant": 0,
       "candidates": [],
+      "status": "low_relevance"
+    },
+    "highspire|||take a drive with me": {
+      "source": "dkfm_shoegaze",
+      "artist": "highspire",
+      "title": "take a drive with me",
+      "kind": "weak",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "The Decemberists",
+          "title": "California One / Youth and Beauty Brigade",
+          "spotify_id": "5XZR6kLFJaXrtBepY7YqcH"
+        },
+        {
+          "artist": "Trixie Whitley",
+          "title": "High Wire",
+          "spotify_id": "2LG0Ow4YPJM14THNlz58GZ"
+        },
+        {
+          "artist": "PAWSA",
+          "title": "Ride On Me",
+          "spotify_id": "5WZQkHYzUGBpUCgCk9eXgA"
+        }
+      ],
       "status": "low_relevance"
     }
   },
