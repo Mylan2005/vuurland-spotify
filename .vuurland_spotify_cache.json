@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "boy & bear|||feeding line",
+      "camille camille|||in a song",
       "father john misty|||goodbye mr blue",
       "radiohead|||knives out",
       "eefje de visser|||heimwee",
@@ -112,9 +114,7 @@
       "joesef|||the sun is up forever",
       "kali uchis|||telepatia",
       "tom odell|||heal",
-      "boygenius|||afraid of heights",
-      "olivia dean|||i've seen it",
-      "mogwai|||ritchie sacramento"
+      "boygenius|||afraid of heights"
     ],
     "mellow_mix": [
       "tom waits|||the heart of saturday night",
@@ -423,6 +423,7 @@
       "snow patrol|||chasing cars"
     ],
     "dreampop_radio": [
+      "the sea the sea|||love we are we love",
       "joshua hyslop|||living & dying",
       "stephen duffy & the lilac time|||so far away",
       "emiliana torrini|||fireheads",
@@ -521,10 +522,10 @@
       "pure bathing culture|||pendulum",
       "liza anne|||room",
       "neil finn|||last to know",
-      "rocky votolato|||what waited for me",
-      "wilco|||far far away"
+      "rocky votolato|||what waited for me"
     ],
     "indie_select": [
+      "punk tv|||wintersample",
       "elbow|||on a day like this",
       "the futureheads|||acapella",
       "maximo park|||the undercurrents",
@@ -539,7 +540,6 @@
       "apparat|||you don't know me",
       "moderat|||a new error",
       "the radio dept|||thieves of state",
-      "punk tv|||wintersample",
       "salmonella dub|||dub survivor",
       "big country|||flag of nation swimming",
       "this et al|||the tale of frosty jackson",
@@ -627,6 +627,7 @@
       "bombay bicycle club|||willow feat lucy rose"
     ],
     "dkfm_edge": [
+      "sea lemon|||breakdown",
       "newdad|||angel",
       "long distances|||skin to sea",
       "tanukichan|||circles",
@@ -725,8 +726,7 @@
       "sungaze|||so light",
       "leavs|||falling ceilings",
       "no vacation|||changes",
-      "hattara|||lentosuukkoi",
-      "blue diner|||mezzanine"
+      "hattara|||lentosuukkoi"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -835,6 +835,7 @@
       "noble son|||elvis"
     ],
     "dkfm_shoegaze": [
+      "seasurfer|||flurry glory",
       "alonekitty|||nothing i can tell you",
       "tender tones|||red lovers",
       "shady bug|||blow",
@@ -933,8 +934,7 @@
       "innocence mission|||umbrella - and hiding away",
       "soul blind|||falling asleep",
       "ohio mark|||frida",
-      "otsyuda|||honey",
-      "just penelope|||after"
+      "otsyuda|||honey"
     ],
     "dkfm_classic": [
       "drop nineteens|||happen",
@@ -1447,6 +1447,7 @@
       "seekae|||3 three"
     ],
     "ignoreradio_shoegaze": [
+      "diiv|||bent roi's song",
       "trpp|||honey",
       "spirit of the beehive|||roll over",
       "hope sandoval & the warm inventions|||bavarian fruit bread",
@@ -1545,8 +1546,7 @@
       "vyva melinkolya|||1:00am",
       "paint in watercolour|||guess",
       "new ghost|||all the best memories are hers",
-      "schelper|||the grey skin in your eyes",
-      "nothing|||leave me alone"
+      "schelper|||the grey skin in your eyes"
     ],
     "radio_britannia": [
       "super furry animals|||hello sunshine",
@@ -1753,6 +1753,7 @@
       "noah kahan|||porch light"
     ],
     "indie_x_fm": [
+      "ciel|||baby don't you know",
       "chvrches|||roses",
       "thao & tune-yards|||sick of the times feat the linda lindas",
       "new constellations|||hot blooded",
@@ -1851,30 +1852,29 @@
       "miike snow|||paddling out",
       "weval|||forever",
       "james|||getting away with it all messed up",
-      "johnny thunders|||chinese rocks",
-      "the frights|||you are going to hate this"
+      "johnny thunders|||chinese rocks"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795656760.792356,
-    "mellow_mix": 1795656760.8014257,
-    "big_sonic_heaven": 1795656760.8053212,
-    "radio_x_chilled": 1795656760.8092766,
-    "dreampop_radio": 1795656760.8132777,
-    "indie_select": 1795656760.817159,
-    "dkfm_edge": 1795656760.8214393,
+    "vuurland": 1795656858.9086883,
+    "mellow_mix": 1795656858.9173896,
+    "big_sonic_heaven": 1795656858.921133,
+    "radio_x_chilled": 1795656858.9251428,
+    "dreampop_radio": 1795656858.9292834,
+    "indie_select": 1795656858.9352405,
+    "dkfm_edge": 1795656858.939786,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795656760.827683,
-    "dkfm_shoegaze": 1795656760.8324513,
-    "dkfm_classic": 1795656760.836669,
-    "egofm_rnb": 1795656760.8409104,
-    "egofm_chillout": 1795656760.845247,
-    "dj_neihtul": 1795656760.848465,
-    "gri_balkon": 1795656760.8512304,
-    "ignoreradio_shoegaze": 1795656760.8556592,
-    "radio_britannia": 1795656761.212769,
-    "wbru": 1795656761.2159986,
-    "indie_x_fm": 1795656761.2201283
+    "dark_edge": 1795656858.946232,
+    "dkfm_shoegaze": 1795656858.9512877,
+    "dkfm_classic": 1795656858.9554741,
+    "egofm_rnb": 1795656858.9597967,
+    "egofm_chillout": 1795656858.9641957,
+    "dj_neihtul": 1795656858.9676006,
+    "gri_balkon": 1795656858.970548,
+    "ignoreradio_shoegaze": 1795656858.9753137,
+    "radio_britannia": 1795656858.9804509,
+    "wbru": 1795656858.9835346,
+    "indie_x_fm": 1795656858.9879072
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29504,6 +29504,7 @@
       "detects|||it's gone too far",
       "dick stusso|||modern music",
       "diiv|||acheron",
+      "diiv|||bent roi's song",
       "diiv|||between tides",
       "diiv|||blankenship",
       "diiv|||druun pt ii",
@@ -36368,6 +36369,7 @@
       "chokecherry|||no other place",
       "chromatics|||into the black",
       "chvrches|||roses",
+      "ciel|||baby don't you know",
       "ciel|||shut in my body",
       "clairo|||add up my love",
       "clairo|||flaming hot cheetos",
@@ -38678,7 +38680,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "father john misty|||goodbye mr blue",
+  "__last_radio_key_vuurland": "boy & bear|||feeding line",
   "__last_radio_key_mellow_mix": "tom waits|||the heart of saturday night",
   "__last_radio_key_big_sonic_heaven": "the boo radleys|||does this hurt?",
   "__v181_vuurland_two_missing_recovered": true,
@@ -161828,7 +161830,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "joshua hyslop|||living & dying",
+  "__last_radio_key_dreampop_radio": "the sea the sea|||love we are we love",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -161946,7 +161948,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "elbow|||on a day like this",
+  "__last_radio_key_indie_select": "punk tv|||wintersample",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -163308,8 +163310,8 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "newdad|||angel",
-  "__last_radio_key_dkfm_shoegaze": "alonekitty|||nothing i can tell you",
+  "__last_radio_key_dkfm_edge": "sea lemon|||breakdown",
+  "__last_radio_key_dkfm_shoegaze": "seasurfer|||flurry glory",
   "__last_radio_key_dkfm_classic": "drop nineteens|||happen",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -168759,7 +168761,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "trpp|||honey",
+  "__last_radio_key_ignoreradio_shoegaze": "diiv|||bent roi's song",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -179638,7 +179640,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "chvrches|||roses",
+  "__last_radio_key_indie_x_fm": "ciel|||baby don't you know",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
