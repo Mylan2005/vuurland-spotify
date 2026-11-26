@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "cigarettes after sex|||nothing's gonna hurt you baby",
+      "frankie fame|||aching of the times",
       "leon bridges feat lydia kitto|||all day all night",
       "m83|||wait",
       "faces on tv|||traveling blind",
@@ -112,9 +114,7 @@
       "coldplay|||fix you",
       "dope lemon|||streets of your town",
       "the haunted youth|||wake up",
-      "mooneye|||fix the heater",
-      "paolo nutini|||shine a light",
-      "noah kahan|||porch light"
+      "mooneye|||fix the heater"
     ],
     "mellow_mix": [
       "the be good tanyas|||scattered leaves",
@@ -525,6 +525,7 @@
       "oh wonder|||the rain"
     ],
     "indie_select": [
+      "the temper trap|||fools peter bjorn & john hortlax cobra remix",
       "yeasayer|||henrietta",
       "idles|||26/27",
       "nada surf|||no quick fix",
@@ -623,10 +624,10 @@
       "caroline pennell|||yellow",
       "baden baden|||anyone",
       "the sound|||monument",
-      "ms john soda|||a nod on hold",
-      "school of seven bells|||the night"
+      "ms john soda|||a nod on hold"
     ],
     "dkfm_edge": [
+      "wasting|||shadow dance",
       "brief candles|||tape deck",
       "diffident daffodils|||losing touch",
       "drook|||girls around me",
@@ -725,8 +726,7 @@
       "soft siren|||almost crying",
       "decay|||enemy",
       "futureheaven|||ghosts",
-      "dummy|||soonish",
-      "shrine|||serenity"
+      "dummy|||soonish"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1243,6 +1243,7 @@
       "air & beth hirsch|||all i need"
     ],
     "dj_neihtul": [
+      "azure taint|||glasrauch",
       "fresh moods|||waterson",
       "chris zippel|||summerblink",
       "rauschfaktor|||panoramadrama",
@@ -1341,10 +1342,10 @@
       "madonna|||give it 2 me",
       "faithless|||insomnia moody mix",
       "enigma|||principles of lust remix",
-      "little boots|||no pressure",
-      "depeche mode|||scum"
+      "little boots|||no pressure"
     ],
     "gri_balkon": [
+      "fulltone|||only solution",
       "ninze|||quiet alien",
       "landhouse & raddantze|||think",
       "jimi jules|||too young for me ft jaw",
@@ -1443,8 +1444,7 @@
       "yonderboi|||riders on the storm",
       "martin kohlstedt|||omb panthera krause remix",
       "gorillaz|||empire ants ft little dragon",
-      "hnny|||kindness",
-      "anja schneider|||all i see"
+      "hnny|||kindness"
     ],
     "ignoreradio_shoegaze": [
       "lockstep|||hunger",
@@ -1651,6 +1651,8 @@
       "maximo park|||what equals love?"
     ],
     "wbru": [
+      "kings of leon|||rose",
+      "spoon|||inside out",
       "the womack sisters|||if i let you",
       "ivri|||tower of memories",
       "feist|||my moon my man",
@@ -1748,9 +1750,7 @@
       "star moles|||born again",
       "wilco|||jesus etc",
       "the neighbourhood|||daddy issues",
-      "talking heads|||psycho killer",
-      "big thief|||simulation swarm",
-      "the killers|||mr brightside"
+      "talking heads|||psycho killer"
     ],
     "indie_x_fm": [
       "kirsten izer|||over the sink",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795672235.4236982,
-    "mellow_mix": 1795672235.4359334,
-    "big_sonic_heaven": 1795672235.440497,
-    "radio_x_chilled": 1795672235.445002,
-    "dreampop_radio": 1795672235.4498258,
-    "indie_select": 1795672235.4546542,
-    "dkfm_edge": 1795672235.459778,
+    "vuurland": 1795672331.9244938,
+    "mellow_mix": 1795672331.9344797,
+    "big_sonic_heaven": 1795672331.9390993,
+    "radio_x_chilled": 1795672331.9435208,
+    "dreampop_radio": 1795672331.948241,
+    "indie_select": 1795672331.9533904,
+    "dkfm_edge": 1795672331.9587193,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795672235.4666173,
-    "dkfm_shoegaze": 1795672235.4722598,
-    "dkfm_classic": 1795672235.4771047,
-    "egofm_rnb": 1795672235.481877,
-    "egofm_chillout": 1795672235.4868352,
-    "dj_neihtul": 1795672235.4904284,
-    "gri_balkon": 1795672235.493542,
-    "ignoreradio_shoegaze": 1795672235.4987168,
-    "radio_britannia": 1795672235.5045166,
-    "wbru": 1795672235.5078084,
-    "indie_x_fm": 1795672235.5125315
+    "dark_edge": 1795672331.96552,
+    "dkfm_shoegaze": 1795672331.9711032,
+    "dkfm_classic": 1795672331.9759347,
+    "egofm_rnb": 1795672331.980646,
+    "egofm_chillout": 1795672331.9854112,
+    "dj_neihtul": 1795672331.9890904,
+    "gri_balkon": 1795672331.9922667,
+    "ignoreradio_shoegaze": 1795672331.997422,
+    "radio_britannia": 1795672332.003181,
+    "wbru": 1795672332.006627,
+    "indie_x_fm": 1795672332.0112395
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -38940,7 +38940,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "leon bridges feat lydia kitto|||all day all night",
+  "__last_radio_key_vuurland": "cigarettes after sex|||nothing's gonna hurt you baby",
   "__last_radio_key_mellow_mix": "the be good tanyas|||scattered leaves",
   "__last_radio_key_big_sonic_heaven": "swans|||love of life short",
   "__v181_vuurland_two_missing_recovered": true,
@@ -162638,7 +162638,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "yeasayer|||henrietta",
+  "__last_radio_key_indie_select": "the temper trap|||fools peter bjorn & john hortlax cobra remix",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -164000,7 +164000,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "brief candles|||tape deck",
+  "__last_radio_key_dkfm_edge": "wasting|||shadow dance",
   "__last_radio_key_dkfm_shoegaze": "velocity girl|||forgotten favorite",
   "__last_radio_key_dkfm_classic": "moose|||sometimes loving is the hardest thing",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -169422,13 +169422,13 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "fresh moods|||waterson",
+  "__last_radio_key_dj_neihtul": "azure taint|||glasrauch",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "ninze|||quiet alien",
+  "__last_radio_key_gri_balkon": "fulltone|||only solution",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -170986,7 +170986,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "young rebel set|||wont get up again",
-  "__last_radio_key_wbru": "the womack sisters|||if i let you",
+  "__last_radio_key_wbru": "kings of leon|||rose",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
