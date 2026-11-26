@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "camille camille|||in a song",
+      "cordelia|||little life",
       "bon iver|||8 circle",
       "daniel caesar|||let me go",
       "damien rice|||cannonball",
@@ -54,6 +56,7 @@
       "royel otis|||sofa king"
     ],
     "mellow_mix": [
+      "leonard cohen|||so long marianne",
       "mazzy star|||ride it on",
       "bruce springsteen|||brilliant disguise",
       "the band|||atlantic city",
@@ -156,6 +159,7 @@
       "red hot chili peppers|||scar tissue"
     ],
     "dreampop_radio": [
+      "nick drake|||northern sky",
       "feist|||one evening",
       "the war on drugs|||under the pressure",
       "the verve|||lucky man",
@@ -269,6 +273,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "bastille|||blame",
       "dirty projectors|||about to die",
       "roxy music|||more than this",
       "sipper|||losers",
@@ -310,6 +315,7 @@
       "alt-j|||hunger of the pine"
     ],
     "dkfm_shoegaze": [
+      "sphere|||rhea silvia",
       "cigarettes for breakfast|||daylight savings",
       "a shoreline dream|||revolvist",
       "plant cell|||mulin river",
@@ -381,6 +387,7 @@
       "my bloody valentine|||swallow"
     ],
     "egofm_rnb": [
+      "amber mark|||foreign things",
       "bernhoft|||stop/shut up",
       "rosalia|||bagdad cap 7 liturgia",
       "nombe|||wait",
@@ -458,6 +465,7 @@
       "st germain|||sure thing"
     ],
     "dj_neihtul": [
+      "goldfrapp|||systemagic",
       "faithless|||this feeling feat suli breaks & nathan ball",
       "hvob|||panama",
       "bonobo|||outlier",
@@ -485,6 +493,7 @@
       "solar fields|||sol"
     ],
     "gri_balkon": [
+      "grizzly bear|||sleeping ute nicolas jaar remix",
       "ulrike haage|||fingerprints a florian rietze's malte edit",
       "isan|||every since and then",
       "underset|||berlin",
@@ -625,6 +634,7 @@
       "two door cinema club|||what you know"
     ],
     "indie_x_fm": [
+      "the clash|||charlie don't surf",
       "the avalanches|||all the time in the world",
       "wild pink|||sprinter brain",
       "fontaines d c|||tongue",
@@ -665,25 +675,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795685245.0502179,
-    "mellow_mix": 1795685245.0514483,
-    "big_sonic_heaven": 1795685245.0524414,
-    "radio_x_chilled": 1795685245.0532122,
-    "dreampop_radio": 1795685245.0538633,
-    "indie_select": 1795685245.0549088,
-    "dkfm_edge": 1795685245.0557566,
+    "vuurland": 1795685347.8225265,
+    "mellow_mix": 1795685347.8238132,
+    "big_sonic_heaven": 1795685347.8247786,
+    "radio_x_chilled": 1795685347.8253987,
+    "dreampop_radio": 1795685347.8261304,
+    "indie_select": 1795685347.8271635,
+    "dkfm_edge": 1795685347.8278913,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795685245.0581627,
-    "dkfm_shoegaze": 1795685245.0595498,
-    "dkfm_classic": 1795685245.0604427,
-    "egofm_rnb": 1795685245.0611808,
-    "egofm_chillout": 1795685245.061922,
-    "dj_neihtul": 1795685245.0627406,
-    "gri_balkon": 1795685245.063238,
-    "ignoreradio_shoegaze": 1795685245.064437,
-    "radio_britannia": 1795685245.0656831,
-    "wbru": 1795685245.0664845,
-    "indie_x_fm": 1795685245.0671382
+    "dark_edge": 1795685348.159078,
+    "dkfm_shoegaze": 1795685348.1605222,
+    "dkfm_classic": 1795685348.1613967,
+    "egofm_rnb": 1795685348.1621907,
+    "egofm_chillout": 1795685348.1628294,
+    "dj_neihtul": 1795685348.1637251,
+    "gri_balkon": 1795685348.1643171,
+    "ignoreradio_shoegaze": 1795685348.1655,
+    "radio_britannia": 1795685348.1667018,
+    "wbru": 1795685348.1674905,
+    "indie_x_fm": 1795685348.5378203
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -12559,6 +12569,7 @@
       "baseball gregg|||young",
       "basement jaxx feat jose hendrix ndelo|||distractionz",
       "bastian's happy flight|||hooray",
+      "bastille|||blame",
       "bastille|||doom days",
       "bastille|||fake it",
       "bastille|||flaws",
@@ -35941,6 +35952,7 @@
       "the chemical brothers|||no reason",
       "the church|||under the milky way",
       "the city gates|||radium love",
+      "the clash|||charlie don't surf",
       "the clash|||the magnificent seven",
       "the clockworks|||work in progress",
       "the colourfield|||can't get enough of you baby",
@@ -37918,11 +37930,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "bon iver|||8 circle",
-  "__last_radio_key_mellow_mix": "mazzy star|||ride it on",
+  "__last_radio_key_vuurland": "camille camille|||in a song",
+  "__last_radio_key_mellow_mix": "leonard cohen|||so long marianne",
   "__last_radio_key_big_sonic_heaven": "ride|||kaleidoscope",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 36405,
+  "__v116_fifo_next_sequence": 36407,
   "__v146_spotify_budget_slot": 1795685259.5625741,
   "__vuurland_active_playlist_count": 6536,
   "__vuurland_active_volume": 2,
@@ -161829,7 +161841,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "feist|||one evening",
+  "__last_radio_key_dreampop_radio": "nick drake|||northern sky",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -163310,7 +163322,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "pure hex|||not animal",
-  "__last_radio_key_dkfm_shoegaze": "cigarettes for breakfast|||daylight savings",
+  "__last_radio_key_dkfm_shoegaze": "sphere|||rhea silvia",
   "__last_radio_key_dkfm_classic": "curve|||falling free",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -163323,7 +163335,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "dirty projectors|||about to die",
+  "__last_radio_key_dark_edge": "bastille|||blame",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -168721,7 +168733,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "bernhoft|||stop/shut up",
+  "__last_radio_key_egofm_rnb": "amber mark|||foreign things",
   "__last_radio_key_egofm_chillout": "kafka tamura|||no hope winterkind remix",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -168731,13 +168743,13 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "faithless|||this feeling feat suli breaks & nathan ball",
+  "__last_radio_key_dj_neihtul": "goldfrapp|||systemagic",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "ulrike haage|||fingerprints a florian rietze's malte edit",
+  "__last_radio_key_gri_balkon": "grizzly bear|||sleeping ute nicolas jaar remix",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -179689,7 +179701,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "the avalanches|||all the time in the world",
+  "__last_radio_key_indie_x_fm": "the clash|||charlie don't surf",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
