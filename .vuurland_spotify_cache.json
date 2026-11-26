@@ -117,6 +117,7 @@
       "phoebe bridgers|||garden song"
     ],
     "mellow_mix": [
+      "joan baez|||stones in the road",
       "iron & wine|||naked as we came",
       "miles davis|||blue in green",
       "the mavericks|||blue moon",
@@ -215,8 +216,7 @@
       "old 97's|||salome",
       "hozier|||from eden",
       "paul simon|||born at the right time",
-      "shakey graves|||time flies",
-      "jimi hendrix|||little wing live"
+      "shakey graves|||time flies"
     ],
     "big_sonic_heaven": [
       "depeche mode|||to have and to hold",
@@ -423,6 +423,7 @@
       "death cab for cutie|||i will follow you into the dark"
     ],
     "dreampop_radio": [
+      "nada surf|||inside of love",
       "the jezabels|||rosebud",
       "laura marling|||hope in the air",
       "electric youth|||innocence",
@@ -521,10 +522,10 @@
       "goldfrapp|||ooh la la",
       "darkness falls|||the void original mix",
       "mr little jeans|||oh sailor strange talk remix",
-      "mgmt|||electric feel",
-      "benjamin francis leftwich|||pictures gzus remix"
+      "mgmt|||electric feel"
     ],
     "indie_select": [
+      "booka shade with craig walker|||digging a hole",
       "crystal castles|||vanished",
       "maritime|||inside out",
       "johnny marr|||hi hello",
@@ -623,8 +624,7 @@
       "sinead o'connor|||the last day of our acquaintan",
       "scanners|||halfway home",
       "the shins|||black wave",
-      "shout out louds|||blue ice",
-      "nada surf|||blankest year"
+      "shout out louds|||blue ice"
     ],
     "dkfm_edge": [
       "deary|||the drift",
@@ -835,6 +835,7 @@
       "wet leg|||chaise longue"
     ],
     "dkfm_shoegaze": [
+      "guttered|||in the same breath",
       "flyingfish|||spotless mind",
       "the bootlegs|||银河公园",
       "sway|||ever and ever",
@@ -933,10 +934,10 @@
       "drauve|||two crows",
       "audiobaton|||nothing to prove",
       "decades|||celebrate",
-      "the history of colour tv|||left",
-      "the stargazer lilies|||ahhh"
+      "the history of colour tv|||left"
     ],
     "dkfm_classic": [
+      "spiritualized|||run",
       "lush|||bitter",
       "orange|||gigantic",
       "siddal|||lighthouse wreckage",
@@ -1035,8 +1036,7 @@
       "pale saints|||time thief",
       "the sundays|||i kicked a boy",
       "adorable|||crash sight",
-      "lush|||for love",
-      "lovesliescrushing|||xarella almandyne"
+      "lush|||for love"
     ],
     "egofm_rnb": [
       "mndsgn|||hope you're doin' better",
@@ -1549,6 +1549,7 @@
       "felt|||ballad of the band"
     ],
     "radio_britannia": [
+      "the jesus and mary chain|||sometimes always feat hope sandoval",
       "snow patrol|||chasing cars",
       "do nothing|||the nail",
       "pete and the pirates|||half moon street",
@@ -1647,8 +1648,7 @@
       "radiohead|||let down",
       "indoor foxes|||feet on the dash",
       "primal scream|||rocks",
-      "mansun|||electric man",
-      "paul weller|||cosmic fringes"
+      "mansun|||electric man"
     ],
     "wbru": [
       "vampire weekend|||oxford comma",
@@ -1753,6 +1753,7 @@
       "maggie rogers|||love you for a long time"
     ],
     "indie_x_fm": [
+      "normans|||urge to merge",
       "orchestral manoeuvres in the dark|||forever live and die",
       "pit pony|||the present",
       "cut copy|||take me over",
@@ -1851,30 +1852,29 @@
       "stiff little fingers|||alternative ulster",
       "yeah yeah yeahs|||y control",
       "clap your hands say yeah|||fever of the mind",
-      "m83 mai lan|||go! feat mai lan",
-      "fashn|||continuation"
+      "m83 mai lan|||go! feat mai lan"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795668264.810954,
-    "mellow_mix": 1795668264.8197036,
-    "big_sonic_heaven": 1795668264.8236792,
-    "radio_x_chilled": 1795668264.8277993,
-    "dreampop_radio": 1795668264.8319664,
-    "indie_select": 1795668264.836449,
-    "dkfm_edge": 1795668264.8409884,
+    "vuurland": 1795668360.006456,
+    "mellow_mix": 1795668360.0152326,
+    "big_sonic_heaven": 1795668360.019147,
+    "radio_x_chilled": 1795668360.023195,
+    "dreampop_radio": 1795668360.02748,
+    "indie_select": 1795668360.0320754,
+    "dkfm_edge": 1795668360.0365257,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795668264.847103,
-    "dkfm_shoegaze": 1795668264.8520179,
-    "dkfm_classic": 1795668264.8562999,
-    "egofm_rnb": 1795668264.8605018,
-    "egofm_chillout": 1795668264.8648481,
-    "dj_neihtul": 1795668264.8680618,
-    "gri_balkon": 1795668264.870819,
-    "ignoreradio_shoegaze": 1795668264.875524,
-    "radio_britannia": 1795668264.880642,
-    "wbru": 1795668264.8836367,
-    "indie_x_fm": 1795668264.8883953
+    "dark_edge": 1795668360.042567,
+    "dkfm_shoegaze": 1795668360.3482647,
+    "dkfm_classic": 1795668360.3528872,
+    "egofm_rnb": 1795668360.3571787,
+    "egofm_chillout": 1795668360.3614998,
+    "dj_neihtul": 1795668360.3648324,
+    "gri_balkon": 1795668360.3675914,
+    "ignoreradio_shoegaze": 1795668360.3722303,
+    "radio_britannia": 1795668360.4099119,
+    "wbru": 1795668360.412977,
+    "indie_x_fm": 1795668360.6960611
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -20894,6 +20894,7 @@
       "gum country|||it lives it breeds it feeds",
       "gum country|||talking to my plants",
       "gustavia|||apagon",
+      "guttered|||in the same breath",
       "h i d e a n y w a y|||悲しい アロハ",
       "habitants|||bury the earth",
       "haiku garden|||catch my breath",
@@ -34953,6 +34954,7 @@
       "the jesus and mary chain|||girl 71",
       "the jesus and mary chain|||just like honey",
       "the jesus and mary chain|||just like honey live",
+      "the jesus and mary chain|||sometimes always feat hope sandoval",
       "the jesus and mary chain|||sometimes always live",
       "the joy formidable|||cradle",
       "the joy formidable|||little blimp",
@@ -38876,10 +38878,10 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "ethel cain|||fuck me eyes",
-  "__last_radio_key_mellow_mix": "iron & wine|||naked as we came",
+  "__last_radio_key_mellow_mix": "joan baez|||stones in the road",
   "__last_radio_key_big_sonic_heaven": "depeche mode|||to have and to hold",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 36075,
+  "__v116_fifo_next_sequence": 36077,
   "__v146_spotify_budget_slot": 1795668276.6936004,
   "__vuurland_active_playlist_count": 6432,
   "__vuurland_active_volume": 2,
@@ -162348,7 +162350,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the jezabels|||rosebud",
+  "__last_radio_key_dreampop_radio": "nada surf|||inside of love",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -162466,7 +162468,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "crystal castles|||vanished",
+  "__last_radio_key_indie_select": "booka shade with craig walker|||digging a hole",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -163829,8 +163831,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "deary|||the drift",
-  "__last_radio_key_dkfm_shoegaze": "flyingfish|||spotless mind",
-  "__last_radio_key_dkfm_classic": "lush|||bitter",
+  "__last_radio_key_dkfm_shoegaze": "guttered|||in the same breath",
+  "__last_radio_key_dkfm_classic": "spiritualized|||run",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -170813,7 +170815,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "snow patrol|||chasing cars",
+  "__last_radio_key_radio_britannia": "the jesus and mary chain|||sometimes always feat hope sandoval",
   "__last_radio_key_wbru": "vampire weekend|||oxford comma",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -180154,7 +180156,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "orchestral manoeuvres in the dark|||forever live and die",
+  "__last_radio_key_indie_x_fm": "normans|||urge to merge",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
