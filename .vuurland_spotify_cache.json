@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795652154.0352423,
+  "__v150_next_spotify_round_at": 1795652289.3171625,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "silent strike & ada milea|||astenie",
       "tamino|||persephone",
       "tom odell|||true colours",
       "zola blood|||islands",
@@ -831,8 +832,7 @@
       "half moon run|||nerve",
       "dennis lloyd|||nevermind",
       "django django|||spirals",
-      "buscabulla|||vamono",
-      "saint motel|||cold cold man"
+      "buscabulla|||vamono"
     ],
     "dkfm_shoegaze": [
       "beliefs|||1992",
@@ -1141,6 +1141,7 @@
       "bibio|||before"
     ],
     "egofm_chillout": [
+      "frieder nagel feat mima|||obey",
       "jon hopkins|||immunity",
       "james vincent mcmorrow|||we don't eat nisse nilson edit",
       "alt-j|||dissolve me marlais remix",
@@ -1239,8 +1240,7 @@
       "blood orange|||champagne coast",
       "masked man|||coupe 90",
       "zmeyev misha & viktor minsky|||seagulls",
-      "karl thesing|||foreignworld",
-      "peter broderick|||eyes closed and traveling"
+      "karl thesing|||foreignworld"
     ],
     "dj_neihtul": [
       "dj rolando|||running",
@@ -1447,6 +1447,7 @@
       "pale|||rundown"
     ],
     "ignoreradio_shoegaze": [
+      "slowdive|||krautruck",
       "no age|||fever dreaming",
       "video girl|||window demo final",
       "nothing|||us/we/are live piano version dreamland studios",
@@ -1545,10 +1546,10 @@
       "engineers|||brighter as we fall",
       "trauma ray|||spectre",
       "draag|||agastopia",
-      "yo la tengo|||bleeding",
-      "chapterhouse|||every gift demo"
+      "yo la tengo|||bleeding"
     ],
     "radio_britannia": [
+      "the leisure society|||god has taken a vacation",
       "james tw|||soldier",
       "johnny marr|||the bright parade",
       "the k's|||the bends here we go again",
@@ -1647,8 +1648,7 @@
       "oh wonder|||mad world",
       "richard hawley|||alone",
       "manic street preachers|||people ruin paintings",
-      "bell x1|||but first love",
-      "matilda mann|||girls"
+      "bell x1|||but first love"
     ],
     "wbru": [
       "matt maeson|||hallucinogenics",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795652123.1667702,
-    "mellow_mix": 1795652123.1706386,
-    "big_sonic_heaven": 1795652123.174057,
-    "radio_x_chilled": 1795652123.1771052,
-    "dreampop_radio": 1795652123.1803243,
-    "indie_select": 1795652123.1838913,
-    "dkfm_edge": 1795652123.1872585,
+    "vuurland": 1795652159.2466598,
+    "mellow_mix": 1795652159.2505865,
+    "big_sonic_heaven": 1795652159.2538652,
+    "radio_x_chilled": 1795652159.2569249,
+    "dreampop_radio": 1795652159.2599752,
+    "indie_select": 1795652159.2633646,
+    "dkfm_edge": 1795652159.266613,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795652123.196198,
-    "dkfm_shoegaze": 1795652123.2000597,
-    "dkfm_classic": 1795652123.2032537,
-    "egofm_rnb": 1795652123.2066417,
-    "egofm_chillout": 1795652123.2098758,
-    "dj_neihtul": 1795652123.212656,
-    "gri_balkon": 1795652123.2150846,
-    "ignoreradio_shoegaze": 1795652123.2186525,
-    "radio_britannia": 1795652123.2224295,
-    "wbru": 1795652123.2251866,
-    "indie_x_fm": 1795652123.5525086
+    "dark_edge": 1795652159.2754474,
+    "dkfm_shoegaze": 1795652159.2792866,
+    "dkfm_classic": 1795652159.2825902,
+    "egofm_rnb": 1795652159.2858999,
+    "egofm_chillout": 1795652159.2892292,
+    "dj_neihtul": 1795652159.29204,
+    "gri_balkon": 1795652159.2944658,
+    "ignoreradio_shoegaze": 1795652159.5815554,
+    "radio_britannia": 1795652159.9382265,
+    "wbru": 1795652159.9410453,
+    "indie_x_fm": 1795652159.9441636
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -31313,6 +31313,7 @@
       "slowdive|||i thought i saw",
       "slowdive|||in mind",
       "slowdive|||kisses",
+      "slowdive|||krautruck",
       "slowdive|||losing today",
       "slowdive|||machine gun",
       "slowdive|||morningrise",
@@ -34793,6 +34794,7 @@
       "the lathums|||stellar cast",
       "the lathums|||the great escape",
       "the leisure society|||all i have seen",
+      "the leisure society|||god has taken a vacation",
       "the libertines|||dont look back into the sun",
       "the libertines|||heart of the matter",
       "the libertines|||i get along",
@@ -38606,9 +38608,9 @@
   "__last_radio_key_mellow_mix": "skott|||rule the world",
   "__last_radio_key_big_sonic_heaven": "hooverphonic|||frosted flake wood",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 35721,
-  "__v146_spotify_budget_slot": 1795652036.121521,
-  "__vuurland_active_playlist_count": 6321,
+  "__v116_fifo_next_sequence": 35723,
+  "__v146_spotify_budget_slot": 1795652171.406714,
+  "__vuurland_active_playlist_count": 6322,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1795648988,
@@ -56828,6 +56830,7 @@
     "yeasayer|||o n e",
     "yeasayer|||silly me",
     "yelle|||jeune fille garnement",
+    "yelle|||les soupirs et les refrains",
     "yelllow|||blvd",
     "yello feat heidi happy|||beautiful you",
     "yello feat heidi happy|||stay",
@@ -65638,6 +65641,7 @@
     "spotify:track:48oX55j4gqDw0G80KxzpaQ",
     "spotify:track:48p04FNeMxYtquaqUmBTZt",
     "spotify:track:48p5E25cFPanxuwCTmTpuL",
+    "spotify:track:48qPo25VFExoldlr26LcxF",
     "spotify:track:48twOxng4f1ZfpWJMMhf6b",
     "spotify:track:48vDCZIRmrFO33fH4QU4ij",
     "spotify:track:48wI7KEcOsHrQdg9XFFy1i",
@@ -87339,6 +87343,7 @@
     "USQX91301416",
     "USQX91302491",
     "USQX91401345",
+    "USQX91401475",
     "USQX91401482",
     "USQX91401930",
     "USQX91402192",
@@ -105251,7 +105256,8 @@
     "spotify:track:1iomoxxKhI6gwQIMG0pOEl": "CAA501027506",
     "spotify:track:1yk6DAmyClVC084S39PcKf": "QZ93L2110825",
     "spotify:track:4dxd3tUsKT52EMboYtceOQ": "QMRSZ2002539",
-    "spotify:track:3A1XomhhNVD16MmJ24nK1Q": "NL1LE2001122"
+    "spotify:track:3A1XomhhNVD16MmJ24nK1Q": "NL1LE2001122",
+    "spotify:track:48qPo25VFExoldlr26LcxF": "USQX91401475"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -163112,7 +163118,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "tamino|||persephone",
+  "__last_radio_key_dark_edge": "silent strike & ada milea|||astenie",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -166781,7 +166787,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "egofm_chillout",
+  "__v221_last_selected_source": "dj_neihtul",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -166793,7 +166799,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "egofm_chillout",
+  "__v224_last_spotify_opportunity_source": "dj_neihtul",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -166826,7 +166832,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "egofm_chillout",
+  "__v227_last_source_turn": "dj_neihtul",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -168511,7 +168517,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "fkj|||greener feat santana",
-  "__last_radio_key_egofm_chillout": "jon hopkins|||immunity",
+  "__last_radio_key_egofm_chillout": "frieder nagel feat mima|||obey",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -168549,7 +168555,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "no age|||fever dreaming",
+  "__last_radio_key_ignoreradio_shoegaze": "slowdive|||krautruck",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -170083,7 +170089,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "james tw|||soldier",
+  "__last_radio_key_radio_britannia": "the leisure society|||god has taken a vacation",
   "__last_radio_key_wbru": "matt maeson|||hallucinogenics",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -180076,5 +180082,6 @@
   "__match_v35__bran van 3000|||you feat francesca como & malicious": "spotify:track:1iomoxxKhI6gwQIMG0pOEl",
   "__match_v35__joshoo|||sew myself together": "spotify:track:1yk6DAmyClVC084S39PcKf",
   "__match_v35__shungudzo|||it's a good day to fight the system": "spotify:track:4dxd3tUsKT52EMboYtceOQ",
-  "__match_v35__montell fish|||imagination": "spotify:track:3A1XomhhNVD16MmJ24nK1Q"
+  "__match_v35__montell fish|||imagination": "spotify:track:3A1XomhhNVD16MmJ24nK1Q",
+  "__match_v35__yelle|||les soupirs et les refrains": "spotify:track:48qPo25VFExoldlr26LcxF"
 }
