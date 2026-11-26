@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the shins|||phantom limb",
+      "phosphorescent|||wolves",
       "cass mccombs|||bum bum bum",
       "coldplay|||yellow",
       "leif vollebekk|||long blue light",
@@ -112,9 +114,7 @@
       "sharon van etten|||seventeen",
       "s10|||paris texas",
       "lisa hannigan|||fall",
-      "cigarettes after sex|||twizzler",
-      "andrew bird|||sisyphus",
-      "midlake|||roscoe"
+      "cigarettes after sex|||twizzler"
     ],
     "mellow_mix": [
       "our native daughters|||i knew i could fly",
@@ -321,6 +321,7 @@
       "autour de lucie|||immobile"
     ],
     "radio_x_chilled": [
+      "noel gallagher's high flying birds|||everybody's on the run",
       "r e m|||everybody hurts",
       "jamie t|||calm down dearest",
       "courteeners|||acrylic acoustic",
@@ -419,8 +420,7 @@
       "the cure|||boys don't cry acoustic",
       "wolf alice|||delicious things",
       "james vincent mcmorrow|||higher love",
-      "radiohead|||street spirit",
-      "john mayer|||your body is a wonderland"
+      "radiohead|||street spirit"
     ],
     "dreampop_radio": [
       "morphine|||in spite of me",
@@ -525,6 +525,7 @@
       "intergalactic lovers|||islands"
     ],
     "indie_select": [
+      "wolf alice|||soapy water",
       "moderat|||animal trails",
       "junior boys|||what it's for",
       "kristin kontrol|||show me",
@@ -623,8 +624,7 @@
       "the drums|||forever and ever amen saint etienne remix",
       "younghearts|||this love",
       "ride|||vapour trail vapour mix - mixed by robert smith 2015",
-      "the radio dept|||we got game",
-      "blaudzun|||hollow people"
+      "the radio dept|||we got game"
     ],
     "dkfm_edge": [
       "sunlotus|||skin graft",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "tracy chapman|||for my lover",
       "tv on the radio|||dlz",
       "aaron|||onassis",
       "yelllow|||blvd",
@@ -831,10 +832,10 @@
       "nick dorian|||yawn",
       "the happy fits|||while you fade away",
       "cake|||never there",
-      "tesla boy|||say my name",
-      "elbow|||magnificent she says"
+      "tesla boy|||say my name"
     ],
     "dkfm_shoegaze": [
+      "luvoir|||adrift",
       "sphere|||coldest world",
       "swervedriver|||flawed",
       "astronomies|||discoloured",
@@ -933,8 +934,7 @@
       "jaus|||fields",
       "silver liz|||san junipero",
       "all about rockets|||monday morning",
-      "flyingfish|||forest green",
-      "morning myth|||halo"
+      "flyingfish|||forest green"
     ],
     "dkfm_classic": [
       "the belltower|||eyes on the time",
@@ -1651,6 +1651,7 @@
       "coldplay|||paradise"
     ],
     "wbru": [
+      "tv girl|||taking what's not yours",
       "the war on drugs|||who's that",
       "nirvana|||all apologies",
       "cage the elephant|||make it easy",
@@ -1749,8 +1750,7 @@
       "johnny cash|||hurt",
       "thundercat|||funny thing",
       "almost monday|||no more regrets",
-      "the paradox|||i kinda like that",
-      "the xx|||crystalised"
+      "the paradox|||i kinda like that"
     ],
     "indie_x_fm": [
       "beck|||the golden age",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795721655.4348545,
-    "mellow_mix": 1795721655.438984,
-    "big_sonic_heaven": 1795721655.4422863,
-    "radio_x_chilled": 1795721655.445784,
-    "dreampop_radio": 1795721655.4492316,
-    "indie_select": 1795721655.4529493,
-    "dkfm_edge": 1795721655.4566243,
+    "vuurland": 1795721753.7522817,
+    "mellow_mix": 1795721753.756486,
+    "big_sonic_heaven": 1795721753.759949,
+    "radio_x_chilled": 1795721753.7636275,
+    "dreampop_radio": 1795721753.7670486,
+    "indie_select": 1795721753.770995,
+    "dkfm_edge": 1795721753.7746494,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795721655.462033,
-    "dkfm_shoegaze": 1795721655.4662664,
-    "dkfm_classic": 1795721655.4698756,
-    "egofm_rnb": 1795721655.4737113,
-    "egofm_chillout": 1795721655.47736,
-    "dj_neihtul": 1795721655.480545,
-    "gri_balkon": 1795721655.4831777,
-    "ignoreradio_shoegaze": 1795721655.4871738,
-    "radio_britannia": 1795721655.4915078,
-    "wbru": 1795721655.4944782,
-    "indie_x_fm": 1795721655.4980192
+    "dark_edge": 1795721753.7801893,
+    "dkfm_shoegaze": 1795721753.7843676,
+    "dkfm_classic": 1795721753.7879522,
+    "egofm_rnb": 1795721753.7917926,
+    "egofm_chillout": 1795721753.7954624,
+    "dj_neihtul": 1795721753.7986927,
+    "gri_balkon": 1795721753.8013763,
+    "ignoreradio_shoegaze": 1795721753.8054042,
+    "radio_britannia": 1795721753.8096206,
+    "wbru": 1795721753.8126876,
+    "indie_x_fm": 1795721753.816235
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -39613,7 +39613,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "cass mccombs|||bum bum bum",
+  "__last_radio_key_vuurland": "the shins|||phantom limb",
   "__last_radio_key_mellow_mix": "our native daughters|||i knew i could fly",
   "__last_radio_key_big_sonic_heaven": "mazzy star|||blue light",
   "__v181_vuurland_two_missing_recovered": true,
@@ -164335,7 +164335,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "r e m|||everybody hurts",
+  "__last_radio_key_radio_x_chilled": "noel gallagher's high flying birds|||everybody's on the run",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -164557,7 +164557,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "moderat|||animal trails",
+  "__last_radio_key_indie_select": "wolf alice|||soapy water",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -165920,7 +165920,7 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "sunlotus|||skin graft",
-  "__last_radio_key_dkfm_shoegaze": "sphere|||coldest world",
+  "__last_radio_key_dkfm_shoegaze": "luvoir|||adrift",
   "__last_radio_key_dkfm_classic": "the belltower|||eyes on the time",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -165933,7 +165933,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "tv on the radio|||dlz",
+  "__last_radio_key_dark_edge": "tracy chapman|||for my lover",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -172905,7 +172905,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "embrace|||we are it",
-  "__last_radio_key_wbru": "the war on drugs|||who's that",
+  "__last_radio_key_wbru": "tv girl|||taking what's not yours",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
