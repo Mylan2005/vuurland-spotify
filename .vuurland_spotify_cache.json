@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "jungle|||let's go back",
       "men i trust|||lauren",
       "sam fender & olivia dean|||rein me in",
       "dressed like boys|||nando",
@@ -113,10 +114,10 @@
       "the haunted youth|||wake up",
       "this is lorelei|||dancing in the club mj lenderman version",
       "nick mulvey|||mountain to move",
-      "maya hawke|||bring home my man",
-      "the antler king|||swing448"
+      "maya hawke|||bring home my man"
     ],
     "mellow_mix": [
+      "neko case|||city swans",
       "sinead o'connor|||nothing compares 2 u",
       "chris isaak|||i believe",
       "roxy music|||avalon",
@@ -215,8 +216,7 @@
       "anna ternheim|||solitary move",
       "death cab for cutie|||lightness",
       "delerium|||silence featuring sarah mclachlan",
-      "electric light orchestra|||can't get it out of my head",
-      "tyler ramsey|||sail away w/ carl broemel"
+      "electric light orchestra|||can't get it out of my head"
     ],
     "big_sonic_heaven": [
       "the telescopes|||flying",
@@ -423,6 +423,7 @@
       "snow patrol|||you could be happy"
     ],
     "dreampop_radio": [
+      "great lake swimmers|||palmistry",
       "the helio sequence|||the measure",
       "hello saferide|||x telling me about the loss of something dear at age 16",
       "doves|||sea song",
@@ -521,10 +522,10 @@
       "the sundays|||here's where the story ends",
       "sumie|||let you go",
       "sharon van etten and glass ghost|||like a diamond",
-      "lissie|||when i'm alone",
-      "cowboy junkies|||sweet jane"
+      "lissie|||when i'm alone"
     ],
     "indie_select": [
+      "hard-fi|||can't get along",
       "school of seven bells|||a thousand times more",
       "laut fm|||laut fm - es ist nur musik",
       "telefis|||the age of cling with will sergeant",
@@ -623,10 +624,11 @@
       "lloyd cole|||california earthquake",
       "plusminus|||there goes my love",
       "red kite|||the gathering storm",
-      "new young pony club|||oh cherie",
-      "breton|||fifteen minutes"
+      "new young pony club|||oh cherie"
     ],
     "dkfm_edge": [
+      "whitelands feat dottie|||tell me about it",
+      "deafcult|||sleep",
       "wisp|||mimi",
       "autista|||nada que temer",
       "crystal canyon|||dreamray",
@@ -724,9 +726,7 @@
       "frown line|||knowing you",
       "velvet|||staring alt feat wisp",
       "stillfilms|||safe bet",
-      "coral drive|||cold blanket",
-      "bleach lab|||counting empties",
-      "paraphernalia|||date night"
+      "coral drive|||cold blanket"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1651,6 +1651,7 @@
       "metronomy|||405"
     ],
     "wbru": [
+      "angine de poitrine|||fabienk",
       "star moles|||born again",
       "vampire weekend|||unbelievers",
       "panchiko|||d>e>a>t>h>m>e>t>a>l",
@@ -1749,8 +1750,7 @@
       "fontaines d c|||japan",
       "jungle|||someday somewhere",
       "alice merton|||no roots",
-      "weezer|||go away f best coast",
-      "johnny cash|||hurt"
+      "weezer|||go away f best coast"
     ],
     "indie_x_fm": [
       "lykke li|||i'm good i'm gone",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795723002.7259064,
-    "mellow_mix": 1795723002.7301748,
-    "big_sonic_heaven": 1795723002.7335808,
-    "radio_x_chilled": 1795723002.737321,
-    "dreampop_radio": 1795723002.7408576,
-    "indie_select": 1795723002.7446496,
-    "dkfm_edge": 1795723002.7484493,
+    "vuurland": 1795723100.9187636,
+    "mellow_mix": 1795723100.923138,
+    "big_sonic_heaven": 1795723100.9265878,
+    "radio_x_chilled": 1795723100.9303157,
+    "dreampop_radio": 1795723100.9339812,
+    "indie_select": 1795723100.9380019,
+    "dkfm_edge": 1795723101.3785412,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795723002.753908,
-    "dkfm_shoegaze": 1795723002.7580926,
-    "dkfm_classic": 1795723002.7617931,
-    "egofm_rnb": 1795723002.7657409,
-    "egofm_chillout": 1795723002.769498,
-    "dj_neihtul": 1795723002.7726924,
-    "gri_balkon": 1795723002.7813253,
-    "ignoreradio_shoegaze": 1795723002.7853525,
-    "radio_britannia": 1795723002.7896957,
-    "wbru": 1795723002.7927084,
-    "indie_x_fm": 1795723002.7964923
+    "dark_edge": 1795723101.3841562,
+    "dkfm_shoegaze": 1795723101.388322,
+    "dkfm_classic": 1795723101.392012,
+    "egofm_rnb": 1795723101.3959682,
+    "egofm_chillout": 1795723101.3997037,
+    "dj_neihtul": 1795723101.4028792,
+    "gri_balkon": 1795723101.4055564,
+    "ignoreradio_shoegaze": 1795723101.4096217,
+    "radio_britannia": 1795723101.4140258,
+    "wbru": 1795723101.4171543,
+    "indie_x_fm": 1795723101.4207802
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -39633,8 +39633,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "men i trust|||lauren",
-  "__last_radio_key_mellow_mix": "sinead o'connor|||nothing compares 2 u",
+  "__last_radio_key_vuurland": "jungle|||let's go back",
+  "__last_radio_key_mellow_mix": "neko case|||city swans",
   "__last_radio_key_big_sonic_heaven": "the telescopes|||flying",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 37113,
@@ -164493,7 +164493,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "the helio sequence|||the measure",
+  "__last_radio_key_dreampop_radio": "great lake swimmers|||palmistry",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -164611,7 +164611,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "school of seven bells|||a thousand times more",
+  "__last_radio_key_indie_select": "hard-fi|||can't get along",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -165973,7 +165973,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "wisp|||mimi",
+  "__last_radio_key_dkfm_edge": "whitelands feat dottie|||tell me about it",
   "__last_radio_key_dkfm_shoegaze": "lotus plaza|||strangers",
   "__last_radio_key_dkfm_classic": "14 iced bears|||surfacer",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -172959,7 +172959,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "stereophonics|||mr writer",
-  "__last_radio_key_wbru": "star moles|||born again",
+  "__last_radio_key_wbru": "angine de poitrine|||fabienk",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
