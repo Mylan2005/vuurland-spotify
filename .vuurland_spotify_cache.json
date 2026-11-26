@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "lord huron|||mine forever",
+      "james vincent mcmorrow|||higher love",
       "jjerome87|||track and field",
       "tom misch & loyle carner|||colourblind",
       "meskerem mees|||joe",
@@ -112,9 +114,7 @@
       "phoebe bridgers|||motion sickness",
       "daughter|||landfill",
       "beabadoobee|||the perfect pair",
-      "tamino|||dissolve",
-      "hollow coves|||see you soon",
-      "broken social scene|||hey amanda"
+      "tamino|||dissolve"
     ],
     "mellow_mix": [
       "neil young|||the old laughing lady",
@@ -321,6 +321,7 @@
       "school of seven bells|||i l u"
     ],
     "radio_x_chilled": [
+      "the doors|||riders on the storm",
       "noel gallagher's high flying birds|||if i had a gun",
       "the xx|||crystalised",
       "the smiths|||last night i dreamt that somebody loved me",
@@ -419,8 +420,7 @@
       "eels|||mr e's beautiful blues",
       "editors|||smokers outside the hospital doors live for radio x",
       "sam fender|||dead boys",
-      "ray lamontagne|||trouble",
-      "embrace|||come back to what you know"
+      "ray lamontagne|||trouble"
     ],
     "dreampop_radio": [
       "tired pony|||all things at once",
@@ -525,6 +525,7 @@
       "the boxer rebellion|||low"
     ],
     "indie_select": [
+      "punk tv|||wintersample",
       "salmonella dub|||dub survivor",
       "big country|||flag of nation swimming",
       "this et al|||the tale of frosty jackson",
@@ -623,8 +624,7 @@
       "the twilight sad|||waiting for the phone call",
       "the album leaf & balmorhea|||afterglow feat kimbra",
       "metronomy|||the look",
-      "miss grit|||tourist mind",
-      "matt berninger|||inland ocean"
+      "miss grit|||tourist mind"
     ],
     "dkfm_edge": [
       "salvana|||cielos rojos",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "glass animals|||hazey",
       "silent strike & ada milea|||astenie",
       "tamino|||persephone",
       "tom odell|||true colours",
@@ -831,8 +832,7 @@
       "babybird|||you're gorgeous",
       "half moon run|||nerve",
       "dennis lloyd|||nevermind",
-      "django django|||spirals",
-      "buscabulla|||vamono"
+      "django django|||spirals"
     ],
     "dkfm_shoegaze": [
       "the black ryder|||to never know you",
@@ -1345,6 +1345,7 @@
       "good chillaz|||stoned love jazzomatic mix"
     ],
     "gri_balkon": [
+      "robag wruhme|||pnom gobal",
       "the acid|||red",
       "boerd|||gem",
       "youandewan|||93",
@@ -1427,7 +1428,6 @@
       "four tet|||lion jamie xx remix",
       "ephemerals|||you'll never see me cry",
       "kuriose naturale|||some might work",
-      "robag wruhme|||pnom gobal",
       "underset lifa|||moon rover",
       "royksopp|||the alcoholic",
       "rival consoles|||them is us",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795652291.029439,
-    "mellow_mix": 1795652291.0332654,
-    "big_sonic_heaven": 1795652291.036514,
-    "radio_x_chilled": 1795652291.039519,
-    "dreampop_radio": 1795652291.04276,
-    "indie_select": 1795652291.0460613,
-    "dkfm_edge": 1795652291.0494418,
+    "vuurland": 1795652387.0244665,
+    "mellow_mix": 1795652387.0282137,
+    "big_sonic_heaven": 1795652387.0314772,
+    "radio_x_chilled": 1795652387.0345972,
+    "dreampop_radio": 1795652387.0376608,
+    "indie_select": 1795652387.0448375,
+    "dkfm_edge": 1795652387.048134,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795652291.0580227,
-    "dkfm_shoegaze": 1795652291.0617769,
-    "dkfm_classic": 1795652291.064926,
-    "egofm_rnb": 1795652291.0682788,
-    "egofm_chillout": 1795652291.0715835,
-    "dj_neihtul": 1795652291.0744228,
-    "gri_balkon": 1795652291.0768404,
-    "ignoreradio_shoegaze": 1795652291.0803792,
-    "radio_britannia": 1795652291.0844145,
-    "wbru": 1795652291.0880632,
-    "indie_x_fm": 1795652291.0912552
+    "dark_edge": 1795652387.0536091,
+    "dkfm_shoegaze": 1795652387.0574622,
+    "dkfm_classic": 1795652387.060654,
+    "egofm_rnb": 1795652387.0638843,
+    "egofm_chillout": 1795652387.06714,
+    "dj_neihtul": 1795652387.0698898,
+    "gri_balkon": 1795652387.072254,
+    "ignoreradio_shoegaze": 1795652387.0757422,
+    "radio_britannia": 1795652387.0798135,
+    "wbru": 1795652387.0825155,
+    "indie_x_fm": 1795652387.085598
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -15249,6 +15249,7 @@
       "glad sisifus|||promise",
       "glass animals|||agnes",
       "glass animals|||cocoa hooves",
+      "glass animals|||hazey",
       "glass animals|||heat waves",
       "glass animals|||it's all so incredibly loud",
       "glass animals|||life itself",
@@ -38605,11 +38606,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "jjerome87|||track and field",
+  "__last_radio_key_vuurland": "lord huron|||mine forever",
   "__last_radio_key_mellow_mix": "neil young|||the old laughing lady",
   "__last_radio_key_big_sonic_heaven": "hooverphonic|||frosted flake wood",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 35724,
+  "__v116_fifo_next_sequence": 35725,
   "__v146_spotify_budget_slot": 1795652302.5423176,
   "__vuurland_active_playlist_count": 6323,
   "__vuurland_active_volume": 2,
@@ -161525,7 +161526,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "noel gallagher's high flying birds|||if i had a gun",
+  "__last_radio_key_radio_x_chilled": "the doors|||riders on the storm",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -161747,7 +161748,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "salmonella dub|||dub survivor",
+  "__last_radio_key_indie_select": "punk tv|||wintersample",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -163123,7 +163124,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "silent strike & ada milea|||astenie",
+  "__last_radio_key_dark_edge": "glass animals|||hazey",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -163858,8 +163859,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 1945,
-  "__v192_duyster_next_enqueue_at": 1795652385.2806857,
+  "__v192_duyster_archive_cursor": 1947,
+  "__v192_duyster_next_enqueue_at": 1795652516.2269633,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -168537,7 +168538,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "the acid|||red",
+  "__last_radio_key_gri_balkon": "robag wruhme|||pnom gobal",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
