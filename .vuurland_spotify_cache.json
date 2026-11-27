@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795800828.808474,
+  "__v150_next_spotify_round_at": 1795800958.5291116,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -117,6 +117,8 @@
       "agnes obel|||riverside"
     ],
     "mellow_mix": [
+      "fleetwood mac|||crystal",
+      "sophie zelmani|||hard to know",
       "dido|||here with me",
       "eliza gilkyson|||peace in our hearts",
       "sons of the east|||hold on",
@@ -214,9 +216,7 @@
       "cracker|||the golden age",
       "blind faith|||can't find my way home",
       "hurray for the riff raff|||alibi",
-      "lana del rey|||how to disappear",
-      "uncle tupelo|||still be around",
-      "todd hannigan|||thicker than water"
+      "lana del rey|||how to disappear"
     ],
     "big_sonic_heaven": [
       "kitchens of distinction|||drive that fast",
@@ -1039,6 +1039,7 @@
       "the curtain society|||no answer"
     ],
     "egofm_rnb": [
+      "lany|||up to me",
       "benny sings|||not enough",
       "alunageorge|||not above love",
       "dominic fike|||cancel me",
@@ -1137,8 +1138,7 @@
       "robert glasper experiment feat erykah badu|||afro blue",
       "leisure|||lonely nights",
       "blood orange|||sutphin boulevard",
-      "jon batiste|||sing",
-      "h e r|||damage"
+      "jon batiste|||sing"
     ],
     "egofm_chillout": [
       "coma|||lora",
@@ -1447,6 +1447,7 @@
       "phoria|||emanate"
     ],
     "ignoreradio_shoegaze": [
+      "somesurprises|||dark victory",
       "flying saucer attack|||soaring high",
       "lubec|||against nature",
       "dorias baracca|||handsome melting point",
@@ -1545,8 +1546,7 @@
       "hole|||rock star",
       "sun mahshene|||fluorescent",
       "asian glow|||nothing but",
-      "the radio dept|||tell",
-      "warm|||bye thanks for stopping by"
+      "the radio dept|||tell"
     ],
     "radio_britannia": [
       "the royston club|||cariad",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795800791.9841862,
-    "mellow_mix": 1795800791.9873638,
-    "big_sonic_heaven": 1795800791.9899604,
-    "radio_x_chilled": 1795800791.9925575,
-    "dreampop_radio": 1795800791.995255,
-    "indie_select": 1795800791.9981208,
-    "dkfm_edge": 1795800792.0007975,
+    "vuurland": 1795800827.7154624,
+    "mellow_mix": 1795800827.7188706,
+    "big_sonic_heaven": 1795800827.7215,
+    "radio_x_chilled": 1795800827.7241044,
+    "dreampop_radio": 1795800827.7266824,
+    "indie_select": 1795800827.7296178,
+    "dkfm_edge": 1795800827.7323492,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795800792.005365,
-    "dkfm_shoegaze": 1795800792.0087335,
-    "dkfm_classic": 1795800792.0115087,
-    "egofm_rnb": 1795800792.0142982,
-    "egofm_chillout": 1795800792.0170474,
-    "dj_neihtul": 1795800792.0196512,
-    "gri_balkon": 1795800792.021826,
-    "ignoreradio_shoegaze": 1795800792.025082,
-    "radio_britannia": 1795800792.3474376,
-    "wbru": 1795800792.349895,
-    "indie_x_fm": 1795800792.352573
+    "dark_edge": 1795800827.7368515,
+    "dkfm_shoegaze": 1795800827.7402265,
+    "dkfm_classic": 1795800827.7429962,
+    "egofm_rnb": 1795800827.745942,
+    "egofm_chillout": 1795800827.7486136,
+    "dj_neihtul": 1795800827.7512684,
+    "gri_balkon": 1795800827.7533264,
+    "ignoreradio_shoegaze": 1795800828.0837283,
+    "radio_britannia": 1795800828.086987,
+    "wbru": 1795800828.0893714,
+    "indie_x_fm": 1795800828.0921128
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32592,6 +32592,7 @@
       "somesurprises|||be reasonable",
       "somesurprises|||black field",
       "somesurprises|||bodymind",
+      "somesurprises|||dark victory",
       "somesurprises|||empty threat",
       "somesurprises|||perseids",
       "somesurprises|||ship circles",
@@ -40736,11 +40737,11 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "nectar woode|||rivers end",
-  "__last_radio_key_mellow_mix": "dido|||here with me",
+  "__last_radio_key_mellow_mix": "fleetwood mac|||crystal",
   "__last_radio_key_big_sonic_heaven": "kitchens of distinction|||drive that fast",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 38659,
-  "__v146_spotify_budget_slot": 1795800711.0769336,
+  "__v116_fifo_next_sequence": 38661,
+  "__v146_spotify_budget_slot": 1795800840.7674375,
   "__vuurland_active_playlist_count": 7427,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -130296,7 +130297,8 @@
     "no swoon|||otherside demo version": 1,
     "joseph capriati|||psycology - original mix": 1,
     "knot|||sunstream": 1,
-    "carlo lio|||red original mix": 1
+    "carlo lio|||red original mix": 1,
+    "hazy mountains|||you": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -169870,8 +169872,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 6300,
-  "__v192_duyster_next_enqueue_at": 1795800827.9777682,
+  "__v192_duyster_archive_cursor": 6302,
+  "__v192_duyster_next_enqueue_at": 1795800957.6866066,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -172804,7 +172806,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "mellow_mix",
+  "__v221_last_selected_source": "big_sonic_heaven",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -172816,7 +172818,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "mellow_mix",
+  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -172849,7 +172851,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "mellow_mix",
+  "__v227_last_source_turn": "big_sonic_heaven",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -174533,7 +174535,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "benny sings|||not enough",
+  "__last_radio_key_egofm_rnb": "lany|||up to me",
   "__last_radio_key_egofm_chillout": "coma|||lora",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -174572,7 +174574,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "flying saucer attack|||soaring high",
+  "__last_radio_key_ignoreradio_shoegaze": "somesurprises|||dark victory",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -176138,31 +176140,6 @@
   "__match_v35__kt tunstall|||white bird": "spotify:track:61qnl6ZTZDFKu2bNQ7Evla",
   "__match_v35__the cure|||cut here": "spotify:track:1SuAd1VNCDpM2ovs1ic9tN",
   "__v258_matcher_triage": {
-    "ceramic|||more to it": {
-      "source": "dkfm_edge",
-      "artist": "Ceramic",
-      "title": "More To It",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [
-        {
-          "artist": "Vantrel",
-          "title": "Ceramic Tide",
-          "spotify_id": "2usZaVlhfGUbRO87bFqw4I"
-        },
-        {
-          "artist": "Red Hot Chili Peppers",
-          "title": "Give It Away",
-          "spotify_id": "0uppYCG86ajpV2hSR3dJJ0"
-        },
-        {
-          "artist": "Jamie T",
-          "title": "Waist 36 Leg 32",
-          "spotify_id": "3IPLwU2d6nETANRwM5OoLb"
-        }
-      ],
-      "status": "low_relevance"
-    },
     "gorje hewek & izhevski|||secret feat peter broderick": {
       "source": "egofm_chillout",
       "artist": "Gorje Hewek & Izhevski",
@@ -182350,6 +182327,26 @@
           "artist": "Carlo Lio",
           "title": "Lions Groove",
           "spotify_id": "6c5kctmFLttSd0YttXxLE1"
+        }
+      ],
+      "status": "uncertain"
+    },
+    "hazy mountains|||you": {
+      "source": "big_sonic_heaven",
+      "artist": "Hazy Mountains",
+      "title": "You",
+      "kind": "uncertain",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "Hazy Mountains",
+          "title": "In Your Head",
+          "spotify_id": "7lt1KNFFQNcDloPAGER6DE"
+        },
+        {
+          "artist": "Hazy Mountains",
+          "title": "In Your Head",
+          "spotify_id": "4JaeutaIoNluKejaz3fl9j"
         }
       ],
       "status": "uncertain"
