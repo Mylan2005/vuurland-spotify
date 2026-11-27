@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795754131.473121,
+  "__v150_next_spotify_round_at": 1795754262.0718427,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sigur ros|||svefn-g-englar",
       "patrick watson|||love songs for robots",
       "d4vd|||here with me",
       "eddie vedder|||save it for later",
@@ -113,8 +114,7 @@
       "editors|||smokers outside the hospital doors acoustic",
       "radiohead|||jigsaw falling into place",
       "mayer hawthorne|||the walk",
-      "elis floreen|||panther",
-      "milan w|||days in my arms"
+      "elis floreen|||panther"
     ],
     "mellow_mix": [
       "bruce cockburn|||last night of the world",
@@ -423,6 +423,7 @@
       "kaiser chiefs|||love's not a competition but i'm winning"
     ],
     "dreampop_radio": [
+      "travis|||follow the light",
       "someday jacob|||crossing over jordan",
       "neko case|||people got a lotta nerve",
       "joshua hyslop|||do not let me go",
@@ -521,8 +522,7 @@
       "the war on drugs|||lost in the dream",
       "rumer|||long long day",
       "iron & wine|||each coming night",
-      "sofia talvik|||burning fields",
-      "pure bathing culture|||pendulum"
+      "sofia talvik|||burning fields"
     ],
     "indie_select": [
       "no ceremony///|||awayfromhere feat james vincent mcmorrow",
@@ -937,6 +937,7 @@
       "auburn lull|||tidal"
     ],
     "dkfm_classic": [
+      "cocteau twins|||cicely",
       "auburn lull|||tidal",
       "my bloody valentine|||lose my breath",
       "the darling buds|||do you have to break my heart?",
@@ -1035,10 +1036,10 @@
       "lovesliescrushing|||flowered smother",
       "malory|||beauty",
       "innocence mission|||spinning",
-      "rollerskate skinny|||bell jars away",
-      "moonshake|||gravity"
+      "rollerskate skinny|||bell jars away"
     ],
     "egofm_rnb": [
+      "bobby sparks ii|||forever mine feat donessa perry",
       "gabriels|||love and hate in a different time",
       "tirzah|||holding on",
       "nilufer yanya|||h34t rises",
@@ -1137,8 +1138,7 @@
       "young war|||darker love",
       "rosie lowe feat jay electronica|||the way",
       "joy crookes feat jafaris|||early",
-      "frank ocean|||nights",
-      "mayer hawthorne|||the great divine"
+      "frank ocean|||nights"
     ],
     "egofm_chillout": [
       "mogwai|||hungry face",
@@ -1651,6 +1651,7 @@
       "the kooks|||rosie"
     ],
     "wbru": [
+      "cults|||gilded lily",
       "fontaines d c|||where is gone? with rosalia",
       "green day|||longview",
       "cage the elephant|||make it easy",
@@ -1749,8 +1750,7 @@
       "green day|||brain stew/jaded",
       "mitski|||a pearl",
       "red hot chili peppers|||dani california",
-      "alex g|||sarah",
-      "royal & the serpent|||overwhelmed"
+      "alex g|||sarah"
     ],
     "indie_x_fm": [
       "gift|||every step",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795754094.5223157,
-    "mellow_mix": 1795754094.5318165,
-    "big_sonic_heaven": 1795754094.536031,
-    "radio_x_chilled": 1795754094.5405264,
-    "dreampop_radio": 1795754094.5449364,
-    "indie_select": 1795754094.549742,
-    "dkfm_edge": 1795754094.554725,
+    "vuurland": 1795754131.7936175,
+    "mellow_mix": 1795754131.803034,
+    "big_sonic_heaven": 1795754131.8072681,
+    "radio_x_chilled": 1795754131.811727,
+    "dreampop_radio": 1795754131.81631,
+    "indie_select": 1795754131.8211503,
+    "dkfm_edge": 1795754131.826221,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795754094.5618558,
-    "dkfm_shoegaze": 1795754094.5670059,
-    "dkfm_classic": 1795754094.5716329,
-    "egofm_rnb": 1795754094.5762804,
-    "egofm_chillout": 1795754094.580814,
-    "dj_neihtul": 1795754094.8810463,
-    "gri_balkon": 1795754094.8841975,
-    "ignoreradio_shoegaze": 1795754094.8894665,
-    "radio_britannia": 1795754094.8952117,
-    "wbru": 1795754094.8983696,
-    "indie_x_fm": 1795754095.2160475
+    "dark_edge": 1795754131.8331785,
+    "dkfm_shoegaze": 1795754131.8383946,
+    "dkfm_classic": 1795754131.8432286,
+    "egofm_rnb": 1795754131.8480492,
+    "egofm_chillout": 1795754131.8527696,
+    "dj_neihtul": 1795754131.8561532,
+    "gri_balkon": 1795754131.8592036,
+    "ignoreradio_shoegaze": 1795754131.8643215,
+    "radio_britannia": 1795754131.8700943,
+    "wbru": 1795754131.8734114,
+    "indie_x_fm": 1795754131.8778422
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -40100,12 +40100,12 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "patrick watson|||love songs for robots",
+  "__last_radio_key_vuurland": "sigur ros|||svefn-g-englar",
   "__last_radio_key_mellow_mix": "bruce cockburn|||last night of the world",
   "__last_radio_key_big_sonic_heaven": "the chameleons|||perfume garden",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 37745,
-  "__v146_spotify_budget_slot": 1795754013.710607,
+  "__v116_fifo_next_sequence": 37746,
+  "__v146_spotify_budget_slot": 1795754144.2912173,
   "__vuurland_active_playlist_count": 7131,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -128437,7 +128437,8 @@
     "finlay hatton|||in my arms": 1,
     "cranes|||jewel 12 inch mix": 1,
     "sinead o'connor|||the last day of our acquaintan": 1,
-    "trst|||destroyer": 1
+    "trst|||destroyer": 1,
+    "marc romboy stephan bodzin|||hyperion - stimming remix": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -165782,7 +165783,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "someday jacob|||crossing over jordan",
+  "__last_radio_key_dreampop_radio": "travis|||follow the light",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -167264,7 +167265,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "teen idle|||birthday cake",
   "__last_radio_key_dkfm_shoegaze": "moonpools|||fade in",
-  "__last_radio_key_dkfm_classic": "auburn lull|||tidal",
+  "__last_radio_key_dkfm_classic": "cocteau twins|||cicely",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -168011,8 +168012,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 5114,
-  "__v192_duyster_next_enqueue_at": 1795754130.683607,
+  "__v192_duyster_archive_cursor": 5115,
+  "__v192_duyster_next_enqueue_at": 1795754261.2266228,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -170945,7 +170946,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "egofm_chillout",
+  "__v221_last_selected_source": "dj_neihtul",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -170957,7 +170958,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "egofm_chillout",
+  "__v224_last_spotify_opportunity_source": "dj_neihtul",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -170990,7 +170991,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "egofm_chillout",
+  "__v227_last_source_turn": "dj_neihtul",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -172674,7 +172675,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "gabriels|||love and hate in a different time",
+  "__last_radio_key_egofm_rnb": "bobby sparks ii|||forever mine feat donessa perry",
   "__last_radio_key_egofm_chillout": "mogwai|||hungry face",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -174248,7 +174249,7 @@
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
   "__last_radio_key_radio_britannia": "gently tender|||wild in the uplands",
-  "__last_radio_key_wbru": "fontaines d c|||where is gone? with rosalia",
+  "__last_radio_key_wbru": "cults|||gilded lily",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
@@ -174279,31 +174280,6 @@
   "__match_v35__kt tunstall|||white bird": "spotify:track:61qnl6ZTZDFKu2bNQ7Evla",
   "__match_v35__the cure|||cut here": "spotify:track:1SuAd1VNCDpM2ovs1ic9tN",
   "__v258_matcher_triage": {
-    "rave down|||staircase paradox - 19-91": {
-      "source": "dkfm_edge",
-      "artist": "Rave Down",
-      "title": "Staircase Paradox - 19-91",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [
-        {
-          "artist": "Trancescape",
-          "title": "Producelast - Original Mix",
-          "spotify_id": "5SobvSAHOiN96u9ciTiGid"
-        },
-        {
-          "artist": "Trancescape",
-          "title": "Producelast - Radio Edit",
-          "spotify_id": "6Eob4vmlBF2GBk6soMRfOc"
-        },
-        {
-          "artist": "Dave Kane",
-          "title": "Star Wash (Kane vs Viper Mix)",
-          "spotify_id": "5ApkANBh71Odp6uxQ4lQHu"
-        }
-      ],
-      "status": "low_relevance"
-    },
     "shoreline stories|||ride": {
       "source": "big_sonic_heaven",
       "artist": "Shoreline Stories",
@@ -180404,6 +180380,31 @@
         }
       ],
       "status": "review_guard"
+    },
+    "marc romboy stephan bodzin|||hyperion - stimming remix": {
+      "source": "dj_neihtul",
+      "artist": "Marc Romboy, Stephan Bodzin",
+      "title": "Hyperion - Stimming Remix",
+      "kind": "uncertain",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "Marc Romboy, Stephan Bodzin, Stimming",
+          "title": "Hyperion - Stimming Remix",
+          "spotify_id": "47CNTLBGzNQsUgviKxz2Lh"
+        },
+        {
+          "artist": "Marc Romboy, Stephan Bodzin",
+          "title": "Hyperion",
+          "spotify_id": "2f1iJikGQQbNVK43CTwlhU"
+        },
+        {
+          "artist": "Isaac Roux",
+          "title": "Brotherhood",
+          "spotify_id": "6cCEmYRUrjcBi7PcnH7vRP"
+        }
+      ],
+      "status": "uncertain"
     }
   },
   "__match_v35__polica|||alive": "spotify:track:4qyntCIJADgqiFnJVFVnVd",
