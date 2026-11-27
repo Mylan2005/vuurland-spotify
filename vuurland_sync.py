@@ -1187,6 +1187,36 @@ def v145_fetch_radiobox_response(source_url, source_name):
     return None
 
 
+def v261_station_jingle(artist, title):
+    """Explicit station jingles, including concatenated station-name labels."""
+    a = re.sub(r"[^\w]+", "", str(artist or "").casefold())
+    t = str(title or "").strip().casefold()
+    if re.fullmatch(r"jingles?\s*[-_ ]*\d*[-_ ]*", t):
+        return True
+    compact = re.sub(r"[^\w]+", "", t)
+    return bool(a and re.fullmatch(re.escape(a) + r"jingles?\d*", compact))
+
+
+def v261_version_parts(value):
+    """Peel only explicit trailing Instrumental/Original Mix labels."""
+    raw = str(value or "").strip()
+    label = r"(instrumental(?:\s+(?:version|mix))?|original\s+mix)"
+    pattern = re.compile(
+        r"(?:\s*\(\s*" + label + r"\s*\)|\s*\[\s*" + label
+        + r"\s*\]|\s*[,–—-]\s*" + label + r")\s*$", re.I)
+    labels = []
+    while True:
+        match = pattern.search(raw)
+        if not match:
+            break
+        found = next(x for x in match.groups() if x is not None)
+        labels.append("instrumental" if found.lower().startswith("instrumental") else "mix")
+        raw = raw[:match.start()].strip()
+    if raw and labels and len(set(labels)) == 1:
+        return raw, labels[0]
+    return str(value or "").strip(), None
+
+
 def get_radiobox_tracks(
     source_url,
     source_name,
@@ -1291,7 +1321,7 @@ def get_radiobox_tracks(
         if not artist or not title:
             return
 
-        if artist.lower() == title.lower():
+        if artist.lower() == title.lower() or v261_station_jingle(artist, title):
             return
 
         if len(artist) > 150 or len(title) > 300:
@@ -2701,6 +2731,15 @@ def find_spotify_track(
         print(f"⏭️ v101: gebruiker heeft deze opname uitgesloten: {artist} — {title}")
         return None
 
+    if v261_station_jingle(artist, title):
+        return None
+
+    # Canonicalize repeated/comma/bracket version metadata without changing
+    # the original radio key or the persisted queue entry.
+    v261_core, v261_requested = v261_version_parts(title)
+    if v261_requested:
+        title = v261_core + (" (Instrumental)" if v261_requested == "instrumental" else " (Original Mix)")
+
     # v250: owner explicitly requested the ordinary studio recording for
     # The Cure - This Is A Lie (Ambient Mix), unavailable in their Spotify.
     # Keep the original queue/cache identity; only adjust the match query.
@@ -3703,6 +3742,11 @@ def find_spotify_track(
             if _v260_hint:
                 query = _v260_hint
                 print(f"🎵 v260: alternatieve zoekbeurt op originele songtitel: {artist} — {title}")
+
+    if not catalog_id and v261_requested and search_variant >= 1:
+        core = v261_core.replace('"', ' ').strip()
+        name = str(spotify_search_artist).replace('"', ' ').strip()
+        query = f'artist:"{name}" track:"{core}"' if search_variant == 1 else f'{name} "{core}"'
 
     if catalog_id:
         print(f"📀 {catalog_reason} cataloguscontrole: {artist} — {title} (geen Search nodig; volledige validatie)")
@@ -5455,6 +5499,26 @@ def find_spotify_track(
             candidate_base=spotify_title_base,
         )
 
+        # A missing instrumental or Original Mix may fall back only to
+        # the ordinary recording, with exact artist, credits and core title.
+        v261_ordinary_fallback = (
+            v261_requested is not None
+            and search_variant >= 1
+            and spotify_version in (None, "original version", "album version", "single version", "remaster")
+            and primary_artist_exact
+            and missing_feature_count == 0
+            and not guest_only_catalog_match
+            and not solo_collab_fallback
+            and bool(title_base(title))
+            and title_base(title) == spotify_title_base
+        )
+        if v261_requested and spotify_version in (None, "original version", "album version", "single version", "remaster") and not v261_ordinary_fallback:
+            continue
+        if v261_requested == "mix" and spotify_version in ("mix", "remix"):
+            if v261_version_parts(item.get("name", ""))[1] != "mix":
+                continue
+        v243_remix_original = v243_remix_original or v261_ordinary_fallback
+
         # v211: bij EXACT benoemde studio-/live-/remixwensen is een
         # cataloguskandidaat pas veilig als ook de SPECIFIEKE versie klopt.
         # 'Mr Brightside (Live Acoustic)' nooit een elektrisch live-item;
@@ -6085,6 +6149,10 @@ def find_spotify_track(
             preferred_order[wanted_family] = [wanted_family] + [
                 x for x in preferred_order["ordinary"] if x != wanted_family
             ]
+        elif wanted_family == "instrumental" and v261_requested == "instrumental":
+            preferred_order[wanted_family] = ["instrumental"] + (
+                ["ordinary", "remaster"] if v261_ordinary_fallback else []
+            )
         elif wanted_family == "mix":
             # Exact mix first; only a verified ordinary recording on an
             # existing later attempt, never a different random remix.
@@ -9086,6 +9154,15 @@ def sync():
             item["artist"] = artist
             atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
         title = item["title"]
+
+        # Reject even previously queued station jingles before any cache
+        # reuse, archive linkage or Spotify request.
+        if v261_station_jingle(artist, title):
+            print(f"⏭️ Stationjingle geblokkeerd: {artist} — {title}")
+            live_queue.pop(0)
+            atomic_save_json(live_queue_file, live_queue, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            continue
 
         # v252: also guard items restored by older retry/cache logic.
         if (skip_unavailable_radio_x_recording(item.get("source"), artist, title)
