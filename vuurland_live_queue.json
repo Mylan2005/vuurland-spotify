@@ -6838,13 +6838,6 @@
     "_v116_fifo_seq": 13291
   },
   {
-    "artist": "The Invisble",
-    "title": "London Girl (Matthew Herbert's Kent Boy Dub) - The Invisble",
-    "source": "indie_select",
-    "_v34_search_variant": 0,
-    "_v116_fifo_seq": 13293
-  },
-  {
     "artist": "Silver Scooter",
     "title": "Goodbye",
     "source": "duyster",
@@ -134308,12 +134301,6 @@
     "_v34_retry_at": 1795780577
   },
   {
-    "artist": "London Grammar",
-    "title": "Californian Soil (Maya Jane Coles Remix)",
-    "source": "indie_select",
-    "_v116_fifo_seq": 38181
-  },
-  {
     "artist": "Manic Street Preachers",
     "title": "Everything Must Go",
     "source": "radio_britannia",
@@ -134750,5 +134737,25 @@
     "title": "Zombie",
     "source": "dkfm_shoegaze",
     "_v116_fifo_seq": 38251
+  },
+  {
+    "artist": "Harsh Intention",
+    "title": "Burial",
+    "source": "ignoreradio_shoegaze",
+    "_v116_fifo_seq": 38252
+  },
+  {
+    "artist": "The Go-Betweens",
+    "title": "The Locust Girls",
+    "source": "duyster",
+    "_v116_fifo_seq": 38253
+  },
+  {
+    "artist": "The Invisble",
+    "title": "London Girl (Matthew Herbert's Kent Boy Dub) - The Invisble",
+    "source": "indie_select",
+    "_v34_search_variant": 1,
+    "_v116_fifo_seq": 13293,
+    "_v34_retry_at": 1795780755
   }
 ]
