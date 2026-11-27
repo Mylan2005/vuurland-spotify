@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795819852.7825227,
+  "__v150_next_spotify_round_at": 1795819981.7487137,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -423,6 +423,7 @@
       "radiohead|||street spirit"
     ],
     "dreampop_radio": [
+      "wolfram|||fireworks johan agebjorn remix",
       "benjamin francis leftwich|||pictures gzus remix",
       "parov stelar|||summertime feat maya bensalem",
       "tesla boy|||thinking of you",
@@ -521,8 +522,7 @@
       "the late call|||pickpocket",
       "of monsters and men|||love love love",
       "band of horses|||infinite arms",
-      "air|||all i need",
-      "wye oak|||civilian"
+      "air|||all i need"
     ],
     "indie_select": [
       "mogwai|||letters to the metro zombi remix",
@@ -835,6 +835,7 @@
       "metric|||help i'm alive"
     ],
     "dkfm_shoegaze": [
+      "dutch mustard|||loser",
       "sasha and the valentines|||flower",
       "hyperlilly|||yuma",
       "pale shade|||blitzed",
@@ -933,10 +934,11 @@
       "stillfilms|||drag me down",
       "my bloody valentine|||lose my breath",
       "pale saints|||a thousand stars burst open",
-      "away forward|||junk science",
-      "barrie|||darjeeling"
+      "away forward|||junk science"
     ],
     "dkfm_classic": [
+      "boo radleys|||does this hurt? edit",
+      "swervedriver|||rave down",
       "majesty crush|||seine",
       "coaltar of the deepers|||taste",
       "medicine|||aruca",
@@ -1034,9 +1036,7 @@
       "14 iced bears|||in the morning",
       "february|||trace",
       "bleach|||shotgun",
-      "flying saucer attack|||rainstorm blues",
-      "whimsical|||dry your eyes",
-      "chapterhouse|||pearl"
+      "flying saucer attack|||rainstorm blues"
     ],
     "egofm_rnb": [
       "akua naru feat cody chesnutt|||canary dreams",
@@ -1447,6 +1447,7 @@
       "luminous|||set me free"
     ],
     "ignoreradio_shoegaze": [
+      "death of heather|||pretty things",
       "sulk|||bad dream",
       "spirea x|||chlorine dream",
       "yo la tengo|||we're an american band",
@@ -1545,8 +1546,7 @@
       "glaring orchid|||take a drive",
       "mojave 3|||battle of the broken hearts",
       "sunlotus|||garnet",
-      "lovesliescrushing|||babysbreath",
-      "cold gawd|||on the pale silver sofa"
+      "lovesliescrushing|||babysbreath"
     ],
     "radio_britannia": [
       "radiohead|||i promise",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795819819.4548645,
-    "mellow_mix": 1795819819.4629638,
-    "big_sonic_heaven": 1795819819.4663475,
-    "radio_x_chilled": 1795819819.469934,
-    "dreampop_radio": 1795819819.473179,
-    "indie_select": 1795819819.4767158,
-    "dkfm_edge": 1795819819.480444,
+    "vuurland": 1795819851.081634,
+    "mellow_mix": 1795819851.0898328,
+    "big_sonic_heaven": 1795819851.0930424,
+    "radio_x_chilled": 1795819851.096569,
+    "dreampop_radio": 1795819851.0999045,
+    "indie_select": 1795819851.1034572,
+    "dkfm_edge": 1795819851.1072607,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795819819.4859226,
-    "dkfm_shoegaze": 1795819819.4899416,
-    "dkfm_classic": 1795819819.493397,
-    "egofm_rnb": 1795819819.4972873,
-    "egofm_chillout": 1795819819.5010285,
-    "dj_neihtul": 1795819819.5056174,
-    "gri_balkon": 1795819819.5084891,
-    "ignoreradio_shoegaze": 1795819819.5124812,
-    "radio_britannia": 1795819819.5168262,
-    "wbru": 1795819819.5196793,
-    "indie_x_fm": 1795819819.5228775
+    "dark_edge": 1795819851.1127632,
+    "dkfm_shoegaze": 1795819851.116842,
+    "dkfm_classic": 1795819851.1204472,
+    "egofm_rnb": 1795819851.1243334,
+    "egofm_chillout": 1795819851.128064,
+    "dj_neihtul": 1795819851.1313474,
+    "gri_balkon": 1795819851.133886,
+    "ignoreradio_shoegaze": 1795819851.137961,
+    "radio_britannia": 1795819851.1423619,
+    "wbru": 1795819851.1451206,
+    "indie_x_fm": 1795819851.1483495
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -41014,8 +41014,8 @@
   "__last_radio_key_mellow_mix": "lord huron|||ends of the earth",
   "__last_radio_key_big_sonic_heaven": "slowdive|||when the sun hits",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 39032,
-  "__v146_spotify_budget_slot": 1795819735.0496757,
+  "__v116_fifo_next_sequence": 39033,
+  "__v146_spotify_budget_slot": 1795819864.0170295,
   "__vuurland_active_playlist_count": 7552,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -131087,7 +131087,8 @@
     "massive attack vs mad professor|||moving dub better things": 1,
     "tor|||let me down": 1,
     "lwna|||shadowns on the floor": 1,
-    "yujen|||try it over": 1
+    "yujen|||try it over": 1,
+    "sub urban|||freak f rei ami": 1
   },
   "__match_v35__laufey|||madwoman": "spotify:track:0UqHzMvRQnaOXEPKgFVhxN",
   "__match_v35__helen|||endless sky": "spotify:track:1QAdhE2gwAaTcPTXmYcBA5",
@@ -168432,7 +168433,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "benjamin francis leftwich|||pictures gzus remix",
+  "__last_radio_key_dreampop_radio": "wolfram|||fireworks johan agebjorn remix",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -169913,8 +169914,8 @@
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "indoor voices|||care too much",
-  "__last_radio_key_dkfm_shoegaze": "sasha and the valentines|||flower",
-  "__last_radio_key_dkfm_classic": "majesty crush|||seine",
+  "__last_radio_key_dkfm_shoegaze": "dutch mustard|||loser",
+  "__last_radio_key_dkfm_classic": "boo radleys|||does this hurt? edit",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -170661,8 +170662,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 6763,
-  "__v192_duyster_next_enqueue_at": 1795819851.9506383,
+  "__v192_duyster_archive_cursor": 6766,
+  "__v192_duyster_next_enqueue_at": 1795819980.8261077,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -173595,7 +173596,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "radio_britannia",
+  "__v221_last_selected_source": "wbru",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -173607,7 +173608,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "radio_britannia",
+  "__v224_last_spotify_opportunity_source": "wbru",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -173640,7 +173641,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "radio_britannia",
+  "__v227_last_source_turn": "wbru",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -175363,7 +175364,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "sulk|||bad dream",
+  "__last_radio_key_ignoreradio_shoegaze": "death of heather|||pretty things",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -176934,15 +176935,6 @@
   "__match_v35__kt tunstall|||white bird": "spotify:track:61qnl6ZTZDFKu2bNQ7Evla",
   "__match_v35__the cure|||cut here": "spotify:track:1SuAd1VNCDpM2ovs1ic9tN",
   "__v258_matcher_triage": {
-    "more earth than sea|||alone again": {
-      "source": "dkfm_edge",
-      "artist": "More Earth Than Sea",
-      "title": "Alone Again",
-      "kind": "weak",
-      "variant": 1,
-      "candidates": [],
-      "status": "low_relevance"
-    },
     "indoor voices|||so down": {
       "source": "dkfm_edge",
       "artist": "Indoor Voices",
@@ -183167,6 +183159,31 @@
           "artist": "Nick Cave & The Bad Seeds",
           "title": "The Mercy Seat - 2010 Remaster",
           "spotify_id": "2BqlOngnXkrnmxzYagZgFi"
+        }
+      ],
+      "status": "uncertain"
+    },
+    "sub urban|||freak f rei ami": {
+      "source": "wbru",
+      "artist": "Sub Urban",
+      "title": "Freak (f REI AMI)",
+      "kind": "uncertain",
+      "variant": 0,
+      "candidates": [
+        {
+          "artist": "Sub Urban, REI AMI",
+          "title": "Freak (feat. REI AMI)",
+          "spotify_id": "5jkbw3FDS3bSSb4oLKYbjf"
+        },
+        {
+          "artist": "ZZang KARAOKE",
+          "title": "Freak (Feat. REI AMI) (By Sub Urban) (Instrumental Karaoke Version)",
+          "spotify_id": "3G5HC8rnUDUGL3RsovKRI7"
+        },
+        {
+          "artist": "ZZang KARAOKE",
+          "title": "Freak (Feat. REI AMI) (By Sub Urban) (Melody Karaoke Version)",
+          "spotify_id": "0bBwltbctcnJbE6sBCF8z5"
         }
       ],
       "status": "uncertain"
