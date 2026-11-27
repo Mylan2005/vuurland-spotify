@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "sea peoples|||vibeland",
+      "damien rice & lisa hannigan|||9 crimes",
       "tamino|||chambers",
       "wilco|||how to fight loneliness",
       "maggie rogers|||don't forget me",
@@ -112,9 +114,7 @@
       "luvcat|||love and money",
       "kurt vile|||zoom 97",
       "milo meskens|||something to lose",
-      "michael kiwanuka|||i'll get along",
-      "birame|||the worst parts of you",
-      "jjerome87|||track and field"
+      "michael kiwanuka|||i'll get along"
     ],
     "mellow_mix": [
       "delerium|||innocente",
@@ -321,6 +321,7 @@
       "the mission|||tower of strength"
     ],
     "radio_x_chilled": [
+      "dma's|||silver",
       "green day|||time of your life good riddance",
       "the lathums|||struggle acoustic",
       "the national|||the system only dreams in total darkness",
@@ -395,7 +396,6 @@
       "ocean colour scene|||the day we caught the train acoustic",
       "badly drawn boy|||once around the block live for radio x",
       "courteeners|||bide your time",
-      "dma's|||silver",
       "empire of the sun|||we are the people",
       "the cranberries|||dreams acoustic",
       "the lumineers|||ophelia",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "the courteeners|||kitchen",
       "tom odell|||here i am",
       "death in vegas|||hands around my throat",
       "amy winehouse|||our day will come",
@@ -831,8 +832,7 @@
       "david bowie|||the man who sold the world",
       "lime cordiale|||temper temper",
       "badbadnotgood feat charlotte day wilson|||in your eyes",
-      "whitney|||used to be lonely",
-      "daedelus|||order of the golden dawn feat laura darling"
+      "whitney|||used to be lonely"
     ],
     "dkfm_shoegaze": [
       "thrushes|||arsonist",
@@ -937,6 +937,7 @@
       "l i p s|||walls"
     ],
     "dkfm_classic": [
+      "kitchens of distinction|||polaroids",
       "spectacle|||nowhere generation",
       "the darling buds|||tiny machine",
       "revolver|||heaven sent an angel",
@@ -1035,10 +1036,10 @@
       "catherine wheel|||fripp",
       "bang bang machine|||geek love original 12 version",
       "pale saints|||under your nose",
-      "swirlies|||didn't understand",
-      "the ocean blue|||a separate reality"
+      "swirlies|||didn't understand"
     ],
     "egofm_rnb": [
+      "lion babe|||endless summer",
       "madison mcferrin|||insane",
       "nelly|||hot in herre",
       "beyonce|||why don't you love me",
@@ -1137,8 +1138,7 @@
       "raury|||channel zero",
       "maverick sabre feat jorja smith|||slow down",
       "nao|||zillionaire",
-      "snakehips feat sinead harnett|||days with you",
-      "steve lacy|||sunshine"
+      "snakehips feat sinead harnett|||days with you"
     ],
     "egofm_chillout": [
       "melanie de biasio|||the flow",
@@ -1447,6 +1447,7 @@
       "hiatus|||save yourself"
     ],
     "ignoreradio_shoegaze": [
+      "fir cone children|||ghost in the frame",
       "displacement|||neuro blue",
       "grazer|||why bother",
       "hotline tnt|||spot me 100",
@@ -1545,10 +1546,10 @@
       "jane remover|||video",
       "the horrors|||whiplash",
       "soft kill|||ducky",
-      "lotus plaza|||dusty rhodes",
-      "deeper into movies|||big day coming"
+      "lotus plaza|||dusty rhodes"
     ],
     "radio_britannia": [
+      "wolf gang|||lions in cages",
       "katie gregson-macleod|||complex",
       "emf|||i believe",
       "tigress|||freefall",
@@ -1647,8 +1648,7 @@
       "the libertines|||i get along",
       "royal blood|||swallow the bomb",
       "editors|||karma climb",
-      "dog is dead|||do the right thing",
-      "richard ashcroft|||why not nothing?"
+      "dog is dead|||do the right thing"
     ],
     "wbru": [
       "phoebe bridgers|||the governor's waltz",
@@ -1753,6 +1753,7 @@
       "buffalo traffic jam|||fool's gold"
     ],
     "indie_x_fm": [
+      "the dandy warhols frank black|||danzig with myself",
       "magdalena bay|||secrets your fire",
       "icehouse|||great southern land",
       "the foreign resort|||resound",
@@ -1851,30 +1852,29 @@
       "nothing but thieves|||impossible",
       "bicep & soarr|||air",
       "sports|||ordinary man",
-      "joy division|||she's lost control",
-      "the wonder stuff|||a wish away"
+      "joy division|||she's lost control"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795759564.3687212,
-    "mellow_mix": 1795759564.3800619,
-    "big_sonic_heaven": 1795759564.3837814,
-    "radio_x_chilled": 1795759564.3878736,
-    "dreampop_radio": 1795759564.392333,
-    "indie_select": 1795759564.3969212,
-    "dkfm_edge": 1795759564.4015567,
+    "vuurland": 1795759664.191784,
+    "mellow_mix": 1795759664.196978,
+    "big_sonic_heaven": 1795759664.2006865,
+    "radio_x_chilled": 1795759664.2047372,
+    "dreampop_radio": 1795759664.2090511,
+    "indie_select": 1795759664.2135754,
+    "dkfm_edge": 1795759664.2181313,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795759564.4081087,
-    "dkfm_shoegaze": 1795759564.4131484,
-    "dkfm_classic": 1795759564.4175518,
-    "egofm_rnb": 1795759564.4219997,
-    "egofm_chillout": 1795759564.426238,
-    "dj_neihtul": 1795759564.429379,
-    "gri_balkon": 1795759564.4322338,
-    "ignoreradio_shoegaze": 1795759564.4371235,
-    "radio_britannia": 1795759564.4424286,
-    "wbru": 1795759564.5423193,
-    "indie_x_fm": 1795759564.5466347
+    "dark_edge": 1795759664.5365477,
+    "dkfm_shoegaze": 1795759664.5417013,
+    "dkfm_classic": 1795759664.546171,
+    "egofm_rnb": 1795759664.550649,
+    "egofm_chillout": 1795759664.5549436,
+    "dj_neihtul": 1795759664.5580626,
+    "gri_balkon": 1795759664.5610027,
+    "ignoreradio_shoegaze": 1795759664.9136448,
+    "radio_britannia": 1795759664.9191716,
+    "wbru": 1795759664.9222105,
+    "indie_x_fm": 1795759665.3083632
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -18807,6 +18807,7 @@
       "the coral|||in the morning",
       "the coral|||pass it on",
       "the courteeners|||are you in love with a notion?",
+      "the courteeners|||kitchen",
       "the courteeners|||lose control",
       "the courteeners|||no one will ever replace us",
       "the courteeners|||the 17th",
@@ -30483,6 +30484,7 @@
       "fir cone children|||another you",
       "fir cone children|||anything more",
       "fir cone children|||fills up every inch",
+      "fir cone children|||ghost in the frame",
       "fir cone children|||it feels complete",
       "fir cone children|||let's calm the senses",
       "fir cone children|||let's defy everyday life",
@@ -36479,6 +36481,7 @@
       "wolf alice|||the beach",
       "wolf alice|||the sofa",
       "wolf alice|||yuk foo",
+      "wolf gang|||lions in cages",
       "working men's club|||devout",
       "working mens club|||bad blood",
       "working mens club|||cut",
@@ -38152,6 +38155,7 @@
       "the cure|||a fragile thing",
       "the cure|||close to me",
       "the damned|||smash it up pt 1 & 2",
+      "the dandy warhols frank black|||danzig with myself",
       "the dandy warhols|||the last high",
       "the dare|||cheeky",
       "the dare|||lca",
@@ -40171,11 +40175,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "tamino|||chambers",
+  "__last_radio_key_vuurland": "sea peoples|||vibeland",
   "__last_radio_key_mellow_mix": "delerium|||innocente",
   "__last_radio_key_big_sonic_heaven": "pale saints|||blue flower",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 37845,
+  "__v116_fifo_next_sequence": 37848,
   "__v146_spotify_budget_slot": 1795759577.0405595,
   "__vuurland_active_playlist_count": 7168,
   "__vuurland_active_volume": 2,
@@ -165901,7 +165905,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "green day|||time of your life good riddance",
+  "__last_radio_key_radio_x_chilled": "dma's|||silver",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -167487,7 +167491,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "talking to shadows|||tears",
   "__last_radio_key_dkfm_shoegaze": "thrushes|||arsonist",
-  "__last_radio_key_dkfm_classic": "spectacle|||nowhere generation",
+  "__last_radio_key_dkfm_classic": "kitchens of distinction|||polaroids",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -167499,7 +167503,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "tom odell|||here i am",
+  "__last_radio_key_dark_edge": "the courteeners|||kitchen",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -172897,7 +172901,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "madison mcferrin|||insane",
+  "__last_radio_key_egofm_rnb": "lion babe|||endless summer",
   "__last_radio_key_egofm_chillout": "melanie de biasio|||the flow",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -172936,7 +172940,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "displacement|||neuro blue",
+  "__last_radio_key_ignoreradio_shoegaze": "fir cone children|||ghost in the frame",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -174470,7 +174474,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "katie gregson-macleod|||complex",
+  "__last_radio_key_radio_britannia": "wolf gang|||lions in cages",
   "__last_radio_key_wbru": "phoebe bridgers|||the governor's waltz",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -184174,7 +184178,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "magdalena bay|||secrets your fire",
+  "__last_radio_key_indie_x_fm": "the dandy warhols frank black|||danzig with myself",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
