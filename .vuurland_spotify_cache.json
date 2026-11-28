@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "pearl jam|||just breathe",
       "alex g|||june guitar",
       "infinity song|||metamorphosis",
       "sevens|||bloom",
@@ -113,10 +114,10 @@
       "lord huron|||looking back",
       "rex orange county feat benny sings|||loving is easy",
       "trixie whitley|||need your love",
-      "amen dunes|||blue rose",
-      "rhye|||summer song"
+      "amen dunes|||blue rose"
     ],
     "mellow_mix": [
+      "oscar lopez|||bolero amor",
       "wilco|||someone else's song",
       "willie & lobo|||tribute to manolo",
       "hozier|||cherry wine live",
@@ -215,8 +216,7 @@
       "the notting hillbillies|||your own sweet way",
       "strength in numbers|||one winter's night",
       "r e m|||find the river",
-      "band of skulls|||honest",
-      "fleetwood mac|||sometimes"
+      "band of skulls|||honest"
     ],
     "big_sonic_heaven": [
       "my brilliant beast|||faze me",
@@ -423,6 +423,7 @@
       "paul weller|||wild wood"
     ],
     "dreampop_radio": [
+      "sophie zelmani|||black day",
       "yumi zouma|||the brae",
       "coldplay|||brothers and sisters",
       "turin brakes|||they cant buy the sunshine",
@@ -521,8 +522,7 @@
       "say lou lou|||maybe you cfcf remix",
       "m83|||kim & jessie",
       "nina simone|||lilac wine the album leaf",
-      "electric youth|||tomorrow",
-      "wolfram|||fireworks johan agebjorn remix"
+      "electric youth|||tomorrow"
     ],
     "indie_select": [
       "stereo mcs|||boy feat jamie cullum album",
@@ -1039,6 +1039,7 @@
       "the emerald down|||red shift"
     ],
     "egofm_rnb": [
+      "kaytranada feat alunageorge & goldlink|||together",
       "elba|||sirens",
       "panama|||how we feel",
       "madison mcferrin|||no time to lose",
@@ -1137,10 +1138,10 @@
       "rosalia|||malamente",
       "mr jukes feat lalah hathaway|||from golden stars comes silver dew - physical version",
       "seinabo sey|||pistols at dawn",
-      "anthony hamilton|||the point of it all",
-      "michelle|||surprise"
+      "anthony hamilton|||the point of it all"
     ],
     "egofm_chillout": [
+      "ludvig & stelar|||reflection",
       "sven wegner|||can't take my soul",
       "tim bowness|||borderline feat dylan howe & david longdon",
       "kai otten|||in clouds",
@@ -1239,8 +1240,7 @@
       "air & beth hirsch|||all i need",
       "now vs now|||silkworm society",
       "tom misch|||better days",
-      "sepalot feat fabian fuss|||neverlost",
-      "pantha du prince|||golden galactic"
+      "sepalot feat fabian fuss|||neverlost"
     ],
     "dj_neihtul": [
       "zero 7|||in the waiting line",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795846207.4639974,
-    "mellow_mix": 1795846207.4721656,
-    "big_sonic_heaven": 1795846207.47621,
-    "radio_x_chilled": 1795846207.4804308,
-    "dreampop_radio": 1795846207.4847126,
-    "indie_select": 1795846207.4893522,
-    "dkfm_edge": 1795846207.4940052,
+    "vuurland": 1795846304.2353127,
+    "mellow_mix": 1795846304.565518,
+    "big_sonic_heaven": 1795846304.5697505,
+    "radio_x_chilled": 1795846304.5740085,
+    "dreampop_radio": 1795846304.5784883,
+    "indie_select": 1795846304.583145,
+    "dkfm_edge": 1795846304.5877488,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795846207.5004869,
-    "dkfm_shoegaze": 1795846207.5054758,
-    "dkfm_classic": 1795846207.5101233,
-    "egofm_rnb": 1795846207.5146177,
-    "egofm_chillout": 1795846207.518824,
-    "dj_neihtul": 1795846207.5225966,
-    "gri_balkon": 1795846207.5254514,
-    "ignoreradio_shoegaze": 1795846207.5305922,
-    "radio_britannia": 1795846207.5358896,
-    "wbru": 1795846207.5389342,
-    "indie_x_fm": 1795846207.5428512
+    "dark_edge": 1795846304.5943356,
+    "dkfm_shoegaze": 1795846304.5993602,
+    "dkfm_classic": 1795846304.6038911,
+    "egofm_rnb": 1795846304.608571,
+    "egofm_chillout": 1795846304.6128662,
+    "dj_neihtul": 1795846304.616457,
+    "gri_balkon": 1795846304.6193259,
+    "ignoreradio_shoegaze": 1795846304.624419,
+    "radio_britannia": 1795846304.6297815,
+    "wbru": 1795846304.6328907,
+    "indie_x_fm": 1795846304.6367695
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -41344,8 +41344,8 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "alex g|||june guitar",
-  "__last_radio_key_mellow_mix": "wilco|||someone else's song",
+  "__last_radio_key_vuurland": "pearl jam|||just breathe",
+  "__last_radio_key_mellow_mix": "oscar lopez|||bolero amor",
   "__last_radio_key_big_sonic_heaven": "my brilliant beast|||faze me",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 39502,
@@ -169394,7 +169394,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "yumi zouma|||the brae",
+  "__last_radio_key_dreampop_radio": "sophie zelmani|||black day",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -176286,8 +176286,8 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "elba|||sirens",
-  "__last_radio_key_egofm_chillout": "sven wegner|||can't take my soul",
+  "__last_radio_key_egofm_rnb": "kaytranada feat alunageorge & goldlink|||together",
+  "__last_radio_key_egofm_chillout": "ludvig & stelar|||reflection",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
