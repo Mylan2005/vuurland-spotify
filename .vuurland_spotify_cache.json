@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795844044.235069,
+  "__v150_next_spotify_round_at": 1795844182.711401,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -219,6 +219,7 @@
       "steve earle|||telephone road"
     ],
     "big_sonic_heaven": [
+      "dif juz|||a starting point",
       "this mortal coil|||nature's way",
       "sinead o'connor|||black boys on mopeds",
       "velour 100|||stare into light",
@@ -317,8 +318,7 @@
       "echo & the bunnymen|||read it in books",
       "cranes|||paris and rome",
       "stereolab|||french disko",
-      "lush|||de-luxe",
-      "dead can dance|||persephone the gathering of flowers"
+      "lush|||de-luxe"
     ],
     "radio_x_chilled": [
       "delays|||long time coming",
@@ -1141,6 +1141,7 @@
       "ella eyre|||deeper"
     ],
     "egofm_chillout": [
+      "hania rani|||glass",
       "gorje hewek & izhevski|||secret feat peter broderick",
       "james blake|||friends that break your heart",
       "faultline|||your love means everything part 2",
@@ -1239,8 +1240,7 @@
       "sohn|||the chase",
       "moby|||porcelain",
       "malva|||second floor",
-      "feist|||bittersweet melodies christian strobe remix",
-      "the avalanches feat blood orange|||we will always love you"
+      "feist|||bittersweet melodies christian strobe remix"
     ],
     "dj_neihtul": [
       "wild motherfuckers|||fother mucker original tatanka & zatox mix",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795844015.1274884,
-    "mellow_mix": 1795844015.1371543,
-    "big_sonic_heaven": 1795844015.1410255,
-    "radio_x_chilled": 1795844015.1452901,
-    "dreampop_radio": 1795844015.1495469,
-    "indie_select": 1795844015.1567404,
-    "dkfm_edge": 1795844015.161336,
+    "vuurland": 1795844051.943205,
+    "mellow_mix": 1795844051.952571,
+    "big_sonic_heaven": 1795844051.9564886,
+    "radio_x_chilled": 1795844051.9606404,
+    "dreampop_radio": 1795844051.9648786,
+    "indie_select": 1795844051.9694076,
+    "dkfm_edge": 1795844051.9739797,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795844015.4962795,
-    "dkfm_shoegaze": 1795844015.5015044,
-    "dkfm_classic": 1795844015.5060577,
-    "egofm_rnb": 1795844015.5106354,
-    "egofm_chillout": 1795844015.5148208,
-    "dj_neihtul": 1795844015.5184047,
-    "gri_balkon": 1795844015.5212748,
-    "ignoreradio_shoegaze": 1795844015.5263789,
-    "radio_britannia": 1795844015.5315225,
-    "wbru": 1795844015.5346162,
-    "indie_x_fm": 1795844015.5385625
+    "dark_edge": 1795844051.980355,
+    "dkfm_shoegaze": 1795844051.9853487,
+    "dkfm_classic": 1795844051.9897912,
+    "egofm_rnb": 1795844051.994245,
+    "egofm_chillout": 1795844051.998496,
+    "dj_neihtul": 1795844052.0019991,
+    "gri_balkon": 1795844052.004761,
+    "ignoreradio_shoegaze": 1795844052.0097344,
+    "radio_britannia": 1795844052.0149071,
+    "wbru": 1795844052.0179565,
+    "indie_x_fm": 1795844052.021849
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -39482,7 +39482,14 @@
   "__v180_big_sonic_fresh_start": true,
   "__matching_rules_version": 35,
   "__v49_confirmed_links_released": true,
-  "__v47_failed_tracks": {},
+  "__v47_failed_tracks": {
+    "wolfman feat pete doherty|||for lovers": {
+      "artist": "Wolfman feat. Pete Doherty",
+      "title": "For Lovers",
+      "source": "radio_x_chilled",
+      "failed_at": 1795844068
+    }
+  },
   "__v51_radio_unmatched": {
     "cold cave|||godstar psychic tv cover": {
       "artist": "Cold Cave",
@@ -41311,10 +41318,10 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "paolo nutini|||one day",
   "__last_radio_key_mellow_mix": "bob marley|||is this love",
-  "__last_radio_key_big_sonic_heaven": "this mortal coil|||nature's way",
+  "__last_radio_key_big_sonic_heaven": "dif juz|||a starting point",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 39457,
-  "__v146_spotify_budget_slot": 1795843926.5145955,
+  "__v116_fifo_next_sequence": 39458,
+  "__v146_spotify_budget_slot": 1795844065.048405,
   "__vuurland_active_playlist_count": 7690,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
@@ -131943,7 +131950,7 @@
     "sub urban|||freak f rei ami": 1,
     "jupiter|||glow": 1,
     "jesse bru|||searchinn": 1,
-    "wolfman feat pete doherty|||for lovers": 2,
+    "wolfman feat pete doherty|||for lovers": 3,
     "goloka|||crying consciousness baleares": 1,
     "feathered sun|||miraflores ft raz ohara & nu & christopher schwarzwalder": 1,
     "lemon's chair|||blauer": 1,
@@ -132260,7 +132267,8 @@
     "birdy|||1901 phoenix cover": 1,
     "young man|||unfair": 1,
     "on and on|||ghosts": 1,
-    "da/ze|||mellow": 1
+    "da/ze|||mellow": 1,
+    "wolfman feat pete doherty|||for lovers": 1
   },
   "__match_v35__hiqpy|||something": "spotify:track:2itsrOCyF6f1YvAEcIwhKR",
   "__match_v35__hammock|||deconstructing": "spotify:track:7KjUyowPDG3nNoZTNQP670",
@@ -171529,8 +171537,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 7256,
-  "__v192_duyster_next_enqueue_at": 1795844043.419636,
+  "__v192_duyster_archive_cursor": 7259,
+  "__v192_duyster_next_enqueue_at": 1795844181.900792,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -174463,7 +174471,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "big_sonic_heaven",
+  "__v221_last_selected_source": "radio_x_chilled",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -174475,7 +174483,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
+  "__v224_last_spotify_opportunity_source": "radio_x_chilled",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -174508,7 +174516,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "big_sonic_heaven",
+  "__v227_last_source_turn": "radio_x_chilled",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -176193,7 +176201,7 @@
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
   "__last_radio_key_egofm_rnb": "billie eilish|||ocean eyes",
-  "__last_radio_key_egofm_chillout": "gorje hewek & izhevski|||secret feat peter broderick",
+  "__last_radio_key_egofm_chillout": "hania rani|||glass",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
   "__match_v35__jordan klassen|||on your collarbone": "spotify:track:0ZM0xUhVGEwL5sAsdjrQ1S",
@@ -184026,31 +184034,6 @@
       ],
       "status": "low_relevance"
     },
-    "wolfman feat pete doherty|||for lovers": {
-      "source": "radio_x_chilled",
-      "artist": "Wolfman feat. Pete Doherty",
-      "title": "For Lovers",
-      "kind": "uncertain",
-      "variant": 1,
-      "candidates": [
-        {
-          "artist": "Paris Music",
-          "title": "For Lovers (Originally Performed By Wolfman feat. Pete Doherty) [Full Vocal Version]",
-          "spotify_id": "5gxvyrayf5uH3GIhkd56Gy"
-        },
-        {
-          "artist": "Paris Music",
-          "title": "For Lovers (Originally Performed By Wolfman feat. Pete Doherty) [Full Vocal Version]",
-          "spotify_id": "3BT2zkKhhR9MWmo5jsR8bm"
-        },
-        {
-          "artist": "Ameritz Digital Karaoke",
-          "title": "For Lovers (In the Style of Wolfman & Pete Doherty) [Karaoke Version]",
-          "spotify_id": "6DfRZlfi9RAnCpgymSalEf"
-        }
-      ],
-      "status": "uncertain"
-    },
     "jean michel jarre|||aerozone": {
       "source": "dj_neihtul",
       "artist": "Jean Michel Jarre",
@@ -184133,6 +184116,15 @@
           "spotify_id": "33CeM8NI7tfrNgciVOFMoo"
         }
       ],
+      "status": "low_relevance"
+    },
+    "wolfman feat pete doherty|||for lovers": {
+      "source": "radio_x_chilled",
+      "artist": "Wolfman feat. Pete Doherty",
+      "title": "For Lovers",
+      "kind": "weak",
+      "variant": 2,
+      "candidates": [],
       "status": "low_relevance"
     }
   },
@@ -189519,5 +189511,6 @@
   "__match_v35__burial|||stolen dog": "spotify:track:16UC0kLE4IfdfXciAH4Bmo",
   "__match_v35__stone temple pilots|||trippin' on a hole in a paper heart": "spotify:track:2gdtLnVGGg80Kj9GiqP0vH",
   "__match_v35__lene lovich|||lucky number": "spotify:track:0kqFlkmfvKzQ4QSmx5PZ1A",
-  "__match_v35__shoestrings|||expectations": "spotify:track:4Jl5pbHfrm0jjlNdb1oKHX"
+  "__match_v35__shoestrings|||expectations": "spotify:track:4Jl5pbHfrm0jjlNdb1oKHX",
+  "__not_found_v35__wolfman feat pete doherty|||for lovers": 1795844068
 }
