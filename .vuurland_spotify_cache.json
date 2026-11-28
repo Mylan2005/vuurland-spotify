@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the haunted youth|||wake up",
+      "balthazar|||changes",
       "elbow|||the bones of you",
       "beck|||ride lonesome",
       "the smile|||bending hectic",
@@ -112,9 +114,7 @@
       "noah kahan|||porch light",
       "royel otis|||car",
       "taylor swift feat bon iver|||exile",
-      "tom smith|||life is for living",
-      "king hannah|||new york let's do nothing",
-      "jjerome87|||track and field"
+      "tom smith|||life is for living"
     ],
     "mellow_mix": [
       "shawn colvin|||the facts about jimmy",
@@ -219,6 +219,7 @@
       "the waifs|||rowena and wallace"
     ],
     "big_sonic_heaven": [
+      "throwing muses|||reel",
       "cranes|||pale blue sky",
       "south|||paint the silence",
       "bel canto|||birds of passage",
@@ -317,8 +318,7 @@
       "tones on tail|||lions",
       "depeche mode|||new dress",
       "club 8|||everlasting love",
-      "the smiths|||last night i dreamt that somebody loved me",
-      "xymox|||evelyn"
+      "the smiths|||last night i dreamt that somebody loved me"
     ],
     "radio_x_chilled": [
       "pj harvey|||you said something",
@@ -525,6 +525,7 @@
       "damien jurado|||ohio filous remix"
     ],
     "indie_select": [
+      "delphic|||remain",
       "the boxer rebellion|||misplaced",
       "athlete|||you got the style",
       "slow show|||strangers now",
@@ -623,8 +624,7 @@
       "the big pink|||crystal visions",
       "emperor of ice cream|||i see you everywhere",
       "the whitest boy alive|||burning",
-      "oliver sim|||romance with a memory",
-      "the wombats|||ice cream"
+      "oliver sim|||romance with a memory"
     ],
     "dkfm_edge": [
       "draag|||the day has come",
@@ -1243,6 +1243,8 @@
       "vangelis|||blade runner blues"
     ],
     "dj_neihtul": [
+      "aphex twin|||metal grating",
+      "aural float|||i adore you",
       "eigenart|||lyra",
       "pascal feos|||down to earth",
       "saafi brothers|||something outside",
@@ -1340,9 +1342,7 @@
       "paul kalkbrenner|||cloud rider",
       "oh land|||doubt my legs welcome campers",
       "robyn|||call your girlfriend",
-      "royksopp|||some resolve",
-      "young galaxy|||pretty boy",
-      "hope|||klavierskizze"
+      "royksopp|||some resolve"
     ],
     "gri_balkon": [
       "africa express|||johannesburg feat gruff rhys morena leraba radio 123 & sibot",
@@ -1549,6 +1549,7 @@
       "spielbergs|||4am"
     ],
     "radio_britannia": [
+      "the ninth wave|||half pure",
       "elastica|||line up",
       "echo and the bunnymen|||take me by the hand",
       "editors|||hallelujah so low",
@@ -1647,10 +1648,10 @@
       "glasvegas|||shine like stars",
       "home counties|||spain",
       "catfish and the bottlemen|||outside",
-      "my first time|||every version of you",
-      "jake bugg|||messed up kids"
+      "my first time|||every version of you"
     ],
     "wbru": [
+      "beabadoobee|||write me a letter",
       "steve lacy|||the feeling",
       "leon bridges|||talk it over",
       "sufjan stevens|||mystery of love",
@@ -1746,7 +1747,6 @@
       "capital cities|||safe and sound",
       "saint motel|||my type",
       "american football|||never meant",
-      "beabadoobee|||write me a letter",
       "noah kahan|||orbiter",
       "the 1975|||somebody else",
       "nirvana|||smells like teen spirit",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795851885.4445238,
-    "mellow_mix": 1795851885.454413,
-    "big_sonic_heaven": 1795851885.4587705,
-    "radio_x_chilled": 1795851885.4632394,
-    "dreampop_radio": 1795851885.4678366,
-    "indie_select": 1795851885.4727447,
-    "dkfm_edge": 1795851885.477745,
+    "vuurland": 1795851983.4548225,
+    "mellow_mix": 1795851983.4647102,
+    "big_sonic_heaven": 1795851983.469216,
+    "radio_x_chilled": 1795851983.4737926,
+    "dreampop_radio": 1795851983.478453,
+    "indie_select": 1795851983.485945,
+    "dkfm_edge": 1795851983.4909837,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795851885.4846368,
-    "dkfm_shoegaze": 1795851885.4899833,
-    "dkfm_classic": 1795851885.49489,
-    "egofm_rnb": 1795851885.4994826,
-    "egofm_chillout": 1795851885.5038755,
-    "dj_neihtul": 1795851885.507909,
-    "gri_balkon": 1795851885.5108616,
-    "ignoreradio_shoegaze": 1795851885.516313,
-    "radio_britannia": 1795851885.522024,
-    "wbru": 1795851885.5252986,
-    "indie_x_fm": 1795851885.5295038
+    "dark_edge": 1795851983.4978924,
+    "dkfm_shoegaze": 1795851983.5033562,
+    "dkfm_classic": 1795851983.5082285,
+    "egofm_rnb": 1795851983.5129359,
+    "egofm_chillout": 1795851983.51743,
+    "dj_neihtul": 1795851984.173978,
+    "gri_balkon": 1795851984.177103,
+    "ignoreradio_shoegaze": 1795851984.1826773,
+    "radio_britannia": 1795851984.5106914,
+    "wbru": 1795851984.514176,
+    "indie_x_fm": 1795851984.5184646
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -37108,6 +37108,7 @@
       "the mysterines|||i win every time",
       "the mysterines|||life's a bitch but i like it so much",
       "the mysterines|||sink ya teeth",
+      "the ninth wave|||half pure",
       "the ninth wave|||sd54 fxz",
       "the ordinary boys|||seaside",
       "the orielles|||come down on jupiter",
@@ -41425,11 +41426,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "elbow|||the bones of you",
+  "__last_radio_key_vuurland": "the haunted youth|||wake up",
   "__last_radio_key_mellow_mix": "shawn colvin|||the facts about jimmy",
-  "__last_radio_key_big_sonic_heaven": "cranes|||pale blue sky",
+  "__last_radio_key_big_sonic_heaven": "throwing muses|||reel",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 39621,
+  "__v116_fifo_next_sequence": 39624,
   "__v146_spotify_budget_slot": 1795851898.8944962,
   "__vuurland_active_playlist_count": 7736,
   "__vuurland_active_volume": 2,
@@ -169727,7 +169728,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "the boxer rebellion|||misplaced",
+  "__last_radio_key_indie_select": "delphic|||remain",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -176511,7 +176512,7 @@
   "__match_v35__still woozy|||habit": "spotify:track:4BsLwvaJOTOHDNg7xMpvrL",
   "__match_v35__ethica|||alarm": "spotify:track:1HoUHfGNHGLTywTUkF6o9h",
   "__match_v35__jgrrey|||dreaming fool": "spotify:track:4lIj7Moys5OQ8NUTjkNqIG",
-  "__last_radio_key_dj_neihtul": "eigenart|||lyra",
+  "__last_radio_key_dj_neihtul": "aphex twin|||metal grating",
   "__match_v35__tosca|||chocolate elvis": "spotify:track:2j8H3gIfjeBhB4pfudCBZX",
   "__match_v35__everything but the girl|||lost": "spotify:track:56tg69xicDym5g2oJxHeGu",
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
@@ -178079,8 +178080,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "elastica|||line up",
-  "__last_radio_key_wbru": "steve lacy|||the feeling",
+  "__last_radio_key_radio_britannia": "the ninth wave|||half pure",
+  "__last_radio_key_wbru": "beabadoobee|||write me a letter",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
