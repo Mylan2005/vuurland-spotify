@@ -1187,6 +1187,37 @@ def v145_fetch_radiobox_response(source_url, source_name):
     return None
 
 
+def v262_metadata(artist, title):
+    """Lossless radio annotations plus independently verified artist identities."""
+    a, t = str(artist or "").strip(), str(title or "").strip()
+    # German broadcasting credit "mit" means featuring, not a language verdict.
+    a = re.sub(r"\s+mit\s+", " feat. ", a, flags=re.I) if re.fullmatch(r"[\w .'-]+ mit [\w .'-]+", a, flags=re.I) and len(a.split(" mit ")[-1].split()) >= 2 else a
+    # Only a redundant number gloss, never an arbitrary parenthetical title.
+    numbers = dict(zip(("zero","one","two","three","four","five","six","seven","eight","nine","ten"), range(11)))
+    m = re.fullmatch(r"(\d+)\s*\(([A-Za-z]+)\)", t)
+    if m and numbers.get(m.group(2).lower()) == int(m.group(1)):
+        t = m.group(2)
+    # Move explicitly marked guest before a terminal mix into the credit field;
+    # retain the named mix for normal version validation.
+    m = re.fullmatch(r"(.+?)\s+(?:feat\.?|ft\.?|featuring)\s+([^()]+?)\s*(\([^()]+?\s+(?:remix|mix)\))", t, flags=re.I)
+    if m:
+        a += " feat. " + m.group(2).strip()
+        t = m.group(1).strip() + " " + m.group(3)
+    # Verified identities are not generic nickname or surname guesses.
+    key = (a.casefold(), t.casefold())
+    corrections = {
+        ("wolfman feat. pete doherty", "for lovers"): ("Wolfman feat. Peter Doherty", "For Lovers"),
+        ("sarah harmer", "basement apartment"): ("Sarah Harmer", "Basement Apt."),
+        ("exit calm", "were on our own"): ("Exit Calm", "We're On Our Own"),
+        ("sj hoffmann & clairval", "soap operas from venezuela"): ("SJ Hoffman & Clairval", t),
+        ("musto & rietze", "caving"): ("Luca Musto & Florian Rietze", t),
+        ("princess goes to the butterfly museum", "too cool to care"): ("Princess Goes", t),
+        ("jean michel jarre", "aerozone"): ("Jean-Michel Jarre", t),
+        ("curve", "rising (headspace remix)"): ("Curve", "Rising (Headspace Mix)"),
+    }
+    return corrections.get(key, (a, t))
+
+
 def v261_station_jingle(artist, title):
     """Explicit station jingles, including concatenated station-name labels."""
     a = re.sub(r"[^\w]+", "", str(artist or "").casefold())
@@ -2576,6 +2607,9 @@ def v101_safe_title_spelling(title):
 V81_VERIFIED_CATALOG_TRACKS = {
     # v229: door gebruiker expliciet bevestigde Spotify-URI voor DKFM Edge.
     # De ID is alleen een locator: volledige artiest/titel/versie/regio-guards blijven gelden.
+    ("wolfman feat. pete doherty", "for lovers"): "1wOqPAhGS6Xk58c9vD42vp",
+    ("sarah harmer", "basement apartment"): "3auOmSfzDKUFxaMUVziziE",
+    ("schiller mit maya saban", "i miss you"): "4gFzBRjIhhGdqlA4MSyqYj",
     ("wires to the temples", "smeared/aura"): "74VpqnAOJM1ha2XKFbdFYG",
     # v245: publicly verified original Emergence recording; GET /tracks,
     # not a bypass of the ordinary artist, version and market validation.
@@ -2739,6 +2773,8 @@ def find_spotify_track(
     v261_core, v261_requested = v261_version_parts(title)
     if v261_requested:
         title = v261_core + (" (Instrumental)" if v261_requested == "instrumental" else " (Original Mix)")
+
+    artist, title = v262_metadata(artist, title)
 
     # v250: owner explicitly requested the ordinary studio recording for
     # The Cure - This Is A Lie (Ambient Mix), unavailable in their Spotify.
@@ -9706,7 +9742,7 @@ def sync():
                 v258_record_miss(
                     cache, key, failed_source, artist, title,
                     triage_kind, triage_candidates, item.get("_v34_search_variant", 0))
-                if v258_should_park:
+                if v258_should_park and int(item.get("_v34_search_variant", 0) or 0) >= 2:
                     v51_radio_park(cache, artist, title, failed_source, count)
                     # Keep clear diagnostic evidence even after parking.
                     cache.setdefault("__v51_radio_unmatched", {}).setdefault(key, {})[
