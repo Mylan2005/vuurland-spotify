@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "mount kimbie feat king krule|||empty and silent",
+      "camille camille|||in a song",
       "dope lemon|||miami baby",
       "coldplay|||the scientist",
       "syml feat guy garvey|||lost myself",
@@ -112,11 +114,10 @@
       "balthazar|||wrong vibration",
       "cigarettes after sex|||crush",
       "still woozy|||all your life",
-      "angus & julia stone|||karaoke bar",
-      "tindersticks|||always a stranger",
-      "the xx|||chained"
+      "angus & julia stone|||karaoke bar"
     ],
     "mellow_mix": [
+      "sleeping at last|||venus",
       "peter gabriel|||come talk to me",
       "khruangbin|||may ninth",
       "fairport convention|||who knows where the time goes",
@@ -215,8 +216,7 @@
       "the weepies|||vegas baby",
       "fleetwood mac|||brushes never going back",
       "patty griffin|||highway song",
-      "the jayhawks|||all the right reasons",
-      "sade|||smooth operator"
+      "the jayhawks|||all the right reasons"
     ],
     "big_sonic_heaven": [
       "laika|||prairie dog",
@@ -627,6 +627,7 @@
       "grizzly bear|||two weeks fred falke extended mix"
     ],
     "dkfm_edge": [
+      "sorry dave|||simply disappear",
       "kairo|||how nice",
       "glittermouth|||doesn't matter",
       "astronomies|||after i fall asleep",
@@ -725,8 +726,7 @@
       "sea lemon|||3a",
       "yumi zouma|||be okay",
       "bosses|||overkill",
-      "echo ladies|||coming home",
-      "the veldt|||c c c p"
+      "echo ladies|||coming home"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -1039,6 +1039,7 @@
       "breathless|||over and over"
     ],
     "egofm_rnb": [
+      "emotional oranges feat biig piig|||body & soul",
       "tink & 2 chainz|||cater",
       "polica|||blood",
       "destiny's child|||independent women pt 1",
@@ -1137,8 +1138,7 @@
       "michael kiwanuka|||piano joint this kind of love",
       "kelela|||lmk",
       "ibeyi feat pa salieu|||made of gold",
-      "jamie woon|||sharpness",
-      "remi wolf & dominic fike|||photo id"
+      "jamie woon|||sharpness"
     ],
     "egofm_chillout": [
       "tesk|||p i c k m e u p",
@@ -1447,6 +1447,7 @@
       "recondite|||tie in"
     ],
     "ignoreradio_shoegaze": [
+      "smashing pumpkins|||plume",
       "the depreciation guild|||my chariot",
       "the boo radleys|||naomi",
       "ulrich schnauss|||monday - paracetamol",
@@ -1545,8 +1546,7 @@
       "mandarinaduck|||never never",
       "looprider|||heavenless",
       "the verve|||a man called sun radio 1 mark radcliffe session 1993",
-      "nuclear daisies|||bye bye butterfly",
-      "affection to rent|||if we fall"
+      "nuclear daisies|||bye bye butterfly"
     ],
     "radio_britannia": [
       "rex orange county|||elvis feat brendan yates",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795836725.6085796,
-    "mellow_mix": 1795836725.6187494,
-    "big_sonic_heaven": 1795836725.6247332,
-    "radio_x_chilled": 1795836725.6314924,
-    "dreampop_radio": 1795836725.638019,
-    "indie_select": 1795836725.649113,
-    "dkfm_edge": 1795836725.6562943,
+    "vuurland": 1795836833.6840937,
+    "mellow_mix": 1795836833.6923878,
+    "big_sonic_heaven": 1795836833.6985376,
+    "radio_x_chilled": 1795836833.7053058,
+    "dreampop_radio": 1795836833.711976,
+    "indie_select": 1795836833.7191312,
+    "dkfm_edge": 1795836833.7266428,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795836725.665823,
-    "dkfm_shoegaze": 1795836725.6732798,
-    "dkfm_classic": 1795836725.680172,
-    "egofm_rnb": 1795836725.6871197,
-    "egofm_chillout": 1795836725.6940866,
-    "dj_neihtul": 1795836725.7000403,
-    "gri_balkon": 1795836725.7045453,
-    "ignoreradio_shoegaze": 1795836725.7120788,
-    "radio_britannia": 1795836725.7200377,
-    "wbru": 1795836725.7249002,
-    "indie_x_fm": 1795836725.731258
+    "dark_edge": 1795836833.7362118,
+    "dkfm_shoegaze": 1795836833.7439425,
+    "dkfm_classic": 1795836833.7509842,
+    "egofm_rnb": 1795836833.758332,
+    "egofm_chillout": 1795836833.7654715,
+    "dj_neihtul": 1795836833.7716463,
+    "gri_balkon": 1795836833.776334,
+    "ignoreradio_shoegaze": 1795836834.2757368,
+    "radio_britannia": 1795836834.2840812,
+    "wbru": 1795836834.2889507,
+    "indie_x_fm": 1795836834.2955217
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -32856,6 +32856,7 @@
       "smashing pumpkins|||hello kitty kat",
       "smashing pumpkins|||la dolly vita",
       "smashing pumpkins|||pissant",
+      "smashing pumpkins|||plume",
       "smashing pumpkins|||soothe",
       "smashing pumpkins|||starla",
       "smere|||hold",
@@ -41226,11 +41227,11 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "dope lemon|||miami baby",
-  "__last_radio_key_mellow_mix": "peter gabriel|||come talk to me",
+  "__last_radio_key_vuurland": "mount kimbie feat king krule|||empty and silent",
+  "__last_radio_key_mellow_mix": "sleeping at last|||venus",
   "__last_radio_key_big_sonic_heaven": "laika|||prairie dog",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 39338,
+  "__v116_fifo_next_sequence": 39339,
   "__v146_spotify_budget_slot": 1795836745.5461183,
   "__vuurland_active_playlist_count": 7652,
   "__vuurland_active_volume": 2,
@@ -170537,7 +170538,7 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "kairo|||how nice",
+  "__last_radio_key_dkfm_edge": "sorry dave|||simply disappear",
   "__last_radio_key_dkfm_shoegaze": "berzica|||sink into",
   "__last_radio_key_dkfm_classic": "bethany curve|||me voy",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
@@ -175949,7 +175950,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "tink & 2 chainz|||cater",
+  "__last_radio_key_egofm_rnb": "emotional oranges feat biig piig|||body & soul",
   "__last_radio_key_egofm_chillout": "tesk|||p i c k m e u p",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -175988,7 +175989,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "the depreciation guild|||my chariot",
+  "__last_radio_key_ignoreradio_shoegaze": "smashing pumpkins|||plume",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
