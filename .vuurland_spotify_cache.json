@@ -219,6 +219,7 @@
       "otis redding|||these arms of mine"
     ],
     "big_sonic_heaven": [
+      "hooverphonic|||renaissance affair",
       "the verve|||star sail",
       "modern english|||someone's calling",
       "sugarcubes|||delicious demon",
@@ -317,8 +318,7 @@
       "hooverphonic|||barabas",
       "the sundays|||wild horses",
       "the verve|||history",
-      "sugarcubes|||birthday",
-      "lamb|||fly"
+      "sugarcubes|||birthday"
     ],
     "radio_x_chilled": [
       "noel gallagher's high flying birds|||if i had a gun",
@@ -733,6 +733,7 @@
       "suede|||trash"
     ],
     "dark_edge": [
+      "goo goo dolls|||iris",
       "strfkr|||open your eyes",
       "mt joy|||bug eyes",
       "moloko|||forever more",
@@ -831,8 +832,7 @@
       "fort vine|||late at night",
       "the brian jonestown massacre|||cannot be saved",
       "the wombats|||turn",
-      "greta van fleet|||rolling in the deep",
-      "barrie|||frankie"
+      "greta van fleet|||rolling in the deep"
     ],
     "dkfm_shoegaze": [
       "deafcult|||mount forever sic",
@@ -937,6 +937,7 @@
       "coaltar of the deepers|||hallucination"
     ],
     "dkfm_classic": [
+      "the verve|||butterfly",
       "14 iced bears|||miles away",
       "the house of love|||road",
       "slowdive|||shine peel session",
@@ -1035,8 +1036,7 @@
       "raspberry jam|||can i",
       "slowdive|||country rain",
       "moose|||everybody's talking",
-      "cocteau twins|||lazy calm",
-      "sixpence none the richer|||melting alone"
+      "cocteau twins|||lazy calm"
     ],
     "egofm_rnb": [
       "sir was|||wish i could stay",
@@ -1345,6 +1345,7 @@
       "rihanna|||love on the brain - ry x remix"
     ],
     "gri_balkon": [
+      "ephemerals|||you'll never see me cry",
       "niklas paschburg|||tuur mang welten",
       "pional|||in another room",
       "just emma|||sunshine ft matthias wittmann thomas atzmann remix",
@@ -1443,10 +1444,11 @@
       "leifur james|||mumma don't tell",
       "girls of the internet|||when u go moblack remix",
       "round|||float",
-      "royksopp|||i just don't understand you lost tapes",
-      "hvob|||ghost"
+      "royksopp|||i just don't understand you lost tapes"
     ],
     "ignoreradio_shoegaze": [
+      "michael peter olsen|||biorhythms",
+      "astrobrite|||crasher",
       "versus|||i'll be you",
       "the radio dept|||four month in the shade",
       "flasher|||sun come and golden",
@@ -1544,11 +1546,10 @@
       "the smashing pumpkins|||the sacred and profane",
       "sonic youth|||sunday",
       "the meeting places|||stay the same",
-      "sign crushes motorist|||i just want to hold her",
-      "black marble|||cruel summer",
-      "gold dust|||oh well"
+      "sign crushes motorist|||i just want to hold her"
     ],
     "radio_britannia": [
+      "the libertines|||last post on the bugle",
       "beabadoobee|||10 36",
       "muse|||feeling good",
       "jez williams|||hollow man",
@@ -1647,8 +1648,7 @@
       "soak|||decembers",
       "stone|||i let go",
       "embrace|||my weakness is none of your business",
-      "bell x1|||coughing up butterflies",
-      "rhodes|||sleep is a rose"
+      "bell x1|||coughing up butterflies"
     ],
     "wbru": [
       "absofacto|||dissolve",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795839320.1654868,
-    "mellow_mix": 1795839320.1756046,
-    "big_sonic_heaven": 1795839320.1817584,
-    "radio_x_chilled": 1795839320.1884515,
-    "dreampop_radio": 1795839320.195205,
-    "indie_select": 1795839320.202292,
-    "dkfm_edge": 1795839320.209588,
+    "vuurland": 1795839431.633953,
+    "mellow_mix": 1795839431.6446326,
+    "big_sonic_heaven": 1795839431.6509676,
+    "radio_x_chilled": 1795839431.6576352,
+    "dreampop_radio": 1795839431.6644166,
+    "indie_select": 1795839431.671508,
+    "dkfm_edge": 1795839431.6788652,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795839320.2190363,
-    "dkfm_shoegaze": 1795839320.2268012,
-    "dkfm_classic": 1795839320.2338867,
-    "egofm_rnb": 1795839320.24094,
-    "egofm_chillout": 1795839320.2478397,
-    "dj_neihtul": 1795839320.2537315,
-    "gri_balkon": 1795839320.258243,
-    "ignoreradio_shoegaze": 1795839320.265914,
-    "radio_britannia": 1795839320.274111,
-    "wbru": 1795839320.2789934,
-    "indie_x_fm": 1795839320.285337
+    "dark_edge": 1795839432.1618211,
+    "dkfm_shoegaze": 1795839432.1695035,
+    "dkfm_classic": 1795839432.1767,
+    "egofm_rnb": 1795839432.1837704,
+    "egofm_chillout": 1795839432.1906738,
+    "dj_neihtul": 1795839432.1966445,
+    "gri_balkon": 1795839432.201249,
+    "ignoreradio_shoegaze": 1795839432.725313,
+    "radio_britannia": 1795839432.7335787,
+    "wbru": 1795839432.7383685,
+    "indie_x_fm": 1795839432.7446902
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -29934,6 +29934,7 @@
       "astrobrite|||bottle rocket",
       "astrobrite|||bottlerocket",
       "astrobrite|||cherryflavorburst",
+      "astrobrite|||crasher",
       "astrobrite|||dizzy",
       "astrobrite|||dragonfly pinkyfuzz",
       "astrobrite|||fireye goodbye",
@@ -31979,6 +31980,7 @@
       "mgmt|||someone's missing",
       "mice parade|||sneaky red",
       "michael brook|||hybrid",
+      "michael peter olsen|||biorhythms",
       "michael peter olsen|||mayday",
       "midrift|||change for",
       "midwife|||2020",
@@ -41260,9 +41262,9 @@
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "the favors|||the little mess you made",
   "__last_radio_key_mellow_mix": "catie curtis|||doctor",
-  "__last_radio_key_big_sonic_heaven": "the verve|||star sail",
+  "__last_radio_key_big_sonic_heaven": "hooverphonic|||renaissance affair",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 39378,
+  "__v116_fifo_next_sequence": 39380,
   "__v146_spotify_budget_slot": 1795839340.0555983,
   "__vuurland_active_playlist_count": 7666,
   "__vuurland_active_volume": 2,
@@ -170631,7 +170633,7 @@
   "__v187_dkfm_three_reactivated_20261105": true,
   "__last_radio_key_dkfm_edge": "clowder|||loafin'on the overpass live",
   "__last_radio_key_dkfm_shoegaze": "deafcult|||mount forever sic",
-  "__last_radio_key_dkfm_classic": "14 iced bears|||miles away",
+  "__last_radio_key_dkfm_classic": "the verve|||butterfly",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -170643,7 +170645,7 @@
   "__match_v35__biffy clyro|||god only knows mtv unplugged live at roundhouse london": "spotify:track:77O5JuugEnvEkZkOyjuGQR",
   "__match_v35__jesse colin young|||morning sun": "spotify:track:2XI5jIhGo6Mx455FUGm8Sb",
   "__dark_edge_strict_baseline_20261105": true,
-  "__last_radio_key_dark_edge": "strfkr|||open your eyes",
+  "__last_radio_key_dark_edge": "goo goo dolls|||iris",
   "__match_v35__beatsteaks|||ticket": "spotify:track:4Qhi9U0uuRj1f6Hfh1ZPsb",
   "__match_v35__bluai|||not the one": "spotify:track:74Zu26EVqhfSN5QpTWtvr4",
   "__match_v35__jack penate|||pull my heart away": "spotify:track:3LeI9vxM0nhkCZs765vgh7",
@@ -176057,7 +176059,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "niklas paschburg|||tuur mang welten",
+  "__last_radio_key_gri_balkon": "ephemerals|||you'll never see me cry",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -176080,7 +176082,7 @@
   "__match_v35__rosie lowe|||i've got you": "spotify:track:0aP2iaXIHCe1bJBclM3F9J",
   "__match_v35__jacob collier & justin kauflin|||flow freely from the documentary film “reflection - a walk with water”": "spotify:track:0M1uEYzwNYhEZQ5qItkBA1",
   "__match_v35__alison goldfrapp|||so hard so hot": "spotify:track:3lqTX3WLyt4q8NVvGNWAH3",
-  "__last_radio_key_ignoreradio_shoegaze": "versus|||i'll be you",
+  "__last_radio_key_ignoreradio_shoegaze": "michael peter olsen|||biorhythms",
   "__match_v35__cocorosie|||werewolf": "spotify:track:1RgFmvtcKaMHHRtx1qrtM5",
   "__match_v35__the wailin' jennys|||storm comin'": "spotify:track:7o8m0wBOpvjO2s9D4WEW9S",
   "__match_v35__yello feat heidi happy|||you and me": "spotify:track:25I0bLnKazeoZiLVlvw8rF",
@@ -177619,7 +177621,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "beabadoobee|||10 36",
+  "__last_radio_key_radio_britannia": "the libertines|||last post on the bugle",
   "__last_radio_key_wbru": "absofacto|||dissolve",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
