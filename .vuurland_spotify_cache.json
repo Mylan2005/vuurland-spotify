@@ -15,6 +15,8 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "the favors|||the little mess you made",
+      "lucy dacus|||planting tomatoes",
       "wasia project|||somebody come through",
       "the xx|||intro",
       "rhye|||open",
@@ -112,9 +114,7 @@
       "the christian club feat lucy ryan|||atlas",
       "wilco|||evicted",
       "sufjan stevens|||mystery of love",
-      "soccer mommy|||circle the drain",
-      "kings of leon|||my whole world",
-      "ao|||avo"
+      "soccer mommy|||circle the drain"
     ],
     "mellow_mix": [
       "eric burdon|||don't ever let nobody drag your spirit down",
@@ -423,6 +423,7 @@
       "courteeners|||take over the world"
     ],
     "dreampop_radio": [
+      "the slow show|||bloodline",
       "james bay|||hold back the river",
       "holmes|||wake up",
       "iron & wine|||naked as we came",
@@ -521,8 +522,7 @@
       "crystal castles|||not in love ft robert smith",
       "electric youth|||the best thing",
       "ellie goulding|||lights",
-      "andrew bird|||tables and chairs",
-      "the national|||slow show"
+      "andrew bird|||tables and chairs"
     ],
     "indie_select": [
       "maximo park|||versions of you",
@@ -1345,6 +1345,7 @@
       "rihanna|||love on the brain - ry x remix"
     ],
     "gri_balkon": [
+      "niklas paschburg|||tuur mang welten",
       "pional|||in another room",
       "just emma|||sunshine ft matthias wittmann thomas atzmann remix",
       "dorothy ashby|||essence of sapphire",
@@ -1443,8 +1444,7 @@
       "girls of the internet|||when u go moblack remix",
       "round|||float",
       "royksopp|||i just don't understand you lost tapes",
-      "hvob|||ghost",
-      "tor|||let me down"
+      "hvob|||ghost"
     ],
     "ignoreradio_shoegaze": [
       "the radio dept|||four month in the shade",
@@ -1549,6 +1549,7 @@
       "a shoreline dream|||neverchanger feat ulrich schnauss"
     ],
     "radio_britannia": [
+      "muse|||feeling good",
       "jez williams|||hollow man",
       "the vaccines|||all my friends are falling in love",
       "keane|||nothing in my way",
@@ -1647,10 +1648,10 @@
       "embrace|||my weakness is none of your business",
       "bell x1|||coughing up butterflies",
       "rhodes|||sleep is a rose",
-      "happy mondays|||24 hour party people",
-      "inheaven|||regeneration"
+      "happy mondays|||24 hour party people"
     ],
     "wbru": [
+      "steve lacy|||nothing",
       "empire of the sun|||walking on a dream",
       "remi wolf|||bottle",
       "lord huron|||the night we met",
@@ -1728,7 +1729,6 @@
       "haim|||now i'm in it",
       "noah kahan|||porch light",
       "the wombats|||let's dance to joy division",
-      "steve lacy|||nothing",
       "smerz|||you got time and i got money",
       "børns|||electric love",
       "slow pulp|||better man",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795839015.4195979,
-    "mellow_mix": 1795839015.4298847,
-    "big_sonic_heaven": 1795839015.436212,
-    "radio_x_chilled": 1795839015.4429107,
-    "dreampop_radio": 1795839015.4497068,
-    "indie_select": 1795839015.4584384,
-    "dkfm_edge": 1795839015.4657316,
+    "vuurland": 1795839123.8926933,
+    "mellow_mix": 1795839123.9029443,
+    "big_sonic_heaven": 1795839123.9090855,
+    "radio_x_chilled": 1795839123.915768,
+    "dreampop_radio": 1795839123.9226573,
+    "indie_select": 1795839123.929819,
+    "dkfm_edge": 1795839123.9370975,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795839015.475226,
-    "dkfm_shoegaze": 1795839015.482854,
-    "dkfm_classic": 1795839015.4900563,
-    "egofm_rnb": 1795839015.497144,
-    "egofm_chillout": 1795839015.5040781,
-    "dj_neihtul": 1795839015.5099816,
-    "gri_balkon": 1795839015.5145235,
-    "ignoreradio_shoegaze": 1795839015.5221922,
-    "radio_britannia": 1795839015.5303028,
-    "wbru": 1795839015.5350668,
-    "indie_x_fm": 1795839015.5413532
+    "dark_edge": 1795839123.9466014,
+    "dkfm_shoegaze": 1795839123.954227,
+    "dkfm_classic": 1795839123.9612837,
+    "egofm_rnb": 1795839123.9683123,
+    "egofm_chillout": 1795839123.9752204,
+    "dj_neihtul": 1795839123.9811368,
+    "gri_balkon": 1795839123.9857504,
+    "ignoreradio_shoegaze": 1795839123.9934382,
+    "radio_britannia": 1795839124.0016973,
+    "wbru": 1795839124.0063748,
+    "indie_x_fm": 1795839124.0127022
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -35818,6 +35818,7 @@
       "muse|||dead inside",
       "muse|||dead star",
       "muse|||dig down",
+      "muse|||feeling good",
       "muse|||follow me",
       "muse|||hexagons",
       "muse|||hyper music",
@@ -41254,7 +41255,7 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "wasia project|||somebody come through",
+  "__last_radio_key_vuurland": "the favors|||the little mess you made",
   "__last_radio_key_mellow_mix": "eric burdon|||don't ever let nobody drag your spirit down",
   "__last_radio_key_big_sonic_heaven": "modern english|||someone's calling",
   "__v181_vuurland_two_missing_recovered": true,
@@ -169140,7 +169141,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "james bay|||hold back the river",
+  "__last_radio_key_dreampop_radio": "the slow show|||bloodline",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -176048,7 +176049,7 @@
   "__match_v35__ora cogan|||lucile": "spotify:track:49e0T1sRkANZZWywTnRE0N",
   "__match_v35__the everly brothers|||all i have to do is dream": "spotify:track:7dblNGnRXEBrVJunazs2U5",
   "__match_v35__darksoft|||some things you just know": "spotify:track:1oaIbZyOhFyNzTgQjBVCLG",
-  "__last_radio_key_gri_balkon": "pional|||in another room",
+  "__last_radio_key_gri_balkon": "niklas paschburg|||tuur mang welten",
   "__match_v35__polyana felbel tommy finke & daniel brandl|||yellow": "spotify:track:0SFe6VEkooXTd4W0igdNjJ",
   "__match_v35__interpol|||everything is wrong": "spotify:track:1L2s8JRlBAJG3HQ9reqCt4",
   "__match_v35__leavs|||to be here to stay here": "spotify:track:1AvePmjSW6pUotG3luJoW8",
@@ -177610,8 +177611,8 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "jez williams|||hollow man",
-  "__last_radio_key_wbru": "empire of the sun|||walking on a dream",
+  "__last_radio_key_radio_britannia": "muse|||feeling good",
+  "__last_radio_key_wbru": "steve lacy|||nothing",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
   "__match_v35__deep sea diver|||impossible weight": "spotify:track:0BjkAJg3zBd2Dw5NDPnNqw",
