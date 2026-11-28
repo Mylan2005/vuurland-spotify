@@ -117,6 +117,7 @@
       "joesef|||the sun is up forever"
     ],
     "mellow_mix": [
+      "the moody blues|||tuesday afternoon",
       "sufjan stevens|||should have known better",
       "tori amos|||a sorta fairytale",
       "rene aubry|||la grande cascade",
@@ -215,8 +216,7 @@
       "sam cooke|||you send me",
       "mark knopfler|||wild mountain thyme",
       "i am kloot|||the same deep water as me",
-      "fish in a birdcage|||rule #37 - mentors",
-      "kate bush|||this woman's work"
+      "fish in a birdcage|||rule #37 - mentors"
     ],
     "big_sonic_heaven": [
       "swallow|||lovesleep",
@@ -321,6 +321,7 @@
       "tricky|||you don't wanna feat ambersunshower"
     ],
     "radio_x_chilled": [
+      "paramore|||my hero acoustic",
       "belle and sebastian|||the boy with the arab strap",
       "the killers|||here with me",
       "oasis|||songbird",
@@ -419,10 +420,10 @@
       "noel gallagher's high flying birds|||the dying of the light",
       "jack johnson|||sitting waiting wishing",
       "radiohead|||no surprises",
-      "wolf alice|||delicious things",
-      "damien rice|||delicate"
+      "wolf alice|||delicious things"
     ],
     "dreampop_radio": [
+      "girls in hawaii|||shades of time",
       "run river north|||run river run",
       "ducktails|||killin' the vibe",
       "the barr brothers|||even the darkness has arms",
@@ -521,10 +522,10 @@
       "new musik|||on islands",
       "the comsat angels|||high tide",
       "the la's|||there she goes again",
-      "talk talk|||i believe in you",
-      "psychedelic furs|||the ghost in you"
+      "talk talk|||i believe in you"
     ],
     "indie_select": [
+      "memphis|||love comes quickly",
       "canon blue|||indian summer des moines",
       "lcd soundsystem|||dance yrself clean",
       "laut fm|||laut fm - pssst",
@@ -623,8 +624,7 @@
       "the skids|||into the valley",
       "death cab for cutie|||foxglove through the clearcut",
       "scanners|||salvation don diablo dub remix",
-      "the mary onettes|||dare",
-      "the charlatans|||my foolish pride"
+      "the mary onettes|||dare"
     ],
     "dkfm_edge": [
       "crystal canyon|||catatonia",
@@ -1753,6 +1753,8 @@
       "florence the machine|||dog days are over"
     ],
     "indie_x_fm": [
+      "pj harvey|||down by the water",
+      "payolas|||eyes of a stranger",
       "star moles|||born again",
       "mirror of venus|||cold eyes",
       "tycho & paul banks|||boundary rider",
@@ -1850,31 +1852,29 @@
       "cults|||go outside",
       "brigitte calls me baby|||i can take the sun out of the sky",
       "lord huron|||bag of bones",
-      "the cramps|||human fly",
-      "ramones|||the kkk took my baby away",
-      "love fame tragedy|||5150"
+      "the cramps|||human fly"
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795834582.231755,
-    "mellow_mix": 1795834582.2421675,
-    "big_sonic_heaven": 1795834582.2478251,
-    "radio_x_chilled": 1795834582.2543368,
-    "dreampop_radio": 1795834582.260744,
-    "indie_select": 1795834582.2675486,
-    "dkfm_edge": 1795834582.2745361,
+    "vuurland": 1795834690.5797167,
+    "mellow_mix": 1795834690.5897033,
+    "big_sonic_heaven": 1795834690.5952775,
+    "radio_x_chilled": 1795834690.6018202,
+    "dreampop_radio": 1795834690.608336,
+    "indie_select": 1795834690.619132,
+    "dkfm_edge": 1795834690.6261613,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795834582.5817268,
-    "dkfm_shoegaze": 1795834582.5890646,
-    "dkfm_classic": 1795834582.5959606,
-    "egofm_rnb": 1795834582.6029038,
-    "egofm_chillout": 1795834582.6096709,
-    "dj_neihtul": 1795834582.6153305,
-    "gri_balkon": 1795834582.6197877,
-    "ignoreradio_shoegaze": 1795834582.6271293,
-    "radio_britannia": 1795834582.6348522,
-    "wbru": 1795834582.6394932,
-    "indie_x_fm": 1795834582.645729
+    "dark_edge": 1795834690.6354303,
+    "dkfm_shoegaze": 1795834690.642829,
+    "dkfm_classic": 1795834690.649656,
+    "egofm_rnb": 1795834690.656575,
+    "egofm_chillout": 1795834690.6633084,
+    "dj_neihtul": 1795834690.6688423,
+    "gri_balkon": 1795834690.6732762,
+    "ignoreradio_shoegaze": 1795834690.680743,
+    "radio_britannia": 1795834690.6885529,
+    "wbru": 1795834690.6932228,
+    "indie_x_fm": 1795834690.6997542
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -41206,7 +41206,7 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "faye webster|||after the first kiss",
-  "__last_radio_key_mellow_mix": "sufjan stevens|||should have known better",
+  "__last_radio_key_mellow_mix": "the moody blues|||tuesday afternoon",
   "__last_radio_key_big_sonic_heaven": "swallow|||lovesleep",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 39301,
@@ -168886,7 +168886,7 @@
   "__match_v35__the civil wars|||20 years": "spotify:track:0LLumgKM5pVTZj3Yn57euh",
   "__match_v35__lisa hannigan|||fall": "spotify:track:0HFqPzJYCZgQYuqNX0HDJm",
   "__radio_x_chilled_reactivated_20261102": true,
-  "__last_radio_key_radio_x_chilled": "belle and sebastian|||the boy with the arab strap",
+  "__last_radio_key_radio_x_chilled": "paramore|||my hero acoustic",
   "__match_v35__elton john|||mona lisas and mad hatters": "spotify:track:5XY9FK0mB0BS0u8YB2ehN9",
   "__match_v35__johann sebastian bach|||prelude #1 in c": "spotify:track:0laoMHZRUJypy5DzuUBIuT",
   "__match_v35__when in rome|||the promise": "spotify:track:48p5E25cFPanxuwCTmTpuL",
@@ -168990,7 +168990,7 @@
   "__match_v35__hem|||reservoir": "spotify:track:0TNPPd9ox1RmLxlbF4U59Y",
   "__match_v35__mazzy star|||into dust": "spotify:track:7l5nkTZpoD93OkynN0gcon",
   "__match_v35__bruce cockburn|||creation dream": "spotify:track:32boHBQveR0MPyILldmayx",
-  "__last_radio_key_dreampop_radio": "run river north|||run river run",
+  "__last_radio_key_dreampop_radio": "girls in hawaii|||shades of time",
   "__match_v35__the byrds|||chestnut mare": "spotify:track:1I0M5Zx0IQ0iQDYhXABAg5",
   "__match_v35__j j cale|||city girls": "spotify:track:6tZF1isUvYNQviZjSlVPmr",
   "__match_v35__willie nelson|||blue eyes crying in the rain": "spotify:track:2uRVPeQbsEpRQD0DKr1WTo",
@@ -169108,7 +169108,7 @@
   "__match_v35__martha wainwright|||far away": "spotify:track:5zkhiK4XU4jRqqJ5nR2fh6",
   "__match_v35__roxy music|||avalon": "spotify:track:7iWIdiJlKvJ4PjFYVrWLUU",
   "__match_v35__chris isaak|||i believe": "spotify:track:3k12tO96QQ2XfO53M6q7m7",
-  "__last_radio_key_indie_select": "canon blue|||indian summer des moines",
+  "__last_radio_key_indie_select": "memphis|||love comes quickly",
   "__match_v35__pale saints|||half-life remembered": "spotify:track:49qmdrLGTD8du6CGnMgH2i",
   "__match_v35__romy & sampha|||i'm on your team": "spotify:track:6vHmrQXC2dACfRAQ4jivTF",
   "__match_v35__sinead o'connor|||nothing compares 2 u": "spotify:track:5GHY1DFWKz3Prg2V0Iodqo",
@@ -187275,7 +187275,7 @@
   "__match_v35__teenage filmstars|||apple": "spotify:track:5L5w0wKThrfMfLt0caR0md",
   "__match_v35__wolf alice|||moaning lisa smile": "spotify:track:37XsaGX7crh4YJKv6k946u",
   "__new_indie_pinguin_baseline_20261124": true,
-  "__last_radio_key_indie_x_fm": "star moles|||born again",
+  "__last_radio_key_indie_x_fm": "pj harvey|||down by the water",
   "__match_v35__still woozy|||goodie bag": "spotify:track:4vHNeBWDQpVCmGbaccrRzi",
   "__match_v35__melody gardot|||worrisome heart": "spotify:track:3zh5km8gPDYMiWvmLTsos0",
   "__match_v35__pinkshinyultrablast|||looming": "spotify:track:3Axu0ybSm9QoZJRSriXq4O",
