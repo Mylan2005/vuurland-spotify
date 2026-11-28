@@ -3,7 +3,7 @@
     "1": "555lFTvdRswe9ukybmOM8T",
     "2": "1J52ZM86jB2PaTw8KjAGDH"
   },
-  "__v150_next_spotify_round_at": 1795843911.0365307,
+  "__v150_next_spotify_round_at": 1795844044.235069,
   "__three_radio_reset_token": "2026-11-01-three-radio-fresh-start",
   "__v69_radio_only_fresh_start": false,
   "__v69_bootstrap_complete": true,
@@ -15,6 +15,7 @@
   "__v165_existing_playlist_imported": "vuurland-live-only-import-v172-2026-10-29",
   "__v96_radio_snapshots": {
     "vuurland": [
+      "paolo nutini|||one day",
       "cat burns|||go",
       "lana del rey|||chemtrails over the country club",
       "damien rice|||delicate",
@@ -113,8 +114,7 @@
       "the war on drugs|||strangest thing",
       "kids with buns|||stubborn mind",
       "intergalactic lovers|||crushing",
-      "bleachers|||you and forever",
-      "the whitest boy alive|||1517"
+      "bleachers|||you and forever"
     ],
     "mellow_mix": [
       "buddy holly|||heartbeat",
@@ -627,6 +627,7 @@
       "mogwai|||letters to the metro zombi remix"
     ],
     "dkfm_edge": [
+      "cashier|||maybe i was wrong",
       "newdad|||angel",
       "draag|||orb weaver",
       "deary|||the drift",
@@ -725,8 +726,7 @@
       "my sister maura|||shattered through",
       "delfini v brneni|||nedovolena",
       "jared martin|||longing",
-      "newdad|||where i go",
-      "maquillage|||loneliness"
+      "newdad|||where i go"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -937,6 +937,7 @@
       "whimsical|||earth angel"
     ],
     "dkfm_classic": [
+      "boo radleys|||lazarus augustus pablo mix",
       "ride|||cool your boots",
       "half string|||tripped up breathing",
       "siddal|||ghost",
@@ -1035,8 +1036,7 @@
       "majesty crush|||seine",
       "coaltar of the deepers|||taste",
       "medicine|||aruca",
-      "veldt|||pleasure toy",
-      "blind mr jones|||see you again"
+      "veldt|||pleasure toy"
     ],
     "egofm_rnb": [
       "chiiild|||eventually",
@@ -1549,6 +1549,7 @@
       "fleeting joys|||satellite"
     ],
     "radio_britannia": [
+      "crawlers|||cool",
       "editors|||smokers outside the hospital doors",
       "goodbooks|||leni",
       "jake bugg|||keep on moving",
@@ -1647,8 +1648,7 @@
       "sam fender|||arm's length",
       "the wombats|||be your shadow",
       "echo and the bunnymen|||i want to be there when you come",
-      "the sherlocks|||won't stop",
-      "muse|||united states of eurasia"
+      "the sherlocks|||won't stop"
     ],
     "wbru": [
       "fontaines d c|||where is gone? with rosalia",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795843877.1167073,
-    "mellow_mix": 1795843877.126374,
-    "big_sonic_heaven": 1795843877.1301584,
-    "radio_x_chilled": 1795843877.1344416,
-    "dreampop_radio": 1795843877.1387486,
-    "indie_select": 1795843877.1433516,
-    "dkfm_edge": 1795843877.147922,
+    "vuurland": 1795843913.6429846,
+    "mellow_mix": 1795843913.652489,
+    "big_sonic_heaven": 1795843913.6562843,
+    "radio_x_chilled": 1795843913.660485,
+    "dreampop_radio": 1795843913.664695,
+    "indie_select": 1795843913.6692836,
+    "dkfm_edge": 1795843913.6739166,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795843877.1543334,
-    "dkfm_shoegaze": 1795843877.1592832,
-    "dkfm_classic": 1795843877.1637414,
-    "egofm_rnb": 1795843877.1682634,
-    "egofm_chillout": 1795843877.1725104,
-    "dj_neihtul": 1795843877.1770747,
-    "gri_balkon": 1795843877.1798797,
-    "ignoreradio_shoegaze": 1795843877.478884,
-    "radio_britannia": 1795843877.484436,
-    "wbru": 1795843877.614069,
-    "indie_x_fm": 1795843877.6181543
+    "dark_edge": 1795843913.6803238,
+    "dkfm_shoegaze": 1795843913.6852555,
+    "dkfm_classic": 1795843913.6898437,
+    "egofm_rnb": 1795843913.6943178,
+    "egofm_chillout": 1795843913.6984606,
+    "dj_neihtul": 1795843913.7019687,
+    "gri_balkon": 1795843913.7047353,
+    "ignoreradio_shoegaze": 1795843913.7096677,
+    "radio_britannia": 1795843913.71497,
+    "wbru": 1795843913.7179697,
+    "indie_x_fm": 1795843913.7217395
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -41307,13 +41307,13 @@
   "__v95_archived_pre_live_queue": [],
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
-  "__last_radio_key_vuurland": "cat burns|||go",
+  "__last_radio_key_vuurland": "paolo nutini|||one day",
   "__last_radio_key_mellow_mix": "buddy holly|||heartbeat",
   "__last_radio_key_big_sonic_heaven": "this mortal coil|||nature's way",
   "__v181_vuurland_two_missing_recovered": true,
-  "__v116_fifo_next_sequence": 39455,
-  "__v146_spotify_budget_slot": 1795843793.3945377,
-  "__vuurland_active_playlist_count": 7689,
+  "__v116_fifo_next_sequence": 39456,
+  "__v146_spotify_budget_slot": 1795843926.5145955,
+  "__vuurland_active_playlist_count": 7690,
   "__vuurland_active_volume": 2,
   "__vuurland_active_playlist_id": "1J52ZM86jB2PaTw8KjAGDH",
   "__v164_playlist_count_checked_at": 1795842719,
@@ -55786,6 +55786,7 @@
     "shitakuchu|||junky",
     "shivaree|||goodnight moon",
     "shlohmo|||places",
+    "shoestrings|||expectations",
     "shoestrings|||forgive you",
     "shoestrings|||gone",
     "shoestrings|||i tried",
@@ -70596,6 +70597,7 @@
     "spotify:track:4Jjh1B1ToizS7CRwFH8TnV",
     "spotify:track:4JjqJhEW00zcGiMIsunf0X",
     "spotify:track:4JkPEQKAQ9Uwg1vTilKx5y",
+    "spotify:track:4Jl5pbHfrm0jjlNdb1oKHX",
     "spotify:track:4Jn2CdZYqtIsPpIRYB1o47",
     "spotify:track:4Jr52kmzdswtUXmrhUOxhw",
     "spotify:track:4JsMJLQWDWJunZGxwhaHtl",
@@ -80500,6 +80502,7 @@
     "ES8740816115",
     "ES8741369131",
     "ES93G2000003",
+    "ESA011553579",
     "ESA011924088",
     "ESA011935054",
     "ESA081200233",
@@ -112783,7 +112786,8 @@
     "spotify:track:087MXVNN468v7yji8mHegw": "DEN961631601",
     "spotify:track:16UC0kLE4IfdfXciAH4Bmo": "GBLZC0100020",
     "spotify:track:2gdtLnVGGg80Kj9GiqP0vH": "USAT29600111",
-    "spotify:track:0kqFlkmfvKzQ4QSmx5PZ1A": "GBCCG7900001"
+    "spotify:track:0kqFlkmfvKzQ4QSmx5PZ1A": "GBCCG7900001",
+    "spotify:track:4Jl5pbHfrm0jjlNdb1oKHX": "ESA011553579"
   },
   "__v184_head_playlist_id": "555lFTvdRswe9ukybmOM8T",
   "__v184_head_checked_at": 1793866264,
@@ -170774,9 +170778,9 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "newdad|||angel",
+  "__last_radio_key_dkfm_edge": "cashier|||maybe i was wrong",
   "__last_radio_key_dkfm_shoegaze": "leftwich|||let's just be honest",
-  "__last_radio_key_dkfm_classic": "ride|||cool your boots",
+  "__last_radio_key_dkfm_classic": "boo radleys|||lazarus augustus pablo mix",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
   "__v188_radio_x_main_baseline_20261105": true,
@@ -171523,8 +171527,8 @@
     "v193-shuffle",
     "add6fc88f85fabf6256125a34649cd10851397d24f33c3292062527db84bdccd"
   ],
-  "__v192_duyster_archive_cursor": 7244,
-  "__v192_duyster_next_enqueue_at": 1795843910.1464252,
+  "__v192_duyster_archive_cursor": 7256,
+  "__v192_duyster_next_enqueue_at": 1795844043.419636,
   "__match_v35__the rolling stones|||wild horses stripped": "spotify:track:1hsrmBpddP05q7XvJA8ehw",
   "__match_v35__yves paquet|||a decent man": "spotify:track:0ZlYE0j5xrGLUhNNauAgFO",
   "__match_v35__the pains of being pure at heart|||heart in your heartbreak": "spotify:track:5rBMXxgKhRRzkEG3m9DAfZ",
@@ -174457,7 +174461,7 @@
   "__match_v35__so totally|||doz roses": "spotify:track:5Oc2stWDIG3dVHdardJWNV",
   "__match_v35__james|||hey ma": "spotify:track:7JXdXNYOoREpLq9rXo3QyA",
   "__match_v35__suzanne vega|||calypso": "spotify:track:5AflA0BW53NMe3z5qLFidF",
-  "__v221_last_selected_source": "mellow_mix",
+  "__v221_last_selected_source": "big_sonic_heaven",
   "__match_v35__eefje de visser|||onomkeerbaar": "spotify:track:32YAiVsFRvABOR2fVSYGty",
   "__match_v35__ziggy marley|||drive": "spotify:track:3uUBPCBs0ImFOnWnKy1SfH",
   "__match_v35__emma anderson|||taste the air": "spotify:track:0at1VzUT8rdqIaSp6nLUR7",
@@ -174469,7 +174473,7 @@
   "__match_v35__j bernardt|||wicked streets": "spotify:track:20hW80qQCtVEHIJgeBJsBW",
   "__match_v35__cat stevens|||blackness of the night": "spotify:track:4obCSDqXxraEBvuiO8O0pC",
   "__match_v35__bjork|||i've seen it all feat thom yorke": "spotify:track:4DXyc0dZSJex9pygvd9Qla",
-  "__v224_last_spotify_opportunity_source": "mellow_mix",
+  "__v224_last_spotify_opportunity_source": "big_sonic_heaven",
   "__match_v35__the notwist|||kong": "spotify:track:6GZPK2ju2nk34EexrTCJzu",
   "__match_v35__nick cave & the bad seeds|||nature boy": "spotify:track:6pmDHODsAiR8PZtlJZnJmC",
   "__match_v35__reina republicana|||tarde o temprano": "spotify:track:3SuNSiQVnWMHC7Wh2FH6xC",
@@ -174502,7 +174506,7 @@
   "__match_v35__the radio dept|||four months in the shade": "spotify:track:4VVVrh6DCdnilzIyKcR3sa",
   "__match_v35__oasis|||half the world away": "spotify:track:14jz7rVR3zpczqFhpXe08T",
   "__not_found_v35__all get out|||time and place": 1794433271,
-  "__v227_last_source_turn": "mellow_mix",
+  "__v227_last_source_turn": "big_sonic_heaven",
   "__not_found_v35__snow patrol|||how to be dead cla mix": 1794433670,
   "__not_found_v35__since always|||we still know how to dream": 1794433803,
   "__match_v35__the swords project|||shannon's wedding song": "spotify:track:3aRJQFDZwtIfRdebVKMUs7",
@@ -177764,7 +177768,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "editors|||smokers outside the hospital doors",
+  "__last_radio_key_radio_britannia": "crawlers|||cool",
   "__last_radio_key_wbru": "fontaines d c|||where is gone? with rosalia",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
@@ -189512,5 +189516,6 @@
   "__match_v35__roedelius & arnold kasar|||rolling": "spotify:track:087MXVNN468v7yji8mHegw",
   "__match_v35__burial|||stolen dog": "spotify:track:16UC0kLE4IfdfXciAH4Bmo",
   "__match_v35__stone temple pilots|||trippin' on a hole in a paper heart": "spotify:track:2gdtLnVGGg80Kj9GiqP0vH",
-  "__match_v35__lene lovich|||lucky number": "spotify:track:0kqFlkmfvKzQ4QSmx5PZ1A"
+  "__match_v35__lene lovich|||lucky number": "spotify:track:0kqFlkmfvKzQ4QSmx5PZ1A",
+  "__match_v35__shoestrings|||expectations": "spotify:track:4Jl5pbHfrm0jjlNdb1oKHX"
 }
