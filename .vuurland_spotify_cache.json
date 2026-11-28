@@ -117,6 +117,7 @@
       "selah sue|||fade away"
     ],
     "mellow_mix": [
+      "buddy holly|||heartbeat",
       "elvis costello|||everyday i write the book",
       "the cure|||close to me closer mix",
       "maxence cyrin|||where is my mind",
@@ -215,8 +216,7 @@
       "the wallflowers|||6th avenue heartache",
       "greg brown|||just a bum",
       "steve earle|||telephone road",
-      "norah jones|||one flight down",
-      "stan getz & joao gilberto|||the girl from ipanema"
+      "norah jones|||one flight down"
     ],
     "big_sonic_heaven": [
       "this mortal coil|||nature's way",
@@ -627,6 +627,7 @@
       "mogwai|||letters to the metro zombi remix"
     ],
     "dkfm_edge": [
+      "newdad|||angel",
       "draag|||orb weaver",
       "deary|||the drift",
       "swiims|||diving in",
@@ -725,8 +726,7 @@
       "delfini v brneni|||nedovolena",
       "jared martin|||longing",
       "newdad|||where i go",
-      "maquillage|||loneliness",
-      "las nubes|||would be"
+      "maquillage|||loneliness"
     ],
     "radio_x_main": [
       "the killers|||glamorous indie rock & roll",
@@ -835,6 +835,8 @@
       "fell runner|||come home"
     ],
     "dkfm_shoegaze": [
+      "leftwich|||let's just be honest",
+      "drauve|||two crows",
       "the bernadette maries|||happy song",
       "green star|||lush",
       "trentemøller|||swerve",
@@ -932,9 +934,7 @@
       "submotile|||eastern sky sundown",
       "vaadat charigim|||ein li makom",
       "figures|||sunward",
-      "whimsical|||earth angel",
-      "m83|||teen angst",
-      "eddyevvy|||not too fond"
+      "whimsical|||earth angel"
     ],
     "dkfm_classic": [
       "ride|||cool your boots",
@@ -1039,6 +1039,7 @@
       "blind mr jones|||see you again"
     ],
     "egofm_rnb": [
+      "chiiild|||eventually",
       "alunageorge|||not above love",
       "kelis|||midnight snacks",
       "kirby|||coconut oil",
@@ -1137,8 +1138,7 @@
       "bibio|||before",
       "yuno|||fall in love",
       "ella eyre|||deeper",
-      "jordan rakei|||nerve",
-      "shura|||just once"
+      "jordan rakei|||nerve"
     ],
     "egofm_chillout": [
       "gorje hewek & izhevski|||secret feat peter broderick",
@@ -1549,6 +1549,7 @@
       "oeil|||white"
     ],
     "radio_britannia": [
+      "editors|||smokers outside the hospital doors",
       "goodbooks|||leni",
       "jake bugg|||keep on moving",
       "doves|||pounding",
@@ -1647,8 +1648,7 @@
       "the wombats|||be your shadow",
       "echo and the bunnymen|||i want to be there when you come",
       "the sherlocks|||won't stop",
-      "muse|||united states of eurasia",
-      "jade bird|||burn the hard drive feat mura masa"
+      "muse|||united states of eurasia"
     ],
     "wbru": [
       "pavement|||harness your hopes",
@@ -1856,25 +1856,25 @@
     ]
   },
   "__v174_radio_snapshot_times": {
-    "vuurland": 1795843647.0044618,
-    "mellow_mix": 1795843647.013518,
-    "big_sonic_heaven": 1795843647.0173178,
-    "radio_x_chilled": 1795843647.0214496,
-    "dreampop_radio": 1795843647.0256817,
-    "indie_select": 1795843647.030235,
-    "dkfm_edge": 1795843647.034711,
+    "vuurland": 1795843743.9270737,
+    "mellow_mix": 1795843743.9372044,
+    "big_sonic_heaven": 1795843743.9410665,
+    "radio_x_chilled": 1795843743.9454768,
+    "dreampop_radio": 1795843743.949911,
+    "indie_select": 1795843743.9546247,
+    "dkfm_edge": 1795843743.9594443,
     "radio_x_main": 1793872191.321524,
-    "dark_edge": 1795843647.0412714,
-    "dkfm_shoegaze": 1795843647.0462663,
-    "dkfm_classic": 1795843647.05082,
-    "egofm_rnb": 1795843647.0552597,
-    "egofm_chillout": 1795843647.0594368,
-    "dj_neihtul": 1795843647.0629578,
-    "gri_balkon": 1795843647.0657582,
-    "ignoreradio_shoegaze": 1795843647.4027693,
-    "radio_britannia": 1795843647.408185,
-    "wbru": 1795843647.4113762,
-    "indie_x_fm": 1795843647.4152143
+    "dark_edge": 1795843743.966077,
+    "dkfm_shoegaze": 1795843743.9713402,
+    "dkfm_classic": 1795843743.9759219,
+    "egofm_rnb": 1795843743.9806764,
+    "egofm_chillout": 1795843743.9850187,
+    "dj_neihtul": 1795843743.9885957,
+    "gri_balkon": 1795843743.991434,
+    "ignoreradio_shoegaze": 1795843743.996664,
+    "radio_britannia": 1795843744.002248,
+    "wbru": 1795843744.0053415,
+    "indie_x_fm": 1795843744.0093024
   },
   "__v47_radio_discovered": {
     "vuurland": [
@@ -41308,7 +41308,7 @@
   "__v95_archived_pre_live_failures": {},
   "__v95_live_fifo_initialized": true,
   "__last_radio_key_vuurland": "lana del rey|||chemtrails over the country club",
-  "__last_radio_key_mellow_mix": "elvis costello|||everyday i write the book",
+  "__last_radio_key_mellow_mix": "buddy holly|||heartbeat",
   "__last_radio_key_big_sonic_heaven": "this mortal coil|||nature's way",
   "__v181_vuurland_two_missing_recovered": true,
   "__v116_fifo_next_sequence": 39454,
@@ -170774,8 +170774,8 @@
   "__match_v35__the beatles|||norwegian wood this bird has flown": "spotify:track:45D84Kj4p2NwvzlezCCT4p",
   "__match_v35__azure ray|||signs in the leaves": "spotify:track:7xBCwEjPMCHYcq7qDBISyD",
   "__v187_dkfm_three_reactivated_20261105": true,
-  "__last_radio_key_dkfm_edge": "draag|||orb weaver",
-  "__last_radio_key_dkfm_shoegaze": "the bernadette maries|||happy song",
+  "__last_radio_key_dkfm_edge": "newdad|||angel",
+  "__last_radio_key_dkfm_shoegaze": "leftwich|||let's just be honest",
   "__last_radio_key_dkfm_classic": "ride|||cool your boots",
   "__match_v35__this mortal coil|||sixteen days / gathering dust remastered": "spotify:track:4kLZR0q1u9R0Iz44JM64AV",
   "__match_v35__gillian welch|||howdy howdy": "spotify:track:40GVivEXHI3oBnywYuRnB6",
@@ -176186,7 +176186,7 @@
   "__match_v35__bloody knives|||nye": "spotify:track:1jRXsYB8fEg6AghinKqjSd",
   "__match_v35__brian jonestown massacre|||records": "spotify:track:7t0rAxYBpygIFFCalJ04qL",
   "__match_v35__vessels|||a hundred times in every direction": "spotify:track:78M6lQlv8WoFIvQKV7mBBy",
-  "__last_radio_key_egofm_rnb": "alunageorge|||not above love",
+  "__last_radio_key_egofm_rnb": "chiiild|||eventually",
   "__last_radio_key_egofm_chillout": "gorje hewek & izhevski|||secret feat peter broderick",
   "__match_v35__the cactus blossoms|||got a lotta love": "spotify:track:0MIFQg8ak1p21EeHK2JrJg",
   "__match_v35__the hope blister|||dagger": "spotify:track:3SeuDFdVyoxg8kPEPGl3Q2",
@@ -177764,7 +177764,7 @@
   "__match_v35__steve von till|||wild iron": "spotify:track:0cTv05cG65Y7v6dUGq69oq",
   "__match_v35__tracy chapman|||change": "spotify:track:4q83spgP5cU0MXMqrYsxau",
   "__v256_new_radio_baseline_20261117": true,
-  "__last_radio_key_radio_britannia": "goodbooks|||leni",
+  "__last_radio_key_radio_britannia": "editors|||smokers outside the hospital doors",
   "__last_radio_key_wbru": "pavement|||harness your hopes",
   "__match_v35__metric|||synthetica": "spotify:track:2rAMEH9r80J7vGtT2ZVuwn",
   "__match_v35__the fauns|||shake your hair": "spotify:track:6pkzfcZI7PsbC4nrMsfuIH",
